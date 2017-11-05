@@ -18,7 +18,7 @@ const plugins = isProduction ?
   // code-splittingを有効にするプラグイン
   new webpack.optimize.CommonsChunkPlugin({
     name: "vendor",
-    filename: "vendor.mithril.js",
+    filename: "vendor.js",
     minChunks: Infinity,}),
   new webpack.LoaderOptionsPlugin({
     minimize: true,
@@ -28,10 +28,6 @@ const plugins = isProduction ?
 [
     // hot loadを有効にするためのプラグイン
     new webpack.HotModuleReplacementPlugin(),
-    // mithrilをグローバル変数として登録。これをしないとjsxのみのファイルでm not findのエラーとなる
-    new webpack.ProvidePlugin({
-      m: "mithril",
-  })
 ];
 
 export default {
@@ -41,11 +37,11 @@ export default {
   entry: {
     todo: './app.ts',
     // code-splitting用の設定
-    vendor: ['mithril', 'redux', 'redux-actions', 'redux-saga', 'babel-polyfill', 'page', 'powerform', 'validatex']
+    vendor: ['react', 'redux', 'redux-actions', 'redux-saga', 'babel-polyfill', 'page', 'powerform', 'validatex']
   },
   output: {
     path: __dirname + '/dist',
-		filename: "[name].mithril.js",
+		filename: "[name].js",
   },
   // importするときに、以下の配列に登録した拡張子は省略できる
   resolve: {
