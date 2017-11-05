@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Survival.css">
+<title>LOST～廃墟の森の子供たち～</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script>
+(function(){$(document).ready(function(){
+	$(".sub_menu").hide();
+	$(".subbutton").click(function(){
+		$("#"+$(this).attr("id").replace("subbutton","sub")
+		).toggle();
+	});
+	
+});})();
+</script>
+</head>
+<body>
+<!-- ヘッダ -->
+<header>
+<h1>サバイバルTRPG</h1>
+<a target="main" href="Survival-main.htm">
+<img alt="LOST" src="images/lost3.png">
+</a>
+</header>
+
+<hr style="clear:both;">
+<!--
+<section id="menu">
+<nav>-->
+<ul>
+<li><a target="_blank" href="https://ancientscars.wordpress.com/project-1-lost-trpg/">English</a></li>
+</ul>
+<ul>
+<li><a target="main" href="Survival-main.htm#first">はじめに</a></li>
+<li><a target="main" href="Survival-main.htm#world">ワールド</a></li>
+<li><a target="main" href="Survival-main.htm#camp">キャンプ</a></li>
+<li><a target="main" href="Survival-main.htm#charcter">キャラクター</a><span id="subbutton_charcter" class="subbutton">▽</span>
+<ul id="sub_charcter" class="sub_menu">
+<li><a target="main" href="Survival-main.htm#decide-class">クラス</a></li>
+<li><a target="main" href="Survival-main.htm#decide-skill">特技</a></li>
+<li><a target="main" href="Survival-main.htm#decide-ability">アビリティ</a></li>
+<li><a target="main" href="Survival-main.htm#decide-HP">体力</a></li>
+<li><a target="main" href="Survival-main.htm#decide-MP">気力</a></li>
+<li><a target="main" href="Survival-main.htm#decide-limitedweight">所持限界</a></li>
+<li><a target="main" href="Survival-main.htm#decide-item">アイテム</a></li>
+
+</ul>
+</li>
+<li><a target="main" href="Survival-main.htm#challenge">行為判定</a>
+<span id="subbutton_challenge" class="subbutton">▽</span>
+<ul id="sub_challenge" class="sub_menu">
+<li><a target="main" href="Survival-main.htm#challenge-flow">行為判定の流れ</a></li>
+<li><a target="main" href="Survival-main.htm#challenge-revise">修正</a></li>
+<li><a target="main" href="Survival-main.htm#challenge-special">スペシャルとファンブル</a></li>
+<li><a target="main" href="Survival-main.htm#challenge-objection">つっこみ</a></li>
+<li><a target="main" href="Survival-main.htm#challenge-puropose">プレイヤーの提案</a></li>
+
+</ul>
+</li>
+<li><a target="main" href="Survival-main.htm#session">セッション</a></li>
+<li><a target="main" href="Survival-main.htm#cycle">サイクル</a></li>
+<li><a target="main" href="Survival-main.htm#campF">キャンプフェイズ</a></li>
+<li><a target="main" href="Survival-main.htm#exploration">探索フェイズ</a></li>
+<li><a target="main" href="Survival-main.htm#battle">戦闘</a><span id="subbutton_battle" class="subbutton">▽</span>
+<ul id="sub_battle" class="sub_menu">
+<li><a target="main" href="Survival-main.htm#battle-round">ラウンドの流れ</a></li>
+<li><a target="main" href="Survival-main.htm#battle-initiative">先制判定</a></li>
+<li><a target="main" href="Survival-main.htm#battle-action">戦闘中の行動</a></li>
+<li><a target="main" href="Survival-main.htm#battle-damage">ダメージと死亡</a></li>
+<li><a target="main" href="Survival-main.htm#battle-enemy">敵の行動</a></li>
+<li><a target="main" href="Survival-main.htm#battle-dodge">回避判定</a></li>
+<li><a target="main" href="Survival-main.htm#battle-secondaction">追加行動</a></li>
+<li><a target="main" href="Survival-main.htm#battle-special">スペシャルとファンブル</a></li>
+<li><a target="main" href="Survival-main.htm#badstatus">変調</a></li>
+</ul>
+</li>
+<li><a target="main" href="Survival-main.htm#lastbattle">決戦フェイズ</a></li>
+<li><a target="main" href="Survival-main.htm#ending">結果フェイズ</a></li>
+<li><a target="main" href="Survival-main.htm#afterplay">セッション終了</a></li>
+<li><a target="main" href="Survival-main.htm#implove">キャラクターの成長</a></li>
+<li><a target="main" href="Survival-main.htm#make-boss">＜ヌシ＞の作成</a></li>
+<li><a target="main" href="Survival-main.htm#FAQ">FAQ</a></li>
+<li><a target="main" href="Survival-main.htm#sankou">参考作品</a></li>
+<li><a target="main" href="Survival-main.htm#sample-scenario">サンプルシナリオ</a></li>
+<ul>
+<li><a target="_parent" href="reply/reply1.htm">リプレイ</a>
+
+</ul>
+<li><a target="main" href="Survival-main.htm#sample-scenario2">サンプルシナリオ2</a></li>
+<ul>
+<li><a target="_parent" href="reply/reply2.htm">リプレイ2</a>
+</ul>
+<li><a target="main" href="Chart.htm">チャート</a>
+<span id="subbutton_chart" class="subbutton">▽</span>
+<ul id="sub_chart" class="sub_menu">
+<li><a target="main" href="Chart.htm#name">名前</a></li>
+<li><a target="main" href="Chart.htm#table-camp">キャンプ</a></li>
+<li><a target="main" href="Chart.htm#table-item">アイテム</a></li>
+<li><a target="main" href="Chart.htm#table-skill">特技</a></li>
+<li><a target="main" href="Chart.htm#table-ability">アビリティ</a></li>
+<li><a target="main" href="Chart.htm#table-exploration">探索フェイズ</a></li>
+<li><a target="main" href="Chart.htm#table-battle">戦闘</a></li>
+<li><a target="main" href="Chart.htm#table-enemy">エネミー</a></li>
+</ul>
+<li><a target="_parent" href="Survival-main.htm">本文のみ</a></li>
+<li><a target="_parent" href="Chart.htm">チャートのみ</a></li>
+<li><a target="_parent" href="sheet.pdf">キャラシートPDF</a></li>
+<li><a target="main" href="add_data.htm">追加データ</a></li>
+</li>
+<li><a target="main" href="Survival-main.htm#history">更新履歴</a></li>
+<li><a target="main" href="Survival_island.htm">現代編：無人島シナリオ</a></li>
+<li><a target="_blank" href="http://www.nicovideo.jp/watch/sm22594742">ニコニコ動画：卓M@sリプレイ</a></li>
+
+</ul>
+<!--
+</nav>
+</section>-->
+</body>
+</html>

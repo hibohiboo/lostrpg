@@ -1,0 +1,105 @@
+
+table{
+	border:solid 1px #000000;
+	border-collapse:collapse;
+	width:700px;
+}
+table td{
+	border:solid 1px #000000;
+}
+table th{
+	border:solid 1px #000000;
+}
+table caption{
+	background-color:#000000;
+	color:#ffffff;
+	font-weight:bold;
+}
+.camp-equipment_first{
+	height:300px;
+}
+.camp-equipment{
+	height:1650px;
+}
+
+.walking{
+	height:300px;
+}
+.item{
+	height:2090px;
+}
+.ability-wideuse{
+	height:430px;
+}
+.ability-big{
+	height:180px;
+}
+.ability-tibi{
+	height:170px;
+}
+.ability-adult{
+	height:180px;
+}
+.ability-newage{
+	height:280px;
+}
+.ability-scar{
+	height:210px;
+}
+.ability-fighter{
+	height:180px;
+}
+.ability-scout{
+	height:180px;
+}
+.ability-hunter{
+	height:180px;
+}
+.ability-hakase{
+	height:180px;
+}
+.ability-craftman{
+	height:180px;
+}
+.ability-hope{
+	height:220px;
+}
+.ability-mom{
+	height:210px;
+}
+.table-initiative{
+	height:60px;
+}
+.table-hitparts{
+	height:80px;
+}
+.table-skills{
+	height:400px;
+}
+.enemylist{
+	height:650px;
+}
+.droplist{
+	height:160px;
+}
+.ability-enemy{
+	height:1100px;
+}
+.ability-mutation{
+	height:200px;
+}
+.fumble-attack{
+	height:160px;
+}
+.fumble-dodge{
+	height:160px;
+}
+.table-randomencountAB{
+	height:360px;
+}
+.badstatus{
+	height:400px;
+}
+.table-rest{
+	height:630px;
+}

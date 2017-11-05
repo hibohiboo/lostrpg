@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="json_table.js"></script>
+<script type="text/javascript" src="dice_fiction.js"></script>
+<style>
+table{
+	border:solid 1px #000000;
+	border-collapse:collapse;
+	width:700px;
+}
+table td{
+	border:solid 1px #000000;
+}
+table th{
+	border:solid 1px #000000;
+}
+div {
+	padding-top:2px;
+	padding-left:2px;
+	padding-bottom:0px;
+	padding-right:0px;
+	vertical-align:top;
+	margin:0px;
+}
+
+div.nopadding {
+	padding:0px;
+	margin:0px;
+}
+
+.clickcolumn {
+	cursor:pointer;
+}
+
+span.clickcolumn {
+	display:block;
+}
+
+.pain {
+	border :2pt solid red;
+	outline:2pt solid red;
+	background : red;
+}
+
+.selected {
+	background:black;
+	color:white;
+}
+
+.spacer {
+	width:17px;
+	border-top:1pt solid black;
+	border-right:1pt solid black;
+	border-bottom:1pt solid black;
+	border-left:1pt solid black;
+}
+
+.spacer_black {
+	width:17px;
+	color:white;
+	border-top:1pt solid black;
+	border-right:1pt solid black;
+	border-bottom:1pt solid black;
+	border-left:1pt solid black;
+	background:black;
+	font-size:9.0pt;
+}
+
+#learned\.0 {
+	display:none;
+}
+
+.big {
+	font-size:11.0pt !important;
+}
+
+.small {
+	font-size:8.0pt !important;
+}
+
+.check {
+	width:20px;
+	text-align:center;
+}
+
+.baseinput {
+	width:105px;
+}
+
+.basename {
+	width:245px;
+}
+
+.basenum {
+	width:45px;
+	text-align:right;
+}
+
+.skillcol {
+    text-align: center;
+    height:18px;
+}
+</style>
+<script>
+(function(){
+///////////////////////////////////
+
+$(document).ready(function(){
+	var SKILLS = {"skills" : {
+		"row0":{"name0" : "追跡","name1":"聴く","name2":"操作","name3":"塞ぐ","name4":"泳ぐ","name5":"地理", "number":"2"},
+		"row1":{"name0" : "探索","name1":"※感覚器","name2":"殴る","name3":"※呼吸器","name4":"走る","name5":"休まない", "number":"3"},
+		"row2":{"name0" : "鑑定","name1":"見つける","name2":"斬る","name3":"止める","name4":"蹴る","name5":"待つ", "number":"4"},
+		"row3":{"name0" : "手当","name1":"反応","name2":"※利き腕","name3":"動かない","name4":"※利き脚","name5":"捕らえる", "number":"5"},
+		"row4":{"name0" : "雑学","name1":"閃く","name2":"撃つ","name3":"受ける","name4":"跳ぶ","name5":"隠れる", "number":"6"},
+		"row5":{"name0" : "機械","name1":"※脳","name2":"掴む","name3":"※心臓","name4":"仕掛ける","name5":"休む", "number":"7"},
+		"row6":{"name0" : "作る","name1":"考える","name2":"投げる","name3":"逸らす","name4":"しゃがむ","name5":"バランス", "number":"8"},
+		"row7":{"name0" : "科学","name1":"予感","name2":"※逆腕","name3":"かわす","name4":"※逆脚","name5":"現れる", "number":"9"},
+		"row8":{"name0" : "料理","name1":"叫ぶ","name2":"刺す","name3":"落ちる","name4":"滑る","name5":"追い込む", "number":"10"},
+		"row9":{"name0" : "伝える","name1":"※口","name2":"振る","name3":"※消化器","name4":"踏む","name5":"逃げる", "number":"11"},
+		"row10":{"name0" : "歌う","name1":"噛む","name2":"締める","name3":"耐える","name4":"歩く","name5":"罠", "number":"12"}
+	}};
+	var skills=SKILLS["skills"];
+	for(var i =0;i<11;i++){
+		for(var j=0;j<6;j++){
+			document.getElementById("skills.row"+i+".name"+j).innerHTML=skills["row"+i]["name"+j];
+		}
+		document.getElementById("skills.row"+i+".number").innerHTML=skills["row"+i]["number"];
+	}
+	
+	setBodyParts();
+	
+});
+//////////////////////////
+})();
+
+// 定数の宣言
+var SEP = ".";
+var BODY_PARTS = [
+		"skills.row1.name1","skills.row5.name1","skills.row9.name1","skills.row3.name2","skills.row7.name2",
+		"skills.row1.name3","skills.row5.name3","skills.row9.name3","skills.row3.name4","skills.row7.name4"
+	];
+
+var BODY_PARTS_JA = [
+		"※感覚器","※脳","※口","※利き腕","※逆腕",
+		"※呼吸器","※心臓","※消化器","※利き脚","※逆脚"
+	];
+
+
+
+function setSkillsData(data) {
+	var skills = data["skills"];
+	if (skills) {
+		for (row in skills) {
+			if (row.indexOf("row") == -1) {
+				continue;
+			}
+			for (check in skills[row]) {
+				if (!skills[row][check] || check.indexOf("check") == -1) {
+					continue;
+				}
+				var checkid = "skills" + SEP + row + SEP + check;
+				document.getElementById(checkid).checked = true;
+				for (var j = 0; j < BODY_PARTS.length; j++) {
+					var bpCheck = BODY_PARTS[j].replace("name","check");
+					if (checkid == bpCheck) {
+						bodyPartsClick(document.getElementById(bpCheck));
+						break;
+					}
+				}
+			}
+			skills[row] = null;
+			data["skills"] = skills;
+		}
+	}
+}
+
+function bodyPartsClick(bodyCheckbox) {
+	var ids = bodyCheckbox.id.split(SEP);
+	var rowIdx = Number(ids[1].replace("row",""));
+	var colIdx = Number(ids[2].replace("check",""));
+
+	var inc = (bodyCheckbox.checked) ? 1 : -1;
+
+	for (var i = rowIdx - 1; i <= rowIdx + 1; i++) {
+		for (var j = colIdx - 1; j <= colIdx + 1; j++) {
+			if (crossonly) {
+				if (rowIdx != i && colIdx != j) {
+					continue;
+				}
+			}
+
+			var checkbox = document.getElementById(ids[0] + SEP + "row" + i + SEP + "check" + j);
+			if (checkbox) {
+				var value = Number(checkbox.value) + inc;
+				checkbox.value = value;
+				checkbox.checked = (value > 0);
+				if (checkbox.checked) {
+					checkbox.className = "pain";
+				} else {
+					checkbox.className = "";
+				}
+			}
+		}
+	}
+
+	if (isMonobeast) {
+		destroyMonobeastParts();
+	}
+
+}
+
+function colClick(column) {
+	columnClick(column, "部位破壊！", false, false)
+}
+var isMonobeast = false;
+var crossonly = false;
+
+function setBodyParts(cross) {
+	crossonly = cross ? true : false;
+	for (var i = 0, l  = BODY_PARTS.length; i < l; i++) {
+		var id = BODY_PARTS[i];
+		var part = document.getElementById(id);
+		part.parentNode.className = "bodyparts_r_b skillcol";
+		var check = document.getElementById(id.replace("name", "check"));
+		check.parentNode.className = "bodyparts_l_b";
+
+		check.onclick = function() {
+			bodyPartsClick(this);
+		}
+	}
+}
+
+
+
+</script>
+</head>
+<body style="overflow:hidden;padding:0px;margin:0px;">
+	<table id="skills">
+	<thead style="text-align:center;">
+		<tr>
+			<th class="item" rowspan="2" colspan="2">技術</th>
+			<th class="item"><input type="checkbox" id="skills.a" value="1" onclick="gapClick(this);" ></th>
+			<th class="item" rowspan="2" colspan="2">頭部</th>
+			<th class="item"><input type="checkbox" id="skills.b" value="1" onclick="gapClick(this);" ></th>
+			<th class="item" rowspan="2" colspan="2">腕部</th>
+			<th class="item"><input type="checkbox" id="skills.c" value="1" onclick="gapClick(this);" ></th>
+			<th class="item" rowspan="2" colspan="2">胴部</th>
+			<th class="item"><input type="checkbox" id="skills.d" value="1" onclick="gapClick(this);" ></th>
+			<th class="item" rowspan="2" colspan="2">脚部</th>
+			<th class="item"><input type="checkbox" id="skills.e" value="1" onclick="gapClick(this);" ></th>
+			<th class="item" rowspan="2" colspan="2">環境</th>
+			<th class="item" rowspan="2">&nbsp;</th>
+		</tr>
+		<tr>
+			<th class="item"><span id="skills.aspan">A</span></th>
+			<th class="item"><span id="skills.bspan">B</span></th>
+			<th class="item"><span id="skills.cspan">C</span></th>
+			<th class="item"><span id="skills.dspan">D</span></th>
+			<th class="item"><span id="skills.espan">E</span></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr id="skills.row0">
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row0.name0"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row0.check0" value="0" ></td>
+			<td class="spacer"><span id="skills.row0.a">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row0.name1"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row0.check1" value="0" ></td>
+			<td class="spacer"><span id="skills.row0.b">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row0.name2"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row0.check2" value="0" ></td>
+			<td class="spacer"><span id="skills.row0.c">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row0.name3"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row0.check3" value="0" ></td>
+			<td class="spacer"><span id="skills.row0.d">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row0.name4"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row0.check4" value="0" ></td>
+			<td class="spacer"><span id="skills.row0.e">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row0.name5"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row0.check5" value="0" ></td>
+			<td class="spacer_black"><span id="skills.row0.number"></span></td>
+		</tr>
+		<tr id="skills.row1">
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row1.name0"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row1.check0" value="0" ></td>
+			<td class="spacer"><span id="skills.row1.a">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row1.name1"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row1.check1" value="0" ></td>
+			<td class="spacer"><span id="skills.row1.b">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row1.name2"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row1.check2" value="0" ></td>
+			<td class="spacer"><span id="skills.row1.c">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row1.name3"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row1.check3" value="0" ></td>
+			<td class="spacer"><span id="skills.row1.d">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row1.name4"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row1.check4" value="0" ></td>
+			<td class="spacer"><span id="skills.row1.e">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row1.name5"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row1.check5" value="0" ></td>
+			<td class="spacer_black"><span id="skills.row1.number"></span></td>
+		</tr>
+		<tr id="skills.row2">
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row2.name0"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row2.check0" value="0" ></td>
+			<td class="spacer"><span id="skills.row2.a">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row2.name1"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row2.check1" value="0" ></td>
+			<td class="spacer"><span id="skills.row2.b">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row2.name2"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row2.check2" value="0" ></td>
+			<td class="spacer"><span id="skills.row2.c">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row2.name3"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row2.check3" value="0" ></td>
+			<td class="spacer"><span id="skills.row2.d">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row2.name4"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row2.check4" value="0" ></td>
+			<td class="spacer"><span id="skills.row2.e">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row2.name5"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row2.check5" value="0" ></td>
+			<td class="spacer_black"><span id="skills.row2.number"></span></td>
+		</tr>
+		<tr id="skills.row3">
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row3.name0"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row3.check0" value="0" ></td>
+			<td class="spacer"><span id="skills.row3.a">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row3.name1"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row3.check1" value="0" ></td>
+			<td class="spacer"><span id="skills.row3.b">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row3.name2"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row3.check2" value="0" ></td>
+			<td class="spacer"><span id="skills.row3.c">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row3.name3"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row3.check3" value="0" ></td>
+			<td class="spacer"><span id="skills.row3.d">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row3.name4"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row3.check4" value="0" ></td>
+			<td class="spacer"><span id="skills.row3.e">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row3.name5"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row3.check5" value="0" ></td>
+			<td class="spacer_black"><span id="skills.row3.number"></span></td>
+		</tr>
+		<tr id="skills.row4">
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row4.name0"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row4.check0" value="0" ></td>
+			<td class="spacer"><span id="skills.row4.a">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row4.name1"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row4.check1" value="0" ></td>
+			<td class="spacer"><span id="skills.row4.b">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row4.name2"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row4.check2" value="0" ></td>
+			<td class="spacer"><span id="skills.row4.c">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row4.name3"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row4.check3" value="0" ></td>
+			<td class="spacer"><span id="skills.row4.d">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row4.name4"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row4.check4" value="0" ></td>
+			<td class="spacer"><span id="skills.row4.e">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row4.name5"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row4.check5" value="0" ></td>
+			<td class="spacer_black"><span id="skills.row4.number"></span></td>
+		</tr>
+		<tr id="skills.row5">
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row5.name0"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row5.check0" value="0" ></td>
+			<td class="spacer"><span id="skills.row5.a">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row5.name1"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row5.check1" value="0" ></td>
+			<td class="spacer"><span id="skills.row5.b">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row5.name2"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row5.check2" value="0" ></td>
+			<td class="spacer"><span id="skills.row5.c">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row5.name3"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row5.check3" value="0" ></td>
+			<td class="spacer"><span id="skills.row5.d">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row5.name4"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row5.check4" value="0" ></td>
+			<td class="spacer"><span id="skills.row5.e">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row5.name5"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row5.check5" value="0" ></td>
+			<td class="spacer_black"><span id="skills.row5.number"></span></td>
+		</tr>
+		<tr id="skills.row6">
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row6.name0"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row6.check0" value="0" ></td>
+			<td class="spacer"><span id="skills.row6.a">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row6.name1"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row6.check1" value="0" ></td>
+			<td class="spacer"><span id="skills.row6.b">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row6.name2"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row6.check2" value="0" ></td>
+			<td class="spacer"><span id="skills.row6.c">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row6.name3"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row6.check3" value="0" ></td>
+			<td class="spacer"><span id="skills.row6.d">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row6.name4"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row6.check4" value="0" ></td>
+			<td class="spacer"><span id="skills.row6.e">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row6.name5"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row6.check5" value="0" ></td>
+			<td class="spacer_black"><span id="skills.row6.number"></span></td>
+		</tr>
+		<tr id="skills.row7">
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row7.name0"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row7.check0" value="0" ></td>
+			<td class="spacer"><span id="skills.row7.a">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row7.name1"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row7.check1" value="0" ></td>
+			<td class="spacer"><span id="skills.row7.b">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row7.name2"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row7.check2" value="0" ></td>
+			<td class="spacer"><span id="skills.row7.c">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row7.name3"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row7.check3" value="0" ></td>
+			<td class="spacer"><span id="skills.row7.d">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row7.name4"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row7.check4" value="0" ></td>
+			<td class="spacer"><span id="skills.row7.e">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row7.name5"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row7.check5" value="0" ></td>
+			<td class="spacer_black"><span id="skills.row7.number"></span></td>
+		</tr>
+		<tr id="skills.row8">
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row8.name0"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row8.check0" value="0" ></td>
+			<td class="spacer"><span id="skills.row8.a">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row8.name1"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row8.check1" value="0" ></td>
+			<td class="spacer"><span id="skills.row8.b">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row8.name2"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row8.check2" value="0" ></td>
+			<td class="spacer"><span id="skills.row8.c">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row8.name3"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row8.check3" value="0" ></td>
+			<td class="spacer"><span id="skills.row8.d">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row8.name4"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row8.check4" value="0" ></td>
+			<td class="spacer"><span id="skills.row8.e">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row8.name5"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row8.check5" value="0" ></td>
+			<td class="spacer_black"><span id="skills.row8.number"></span></td>
+		</tr>
+		<tr id="skills.row9">
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row9.name0"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row9.check0" value="0" ></td>
+			<td class="spacer"><span id="skills.row9.a">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row9.name1"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row9.check1" value="0" ></td>
+			<td class="spacer"><span id="skills.row9.b">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row9.name2"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row9.check2" value="0" ></td>
+			<td class="spacer"><span id="skills.row9.c">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row9.name3"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row9.check3" value="0" ></td>
+			<td class="spacer"><span id="skills.row9.d">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row9.name4"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row9.check4" value="0" ></td>
+			<td class="spacer"><span id="skills.row9.e">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row9.name5"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row9.check5" value="0" ></td>
+			<td class="spacer_black"><span id="skills.row9.number"></span></td>
+		</tr>
+		<tr id="skills.row10">
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row10.name0"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row10.check0" value="0" ></td>
+			<td class="spacer"><span id="skills.row10.a">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row10.name1"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row10.check1" value="0" ></td>
+			<td class="spacer"><span id="skills.row10.b">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row10.name2"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row10.check2" value="0" ></td>
+			<td class="spacer"><span id="skills.row10.c">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row10.name3"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row10.check3" value="0" ></td>
+			<td class="spacer"><span id="skills.row10.d">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row10.name4"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row10.check4" value="0" ></td>
+			<td class="spacer"><span id="skills.row10.e">&nbsp;</span></td>
+			<td class="input_r_b skillcol" style="width:55px;"><span class="clickcolumn" onclick="colClick(this);" id="skills.row10.name5"></span></td>
+			<td class="input_l_b"><input type="checkbox" id="skills.row10.check5" value="0" ></td>
+			<td class="spacer_black"><span id="skills.row10.number"></span></td>
+		</tr>
+	</tbody>
+</table>
+<br><br><br><br>
+<hr>
+<div id="div.mode" class="noprint">
+	設定<input type="radio" name="mode" value="1" checked="checked" >
+	判定<input type="radio" name="mode" value="2" >
+	<!-- OD Toolで判定：<input type="checkbox" id="odtoolflag">-->
+</div>
+<hr>
+
+
+<div id="div.judge" class="noprint" style="float:left;">
+	<table>
+		<tbody>
+			<tr>
+				<th class="item" style="width:92px;">判定特技</th>
+				<td class="input" style="width:200px;"><span id="judge.skill.name"></span><input type="hidden" id="judge.skill.id" ></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table id="learned">
+		<thead>
+			<tr>
+				<th class="item" style="width:92px;">習得特技</th>
+				<th class="item" style="width:200px;">判定値</th>
+				<th class="item" style="width:25px">とふ</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="learned.0">
+				<td class="input"><span id="learned.0.name"></span><input type="hidden" id="learned.0.id" ></td>
+				<td class="input"><input type="text" id="learned.0.judge" style="width:198px;" ></td>
+				<td class="input"><input type="button" id="learned.0.send" value="DR" onclick="sendToDodontof(this.id, 'HuntersMoon');"></td>
+			</tr>
+		</tbody>
+	</table>
+
+
+
+</body>
+</html>
