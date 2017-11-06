@@ -9,4 +9,6 @@ RUN npm init -y
 
 # firebase
 RUN npm install -g firebase-tools
-RUN npm install firebase-tools
+RUN npm i -D firebase-tools
+
+RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"firebase\": \"firebase\", /g" /app/package.json

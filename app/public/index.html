@@ -30,51 +30,10 @@
       }
     </style>
     <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBdBL8o-aMB1NNh1AxBGBgs00TP_EKUl-E",
-        authDomain: "lostrpg-751c1.firebaseapp.com",
-        databaseURL: "https://lostrpg-751c1.firebaseio.com",
-        projectId: "lostrpg-751c1",
-        storageBucket: "lostrpg-751c1.appspot.com",
-        messagingSenderId: "553357133015"
-      };
-      firebase.initializeApp(config);
-    </script>
+    <script src="assets/js/init.js"></script>
+
   </head>
   <body>
-    <!-- <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-/*
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-*/
-      });
-    </script> -->
         <div id="message">
           <h1>Firebaseてすと</h1>
           <p>文字を入れると更新されます</p>
@@ -84,8 +43,6 @@
             <li><a onclick="changeData()">更新</a></li>
           </ul>
         </div>
-    
-    
         <script>
           var db = firebase.database();
           var myChatAll = db.ref("/my/chat/all");
@@ -100,5 +57,8 @@
           });
         </script>
     <a href="./lost/Survival.htm">survival</a>
+    <a href="#" id="login">login</a>
+    <a href="#" id="logout">logout</a>
+    <script src="assets/js/login.js"></script>
   </body>
 </html>
