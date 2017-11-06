@@ -37,7 +37,7 @@ export default {
   entry: {
     todo: './app.ts',
     // code-splitting用の設定
-    vendor: ['react', 'redux', 'redux-actions', 'redux-saga', 'babel-polyfill', 'page', 'powerform', 'validatex']
+    vendor: ['react', 'react-dom', 'redux', 'redux-actions', 'redux-saga', 'redux-logger', 'babel-polyfill', 'redux-form']
   },
   output: {
     path: __dirname + '/dist',

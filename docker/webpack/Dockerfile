@@ -1,4 +1,4 @@
-FROM node:8.8.1
+FROM node:9.0.0
 
 # コンテナ上の作業ディレクトリ作成
 WORKDIR /app
@@ -31,12 +31,15 @@ RUN npm i -D babel-preset-env
 RUN npm i -D babel-plugin-transform-react-jsx
 # async
 RUN npm i -D babel-preset-es2017
+# babelのreact用preset
+RUN npm i -D babel-preset-react
 
 # webpack用typescript loader
 RUN npm i -D ts-loader
 
-# jsViewライブラリmithril
-RUN npm i -S mithril
+# jsViewライブラリreact
+RUN npm i -S react
+RUN npm i -S react-dom
 
 # フレームワーク
 RUN npm i -S redux
@@ -46,12 +49,8 @@ RUN npm i -S redux-logger
 
 RUN npm i -S babel-polyfill
 
-# ルーティング
-RUN npm i -S page
-
 # バリデーション
-RUN npm i -S validatex
-RUN npm i -S powerform
+RUN npm i -S redux-form
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tslint\": \"tslint -p 'tsconfig.json' --type-check\",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tsc\": \"tsc -p tsconfig.json \",/g" /app/package.json

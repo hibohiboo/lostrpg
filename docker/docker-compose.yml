@@ -12,39 +12,39 @@ services:
       - 5000:5000
       - 9005:9005
     command: [firebase, serve, -p, "5000", -o, "0.0.0.0", --token, "$FIREBASE_TOKEN"]
-  # # 構文チェック(ts)
-  # tslint:
-  #   build: ./webpack
-  #   volumes: 
-  #     - ./config/tsconfig.json:/app/tsconfig.json
-  #     - ./config/tslint.json:/app/tslint.json
-  #     - ../src:/app/src
-  #   command: [npm, run, -s, tslint, --, -c, tslint.json, 'src/**/*.ts', 'src/**/*.tsx']
+  # 構文チェック(ts)
+  tslint:
+    build: ./webpack
+    volumes: 
+      - ./config/tsconfig.json:/app/tsconfig.json
+      - ./config/tslint.json:/app/tslint.json
+      - ../src:/app/src
+    command: [npm, run, -s, tslint, --, -c, tslint.json, 'src/**/*.ts', 'src/**/*.tsx']
 
-  # # Apiドキュメント
-  # typedoc:
-  #   build: ./webpack
-  #   volumes: 
-  #     - ./config/tsconfig.json:/app/tsconfig.json
-  #     - ../src:/app/src
-  #     - ../dist/apidoc:/app/typedoc
-  #   command: [npm, run, typedoc, --, --target, es6, --jsx, preserve, --ignoreCompilerErrors, --exclude, '**/*.test.ts', --out, ./typedoc/, ./src/]
+  # Apiドキュメント
+  typedoc:
+    build: ./webpack
+    volumes: 
+      - ./config/tsconfig.json:/app/tsconfig.json
+      - ../src:/app/src
+      - ../dist/apidoc:/app/typedoc
+    command: [npm, run, typedoc, --, --target, es6, --jsx, preserve, --ignoreCompilerErrors, --exclude, '**/*.test.ts', --out, ./typedoc/, ./src/]
 
-  # # ビルドツール
-  # webpack:
-  #   build: ./webpack
-  #   volumes:
-  #     - ./config/.babelrc:/app/.babelrc
-  #     - ./config/tsconfig.json:/app/tsconfig.json
-  #     - ./config/webpack.config.babel.js:/app/webpack.config.babel.js
-  #     - ../src:/app/src
-  #     - ../dist/bundle-webpack:/app/dist
-  #     - ../public:/app/public
-  #   environment:
-  #     - NODE_ENV=develop
-  #   command: [npm, run, dev-server]
-  #   ports:
-  #     -  8080:8080
+  # ビルドツール
+  webpack:
+    build: ./webpack
+    volumes:
+      - ./config/.babelrc:/app/.babelrc
+      - ./config/tsconfig.json:/app/tsconfig.json
+      - ./config/webpack.config.babel.js:/app/webpack.config.babel.js
+      - ../src:/app/src
+      - ../dist/bundle-webpack:/app/dist
+      - ../public:/app/public
+    environment:
+      - NODE_ENV=develop
+    command: [npm, run, dev-server]
+    ports:
+      -  8080:8080
 
   # # トランスパイル(ts)
   # tsc:
