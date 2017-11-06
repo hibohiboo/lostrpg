@@ -35,9 +35,9 @@ export default {
   context: __dirname + '/src',
   // エントリーポイントとしてapp.jsを起点にビルドする
   entry: {
-    todo: './app.ts',
+    todo: './app.tsx',
     // code-splitting用の設定
-    vendor: ['react', 'react-dom', 'redux', 'redux-actions', 'redux-saga', 'redux-logger', 'babel-polyfill', 'redux-form']
+    vendor: ['react', 'react-dom', 'redux', 'redux-actions', 'redux-saga', 'redux-logger', 'babel-polyfill', 'react-redux', 'redux-form']
   },
   output: {
     path: __dirname + '/dist',

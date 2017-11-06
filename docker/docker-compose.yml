@@ -12,6 +12,7 @@ services:
       - 5000:5000
       - 9005:9005
     command: [firebase, serve, -p, "5000", -o, "0.0.0.0", --token, "$FIREBASE_TOKEN"]
+
   # 構文チェック(ts)
   tslint:
     build: ./webpack
@@ -37,7 +38,7 @@ services:
       - ./config/.babelrc:/app/.babelrc
       - ./config/tsconfig.json:/app/tsconfig.json
       - ./config/webpack.config.babel.js:/app/webpack.config.babel.js
-      - ../src:/app/src
+      - ../src/camp:/app/src
       - ../dist/bundle-webpack:/app/dist
       - ../public:/app/public
     environment:
