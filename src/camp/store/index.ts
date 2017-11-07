@@ -1,6 +1,6 @@
 import { applyMiddleware, createStore } from 'redux';
 import { createLogger } from 'redux-logger';
-import createSagaMiddleware from 'redux-saga';
+import createSagaMiddleware from 'redux-saga'; // tslint:disable-line
 import reducers from '../reducers';
 import sagas from '../sagas';
 
@@ -15,4 +15,5 @@ const store = createStore(
 
 // Saga を起動する
 sagaMiddleware.run(sagas);
+
 export default store;
