@@ -52,7 +52,7 @@ const renderSubFields = (member, index, fields) => (
   
   const Facilities = ()=>(
     <div>
-        <label className="label">施設</label>
+        <label className="label">{i18n.t('facility')}</label>
         <FieldArray name="members" component={renderMembers} />
   </div>
   )

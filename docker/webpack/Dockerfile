@@ -56,6 +56,9 @@ RUN npm i -S react-redux
 # 国際対応
 RUN npm i -S i18next
 
+# ブラウザを識別して自動で国際対応
+RUN npm i -S i18next-browser-languagedetector
+
 # JSON-loader
 RUN npm i -D json-loader
 
