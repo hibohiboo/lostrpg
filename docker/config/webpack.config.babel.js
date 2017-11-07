@@ -37,7 +37,7 @@ export default {
   entry: {
     campForm: './app.tsx',
     // code-splitting用の設定
-    vendor: ['react', 'react-dom', 'redux', 'redux-actions', 'redux-saga', 'redux-logger', 'babel-polyfill', 'react-redux', 'redux-form']
+    vendor: ['react', 'react-dom', 'redux', 'redux-actions', 'redux-saga', 'redux-logger', 'babel-polyfill', 'react-redux', 'redux-form', 'i18next']
   },
   output: {
     path: __dirname + '/dist',

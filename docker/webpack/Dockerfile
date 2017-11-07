@@ -53,6 +53,10 @@ RUN npm i -S babel-polyfill
 RUN npm i -S redux-form
 RUN npm i -S react-redux
 
+# 国際対応
+
+RUN npm i -S i18next
+
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tslint\": \"tslint -p 'tsconfig.json'\",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tsc\": \"tsc -p tsconfig.json \",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"babel\": \"babel\",/g" /app/package.json

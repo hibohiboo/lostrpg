@@ -3,6 +3,7 @@ import {Component} from 'react'
 import { Field, reduxForm, FieldArray } from 'redux-form'
 import RenderField from './RenderField'
 import Facilities from './Facilities'
+import i18n from '../utilities/i18n';
 
 interface IErrors{
   campName?: string;
@@ -23,11 +24,11 @@ const FormComponent = props => {
     return (
       <form onSubmit={ handleSubmit }>
         <div>
-          <Field name="campName" component={RenderField} label="キャンプ名" type="text" />
+          <Field name="campName" component={RenderField} label={i18n.t('campName')} type="text" />
         </div>
         <Facilities />
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit">{i18n.t('submit')}</button>
         </div>
       </form>
     )

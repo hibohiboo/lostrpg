@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Field, FieldArray } from 'redux-form'
 import RenderField from './RenderField'
+import i18n from '../utilities/i18n';
 
 const renderSubFields = (member, index, fields) => (
     <li key={index}>
@@ -12,30 +13,30 @@ const renderSubFields = (member, index, fields) => (
           name={`${member}.name`}
           type="text"
           component={RenderField}
-          label="名前"/>
+          label={i18n.t('name')}/>
         <Field
           name={`${member}.type`}
           type="text"
           component={RenderField}
-          label="タイプ"/>
+          label={i18n.t('type')}/>
           <Field
           name={`${member}.speciality`}
           type="text"
           component={RenderField}
-          label="指定特技"/>
+          label={i18n.t('speciality')}/>
           <Field
           name={`${member}.level`}
           type="text"
           component={RenderField}
-          label="レベル"/>
+          label={i18n.t('level')}/>
           <Field
           name={`${member}.effect`}
           type="text"
           component={RenderField}
-          label="効果"/>
+          label={i18n.t('effect')}/>
           <button
             type="button"
-            title="Remove Member"
+            title={i18n.t('delete')}
             className="delete"
             onClick={() => fields.remove(index)}/>
         </div>
@@ -44,8 +45,8 @@ const renderSubFields = (member, index, fields) => (
   
   const renderMembers = ({ fields }) => (
     <ul className="list">
-      <button type="button" onClick={() => fields.push({})}>Add Facility</button>
       {fields.map(renderSubFields)}
+      <button type="button" onClick={() => fields.push({})}>{i18n.t('add')}</button>
     </ul>
   )
   
