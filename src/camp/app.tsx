@@ -12,5 +12,5 @@ render(
     <App />
   </Provider>,
   document.getElementById('app'),
-  null
+  null,
 );

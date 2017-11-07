@@ -1,0 +1,12 @@
+{
+    "campName": "CampName", 
+    "submit": "Submit",
+    "name": "Name",
+    "type": "type",
+    "speciality": "Speciality",
+    "level": "Level",
+    "effect": "Effect",
+    "add": "Add",
+    "facility": "Facility",
+    "createCamp": "CreateCamp"
+}

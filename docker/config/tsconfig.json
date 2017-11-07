@@ -10,7 +10,8 @@
         "jsx": "preserve",
         "noImplicitAny": false,
         "strictNullChecks": true,
-        "sourceMap": false
+        "sourceMap": false,
+        "allowJs":true
     },
     "include":[
         "./src/**/*" 

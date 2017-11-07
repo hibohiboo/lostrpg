@@ -54,8 +54,10 @@ RUN npm i -S redux-form
 RUN npm i -S react-redux
 
 # 国際対応
-
 RUN npm i -S i18next
+
+# JSON-loader
+RUN npm i -D json-loader
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tslint\": \"tslint -p 'tsconfig.json'\",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tsc\": \"tsc -p tsconfig.json \",/g" /app/package.json
