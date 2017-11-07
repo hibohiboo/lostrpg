@@ -9,7 +9,8 @@ h1 {
 }
 
 /* バリデーション付きinuputフィールド */
-form>div {
+form>div,
+form>div>div {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: row nowrap;
@@ -18,14 +19,16 @@ form>div {
     justify-content: center;
     margin: 10px 5px;
 }
-form>div>label {
+
+.label,
+form>div>div>label {
     font-weight: bold;
     margin-right: 10px;
     min-width: 150px;
     text-align: right;
     padding: 6px 9px;
 }
-form>div>div {
+form>div>div>div {
     -ms-flex: 1;
     flex: 1;
     max-width: 500px;
@@ -36,13 +39,13 @@ form>div>div {
     position: relative;
 }
 
-form>div>div>span {
+form>div>div>div>span {
     border: none;
     font-weight: bold;
     color: #700;
 }
 
-form>div>div>* {
+form>div>div>div>* {
     -ms-flex: 1;
     flex: 1;
     font-size: 16px;
@@ -50,7 +53,7 @@ form>div>div>* {
     border: 1px solid #ccc;
 }
 
-form>div>div>span:before {
+form>div>div>div>span:before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
@@ -60,6 +63,27 @@ form>div>div>span:before {
     content: '\F06A';
     margin-right: 5px;
 }
+
+/* リスト */
+ul.list {
+    list-style: none;
+}
+
+.list li {
+    display: flex;
+}
+.list li h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.list li>div
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 /* 送信ボタン */
 form>div button[type='submit'] {
@@ -89,4 +113,26 @@ form>div button[type='submit']:before {
     -moz-osx-font-smoothing: grayscale;
     content: '\F1D8';
     margin-right: 5px;
+}
+
+/* 削除ボタン */
+button.delete {
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: white;
+    background-image: linear-gradient(#e27c79,#c9302c);
+    border: 1px solid #c9302c;
+    padding: 5px 8px;
+}
+button.delete:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\F1F8';
 }

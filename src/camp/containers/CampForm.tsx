@@ -1,6 +1,8 @@
 import * as React from 'react'
 import {Component} from 'react'
-import { Field, reduxForm } from 'redux-form'
+import { Field, reduxForm, FieldArray } from 'redux-form'
+import RenderField from './RenderField'
+import Facilities from './Facilities'
 
 interface IErrors{
   campName?: string;
@@ -14,28 +16,16 @@ const validate = values => {
   return errors
 }
 
-const renderField = ({
-  input,
-  label,
-  type,
-  meta: { touched, error, warning }
-}) => (
-  <div>
-    <label>{label}</label>
-    <div>
-      <input {...input} placeholder={label} type={type} />
-      {touched &&
-        ((error && <span>{error}</span>) ||
-          (warning && <span>{warning}</span>))}
-    </div>
-  </div>
-)
 
 const FormComponent = props => {
     const { handleSubmit } = props
+    const fields = [];
     return (
       <form onSubmit={ handleSubmit }>
-        <Field name="campName" component={renderField} label="キャンプ名" type="text" />
+        <div>
+          <Field name="campName" component={RenderField} label="キャンプ名" type="text" />
+        </div>
+        <Facilities />
         <div>
           <button type="submit">Submit</button>
         </div>
