@@ -35,11 +35,10 @@ const FormComponent = props => {
     const { handleSubmit } = props
     return (
       <form onSubmit={ handleSubmit }>
+        <Field name="campName" component={renderField} label="キャンプ名" type="text" />
         <div>
-          <label htmlFor="campName">キャンプ名</label>
-          <Field name="campName" component={renderField} type="text" />
+          <button type="submit">Submit</button>
         </div>
-        <button type="submit">Submit</button>
       </form>
     )
   }
