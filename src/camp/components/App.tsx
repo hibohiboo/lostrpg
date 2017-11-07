@@ -5,9 +5,13 @@ import CampForm from '../containers/CampForm';
 
 
 class App extends Component {
+    submit = (values) => {
+        // print the form values to the console
+        console.log(values)
+      }
     render() {
       return (
-        <CampForm />
+        <CampForm onSubmit={this.submit} />
       )
     }
   }

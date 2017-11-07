@@ -6,13 +6,17 @@ const FormComponent = props => {
     const { handleSubmit } = props
     return (
       <form onSubmit={ handleSubmit }>
-        { /* form body*/ }
+        <div>
+          <label htmlFor="campName">キャンプ名</label>
+          <Field name="campName" component="input" type="text" />
+        </div>
+        <button type="submit">Submit</button>
       </form>
     )
   }
   
   const CampForm = reduxForm({
-    form: 'contact'
+    form: 'camp'
   })(FormComponent);
   
   export default CampForm;
