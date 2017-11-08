@@ -1,9 +1,9 @@
-import * as React from 'react'
-const RenderField = ({
+import * as React from 'react';
+const renderField = ({
     input,
     label,
     type,
-    meta: { touched, error, warning }
+    meta: { touched, error, warning },
   }) => (
     <div className="render-field">
       <label>{label}</label>
@@ -14,5 +14,5 @@ const RenderField = ({
             (warning && <span>{warning}</span>))}
       </div>
     </div>
-  )
-export default RenderField;
+  );
+export default renderField;

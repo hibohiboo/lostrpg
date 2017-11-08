@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Field, FieldArray } from 'redux-form'
-import RenderField from './RenderField'
+import * as React from 'react';
+import { Field, FieldArray } from 'redux-form';
 import i18n from '../utilities/i18n';
+import RenderField from './RenderField';
 
 const renderSubFields = (member, index, fields) => (
     <li key={index}>
@@ -41,20 +41,20 @@ const renderSubFields = (member, index, fields) => (
             onClick={() => fields.remove(index)}/>
         </div>
     </li>
-  )
-  
-  const renderMembers = ({ fields }) => (
+  );
+
+const renderMembers = ({ fields }) => (
     <ul className="list">
       {fields.map(renderSubFields)}
       <button type="button" onClick={() => fields.push({})}>{i18n.t('add')}</button>
     </ul>
-  )
-  
-  const Facilities = ()=>(
+  );
+
+const facilities = () => (
     <div>
         <label className="label">{i18n.t('facility')}</label>
         <FieldArray name="members" component={renderMembers} />
   </div>
-  )
+  );
 
-  export default Facilities;
+export default facilities;
