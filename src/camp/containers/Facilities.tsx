@@ -13,30 +13,30 @@ const renderSubFields = (member, index, fields) => (
           name={`${member}.name`}
           type="text"
           component={RenderField}
-          label={i18n.t('name')}/>
+          label={i18n.t('Name')}/>
         <Field
           name={`${member}.type`}
           type="text"
           component={RenderField}
-          label={i18n.t('type')}/>
+          label={i18n.t('Type')}/>
           <Field
           name={`${member}.speciality`}
           type="text"
           component={RenderField}
-          label={i18n.t('speciality')}/>
+          label={i18n.t('Speciality')}/>
           <Field
           name={`${member}.level`}
           type="text"
           component={RenderField}
-          label={i18n.t('level')}/>
+          label={i18n.t('Level')}/>
           <Field
           name={`${member}.effect`}
           type="text"
           component={RenderField}
-          label={i18n.t('effect')}/>
+          label={i18n.t('Effect')}/>
           <button
             type="button"
-            title={i18n.t('delete')}
+            title={i18n.t('Delete')}
             className="delete"
             onClick={() => fields.remove(index)}/>
         </div>
@@ -46,13 +46,13 @@ const renderSubFields = (member, index, fields) => (
 const renderMembers = ({ fields }) => (
     <ul className="list">
       {fields.map(renderSubFields)}
-      <button type="button" onClick={() => fields.push({})}>{i18n.t('add')}</button>
+      <button type="button" onClick={() => fields.push({})}>{i18n.t('Add')}</button>
     </ul>
   );
 
 const facilities = () => (
     <div>
-        <label className="label">{i18n.t('facility')}</label>
+        <label className="label">{i18n.t('Facility')}</label>
         <FieldArray name="members" component={renderMembers} />
   </div>
   );

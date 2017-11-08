@@ -12,7 +12,7 @@ class App extends Component {
   public render() {
     return (
         <div>
-          <h1>{i18n.t('createCamp')}</h1>
+          <h1>{i18n.t('CreateCamp')}</h1>
           <CampForm onSubmit={this.submit} />
         </div>
     );

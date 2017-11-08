@@ -1,7 +1,6 @@
 import i18n from 'i18next';
 import LngDetector from 'i18next-browser-languagedetector';
 const ja = require('./i18n/ja');
-const en = require('./i18n/en');
 
 i18n
   .use(LngDetector)
@@ -12,7 +11,6 @@ i18n
     }
   );
 // 'translation' はデフォルトのネームスペース。initの引数でデフォルトのネームスペースを変えることもできる
-i18n.addResources('en', 'translation', en); 
 i18n.addResources('ja', 'translation', ja);
 
 //i18n.changeLanguage('ja');

@@ -23,11 +23,11 @@ const formComponent = (props) => {
   return (
       <form onSubmit={ handleSubmit }>
         <div>
-          <Field name="campName" component={RenderField} label={i18n.t('campName')} type="text" />
+          <Field name="campName" component={RenderField} label={i18n.t('CampName')} type="text" />
         </div>
         <Facilities />
         <div>
-          <button type="submit">{i18n.t('submit')}</button>
+          <button type="submit">{i18n.t('Submit')}</button>
         </div>
       </form>
   );

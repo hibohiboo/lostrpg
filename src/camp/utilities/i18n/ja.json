@@ -1,12 +1,12 @@
 {
-    "campName": "キャンプ名", 
-    "submit": "送信",
-    "name": "名前",
-    "type": "タイプ",
-    "speciality": "指定特技",
-    "level": "レベル",
-    "effect": "効果",
-    "add": "追加",
-    "facility": "施設",
-    "createCamp": "キャンプ作成"
+    "CampName": "キャンプ名", 
+    "Submit": "送信",
+    "Name": "名前",
+    "Type": "タイプ",
+    "Speciality": "指定特技",
+    "Level": "レベル",
+    "Effect": "効果",
+    "Add": "追加",
+    "Facility": "施設",
+    "CreateCamp": "キャンプ作成"
 }
