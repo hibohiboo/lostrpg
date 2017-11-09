@@ -61,6 +61,7 @@ RUN npm i -S i18next-browser-languagedetector
 
 # JSON-loader
 RUN npm i -D json-loader
+RUN npm i -D yaml-loader
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tslint\": \"tslint -p 'tsconfig.json'\",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tsc\": \"tsc -p tsconfig.json \",/g" /app/package.json

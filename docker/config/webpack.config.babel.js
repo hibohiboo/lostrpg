@@ -45,13 +45,14 @@ export default {
   },
   // importするときに、以下の配列に登録した拡張子は省略できる
   resolve: {
-    extensions: [".js", ".ts", ".tsx", ".json"]
+    extensions: [".js", ".ts", ".tsx", ".json", ".yml"]
   },
   module: {
     rules: [
       // .ts, .tsxに一致する拡張子のファイルはts-loaderを通してトランスパイル
       { test: /\.tsx?$/, exclude: /node_modules/, loader: ["babel-loader", "ts-loader"] },
       { test: /\.jsx?$/, exclude: /node_modules/, loader: ["babel-loader"] },
+      { test: /\.yml$/, loaders: ['json-loader', 'yaml-loader']},
       { test: /\.json$/, loader: ["json-loader"]}
     ]
   },
