@@ -1,14 +1,16 @@
 import * as React from 'react';
 import { Field, FieldArray } from 'redux-form';
+import { connect } from 'react-redux';
 import i18n from '../utilities/i18n';
 import RenderField from './RenderField';
+import Facility from '../models/Facility';
 
 const renderSubFields = (member, index, fields) => (
     <li key={index}>
       <div>
         <h4> #{index + 1}</h4>
       </div>
-      <div>
+      <div className="facilities">
         <Field
           name={`${member}.name`}
           type="text"
@@ -43,18 +45,42 @@ const renderSubFields = (member, index, fields) => (
     </li>
   );
 
-const renderMembers = ({ fields }) => (
+const renderMembers = (props) => {
+  const { fields, list } = props;
+  if(fields.length == 0){
+    list.forEach(element => {
+      fields.push(element);
+    });
+  }
+  return (
     <ul className="list">
       {fields.map(renderSubFields)}
       <button type="button" onClick={() => fields.push({})}>{i18n.t('Add')}</button>
     </ul>
-  );
+  )};
 
-const facilities = () => (
+  interface IStateToProps {
+    list: Facility[];
+  }
+
+const facilities = (props) => {
+  console.log('facilities')
+  console.log(props)
+  return (
     <div>
         <label className="label">{i18n.t('Facility')}</label>
-        <FieldArray name="members" component={renderMembers} />
+        <FieldArray name="facilities" component={renderMembers} props={props} />
   </div>
-  );
+  )};
 
-export default facilities;
+  const mapStateToProps = (store): IStateToProps => {
+    return { list: store.facilities };
+  };
+  
+  const mapDispatchToProps = (dispatch) => {
+    return {};
+  };
+  ;
+  
+  export default connect(mapStateToProps, null)(facilities);
+
