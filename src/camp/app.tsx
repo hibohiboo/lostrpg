@@ -5,8 +5,10 @@ import { createStore } from 'redux';
 import App from './components/App';
 import store from './store';
 import { fetchStart } from './modules/facilities';
+import { fetchStart as addFetch} from './modules/addFacility';
 
 store.dispatch(fetchStart());
+store.dispatch(addFetch('additionalFacilities.json'));
 
 render(
   // providerにstoreは必須

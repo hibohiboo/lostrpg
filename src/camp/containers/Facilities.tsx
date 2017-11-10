@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import i18n from '../utilities/i18n';
 import RenderField from './RenderField';
 import Facility from '../models/Facility';
+import AddFacility from './AddFacility';
 
 const renderSubFields = (member, index, fields) => (
     <li key={index}>
@@ -55,7 +56,8 @@ const renderMembers = (props) => {
   return (
     <ul className="list">
       {fields.map(renderSubFields)}
-      <button type="button" onClick={() => fields.push({})}>{i18n.t('Add')}</button>
+      <AddFacility onClick={() => fields.push({})} />
+      {/* <button type="button" onClick={() => fields.push({})}>{i18n.t('Add')}</button> */}
     </ul>
   )};
 
@@ -64,8 +66,6 @@ const renderMembers = (props) => {
   }
 
 const facilities = (props) => {
-  console.log('facilities')
-  console.log(props)
   return (
     <div>
         <label className="label">{i18n.t('Facility')}</label>
