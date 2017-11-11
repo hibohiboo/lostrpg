@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Field, FieldArray } from 'redux-form';
 import { connect } from 'react-redux';
-import i18n from '../utilities/i18n';
-import RenderField from './RenderField';
+import { Field, FieldArray } from 'redux-form';
 import Facility from '../models/Facility';
+import i18n from '../utilities/i18n';
 import AddFacility from './AddFacility';
+import RenderField from './RenderField';
 
 const renderSubFields = (member, index, fields) => (
     <li key={index}>
@@ -46,24 +46,24 @@ const renderSubFields = (member, index, fields) => (
     </li>
   );
 
-const renderMembers = (props) => {
+const renderMembers = (props: {fields: Facility[]; list: Facility[]}) => {
   const { fields, list } = props;
-  if(fields.length == 0){
-    list.forEach(element => {
-      fields.push(element);
-    });
+
+  if (fields.length === 0) {
+    list.forEach((element) => {fields.push(element);});
   }
+
   return (
     <ul className="list">
       {fields.map(renderSubFields)}
-      <AddFacility onClick={() => fields.push({})} />
-      {/* <button type="button" onClick={() => fields.push({})}>{i18n.t('Add')}</button> */}
+      <AddFacility onClick={() => fields.push(new Facility())} />
     </ul>
-  )};
+  );
+};
 
-  interface IStateToProps {
-    list: Facility[];
-  }
+interface IStateToProps {
+  list: Facility[];
+}
 
 const facilities = (props) => {
   return (
@@ -71,16 +71,15 @@ const facilities = (props) => {
         <label className="label">{i18n.t('Facility')}</label>
         <FieldArray name="facilities" component={renderMembers} props={props} />
   </div>
-  )};
+  );
+};
 
-  const mapStateToProps = (store): IStateToProps => {
-    return { list: store.facilities };
-  };
-  
-  const mapDispatchToProps = (dispatch) => {
-    return {};
-  };
-  ;
-  
-  export default connect(mapStateToProps, null)(facilities);
+const mapStateToProps = (store): IStateToProps => {
+  return { list: store.facilities };
+};
 
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+
+export default connect(mapStateToProps, null)(facilities);

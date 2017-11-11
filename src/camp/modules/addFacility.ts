@@ -1,4 +1,4 @@
-import { handleActions, createAction } from 'redux-actions';
+import { createAction, handleActions } from 'redux-actions';
 import { call, put, select, takeEvery } from 'redux-saga/effects';
 import Facility from '../models/Facility';
 
@@ -14,14 +14,14 @@ const FETCH_REQUEST_FAILED = 'addFacility/fetch_request_failed';
  */
 export const fetchStart = createAction(FETCH_REQUEST_START, (url: string) => ({ url }));
 
-async function getFacilities(url:string){
+async function getFacilities(url: string) {
   const response =  await fetch(url);
-  const facilities:Facility[] = await response.json();
+  const facilities: Facility[] = await response.json();
   return facilities;
 }
 
 // saga:
-function* fetchFacilities(action: {type: string, payload: {url:string}}) {
+function* fetchFacilities(action: {type: string, payload: {url: string}}) {
   const { url } = action.payload;
   try {
     const list: Facility[] = yield call(getFacilities, url);
@@ -32,7 +32,7 @@ function* fetchFacilities(action: {type: string, payload: {url:string}}) {
 }
 
 export function* facilitiesSaga() {
- yield takeEvery(FETCH_REQUEST_START, fetchFacilities);
+  yield takeEvery(FETCH_REQUEST_START, fetchFacilities);
 }
 
 /**
@@ -42,4 +42,4 @@ export const facilitiesReducer = handleActions({
   [FETCH_REQUEST_SUCCESS]: (state: Facility[],  { payload: { list } }: any) => {
     return list.map(m => new Facility(m));
   },
-}, []);
+},                                             []);
