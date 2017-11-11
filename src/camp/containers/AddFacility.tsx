@@ -25,8 +25,8 @@ class AddFacilityComponent extends Component<IProps> {
     return (
     <div>
       <Field name="addFacility" component="select">
-      {this.props.list.map(m=>(
-        <option value={m.name}>{m.name}</option>
+      {this.props.list.map((m, i)=>(
+        <option key={i} value={m.name}>{m.name}</option>
       ))}
       </Field>
 
