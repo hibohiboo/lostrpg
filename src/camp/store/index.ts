@@ -11,6 +11,8 @@ const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
   reducers,
   applyMiddleware(sagaMiddleware, createLogger()),
+  // applyMiddleware(sagaMiddleware),
+  
 );
 
 // Saga を起動する

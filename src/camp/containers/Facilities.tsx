@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Component, Props } from 'react';
 import { connect } from 'react-redux';
 import { Field, FieldArray } from 'redux-form';
 import Facility from '../models/Facility';
@@ -56,7 +57,7 @@ const renderMembers = (props: {fields: Facility[]; list: Facility[]}) => {
   return (
     <ul className="list">
       {fields.map(renderSubFields)}
-      <AddFacility onClick={() => fields.push(new Facility())} />
+      <AddFacility onClick={(m:Facility) => fields.push(m)} />
     </ul>
   );
 };
@@ -64,22 +65,26 @@ const renderMembers = (props: {fields: Facility[]; list: Facility[]}) => {
 interface IStateToProps {
   list: Facility[];
 }
+interface IProps extends Props<FacilitiesComponent> {
+  onClick: () => void;
+}
 
-const facilities = (props) => {
-  return (
-    <div>
+class FacilitiesComponent extends Component<IProps> {
+  constructor(public props: IProps) {
+    super(props);
+  }
+  public render() {
+    return (
+      <div>
         <label className="label">{i18n.t('Facility')}</label>
-        <FieldArray name="facilities" component={renderMembers} props={props} />
-  </div>
-  );
-};
+        <FieldArray name="facilities" component={renderMembers} props={this.props} />
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = (store): IStateToProps => {
   return { list: store.facilities };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {};
-};
-
-export default connect(mapStateToProps, null)(facilities);
+export default connect(mapStateToProps, null)(FacilitiesComponent);
