@@ -49,11 +49,6 @@ const renderSubFields = (member, index, fields) => (
 
 const renderMembers = (props: {fields: Facility[]; list: Facility[]}) => {
   const { fields, list } = props;
-
-  if (fields.length === 0) {
-    list.forEach((element) => {fields.push(element);});
-  }
-
   return (
     <ul className="list">
       {fields.map(renderSubFields)}

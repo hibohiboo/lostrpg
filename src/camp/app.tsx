@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from './components/App';
 import { fetchStart as addFetch } from './modules/addFacility';
-import { fetchStart } from './modules/facilities';
+import { fetchStart } from './modules/load';
 import store from './store';
 
-store.dispatch(fetchStart());
+store.dispatch(fetchStart('blankCamp.json'));
 store.dispatch(addFetch('additionalFacilities.json'));
 
 render(

@@ -50,11 +50,10 @@ const campForm = reduxForm({
 
 // You have to connect() to any reducers that you wish to connect to yourself
 const InitializeFromStateForm = connect(
-  state => ({
-    initialValues: {freeWriting:`「パーティ全員の【気力基準値】プラス7」
-「パーティ全員の【体力基準値】プラス2」
-「キャンプに10個までのアイテムを置いておける」`} // pull initial values from account reducer
-  }),
+  store => {console.log(store); console.log('test'); return ({
+    initialValues: store.camp
+  })},
+  null
 )(campForm)
 
 
