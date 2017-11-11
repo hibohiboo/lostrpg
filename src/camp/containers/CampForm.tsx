@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Component, Props } from 'react';
 import { Field, FieldArray, reduxForm, formPropTypes } from 'redux-form';
+import { connect } from 'react-redux';
 import i18n from '../utilities/i18n';
 import Facilities from './Facilities';
 import RenderField from './RenderField';
@@ -30,8 +31,13 @@ class FormComponent extends Component<formPropTypes, {}> {
           </div>
           <Facilities />
           <div>
+            <label>{i18n.t('FreeWriting')}</label>
+            <Field name="freeWriting" component="textarea" />
+          </div>
+          <div>
             <button type="submit">{i18n.t('Submit')}</button>
           </div>
+
         </form>
     );
   }
@@ -42,4 +48,14 @@ const campForm = reduxForm({
   form: 'camp',
 })(FormComponent);
 
-export default campForm;
+// You have to connect() to any reducers that you wish to connect to yourself
+const InitializeFromStateForm = connect(
+  state => ({
+    initialValues: {freeWriting:`「パーティ全員の【気力基準値】プラス7」
+「パーティ全員の【体力基準値】プラス2」
+「キャンプに10個までのアイテムを置いておける」`} // pull initial values from account reducer
+  }),
+)(campForm)
+
+
+export default InitializeFromStateForm;

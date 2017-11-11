@@ -15,8 +15,6 @@ const FETCH_REQUEST_FAILED  = 'addFacility/fetch_request_failed';
 export const fetchStart = createAction(FETCH_REQUEST_START, (url: string) => ({ url }));
 
 async function getFacilities(url: string) {
-  console.log('get')
-  console.log(url)
   const response =  await fetch(url);
   const facilities: Facility[] = await response.json();
   return facilities;
