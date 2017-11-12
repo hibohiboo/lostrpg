@@ -52,7 +52,7 @@ const renderMembers = (props: {fields: Facility[]; list: Facility[]}) => {
   return (
     <ul className="list">
       {fields.map(renderSubFields)}
-      <AddFacility onClick={(m:Facility) => fields.push(m)} />
+      <AddFacility onClick={(m: Facility) => fields.push(m)} />
     </ul>
   );
 };

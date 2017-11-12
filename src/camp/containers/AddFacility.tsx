@@ -6,9 +6,9 @@ import Facility from '../models/Facility';
 import i18n from '../utilities/i18n';
 
 interface IProps extends Props<AddFacilityComponent> {
-  onClick: (m:Facility) => void;
+  onClick: (m: Facility) => void;
   list: Facility[];
-  selected:string;
+  selected: string;
 }
 
 /**
@@ -25,18 +25,18 @@ class AddFacilityComponent extends Component<IProps> {
     return (
     <div>
       <Field name="addFacility" component="select">
-      {this.props.list.map((m, i)=>(
+      {this.props.list.map((m, i) => (
         <option key={i} value={m.name}>{m.name}</option>
       ))}
       </Field>
 
-      <button type="button" 
-         onClick={() => { 
-            const facility = this.props.list.find(m=>m.name === this.props.selected);
-            if(facility){
-              this.props.onClick(facility);
-            }
-          }
+      <button type="button"
+         onClick={() => {
+           const facility = this.props.list.find(m => m.name === this.props.selected);
+           if (facility !== undefined) {
+             this.props.onClick(facility);
+           }
+         }
       }>
       {i18n.t('Add')}
       </button>
@@ -49,7 +49,7 @@ interface IStateToProps {
   selected: string;
 }
 
-const selector = formValueSelector('camp') // <-- same as form name
+const selector = formValueSelector('camp'); // <-- same as form name
 
 const mapStateToProps = (store): IStateToProps => {
   const selected = selector(store, 'addFacility');

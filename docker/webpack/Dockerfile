@@ -63,6 +63,11 @@ RUN npm i -S i18next-browser-languagedetector
 RUN npm i -D json-loader
 RUN npm i -D yaml-loader
 
+# ライブラリ追加
+RUN npm i -S lodash
+RUN npm i -S eventemitter3
+RUN npm i -S firebase
+
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tslint\": \"tslint -p 'tsconfig.json'\",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tsc\": \"tsc -p tsconfig.json \",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"babel\": \"babel\",/g" /app/package.json

@@ -1,7 +1,7 @@
 import { createAction, handleActions } from 'redux-actions';
 import { call, put, select, takeEvery } from 'redux-saga/effects';
-import Facility from '../models/Facility';
 import Camp from '../models/Camp';
+import Facility from '../models/Facility';
 
 /**
  * actionType
@@ -15,9 +15,9 @@ const FETCH_REQUEST_FAILED = 'camp/fetch_request_failed';
  */
 export const fetchStart = createAction(FETCH_REQUEST_START, (url: string) => ({ url }));
 
-async function getCamp(url:string) {
+async function getCamp(url: string) {
   const response =  await fetch(url);
-  const camp:Camp = await response.json();
+  const camp: Camp = await response.json();
   return camp;
 }
 
@@ -25,7 +25,7 @@ async function getCamp(url:string) {
 export function* fetchCamp(action: {type: string, payload: {url: string}}) {
   const { url } = action.payload;
   try {
-    const camp:Camp = yield call(getCamp, url);
+    const camp: Camp = yield call(getCamp, url);
     yield put({ type: FETCH_REQUEST_SUCCESS, payload:{ camp } });
   } catch (e) {
     yield put({ type: FETCH_REQUEST_FAILED, message: e.message });
@@ -37,7 +37,7 @@ export function* fetchCamp(action: {type: string, payload: {url: string}}) {
  */
 export const campReducer = handleActions({
   [FETCH_REQUEST_SUCCESS]: (state: Camp,  { payload: { camp } }: any) => {
-    console.log(camp)
+    console.log(camp);
     return camp;
   },
-}, null);
+},                                       null);

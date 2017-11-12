@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Component, Props } from 'react';
-import { Field, FieldArray, reduxForm, formPropTypes } from 'redux-form';
 import { connect } from 'react-redux';
+import { Field, FieldArray, formPropTypes, reduxForm } from 'redux-form';
 import i18n from '../utilities/i18n';
 import Facilities from './Facilities';
 import RenderField from './RenderField';
@@ -19,7 +19,7 @@ const validate = (values) => {
 };
 
 class FormComponent extends Component<formPropTypes, {}> {
-  constructor(public props:formPropTypes) {
+  constructor(public props: formPropTypes) {
     super(props);
   }
   public render() {
@@ -49,12 +49,9 @@ const campForm = reduxForm({
 })(FormComponent);
 
 // You have to connect() to any reducers that you wish to connect to yourself
-const InitializeFromStateForm = connect(
-  store => {console.log(store); console.log('test'); return ({
-    initialValues: store.camp
-  })},
-  null
-)(campForm)
+const initializeFromStateForm = connect(
+  store =>  ({ initialValues: store.camp }),
+  null,
+)(campForm);
 
-
-export default InitializeFromStateForm;
+export default initializeFromStateForm;
