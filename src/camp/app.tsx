@@ -6,15 +6,20 @@ import App from './components/App';
 import { fetchStart as addFetch } from './modules/addFacility';
 import { fetchStart } from './modules/load';
 import store from './store';
+import {twitterLogin} from './firebase/login';
 
-store.dispatch(fetchStart('blankCamp.json'));
-store.dispatch(addFetch('additionalFacilities.json'));
+twitterLogin(viewEdit);
 
-render(
-  // providerにstoreは必須
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('app'),
-  null,
-);
+function viewEdit(){
+  store.dispatch(fetchStart('blankCamp.json'));
+  store.dispatch(addFetch('additionalFacilities.json'));
+  
+  render(
+    // providerにstoreは必須
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('app'),
+    null,
+  );  
+}
