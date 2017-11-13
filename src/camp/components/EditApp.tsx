@@ -6,7 +6,7 @@ import { putRequsetCamp } from '../modules/camp';
 import store from '../store';
 import i18n from '../utilities/i18n';
 
-class App extends Component {
+export default class EditApp extends Component {
   public submit = (values) => {
     // print the form values to the console
     console.log(values);
@@ -24,5 +24,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

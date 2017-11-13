@@ -68,6 +68,10 @@ RUN npm i -S lodash
 RUN npm i -S eventemitter3
 RUN npm i -S firebase
 
+# ルーティング
+RUN npm i -S react-router-redux@next
+RUN npm i -S history
+
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tslint\": \"tslint -p 'tsconfig.json'\",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tsc\": \"tsc -p tsconfig.json \",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"babel\": \"babel\",/g" /app/package.json
