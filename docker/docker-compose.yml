@@ -43,7 +43,7 @@ services:
       - ../public:/app/public
     environment:
       - NODE_ENV=develop
-    command: [npm, run, dev-server]
+    command: [npm, run, dev-server, --, --history-api-fallback]
     ports:
       -  8080:8080
 

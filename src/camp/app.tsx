@@ -7,6 +7,7 @@ import { Route } from 'react-router'
 import { ConnectedRouter, push } from 'react-router-redux'
 
 import EditApp from './components/EditApp';
+import ListApp from './components/ListApp';
 import { twitterLogin } from './firebase';
 import User from './models/User';
 import { fetchStart as addFetch } from './modules/addFacility';
@@ -26,7 +27,8 @@ function viewEdit(user: User) {
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <div>
-          <Route path="/" component={EditApp}/>
+          <Route exact path="/" component={ListApp}/>
+          <Route path="/edit" component={EditApp}/>
         </div>
       </ConnectedRouter>
     </Provider>
