@@ -12,6 +12,7 @@ import User from './models/User';
 import store from './store';
 import {history} from './store';
 import { authCheck } from './modules/auth';
+import ViewApp from './components/ViewApp';
 
 // ログイン状況確認
 store.dispatch(authCheck());
@@ -23,6 +24,7 @@ render(
       <div>
         <Route exact path="/" component={ListApp}/>
         <Route path="/create" component={CreateApp}/>
+        <Route path="/view/:id" component={ViewApp} />
       </div>
     </ConnectedRouter>
   </Provider>

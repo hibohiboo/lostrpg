@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Component, Props } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import i18n from '../utilities/i18n';
 import Facilities from './Facilities';
 import RenderField from './RenderField';
@@ -24,8 +25,9 @@ class CampListComponent extends Component<IProp, {}> {
         {
           camps.map((camp)=>{
             return (
-              <li>
-                {camp.campName}
+              <li key={camp.campId}>
+                <Link to={`/view/${camp.campId}`}>{camp.campName}</Link>
+                
               </li>
             )
         })}
