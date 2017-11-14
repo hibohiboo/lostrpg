@@ -5,7 +5,7 @@ import CampForm from '../containers/CampForm';
 import { putRequsetCamp } from '../modules/camp';
 import i18n from '../utilities/i18n';
 import { connect } from 'react-redux';
-
+import User from '../models/User'
 interface ILoginProps extends Props<LoginContainer>{
   login: ()=>void;
 } 
@@ -15,18 +15,19 @@ class LoginContainer extends Component<ILoginProps> {
     super(props);
   }
   render() {
-    return <button onClick={this.props.login}>Login Here!</button>
+    return <button onClick={this.props.login}>{i18n.t('Login Here!')}</button>
   }
 }
 
-interface ILogoutProps extends Props<LogoutContainer> {
+interface ILogoutProps extends Props<LogoutComponent> {
   logout: ()=>void;
   location?: {
     pathname: string;
   }
+  user: User;
 } 
 
-class LogoutContainer extends Component<ILogoutProps> {
+class LogoutComponent extends Component<ILogoutProps> {
   constructor(public props: ILogoutProps) {
     super(props);
   }
@@ -35,9 +36,15 @@ class LogoutContainer extends Component<ILogoutProps> {
   }
 
   render() {
-    return <button onClick={this.props.logout}>Logout Here!</button>
+    const {user} = this.props;
+    const name = user && user.twitterName || '';
+    return <div>
+              <button onClick={this.props.logout}>{i18n.t('Logout Here!')}</button>
+              : {name}
+           </div>
   }
 }
+const LogoutContainer = connect(store=>({user: store.user}), null)(LogoutComponent);
 
 interface IListAppProps extends Props<ListAppComponent>{
   auth: {
