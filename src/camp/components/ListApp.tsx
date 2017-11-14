@@ -20,7 +20,10 @@ class LoginContainer extends Component<ILoginProps> {
     super(props);
   }
   public render() {
-    return <button onClick={this.props.login}>{i18n.t('Login Here!')}</button>;
+    return ( <p>
+              <button onClick={this.props.login}>{i18n.t('Login Here!')}</button>
+              : {i18n.t('Login user can create camp')}
+            </p>);
   }
 }
 

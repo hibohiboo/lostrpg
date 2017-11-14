@@ -1,2 +1,4 @@
 *
 !config.firebase.json
+!index.ts
+!FirebaseStrategy.ts
