@@ -1,54 +1,82 @@
 import * as React from 'react';
 import { Component, Props } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import CampForm from '../containers/CampForm';
 import { fetchStart as fetchAddFacilities } from '../modules/addFacility';
-import { putRequsetCamp } from '../modules/camp';
-import { fetchStart } from '../modules/camp';
+import { getRequsetCamp } from '../modules/camp';
 import { history } from '../store';
 import store from '../store';
 import i18n from '../utilities/i18n';
-interface ICreateProps extends Props<CreateAppComponent> {
+import Camp from '../models/Camp';
+
+interface ICreateProps extends Props<ViewAppComponent> {
   match: {
     params: {
       id: string;
     },
   };
+  camp: Camp;
+  fetchCamp:(id)=>void;
 }
 
-class CreateAppComponent extends Component<ICreateProps> {
+class ViewAppComponent extends Component<ICreateProps> {
   constructor(public props: ICreateProps) {
     super(props);
     const { id } = this.props.match.params;
+    this.props.fetchCamp(id);
   }
 
   public render() {
+    const { camp } = this.props;
+    if(camp === null){
+      return (<div>読み込み中</div>);
+    }
     return (
         <div>
-          <h1>{ this.props.match.params.id }</h1>
+          <h1>{ camp.campName }</h1>
+          <h2>施設</h2>
+          <table>
+            <tbody>
+            <tr>
+              <th>{i18n.t('Name')}</th>
+              <th>{i18n.t('Type')}</th>
+              <th>{i18n.t('Speciality')}</th>
+              <th>{i18n.t('Level')}</th>
+              <th>{i18n.t('Effect')}</th>
+            </tr>
+          {camp.facilities.map((facility, index)=>{
+            return (
+              <tr key={index}>
+                <td>{facility.name}</td>
+                <td>{facility.type}</td>
+                <td>{facility.speciality}</td>
+                <td>{facility.level}</td>
+                <td>{facility.effect}</td>
+              </tr>
+            );
+
+          })}
+          </tbody>
+          </table>
+          <h2>{i18n.t('FreeWriting')}</h2>
+          <div>{camp.freeWriting}</div>
+          <Link to="/">{i18n.t('Back')}</Link>
         </div>
     );
   }
 }
 
 const mapStateToProps = (store) => {
-  return { auth: store.auth, camp:store.camp, addFacilities:store.addFacilities  };
+  return { camp:store.camp };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    submit(campName: string, facilities: any, freeWriting: string) {
-      dispatch(putRequsetCamp({
-        campName, facilities, freeWriting,
-      }));
-    },
-    fetchCamp() {
-      dispatch(fetchStart('data/blankCamp.json'));
-    },
-    fetchAddFacilities() {
-      dispatch(fetchAddFacilities('data/additionalFacilities.json'));
+    fetchCamp(id) {
+      dispatch(getRequsetCamp(id));
     },
   };
 };
 
-export default connect(null, null)(CreateAppComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(ViewAppComponent);

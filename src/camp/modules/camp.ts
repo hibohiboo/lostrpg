@@ -1,6 +1,6 @@
 import { createAction, handleActions } from 'redux-actions';
 import { call, put, select, takeEvery } from 'redux-saga/effects';
-import { put as putDatabase } from '../firebase';
+import { put as putDatabase, getCamp as getCampFromFirebase } from '../firebase';
 import Camp from '../models/Camp';
 import Facility from '../models/Facility';
 import User from '../models/User';
@@ -50,6 +50,25 @@ export function* putCamp(action: {type: string, payload: {camp: Camp}}) {
     yield put({ type: PUT_SUCCESS, payload:{ camp: action.payload.camp } });
   } catch (e) {
     yield put({ type: PUT_FAILED, message: e.message });
+  }
+}
+
+/**
+ * データベースからキャンプデータを取得
+ */
+export const GET_CAMP_FROM_DB_REQUEST_START = 'camp/get_from_db_request_start';
+const GET_CAMP_FROM_DB_REQUEST_SUCCESS = 'camp/get_from_db_request_success';
+const GET_CAMP_FROM_DB_REQUEST_FAILED = 'camp/get_from_db_request_failed';
+export const getRequsetCamp = createAction(GET_CAMP_FROM_DB_REQUEST_START, id => ({ id }));
+
+// saga:
+export function* getCampFromDb(action: {type: string, payload: {id: string}}) {
+  const { id } = action.payload;
+  try {
+    const camp: Camp = yield call(getCampFromFirebase, id);
+    yield put({ type: FETCH_REQUEST_SUCCESS, payload:{ camp } });
+  } catch (e) {
+    yield put({ type: FETCH_REQUEST_FAILED, message: e.message });
   }
 }
 

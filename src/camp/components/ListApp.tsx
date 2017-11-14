@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Component, Props } from 'react';
 import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
-
+import { history } from '../store';
 import { connect } from 'react-redux';
 import CampForm from '../containers/CampForm';
 import CampList from '../containers/CampList';
@@ -70,6 +70,7 @@ class ListAppComponent extends Component<IListAppProps> {
   }
   public logout() {
     logout();
+    history.push('/');
   }
   public render() {
     return (
@@ -79,9 +80,10 @@ class ListAppComponent extends Component<IListAppProps> {
             <LogoutContainer logout={this.logout} />
             : <LoginContainer login={this.login} />
           }
-          <p>
-            <Link to="/create">{i18n.t('Create new Camp')}</Link>
-          </p>
+          { this.props.auth.isAuthenticated ?
+          <p><Link to="/create">{i18n.t('Create new Camp')}</Link></p>
+          : ''
+          }
           <CampList />
         </div>
     );
