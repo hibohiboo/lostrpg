@@ -1,19 +1,23 @@
 import * as React from 'react';
-import { Component } from 'react';
+import { Component, Props } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import CampForm from '../containers/CampForm';
 import { putRequsetCamp } from '../modules/camp';
 import store from '../store';
+import { connect } from 'react-redux';
 import i18n from '../utilities/i18n';
 
-export default class EditApp extends Component {
+interface IEditProps extends Props<EditAppComponent>{
+  submit: (campName, facilities, freeWriting)=>void;
+}
+
+class EditAppComponent extends Component<IEditProps> {
+  constructor(public props: IEditProps) {
+    super(props);
+  }
   public submit = (values) => {
-    // print the form values to the console
-    console.log(values);
     const { campName, facilities, freeWriting } = values;
-    store.dispatch(putRequsetCamp({
-      campName, facilities, freeWriting,
-    }));
+    this.props.submit(campName, facilities, freeWriting);
   }
   public render() {
     return (
@@ -24,3 +28,18 @@ export default class EditApp extends Component {
     );
   }
 }
+
+const mapStateToProps = (store) => {
+  return { auth: store.auth };
+};
+const mapDispatchToProps = (dispatch)=> {
+  return {
+    submit(campName:string, facilities:any, freeWriting:string) {
+      dispatch(putRequsetCamp({
+        campName, facilities, freeWriting,
+      }));
+    },
+  };
+}
+
+export default connect(mapStateToProps, null)(EditAppComponent);

@@ -15,25 +15,44 @@ import { fetchStart } from './modules/load';
 import { loginSuccess } from './modules/user';
 import store from './store';
 import {history} from './store';
+import { authCheck } from './modules/auth';
 
-twitterLogin(viewEdit);
+// ログイン状況確認
+store.dispatch(authCheck());
 
-function viewEdit(user: User) {
-  store.dispatch(fetchStart('blankCamp.json'));
-  store.dispatch(addFetch('additionalFacilities.json'));
-  store.dispatch(loginSuccess(user));
-  render(
-    // providerにstoreは必須
-    <Provider store={store}>
-      <ConnectedRouter history={history}>
-        <div>
-          <Route exact path="/" component={ListApp}/>
-          <Route path="/edit" component={EditApp}/>
-        </div>
-      </ConnectedRouter>
-    </Provider>
-    ,
-    document.getElementById('app'),
-    null,
-  );
-}
+render(
+  // providerにstoreは必須
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <div>
+        <Route exact path="/" component={ListApp}/>
+        <Route path="/edit" component={EditApp}/>
+      </div>
+    </ConnectedRouter>
+  </Provider>
+  ,
+  document.getElementById('app'),
+  null,
+);
+
+// twitterLogin(viewEdit);
+
+// function viewEdit(user: User) {
+//   store.dispatch(fetchStart('blankCamp.json'));
+//   store.dispatch(addFetch('additionalFacilities.json'));
+//   store.dispatch(loginSuccess(user));
+//   render(
+//     // providerにstoreは必須
+//     <Provider store={store}>
+//       <ConnectedRouter history={history}>
+//         <div>
+//           <Route exact path="/" component={ListApp}/>
+//           <Route path="/edit" component={EditApp}/>
+//         </div>
+//       </ConnectedRouter>
+//     </Provider>
+//     ,
+//     document.getElementById('app'),
+//     null,
+//   );
+// }
