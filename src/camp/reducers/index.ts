@@ -5,8 +5,8 @@ import { facilitiesReducer as addFacilities } from '../modules/addFacility';
 import { campReducer as camp } from '../modules/camp';
 import { campsReducer as camps } from '../modules/camps';
 
-import { userReducer as user } from '../modules/user';
 import { authReducer as auth } from '../modules/auth';
+import { userReducer as user } from '../modules/user';
 
 // 最終的なstoreの値
 const app = combineReducers({

@@ -1,19 +1,19 @@
 import * as React from 'react';
 import { Component, Props } from 'react';
+import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import CampForm from '../containers/CampForm';
-import { putRequsetCamp } from '../modules/camp';
-import store from '../store';
-import { connect } from 'react-redux';
-import i18n from '../utilities/i18n';
-import { fetchStart } from '../modules/camp';
 import { fetchStart as fetchAddFacilities } from '../modules/addFacility';
-import {history} from '../store'
-interface ICreateProps extends Props<CreateAppComponent>{
-  submit: (campName, facilities, freeWriting)=>void;
-  fetchCamp: ()=>void;
+import { putRequsetCamp } from '../modules/camp';
+import { fetchStart } from '../modules/camp';
+import { history } from '../store';
+import store from '../store';
+import i18n from '../utilities/i18n';
+interface ICreateProps extends Props<CreateAppComponent> {
+  submit: (campName, facilities, freeWriting) => void;
+  fetchCamp: () => void;
   camp: any;
-  fetchAddFacilities: ()=>void;
+  fetchAddFacilities: () => void;
 }
 
 class CreateAppComponent extends Component<ICreateProps> {
@@ -42,20 +42,20 @@ class CreateAppComponent extends Component<ICreateProps> {
 const mapStateToProps = (store) => {
   return { auth: store.auth, camp:store.camp, addFacilities:store.addFacilities  };
 };
-const mapDispatchToProps = (dispatch)=> {
+const mapDispatchToProps = (dispatch) => {
   return {
-    submit(campName:string, facilities:any, freeWriting:string) {
+    submit(campName: string, facilities: any, freeWriting: string) {
       dispatch(putRequsetCamp({
         campName, facilities, freeWriting,
       }));
     },
-    fetchCamp(){
-      dispatch(fetchStart('data/blankCamp.json'))
+    fetchCamp() {
+      dispatch(fetchStart('data/blankCamp.json'));
     },
-    fetchAddFacilities(){
+    fetchAddFacilities() {
       dispatch(fetchAddFacilities('data/additionalFacilities.json'));
-    }
+    },
   };
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateAppComponent);

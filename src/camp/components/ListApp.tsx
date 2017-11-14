@@ -1,60 +1,60 @@
 import * as React from 'react';
 import { Component, Props } from 'react';
-import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
+import { Field, reduxForm } from 'redux-form';
 
-import CampForm from '../containers/CampForm';
-import { putRequsetCamp } from '../modules/camp';
-import i18n from '../utilities/i18n';
 import { connect } from 'react-redux';
-import User from '../models/User'
+import CampForm from '../containers/CampForm';
 import CampList from '../containers/CampList';
 import { logout, redirectTwitter } from '../firebase/index';
+import User from '../models/User';
+import { putRequsetCamp } from '../modules/camp';
+import i18n from '../utilities/i18n';
 
-interface ILoginProps extends Props<LoginContainer>{
-  login: ()=>void;
-} 
+interface ILoginProps extends Props<LoginContainer> {
+  login: () => void;
+}
 
 class LoginContainer extends Component<ILoginProps> {
   constructor(public props: ILoginProps) {
     super(props);
   }
-  render() {
-    return <button onClick={this.props.login}>{i18n.t('Login Here!')}</button>
+  public render() {
+    return <button onClick={this.props.login}>{i18n.t('Login Here!')}</button>;
   }
 }
 
 interface ILogoutProps extends Props<LogoutComponent> {
-  logout: ()=>void;
+  logout: () => void;
   location?: {
     pathname: string;
-  }
+  };
   user: User;
-} 
+}
 
 class LogoutComponent extends Component<ILogoutProps> {
   constructor(public props: ILogoutProps) {
     super(props);
   }
-  componentWillMount() {
+  public componentWillMount() {
     // alert('Private home is at: ' + this.props.location.pathname)
   }
 
-  render() {
-    const {user} = this.props;
+  public render() {
+    const { user } = this.props;
     const name = user && user.twitterName || '';
     return <div>
               <button onClick={this.props.logout}>{i18n.t('Logout Here!')}</button>
               : {name}
-           </div>
+           </div>;
   }
 }
-const LogoutContainer = connect(store=>({user: store.user}), null)(LogoutComponent);
+const LogoutContainer = connect(store => ({ user: store.user }), null)(LogoutComponent);
 
-interface IListAppProps extends Props<ListAppComponent>{
+interface IListAppProps extends Props<ListAppComponent> {
   auth: {
-    isAuthenticated:boolean;
-  }
+    isAuthenticated: boolean;
+  };
 }
 
 /**
@@ -65,17 +65,17 @@ class ListAppComponent extends Component<IListAppProps> {
     super(props);
   }
 
-  login(){
+  public login() {
     redirectTwitter();
   }
-  logout(){
+  public logout() {
     logout();
   }
   public render() {
     return (
         <div>
           <h1>{i18n.t('Camps')}</h1>
-          { this.props.auth.isAuthenticated ? 
+          { this.props.auth.isAuthenticated ?
             <LogoutContainer logout={this.logout} />
             : <LoginContainer login={this.login} />
           }

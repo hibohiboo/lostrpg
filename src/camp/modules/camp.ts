@@ -1,8 +1,8 @@
 import { createAction, handleActions } from 'redux-actions';
 import { call, put, select, takeEvery } from 'redux-saga/effects';
-import { put as putDatabase} from '../firebase';
-import Facility from '../models/Facility';
+import { put as putDatabase } from '../firebase';
 import Camp from '../models/Camp';
+import Facility from '../models/Facility';
 import User from '../models/User';
 
 /**
@@ -33,8 +33,6 @@ export function* fetchCamp(action: {type: string, payload: {url: string}}) {
     yield put({ type: FETCH_REQUEST_FAILED, message: e.message });
   }
 }
-
-
 
 export const PUT_REQUEST = 'CAMP_PUT_REQUESTED';
 export const putRequsetCamp = createAction(PUT_REQUEST, camp => ({ camp }));
