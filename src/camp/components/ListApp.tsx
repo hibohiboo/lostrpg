@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Component, Props } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { Link } from 'react-router-dom';
+
 import CampForm from '../containers/CampForm';
 import { putRequsetCamp } from '../modules/camp';
 import i18n from '../utilities/i18n';
@@ -64,6 +66,9 @@ class ListAppComponent extends Component<IListAppProps> {
             <LogoutContainer logout={()=>console.log('logout')} />
             : <LoginContainer login={()=>console.log('login')} />
           }
+          <p>
+            <Link to="/create">{i18n.t('Create new Camp')}</Link>
+          </p>
         </div>
     );
   }

@@ -6,18 +6,28 @@ import { putRequsetCamp } from '../modules/camp';
 import store from '../store';
 import { connect } from 'react-redux';
 import i18n from '../utilities/i18n';
-
-interface IEditProps extends Props<EditAppComponent>{
+import { fetchStart } from '../modules/camp';
+import { fetchStart as fetchAddFacilities } from '../modules/addFacility';
+import {history} from '../store'
+interface ICreateProps extends Props<CreateAppComponent>{
   submit: (campName, facilities, freeWriting)=>void;
+  fetchCamp: ()=>void;
+  camp: any;
+  fetchAddFacilities: ()=>void;
 }
 
-class EditAppComponent extends Component<IEditProps> {
-  constructor(public props: IEditProps) {
+class CreateAppComponent extends Component<ICreateProps> {
+  constructor(public props: ICreateProps) {
     super(props);
+    this.props.fetchCamp();
+    this.props.fetchAddFacilities();
   }
   public submit = (values) => {
     const { campName, facilities, freeWriting } = values;
     this.props.submit(campName, facilities, freeWriting);
+
+    // topにリダイレクト
+    history.push('/');
   }
   public render() {
     return (
@@ -30,7 +40,7 @@ class EditAppComponent extends Component<IEditProps> {
 }
 
 const mapStateToProps = (store) => {
-  return { auth: store.auth };
+  return { auth: store.auth, camp:store.camp, addFacilities:store.addFacilities  };
 };
 const mapDispatchToProps = (dispatch)=> {
   return {
@@ -39,7 +49,13 @@ const mapDispatchToProps = (dispatch)=> {
         campName, facilities, freeWriting,
       }));
     },
+    fetchCamp(){
+      dispatch(fetchStart('data/blankCamp.json'))
+    },
+    fetchAddFacilities(){
+      dispatch(fetchAddFacilities('data/additionalFacilities.json'));
+    }
   };
 }
 
-export default connect(mapStateToProps, null)(EditAppComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateAppComponent);

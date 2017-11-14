@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { createAction, handleActions } from 'redux-actions';
 import { reducer as formReducer } from 'redux-form';
 import { facilitiesReducer as addFacilities } from '../modules/addFacility';
-import { campReducer as camp } from '../modules/load';
+import { campReducer as camp } from '../modules/camp';
 import { userReducer as user } from '../modules/user';
 import { authReducer as auth } from '../modules/auth';
 

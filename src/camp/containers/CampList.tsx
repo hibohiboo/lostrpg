@@ -19,10 +19,8 @@ class CampListComponent extends Component<IProp, {}> {
   }
 }
 
-// You have to connect() to any reducers that you wish to connect to yourself
-const CampList = connect(
+export default connect(
   store =>  ({ camps: store.camps }),
   null,
 )(CampListComponent);
 
-export default CampList;

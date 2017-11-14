@@ -1,8 +1,8 @@
 import { takeEvery } from 'redux-saga/effects';
 import { FETCH_REQUEST_START as ADD_START,
          fetchFacilities as addFetch } from '../modules/addFacility';
-import { PUT_REQUEST, putCamp } from '../modules/camp';
-import { FETCH_REQUEST_START, fetchCamp } from '../modules/load';
+import { FETCH_REQUEST_START, fetchCamp,
+         PUT_REQUEST, putCamp } from '../modules/camp';
 import { AUTH_CHECK, checkAuth } from '../modules/auth'
 
 function* sagas() {
