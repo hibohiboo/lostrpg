@@ -8,7 +8,6 @@ import { ConnectedRouter, push } from 'react-router-redux'
 
 import EditApp from './components/EditApp';
 import ListApp from './components/ListApp';
-import { twitterLogin } from './firebase';
 import User from './models/User';
 import { fetchStart as addFetch } from './modules/addFacility';
 import { fetchStart } from './modules/load';

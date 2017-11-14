@@ -1,7 +1,8 @@
 import * as firebase from 'firebase';
 import { createAction, handleActions } from 'redux-actions';
 import { call, put } from 'redux-saga/effects';
-import { getUserId } from '../firebase'
+import { getUserId, getUser } from '../firebase';
+import {  loginSuccess, LOGIN_SUCCESS} from './user';
 /**
  * actionType
  */
@@ -16,11 +17,19 @@ export const authCheck = createAction(AUTH_CHECK);
 const authSuccess = createAction(AUTH_SUCCESS);
 const authFail = createAction(AUTH_FAIL);
 
-
+/**
+ * firebaseの認証情報を取得できたらSUCCESS
+ * 
+ * @param action 
+ */
 export function* checkAuth(action: {type: string}) {
   try {
     const uid = yield call(getUserId);
     yield put({ type: AUTH_SUCCESS, payload:{ uid } });
+    const user = yield call(getUser, uid);
+    if(user !== null){
+      yield put({type:LOGIN_SUCCESS, payload: { user }})
+    }
   } catch (e) {
     yield put({ type: AUTH_FAIL, message: e.message });
   }
