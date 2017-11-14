@@ -9,6 +9,7 @@ import i18n from '../utilities/i18n';
 import { connect } from 'react-redux';
 import User from '../models/User'
 import CampList from '../containers/CampList';
+import { logout, redirectTwitter } from '../firebase/index';
 
 interface ILoginProps extends Props<LoginContainer>{
   login: ()=>void;
@@ -63,13 +64,20 @@ class ListAppComponent extends Component<IListAppProps> {
   constructor(public props: IListAppProps) {
     super(props);
   }
+
+  login(){
+    redirectTwitter();
+  }
+  logout(){
+    logout();
+  }
   public render() {
     return (
         <div>
           <h1>{i18n.t('Camps')}</h1>
           { this.props.auth.isAuthenticated ? 
-            <LogoutContainer logout={()=>console.log('logout')} />
-            : <LoginContainer login={()=>console.log('login')} />
+            <LogoutContainer logout={this.logout} />
+            : <LoginContainer login={this.login} />
           }
           <p>
             <Link to="/create">{i18n.t('Create new Camp')}</Link>

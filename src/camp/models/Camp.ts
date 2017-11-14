@@ -1,5 +1,14 @@
 import Facility from './Facility';
 
+export class CampName{
+  constructor(
+    public campName: string,
+    public campId: string,
+    public twitterId: string,
+    public uid: string
+  ){}
+}
+
 export default class Camp {
   constructor(
     public campName: string,

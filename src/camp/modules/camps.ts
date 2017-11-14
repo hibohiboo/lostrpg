@@ -3,7 +3,7 @@ import { createAction, handleActions } from 'redux-actions';
 import { call, put, select, takeEvery } from 'redux-saga/effects';
 import * as _ from 'lodash';
 import { put as putDatabase, fetchCamps as fetchDatabase } from '../firebase';
-import Camp from '../models/Camp';
+import { CampName } from '../models/Camp';
 import User from '../models/User';
 
 export const FETCH_REQUEST = 'CAMPS_FETCH_REQUESTED';
@@ -21,8 +21,9 @@ const fetchSuccessCamp = createAction(FETCH_SUCCESS, camps => ({ camps }));
 export function* fetchCamps(action: {type: string}) {
   try {
     const camps = yield call(fetchDatabase);
-    const campList:Camp[] = _.map(camps, (camp:Camp, key:string)=>{
-      return new Camp(camp.campName, camp.facilities, camp.freeWriting, key, camp.uid, camp.twitterId, camp.twitterName);
+    const campList:CampName[] = _.map(camps, (camp:CampName, key:string)=>{
+      return new CampName(camp.campName, camp.campId, camp.twitterId, camp.uid);
+     // return new Camp(camp.campName, camp.facilities, camp.freeWriting, key, camp.uid, camp.twitterId, camp.twitterName);
     });
     //const campList:Camp[] = yield call(fetchDatabase);
     yield put({ type: FETCH_SUCCESS, payload:{ camps: campList } });
@@ -35,7 +36,7 @@ export function* fetchCamps(action: {type: string}) {
  * reducer
  */
 export const campsReducer = handleActions({
-  [FETCH_SUCCESS]: (state: Camp[],  { payload: { camps } }: any) => {
+  [FETCH_SUCCESS]: (state: CampName[],  { payload: { camps } }: any) => {
     if(camps === null){
       return [];
     }
