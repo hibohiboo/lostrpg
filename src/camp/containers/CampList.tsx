@@ -10,6 +10,7 @@ import RenderField from './RenderField';
 interface IProp extends Props<CampListComponent> {
   camps: any;
   fetch: () => void;
+  auth: any;
 }
 class CampListComponent extends Component<IProp, {}> {
   constructor(public props: IProp) {
@@ -17,9 +18,9 @@ class CampListComponent extends Component<IProp, {}> {
     this.props.fetch();
   }
   public render() {
-    const { camps } = this.props;
+    const { camps, auth } = this.props;
     if (camps === null) { return <div>no camps</div>; }
-    console.log(camps);
+
     return (
       <ul>
         {
@@ -27,7 +28,8 @@ class CampListComponent extends Component<IProp, {}> {
             return (
               <li key={camp.campId}>
                 <Link to={`/view/${camp.campId}`}>{camp.campName}</Link>
-
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                { auth.uid === camp.uid ? <Link to={`/edit/${camp.campId}`}>{i18n.t('Edit')}</Link> : ''}
               </li>
             );
           })}
@@ -37,9 +39,9 @@ class CampListComponent extends Component<IProp, {}> {
 }
 
 export default connect(
-  store =>  ({ camps: store.camps }),
+  store =>  ({ camps: store.camps, auth: store.auth }),
   dispatch => ({ fetch() {
     dispatch(fetchRequsetCamp());
   }}),
 )(CampListComponent);
-
+

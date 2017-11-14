@@ -10,7 +10,6 @@ const config = require('./config');
 const strategy = new FirebaseStrategy(config);
 strategy.redirectResult();
 
-
 /**
  * ツイッターの認証ページへ飛ばす
  */
@@ -18,6 +17,9 @@ export const redirectTwitter = () => {
   strategy.redirectTwitter();
 };
 
+/**
+ * ログアウト
+ */
 export const logout = () => {
   return strategy.logout();
 };
@@ -53,6 +55,13 @@ export async function put(camp: Camp, user: User) {
 }
 
 /**
+ * データベースのキャンプを更新する
+ */
+export async function post(camp: Camp, user: User) {
+  return await strategy.updateCampAndCampName(camp, user);
+}
+
+/**
  * データベースからキャンプ一覧を取得する
  */
 export async function fetchCamps() {
@@ -62,6 +71,6 @@ export async function fetchCamps() {
 /**
  * データベースからキャンプを取得する
  */
-export async function getCamp(id) {
+export async function get(id) {
   return await strategy.getCamp(id);
 }

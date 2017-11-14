@@ -5,47 +5,60 @@ import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import CampForm from '../containers/CampForm';
 import { fetchStart as fetchAddFacilities } from '../modules/addFacility';
-import { putRequsetCamp } from '../modules/camp';
-import { fetchStart } from '../modules/camp';
+import { getRequsetCamp, fetchStart, postRequsetCamp } from '../modules/camp';
 import { history } from '../store';
 import store from '../store';
 import i18n from '../utilities/i18n';
 import { resetCamp } from '../modules/camp';
 
-interface ICreateProps extends Props<CreateAppComponent> {
-  submit: (campName, facilities, freeWriting) => void;
-  fetchCamp: () => void;
+interface IEditProps extends Props<EditAppComponent> {
+  match: {
+    params: {
+      id: string;
+    },
+  };
+  submit: (campId, campName, facilities, freeWriting) => void;
+  fetchCamp: (id) => void;
   camp: any;
   fetchAddFacilities: () => void;
   reset: ()=>void;
 }
 
-class CreateAppComponent extends Component<ICreateProps> {
-  constructor(public props: ICreateProps) {
+class EditAppComponent extends Component<IEditProps> {
+  constructor(public props: IEditProps) {
     super(props);
-    this.props.fetchCamp();
     this.props.fetchAddFacilities();
   }
   public submit = (values) => {
     const { campName, facilities, freeWriting } = values;
-    this.props.submit(campName, facilities, freeWriting);
+    const { id } = this.props.match.params;
+    this.props.submit(id, campName, facilities, freeWriting);
 
     // topにリダイレクト
     history.push('/');
   }
 
   public componentWillMount(){
-    this.props.fetchCamp();
+    const { id } = this.props.match.params;
+    this.props.fetchCamp(id);
   }
-
+  
   public render() {
+    const { camp } = this.props;
+    if(camp === null){
+      return (<div>読み込み中</div>);
+    }
     return (
         <div>
-          <h1>{i18n.t('CreateCamp')}</h1>
+          <h1>{i18n.t('EditCamp')}</h1>
           <CampForm onSubmit={this.submit} camp={this.props.camp} />
           <Link to="/">{i18n.t('Back')}</Link>
         </div>
     );
+  }
+  public componentWillUnmount(){
+    console.log('unmount');
+    this.props.reset();
   }
 }
 
@@ -54,13 +67,13 @@ const mapStateToProps = (store) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    submit(campName: string, facilities: any, freeWriting: string) {
-      dispatch(putRequsetCamp({
-        campName, facilities, freeWriting,
+    submit(campId:string, campName: string, facilities: any, freeWriting: string) {
+      dispatch(postRequsetCamp({
+        campId, campName, facilities, freeWriting,
       }));
     },
-    fetchCamp() {
-      dispatch(fetchStart('/data/blankCamp.json'));
+    fetchCamp(id) {
+      dispatch(getRequsetCamp(id));
     },
     fetchAddFacilities() {
       dispatch(fetchAddFacilities('/data/additionalFacilities.json'));
@@ -71,4 +84,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateAppComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(EditAppComponent);

@@ -112,14 +112,30 @@ export default class FirebaseStrategy {
     });
    return ref.key;
   }
-  async createCampName(camp, user, id){
+
+  async updateCamp(camp, user){
+    const ref = this.databaseRef(`/${this.CAMP}/${camp.campId}`);
+    const now = Date.now();
+    ref.set({
+      ...user,
+      ...camp,
+      updatedAt: now,
+    });
+  }
+
+  async updateCampName(camp, user, id){
     const ref = this.databaseRef(`/${this.CAMP_NAME}/${id}`);
     ref.set({campName: camp.campName, campId:id, twitterId: user.twitterId, uid:user.uid});
   }
 
   public async createCampAndCampName(camp, user){
     const key = await this.createCamp(camp, user);
-    this.createCampName(camp, user, key);
+    this.updateCampName(camp, user, key);
+  }
+
+  public async updateCampAndCampName(camp, user){
+    this.updateCamp(camp, user);
+    this.updateCampName(camp, user, camp.campId);
   }
 
   public async getCampNames(){

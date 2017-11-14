@@ -9,6 +9,7 @@ import { ConnectedRouter, push } from 'react-router-redux';
 import CreateApp from './components/CreateApp';
 import ListApp from './components/ListApp';
 import ViewApp from './components/ViewApp';
+import EditApp from './components/EditApp';
 import User from './models/User';
 import { authCheck } from './modules/auth';
 import store from './store';
@@ -25,6 +26,7 @@ render(
         <Route exact path="/" component={ListApp}/>
         <Route path="/create" component={CreateApp}/>
         <Route path="/view/:id" component={ViewApp} />
+        <Route path="/edit/:id" component={EditApp} />
       </div>
     </ConnectedRouter>
   </Provider>
