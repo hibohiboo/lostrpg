@@ -31,7 +31,8 @@ class CreateAppComponent extends Component<ICreateProps> {
     this.props.submit(campName, facilities, freeWriting);
 
     // topにリダイレクト
-    history.push('/');
+    location.href = "/";
+//    history.push('/');
   }
 
   public componentWillMount(){

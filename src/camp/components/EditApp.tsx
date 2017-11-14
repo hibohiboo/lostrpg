@@ -35,7 +35,8 @@ class EditAppComponent extends Component<IEditProps> {
     this.props.submit(id, campName, facilities, freeWriting);
 
     // topにリダイレクト
-    history.push('/');
+    location.href = "/";
+//    history.push('/');
   }
 
   public componentWillMount(){

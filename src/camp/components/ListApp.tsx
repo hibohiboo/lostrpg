@@ -73,7 +73,8 @@ class ListAppComponent extends Component<IListAppProps> {
   }
   public logout() {
     logout();
-    history.push('/');
+    location.href = "/";
+//    history.push('/');
   }
   public render() {
     return (

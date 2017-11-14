@@ -10,7 +10,7 @@ import { history } from '../store';
 import store from '../store';
 import i18n from '../utilities/i18n';
 import Camp from '../models/Camp';
-
+import { resetCamp } from '../modules/camp';
 interface ICreateProps extends Props<ViewAppComponent> {
   match: {
     params: {
@@ -19,6 +19,7 @@ interface ICreateProps extends Props<ViewAppComponent> {
   };
   camp: Camp;
   fetchCamp:(id)=>void;
+  reset: ()=>void;
 }
 
 class ViewAppComponent extends Component<ICreateProps> {
@@ -66,6 +67,10 @@ class ViewAppComponent extends Component<ICreateProps> {
         </div>
     );
   }
+  public componentWillUnmount(){
+    console.log('unmount');
+    this.props.reset();
+  }
 }
 
 const mapStateToProps = (store) => {
@@ -76,6 +81,9 @@ const mapDispatchToProps = (dispatch) => {
     fetchCamp(id) {
       dispatch(getRequsetCamp(id));
     },
+    reset(){
+      dispatch(resetCamp())
+    }
   };
 };
 

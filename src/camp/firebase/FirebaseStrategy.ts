@@ -98,6 +98,8 @@ export default class FirebaseStrategy {
         twitterId: result.additionalUserInfo.username,
         twitterName: user.displayName,
       });
+      // 再読み込
+      location.href = "/";
     });
   }
 
