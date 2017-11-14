@@ -23,6 +23,8 @@ const plugins = isProduction ?
   new webpack.LoaderOptionsPlugin({
     minimize: true,
   }),
+  // minimize
+  new webpack.optimize.UglifyJsPlugin()
 ] :
   // 開発用設定。
 [
@@ -37,7 +39,8 @@ export default {
   entry: {
     campForm: './app.tsx',
     // code-splitting用の設定
-    vendor: ['react', 'react-dom', 'redux', 'redux-actions', 'redux-saga', 'redux-logger', 'babel-polyfill', 'react-redux', 'redux-form', 'i18next']
+    vendor: ['react', 'react-dom', 'redux', 'redux-actions', 'redux-saga', 'redux-logger', 'babel-polyfill', 
+             'react-redux', 'redux-form', 'i18next', 'firebase', 'react-router-redux', 'history', 'react-router-dom']
   },
   output: {
     path: __dirname + '/dist',

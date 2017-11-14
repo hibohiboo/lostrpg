@@ -80,6 +80,17 @@ class ListAppComponent extends Component<IListAppProps> {
     return (
         <div>
           <h1>{i18n.t('Camps')}</h1>
+          <p>
+            デザインとか動作が甘いですが、とりあえず動作します。
+            firebase、react勉強中。
+          </p>
+          <h2>TODO</h2>
+          <ul>
+            <li>削除</li>
+            <li>デザイン（デザインくださる方がいればツイッターで一声くださると幸い）</li>
+            <li>動作が遅延していることの修正</li>
+          </ul>
+          <h2>{i18n.t('Camps')}</h2>
           { this.props.auth.isAuthenticated ?
             <LogoutContainer logout={this.logout} />
             : <LoginContainer login={this.login} />
