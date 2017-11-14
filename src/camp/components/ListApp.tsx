@@ -8,6 +8,8 @@ import { putRequsetCamp } from '../modules/camp';
 import i18n from '../utilities/i18n';
 import { connect } from 'react-redux';
 import User from '../models/User'
+import CampList from '../containers/CampList';
+
 interface ILoginProps extends Props<LoginContainer>{
   login: ()=>void;
 } 
@@ -54,6 +56,9 @@ interface IListAppProps extends Props<ListAppComponent>{
   }
 }
 
+/**
+ * キャンプ一覧ページ
+ */
 class ListAppComponent extends Component<IListAppProps> {
   constructor(public props: IListAppProps) {
     super(props);
@@ -69,6 +74,7 @@ class ListAppComponent extends Component<IListAppProps> {
           <p>
             <Link to="/create">{i18n.t('Create new Camp')}</Link>
           </p>
+          <CampList />
         </div>
     );
   }

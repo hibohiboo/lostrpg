@@ -5,6 +5,10 @@ export default class Camp {
     public campName: string,
     public facilities: Facility[],
     public freeWriting: string,
+    public campId?: string,
+    public uid?: string,
+    public twitterId?: string,
+    public twitterName?: string,
   ) {
   }
 }

@@ -34,15 +34,7 @@ export function* fetchCamp(action: {type: string, payload: {url: string}}) {
   }
 }
 
-/**
- * reducer
- */
-export const campReducer = handleActions({
-  [FETCH_REQUEST_SUCCESS]: (state: Camp,  { payload: { camp } }: any) => {
-    console.log(camp);
-    return camp;
-  },
-},                                       null);
+
 
 export const PUT_REQUEST = 'CAMP_PUT_REQUESTED';
 export const putRequsetCamp = createAction(PUT_REQUEST, camp => ({ camp }));
@@ -63,3 +55,11 @@ export function* putCamp(action: {type: string, payload: {camp: Camp}}) {
   }
 }
 
+/**
+ * reducer
+ */
+export const campReducer = handleActions({
+  [FETCH_REQUEST_SUCCESS]: (state: Camp,  { payload: { camp } }: any) => {
+    return camp;
+  },
+},                                       null);
