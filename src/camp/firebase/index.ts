@@ -4,7 +4,7 @@ import { CampName } from '../models/Camp';
 import User from '../models/User';
 import FirebaseStrategy from './FirebaseStrategy';
 
-const config = require('./config');
+const config = require('./config'); // tslint:disable-line no-var-requires
 
 const strategy = new FirebaseStrategy(config);
 strategy.redirectResult();

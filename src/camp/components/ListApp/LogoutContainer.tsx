@@ -22,7 +22,7 @@ class LogoutComponent extends Component<ILogoutProps> {
 
   public render() {
     const { user } = this.props;
-    if(user === null){
+    if (user === null) {
       return (<div>{i18n.t('now loading...')}</div>);
     }
     const name = user.twitterName;
