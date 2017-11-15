@@ -37,7 +37,7 @@ export default {
   context: __dirname + '/src',
   // エントリーポイントとしてapp.jsを起点にビルドする
   entry: {
-    characterForm: './app.tsx',
+    campForm: './app.tsx',
     // code-splitting用の設定
     vendor: ['react', 'react-dom', 'redux', 'redux-actions', 'redux-saga', 'redux-logger', 'babel-polyfill', 
              'react-redux', 'redux-form', 'i18next', 'firebase', 'react-router-redux', 'history', 'react-router-dom']

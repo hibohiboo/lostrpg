@@ -37,8 +37,8 @@ services:
     volumes:
       - ./config/.babelrc:/app/.babelrc
       - ./config/tsconfig.json:/app/tsconfig.json
-      - ./config/webpack.config.babel.js:/app/webpack.config.babel.js
-      - ../src/character:/app/src
+      - ./config/camp.webpack.config.babel.js:/app/webpack.config.babel.js
+      - ../src/camp:/app/src
       - ../dist/bundle-webpack:/app/dist
       - ../public:/app/public
     environment:
