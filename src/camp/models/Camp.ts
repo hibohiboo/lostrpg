@@ -1,3 +1,4 @@
+/* tslint:disable */
 import Facility from './Facility';
 
 export class CampName {

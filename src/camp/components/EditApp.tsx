@@ -5,11 +5,10 @@ import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import CampForm from '../containers/CampForm';
 import { fetchStart as fetchAddFacilities } from '../modules/addFacility';
-import { getRequsetCamp, fetchStart, postRequsetCamp } from '../modules/camp';
-import { history } from '../store';
-import store from '../store';
-import i18n from '../utilities/i18n';
+import { fetchStart, getRequsetCamp, postRequsetCamp } from '../modules/camp';
 import { resetCamp } from '../modules/camp';
+import { history } from '../store';
+import i18n from '../utilities/i18n';
 
 interface IEditProps extends Props<EditAppComponent> {
   match: {
@@ -21,7 +20,7 @@ interface IEditProps extends Props<EditAppComponent> {
   fetchCamp: (id) => void;
   camp: any;
   fetchAddFacilities: () => void;
-  reset: ()=>void;
+  reset: () => void;
 }
 
 class EditAppComponent extends Component<IEditProps> {
@@ -35,18 +34,18 @@ class EditAppComponent extends Component<IEditProps> {
     this.props.submit(id, campName, facilities, freeWriting);
 
     // topにリダイレクト
-    location.href = "/campform/";
+    location.href = '/campform/';
 //    history.push('/');
   }
 
-  public componentWillMount(){
+  public componentWillMount() {
     const { id } = this.props.match.params;
     this.props.fetchCamp(id);
   }
-  
+
   public render() {
     const { camp } = this.props;
-    if(camp === null){
+    if (camp === null) {
       return (<div>読み込み中</div>);
     }
     return (
@@ -57,7 +56,7 @@ class EditAppComponent extends Component<IEditProps> {
         </div>
     );
   }
-  public componentWillUnmount(){
+  public componentWillUnmount() {
     console.log('unmount');
     this.props.reset();
   }
@@ -68,7 +67,7 @@ const mapStateToProps = (store) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    submit(campId:string, campName: string, facilities: any, freeWriting: string) {
+    submit(campId: string, campName: string, facilities: any, freeWriting: string) {
       dispatch(postRequsetCamp({
         campId, campName, facilities, freeWriting,
       }));
@@ -79,9 +78,9 @@ const mapDispatchToProps = (dispatch) => {
     fetchAddFacilities() {
       dispatch(fetchAddFacilities('/data/additionalFacilities.json'));
     },
-    reset(){
-      dispatch(resetCamp())
-    }
+    reset() {
+      dispatch(resetCamp());
+    },
   };
 };
 

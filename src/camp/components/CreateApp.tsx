@@ -7,17 +7,16 @@ import CampForm from '../containers/CampForm';
 import { fetchStart as fetchAddFacilities } from '../modules/addFacility';
 import { putRequsetCamp } from '../modules/camp';
 import { fetchStart } from '../modules/camp';
-import { history } from '../store';
-import store from '../store';
-import i18n from '../utilities/i18n';
 import { resetCamp } from '../modules/camp';
+import { history } from '../store';
+import i18n from '../utilities/i18n';
 
 interface ICreateProps extends Props<CreateAppComponent> {
   submit: (campName, facilities, freeWriting) => void;
   fetchCamp: () => void;
   camp: any;
   fetchAddFacilities: () => void;
-  reset: ()=>void;
+  reset: () => void;
 }
 
 class CreateAppComponent extends Component<ICreateProps> {
@@ -31,11 +30,11 @@ class CreateAppComponent extends Component<ICreateProps> {
     this.props.submit(campName, facilities, freeWriting);
 
     // topにリダイレクト
-    location.href = "/campform/";
+    location.href = '/campform/';
 //    history.push('/');
   }
 
-  public componentWillMount(){
+  public componentWillMount() {
     this.props.fetchCamp();
   }
 
@@ -66,9 +65,9 @@ const mapDispatchToProps = (dispatch) => {
     fetchAddFacilities() {
       dispatch(fetchAddFacilities('/data/additionalFacilities.json'));
     },
-    reset(){
-      dispatch(resetCamp())
-    }
+    reset() {
+      dispatch(resetCamp());
+    },
   };
 };
 

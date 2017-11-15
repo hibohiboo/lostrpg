@@ -7,9 +7,9 @@ import { Route } from 'react-router';
 import { ConnectedRouter, push } from 'react-router-redux';
 
 import CreateApp from './components/CreateApp';
+import EditApp from './components/EditApp';
 import ListApp from './components/ListApp';
 import ViewApp from './components/ViewApp';
-import EditApp from './components/EditApp';
 import User from './models/User';
 import { authCheck } from './modules/auth';
 import store from './store';

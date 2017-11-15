@@ -50,7 +50,7 @@ const campForm = reduxForm({
 
 // You have to connect() to any reducers that you wish to connect to yourself
 const initializeFromStateForm = connect(
-  (store, ownProps:any) =>  ({ initialValues: ownProps.camp }),
+  (store, ownProps: any) =>  ({ initialValues: ownProps.camp }),
   null,
 )(campForm);
 

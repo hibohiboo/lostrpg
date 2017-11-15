@@ -23,9 +23,7 @@ export function* fetchCamps(action: {type: string}) {
     const camps = yield call(fetchDatabase);
     const campList: CampName[] = _.map(camps, (camp: CampName, key: string) => {
       return new CampName(camp.campName, camp.campId, camp.twitterId, camp.uid);
-     // return new Camp(camp.campName, camp.facilities, camp.freeWriting, key, camp.uid, camp.twitterId, camp.twitterName);
     });
-    //const campList:Camp[] = yield call(fetchDatabase);
     yield put({ type: FETCH_SUCCESS, payload:{ camps: campList } });
   } catch (e) {
     yield put({ type: FETCH_FAILED, message: e.message });

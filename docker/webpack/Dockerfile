@@ -72,6 +72,7 @@ RUN npm i -S firebase
 RUN npm i -S react-router-redux@next
 RUN npm i -S history
 RUN npm i -S react-router-dom
+RUN npm i -S react-router
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tslint\": \"tslint -p 'tsconfig.json'\",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tsc\": \"tsc -p tsconfig.json \",/g" /app/package.json

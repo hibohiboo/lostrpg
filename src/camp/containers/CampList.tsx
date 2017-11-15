@@ -29,7 +29,8 @@ class CampListComponent extends Component<IProp, {}> {
               <li key={camp.campId}>
                 <Link to={`/campform/view/${camp.campId}`}>{camp.campName}</Link>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                { auth.uid === camp.uid ? <Link to={`/campform/edit/${camp.campId}`}>{i18n.t('Edit')}</Link> : ''}
+                { auth.uid === camp.uid ?
+                    <Link to={`/campform/edit/${camp.campId}`}>{i18n.t('Edit')}</Link> : ''}
               </li>
             );
           })}
@@ -44,4 +45,3 @@ export default connect(
     dispatch(fetchRequsetCamp());
   }}),
 )(CampListComponent);
-

@@ -1,5 +1,4 @@
 
-
 import * as firebase from 'firebase';
 export default class FirebaseStrategy {
   private user: any;
@@ -31,10 +30,10 @@ export default class FirebaseStrategy {
   public async getUser() {
     if (this.user) { return this.user; }
 
-    const user = await new Promise( (resolve, reject)=> {
-      this.auth.onAuthStateChanged( (user) => {
-        if (user) {
-          resolve(user);
+    const user = await new Promise((resolve, reject) => {
+      this.auth.onAuthStateChanged((u) => {
+        if (u) {
+          resolve(u);
         } else {
           reject(Error('It broke'));
         }
@@ -51,19 +50,19 @@ export default class FirebaseStrategy {
     return uid;
   }
 
-  public redirectTwitter(){
+  public redirectTwitter() {
     return this.auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
     .then(() => {
       const provider = new firebase.auth.TwitterAuthProvider();
       this.auth.signInWithRedirect(provider);
     });
   }
-  
-  public logout(){
+
+  public logout() {
     return this.auth.signOut();
   }
 
-  async getValue(path){
+  public async getValue(path) {
     return new Promise((resolve, reject) => {
       const ref = this.databaseRef(path);
       ref.on('value', (snapshot) => {
@@ -77,11 +76,11 @@ export default class FirebaseStrategy {
     });
   }
 
-  public async getMember(uid){
-    return await this.getValue(`/${this.MEMBER}/${uid}`);
+  public async getMember(uid) {
+    return this.getValue(`/${this.MEMBER}/${uid}`);
   }
 
-  public redirectResult(){
+  public redirectResult() {
     this.auth.getRedirectResult().then((result) => {
       if (result === null || result.user === null) {
         return;
@@ -99,11 +98,11 @@ export default class FirebaseStrategy {
         twitterName: user.displayName,
       });
       // 再読み込
-      location.href = "/campform/";
+      location.href = '/campform/';
     });
   }
 
-  async createCamp(camp, user){
+  public async createCamp(camp, user) {
     const ref = this.databaseRef(`/${this.CAMP}/`).push();
     const now = Date.now();
     ref.set({
@@ -112,10 +111,10 @@ export default class FirebaseStrategy {
       createdAt: now,
       updatedAt: now,
     });
-   return ref.key;
+    return ref.key;
   }
 
-  async updateCamp(camp, user){
+  public async updateCamp(camp, user) {
     const ref = this.databaseRef(`/${this.CAMP}/${camp.campId}`);
     const now = Date.now();
     ref.set({
@@ -125,26 +124,26 @@ export default class FirebaseStrategy {
     });
   }
 
-  async updateCampName(camp, user, id){
+  public async updateCampName(camp, user, id) {
     const ref = this.databaseRef(`/${this.CAMP_NAME}/${id}`);
-    ref.set({campName: camp.campName, campId:id, twitterId: user.twitterId, uid:user.uid});
+    ref.set({ campName: camp.campName, campId:id, twitterId: user.twitterId, uid:user.uid });
   }
 
-  public async createCampAndCampName(camp, user){
+  public async createCampAndCampName(camp, user) {
     const key = await this.createCamp(camp, user);
     this.updateCampName(camp, user, key);
   }
 
-  public async updateCampAndCampName(camp, user){
+  public async updateCampAndCampName(camp, user) {
     this.updateCamp(camp, user);
     this.updateCampName(camp, user, camp.campId);
   }
 
-  public async getCampNames(){
-    return await this.getValue(`/${this.CAMP_NAME}/`);
+  public async getCampNames() {
+    return this.getValue(`/${this.CAMP_NAME}/`);
   }
 
-  public async getCamp(id){
-    return await this.getValue(`/${this.CAMP}/${id}`);
+  public async getCamp(id) {
+    return this.getValue(`/${this.CAMP}/${id}`);
   }
 }

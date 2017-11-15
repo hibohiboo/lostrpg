@@ -6,7 +6,6 @@ import FirebaseStrategy from './FirebaseStrategy';
 
 const config = require('./config');
 
-
 const strategy = new FirebaseStrategy(config);
 strategy.redirectResult();
 
@@ -58,7 +57,7 @@ export async function put(camp: Camp, user: User) {
  * データベースのキャンプを更新する
  */
 export async function post(camp: Camp, user: User) {
-  return await strategy.updateCampAndCampName(camp, user);
+  return strategy.updateCampAndCampName(camp, user);
 }
 
 /**
@@ -72,5 +71,5 @@ export async function fetchCamps() {
  * データベースからキャンプを取得する
  */
 export async function get(id) {
-  return await strategy.getCamp(id);
+  return strategy.getCamp(id);
 }

@@ -1,6 +1,6 @@
 import { createAction, handleActions } from 'redux-actions';
 import { call, put, select, takeEvery } from 'redux-saga/effects';
-import { put as putDatabase, get as getCampFromFirebase, post as postDatabase } from '../firebase';
+import { get as getCampFromFirebase, post as postDatabase, put as putDatabase } from '../firebase';
 import Camp from '../models/Camp';
 import Facility from '../models/Facility';
 import User from '../models/User';
@@ -104,7 +104,9 @@ export const resetCamp = createAction(RESET_CAMP);
  */
 export const campReducer = handleActions({
   [FETCH_REQUEST_SUCCESS]: (state: Camp,  { payload: { camp } }: any) => {
-    return new Camp(camp.campName, camp.facilities, camp.freeWriting, camp.campId, camp.uid, camp.twitterId, camp.twitterName);
+    return new Camp(camp.campName, camp.facilities,
+                    camp.freeWriting, camp.campId,
+                    camp.uid, camp.twitterId, camp.twitterName);
   },
   [RESET_CAMP]: (state: Camp) => {
     return null;
