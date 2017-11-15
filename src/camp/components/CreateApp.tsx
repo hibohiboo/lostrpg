@@ -31,7 +31,7 @@ class CreateAppComponent extends Component<ICreateProps> {
     this.props.submit(campName, facilities, freeWriting);
 
     // topにリダイレクト
-    location.href = "/";
+    location.href = "/campform/";
 //    history.push('/');
   }
 
@@ -44,7 +44,7 @@ class CreateAppComponent extends Component<ICreateProps> {
         <div>
           <h1>{i18n.t('CreateCamp')}</h1>
           <CampForm onSubmit={this.submit} camp={this.props.camp} />
-          <Link to="/">{i18n.t('Back')}</Link>
+          <Link to="/campform/">{i18n.t('Back')}</Link>
         </div>
     );
   }

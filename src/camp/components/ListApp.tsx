@@ -73,7 +73,7 @@ class ListAppComponent extends Component<IListAppProps> {
   }
   public logout() {
     logout();
-    location.href = "/";
+    location.href = "/campform/";
 //    history.push('/');
   }
   public render() {
@@ -86,9 +86,11 @@ class ListAppComponent extends Component<IListAppProps> {
           </p>
           <h2>TODO</h2>
           <ul>
+            <li>キャラクターシートも作る</li>
             <li>削除</li>
-            <li>デザイン（デザインくださる方がいればツイッターで一声くださると幸い）</li>
+            <li>デザイン（センス足りないです。デザインくださる方がいればツイッターで一声くださると幸い。お助け！）</li>
             <li>動作が遅延していることの修正</li>
+            
           </ul>
           <h2>{i18n.t('Camps')}</h2>
           { this.props.auth.isAuthenticated ?
@@ -96,7 +98,7 @@ class ListAppComponent extends Component<IListAppProps> {
             : <LoginContainer login={this.login} />
           }
           { this.props.auth.isAuthenticated ?
-          <p><Link to="/create">{i18n.t('Create new Camp')}</Link></p>
+          <p><Link to="/campform/create">{i18n.t('Create new Camp')}</Link></p>
           : ''
           }
           <CampList />

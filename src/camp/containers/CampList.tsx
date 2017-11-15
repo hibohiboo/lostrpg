@@ -27,9 +27,9 @@ class CampListComponent extends Component<IProp, {}> {
           camps.map((camp) => {
             return (
               <li key={camp.campId}>
-                <Link to={`/view/${camp.campId}`}>{camp.campName}</Link>
+                <Link to={`/campform/view/${camp.campId}`}>{camp.campName}</Link>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                { auth.uid === camp.uid ? <Link to={`/edit/${camp.campId}`}>{i18n.t('Edit')}</Link> : ''}
+                { auth.uid === camp.uid ? <Link to={`/campform/edit/${camp.campId}`}>{i18n.t('Edit')}</Link> : ''}
               </li>
             );
           })}

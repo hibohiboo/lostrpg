@@ -23,10 +23,10 @@ render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div>
-        <Route exact path="/" component={ListApp}/>
-        <Route path="/create" component={CreateApp}/>
-        <Route path="/view/:id" component={ViewApp} />
-        <Route path="/edit/:id" component={EditApp} />
+        <Route exact path="/campform/" component={ListApp}/>
+        <Route path="/campform/create" component={CreateApp}/>
+        <Route path="/campform/view/:id" component={ViewApp} />
+        <Route path="/campform/edit/:id" component={EditApp} />
       </div>
     </ConnectedRouter>
   </Provider>

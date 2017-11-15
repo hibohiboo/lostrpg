@@ -99,7 +99,7 @@ export default class FirebaseStrategy {
         twitterName: user.displayName,
       });
       // 再読み込
-      location.href = "/";
+      location.href = "/campform/";
     });
   }
 

@@ -63,7 +63,7 @@ class ViewAppComponent extends Component<ICreateProps> {
           </table>
           <h2>{i18n.t('FreeWriting')}</h2>
           <div>{camp.freeWriting}</div>
-          <Link to="/">{i18n.t('Back')}</Link>
+          <Link to="/campform/">{i18n.t('Back')}</Link>
         </div>
     );
   }

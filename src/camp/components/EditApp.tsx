@@ -35,7 +35,7 @@ class EditAppComponent extends Component<IEditProps> {
     this.props.submit(id, campName, facilities, freeWriting);
 
     // topにリダイレクト
-    location.href = "/";
+    location.href = "/campform/";
 //    history.push('/');
   }
 
@@ -53,7 +53,7 @@ class EditAppComponent extends Component<IEditProps> {
         <div>
           <h1>{i18n.t('EditCamp')}</h1>
           <CampForm onSubmit={this.submit} camp={this.props.camp} />
-          <Link to="/">{i18n.t('Back')}</Link>
+          <Link to="/campform/">{i18n.t('Back')}</Link>
         </div>
     );
   }
