@@ -13,36 +13,23 @@ services:
       - 9005:9005
     command: [firebase, serve, -p, "5000", -o, "0.0.0.0", --token, "$FIREBASE_TOKEN"]
 
-  # 構文チェック(ts)
-  tslint:
-    build: ./webpack
-    volumes: 
-      - ./config/tsconfig.json:/app/tsconfig.json
-      - ./config/tslint.json:/app/tslint.json
-      - ../src:/app/src
-    command: [npm, run, -s, tslint, --, -c, tslint.json, 'src/**/*.ts', 'src/**/*.tsx']
-
-  # Apiドキュメント
-  typedoc:
-    build: ./webpack
-    volumes: 
-      - ./config/tsconfig.json:/app/tsconfig.json
-      - ../src:/app/src
-      - ../dist/apidoc:/app/typedoc
-    command: [npm, run, typedoc, --, --target, es6, --jsx, preserve, --ignoreCompilerErrors, --exclude, '**/*.test.ts', --out, ./typedoc/, ./src/]
-
-  # ビルドツール
-  webpack:
-    build: ./webpack
+  s2s:
+    build: ./s2s
     volumes:
-      - ./config/.babelrc:/app/.babelrc
-      - ./config/tsconfig.json:/app/tsconfig.json
-      - ./config/webpack.config.babel.js:/app/webpack.config.babel.js
+      - ../src/character:/app/s2s/examples/shopping-cart/src
+      - ./config/flow/.flowconfig:/app/s2s/example/shopping-cart/.flowconfig
+      - ./config/flow/s2s.config.js:/app/s2s/example/shopping-cart/s2s.config.js
+    command: [yarn, run, s2s]
+
+  webpack:
+    build: ./webpack_flow
+    volumes:
       - ../src/character:/app/src
-      - ../dist/bundle-webpack:/app/dist
+      - ./config/flow/.flowconfig:/app/.flowconfig
+      - ./config/flow/.babelrc:/app/.babelrc
+      - ./config/flow/webpack.config.js:/app/webpack.config.js
       - ../public:/app/public
-    environment:
-      - NODE_ENV=develop
-    command: [npm, run, dev-server, --, --history-api-fallback]
+      - ../dist:/app/dist
     ports:
       -  8080:8080
+    command: [npm, run, dev-server, --, --history-api-fallback]

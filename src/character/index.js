@@ -7,10 +7,10 @@ import { createStore } from 'redux';
 import { Route } from 'react-router';
 import { ConnectedRouter, push } from 'react-router-redux';
 
-const app = props => (<div>test</div>);
+const App = props => (<div>test</div>);
 
 render(
-  <app />
+  <App />
   ,
   document.getElementById('app'),
   null,
