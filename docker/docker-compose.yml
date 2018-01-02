@@ -34,3 +34,22 @@ services:
     ports:
       -  8080:8080
     command: [npm, run, dev-server, --, --history-api-fallback]
+
+  # cssプリプロセッサ
+  postcss:
+    build: ./postcss
+    volumes:
+      - ./postcss/app.js:/app/app.js
+      - ../htdocs/css:/app/src
+      - ../dist/css:/app/dest
+    command: [npm, run, run]
+
+# htmlテンプレートエンジン
+  pug:
+    build: ./pug
+    volumes:
+      - ../htdocs/pug:/app/src
+      - ../dist/html:/app/dist
+    environment:
+      - SHELL=/bin/bash
+    command: [npm, run, watch]

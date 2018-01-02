@@ -1,0 +1,11 @@
+extends _layout
+block title
+  include variables
+  title= title
+block css
+  link(rel="stylesheet" href="../css/styles.css")
+block body
+  //- キーボードユーザに便利なスキップリンク
+  a(href="#main") メインコンテンツに移動
+  main#main
+    include first
