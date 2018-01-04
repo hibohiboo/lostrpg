@@ -21,7 +21,10 @@ RUN npm i -D autoprefixer
 # ネスト
 #RUN npm i -D postcss-nested
 
-# 
+# postcss
 RUN npm i -D postcss-cssnext
+
+# postcss ネストを使うためにStylusを導入
+RUN npm i -D stylus
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"run\": \"node app.js\",/g" /app/package.json

@@ -1,11 +1,12 @@
 const fs = require('fs');
 const postcss = require('postcss');
-const comment = require('postcss-comment');
-//const nested = require('postcss-nested');
-//const autoprefixer = require('autoprefixer');
-const cssnext = require('postcss-cssnext');
+//const comment = require('postcss-comment'); // stylusでまかなう
+//const nested = require('postcss-nested');   // エラーで落ちる
+const autoprefixer = require('autoprefixer');
+//const cssnext = require('postcss-cssnext'); //stylusがほとんどまかなう
 const chokidar = require('chokidar');
 //const target = 'src/app.pcss'
+const stylus = require('stylus');
 
 chokidar.watch('/app/src/*', {
   ignored: /(^|[\/\\])\../,
@@ -27,17 +28,33 @@ chokidar.watch('/app/src/*', {
 function transpile(target){
   console.log('target:' + target);
 
-  fs.readFile(target, (err, css) => {
-    postcss([cssnext({
-        features: {
-          customProperties: false,
-          rem: {html: false} // remを使用しようとするとエラーとなるのを防ぐ
-        }
-      })])
-        .process(css, { from: target, to: 'dest/styles.css', parser: comment })
-        .then(result => {
-            fs.writeFile('dest/styles.css', result.css, (err)=>console.log(err));
-            if ( result.map ) fs.writeFile('dest/styles.css.map', result.map, (err)=>console.log(err));
-        });
+  // ファイルを読み込み
+  fs.readFile(target, 'utf8', (err, str) => {
+    if(str == null){
+      console.log('file is null');
+      return;
+    }
+    // まずはstylusでコンパイル
+    stylus(str).render( ( err, css)=>{
+      if (err) throw err;
+      console.log('stylus ok');
+      //console.log(css);
+      // 次にpostcssでコンパイル
+      postcss([
+          // cssnext({
+          //   features: {
+          //     customProperties: false,
+          //     rem: {html: false} // remを使用しようとするとエラーとなるのを防ぐ
+          //   }
+          // })
+          autoprefixer
+        ])
+          .process(css, { from: target, to: 'dest/styles.css'/*, parser: comment */ })
+          .then(result => {
+              fs.writeFile('dest/styles.css', result.css, (err)=>console.log(err));
+              if ( result.map ) fs.writeFile('dest/styles.css.map', result.map, (err)=>console.log(err));
+          });
+      });
     });
+
 }

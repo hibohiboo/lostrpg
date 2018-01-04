@@ -1,8 +1,8 @@
-nav(aria-labelledby="contents-heading")
+nav#nav-menu(aria-labelledby="contents-heading")
   h2(id="contents-heading") 目次
   button
-    | #[svg: use(xlink:href="#navicon")]
-    | メニュー
+    | #[a(href="#nav-menu"): svg: use(xlink:href="#navicon")]
+    | #[span.visually-hidden メニュー]
     
   ul
     li: a(href="#first") はじめに
