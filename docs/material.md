@@ -19,5 +19,7 @@
 ## アイコン
 
 [font awasome][*i1]
+[font awasome 文字コード][*i2]
 
 [*i1]:https://fontawesome.com/icons?d=gallery
+[*i2]:http://fontawesome.io/cheatsheet/

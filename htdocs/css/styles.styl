@@ -14,14 +14,14 @@ html {
 
 main {
   //max-width: 60rem; // カラム幅を60文字に。 WCAG2.0 [1.4.8 視覚的提示]では80文字以内。
-  background-color: #eee; // アーレーン症候群の人たち向けにコントラストを控えめにする。
+  // background-color: #eee; // アーレーン症候群の人たち向けにコントラストを控えめにする。
 }
 
 // WCAG2.0[1.4.8]より、1.5文字分の行送りを推奨
 p {
   font-size: 1rem;
   line-height:1.5;
-  color: #222; //コントラストを控えめに。
+  // color: #222; //コントラストを控えめに。
 }
 
 // 改良したリンクのアンダーライン
@@ -117,8 +117,33 @@ button svg {
   --text-bright-color: #fff; // テキストの色
   --icon-color: #fff;        // アイコンの色
   --icon-bk-color: #ddd;     // 丸型ボックスの色
+  --gray-color: #ddd;
   --large-width: 1000px;       // 横幅の最大値
+  --middle-width: 800px;
 }
+
+// 基本設定：フォントサイズ
+// スマートフォン向け
+@media (max-width: 599px) {
+  :root {
+    font-size: 14px;  
+  }
+}
+
+// タブレット向け
+@media (min-width: 600px) and (max-width: 799px) {
+  :root {
+    font-size: 16px;  
+  }
+}
+
+// PC向0け
+@media (min-width: 800px) {
+  :root {
+    font-size: 18px;  
+  }
+}
+
 
 //- font-awasomeの代替テキストのチラツキを防ぐCSS
 .sr-only {
@@ -138,7 +163,10 @@ body {
   font-family: 'メイリオ',                 // windows
                'Hiragino Kaku Gothic Pro', // OS X, iOS 
                 sans-serif;                // その他
+  font-size: 16px; // 基本フォントサイズをブラウザ標準のものに指定
 }
+
+
 
 // ##### コンテンツA: ヒーローイメージ ######
 .heroHeader {
@@ -239,11 +267,8 @@ body {
 
 .conC {
   // ブロック全体に色をつけたデザインにする
-  // background-color: var(--main-color);
-  // color: var(--text-bright-color);
-  .top-img {
-      display: none; // 幅が小さい場合はトップ画像を非表示
-  }
+  background-color: var(--main-color);
+  color: var(--text-bright-color);
   //.conBの見出しとデザインに揃える
   p {
     @extend .conB p
@@ -261,12 +286,18 @@ body {
   .text {
     padding: 20px;
   }
+  // リンクをボタン風にする
+  a{
+    @extend .heroHeader a
+  }
+  a:hover{
+    @extend .heroHeader a:hover
+  }
 }
 
 // ルールについて
 .conD {
-  background-color: var(--main-color);
-  color: var(--text-bright-color);
+
   p {
     @extend .conC p
   }
@@ -415,6 +446,12 @@ header{
   background-color: rgba(255,255,255,0.9); // 半透明の白色に 
 }
 
+// ヒーローイメージを表示しないページ用の設定
+.nohero header{
+  position: static;
+  border-bottom: solid 1px var(--gray-color);
+}
+
 // ヘッダA: サイト名
 .headA {
   display: inline-block;
@@ -442,6 +479,74 @@ header{
     @extend .footB a:hover
   }
 }
+
+// コンテンツページ:記事
+
+.content {
+  h1 {
+    // 見出しの行頭にバーをつけたデザイン
+    padding-left: 0.5rem;
+    border-left: solid 0.75rem var(--accent-color);
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 2;
+  }
+  .container{
+    padding: 20px 10px;
+    max-width: 800px;
+    max-width: var(--middle-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img {
+    display: block;
+    max-width: 100%;// 画像は記事の横幅に合わせて表示
+  }
+}
+
+// コンテンツページ：パンくずリスト
+.css-fontawesome { //fontawesomeでしておくとよい設定
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.bread{
+  ol{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a{
+    display: block;
+    padding: 5px;
+    color: inherit;
+    font-size: 0.875rem; // ブラウザ画面に応じて3段階に変化。12pxを0.875remとしている。12.25px, 14px, 15.75px
+    text-decoration: none;
+    // font awesome用の設定
+    svg {
+      margin-left: 10px;
+      opacity: 0.3;
+    }
+  }
+  a:hover{
+    background-color: rgba(0,0,0,0.3);
+  }
+  a::after{
+    //@extend .css-fontawesome
+    //margin-left: 10px; // a svgに移動
+    // opacity: 0.3;     // a svgに移動
+    display: none;       // svgに置換されるので非表示
+    font-family: 'Font Awesome 5 Solid'; // https://fontawesome.com/icons/angle-right?style=solid
+    content: '\f105'; //font awesomeの文字コード: https://fontawesome.com/icons/angle-right?style=solid
+  }
+}
+
+
 
 //##### 小さい画面用設定 #####
 // ブレークポイント：iPadの画面の横幅 = 768px - 1px
@@ -501,16 +606,7 @@ header{
   }
   // はじめに
   #first {
-    // トップ画像を表示
-    .top-img {
-      display: block;
-      width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      img {
-        display: block;
-      }
-    }
+
   }
   .conC {
     // 概要と横幅を揃える
@@ -528,8 +624,8 @@ header{
     }
   }
   .conD {
-    @extend .conC
     .container {
+      @extend .conC .container 
       flex-direction: row-reverse; // 画像とテキストの並び順を逆にする
       padding-bottom: 40px;
       padding-top: 40px;

@@ -1,19 +1,19 @@
-extends includes/_layout
+extends includes/common/_layout
 block title
-  include includes/variables
+  include includes/common/variables
   title= title
 block css
   //- 大文字のLOSTのみのフォントをダウンロード
   link(href="https://fonts.googleapis.com/css?family=Montserrat&text=LOSTRPG" rel="stylesheet")
   link(href="../css/styles.css" rel="stylesheet" )
 block headjs
-  script(defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js")
+  
 block body
-  include includes/header
-  include includes/heroHeader
-  include includes/overview
-  main#main
-    include includes/nav
-    include includes/first
-    include includes/commonRule
-  include includes/footer
+  body
+    include includes/common/header
+    include includes/index/heroHeader
+    include includes/index/overview
+    main#main
+      include includes/index/rulebook
+      include includes/index/scenario
+    include includes/common/footer
