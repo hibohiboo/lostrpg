@@ -4,7 +4,7 @@ block title
   title= title
 block css
   //- 大文字のLOSTのみのフォントをダウンロード
-  link(href="https://fonts.googleapis.com/css?family=Montserrat&text=LOST" rel="stylesheet")
+  link(href="https://fonts.googleapis.com/css?family=Montserrat&text=LOSTRPG" rel="stylesheet")
   link(href="../css/styles.css" rel="stylesheet" )
 block headjs
   script(defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js")
@@ -22,8 +22,7 @@ block body
     .container
       .footA
        h2 LOSTRPG
-       p 作者： hibohiboo 
-         | #[a(href="https://twitter.com/hibohiboo" target="_blank") twitter]
+       p: a(href="https://lostrpg-751c1.firebaseapp.com/lost") https://lostrpg-751c1.firebaseapp.com/lost/
       nav.footB
         div
           h3 キャラクターメイキング
@@ -58,21 +57,10 @@ block body
           h3 アペンディクス
           ul 
             li: a(target="main" href="Chart.htm")  チャート
-              ul#sub_char
-                li: a(target="main" href="Chart.htm#name")  名前
-                li: a(target="main" href="Chart.htm#table-camp")  キャンプ
-                li: a(target="main" href="Chart.htm#table-item")  アイテム
-                li: a(target="main" href="Chart.htm#table-skill")  特技
-                li: a(target="main" href="Chart.htm#table-ability")  アビリティ
-                li: a(target="main" href="Chart.htm#table-exploration")  探索フェイズ
-                li: a(target="main" href="Chart.htm#table-battle")  戦闘
-                li: a(target="main" href="Chart.htm#table-enemy")  エネミー
-
-            li: a(target="_parent" href="Survival-main.htm")  本文のみ
-            li: a(target="_parent" href="Chart.htm")  チャートのみ
             li: a(target="_parent" href="sheet.pdf")  キャラシートPDF
             li: a(target="main" href="add_data.htm")  追加データ
 
             li: a(target="main" href="Survival-main.htm#history")  更新履歴
             li: a(target="main" href="Survival_island.htm")  現代編：無人島シナリオ
             li: a(target="_blank" href="http://www.nicovideo.jp/watch/sm22594742")  ニコニコ動画：卓M@sリプレイ
+      div.footC © hibohiboo. All rights #[a(href="https://twitter.com/hibohiboo" target="_blank") twitter]

@@ -305,6 +305,11 @@ footer {
     margin-bottom: 0;
     font-size: 14px;
   }
+  a {
+    color:inherit;
+    text-decoration: none;
+    text-shadow: none;
+  }
 }
 
 // フッタB サイトナビ
@@ -325,16 +330,31 @@ footer {
   }
 
   a{
+    // 色とサイズの調整
     color: inherit;
     font-size: 12px;
     text-decoration: none;
+    // リンクを大きく広げる
+    display: block; // aの構成するボックスがテキストに合わせた横幅ではなく親要素に合わせた横幅となる
+    padding: 5px;   // 内側に余白を作ってリンクの高さを調整
   }
   // カーソルを重ねた時に背景色が変わるように設定
   a:hover{
     background-color: rgba(0,0,0,0.3);
   }
+  // 上下間隔の調整
+  div{
+    margin-bottom: 20px;
+  }
 }
 
+// フッタC: コピーライト
+.footC {
+  font-size: 12px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; // 欧文フォントで表示しないと©の色がおかしくなる
+}
+//##### 大きい画面用設定 #####
 // ブレークポイント：iPadの画面の横幅 = 768px
 @media(min-width:768px){
   .heroHeader {
@@ -402,6 +422,17 @@ footer {
     }
     .text{
       flex:1;
+    }
+  }
+  .footB{
+    // 横に並べる
+    display: flex;
+    div {
+      flex: 1;
+    }
+    // 左右間隔の調整
+    div:not(:first-child) {
+      margin-left: 40px;
     }
   }
 }
