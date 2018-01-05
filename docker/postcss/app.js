@@ -35,7 +35,9 @@ function transpile(target){
       return;
     }
     // まずはstylusでコンパイル
-    stylus(str).render( ( err, css)=>{
+    stylus(str)
+    //.define('url', stylus.url({ paths: [__dirname + '/public'] }))
+    .render( ( err, css)=>{
       if (err) throw err;
       console.log('stylus ok');
       //console.log(css);

@@ -1,12 +1,19 @@
+@charset "UTF=8";
+
+// ##########==========##########==========##########==========##########==========##########==========
+// インクルーシブHTML + CSS参考
+// ##########==========##########==========##########==========##########==========##########==========
+
+
 // フォントサイズをパーセンテージ指定。
 // ユーザ側でフォントサイズを調整可能とする。
 html {
-  font-size: 100%; // 下の設定が認識できないブラウザのための指定。ｓ
-  font-size: calc(1em + 1vw); // ビューポートの高さと幅に合わせてテキストサイズを調整。
+  font-size: 100%; // 下の設定が認識できないブラウザのための指定。
+  font-size: 1em; //calc(1em + 1vw); // ビューポートの高さと幅に合わせてテキストサイズを調整。
 }
 
 main {
-  max-width: 60rem; // カラム幅を60文字に。 WCAG2.0 [1.4.8 視覚的提示]では80文字以内。
+  //max-width: 60rem; // カラム幅を60文字に。 WCAG2.0 [1.4.8 視覚的提示]では80文字以内。
   background-color: #eee; // アーレーン症候群の人たち向けにコントラストを控えめにする。
 }
 
@@ -42,7 +49,7 @@ p[href^="http"]:not(href*="lostrpg-751c1.firebaseapp.com")::after{
   display:inline-block;
   width: 1em;
   height: 1em;
-  background-image: url('');
+  //background-image: url('');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75% auto;
@@ -95,5 +102,306 @@ button svg {
 @media print{
   body > *:not(main) {
     display: none;
+  }
+}
+
+// ##########==========##########==========##########==========##########==========##########==========
+// HTML + CSS デザイン参考
+// ##########==========##########==========##########==========##########==========##########==========
+
+// 基本色
+:root {
+  --main-color: #5D9AB2;
+  --accent-color: #BF6A7A;
+  --dark-color: #2B5566;
+  --text-bright-color: #fff; // テキストの色
+  --icon-color: #fff;        // アイコンの色
+  --icon-bk-color: #ddd;     // 丸型ボックスの色
+  --large-width: 1000px;       // 横幅の最大値
+}
+
+// 基本設定:ページ全体
+body {
+  margin: 0; // 画像を横幅いっぱいに表示するため、余白を削除。
+  font-family: 'メイリオ',                 // windows
+               'Hiragino Kaku Gothic Pro', // OS X, iOS 
+                sans-serif;                // その他
+}
+
+// ##### コンテンツA: ヒーローイメージ ######
+.heroHeader {
+  // コンテナを中央揃え
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // 画像の設定
+  height: 100vh; // 画像をブラウザいっぱいの高さに表示。ボックスを画面と同じ高さとする。
+  min-height: 450px; // 最小限確保するボックスの大きさを定義
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), // 半透明な黒色のグラデーション画像を重ねて表示。
+    url(../html/images/yun_1139.jpg);                         // 背景画像 image-urlはstylusの実行時に定義(docker/postcss/app/jsを参照)
+  background-position: center;
+  background-size: cover; // 自動的に拡大縮小・切り出し
+  // 文字の設定
+  color: #fff; // 変数に対応していないブラウザ用の設定
+  color: var(--text-bright-color); // テキストを白抜きにする
+  text-align: center;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 15vw; // vwは画面の横幅を100vwとする単位
+    font-family: 'Montserrat', sans-serif; // Webフォントを使用
+    letter-spacing: 0.2em; // emはフォントサイズ = 1em
+    margin-left: 0.2em; // letter-spacingは各文字の右側に挿入される。中央揃えのバランスをとるため1文字目の左側にも余白を挿入
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: inherit; // pで設定されている色を上書き。inherit: 親要素のcolor
+  }
+  // リンクをボタン風に表示
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px; // 上下10px、左右30px
+    border: solid 3px currentColor; // currentColor: テキストと同じ色
+    border-radius: 6px;
+    background-color: #bf6a7a;
+    background-color: var(--accent-color);
+    color: var(--text-bright-color);
+    font-size: 14px;
+    text-decoration: none;
+  }
+  a:hover {
+    background-image: linear-gradient(rgba(255,255,255, 0.2), rgba(255,255,255, 0.2)); // 半透明な白色の画像を重ねて明るくする
+  }
+}
+
+// ##### コンテンツB:概要 ######
+.overview{
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8; // 近年のWebページは行の高さを大きく撮り文章をゆったりレイアウトする傾向
+    color: inherit;
+    opacity: 0.8;     // 見出しより若干薄い色に
+  }
+  a {
+    color:(--main-color);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .icon {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 40px;
+    width: 2em;         // アイコンを囲む円をフォントサイズの2倍の大きさにする
+    line-height: 2em;   // アイコンを円の中央に配置する
+    border-radius: 50%; // ボックスを真円にするため、角丸の半径を横幅の半分の大きさにする
+    text-align: center; // アイコンを円の中央に配置する
+    background-color: var(--icon-bk-color);
+    color: var(--icon-color);
+  }
+  .container {
+    padding-top:80px;
+    padding-bottom: 80px;
+  }
+  .text {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    text-align: center;  
+  }
+}
+
+.conC {
+  // ブロック全体に色をつけたデザインにする
+  // background-color: var(--main-color);
+  // color: var(--text-bright-color);
+  .top-img {
+      display: none; // 幅が小さい場合はトップ画像を非表示
+  }
+  // overviewの見出しとデザインに揃える
+  p {
+    @extend .overview p
+  }
+  h2 {
+    @extend .overview h2
+  }
+  .image {
+    height: 400px;
+    max-width: 500px;
+    background-image: url(../html/images/woo.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .text {
+    padding: 20px;
+  }
+}
+
+// ルールについて
+.conD {
+  background-color: var(--main-color);
+  color: var(--text-bright-color);
+  p {
+    @extend .conC p
+  }
+  h2 {
+    @extend .conC h2
+  }
+  .image {
+    height: 400px;
+    max-width: 490px;
+    background-image: url(../html/images/losttop_s.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .text {
+    padding: 20px;
+  }
+  .container{
+    padding-top: 2px;
+  }
+}
+
+// フッター
+footer {
+  color: #fff;
+  color: var(--text-bright-color);
+  background-color: var(--dark-color);
+
+  .container{
+    padding: 40px 20px;
+  }
+  p {
+    color: inherit;
+  }
+}
+// フッターA サイト情報
+.footA{
+  margin-bottom: 30px;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+  }
+  p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}
+
+// フッタB サイトナビ
+.footB {
+  // 下線をつけた見出しデザイン
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: solid 1px currentColor;
+    font-size: 14px;
+  }
+
+  ul {
+    // デフォルトの左の●を削除
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a{
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  // カーソルを重ねた時に背景色が変わるように設定
+  a:hover{
+    background-color: rgba(0,0,0,0.3);
+  }
+}
+
+// ブレークポイント：iPadの画面の横幅 = 768px
+@media(min-width:768px){
+  .heroHeader {
+    h1 {
+      font-size: 115px; // フォントサイズを大きくしすぎない
+    }
+    p {
+      font-size: 24px; // キャッチフレーズを1段階大きくする
+    }
+  }
+  // 概要
+  .overview{
+    // 横に並べる設定
+    .container {
+      display: flex; //横に並べる
+      // 間延びしすぎないように最大値を指定し、中央に配置するためにmarginをautoに設定する
+      max-width: 1000px;
+      max-width: var(--large-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .text {
+      flex: 1;
+    }
+  }
+  // はじめに
+  #first {
+    // トップ画像を表示
+    .top-img {
+      display: block;
+      width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      img {
+        display: block;
+      }
+    }
+  }
+  .conC {
+    // 概要と横幅を揃える
+    .container {
+      @extend .overview .container 
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    .image {
+      flex:3
+    }
+    .text {
+      flex: 2;
+      passing: 50px;
+    }
+  }
+  .conD {
+    @extend .conC
+    .container {
+      flex-direction: row-reverse; // 画像とテキストの並び順を逆にする
+      padding-bottom: 40px;
+      padding-top: 40px;
+    }
+    // 画像を固定しテキストのみ幅が変わるように
+    .image {
+      flex: 0 0 490px;
+    }
+    .text{
+      flex:1;
+    }
   }
 }
