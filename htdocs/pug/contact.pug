@@ -1,0 +1,26 @@
+extends includes/common/_layout
+block title
+  include includes/common/variables
+  title= title
+block css
+  //- 大文字のLOSTのみのフォントをダウンロード
+  link(href="https://fonts.googleapis.com/css?family=Montserrat&text=LOSTRPG" rel="stylesheet")
+  link(href="../css/styles.css" rel="stylesheet" )
+block headjs
+
+block body
+  body.nohero
+    include includes/common/header
+    main#main
+      section.content
+        .container
+
+          h1 お問い合わせ
+          p LOSTRPGについてのご質問などがございましたら、下記よりお問い合わせください。
+          .contact-wrap
+            .contact
+              span.icon: span.fab.fa-twitter
+              h2 Twitter
+              a(href="https://twitter.com/hibohiboo") hibohiboo
+          
+    include includes/common/footer
