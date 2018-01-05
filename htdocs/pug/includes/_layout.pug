@@ -13,3 +13,8 @@ html(lang="ja")
     block headjs
   body
     block body
+    //- IE9以降に対応
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+    //- トグルボタンでナビゲーションメニューを開閉するスクリプト
+    script $(()=>{$(".headC").click(()=>$(".headB").slideToggle("fast"))})
+    block footjs
