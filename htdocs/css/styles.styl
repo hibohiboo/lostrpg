@@ -746,6 +746,52 @@ header{
   }
 }
 
+// 関連メニューにする. 1,2,4と段組みを切り替える
+.related {
+  // 背景に色をつける
+  background-color: var(--main-color);
+  padding: 30px 0;
+  ul{
+    @extend .listA .container 
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    @extend .listA article
+    flex: 1 1 100%; // 1段組みのレイアウトにする
+  }
+  a{
+    @extend .listA a
+    // 背景色をつけた時、リンクになっている部分を際立たせるために少し明るい色にする
+    background-color: rgba(255, 255, 255, 0.5); 
+  }
+  a:hover{
+    @extend .listA a:hover
+  }
+  .image{
+    @extend .listA .image
+    //min-height: 100px; // 少しコンパクトにする
+  }
+  .text{
+    @extend .listA .text
+  }
+  h2{
+    @extend .listA h2
+  }
+  p{
+    @extend .listA p
+  }
+}
+@media(min-width: 600px) and (max-width: 899px){
+  .related li{
+    flex: 1 1 50%; //2段組み
+  }
+}
+@media(min-width: 900px){
+  .related li {
+    flex: 1 1 25%; //4段組み
+  }
+}
 
 //##### 小さい画面用設定 #####
 // ブレークポイント：iPadの画面の横幅 = 768px - 1px

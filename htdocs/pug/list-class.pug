@@ -49,4 +49,15 @@ block body
                 .text
                   h2= obj.name
                   p= obj.description
+      //- 関連項目にするテスト
+      aside.related
+        ul
+          each obj in classList
+            //- 概要全体にリンクを設定
+            li
+              a(href="#")
+                .image(style="background-image: url('images/" + obj.image + "');")
+                .text
+                  h2= obj.name
+                  p= obj.description
     include includes/common/footer

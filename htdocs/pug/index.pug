@@ -1,6 +1,10 @@
 extends includes/common/_layout
 //- _layout.pugをベースに作成
 
+block meta
+  //- コンテンツの種類
+  meta(name='og:type', content="website") 
+
 //- タイトルのブロック
 block title
   //- 最初にこのページで使用する変数を読み込む

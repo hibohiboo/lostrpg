@@ -6,9 +6,10 @@ html(lang="ja")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     block title
     block meta
-      meta(name='description', content=description)
-      meta(name='keywords', content=keywords)
-      meta(name='robots', content=robots)
+      //- 上書き可能
+      //- コンテンツの種類
+      meta(name='og:type', content="game") 
+    include _meta_common
     //- 文字コードでFontAwesomeを指定できるようにする設定
     script  FontAwesomeConfig = { searchPseudoElements: true };
     //- Font Awesomeは初期表示に関わるので先に読み込む。
