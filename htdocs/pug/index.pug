@@ -1,17 +1,21 @@
 extends includes/common/_layout
+//- _layout.pugをベースに作成
+
+//- タイトルのブロック
 block title
-  include includes/common/variables
+  //- 最初にこのページで使用する変数を読み込む
+  include includes/index/variables
   title= title
+
+//- 必要なCSSの読み込み
 block css
-  //- 大文字のLOSTのみのフォントをダウンロード
-  link(href="https://fonts.googleapis.com/css?family=Montserrat&text=LOSTRPG" rel="stylesheet")
   link(href="../css/styles.css" rel="stylesheet" )
 block headjs
   
 block body
   body
     include includes/common/header
-    include includes/index/heroHeader
+    include includes/index/hero-header
     include includes/index/overview
     main#main
       include includes/index/rulebook

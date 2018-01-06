@@ -169,7 +169,7 @@ body {
 
 
 // ##### コンテンツA: ヒーローイメージ ######
-.heroHeader {
+.hero-header {
   // コンテナを中央揃え
   display: flex;
   align-items: center;
@@ -186,6 +186,12 @@ body {
   color: #fff; // 変数に対応していないブラウザ用の設定
   color: var(--text-bright-color); // テキストを白抜きにする
   text-align: center;
+  
+  // .hero-header.compact
+  &.compact{
+    height: 400px;
+    min-height: 0;
+  }
 
   h1 {
     margin-top: 0;
@@ -288,10 +294,10 @@ body {
   }
   // リンクをボタン風にする
   a{
-    @extend .heroHeader a
+    @extend .hero-header a
   }
   a:hover{
-    @extend .heroHeader a:hover
+    @extend .hero-header a:hover
   }
 }
 
@@ -599,6 +605,56 @@ header{
   }
 }
 
+// ##### List ページ #####
+
+.listA {
+
+  // 画像の横幅に関係なく一定のフォントサイズで表示
+  h2 {
+    font-size: 18px;
+  }
+  // 見出しよりも薄く表示
+  p {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .image{
+    min-height: 250px;
+    background-position: center;
+    background-size: auto; // cover -> auto
+                           // auto  背景画像を画像固有の比率が維持される方向に拡大縮小します。
+                           // cover 背景画像が背景配置領域と同じか大きな幅と高さを持つことが保証される範囲で、なるべく小さくすべきであることを示します。
+                           // contain このキーワードは、背景画像が背景配置領域と同じか小さな幅と高さを持つことが保証される範囲で、なるべく大きくすべきであることを示します。cover;  
+    background-repeat: no-repeat; // autoに変えてno-repeatに変えることで画像をそのまま表示
+  }
+  // カード型のデザインにする
+  a {
+    margin:10px;
+    display: block;
+    border: solid 1px var(--gray-color);
+    color:inherit;
+    text-decoration: none;
+    flex: 1; // 横に並んだ枠の高さをそろえる
+  }
+  a:hover{
+    opacity: 0.8;
+  }
+  .text{
+    margin: 10px;  
+  }
+  // メディアクエリを使用せず、フレキシブルボックスレイアウトの機能で
+  // 並べ方を決定
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  article{
+    flex: 1 1 300px; // 300pxの横幅を基本に必要に応じて伸縮
+    display: flex; // article内のaの高さをそろえるためにフレキシブルボックスレイアウトの機能を利用
+  }
+}
+
+
 //##### 小さい画面用設定 #####
 // ブレークポイント：iPadの画面の横幅 = 768px - 1px
 @media(max-width: 767px) {
@@ -632,7 +688,7 @@ header{
 //##### 大きい画面用設定 #####
 // ブレークポイント：iPadの画面の横幅 = 768px
 @media(min-width:768px){
-  .heroHeader {
+  .hero-header {
     h1 {
       font-size: 115px; // フォントサイズを大きくしすぎない
     }
