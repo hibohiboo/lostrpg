@@ -20,7 +20,28 @@ block body
         .container
           each obj in classList
             //- 概要全体にリンクを設定
-           
+            article
+              a(href="#")
+                .image(style="background-image: url('images/" + obj.image + "');")
+                .text
+                  h2= obj.name
+                  p= obj.description
+      //- テキストを横に並べるテスト
+      section.listB
+        .container
+          each obj in classList
+            //- 概要全体にリンクを設定
+            article
+              a(href="#")
+                .image(style="background-image: url('images/" + obj.image + "');")
+                .text
+                  h2= obj.name
+                  p= obj.description
+      //- テキストを画像の上に載せるテスト
+      section.listC
+        .container
+          each obj in classList
+            //- 概要全体にリンクを設定
             article
               a(href="#")
                 .image(style="background-image: url('images/" + obj.image + "');")

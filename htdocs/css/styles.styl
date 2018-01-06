@@ -166,7 +166,18 @@ body {
   font-size: 16px; // 基本フォントサイズをブラウザ標準のものに指定
 }
 
-
+// extend用 コンテナの幅設定
+.container-large-width{
+  max-width: 1000px;
+  max-width: var(--large-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-middle-width {
+  @extend .container-large-width
+  max-width: 800px;
+  max-width: var(--middle-width);
+}
 
 // ##### コンテンツA: ヒーローイメージ ######
 .hero-header {
@@ -453,11 +464,21 @@ header{
 }
 
 // ヒーローイメージを表示しないページ用の設定
-.nohero header{
-  position: static;
-  border-bottom: solid 1px var(--gray-color);
-}
+.nohero{
+  header{
+    position: static;
+    border-bottom: solid 1px var(--gray-color);
+  }
+} 
 
+// ヘッダを固定するページ用の設定
+.head-fixed ,
+.nohero  .head-fixed {
+  position: fixed;
+}
+.nohero .head-fixed  + *{
+  margin-top: 70px; //ヒーローイメージがないページだと画面上部に固定したヘッダが記事にかさなるのでヘッダの下に余白を挿入する
+}
 // ヘッダA: サイト名
 .headA {
   display: inline-block;
@@ -501,10 +522,7 @@ header{
   }
   .container{
     padding: 20px 10px;
-    max-width: 800px;
-    max-width: var(--middle-width);
-    margin-left: auto;
-    margin-right: auto;
+    @extend .container-large-width
   }
   img {
     display: block;
@@ -607,6 +625,7 @@ header{
 
 // ##### List ページ #####
 
+// カード型 画像上 テキスト下
 .listA {
 
   // 画像の横幅に関係なく一定のフォントサイズで表示
@@ -647,10 +666,83 @@ header{
   .container {
     display: flex;
     flex-wrap: wrap;
+    // 横幅の最大値を指定
+    @extend .container-large-width
+    margin-top: 30px;   // 上下の余白を調整
+    margin-bottom: 30px;
   }
   article{
     flex: 1 1 300px; // 300pxの横幅を基本に必要に応じて伸縮
     display: flex; // article内のaの高さをそろえるためにフレキシブルボックスレイアウトの機能を利用
+  }
+}
+
+// カード型 画像横 テキスト左右
+.listB {
+  @extend .listA 
+  .image {
+    flex: 2;
+  }
+  .text{
+    flex: 3;
+  }
+  a{
+    display: flex;
+  }
+  article{
+    flex: 1 1 384px; // 768pxで２段組みとなるバランスがちょうどよい横幅
+  }
+}
+// 小さいリストB用の設定
+@media(max-width: 384px) {
+  .image{
+    flex: 1;
+  }
+  p {
+    display: none; // 384px以下では文章を非表示
+  }
+}
+
+// 記事一覧C 画像に重ねる
+.listC {
+  @extend .listA
+  a{
+    position: relative;
+    background-color: currentColor; // 背景色を暗くする
+    margin: 2px; // 敷き詰めた時の余白設定
+  }
+  .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    color: var(--text-bright-color);// 背景色が暗いので白抜きにする
+  }
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+  .image{
+    opacity: 0.6; // 半透明な画像とaの黒色を重ねてトーンを落としたように見せる
+    min-height: 250px; // 1000px以上の時に4段組にする
+  }
+  // 1000px以上の時4段組みにする
+  article{
+    flex: 1 1 250px;
+  }
+  .container {
+    max-width: none; // 敷き詰める
+  }
+}
+
+// 1000px以上の時4段組を維持する
+@media(min-width: 1000px){
+  .listC{
+    article {
+      flex: 1 1 25%;
+    }
   }
 }
 
@@ -702,10 +794,7 @@ header{
     .container {
       display: flex; //横に並べる
       // 間延びしすぎないように最大値を指定し、中央に配置するためにmarginをautoに設定する
-      max-width: 1000px;
-      max-width: var(--large-width);
-      margin-left: auto;
-      margin-right: auto;
+      @extend .container-large-width
     }
 
     .text {
@@ -777,10 +866,7 @@ header{
   header {
     .container{
       // 横幅をコンテンツと揃える
-      max-width: 1000px;
-      max-width: var(--large-width);
-      margin-left: auto;
-      margin-right: auto;
+      @extend .container-large-width
       display: flex;
       align-items: center;            // 上下方向中央揃え
       justify-content: space-between; // 左右方向両端揃え
