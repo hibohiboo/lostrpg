@@ -19,7 +19,7 @@ chokidar.watch('/app/src/*', {
   transpile(path);
 }).on('ready', function() {
   console.log('Ready');
-})
+}).on('error', error => log(`Watcher error: ${error}`))
 
 /**
  * PostCssを使ってpcssをトランスパイルする。
@@ -38,7 +38,12 @@ function transpile(target){
     stylus(str)
     //.define('url', stylus.url({ paths: [__dirname + '/public'] }))
     .render( ( err, css)=>{
-      if (err) throw err;
+      if (err){ 
+        //throw err;
+        console.log(err.message);
+        //process.stdout.write(err);
+        return;
+      };
       console.log('stylus ok');
       //console.log(css);
       // 次にpostcssでコンパイル
