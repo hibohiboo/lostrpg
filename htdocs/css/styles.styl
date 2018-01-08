@@ -288,6 +288,23 @@ table.chart // チャートでレスポンシブルにしないテーブルも�
   a:hover {
     background-image: linear-gradient(rgba(255,255,255, 0.2), rgba(255,255,255, 0.2)); // 半透明な白色の画像を重ねて明るくする
   }
+
+  .yun_c{
+    text-align: right;
+    position: absolute;
+    bottom:0;
+    right:0;
+    a {
+      display: block;
+      margin-top: 0;
+      padding: 0; // 上下10px、左右30px
+      border: none; // currentColor: テキストと同じ色
+      background-color: rgba(0,0,0,0);
+      color: var(--text-bright-color);
+      font-size: 12px;
+      text-decoration: none;
+    }
+  }
 }
 
 // ##### コンテンツB:概要 ######
