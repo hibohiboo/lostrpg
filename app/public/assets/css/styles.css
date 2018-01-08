@@ -137,8 +137,8 @@ header .container,
           justify-content: center;
   height: 100vh;
   min-height: 450px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.1)), to(rgba(0,0,0,0.5))), url("../html/images/yun_1139.jpg");
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url("../html/images/yun_1139.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.1)), to(rgba(0,0,0,0.5))), url("../images/yun_1139.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url("../images/yun_1139.jpg");
   background-position: center;
   background-size: cover;
   color: #fff;
@@ -240,7 +240,7 @@ footer .container,
 .conC .image {
   height: 400px;
   max-width: 500px;
-  background-image: url("../html/images/woo.png");
+  background-image: url("../images/woo.png");
   background-position: center;
   background-size: cover;
 }
@@ -250,7 +250,7 @@ footer .container,
 .conD .image {
   height: 400px;
   max-width: 490px;
-  background-image: url("../html/images/losttop_s.png");
+  background-image: url("../images/losttop_s.png");
   background-position: center;
   background-size: cover;
 }
@@ -447,7 +447,7 @@ header {
 }
 .history .image {
   max-height: 500px;
-  background-image: url("../html/images/takibi.png");
+  background-image: url("../images/takibi.png");
   background-position: center;
   background-size: cover;
 }
