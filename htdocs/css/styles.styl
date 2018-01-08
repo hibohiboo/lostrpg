@@ -137,7 +137,7 @@ button svg {
   }
 }
 
-// PC向0け
+// PC向け
 @media (min-width: 800px) {
   :root {
     font-size: 18px;  
@@ -177,6 +177,47 @@ body {
   @extend .container-large-width
   max-width: 800px;
   max-width: var(--middle-width);
+}
+
+// レスポンシブルなテーブル設定
+table.responsive {
+  border-collapse: collapse;
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  // ヘッダと最初のtdは改行しない
+  th, td:first-child{
+    white-space: nowrap;
+  }
+}
+// 狭い幅では縦表示
+@media (max-width: 767px) {
+  table{
+    &.responsive {
+      border-collapse: separate;
+      border-spacing: 0  20px;
+      thead {
+        display: none;
+      }
+      tr {
+       // background-color: #f6f6f6;
+      }
+      td {
+        border: none;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-bottom: 1px solid #dddddd;
+        &.txt-center{
+          text-align: center;
+        }
+      }
+      td:before {
+        content: attr(data-title) " ";
+      }
+    }
+  }
 }
 
 // ##### コンテンツA: ヒーローイメージ ######
@@ -306,6 +347,8 @@ body {
   // リンクをボタン風にする
   a{
     @extend .hero-header a
+    display: block;
+    width: 200px;
   }
   a:hover{
     @extend .hero-header a:hover
@@ -333,6 +376,14 @@ body {
   }
   .container{
     padding-top: 2px;
+  }
+    // リンクをボタン風にする
+  a{
+    @extend .conC a
+    border: solid 3px var(--gray-color);
+  }
+  a:hover{
+    @extend .conC a:hover
   }
 }
 
@@ -522,11 +573,41 @@ header{
   }
   .container{
     padding: 20px 10px;
-    @extend .container-large-width
+    @extend .container-middle-width
   }
   img {
     display: block;
     max-width: 100%;// 画像は記事の横幅に合わせて表示
+  }
+  // ダイスロールのサンプル
+  .diceroll-sample{
+    border: solid 3px #000000;
+    padding: 15px 30px;
+  }
+  .icon{
+    display: inline-box;
+    border: solid 1px #ffffff;
+    border-radius: 6px;
+    padding: 1px 3px;
+    color: #ffffff;
+  }
+  .success .icon{
+    background-color: #28a745;
+  }
+  .fail .icon{
+    background-color: #f10000;
+    margin-left: 5px;
+  }
+  .fail{
+    margin-top: 10px;
+  }
+  hgroup {
+    h1 {
+      // 見出しの行頭のバーを解除してフォントサイズを少し下げる
+      padding-left: 0;
+      border-left: none;
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -790,6 +871,43 @@ header{
 @media(min-width: 900px){
   .related li {
     flex: 1 1 25%; //4段組み
+  }
+}
+
+// ##### 目次 #####
+// フッタB サイトナビ
+.contents {
+  // 下線をつけた見出しデザイン
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: solid 1px currentColor;
+    font-size: 14px;
+  }
+
+  ul {
+    // デフォルトの左の●を削除
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a{
+    // 色とサイズの調整
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+    // リンクを大きく広げる
+    display: block; // aの構成するボックスがテキストに合わせた横幅ではなく親要素に合わせた横幅となる
+    padding: 5px;   // 内側に余白を作ってリンクの高さを調整
+  }
+  // カーソルを重ねた時に背景色が変わるように設定
+  a:hover{
+    background-color: rgba(0,0,0,0.3);
+  }
+  // 上下間隔の調整
+  div{
+    margin-bottom: 20px;
   }
 }
 

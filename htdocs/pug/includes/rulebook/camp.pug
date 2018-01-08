@@ -1,0 +1,33 @@
+section#camp
+  h2 キャンプ
+  p キャンプでは、生き残っている人々が協力して暮らしています。
+    | プレイヤーはキャンプに暮らす人の中でも、＜フィールド＞に挑む力のある
+    | 冒険者と呼ばれるキャラクターを演じます。
+  h3 1.名前の決定
+  p まず、プレイヤーキャラクター全員が所属するキャンプの名前を決めましょう。
+    | 近くの公民館や学校の名前を使うと、イメージしやすいかもしれません。
+  p 表を振ってランダムに決めることもできます#[a(href="chart.html#campname") →キャンプ名表]
+  h3 2.施設・人材の決定
+  p キャンプには、最初、レベル1の「屋根」「壁」「寝床」「水場」「倉庫」「食料庫」があります。
+    | キャンプは5年の間にぼろぼろになっており、ガタがきています。
+  table.responsive
+    caption キャンプ初期設備表
+    thead
+      tr: th 名前 #[th タイプ] #[th 指定特技] #[th レベル] #[th 効果]
+    each facility in facilities
+      tr
+        td.txt-center= facility.name
+        td(data-title='タイプ')= facility.type
+        td(data-title='指定特技')= facility.speciality
+        td(data-title='レベル')= facility.level
+        td(data-title='効果')= facility.effect
+  p 上の表の効果をまとめると、以下のようになります。
+  ul
+    li 「パーティ全員の【気力基準値】プラス7」
+    li 「パーティ全員の【体力基準値】プラス2」
+    li 「キャンプに10個までのアイテムを置いておける」
+
+  p 次に1D6を振り、さらにそのキャンプにあるものを決定します。
+    | 《指定特技》はキャンプフェイズに設備を利用するために必要な行為判定に使う特技です。
+    | #[a( href="chart.html#camp-equipment_first") →追加設備決定表]
+  p キャンプについての詳細は#[a(href="#camp-improve") 「→キャンプの成長」]でも解説しています。

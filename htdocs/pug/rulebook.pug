@@ -1,5 +1,6 @@
 extends includes/common/_layout
 block title
+  include includes/common/variables
   include includes/rulebook/variables
   title= title
 
@@ -21,5 +22,16 @@ block body
 
           include includes/rulebook/first
           include includes/rulebook/commonRule
-
+          include includes/rulebook/world
+          include includes/rulebook/camp
+          include includes/rulebook/character
+          include includes/rulebook/check
+          include includes/rulebook/session
+          include includes/rulebook/battle
+          include includes/rulebook/ending
+          include includes/rulebook/improve
+          include includes/rulebook/gmpart
+          p ヌシの例はこちら #[a(href="scenario-sample.html") →サンプルシナリオ] 
+          include includes/rulebook/faq
+          include includes/rulebook/bibliography
     include includes/common/footer

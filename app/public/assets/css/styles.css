@@ -121,9 +121,45 @@ header .container,
   margin-left: auto;
   margin-right: auto;
 }
-.container-middle-width {
+.container-middle-width,
+.content .container {
   max-width: 800px;
   max-width: var(--middle-width);
+}
+table.responsive {
+  border-collapse: collapse;
+}
+table.responsive th,
+table.responsive td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+table.responsive th,
+table.responsive td:first-child {
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  table.responsive {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+  }
+  table.responsive thead {
+    display: none;
+  }
+  table.responsive td {
+    border: none;
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+  }
+  table.responsive td.txt-center {
+    text-align: center;
+  }
+  table.responsive td:before {
+    content: attr(data-title) " ";
+  }
 }
 .hero-header {
   display: -webkit-box;
@@ -164,7 +200,8 @@ header .container,
   color: inherit;
 }
 .hero-header a,
-.conC a {
+.conC a,
+.conD a {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 30px;
@@ -177,7 +214,8 @@ header .container,
   text-decoration: none;
 }
 .hero-header a:hover,
-.conC a:hover {
+.conC a:hover,
+.conD a:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.2)), to(rgba(255,255,255,0.2)));
   background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
 }
@@ -247,6 +285,11 @@ footer .container,
 .conC .text {
   padding: 20px;
 }
+.conC a,
+.conD a {
+  display: block;
+  width: 200px;
+}
 .conD .image {
   height: 400px;
   max-width: 490px;
@@ -259,6 +302,9 @@ footer .container,
 }
 .conD .container {
   padding-top: 2px;
+}
+.conD a {
+  border: solid 3px var(--gray-color);
 }
 footer {
   color: #fff;
@@ -403,6 +449,32 @@ header {
 .content img {
   display: block;
   max-width: 100%;
+}
+.content .diceroll-sample {
+  border: solid 3px #000;
+  padding: 15px 30px;
+}
+.content .icon {
+  display: inline-box;
+  border: solid 1px #fff;
+  border-radius: 6px;
+  padding: 1px 3px;
+  color: #fff;
+}
+.content .success .icon {
+  background-color: #28a745;
+}
+.content .fail .icon {
+  background-color: #f10000;
+  margin-left: 5px;
+}
+.content .fail {
+  margin-top: 10px;
+}
+.content hgroup h1 {
+  padding-left: 0;
+  border-left: none;
+  font-size: 1.8rem;
 }
 .css-fontawesome {
   display: inline-block;
@@ -644,6 +716,30 @@ header {
         -ms-flex: 1 1 25%;
             flex: 1 1 25%;
   }
+}
+.contents h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: solid 1px currentColor;
+  font-size: 14px;
+}
+.contents ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contents a {
+  color: inherit;
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+}
+.contents a:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+.contents div {
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   header .container-small {
