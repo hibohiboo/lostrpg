@@ -180,10 +180,19 @@ body {
 }
 
 // レスポンシブルなテーブル設定
-table.responsive {
+table.responsive,
+table.chart // チャートでレスポンシブルにしないテーブルも同デザイン
+{
   border-collapse: collapse;
+  border: 1px solid var(--gray-color);
+  margin-bottom: 5px;
+  margin-top: 5px;
+  caption {
+    background-color: var(--main-color);
+    color: var(--text-bright-color);
+  }
   th, td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray-color);
     padding: 10px;
   }
   // ヘッダと最初のtdは改行しない
@@ -208,13 +217,17 @@ table.responsive {
         display: block;
         width: 100%;
         box-sizing: border-box;
-        border-bottom: 1px solid #dddddd;
+        border-bottom: 1px solid var(--gray-color);
         &.txt-center{
           text-align: center;
         }
       }
       td:before {
         content: attr(data-title) " ";
+      }
+      .mobile-hidden
+      {
+        display: none;
       }
     }
   }
@@ -887,15 +900,13 @@ header{
 
   ul {
     // デフォルトの左の●を削除
-    margin: 0;
-    padding: 0;
+
     list-style: none;
   }
 
   a{
     // 色とサイズの調整
     color: inherit;
-    font-size: 12px;
     text-decoration: none;
     // リンクを大きく広げる
     display: block; // aの構成するボックスがテキストに合わせた横幅ではなく親要素に合わせた横幅となる

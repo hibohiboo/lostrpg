@@ -1,0 +1,237 @@
+extends includes/common/_layout
+block title
+  include includes/common/variables
+  - var title = "チャート: LOST～廃墟の森の子供たち～"
+  title= title
+block css
+  link(href="../assets/css/styles.css" rel="stylesheet" )
+block headjs
+
+block body
+  body.nohero
+    header
+      include includes/common/header
+    main#main
+      section.content
+        .container
+
+          h1 チャート
+          p 奇数・偶数とあるものは、d66の後に1d6を振って奇数偶数を決める。
+
+          h2#campname キャンプ名
+          p キャンプ名決定表A, Bと建物表を組み合わせてキャンプ名を決定します。
+          table.chart#table-campnameA
+            caption キャンプ名決定表A
+            thead
+              tr: th d66 #[th ジャンル] #[th 例] 
+            each name in campNameA
+              tr
+                td= name.d66
+                td= name.genre
+                td= name.exe
+
+          table.chart#table-campnameB
+            caption キャンプ名決定表B
+            thead
+              tr: th d66 #[th 奇数] #[th 偶数] 
+            each name in campNameB
+              tr
+                td= name.d66
+                td= name.a
+                td= name.b
+            
+          table.chart#table-campnameC
+            caption 建物表
+            thead
+              tr: th d66 #[th 奇数] #[th 偶数] 
+            each name in campNameC
+              tr
+                td= name.d66
+                td= name.a
+                td= name.b
+
+          h2#name 名前
+          table.chart#table-name
+            caption 名前決定表
+            thead
+              tr: th d6 #[th 説明] 
+            each name in nameTable
+              tr
+                td= name.d6
+                td= name.a
+
+          table.chart#table-nickname
+            caption 一般愛称表
+            thead
+              tr: th d66 #[th 奇数] #[th 偶数] 
+            each item in nicknameList
+              tr
+                td= item.d66
+                td= item.a
+                td= item.b
+
+          table.chart#table-bigname
+            caption 有名人愛称表
+            thead
+              tr: th d66 #[th 奇数] #[th 偶数] 
+            each item in bignameList
+              tr
+                td= item.d66
+                td= item.a
+                td= item.b
+
+          table.chart#table-lastname
+            caption 名字表
+            thead
+              tr: th d66 #[th 奇数] #[th 偶数] 
+            each item in lastNameList
+              tr
+                td= item.d66
+                td= item.a
+                td= item.b
+
+          table.chart#table-firstname
+            caption 名前表
+            thead
+              tr: th d66 #[th 男性] #[th 女性] 
+            each item in firstNameList
+              tr
+                td= item.d66
+                td= item.a
+                td= item.b
+
+          table.chart#table-specialname
+            caption 特殊名前表
+            thead
+              tr: th d66 #[th ジャンル] #[th 例] 
+            each item in specialNameList
+              tr
+                td= item.d66
+                td= item.a
+                td= item.b
+
+          h2#table-camp キャンプ
+          table.responsive#camp-first
+            caption キャンプ初期設備表
+            thead
+              tr: th 名前 #[th タイプ] #[th 指定特技] #[th レベル] #[th 効果]
+            each facility in facilities
+              tr
+                td.txt-center= facility.name
+                td(data-title='タイプ')= facility.type
+                td(data-title='指定特技')= facility.specialty
+                td(data-title='レベル')= facility.level
+                td(data-title='効果')= facility.effect
+
+          table.responsive#camp-equipment_first
+            caption 追加設備決定表
+            thead
+              tr: th d66 #[th 名前] #[th タイプ] #[th 指定特技] #[th レベル] #[th 効果]
+            each facility in addFacilityList
+              tr
+                td.mobile-hidden=facility.d6
+                td(data-title=facility.d6).txt-center= facility.name
+                td(data-title='タイプ')= facility.type
+                td(data-title='指定特技')= facility.specialty
+                td(data-title='レベル')= facility.level
+                td(data-title='効果')= facility.effect
+
+          table.chart#walking
+            caption 散策表
+            thead
+              tr: th 2d6 #[th 結果] 
+            each item in walkingList
+              tr
+                td= item["2d6"]
+                td= item.a
+
+          table.responsive#camp-equipment
+            caption キャンプ施設表
+            thead
+              tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
+            each facility in equipmentList
+              tr
+                td.txt-center= facility.name
+                td(data-title='必要CP')= facility.cp
+                td(data-title='タイプ')= facility.type
+                td(data-title='指定特技')= facility.specialty
+                td(data-title='最大レベル')= facility.maxLv
+                td(data-title='前提')= facility.precondition
+                td(data-title='効果')= facility.effect
+
+          table.responsive#camp-personality
+            caption キャンプ人材表
+            thead
+              tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
+            each facility in campPersonalityList
+              tr
+                td.txt-center= facility.name
+                td(data-title='必要CP')= facility.cp
+                td(data-title='タイプ')= facility.type
+                td(data-title='指定特技')= facility.specialty
+                td(data-title='最大レベル')= facility.maxLv
+                td(data-title='前提')= facility.precondition
+                td(data-title='効果')= facility.effect
+
+          h2#table-item アイテム
+          table.responsive#item
+            caption アイテム一覧
+            thead
+              tr: th 名前 #[th 価格] #[th 重量] #[th タイプ]  #[th 部位] #[th 指定特技] #[th 対象] #[th 特性] #[th 効果]
+            each item in itemList
+              tr
+                td.txt-center= item.name
+                td(data-title='価格')= item.j
+                td(data-title='重量')= item.weight
+                td(data-title='タイプ')= item.type
+                td(data-title='部位')= item.area
+                td(data-title='指定特技')= item.specialty
+                td(data-title='対象')= item.target
+                td(data-title='特性')= item.trait
+                td(data-title='効果')= item.effect
+          
+          h2#table-ability アビリティ
+          each ability in abilityList
+            table(class="responsive", id='ability-'+ability.id)
+              caption= ability.name
+              thead
+                tr: th 名前  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+              each item in ability.list
+                tr
+                  td.txt-center= item.name
+                  td(data-title='タイプ')= item.type
+                  td(data-title='反動')= item.recoil
+                  td(data-title='指定特技')= item.specialty
+                  td(data-title='対象')= item.target
+                  td(data-title='効果')= item.effect
+          
+          h2#table-exploration 探索フェイズ
+          
+          table.chart#table-randomencountA
+            caption ランダムエンカウント表A
+            thead
+              tr: th d6 #[th 説明] 
+            each name in randomEncountListA
+              tr
+                td= name.d6
+                td= name.a
+
+          table.chart#table-randomencountB
+            caption ランダムエンカウント表B
+            thead
+              tr: th d6 #[th 説明] 
+            each name in randomEncountListB
+              tr
+                td= name.d6
+                td= name.a
+
+          table.chart#table-explorer
+            caption 探索表
+            thead
+              tr: th 2d6 #[th 説明] 
+            each name in explorerList
+              tr
+                td= name["2d6"]
+                td= name.a
+          
+    include includes/common/footer
