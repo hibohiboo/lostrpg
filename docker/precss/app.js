@@ -36,6 +36,7 @@ function transpile(target){
     }
     // まずはstylusでコンパイル
     stylus(str)
+    .set('paths',['/app/src'])
     //.define('url', stylus.url({ paths: [__dirname + '/public'] }))
     .render( ( err, css)=>{
       if (err){ 

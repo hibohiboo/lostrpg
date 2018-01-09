@@ -1,4 +1,5 @@
 @charset "UTF=8";
+@charset "UTF=8";
 html {
   font-size: 100%;
   font-size: 1em;
@@ -673,13 +674,10 @@ header {
           flex: 1 1 384px;
 }
 @media (max-width: 384px) {
-  .image {
+  .listB .image {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-  }
-  p {
-    display: none;
   }
 }
 .listC a {

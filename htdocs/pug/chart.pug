@@ -195,10 +195,11 @@ block body
             table(class="responsive", id='ability-'+ability.id)
               caption= ability.name
               thead
-                tr: th 名前  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+                tr: th 名前  #[th グループ] #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
               each item in ability.list
                 tr
                   td.txt-center= item.name
+                  td(data-title='グループ')= item.group
                   td(data-title='タイプ')= item.type
                   td(data-title='反動')= item.recoil
                   td(data-title='指定特技')= item.specialty
@@ -233,5 +234,163 @@ block body
               tr
                 td= name["2d6"]
                 td= name.a
-          
+
+          table.chart#table-rest
+            caption 休憩表
+            thead
+              tr: th 2d6 #[th 説明] 
+            each name in restList
+              tr
+                td= name["2d6"]
+                td= name.a
+
+          h2#table-battle 戦闘
+          table.chart#table-initiative
+            caption 先制判定指定特技表
+            thead
+              tr: th d6 #[th 説明] 
+            each name in initiativeList
+              tr
+                td= name.d6
+                td= name.a
+
+          table.chart#table-hitarea
+            caption 身体部位決定表
+            thead
+              tr: th 2d6 #[th 説明] 
+            each name in hitareaList
+              tr
+                td= name["2d6"]
+                td= name.a
+          table.chart#special-attack
+            caption 命中判定スペシャル表
+            thead
+              tr: th d6 #[th 説明] 
+            each name in specialAttackList
+              tr
+                td= name.d6
+                td= name.a
+
+          table.chart#fumble-attack
+            caption 命中判定ファンブル表
+            thead
+              tr: th d6 #[th 説明] 
+            each name in fumbleAttackList
+              tr
+                td= name.d6
+                td= name.a
+
+          table.chart#fumble-dodge
+            caption 回避判定ファンブル表
+            thead
+              tr: th d6 #[th 説明] 
+            each name in fumbleDodgeList
+              tr
+                td= name.d6
+                td= name.a
+          h3#badstatus 変調一覧
+          dl
+            each status in badStatusList
+              dt= status.name
+                dd= status.effect
+ 
+          h2#table-enemy エネミー
+          table.responsive#enemylist
+            caption エネミー
+            thead
+              tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
+            each enemy in enemyList
+              tr
+                td.txt-center= enemy.name
+                td(data-title='レベル')= enemy.lv
+                td(data-title='タイプ')= enemy.group
+                td(data-title='体力')= enemy.stamina
+                td(data-title='気力')= enemy.willpower
+                td(data-title='特技')= enemy.specialties
+                td(data-title='アビリティ')= enemy.abilities
+                td(data-title='ドロップ')= enemy.drop
+                td(data-title='解説')= enemy.comment
+          table.responsive#droplist
+            caption ドロップ
+            thead
+              tr: th 2d6 #[th ムシA] #[th  ムシB] #[th  ムシC] #[th ケモノA]  #[th ケモノB] 
+            each drop in dropList
+              tr
+                td.txt-center= drop.d6
+                td(data-title='ムシA')= drop.a
+                td(data-title='ムシB')= drop.b
+                td(data-title='ムシC')= drop.c
+                td(data-title='ケモノA')= drop.d
+                td(data-title='ケモノB')= drop.e
+
+          h2#table-enemy-ability エネミーアビリティ
+          table(class="responsive", id='ability-enemy')
+            caption エネミーアビリティ
+            thead
+              tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+            each item in enemyAbilityList
+              tr
+                td.txt-center= item.name
+                td(data-title='グループ')= item.group
+                td(data-title='タイプ')= item.type
+                td(data-title='反動')= item.recoil
+                td(data-title='指定特技')= item.specialty
+                td(data-title='対象')= item.target
+                td(data-title='効果')= item.effect
+
+          table(class="responsive", id='ability-mutation')
+            caption 突然変異表
+            thead
+              tr: th d6 * d3 #[th ムシ(1,2)]  #[th ケモノ(3,4)] #[th ミュータント(5,6)]
+            each item in mutationList
+              tr
+                td.txt-center= item.d6
+                td(data-title='ムシ(1,2)')= item.a
+                td(data-title='ケモノ(3,4)')= item.b
+                td(data-title='ミュータント(5,6)')= item.c
+
+          h2#samplescenario サンプルシナリオ
+          table.chart#sample-table1
+            caption 都有公園探索表
+            thead
+              tr: th d6 #[th アイテム] #[th 説明] 
+            each name in sampleTableList1
+              tr
+                td= name.d6
+                td= name.a
+                td= name.b
+          table.chart#sample-table2
+            caption 都有公園探索失敗表
+            thead
+              tr: th d6 #[th イベント]
+            each name in sampleTableList2
+              tr
+                td= name.d6
+                td= name.a
+          table.chart#sample-table3
+            caption コンビニ探索表
+            thead
+              tr: th d6 #[th アイテム] #[th 説明] 
+            each name in sampleTableList3
+              tr
+                td= name.d6
+                td= name.a
+                td= name.b
+          table.chart#sample-table1
+            caption コンビニ探索表2-B
+            thead
+              tr: th d6 #[th アイテム] #[th 説明] 
+            each name in sampleTableList4
+              tr
+                td= name.d6
+                td= name.a
+                td= name.b
+          table.chart#sample-table5
+            caption コンビニ探索失敗表
+            thead
+              tr: th d6 #[th イベント]
+            each name in sampleTableList2
+              tr
+                td= name.d6
+                td= name.a
     include includes/common/footer
