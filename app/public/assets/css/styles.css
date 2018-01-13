@@ -673,13 +673,6 @@ header {
       -ms-flex: 1 1 384px;
           flex: 1 1 384px;
 }
-@media (max-width: 384px) {
-  .listB .image {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-}
 .listC a {
   position: relative;
   background-color: currentColor;

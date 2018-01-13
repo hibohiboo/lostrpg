@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サプリメント Strange Fields  終末列島百景: LOST～廃墟の森の子供たち～</title>
+    <meta name="og:type" content="game">
+    <meta name="description">
+    <meta name="keywords">
+    <meta name="robots">
+    <meta name="og:sitename" content="LOSTRPG">
+    <meta name="og:locale" content="ja_JP">
+    <meta name="og:title" content="サプリメント Strange Fields  終末列島百景: LOST～廃墟の森の子供たち～">
+    <meta name="og:description">
+    <script> FontAwesomeConfig = { searchPseudoElements: true };</script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;text=LOSTRPG" rel="stylesheet">
+    <link href="../assets/css/styles.css" rel="stylesheet">
+  </head>
+  <body class="nohero">
+    <header>
+      <div class="container">
+        <div class="container-small"><a class="headA" href="index.html">LOSTRPG</a>
+          <button class="headC" type="button"><span class="fa fa-bars" title="MENU"></span></button>
+        </div>
+        <nav class="headB">
+          <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="rulebook.html">ルールブック</a></li>
+            <li><a href="contents.html">目次</a></li>
+            <li><a href="history.html">更新履歴</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="content">
+        <div class="container">
+          <div class="bread">
+            <ol>
+              <li><a href="index.html">トップ</a></li>
+            </ol>
+          </div>
+          <h1>LOSTRPG サプリメント Strange Fields  終末列島百景</h1>
+          <p>世界の変貌は止まらない</p>
+          <h2>広がる世界</h2>
+          <p>LOSTTRPGサプリメント「Strange Fields  終末列島百景」はLOSTRPGの追加データ集です。</p>
+          <p> PLの同意の上で、GMはサプリメントのデータおよびルールを使用してもかまいません。</p>
+          <h2>目次 </h2><ol>
+            <li><a href="#success-point">成功度</a></li>
+            <li><a href="#random-skill">ランダムな特技の決定</a></li>
+            <li><a href="#wisdom-and-innovative">知恵と工夫</a></li>
+            <li><a href="#escape">戦闘からの撤退の指定特技の変更</a></li>
+            <li><a href="#get_exp">経験点の入手・使用</a></li>
+            <li><a href="#guardian-spirit">死者の助け</a></li>
+            <li><a href="#experience">経験表</a></li>
+            <li><a href="#charcter-backbone">追加背景</a></li>
+            <li><a href="#add-item">追加アイテム</a></li>
+            <li><a href="#add-ability">追加アビリティ</a></li>
+            <li><a href="#add-class">追加クラス</a></li>
+            <li><a href="#add-enemy">追加エネミー</a></li>
+            <li><a href="#camp-happening">キャンプフェイズハプニング表</a></li>
+            <li><a href="#explorer-happening">探索フェイズハプニング表</a></li>
+            <li><a href="#scene">シーン表</a></li>
+            <li><a href="#obstacle">障害表</a></li>
+            <li><a href="#field-attribute">フィールド特性表</a></li>
+            <li><a href="#battle-field">戦場表</a></li>
+            <li><a href="#prologue">プロローグ表</a></li>
+            <li><a href="#fumble-initiative">先制判定ファンブル表</a></li>
+            <li><a href="#pvp">PVPルール</a></li>
+            <li><a href="#scenario-craft">ランダム表を使ったシナリオ</a></li>
+          </ol>
+          <h2>追加ルール</h2>
+          <p>追加されたルールです。一部のルールのみを使用するといったことも可能です。</p>
+          <h3 id="success-point">成功度 </h3>
+          <p>行為判定を行ったとき、[達成値から目標値を引いた値]が成功度になります。</p>
+          <p>例えば目標値5のとき、達成値6なら成功度1、達成値5なら成功度0、達成値4なら成功度マイナス1となります。 ファンブルのときは成功度マイナス10、スペシャルの時は成功度10になります。</p>
+          <h3>ランダムな特技の決定</h3>
+          <p>最初に1d6を振り、分野を決定した後、2D6を振り出目に対応した特技を決定します。 分野は「1:技術」「2:頭部」「3:腕部」「4:胴部」「5:脚部」「6:環境」になります。</p>
+          <h3 id="wisdom-and-innovative">知恵と工夫</h3>
+          <p><a href="#check-pl-proposal">プレイヤーの提案による判定特技の変更</a>に【知恵と工夫】と名付け、回数制限をもうけるルールです。</p>
+          <p><strong>各プレイヤーは１セッション中に１回ずつ</strong>、【知恵と工夫】の宣言を行うことができるとします。</p>
+          <p>
+            判定特技の変更はPLの工夫次第でどんな特技でも指定特技にすることが出来てしまい、特技を取得している意味が薄れてしまう場合があります。また、プレイ時間の増加を招いてしまう欠点もあります。このルールの使用でむやみな特技変更は不可能になり、上記のデメリットを軽減することができます。</p>
+          <p>【知恵と工夫】による特技の変更は、<strong>そのサイクルまたはラウンド間</strong>有効とします。【知恵と工夫】が使用された判定に対して他のPCが挑戦する場合、 <strong>《元々の指定特技》と《【知恵と工夫】による変更後の指定特技》のどちらか好きな特技</strong>を使って判定を行うことができます。</p>
+          <p><strong>PCがファンブルをするごとに、そのPCのプレイヤーは【知恵と工夫】を行うことができる回数が１回増えます。</strong></p>
+          <p>例：回避判定の《指定特技》が《噛む》だったとします。 「今は森の中で戦闘している。木々に隠れて回避するということで《隠れる》での判定に変更したい」とプレイヤーAが【知恵と工夫】を提案しました。 GMは納得し、プレイヤーAの【知恵と工夫】を承認します。 プレイヤーAがまだセッション中ファンブルを降っていなかった場合、以降このセッション中、プレイヤーAは自PCがファンブルを振るまで新たに【知恵と工夫】を提案することはできません。</p>
+          <p>また、同じラウンド中にプレイヤーBのPCが《指定特技》が《噛む》の回避判定を行うとします。 この時、プレイヤーBのPCは《噛む》か《隠れる》どちらか好きなほうの特技を《指定特技》として回避判定を行うことができます。</p>
+          <h3 id="escape">撤退の指定特技変更</h3>
+          <p>戦闘からの撤退の《指定特技》を《逃げる》固定ではなく、ラウンドごとに「<a href="#random-skill">ランダムな特技の決定</a>」で決定します。</p>
+          <h3 id="guardian-spirit">死者の助け</h3>
+          <p>死亡したキャラクターは、1サイクルまたは1ラウンドに1回、誰かがダイスを振った直後に『死者の助け』を行うことができます。</p>
+          <p>死亡したキャラクターは、各サイクルまたはラウンドの開始時（何かの処理を行うより前）に、1D6を振ります。これを『死者ダイス』と呼びます。 そのサイクルまたはラウンドの間に1回だけ、誰かが振ったダイス1個を、死者ダイスと入れ替えることができます。 入れ替えた後の出目を参照して、判定などの処理を続行してください。 判定だけでなく、何かの表や、スペシャル時の気力回復量など、どのダイスに対しても死者の助けを行うことができます。</p>
+          <h2>追加データ</h2>
+          <p>追加されたデータです。一部のデータのみを使用するといったことも可能です。</p>
+          <h3 id="get_exp">経験点の入手</h3>
+          <ol>
+            <li>新たなアイテムを手に入れた(1点)</li>
+            <li>キャンプの仲間と友情を結んだ(1点)</li>
+          </ol>
+          <h3>経験点の使用</h3>
+          <table class="responsive" id="charcter-backbone">
+            <caption>背景表</caption>
+            <thead>
+              <tr>
+                <th>名前 
+                  <th>必要CP</th> 
+                  <th>タイプ</th> 
+                  <th>指定特技</th> 
+                  <th>レベル</th> 
+                  <th>前提</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">ペット</td>
+              <td data-title="必要CP">3</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="最大レベル">-</td>
+              <td data-title="前提"></td>
+              <td data-title="効果">	アイテムの「ペット」を１つ入手する。あなたはペットを飼っている。このペットで買い物することはできない。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">病気の身内</td>
+              <td data-title="必要CP">5</td>
+              <td data-title="タイプ">割り込み</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="最大レベル">-</td>
+              <td data-title="前提"></td>
+              <td data-title="効果">	セッション中1度だけ、自身の振ったダイスを裏返すことができる(1ゾロならば6ゾロになる）。 あなたには家族同然に思っている人物がいる。その人物は病気である。貴方が守ってあげなくてはならない。 セッション終了時に、「コカの葉」など【体力】の回復するアイテムを消費しないと、病気の身内は死亡する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">親友</td>
+              <td data-title="必要CP">10</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="最大レベル">-</td>
+              <td data-title="前提"></td>
+              <td data-title="効果">	あなたはキャンプフェイズに2回行動できる。あなたには親友がいて、キャンプフェイズに準備を手伝ってくれる。</td>
+            </tr>
+          </table>
+          <h3 id="experience">経験表</h3>
+          <p>プレイヤーはキャラクター作成時にキャラクターの経験表を使用することができます。</p>
+          <table class="responsive" id="table-experience">
+            <caption>経験表</caption>
+            <thead>
+              <tr>
+                <th>2d6 
+                  <th>経験</th> 
+                  <th>内容</th> 
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center" data-title="11">変貌</td>
+              <td>あなたは目が覚めたら変わってしまっていた。外見、性格、体質……。5年前の自分を今はどう思うだろう。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="12">守るべきもの</td>
+              <td>あなたはキャンプに大切なものができた。親友、ペット、場所など。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="13">兄弟</td>
+              <td>あなたには兄弟/姉妹がいた。今は何をしているだろう。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="14">形見</td>
+              <td>あなたは大切だった人の形見を大事に持っている。今際の際のその人の言葉は……。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="15">放浪</td>
+              <td>あなたが以前居たキャンプは壊滅してしまった。このキャンプでやりなおせるだろうか。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="16">忘却</td>
+              <td>あなたには抜け落ちた記憶がある。思い出さなくてはいけないことか、思い出してはいけないことか。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="22">望郷</td>
+              <td>あなたの故郷は遠い。いつか帰ることができるだろうか。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="23">恩人</td>
+              <td>あなたはとある人物に危機を救われたことがある。その人は今……。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="24">喪失</td>
+              <td>あなたは何かを失った。それを、取り戻したいと思っている。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="25">飢え</td>
+              <td>あなたは空腹で死にそうになったことがある。家に帰れば夕食が待っていた頃が夢のようだ。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="26">生き別れ</td>
+              <td>あなたは大切な人と生き別れになった。彼もきっと生きていると信じている。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="33">恋</td>
+              <td>あなたは恋に落ちた。あの人の顔を見るだけで胸が高鳴った。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="34">夢</td>
+              <td>あなたには夢があった。その夢は今は叶えられるものだろうか。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="35">トラウマ</td>
+              <td>あなたは心に傷をおった。暗闇、水、炎、怒号、死、あなたに降りかかったのは？</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="36">復讐</td>
+              <td>あなたは理不尽に奪われた。ヌシだったろうか、それとも同じヒトだっただろうか。あなたの脳裏にはヤツの姿が焼き付いている。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="44">探求</td>
+              <td>あなたには探し求めているものがある。それはあなたにとって、命をかけるに足るものだ。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="45">孤独</td>
+              <td>あなたはひとりぼっちだった時期がある。今はどうだろうか。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="46">師</td>
+              <td>あなたに道を示してくれた人がいる。いまのあなたがあるのは彼のおかげだ。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="55">罪</td>
+              <td>あなたは罪を犯したことがある。許される日はくるのだろうか。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="56">感謝</td>
+              <td>あなたは大きく感謝されることをしたことがある。</td>
+            </tr>
+            <tr>
+              <td class="txt-center" data-title="66">死</td>
+              <td>あなたは死んだ、はずだった。しかし何故かあなたは今、生きている。</td>
+            </tr>
+          </table>
+          <h3 id="add-class">追加クラス</h3>
+          <div class="listB">
+            <div class="container">
+              <article><a href="#">
+                  <div class="image" style="background-image: url('../assets/images/akindo.png');"></div>
+                  <div class="text">
+                    <h2>アキンド</h2>
+                    <p>他人との交渉のみならず、道具の扱いにも習熟しているあきんど。</p>
+                  </div></a></article>
+              <article><a href="#">
+                  <div class="image" style="background-image: url('../assets/images/kainusi.png');"></div>
+                  <div class="text">
+                    <h2>カイヌシ</h2>
+                    <p>獣使い。一匹のパートナーと共に戦うものもいれば、多くの動物を操るものもいる。</p>
+                  </div></a></article>
+              <article><a href="#">
+                  <div class="image" style="background-image: url('../assets/images/ogamiya.png');"></div>
+                  <div class="text">
+                    <h2>オガミヤ</h2>
+                    <p>占い師や巫女、神父などの神秘的な力をもっているクラス。</p>
+                  </div></a></article>
+              <article><a href="#">
+                  <div class="image" style="background-image: url('../assets/images/idol.png');"></div>
+                  <div class="text">
+                    <h2>アイドル</h2>
+                    <p>歌って踊って明るく皆を励ますムードメーカー。</p>
+                  </div></a></article>
+              <article><a href="#">
+                  <div class="image" style="background-image: url('../assets/images/yaseizi3.png');"></div>
+                  <div class="text">
+                    <h2>ヤセイジ</h2>
+                    <p>森に生きる者。人語を解するケモノもこのクラスとなる。</p>
+                  </div></a></article>
+            </div>
+          </div>
+          <h3 id="add-ability">追加アビリティ</h3>
+          <table class="responsive" id="ability-general">
+            <caption>汎用グループ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">休息</td>
+              <td data-title="グループ">汎用</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">0</td>
+              <td data-title="指定特技">《休む》</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">指定特技の判定に成功すると、自身の【気力】を[気力基準値÷2]点回復する。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-adult">
+            <caption>オトナ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">昔とった杵柄</td>
+              <td data-title="グループ">オトナ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">オトナ以外のクラスの【アビリティ】を1つ取得する。タイプ：常駐のアビリティおよびエネミーアビリティは取得できない。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-wounded">
+            <caption>キズモノ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">凶運</td>
+              <td data-title="グループ">キズモノ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">自分の行う行為判定はゾロ目で成功した場合スペシャル、ゾロ目で失敗した場合ファンブルになる。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-fighter">
+            <caption>センシ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">捨て身</td>
+              <td data-title="グループ">センシ</td>
+              <td data-title="タイプ">補助</td>
+              <td data-title="反動">1</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="効果">命中判定に組み合わせて使用する。【体力】を1d6点消費する。[消費した体力]点のダメージを追加する。体力が0未満になるようには消費できない。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-scount">
+            <caption>スカウト</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">撹乱</td>
+              <td data-title="グループ">スカウト</td>
+              <td data-title="タイプ">補助</td>
+              <td data-title="反動">2</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="効果">組み合わせた攻撃が命中した場合、対象はそのラウンドの間、【対象：全体】のアビリティが使えなくなる。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-hunter">
+            <caption>ハンター</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">猟師</td>
+              <td data-title="グループ">ハンター</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">探索フェイズにあなたが食料を手に入れる時、余分に1J得ることができる。また、戦闘中以外の支援行動で1J(実質2J）手に入れることができるようになる。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-professor">
+            <caption>ハカセ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">秀才</td>
+              <td data-title="グループ">ハカセ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">【気力】を5点消費することで、あなたは全ての《特技》の隣に《雑学》があるものとして代用判定できる（つまり、《雑学》での目標値が6となる）。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-hope">
+            <caption>ホープ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">奥の手</td>
+              <td data-title="グループ">ホープ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">1サイクル（ラウンド）だけ、任意の【アビリティ】を1つ取得する。セッション中一度だけ使用出来る。エネミーアビリティは取得できない。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-merchant">
+            <caption>アキンド</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">値切り</td>
+              <td data-title="グループ">アキンド</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">《斬る》</td>
+              <td data-title="対象">アイテム</td>
+              <td data-title="効果">アイテムを1つ買う時に割り込んで使用する。成功するとそのアイテムの価格を[成功度]J引き下げる。価格の最低値は0。成功度0のときは1J安く買える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">お届け！</td>
+              <td data-title="グループ">アキンド</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">《投げる》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると、自身の所持しているアイテムを1つ目標に渡す。ただしそれを渡すことによって相手が所持限界を超えてしまう場合にはこの判定は必ず失敗する。「肩掛けカバン」「手提げ袋」以外の袋の中のものを渡すことはできない。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">おおかばん</td>
+              <td data-title="グループ">アキンド</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">所持限界を3増やす。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">魔法のかばん</td>
+              <td data-title="グループ">アキンド</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">あなたは「肩掛けカバン」「手提げ袋」以外の袋でも、袋の中のアイテムをすでに取り出しているかのように扱える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">時は金なり</td>
+              <td data-title="グループ">アキンド</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">5</td>
+              <td data-title="指定特技">《閃く》</td>
+              <td data-title="対象">アイテム</td>
+              <td data-title="効果">指定特技の判定に成功すると、あなたはタイプが支援のアイテムを割込みのタイミングで使用出来る。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">人脈</td>
+              <td data-title="グループ">アキンド</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">あなたには冒険商人の仲間がいる。セッション中1度だけ、探索フェイズにその商人からアイテムを1つ買うことができる。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-tamer">
+            <caption>カイヌシ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">森へおかえり</td>
+              <td data-title="グループ">カイヌシ</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">《伝える》</td>
+              <td data-title="対象">全体</td>
+              <td data-title="効果">使用時に食料を[敵の数÷2]個消費する。指定特技の判定に成功すると、敵を森に帰らせ戦闘を終了させることができる。＜ヌシ＞との戦闘では使用できない。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">群れ攻撃</td>
+              <td data-title="グループ">カイヌシ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">0</td>
+              <td data-title="指定特技">《叫ぶ》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">食料を2つ消費する。指定特技の判定に成功すると、2点のダメージを与える。さらに『捕縛』の変調を与える。群れに指示し、敵にまとわりつかせる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">食料調達</td>
+              <td data-title="グループ">カイヌシ</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">自由</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">指定特技の判定に成功すると、[1D6]Jを得る。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">相棒</td>
+              <td data-title="グループ">カイヌシ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">あなたは《相棒》の特技を追加で習得する。判定直前に食料を1つ消費した場合、あなたは全ての《特技》の隣に《相棒》があるものとして代用判定を行える（つまり、目標値が6となる）。あなたが最初に部位ダメージを受けるとき、それを無効化する代わりにこのセッション中【相棒】は使用不能となる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">おつかい</td>
+              <td data-title="グループ">カイヌシ</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">1</td>
+              <td data-title="指定特技">《相棒》</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">指定特技の判定に成功した場合、アイテムを1つ選ぶ。あなたは価格の2倍個の食料を消費してそのアイテムを即座に入手できる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">コンビネーション</td>
+              <td data-title="グループ">カイヌシ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">【相棒】のアビリティが使用可能な時、あなたの与えるダメージは1点増加する。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-sherman">
+            <caption>オガミヤ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">呪術</td>
+              <td data-title="グループ">オガミヤ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">《歌う》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると、対象に『毒』の変調を与える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">結界</td>
+              <td data-title="グループ">オガミヤ</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">《地理》</td>
+              <td data-title="対象">全体</td>
+              <td data-title="効果">そのラウンド中、味方の命中判定と回避判定にプラス1の修正を与える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">星見</td>
+              <td data-title="グループ">オガミヤ</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">5</td>
+              <td data-title="指定特技">《見つける》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">キャンプフェイズ・探索フェイズに使用出来る。指定特技の判定に成功すると、サイコロを6個振り、好きな順番で左から右へ一列に並べる。今後、行為判定を行うたびに2D6を振る代わりに左から順に2個ずつサイコロをとり、その出目がでたものとして扱う。この効果は6個のサイコロを使い切るまで（行為判定を3回行うまで）持続する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">遠見</td>
+              <td data-title="グループ">オガミヤ</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">5</td>
+              <td data-title="指定特技">《鑑定》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">ヌシに『暴露』の変調を与える。戦闘中以外にも使用可能。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">未来視</td>
+              <td data-title="グループ">オガミヤ</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">《予感》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">ファンブルが発生した時に使用出来る。指定特技の判定に成功すると、その判定を振り直す。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">兎歩</td>
+              <td data-title="グループ">オガミヤ</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">2</td>
+              <td data-title="指定特技">《歩く》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると、対象がそのラウンド中に獲得した追加行動を1回分減らす。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-idol">
+            <caption>アイドル</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">貴方だけの歌</td>
+              <td data-title="グループ">アイドル</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">5</td>
+              <td data-title="指定特技">《歌う》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">戦闘中には使用不可。自身には使用できない。指定特技の判定に成功すると、対象の【気力】を2D6点増加させる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">ファンクラブ</td>
+              <td data-title="グループ">アイドル</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">キャンプフェイズでの行動回数が１回増える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">応援歌</td>
+              <td data-title="グループ">アイドル</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">5</td>
+              <td data-title="指定特技">《歌う》</td>
+              <td data-title="対象">全体</td>
+              <td data-title="効果">指定特技の判定に成功すると、そのサイクル（ラウンド）の間、自身を含む味方全員の行為判定にプラス１の修正を与える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">ダンスレッスン</td>
+              <td data-title="グループ">アイドル</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">脚部の両側２列のギャップ（DE)を塗りつぶす。塗りつぶされたギャップは代用判定の際数えない。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">天性の輝き</td>
+              <td data-title="グループ">アイドル</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">【アビリティ】の反動にマイナス1する。0未満にはならない。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">熱狂のビート</td>
+              <td data-title="グループ">アイドル</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">5</td>
+              <td data-title="指定特技">《歌う》</td>
+              <td data-title="対象">全体</td>
+              <td data-title="効果">戦闘中にのみ使用可能。指定特技の判定に成功すると、そのラウンドの間、味方全員の命中判定とダメージにプラス１の修正を与える。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-wild">
+            <caption>ヤセイジ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">ケモノの力</td>
+              <td data-title="グループ">ヤセイジ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">ケモノグループのアビリティを1つ選んで習得する。【ケモノの力：鋭角】のように指定し、指定アビリティごとに別のアビリティとして扱う。これによって習得したアビリティは反動が1点増加する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">森の申し子</td>
+              <td data-title="グループ">ヤセイジ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">探索フェイズのサイクル開始時に、[現在の経過サイクル]点の【気力】を増加させる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">抜刀牙</td>
+              <td data-title="グループ">ヤセイジ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">本文</td>
+              <td data-title="指定特技">《噛む》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功した場合、1D6点のダメージを与える。攻撃終了後、この1D6と同じだけの気力を失う。判定に失敗した場合にも1D6点の気力を消費する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">よつあし</td>
+              <td data-title="グループ">ヤセイジ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">何も装備していない場合、あなたの与えるダメージが1点増加する。また、回避判定にプラス1の修正がつく。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">おたけび</td>
+              <td data-title="グループ">ヤセイジ</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">1</td>
+              <td data-title="指定特技">《叫ぶ》</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">以降、ラウンド開始時に1D6を振る。その出目の数だけ、【気力】を消費する。その出目の数だけ、そのラウンドにあなたの与えるダメージが増加する。この効果はあなたが『無力化』状態になるまで持続する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">超回復</td>
+              <td data-title="グループ">ヤセイジ</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">5</td>
+              <td data-title="指定特技">《塞ぐ》</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">指定特技の判定に成功すると、自身の【体力】が1D6点増加する。</td>
+            </tr>
+          </table>
+          <h3 id="add-item">追加アイテム</h3>
+          <table class="responsive" id="item">
+            <caption>アイテム一覧</caption>
+            <thead>
+              <tr>
+                <th>名前 
+                  <th>価格</th> 
+                  <th>重量</th> 
+                  <th>タイプ</th>  
+                  <th>部位</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>特性</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">猟銃</td>
+              <td data-title="価格">30</td>
+              <td data-title="重量">6</td>
+              <td data-title="タイプ">装備</td>
+              <td data-title="部位">両手</td>
+              <td data-title="指定特技">《撃つ》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="特性">武器、射撃</td>
+              <td data-title="効果">攻撃力5。防御力無視ダメージを与える。弾が必要。装備している間、回避判定にプラス2の修正がつく。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">弾</td>
+              <td data-title="価格">5</td>
+              <td data-title="重量">0</td>
+              <td data-title="タイプ">道具</td>
+              <td data-title="部位">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="特性">消耗品、使用回数：10</td>
+              <td data-title="効果">これを所持していないと猟銃の効果をうけることができない。猟銃で命中判定を行うごとに1消費する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">弓</td>
+              <td data-title="価格">5</td>
+              <td data-title="重量">3</td>
+              <td data-title="タイプ">装備</td>
+              <td data-title="部位">両手</td>
+              <td data-title="指定特技">《撃つ》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="特性">武器、射撃</td>
+              <td data-title="効果">攻撃力3。矢が必要。装備している間、回避判定にプラス2の修正がつく。ハンター専用。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">おしゃれな服</td>
+              <td data-title="価格">1</td>
+              <td data-title="重量">2</td>
+              <td data-title="タイプ">装備</td>
+              <td data-title="部位">胴部</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="特性">防具</td>
+              <td data-title="効果">こんな世界でも身だしなみを大切に。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">アクセサリ</td>
+              <td data-title="価格">2</td>
+              <td data-title="重量">1</td>
+              <td data-title="タイプ">装備</td>
+              <td data-title="部位">任意</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="特性">防具</td>
+              <td data-title="効果">任意の部位に装備することができる。お気に入りの逸品。</td>
+            </tr>
+          </table>
+          <h2 id="add-enemy-ability">エネミーアビリティ</h2>
+          <table class="responsive" id="ability-enemy">
+            <caption>エネミーアビリティ</caption>
+            <thead>
+              <tr>
+                <th>名前 
+                  <th>グループ</th>  
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">麻痺毒</td>
+              <td data-title="グループ">ムシ</td>
+              <td data-title="タイプ">補助</td>
+              <td data-title="反動">2</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="効果">命中判定に組み合わせて使用する。対象に『麻痺』の変調を与える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">蜘蛛の巣</td>
+              <td data-title="グループ">ムシ</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">2</td>
+              <td data-title="指定特技">《罠》</td>
+              <td data-title="対象">全体</td>
+              <td data-title="効果">指定特技の判定に成功すると、戦闘中回避判定に失敗した対象に『捕縛』の変調を与える。この効果は支援行動で、《斬る》の判定に成功するか、「たいまつ」を消費するまで持続する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">甲羅</td>
+              <td data-title="グループ">ムシ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">あなたはダメージを受ける時、先にそのダメージの命中部位を決める。胴部分野の《身体部位》に攻撃が命中した場合、そのダメージを3点軽減する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">吸血</td>
+              <td data-title="グループ">ムシ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">《消化器》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると対象にダメージを1d6点与え、自分の【体力】を同じだけ回復する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">大鋏</td>
+              <td data-title="グループ">ムシ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">5</td>
+              <td data-title="指定特技">《掴む》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると対象にダメージを1d6点与える。ダメージダイスで１つでも6の出目がでた場合、攻撃後、対象の【体力】が1以上でも部位ダメージとなる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">強酸</td>
+              <td data-title="グループ">ムシ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">5</td>
+              <td data-title="指定特技">《掴む》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると、1点のダメージを与える。このダメージは軽減されない。さらに対象の装備1つの効果を1点下げる。キャンプに【工房】があれば、キャンプに戻った時点で装備を元の状態に戻すことができる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">翼</td>
+              <td data-title="グループ">ケモノ</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">《罠》</td>
+              <td data-title="対象">全体</td>
+              <td data-title="効果">指定特技の判定に成功すると、戦場をランダムに変更することができる。最初に1d6を振って奇数なら戦場表A、偶数なら戦場表Bを使う。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">おおぶり</td>
+              <td data-title="グループ">ケモノ</td>
+              <td data-title="タイプ">補助</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="効果">命中判定に組み合わせて使用する。命中判定にマイナス1の修正がつき、ダメージが3点増加する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">切り裂き</td>
+              <td data-title="グループ">ケモノ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">《斬る》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると対象にダメージを2点与え、1点でもダメージが通れば『重傷』の変調を与える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">尾の鞭</td>
+              <td data-title="グループ">ケモノ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">6</td>
+              <td data-title="指定特技">《振る》</td>
+              <td data-title="対象">本文</td>
+              <td data-title="効果">指定特技の判定に成功すると2体の対象にダメージを2点与えるか、単体に2点のダメージを2回与える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">飛びかかり</td>
+              <td data-title="グループ">ケモノ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">4</td>
+              <td data-title="指定特技">《跳ぶ》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると対象にダメージを4点と、『転倒』の変調を与える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">誘い込み</td>
+              <td data-title="グループ">ケモノ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">《追い込む》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると、目標の特技リストから「腕部」分野の特技を１つランダムに使用不能にする。この効果は重複する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">骨の体</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">指定特技が《斬る》《刺す》の攻撃のダメージを2点軽減する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">肉の鎧</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">指定特技が《殴る》の攻撃のダメージを2点軽減する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">樹の体</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">ラウンドの終わりに1D6点【体力】が回復する。自身が受けた【炎上】により減少する値が2倍になる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">不定形</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">命中部位決定表の7が出た時、自身の任意の部位を選んでよい。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">機械の体</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">『毒』の変調を無効化する。【充電】の必要な装備を装備している場合、常に充電されているものとして扱う。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">つぎはぎ</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">回避判定を行う代わりに任意の部位に部位ダメージをうけることで回避判定に成功したことにできる。また、生死判定にプラス1の修正がつく。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">追加肢</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">0</td>
+              <td data-title="指定特技">自由</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると、組み合わせた補助アビリティの効果が発動する。このアビリティと組み合わせた補助アビリティの反動は1少ないものとして扱う。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">追加目</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">命中判定にプラス1の修正がつく。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">電撃</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">2</td>
+              <td data-title="指定特技">自由</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">攻撃が成功すると目標に3点のダメージを与えさらに『麻痺』の変調を与える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">硬質化</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">ダメージを受けるとラウンド終了まで、次以降に受けるダメージを2点軽減する。この修正は累積する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">鉄塊</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">追加行動で行う攻撃のダメージにプラス4の修正がつく。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">悪臭</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">《消化器》</td>
+              <td data-title="対象">全体</td>
+              <td data-title="効果">指定特技の判定に成功すると、ランダムに変調を1つ与える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">無反動</td>
+              <td data-title="グループ">特殊</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="効果">習得している【アビリティ】を１つ選ぶ。その反動を0にする。ヌシは取得できない。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">装備</td>
+              <td data-title="グループ">特殊</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="効果">装備を１つ選ぶ。それを所持していることになる。</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footA">
+          <h2>LOSTRPG</h2>
+          <p><a href="https://lostrpg-751c1.firebaseapp.com/lost">https://lostrpg-751c1.firebaseapp.com/lost/</a></p>
+          <nav class="footD">
+            <ul>
+              <li><a href="https://twitter.com/hibohiboo" target="_blank"><span class="fab fa-twitter" title="Twitter"></span></a></li>
+              <li><a href="https://github.com/hibohiboo/lostrpg" target="_blank"><span class="fab fa-github" title="Github"></span></a></li>
+            </ul>
+          </nav>
+        </div>
+        <nav class="footB">
+          <div>
+            <h3>プレイヤーセクション</h3>
+            <ul>
+              <li><a href="rulebook.html#first"> はじめに</a></li>
+              <li><a href="rulebook.html#world"> ワールド</a></li>
+              <li><a href="rulebook.html#camp"> キャンプ</a></li>
+              <li><a href="rulebook.html#charcter">キャラクター  </a></li>
+              <li><a href="rulebook.html#check"> 行為判定</a></li>
+              <li><a href="rulebook.html#session"> セッション</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>セッションの流れ</h3>
+            <ul>
+              <li><a href="rulebook.html#cycle"> サイクル</a></li>
+              <li><a href="rulebook.html#campF"> キャンプフェイズ</a></li>
+              <li><a href="rulebook.html#exploration"> 探索フェイズ</a></li>
+              <li><a href="rulebook.html#battle">戦闘</a></li>
+              <li><a href="rulebook.html#badstatus"> 変調</a></li>
+              <li><a href="rulebook.html#lastbattle"> 決戦フェイズ</a></li>
+              <li><a href="rulebook.html#ending"> 結果フェイズ</a></li>
+              <li><a href="rulebook.html#afterplay"> セッション終了</a></li>
+              <li><a href="rulebook.html#implove"> キャラクターの成長</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>ゲームマスターセクション</h3>
+            <ul>
+              <li><a href="rulebook.html#make-boss"> ＜ヌシ＞の作成</a></li>
+              <li><a href="rulebook.html#FAQ"> FAQ</a></li>
+              <li><a href="rulebook.html#sankou"> 参考作品</a></li>
+              <li><a href="rulebook.html#sample-scenario"> サンプルシナリオ</a></li>
+              <li><a href="rulebook.html#sample-scenario2"> サンプルシナリオ2</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>その他</h3>
+            <ul> 
+              <li><a href="chart.html"> チャート</a></li>
+              <li><a href="../assets/data/sheet.pdf"> キャラシートPDF</a></li>
+              <li><a href="supplement-strange-fields.html"> サプリ：終末列島百景</a></li>
+              <li><a href="rulebook.html#history"> 更新履歴</a></li>
+              <li><a href="Survival_island.htm"> 現代編：無人島シナリオ</a></li>
+              <li><a target="_blank" href="http://www.nicovideo.jp/watch/sm22594742"> ニコニコ動画：卓M@sリプレイ</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="footC">© hibohiboo. All rights.</div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>$(()=>{$(".headC").click(()=>$(".headB").slideToggle("fast"))})</script>
+</html>
