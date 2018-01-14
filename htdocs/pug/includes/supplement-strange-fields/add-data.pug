@@ -1,0 +1,191 @@
+h2 追加データ
+p 追加されたデータです。一部のデータのみを使用するといったことも可能です。
+h3#get_exp 経験点の入手
+ol
+  li 新たなアイテムを手に入れた(1点)
+  li キャンプの仲間と友情を結んだ(1点)
+h3 経験点の使用
+table.responsive#charcter-backbone
+  caption 背景表
+  thead
+    tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
+  each facility in backboneList
+    tr
+      td.txt-center= facility.name
+      td(data-title='必要CP')= facility.cp
+      td(data-title='タイプ')= facility.type
+      td.nowrap(data-title='指定特技')= facility.specialty
+      td(data-title='最大レベル')= facility.maxLv
+      td(data-title='前提')= facility.precondition
+      td(data-title='効果')= facility.effect
+h3#experience 経験表
+p プレイヤーはキャラクター作成時にキャラクターの経験表を使用することができます。
+table.responsive#table-experience
+  caption 経験表
+  thead
+    tr: th 2d6 #[th 経験] #[th 内容] 
+  each item in experienceList
+    tr
+      td.txt-center(data-title=item.d66)= item.a
+      td= item.b
+h3#add-class 追加クラス
+.listB
+  .container
+    each obj in strangeFieldsClassList
+      article
+        a(href="#")
+          .image(style="background-image: url('../assets/images/" + obj.image + "');")
+          .text
+            h2= obj.name
+            p= obj.description
+
+h3#add-ability 追加アビリティ
+each ability in strangeFieldsAbilityList
+  table(class="responsive", id='ability-'+ability.id)
+    caption= ability.name
+    thead
+      tr: th 名前  #[th グループ] #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+    each item in ability.list
+      tr
+        td.txt-center= item.name
+        td(data-title='グループ')= item.group
+        td(data-title='タイプ')= item.type
+        td(data-title='反動')= item.recoil
+        td.nowrap(data-title='指定特技')= item.specialty
+        td(data-title='対象')= item.target
+        td(data-title='効果')= item.effect
+
+h3#add-item 追加アイテム
+table.responsive#item
+  caption アイテム一覧
+  thead
+    tr: th 名前 #[th 価格] #[th 重量] #[th タイプ]  #[th 部位] #[th 指定特技] #[th 対象] #[th 特性] #[th 効果]
+  each item in strangeFieldsItemList
+    tr
+      td.txt-center= item.name
+      td(data-title='価格')= item.j
+      td(data-title='重量')= item.weight
+      td(data-title='タイプ')= item.type
+      td(data-title='部位')= item.area
+      td.nowrap(data-title='指定特技')= item.specialty
+      td(data-title='対象')= item.target
+      td(data-title='特性')= item.trait
+      td(data-title='効果')= item.effect
+
+h3#add-enemy-ability エネミーアビリティ
+table(class="responsive", id='ability-enemy')
+  caption エネミーアビリティ
+  thead
+    tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+  each item in strangeFieldsEnemyAbilityList
+    tr
+      td.txt-center= item.name
+      td(data-title='グループ')= item.group
+      td(data-title='タイプ')= item.type
+      td(data-title='反動')= item.recoil
+      td.nowrap(data-title='指定特技')= item.specialty
+      td(data-title='対象')= item.target
+      td(data-title='効果')= item.effect
+
+table(class="responsive", id='add-ability-mutation')
+  caption 追加突然変異表
+  thead
+    tr: th d6 * d6 #[th ムシ(1)] #[th ムシ(2)] #[th ケモノ(3)] #[th ケモノ(4)] #[th ミュータント(5)] #[th ミュータント(6)]
+  each item in strangeFieldsMutationList
+    tr
+      td.txt-center= item.d6
+      td(data-title='ムシ(1)')= item.a
+      td(data-title='ムシ(2)')= item.b
+      td(data-title='ケモノ(3)')= item.c
+      td(data-title='ケモノ(4)')= item.d
+      td(data-title='ミュータント(5)')= item.e
+      td(data-title='ミュータント(6)')= item.f
+h3#add-enemy 追加エネミー
+table.responsive#add-enemylist
+  caption 追加エネミー
+  thead
+    tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
+  each enemy in  strangeFieldsEnemyList
+    tr
+      td.txt-center= enemy.name
+      td(data-title='レベル')= enemy.lv
+      td(data-title='タイプ')= enemy.group
+      td(data-title='体力')= enemy.stamina
+      td(data-title='気力')= enemy.willpower
+      td(data-title='特技')= enemy.specialties
+      td(data-title='アビリティ')= enemy.abilities
+      td(data-title='ドロップ')= enemy.drop
+      td(data-title='解説')= enemy.comment
+table.responsive#add-droplist
+  caption ドロップ
+  thead
+    tr: th 1d6 #[th サカナA] #[th  サカナB]
+  each drop in strangeFieldsDropList
+    tr
+      td.txt-center= drop.d6
+      td(data-title='サカナA')= drop.f
+      td(data-title='サカナB')= drop.g
+h3#camp-happening キャンプフェイズハプニング表
+p 採用する場合、キャンプフェイズの判定でファンブルが起きた時にそのキャラクターはこの表を振ること。
+table.chart#table-camp-happening
+  caption キャンプフェイズハプニング表
+  thead
+    tr: th 2d6 #[th 結果] 
+  each name in campHappeningList
+    tr
+      td= name["2d6"]
+      td= name.a
+h3#explorer-happening 探索フェイズハプニング表
+p 採用する場合、探索フェイズの判定でファンブルが起きた時にそのキャラクターはこの表を振ること。
+table.chart#table-explorer-happening
+  caption 探索フェイズハプニング表
+  thead
+    tr: th 2d6 #[th 結果] 
+  each name in explorerHappeningList
+    tr
+      td= name["2d6"]
+      td= name.a
+h3#fumble-initiative 先制判定ファンブル表
+p 採用する場合、先制判定でファンブルが起きた時にそのキャラクターはこの表を振ること。
+table.chart#table-fumble-initiative
+  caption 先制判定ファンブル表
+  thead
+    tr: th d6 #[th 説明] 
+  each name in fumbleInitiativeList
+    tr
+      td= name.d6
+      td= name.a
+
+
+h3#field-attribute フィールド特性表
+p GMは、フィールドに任意の特性をつけることができます。
+table.chart#table-field-attribute
+  caption フィールド特性表
+  thead
+    tr: th d6 #[th 特性] #[th 効果] 
+  each item in fieldAttributeList
+    tr
+      td= item["d6"]
+      td.nowrap= item.a
+      td= item.effect
+
+h3#battle-field 戦場表
+p GMは戦闘を行う時、任意の戦場で戦闘を開始することができます。
+table.chart#table-battle-fieldA
+  caption 戦場表A
+  thead
+    tr: th d6 #[th 戦場] #[th 効果] 
+  each item in battleFieldListA
+    tr
+      td= item["d6"]
+      td.nowrap= item.a
+      td= item.b
+table.chart#table-battle-fieldB
+  caption 戦場表B
+  thead
+    tr: th d6 #[th 戦場] #[th 効果] 
+  each item in battleFieldListB
+    tr
+      td= item["d6"]
+      td.nowrap= item.a
+      td= item.b

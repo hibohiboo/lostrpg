@@ -127,6 +127,9 @@ header .container,
   max-width: 800px;
   max-width: var(--middle-width);
 }
+.nowrap {
+  white-space: nowrap;
+}
 table.responsive,
 table.chart {
   border-collapse: collapse;
@@ -672,6 +675,11 @@ header {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 384px;
           flex: 1 1 384px;
+}
+@media (max-width: 384px) {
+  .listB a {
+    display: block;
+  }
 }
 .listC a {
   position: relative;

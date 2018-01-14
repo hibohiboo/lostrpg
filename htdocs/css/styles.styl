@@ -75,6 +75,11 @@ body {
   max-width: var(--middle-width);
 }
 
+// 改行させない
+.nowrap{
+  white-space: nowrap;
+}
+
 // レスポンシブルなテーブル設定
 table.responsive,
 table.chart // チャートでレスポンシブルにしないテーブルも同デザイン
@@ -707,6 +712,10 @@ header{
     }
     p {
       //display: none; // 384px以下では文章を非表示
+    }
+    // 小さいリストでは縦並びにする
+    a {
+      display: block;
     }
   }
 }

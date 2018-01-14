@@ -23,94 +23,9 @@ block body
           p LOSTTRPGサプリメント「Strange Fields  終末列島百景」はLOSTRPGの追加データ集です。
           p  PLの同意の上で、GMはサプリメントのデータおよびルールを使用してもかまいません。
           include includes/supplement-strange-fields/contents
+          include includes/supplement-strange-fields/scenario-craft
           include includes/supplement-strange-fields/add-rules
-          h2 追加データ
-          p 追加されたデータです。一部のデータのみを使用するといったことも可能です。
-          h3#get_exp 経験点の入手
-          ol
-            li 新たなアイテムを手に入れた(1点)
-            li キャンプの仲間と友情を結んだ(1点)
-          h3 経験点の使用
-          table.responsive#charcter-backbone
-            caption 背景表
-            thead
-              tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
-            each facility in backboneList
-              tr
-                td.txt-center= facility.name
-                td(data-title='必要CP')= facility.cp
-                td(data-title='タイプ')= facility.type
-                td(data-title='指定特技')= facility.specialty
-                td(data-title='最大レベル')= facility.maxLv
-                td(data-title='前提')= facility.precondition
-                td(data-title='効果')= facility.effect
-          h3#experience 経験表
-          p プレイヤーはキャラクター作成時にキャラクターの経験表を使用することができます。
-          table.responsive#table-experience
-            caption 経験表
-            thead
-              tr: th 2d6 #[th 経験] #[th 内容] 
-            each item in experienceList
-              tr
-                td.txt-center(data-title=item.d66)= item.a
-                td= item.b
-          h3#add-class 追加クラス
-          .listB
-            .container
-              each obj in strangeFieldsClassList
-                article
-                  a(href="#")
-                    .image(style="background-image: url('../assets/images/" + obj.image + "');")
-                    .text
-                      h2= obj.name
-                      p= obj.description
-
-          h3#add-ability 追加アビリティ
-          each ability in strangeFieldsAbilityList
-            table(class="responsive", id='ability-'+ability.id)
-              caption= ability.name
-              thead
-                tr: th 名前  #[th グループ] #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
-              each item in ability.list
-                tr
-                  td.txt-center= item.name
-                  td(data-title='グループ')= item.group
-                  td(data-title='タイプ')= item.type
-                  td(data-title='反動')= item.recoil
-                  td(data-title='指定特技')= item.specialty
-                  td(data-title='対象')= item.target
-                  td(data-title='効果')= item.effect
-
-          h3#add-item 追加アイテム
-          table.responsive#item
-            caption アイテム一覧
-            thead
-              tr: th 名前 #[th 価格] #[th 重量] #[th タイプ]  #[th 部位] #[th 指定特技] #[th 対象] #[th 特性] #[th 効果]
-            each item in strangeFieldsItemList
-              tr
-                td.txt-center= item.name
-                td(data-title='価格')= item.j
-                td(data-title='重量')= item.weight
-                td(data-title='タイプ')= item.type
-                td(data-title='部位')= item.area
-                td(data-title='指定特技')= item.specialty
-                td(data-title='対象')= item.target
-                td(data-title='特性')= item.trait
-                td(data-title='効果')= item.effect
-
-          h2#add-enemy-ability エネミーアビリティ
-          table(class="responsive", id='ability-enemy')
-            caption エネミーアビリティ
-            thead
-              tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
-            each item in strangeFieldsEnemyAbilityList
-              tr
-                td.txt-center= item.name
-                td(data-title='グループ')= item.group
-                td(data-title='タイプ')= item.type
-                td(data-title='反動')= item.recoil
-                td(data-title='指定特技')= item.specialty
-                td(data-title='対象')= item.target
-                td(data-title='効果')= item.effect
+          include includes/supplement-strange-fields/add-data
+          include includes/supplement-strange-fields/faq
 
     include includes/common/footer

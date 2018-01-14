@@ -1,0 +1,50 @@
+h2#scenario-craft ランダム表を使ったシナリオ
+h3 前提条件
+p ランダム表を使ったシナリオでは、ランダム表の結果を最大限に活かすため、後述の#[a(href="#wisdom-and-innovative") 知恵と工夫ルール]を使用します。
+h3 事前準備
+p GMは、【ヌシのデータ】【チェックポイントの数】を最初に決めます。チェックポイントの数はセッションの長さに比例します。ゲームに慣れていない場合は3で始めるとよいでしょう。
+h3 キャンプフェイズ
+p GMはプロローグ表を振ります。表の結果を演出し、プロローグと行動の処理を行なって下さい。
+p プロローグではリミットを伝えてください。リミットは【チェックポイントの数プラス１】になります。
+h4#prologue プロローグ表
+p フィールドに冒険者たちが向かう理由をランダムに決定します。
+table.chart#table-prologue
+  caption プロローグ表
+  thead
+    tr: th d6 #[th 理由] #[th 説明] 
+  each item in prologueList
+    tr
+      td= item["d6"]
+      td.nowrap= item.a
+      td= item.b
+h3 探索フェイズ
+p ＜チェックポイント＞ごとにGMはシーン表と障害表を振り、 描写を行います。 この時、表の結果を見ながらプレイヤーと一緒にどんな＜チェックポイント＞か演出すると よいでしょう。
+p ランダム表を使ったシナリオでは、1つの＜チェックポイント＞に存在する障害は1つです。 また、分岐はなく＜チェックポイント＞は一本道となります。
+
+h4#scene シーン表
+p ＜フィールド＞内では、密林のトンネルを抜ければ雪国ということも起こるのです。
+table.chart#table-scene
+  caption シーン表
+  thead
+    tr: th d66 #[th シーン] 
+  each scene in sceneList
+    tr
+      td= scene["d66"]
+      td= scene.a
+
+h4#obstacle 障害表
+p チェックポイントにランダムに障害を設置します。シーンにあわせて、適宜読み替えて使用してください。
+  | 使用する特技が同じならば、GMの好きな障害を演出してかまいません。
+table.chart#table-scene
+  caption 障害表
+  thead
+    tr: th d6*2d6 #[th 指定特技] #[th 障害] 
+  each obstacle in obstacleList
+    tr
+      td= obstacle["d666"]
+      td.nowrap= obstacle.specialty
+      td= obstacle.comment
+h3 決戦フェイズ
+p 通常通り処理を行います。
+h3 結果フェイズ
+p 通常通り処理を行います。
