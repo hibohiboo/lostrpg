@@ -1,0 +1,20 @@
+extends includes/common/_layout
+block title
+  - var title = "リプレイ～塩と胡椒～: LOST～廃墟の森の子供たち～"
+  title= title
+
+block css
+  link(href="../assets/css/styles.css" rel="stylesheet" )
+block headjs
+
+block body
+  body.nohero.reply
+    header
+      include includes/common/header
+    section
+      .container
+        h1 LOST～廃墟の森の子供たち～リプレイ：塩と胡椒
+        p これは、サンプルシナリオ1を遊んだ風景のリプレイログです。作成中のデータのため、最新のデータと矛盾することがあります。
+        include includes/reply-sample1/main
+
+    include includes/common/footer

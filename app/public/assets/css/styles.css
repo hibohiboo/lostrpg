@@ -113,6 +113,7 @@ body {
 .related ul,
 .conB .container,
 .conC .container,
+.conC2 .container,
 .conD .container,
 footer .container,
 header .container,
@@ -221,6 +222,7 @@ table.chart td:first-child {
 }
 .hero-header a,
 .conC a,
+.conC2 a,
 .conD a {
   display: inline-block;
   margin-top: 20px;
@@ -235,6 +237,7 @@ table.chart td:first-child {
 }
 .hero-header a:hover,
 .conC a:hover,
+.conC2 a:hover,
 .conD a:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.2)), to(rgba(255,255,255,0.2)));
   background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
@@ -257,6 +260,7 @@ table.chart td:first-child {
 }
 .conB h2,
 .conC h2,
+.conC2 h2,
 .conD h2,
 .history h2 {
   margin-top: 0;
@@ -265,6 +269,7 @@ table.chart td:first-child {
 }
 .conB p,
 .conC p,
+.conC2 p,
 .conD p,
 .history p {
   margin-top: 0;
@@ -295,6 +300,7 @@ table.chart td:first-child {
 }
 .conB .container,
 .conC .container,
+.conC2 .container,
 .conD .container,
 footer .container,
 .history .container {
@@ -307,24 +313,31 @@ footer .container,
   padding-bottom: 60px;
   text-align: center;
 }
-.conC {
+.conC,
+.conC2 {
   background-color: var(--main-color);
   color: var(--text-bright-color);
 }
-.conC .image {
+.conC .image,
+.conC2 .image {
   height: 400px;
   max-width: 500px;
   background-image: url("../images/woo.png");
   background-position: center;
   background-size: cover;
 }
-.conC .text {
+.conC .text,
+.conC2 .text {
   padding: 20px;
 }
 .conC a,
+.conC2 a,
 .conD a {
   display: block;
   width: 200px;
+}
+.conC2 .image {
+  background-image: url("../images/takibi.png");
 }
 .conD .image {
   height: 400px;
@@ -769,6 +782,41 @@ header {
 .contents div {
   margin-bottom: 20px;
 }
+.reply {
+  background-color: #222;
+  color: #eee;
+}
+.reply small {
+  font-size: 8pt;
+}
+.reply #reply dd {
+  margin-bottom: 0.8em;
+  margin-left: 8em;
+  width: 30em;
+  line-height: 15pt;
+}
+.reply #reply dt {
+  clear: left;
+  float: left;
+  margin: 0 0 0.8em;
+  width: 7em;
+  padding-left: 5px;
+  text-align: right;
+}
+.reply .pillar {
+  clear: both;
+  position: absolute;
+  margin-left: 40em;
+}
+.reply .pillar dt {
+  clear: both;
+  font-weight: bold;
+}
+.reply .pillar dd {
+  margin: 20px;
+  clear: both;
+  width: 13em;
+}
 @media (max-width: 767px) {
   header .container-small {
     display: -webkit-box;
@@ -797,6 +845,9 @@ header {
   .headB {
     display: none;
   }
+  .reply .pillar {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .hero-header h1 {
@@ -807,6 +858,7 @@ header {
   }
   .conB .container,
   .conC .container,
+  .conC2 .container,
   .conD .container,
   footer .container,
   .history .container {
@@ -820,17 +872,20 @@ header {
             flex: 1;
   }
   .conC .container,
+  .conC2 .container,
   .conD .container,
   .history .container {
     padding-bottom: 0;
     padding-top: 0;
   }
-  .conC .image {
+  .conC .image,
+  .conC2 .image {
     -webkit-box-flex: 3;
         -ms-flex: 3;
             flex: 3;
   }
-  .conC .text {
+  .conC .text,
+  .conC2 .text {
     -webkit-box-flex: 2;
         -ms-flex: 2;
             flex: 2;

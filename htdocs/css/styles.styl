@@ -286,6 +286,13 @@ table.chart // チャートでレスポンシブルにしないテーブルも�
   }
 }
 
+.conC2{
+  @extend .conC 
+  .image {
+    background-image: url(../images/takibi.png);
+  }
+}
+
 // ルールについて
 .conD {
   p {
@@ -844,6 +851,46 @@ header{
   }
 }
 
+//##### リプレイ #####
+.reply {
+  background-color: #222;
+  color: #eee;
+  small { font-size: 8pt}
+  #reply{
+    dd{
+      margin-bottom: 0.8em; //dtのmargin-bottomと同じ値が無難
+      margin-left: 8em;     //dtのmargin-leftより大きい値にする。多数行になってもdtの下に回りこまないようにする。
+      width:30em;
+      line-height:15pt;
+    }
+    dt{
+      clear: left;
+      float: left;  //dt,dd横並びにするため、回りこみ許可
+      margin: 0 0 0.8em;
+      width: 7em; //この幅の後に次のdd要素が来る。列の位置揃えに必要。em指定でフォントサイズ変わっても大丈夫なようにする。
+      //border-left: solid 8px #CCC; //左に罫線描画
+      padding-left: 5px;
+      text-align:right;
+    }
+  }
+  .pillar {
+    clear: both;
+    position:absolute;
+    margin-left:40em;
+    dt{
+      clear: both;
+      font-weight:bold;
+    }
+    dd{
+      margin:20px;
+      clear:both;
+      width:13em;
+    }
+  }
+}
+
+//###################################################################################################
+
 //##### 小さい画面用設定 #####
 // ブレークポイント：iPadの画面の横幅 = 768px - 1px
 @media(max-width: 767px) {
@@ -871,6 +918,10 @@ header{
   // 小さな画面ではナビゲーションメニューは表示されない
   .headB {
     display: none;
+  }
+  // 小さな画面ではリプレイの柱は表示しない
+  .reply .pillar{
+    display: none;  
   }
 }
 
@@ -902,7 +953,7 @@ header{
   #first {
 
   }
-  .conC {
+  .conC, .conC2 {
     // 概要と横幅を揃える
     .container {
       @extend .conB .container 
