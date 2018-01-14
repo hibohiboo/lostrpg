@@ -1,5 +1,4 @@
 @charset "UTF=8";
-@charset "UTF=8";
 html {
   font-size: 100%;
   font-size: 1em;
@@ -62,6 +61,17 @@ button svg {
   body > *:not(main) {
     display: none;
   }
+}
+:root {
+  --main-color: #5d9ab2;
+  --accent-color: #bf6a7a;
+  --dark-color: #2b5566;
+  --text-bright-color: #fff;
+  --icon-color: #fff;
+  --icon-bk-color: #ddd;
+  --gray-color: #ddd;
+  --large-width: 1000px;
+  --middle-width: 800px;
 }
 :root {
   --main-color: #5d9ab2;
@@ -599,6 +609,62 @@ header {
   color: inherit;
   text-decoration: none;
 }
+.contents h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: solid 1px currentColor;
+  font-size: 14px;
+}
+.contents ul {
+  list-style: none;
+}
+.contents a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+}
+.contents a:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+.contents div {
+  margin-bottom: 20px;
+}
+.reply {
+  background-color: #222;
+  color: #eee;
+}
+.reply small {
+  font-size: 8pt;
+}
+.reply #reply dd {
+  margin-bottom: 0.8em;
+  margin-left: 8em;
+  max-width: 30em;
+  line-height: 15pt;
+}
+.reply #reply dt {
+  clear: left;
+  float: left;
+  margin: 0 0 0.8em;
+  width: 7em;
+  padding-left: 5px;
+  text-align: right;
+}
+.reply .pillar {
+  clear: both;
+  position: absolute;
+  margin-left: 40em;
+}
+.reply .pillar dt {
+  clear: both;
+  font-weight: bold;
+}
+.reply .pillar dd {
+  margin: 20px;
+  clear: both;
+  max-width: 13em;
+}
 .listA h2,
 .listB h2,
 .listC h2,
@@ -760,62 +826,6 @@ header {
         -ms-flex: 1 1 25%;
             flex: 1 1 25%;
   }
-}
-.contents h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  border-bottom: solid 1px currentColor;
-  font-size: 14px;
-}
-.contents ul {
-  list-style: none;
-}
-.contents a {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-  padding: 5px;
-}
-.contents a:hover {
-  background-color: rgba(0,0,0,0.3);
-}
-.contents div {
-  margin-bottom: 20px;
-}
-.reply {
-  background-color: #222;
-  color: #eee;
-}
-.reply small {
-  font-size: 8pt;
-}
-.reply #reply dd {
-  margin-bottom: 0.8em;
-  margin-left: 8em;
-  width: 30em;
-  line-height: 15pt;
-}
-.reply #reply dt {
-  clear: left;
-  float: left;
-  margin: 0 0 0.8em;
-  width: 7em;
-  padding-left: 5px;
-  text-align: right;
-}
-.reply .pillar {
-  clear: both;
-  position: absolute;
-  margin-left: 40em;
-}
-.reply .pillar dt {
-  clear: both;
-  font-weight: bold;
-}
-.reply .pillar dd {
-  margin: 20px;
-  clear: both;
-  width: 13em;
 }
 @media (max-width: 767px) {
   header .container-small {
