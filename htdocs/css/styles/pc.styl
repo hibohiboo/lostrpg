@@ -130,4 +130,40 @@
   .contact:first-child {
     margin-right: 20px;
   }
+
+  .reply{
+    small { font-size: 8pt}
+    #reply{
+      dd{
+        margin-bottom: 0.8em; //dtのmargin-bottomと同じ値が無難
+        margin-left: 8em;     //dtのmargin-leftより大きい値にする。多数行になってもdtの下に回りこまないようにする。
+        max-width:30em;
+        line-height:15pt;
+      }
+      dt{
+        clear: left;
+        float: left;  //dt,dd横並びにするため、回りこみ許可
+        margin: 0 0 0.8em;
+        width: 7em; //この幅の後に次のdd要素が来る。列の位置揃えに必要。em指定でフォントサイズ変わっても大丈夫なようにする。
+        //border-left: solid 8px #CCC; //左に罫線描画
+        padding-left: 5px;
+        text-align:right;
+      }
+    }
+    .pillar {
+      clear: both;
+      position:absolute;
+      margin-left:40em;
+      dt{
+        clear: both;
+        font-weight:bold;
+      }
+      dd{
+        margin:20px;
+        clear:both;
+        max-width:13em;
+      }
+    }
+  }
+
 }

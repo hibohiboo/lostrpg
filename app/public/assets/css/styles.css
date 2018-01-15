@@ -121,6 +121,7 @@ body {
 .listB .container,
 .listC .container,
 .related ul,
+.reply .container,
 .conB .container,
 .conC .container,
 .conC2 .container,
@@ -134,7 +135,8 @@ header .container,
   margin-right: auto;
 }
 .container-middle-width,
-.content .container {
+.content .container,
+.reply .container {
   max-width: 800px;
   max-width: var(--middle-width);
 }
@@ -502,7 +504,8 @@ header {
   font-size: 1rem;
   line-height: 2;
 }
-.content .container {
+.content .container,
+.reply .container {
   padding: 20px 10px;
 }
 .content img {
@@ -633,37 +636,6 @@ header {
 .reply {
   background-color: #222;
   color: #eee;
-}
-.reply small {
-  font-size: 8pt;
-}
-.reply #reply dd {
-  margin-bottom: 0.8em;
-  margin-left: 8em;
-  max-width: 30em;
-  line-height: 15pt;
-}
-.reply #reply dt {
-  clear: left;
-  float: left;
-  margin: 0 0 0.8em;
-  width: 7em;
-  padding-left: 5px;
-  text-align: right;
-}
-.reply .pillar {
-  clear: both;
-  position: absolute;
-  margin-left: 40em;
-}
-.reply .pillar dt {
-  clear: both;
-  font-weight: bold;
-}
-.reply .pillar dd {
-  margin: 20px;
-  clear: both;
-  max-width: 13em;
 }
 .listA h2,
 .listB h2,
@@ -855,6 +827,9 @@ header {
   .headB {
     display: none;
   }
+  .reply img {
+    max-width: 100%;
+  }
   .reply .pillar {
     display: none;
   }
@@ -997,5 +972,36 @@ header {
   }
   .contact:first-child {
     margin-right: 20px;
+  }
+  .reply small {
+    font-size: 8pt;
+  }
+  .reply #reply dd {
+    margin-bottom: 0.8em;
+    margin-left: 8em;
+    max-width: 30em;
+    line-height: 15pt;
+  }
+  .reply #reply dt {
+    clear: left;
+    float: left;
+    margin: 0 0 0.8em;
+    width: 7em;
+    padding-left: 5px;
+    text-align: right;
+  }
+  .reply .pillar {
+    clear: both;
+    position: absolute;
+    margin-left: 40em;
+  }
+  .reply .pillar dt {
+    clear: both;
+    font-weight: bold;
+  }
+  .reply .pillar dd {
+    margin: 20px;
+    clear: both;
+    max-width: 13em;
   }
 }

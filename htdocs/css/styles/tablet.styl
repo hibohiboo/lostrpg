@@ -29,6 +29,12 @@
   }
   // 小さな画面ではリプレイの柱は表示しない
   .reply{
+    .container{
+      @extend .content .container
+    }
+    img {
+      max-width: 100%;  // 横幅に合わせて自動縮小するが、拡大はしない
+    }
     .pillar{
       display: none;  
     }
