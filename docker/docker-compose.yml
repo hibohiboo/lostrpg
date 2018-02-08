@@ -53,3 +53,9 @@ services:
     environment:
       - SHELL=/bin/bash
     command: [npm, run, watch]
+  
+  html2jade:
+    build: ./html2jade
+    volumes:
+      - ../dist/lost:/app/src
+      - ../app/public/lost:/app/dist
