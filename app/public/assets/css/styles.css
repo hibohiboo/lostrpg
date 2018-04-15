@@ -10,7 +10,6 @@ p {
 p a {
   text-decoration: none;
   text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff, 0 0.05em 0 #fff, 0 -0.05em 0 #fff, 0.1em 0 0 #fff, -0.1em 0 0 #fff, 0 0.1em 0 #fff, 0 -0.1em 0 #fff;
-  background-image: -webkit-gradient(linear, left top, right top, from(currentColor), to(currentColor));
   background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
   background-repeat: repeat-x;
   background-position: bottom 0.05em center;
@@ -180,8 +179,7 @@ table.chart td:first-child {
     border: none;
     display: block;
     width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     border-bottom: 1px solid var(--gray-color);
   }
   table.responsive td.txt-center {
@@ -195,18 +193,11 @@ table.chart td:first-child {
   }
 }
 .hero-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   min-height: 450px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.1)), to(rgba(0,0,0,0.5))), url("../images/yun_1139.jpg");
   background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url("../images/yun_1139.jpg");
   background-position: center;
   background-size: cover;
@@ -251,7 +242,6 @@ table.chart td:first-child {
 .conC a:hover,
 .conC2 a:hover,
 .conD a:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.2)), to(rgba(255,255,255,0.2)));
   background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
 }
 .hero-header .yun_c {
@@ -440,8 +430,6 @@ footer p {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .footD a {
@@ -546,8 +534,6 @@ header {
   -webkit-font-smoothing: antialiased;
 }
 .bread ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
@@ -668,9 +654,7 @@ header {
   border: solid 1px var(--gray-color);
   color: inherit;
   text-decoration: none;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 .listA a:hover,
 .listB a:hover,
@@ -688,11 +672,8 @@ header {
 .listB .container,
 .listC .container,
 .related ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -700,32 +681,20 @@ header {
 .listB article,
 .listC article,
 .related li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 300px;
-          flex: 1 1 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1 1 300px;
   display: flex;
 }
 .listB .image {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
 }
 .listB .text {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
 }
 .listB a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .listB article {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 384px;
-          flex: 1 1 384px;
+  flex: 1 1 384px;
 }
 @media (max-width: 384px) {
   .listB a {
@@ -755,18 +724,14 @@ header {
   min-height: 250px;
 }
 .listC article {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 250px;
-          flex: 1 1 250px;
+  flex: 1 1 250px;
 }
 .listC .container {
   max-width: none;
 }
 @media (min-width: 1000px) {
   .listC article {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 25%;
-            flex: 1 1 25%;
+    flex: 1 1 25%;
   }
 }
 .related {
@@ -778,38 +743,26 @@ header {
   list-style: none;
 }
 .related li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
+  flex: 1 1 100%;
 }
 .related a {
   background-color: rgba(255,255,255,0.5);
 }
 @media (min-width: 600px) and (max-width: 899px) {
   .related li {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 50%;
-            flex: 1 1 50%;
+    flex: 1 1 50%;
   }
 }
 @media (min-width: 900px) {
   .related li {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 25%;
-            flex: 1 1 25%;
+    flex: 1 1 25%;
   }
 }
 @media (max-width: 767px) {
   header .container-small {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
   }
   .headC {
     margin-right: 10px;
@@ -847,14 +800,10 @@ header {
   .conD .container,
   footer .container,
   .history .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .conB .text {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
   .conC .container,
   .conC2 .container,
@@ -865,110 +814,70 @@ header {
   }
   .conC .image,
   .conC2 .image {
-    -webkit-box-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
+    flex: 3;
   }
   .conC .text,
   .conC2 .text {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
+    flex: 2;
     passing: 50px;
   }
   .conD .container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    flex-direction: row-reverse;
     padding-bottom: 40px;
     padding-top: 40px;
   }
   .conD .image {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 490px;
-            flex: 0 0 490px;
+    flex: 0 0 490px;
   }
   .conD .text {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
   footer .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .footA {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
+    flex: 0 0 40%;
   }
   .footB {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 60%;
-            flex: 0 0 60%;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    flex: 0 0 60%;
     display: flex;
   }
   .footB div {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
   .footB div:not(:first-child) {
     margin-left: 40px;
   }
   .footC {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
   }
   header .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
   }
   .headB {
     display: block !important;
   }
   .headB ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .headC {
     display: none;
   }
   .history .image {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
+    flex: 2;
   }
   .history .text {
-    -webkit-box-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
+    flex: 3;
     padding: 50px;
   }
   .contact-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .contact {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
   .contact:first-child {
     margin-right: 20px;
