@@ -43,7 +43,7 @@ services:
     volumes:
       - ./config/elm/webpack.config.js:/app/webpack.config.js
       - ../src/elm:/app/src
-      - ../dist:/app/dist
+      - ../dist/elm:/app/dist
     ports:
       - 3000:3000
     command: [yarn, dev]
