@@ -1,4 +1,4 @@
-FROM node:6.11.5
+FROM node:6.14.1
 
 
 # コンテナ上の作業ディレクトリ作成
@@ -8,7 +8,7 @@ WORKDIR /app
 RUN npm init -y
 
 # firebase
-RUN npm install -g firebase-tools
-RUN npm i -D firebase-tools
+RUN yarn global add firebase-tools
+RUN yarn add --dev firebase-tools
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"firebase\": \"firebase\", /g" /app/package.json

@@ -1,4 +1,4 @@
-FROM node:9.3.0
+FROM node:9.11.1
 
 # コンテナ上の作業ディレクトリ作成
 WORKDIR /app
@@ -7,72 +7,73 @@ WORKDIR /app
 RUN npm init -y
 
 # typescript
-RUN npm i -D typescript
+RUN yarn add --dev typescript
 
 # tslint
-RUN npm i -D tslint
-RUN npm i -D tslint-config-airbnb
+RUN yarn add --dev tslint
+RUN yarn add --dev tslint-config-airbnb
 
 # typedoc
-RUN npm i -D typedoc 
+RUN yarn add --dev typedoc 
 
 # ビルドツール
-RUN npm i -D webpack
+RUN yarn add --dev webpack
+RUN yarn add --dev webpack-cli
 
 # 開発用サーバ
-RUN npm i -D webpack-dev-server
+RUN yarn add --dev webpack-dev-server
 
 # es6用トランスパイラ
-RUN npm i -D babel-loader
-RUN npm i -D babel-core
-RUN npm i -D babel-cli
-RUN npm i -D babel-preset-es2015
-RUN npm i -D babel-preset-env
-RUN npm i -D babel-plugin-transform-react-jsx
+RUN yarn add --dev babel-loader
+RUN yarn add --dev babel-core
+RUN yarn add --dev babel-cli
+RUN yarn add --dev babel-preset-es2015
+RUN yarn add --dev babel-preset-env
+RUN yarn add --dev babel-plugin-transform-react-jsx
 # async
-RUN npm i -D babel-preset-es2017
+RUN yarn add --dev babel-preset-es2017
 # babelのreact用preset
-RUN npm i -D babel-preset-react
+RUN yarn add --dev babel-preset-react
 
 # webpack用typescript loader
-RUN npm i -D ts-loader
+RUN yarn add --dev ts-loader
 
 # jsViewライブラリreact
-RUN npm i -S react
-RUN npm i -S react-dom
+RUN yarn add  react
+RUN yarn add  react-dom
 
 # フレームワーク
-RUN npm i -S redux
-RUN npm i -S redux-actions
-RUN npm i -S redux-saga
-RUN npm i -S redux-logger
+RUN yarn add  redux
+RUN yarn add  redux-actions
+RUN yarn add  redux-saga
+RUN yarn add  redux-logger
 
-RUN npm i -S babel-polyfill
+RUN yarn add  babel-polyfill
 
 # バリデーション
-RUN npm i -S redux-form
-RUN npm i -S react-redux
+RUN yarn add  redux-form
+RUN yarn add  react-redux
 
 # 国際対応
-RUN npm i -S i18next
+RUN yarn add  i18next
 
 # ブラウザを識別して自動で国際対応
-RUN npm i -S i18next-browser-languagedetector
+RUN yarn add  i18next-browser-languagedetector
 
 # JSON-loader
-RUN npm i -D json-loader
-RUN npm i -D yaml-loader
+RUN yarn add --dev json-loader
+RUN yarn add --dev yaml-loader
 
 # ライブラリ追加
-RUN npm i -S lodash
-RUN npm i -S eventemitter3
-RUN npm i -S firebase
+RUN yarn add  lodash
+RUN yarn add  eventemitter3
+RUN yarn add  firebase
 
 # ルーティング
-RUN npm i -S react-router-redux@next
-RUN npm i -S history
-RUN npm i -S react-router-dom
-RUN npm i -S react-router
+RUN yarn add  react-router-redux@next
+RUN yarn add  history
+RUN yarn add  react-router-dom
+RUN yarn add  react-router
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tslint\": \"tslint -p 'tsconfig.json'\",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tsc\": \"tsc -p tsconfig.json \",/g" /app/package.json

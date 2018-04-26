@@ -1,4 +1,4 @@
-FROM node:9.11
+FROM node:9.11.1
 
 # コンテナ上の作業ディレクトリ作成
 WORKDIR /app
@@ -6,13 +6,13 @@ WORKDIR /app
 # 後で確認出来るようにpackage.jsonを作成
 RUN npm init -y
 
-RUN npm i -D pug
+RUN yarn add --dev pug
 
-RUN npm i -D pug-cli
+RUN yarn add --dev pug-cli
 
-RUN npm i -D chokidar
+RUN yarn add --dev chokidar
 
-RUN npm i -D chokidar-cli
+RUN yarn add --dev chokidar-cli
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"pug\": \"pug -o \/app\/dist -P \",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"build-pug\": \"pug -o \/app\/dist -P \/app\/src\/*.pug \",/g" /app/package.json
