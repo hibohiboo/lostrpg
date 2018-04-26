@@ -37,3 +37,13 @@ services:
     volumes:
       - ../dist/lost:/app/src
       - ../app/public/lost:/app/dist
+
+  elm-dev:
+    build: ./elm-dev
+    volumes:
+      - ./config/elm/webpack.config.js:/app/webpack.config.js
+      - ../src/elm:/app/src
+      - ../dist:/app/dist
+    ports:
+      - 3000:3000
+    command: [yarn, dev]

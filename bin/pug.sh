@@ -4,5 +4,5 @@
 bin_dir=$(cd $(dirname $0) && pwd)
 name=${1:-pug}
 
-# docker-composeの起動。 コンテナ内に入る. OAuth用に9005. サンプルアプリ用に5000ポートを開放。
+# docker-composeの起動。 
 cd $bin_dir/../docker && docker-compose run $name npm run build-pug
