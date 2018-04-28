@@ -56,6 +56,10 @@ module.exports = {
     port: 3000,
     // dockerのコンテナ上でサーバを動かすときは以下の設定で全ての接続を受け入れる
     host:"0.0.0.0",
+    contentBase: [
+      'assets',
+      'css'
+    ]
   },
   // vagrantの仕様でポーリングしないとファイルの変更を感知できない
   watchOptions: {
