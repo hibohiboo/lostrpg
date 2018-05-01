@@ -2,333 +2,201 @@ extends includes/common/_layout
 block title
   include includes/common/variables
   - var title = "チャート: LOST～廃墟の森の子供たち～"
+  - var bodyClass = "nohero"
   title= title
 block css
   link(href="../assets/css/styles.css" rel="stylesheet" )
 block headjs
 
 block body
-  body.nohero
-    header
-      include includes/common/header
-    main#main
-      section.content
-        .container
+  header
+    include includes/common/header
+  main#main
+    section.content
+      .container
 
-          h1 チャート
-          p 奇数・偶数とあるものは、d66の後に1d6を振って奇数偶数を決める。
+        h1 チャート
+        p 奇数・偶数とあるものは、d66の後に1d6を振って奇数偶数を決める。
 
-          h2#campname キャンプ名
-          p キャンプ名決定表A, Bと建物表を組み合わせてキャンプ名を決定します。
-          table.chart#table-campnameA
-            caption キャンプ名決定表A
-            thead
-              tr: th d66 #[th ジャンル] #[th 例] 
-            each name in campNameA
-              tr
-                td= name.d66
-                td= name.genre
-                td= name.exe
+        h2#campname キャンプ名
+        p キャンプ名決定表A, Bと建物表を組み合わせてキャンプ名を決定します。
+        table.chart#table-campnameA
+          caption キャンプ名決定表A
+          thead
+            tr: th d66 #[th ジャンル] #[th 例] 
+          each name in campNameA
+            tr
+              td= name.d66
+              td= name.genre
+              td= name.exe
 
-          table.chart#table-campnameB
-            caption キャンプ名決定表B
-            thead
-              tr: th d66 #[th 奇数] #[th 偶数] 
-            each name in campNameB
-              tr
-                td= name.d66
-                td= name.a
-                td= name.b
-            
-          table.chart#table-campnameC
-            caption 建物表
-            thead
-              tr: th d66 #[th 奇数] #[th 偶数] 
-            each name in campNameC
-              tr
-                td= name.d66
-                td= name.a
-                td= name.b
-
-          h2#name 名前
-          table.chart#table-name
-            caption 名前決定表
-            thead
-              tr: th d6 #[th 説明] 
-            each name in nameTable
-              tr
-                td= name.d6
-                td= name.a
-
-          table.chart#table-nickname
-            caption 一般愛称表
-            thead
-              tr: th d66 #[th 奇数] #[th 偶数] 
-            each item in nicknameList
-              tr
-                td= item.d66
-                td= item.a
-                td= item.b
-
-          table.chart#table-bigname
-            caption 有名人愛称表
-            thead
-              tr: th d66 #[th 奇数] #[th 偶数] 
-            each item in bignameList
-              tr
-                td= item.d66
-                td= item.a
-                td= item.b
-
-          table.chart#table-lastname
-            caption 名字表
-            thead
-              tr: th d66 #[th 奇数] #[th 偶数] 
-            each item in lastNameList
-              tr
-                td= item.d66
-                td= item.a
-                td= item.b
-
-          table.chart#table-firstname
-            caption 名前表
-            thead
-              tr: th d66 #[th 男性] #[th 女性] 
-            each item in firstNameList
-              tr
-                td= item.d66
-                td= item.a
-                td= item.b
-
-          table.chart#table-specialname
-            caption 特殊名前表
-            thead
-              tr: th d66 #[th ジャンル] #[th 例] 
-            each item in specialNameList
-              tr
-                td= item.d66
-                td= item.a
-                td= item.b
-
-          h2#table-camp キャンプ
-          table.responsive#camp-first
-            caption キャンプ初期設備表
-            thead
-              tr: th 名前 #[th タイプ] #[th 指定特技] #[th レベル] #[th 効果]
-            each facility in facilities
-              tr
-                td.txt-center= facility.name
-                td(data-title='タイプ')= facility.type
-                td(data-title='指定特技')= facility.specialty
-                td(data-title='レベル')= facility.level
-                td(data-title='効果')= facility.effect
-
-          table.responsive#camp-equipment_first
-            caption 追加設備決定表
-            thead
-              tr: th d6 #[th 名前] #[th タイプ] #[th 指定特技] #[th レベル] #[th 効果]
-            each facility in addFacilityList
-              tr
-                td.mobile-hidden=facility.d6
-                td(data-title=facility.d6).txt-center= facility.name
-                td(data-title='タイプ')= facility.type
-                td(data-title='指定特技')= facility.specialty
-                td(data-title='レベル')= facility.level
-                td(data-title='効果')= facility.effect
-
-          table.chart#walking
-            caption 散策表
-            thead
-              tr: th 2d6 #[th 結果] 
-            each item in walkingList
-              tr
-                td= item["2d6"]
-                td= item.a
-
-          table.responsive#camp-equipment
-            caption キャンプ施設表
-            thead
-              tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
-            each facility in equipmentList
-              tr
-                td.txt-center= facility.name
-                td(data-title='必要CP')= facility.cp
-                td(data-title='タイプ')= facility.type
-                td(data-title='指定特技')= facility.specialty
-                td(data-title='最大レベル')= facility.maxLv
-                td(data-title='前提')= facility.precondition
-                td(data-title='効果')= facility.effect
-
-          table.responsive#camp-personality
-            caption キャンプ人材表
-            thead
-              tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
-            each facility in campPersonalityList
-              tr
-                td.txt-center= facility.name
-                td(data-title='必要CP')= facility.cp
-                td(data-title='タイプ')= facility.type
-                td(data-title='指定特技')= facility.specialty
-                td(data-title='最大レベル')= facility.maxLv
-                td(data-title='前提')= facility.precondition
-                td(data-title='効果')= facility.effect
-
-          h2#table-item アイテム
-          table.responsive#item
-            caption アイテム一覧
-            thead
-              tr: th 名前 #[th 価格] #[th 重量] #[th タイプ]  #[th 部位] #[th 指定特技] #[th 対象] #[th 特性] #[th 効果]
-            each item in itemList
-              tr
-                td.txt-center= item.name
-                td(data-title='価格')= item.j
-                td(data-title='重量')= item.weight
-                td(data-title='タイプ')= item.type
-                td(data-title='部位')= item.area
-                td(data-title='指定特技')= item.specialty
-                td(data-title='対象')= item.target
-                td(data-title='特性')= item.trait
-                td(data-title='効果')= item.effect
+        table.chart#table-campnameB
+          caption キャンプ名決定表B
+          thead
+            tr: th d66 #[th 奇数] #[th 偶数] 
+          each name in campNameB
+            tr
+              td= name.d66
+              td= name.a
+              td= name.b
           
-          h2#table-ability アビリティ
-          each ability in abilityList
-            table(class="responsive", id='ability-'+ability.id)
-              caption= ability.name
-              thead
-                tr: th 名前  #[th グループ] #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
-              each item in ability.list
-                tr
-                  td.txt-center= item.name
-                  td(data-title='グループ')= item.group
-                  td(data-title='タイプ')= item.type
-                  td(data-title='反動')= item.recoil
-                  td(data-title='指定特技')= item.specialty
-                  td(data-title='対象')= item.target
-                  td(data-title='効果')= item.effect
-          
-          h2#table-exploration 探索フェイズ
-          
-          table.chart#table-randomencountA
-            caption ランダムエンカウント表A
-            thead
-              tr: th d6 #[th 説明] 
-            each name in randomEncountListA
-              tr
-                td= name.d6
-                td= name.a
+        table.chart#table-campnameC
+          caption 建物表
+          thead
+            tr: th d66 #[th 奇数] #[th 偶数] 
+          each name in campNameC
+            tr
+              td= name.d66
+              td= name.a
+              td= name.b
 
-          table.chart#table-randomencountB
-            caption ランダムエンカウント表B
-            thead
-              tr: th d6 #[th 説明] 
-            each name in randomEncountListB
-              tr
-                td= name.d6
-                td= name.a
+        h2#name 名前
+        table.chart#table-name
+          caption 名前決定表
+          thead
+            tr: th d6 #[th 説明] 
+          each name in nameTable
+            tr
+              td= name.d6
+              td= name.a
 
-          table.chart#table-explorer
-            caption 探索表
-            thead
-              tr: th 2d6 #[th 説明] 
-            each name in explorerList
-              tr
-                td= name["2d6"]
-                td= name.a
+        table.chart#table-nickname
+          caption 一般愛称表
+          thead
+            tr: th d66 #[th 奇数] #[th 偶数] 
+          each item in nicknameList
+            tr
+              td= item.d66
+              td= item.a
+              td= item.b
 
-          table.chart#table-rest
-            caption 休憩表
-            thead
-              tr: th 2d6 #[th 説明] 
-            each name in restList
-              tr
-                td= name["2d6"]
-                td= name.a
+        table.chart#table-bigname
+          caption 有名人愛称表
+          thead
+            tr: th d66 #[th 奇数] #[th 偶数] 
+          each item in bignameList
+            tr
+              td= item.d66
+              td= item.a
+              td= item.b
 
-          h2#table-battle 戦闘
-          table.chart#table-initiative
-            caption 先制判定指定特技表
-            thead
-              tr: th d6 #[th 説明] 
-            each name in initiativeList
-              tr
-                td= name.d6
-                td= name.a
+        table.chart#table-lastname
+          caption 名字表
+          thead
+            tr: th d66 #[th 奇数] #[th 偶数] 
+          each item in lastNameList
+            tr
+              td= item.d66
+              td= item.a
+              td= item.b
 
-          table.chart#table-hitarea
-            caption 身体部位決定表
-            thead
-              tr: th 2d6 #[th 説明] 
-            each name in hitareaList
-              tr
-                td= name["2d6"]
-                td= name.a
-          table.chart#special-attack
-            caption 命中判定スペシャル表
-            thead
-              tr: th d6 #[th 説明] 
-            each name in specialAttackList
-              tr
-                td= name.d6
-                td= name.a
+        table.chart#table-firstname
+          caption 名前表
+          thead
+            tr: th d66 #[th 男性] #[th 女性] 
+          each item in firstNameList
+            tr
+              td= item.d66
+              td= item.a
+              td= item.b
 
-          table.chart#fumble-attack
-            caption 命中判定ファンブル表
-            thead
-              tr: th d6 #[th 説明] 
-            each name in fumbleAttackList
-              tr
-                td= name.d6
-                td= name.a
+        table.chart#table-specialname
+          caption 特殊名前表
+          thead
+            tr: th d66 #[th ジャンル] #[th 例] 
+          each item in specialNameList
+            tr
+              td= item.d66
+              td= item.a
+              td= item.b
 
-          table.chart#fumble-dodge
-            caption 回避判定ファンブル表
-            thead
-              tr: th d6 #[th 説明] 
-            each name in fumbleDodgeList
-              tr
-                td= name.d6
-                td= name.a
-          h3#badstatus 変調一覧
-          dl
-            each status in badStatusList
-              dt= status.name
-                dd= status.effect
- 
-          h2#table-enemy エネミー
-          table.responsive#enemylist
-            caption エネミー
-            thead
-              tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
-            each enemy in enemyList
-              tr
-                td.txt-center= enemy.name
-                td(data-title='レベル')= enemy.lv
-                td(data-title='タイプ')= enemy.group
-                td(data-title='体力')= enemy.stamina
-                td(data-title='気力')= enemy.willpower
-                td(data-title='特技')= enemy.specialties
-                td(data-title='アビリティ')= enemy.abilities
-                td(data-title='ドロップ')= enemy.drop
-                td(data-title='解説')= enemy.comment
-          table.responsive#droplist
-            caption ドロップ
-            thead
-              tr: th 1d6 #[th ムシA] #[th  ムシB] #[th  ムシC] #[th ケモノA]  #[th ケモノB] 
-            each drop in dropList
-              tr
-                td.txt-center= drop.d6
-                td(data-title='ムシA')= drop.a
-                td(data-title='ムシB')= drop.b
-                td(data-title='ムシC')= drop.c
-                td(data-title='ケモノA')= drop.d
-                td(data-title='ケモノB')= drop.e
+        h2#table-camp キャンプ
+        table.responsive#camp-first
+          caption キャンプ初期設備表
+          thead
+            tr: th 名前 #[th タイプ] #[th 指定特技] #[th レベル] #[th 効果]
+          each facility in facilities
+            tr
+              td.txt-center= facility.name
+              td(data-title='タイプ')= facility.type
+              td(data-title='指定特技')= facility.specialty
+              td(data-title='レベル')= facility.level
+              td(data-title='効果')= facility.effect
 
-          h2#table-enemy-ability エネミーアビリティ
-          table(class="responsive", id='ability-enemy')
-            caption エネミーアビリティ
+        table.responsive#camp-equipment_first
+          caption 追加設備決定表
+          thead
+            tr: th d6 #[th 名前] #[th タイプ] #[th 指定特技] #[th レベル] #[th 効果]
+          each facility in addFacilityList
+            tr
+              td.mobile-hidden=facility.d6
+              td(data-title=facility.d6).txt-center= facility.name
+              td(data-title='タイプ')= facility.type
+              td(data-title='指定特技')= facility.specialty
+              td(data-title='レベル')= facility.level
+              td(data-title='効果')= facility.effect
+
+        table.chart#walking
+          caption 散策表
+          thead
+            tr: th 2d6 #[th 結果] 
+          each item in walkingList
+            tr
+              td= item["2d6"]
+              td= item.a
+
+        table.responsive#camp-equipment
+          caption キャンプ施設表
+          thead
+            tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
+          each facility in equipmentList
+            tr
+              td.txt-center= facility.name
+              td(data-title='必要CP')= facility.cp
+              td(data-title='タイプ')= facility.type
+              td(data-title='指定特技')= facility.specialty
+              td(data-title='最大レベル')= facility.maxLv
+              td(data-title='前提')= facility.precondition
+              td(data-title='効果')= facility.effect
+
+        table.responsive#camp-personality
+          caption キャンプ人材表
+          thead
+            tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
+          each facility in campPersonalityList
+            tr
+              td.txt-center= facility.name
+              td(data-title='必要CP')= facility.cp
+              td(data-title='タイプ')= facility.type
+              td(data-title='指定特技')= facility.specialty
+              td(data-title='最大レベル')= facility.maxLv
+              td(data-title='前提')= facility.precondition
+              td(data-title='効果')= facility.effect
+
+        h2#table-item アイテム
+        table.responsive#item
+          caption アイテム一覧
+          thead
+            tr: th 名前 #[th 価格] #[th 重量] #[th タイプ]  #[th 部位] #[th 指定特技] #[th 対象] #[th 特性] #[th 効果]
+          each item in itemList
+            tr
+              td.txt-center= item.name
+              td(data-title='価格')= item.j
+              td(data-title='重量')= item.weight
+              td(data-title='タイプ')= item.type
+              td(data-title='部位')= item.area
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='特性')= item.trait
+              td(data-title='効果')= item.effect
+        
+        h2#table-ability アビリティ
+        each ability in abilityList
+          table(class="responsive", id='ability-'+ability.id)
+            caption= ability.name
             thead
-              tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
-            each item in enemyAbilityList
+              tr: th 名前  #[th グループ] #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+            each item in ability.list
               tr
                 td.txt-center= item.name
                 td(data-title='グループ')= item.group
@@ -337,60 +205,192 @@ block body
                 td(data-title='指定特技')= item.specialty
                 td(data-title='対象')= item.target
                 td(data-title='効果')= item.effect
+        
+        h2#table-exploration 探索フェイズ
+        
+        table.chart#table-randomencountA
+          caption ランダムエンカウント表A
+          thead
+            tr: th d6 #[th 説明] 
+          each name in randomEncountListA
+            tr
+              td= name.d6
+              td= name.a
 
-          table(class="responsive", id='ability-mutation')
-            caption 突然変異表
-            thead
-              tr: th d6 * d3 #[th ムシ(1,2)]  #[th ケモノ(3,4)] #[th ミュータント(5,6)]
-            each item in mutationList
-              tr
-                td.txt-center= item.d6
-                td(data-title='ムシ(1,2)')= item.a
-                td(data-title='ケモノ(3,4)')= item.b
-                td(data-title='ミュータント(5,6)')= item.c
+        table.chart#table-randomencountB
+          caption ランダムエンカウント表B
+          thead
+            tr: th d6 #[th 説明] 
+          each name in randomEncountListB
+            tr
+              td= name.d6
+              td= name.a
 
-          h2#samplescenario サンプルシナリオ
-          table.chart#sample-table1
-            caption 都有公園探索表
-            thead
-              tr: th d6 #[th アイテム] #[th 説明] 
-            each name in sampleTableList1
-              tr
-                td= name.d6
-                td= name.a
-                td= name.b
-          table.chart#sample-table2
-            caption 都有公園探索失敗表
-            thead
-              tr: th d6 #[th イベント]
-            each name in sampleTableList2
-              tr
-                td= name.d6
-                td= name.a
-          table.chart#sample-table3
-            caption コンビニ探索表
-            thead
-              tr: th d6 #[th アイテム] #[th 説明] 
-            each name in sampleTableList3
-              tr
-                td= name.d6
-                td= name.a
-                td= name.b
-          table.chart#sample-table1
-            caption コンビニ探索表2-B
-            thead
-              tr: th d6 #[th アイテム] #[th 説明] 
-            each name in sampleTableList4
-              tr
-                td= name.d6
-                td= name.a
-                td= name.b
-          table.chart#sample-table5
-            caption コンビニ探索失敗表
-            thead
-              tr: th d6 #[th イベント]
-            each name in sampleTableList2
-              tr
-                td= name.d6
-                td= name.a
-    include includes/common/footer
+        table.chart#table-explorer
+          caption 探索表
+          thead
+            tr: th 2d6 #[th 説明] 
+          each name in explorerList
+            tr
+              td= name["2d6"]
+              td= name.a
+
+        table.chart#table-rest
+          caption 休憩表
+          thead
+            tr: th 2d6 #[th 説明] 
+          each name in restList
+            tr
+              td= name["2d6"]
+              td= name.a
+
+        h2#table-battle 戦闘
+        table.chart#table-initiative
+          caption 先制判定指定特技表
+          thead
+            tr: th d6 #[th 説明] 
+          each name in initiativeList
+            tr
+              td= name.d6
+              td= name.a
+
+        table.chart#table-hitarea
+          caption 身体部位決定表
+          thead
+            tr: th 2d6 #[th 説明] 
+          each name in hitareaList
+            tr
+              td= name["2d6"]
+              td= name.a
+        table.chart#special-attack
+          caption 命中判定スペシャル表
+          thead
+            tr: th d6 #[th 説明] 
+          each name in specialAttackList
+            tr
+              td= name.d6
+              td= name.a
+
+        table.chart#fumble-attack
+          caption 命中判定ファンブル表
+          thead
+            tr: th d6 #[th 説明] 
+          each name in fumbleAttackList
+            tr
+              td= name.d6
+              td= name.a
+
+        table.chart#fumble-dodge
+          caption 回避判定ファンブル表
+          thead
+            tr: th d6 #[th 説明] 
+          each name in fumbleDodgeList
+            tr
+              td= name.d6
+              td= name.a
+        h3#badstatus 変調一覧
+        dl
+          each status in badStatusList
+            dt= status.name
+              dd= status.effect
+
+        h2#table-enemy エネミー
+        table.responsive#enemylist
+          caption エネミー
+          thead
+            tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
+          each enemy in enemyList
+            tr
+              td.txt-center= enemy.name
+              td(data-title='レベル')= enemy.lv
+              td(data-title='タイプ')= enemy.group
+              td(data-title='体力')= enemy.stamina
+              td(data-title='気力')= enemy.willpower
+              td(data-title='特技')= enemy.specialties
+              td(data-title='アビリティ')= enemy.abilities
+              td(data-title='ドロップ')= enemy.drop
+              td(data-title='解説')= enemy.comment
+        table.responsive#droplist
+          caption ドロップ
+          thead
+            tr: th 1d6 #[th ムシA] #[th  ムシB] #[th  ムシC] #[th ケモノA]  #[th ケモノB] 
+          each drop in dropList
+            tr
+              td.txt-center= drop.d6
+              td(data-title='ムシA')= drop.a
+              td(data-title='ムシB')= drop.b
+              td(data-title='ムシC')= drop.c
+              td(data-title='ケモノA')= drop.d
+              td(data-title='ケモノB')= drop.e
+
+        h2#table-enemy-ability エネミーアビリティ
+        table(class="responsive", id='ability-enemy')
+          caption エネミーアビリティ
+          thead
+            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+          each item in enemyAbilityList
+            tr
+              td.txt-center= item.name
+              td(data-title='グループ')= item.group
+              td(data-title='タイプ')= item.type
+              td(data-title='反動')= item.recoil
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='効果')= item.effect
+
+        table(class="responsive", id='ability-mutation')
+          caption 突然変異表
+          thead
+            tr: th d6 * d3 #[th ムシ(1,2)]  #[th ケモノ(3,4)] #[th ミュータント(5,6)]
+          each item in mutationList
+            tr
+              td.txt-center= item.d6
+              td(data-title='ムシ(1,2)')= item.a
+              td(data-title='ケモノ(3,4)')= item.b
+              td(data-title='ミュータント(5,6)')= item.c
+
+        h2#samplescenario サンプルシナリオ
+        table.chart#sample-table1
+          caption 都有公園探索表
+          thead
+            tr: th d6 #[th アイテム] #[th 説明] 
+          each name in sampleTableList1
+            tr
+              td= name.d6
+              td= name.a
+              td= name.b
+        table.chart#sample-table2
+          caption 都有公園探索失敗表
+          thead
+            tr: th d6 #[th イベント]
+          each name in sampleTableList2
+            tr
+              td= name.d6
+              td= name.a
+        table.chart#sample-table3
+          caption コンビニ探索表
+          thead
+            tr: th d6 #[th アイテム] #[th 説明] 
+          each name in sampleTableList3
+            tr
+              td= name.d6
+              td= name.a
+              td= name.b
+        table.chart#sample-table1
+          caption コンビニ探索表2-B
+          thead
+            tr: th d6 #[th アイテム] #[th 説明] 
+          each name in sampleTableList4
+            tr
+              td= name.d6
+              td= name.a
+              td= name.b
+        table.chart#sample-table5
+          caption コンビニ探索失敗表
+          thead
+            tr: th d6 #[th イベント]
+          each name in sampleTableList2
+            tr
+              td= name.d6
+              td= name.a
+  include includes/common/footer

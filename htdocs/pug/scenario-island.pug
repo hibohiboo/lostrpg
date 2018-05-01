@@ -1,6 +1,7 @@
 extends includes/common/_layout
 block title
   include includes/scenario-island/variables
+  - var bodyClass = "nohero"
   title= title
 
 block css
@@ -8,13 +9,12 @@ block css
 block headjs
 
 block body
-  body.nohero
-    header
-      include includes/common/header
-    main#main
-      section.content
-        .container
-          h1 現代編シナリオ：サバイバルデイズ
-          include includes/scenario-island/main
+  header
+    include includes/common/header
+  main#main
+    section.content
+      .container
+        h1 現代編シナリオ：サバイバルデイズ
+        include includes/scenario-island/main
 
-    include includes/common/footer
+  include includes/common/footer

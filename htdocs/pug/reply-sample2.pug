@@ -1,6 +1,7 @@
 extends includes/common/_layout
 block title
   - var title = "リプレイ～嵐の濁流～: LOST～廃墟の森の子供たち～"
+  - var bodyClass = "nohero reply"
   title= title
 
 block css
@@ -8,13 +9,12 @@ block css
 block headjs
 
 block body
-  body.nohero.reply
-    header
-      include includes/common/header
-    section
-      .container
-        h1 LOST～廃墟の森の子供たち～リプレイ：嵐の濁流
-        p これは、サンプルシナリオ2を遊んだ風景のリプレイログです。作成中のデータのため、最新のデータと矛盾することがあります。
-        include includes/reply-sample2/main
+  header
+    include includes/common/header
+  section
+    .container
+      h1 LOST～廃墟の森の子供たち～リプレイ：嵐の濁流
+      p これは、サンプルシナリオ2を遊んだ風景のリプレイログです。作成中のデータのため、最新のデータと矛盾することがあります。
+      include includes/reply-sample2/main
 
-    include includes/common/footer
+  include includes/common/footer

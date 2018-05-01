@@ -18,11 +18,13 @@ html(lang="ja")
     //- 大文字のLOSTのみのフォントをダウンロード
     link(href="https://fonts.googleapis.com/css?family=Montserrat&text=LOSTRPG" rel="stylesheet")
     block css
+    include google-tag-head
     block headjs
-  block body
-  //- jsを最後に持ってくることによりページの表示を早める
-  //- IE9以降に対応
-  script(src="https://code.jquery.com/jquery-3.2.1.min.js")
-  //- トグルボタンでナビゲーションメニューを開閉するスクリプト
-  script $(()=>{$(".headC").click(()=>$(".headB").slideToggle("fast"))})
-  block footjs
+  body(class=bodyClass)
+    block body
+    //- jsを最後に持ってくることによりページの表示を早める
+    //- IE9以降に対応
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+    //- トグルボタンでナビゲーションメニューを開閉するスクリプト
+    script $(()=>{$(".headC").click(()=>$(".headB").slideToggle("fast"))})
+    block footjs

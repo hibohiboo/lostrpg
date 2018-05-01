@@ -1,6 +1,7 @@
 extends includes/common/_layout
 block title
   - var title = "目次: LOST～廃墟の森の子供たち～"
+  - var bodyClass = "nohero"
   title= title
 
 block css
@@ -8,88 +9,87 @@ block css
 block headjs
 
 block body
-  body.nohero
-    header
-      include includes/common/header
-    main#main
-      section.content
-        .container
-          h1 目次
-          .contents
-            ul
-              li: a(target="_blank" href="https://ancientscars.wordpress.com/project-1-lost-trpg/")  English
+  header
+    include includes/common/header
+  main#main
+    section.content
+      .container
+        h1 目次
+        .contents
+          ul
+            li: a(target="_blank" href="https://ancientscars.wordpress.com/project-1-lost-trpg/")  English
 
-            ul
-              li: a(href="rulebook.html#first")  はじめに
-              li: a(href="rulebook.html#world")  ワールド
-              li: a(href="rulebook.html#camp")  キャンプ
-              li
-                a(href="rulebook.html#charcter") キャラクター  
-                ul#sub_charcter
-                  li: a(href="rulebook.html#decide-class")  クラス
-                  li: a(href="rulebook.html#decide-skill")  特技
-                  li: a(href="rulebook.html#decide-ability")  アビリティ
-                  li: a(href="rulebook.html#decide-HP")  体力
-                  li: a(href="rulebook.html#decide-MP")  気力
-                  li: a(href="rulebook.html#decide-limitedweight")  所持限界
-                  li: a(href="rulebook.html#decide-item")  アイテム
-              li
-                a(href="rulebook.html#check") 行為判定
-                ul#sub_challenge
-                  li: a(href="rulebook.html#check-flow")  行為判定の流れ
-                  li: a(href="rulebook.html#check-adjusting")  修正
-                  li: a(href="rulebook.html#check-special")  スペシャルとファンブル
-                  li: a(href="rulebook.html#check-gm-counter")  つっこみ
-                  li: a(href="rulebook.html#check-pl-proposal")  プレイヤーの提案
-              li: a(href="rulebook.html#session")  セッション
-              li: a(href="rulebook.html#cycle")  サイクル
-              li: a(href="rulebook.html#campF")  キャンプフェイズ
-              li: a(href="rulebook.html#exploration")  探索フェイズ
-              li
-                a(href="rulebook.html#battle") 戦闘
-                ul#sub_battle
-                  li: a(href="rulebook.html#battle-round")  ラウンドの流れ
-                  li: a(href="rulebook.html#battle-initiative")  先制判定
-                  li: a(href="rulebook.html#battle-action")  戦闘中の行動
-                  li: a(href="rulebook.html#battle-damage")  ダメージと死亡
-                  li: a(href="rulebook.html#battle-enemy")  敵の行動
-                  li: a(href="rulebook.html#battle-dodge")  回避判定
-                  li: a(href="rulebook.html#battle-secondaction")  追加行動
-                  li: a(href="rulebook.html#battle-special")  スペシャルとファンブル
-              li: a(href="rulebook.html#badstatus")  変調
-              li: a(href="rulebook.html#lastbattle")  決戦フェイズ
-              li: a(href="rulebook.html#ending")  結果フェイズ
-              li: a(href="rulebook.html#afterplay")  セッション終了
-              li: a(href="rulebook.html#improve")  キャラクターの成長
-              li: a(href="rulebook.html#make-boss")  ＜ヌシ＞の作成
-              li: a(href="rulebook.html#FAQ")  FAQ
-              li: a(href="rulebook.html#sankou")  参考作品
-              li
-                a(href="rulebook.html#sample-scenario")  サンプルシナリオ
-                ul
-                  li: a(target="_parent" href="reply-sample1.html")  リプレイ
-              li
-                a(href="rulebook.html#sample-scenario2")  サンプルシナリオ2
-                ul
-                  li: a(target="_parent" href="reply-sample1.html")  リプレイ2
-              li: a(href="scenario-island.html")  現代編：無人島シナリオ
-              li
-                a(href="chart.html")  チャート
-                ul#sub_char
-                  li: a(href="chart.html#name")  名前
-                  li: a(href="chart.html#table-camp")  キャンプ
-                  li: a(href="chart.html#table-item")  アイテム
-                  li: a(href="chart.html#table-skill")  特技
-                  li: a(href="chart.html#table-ability")  アビリティ
-                  li: a(href="chart.html#table-exploration")  探索フェイズ
-                  li: a(href="chart.html#table-battle")  戦闘
-                  li: a(href="chart.html#table-enemy")  エネミー
+          ul
+            li: a(href="rulebook.html#first")  はじめに
+            li: a(href="rulebook.html#world")  ワールド
+            li: a(href="rulebook.html#camp")  キャンプ
+            li
+              a(href="rulebook.html#charcter") キャラクター  
+              ul#sub_charcter
+                li: a(href="rulebook.html#decide-class")  クラス
+                li: a(href="rulebook.html#decide-skill")  特技
+                li: a(href="rulebook.html#decide-ability")  アビリティ
+                li: a(href="rulebook.html#decide-HP")  体力
+                li: a(href="rulebook.html#decide-MP")  気力
+                li: a(href="rulebook.html#decide-limitedweight")  所持限界
+                li: a(href="rulebook.html#decide-item")  アイテム
+            li
+              a(href="rulebook.html#check") 行為判定
+              ul#sub_challenge
+                li: a(href="rulebook.html#check-flow")  行為判定の流れ
+                li: a(href="rulebook.html#check-adjusting")  修正
+                li: a(href="rulebook.html#check-special")  スペシャルとファンブル
+                li: a(href="rulebook.html#check-gm-counter")  つっこみ
+                li: a(href="rulebook.html#check-pl-proposal")  プレイヤーの提案
+            li: a(href="rulebook.html#session")  セッション
+            li: a(href="rulebook.html#cycle")  サイクル
+            li: a(href="rulebook.html#campF")  キャンプフェイズ
+            li: a(href="rulebook.html#exploration")  探索フェイズ
+            li
+              a(href="rulebook.html#battle") 戦闘
+              ul#sub_battle
+                li: a(href="rulebook.html#battle-round")  ラウンドの流れ
+                li: a(href="rulebook.html#battle-initiative")  先制判定
+                li: a(href="rulebook.html#battle-action")  戦闘中の行動
+                li: a(href="rulebook.html#battle-damage")  ダメージと死亡
+                li: a(href="rulebook.html#battle-enemy")  敵の行動
+                li: a(href="rulebook.html#battle-dodge")  回避判定
+                li: a(href="rulebook.html#battle-secondaction")  追加行動
+                li: a(href="rulebook.html#battle-special")  スペシャルとファンブル
+            li: a(href="rulebook.html#badstatus")  変調
+            li: a(href="rulebook.html#lastbattle")  決戦フェイズ
+            li: a(href="rulebook.html#ending")  結果フェイズ
+            li: a(href="rulebook.html#afterplay")  セッション終了
+            li: a(href="rulebook.html#improve")  キャラクターの成長
+            li: a(href="rulebook.html#make-boss")  ＜ヌシ＞の作成
+            li: a(href="rulebook.html#FAQ")  FAQ
+            li: a(href="rulebook.html#sankou")  参考作品
+            li
+              a(href="rulebook.html#sample-scenario")  サンプルシナリオ
+              ul
+                li: a(target="_parent" href="reply-sample1.html")  リプレイ
+            li
+              a(href="rulebook.html#sample-scenario2")  サンプルシナリオ2
+              ul
+                li: a(target="_parent" href="reply-sample1.html")  リプレイ2
+            li: a(href="scenario-island.html")  現代編：無人島シナリオ
+            li
+              a(href="chart.html")  チャート
+              ul#sub_char
+                li: a(href="chart.html#name")  名前
+                li: a(href="chart.html#table-camp")  キャンプ
+                li: a(href="chart.html#table-item")  アイテム
+                li: a(href="chart.html#table-skill")  特技
+                li: a(href="chart.html#table-ability")  アビリティ
+                li: a(href="chart.html#table-exploration")  探索フェイズ
+                li: a(href="chart.html#table-battle")  戦闘
+                li: a(href="chart.html#table-enemy")  エネミー
 
-              li: a(target="_parent" href="chart.html")  チャート
-              li: a(target="_parent" href="../assets/data/sheet.pdf")  キャラシートPDF
-              li: a(href="supplement-strange-fields.html")  サプリメント：終末列島百景
+            li: a(target="_parent" href="chart.html")  チャート
+            li: a(target="_parent" href="../assets/data/sheet.pdf")  キャラシートPDF
+            li: a(href="supplement-strange-fields.html")  サプリメント：終末列島百景
 
-              li: a(href="history.html")  更新履歴
-              li: a(target="_blank" href="http://www.nicovideo.jp/watch/sm22594742")  ニコニコ動画：卓M@sリプレイ
+            li: a(href="history.html")  更新履歴
+            li: a(target="_blank" href="http://www.nicovideo.jp/watch/sm22594742")  ニコニコ動画：卓M@sリプレイ
 
-    include includes/common/footer
+  include includes/common/footer

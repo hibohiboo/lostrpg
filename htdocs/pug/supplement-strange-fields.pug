@@ -3,6 +3,7 @@ extends includes/common/_layout
 block title
   include includes/common/variables
   include includes/supplement-strange-fields/variables
+  - var bodyClass = "nohero"
   title= title
 
 block css
@@ -10,22 +11,21 @@ block css
 block headjs
 
 block body
-  body.nohero
-    header
-      include includes/common/header
-    main#main
-      section.content
-        .container
-          include includes/rulebook/bread
-          h1 LOSTRPG サプリメント Strange Fields  終末列島百景
-          p 世界の変貌は止まらない
-          h2 広がる世界
-          p LOSTTRPGサプリメント「Strange Fields  終末列島百景」はLOSTRPGの追加データ集です。
-          p  PLの同意の上で、GMはサプリメントのデータおよびルールを使用してもかまいません。
-          include includes/supplement-strange-fields/contents
-          include includes/supplement-strange-fields/scenario-craft
-          include includes/supplement-strange-fields/add-rules
-          include includes/supplement-strange-fields/add-data
-          include includes/supplement-strange-fields/faq
+  header
+    include includes/common/header
+  main#main
+    section.content
+      .container
+        include includes/rulebook/bread
+        h1 LOSTRPG サプリメント Strange Fields  終末列島百景
+        p 世界の変貌は止まらない
+        h2 広がる世界
+        p LOSTTRPGサプリメント「Strange Fields  終末列島百景」はLOSTRPGの追加データ集です。
+        p  PLの同意の上で、GMはサプリメントのデータおよびルールを使用してもかまいません。
+        include includes/supplement-strange-fields/contents
+        include includes/supplement-strange-fields/scenario-craft
+        include includes/supplement-strange-fields/add-rules
+        include includes/supplement-strange-fields/add-data
+        include includes/supplement-strange-fields/faq
 
-    include includes/common/footer
+  include includes/common/footer

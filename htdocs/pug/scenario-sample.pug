@@ -2,6 +2,7 @@ extends includes/common/_layout
 block title
   include includes/common/variables
   include includes/rulebook/variables
+  - var bodyClass = "nohero"
   title= title
 
 block css
@@ -9,14 +10,13 @@ block css
 block headjs
 
 block body
-  body.nohero
-    header
-      include includes/common/header
-    main#main
-      section.content
-        .container
-          h1 サンプルシナリオ
-          include includes/scenario-sample/sample1
-          include includes/scenario-sample/sample2
+  header
+    include includes/common/header
+  main#main
+    section.content
+      .container
+        h1 サンプルシナリオ
+        include includes/scenario-sample/sample1
+        include includes/scenario-sample/sample2
 
-    include includes/common/footer
+  include includes/common/footer
