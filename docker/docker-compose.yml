@@ -47,3 +47,15 @@ services:
     ports:
       - 3000:3000
     command: [yarn, dev]
+
+  # s2sビルドツール
+  s2s:
+    build: ./s2s
+    volumes:
+      - ./config/s2s/.babelrc:/app/.babelrc
+      - ./config/s2s/tsconfig.json:/app/tsconfig.json
+      - ./config/s2s/tslint.json:/app/tslint.json
+      - ./config/s2s/jest.config.js:/app/jest.config.js
+      - ./config/s2s/webpack.config.babel.js:/app/webpack.config.babel.js
+      - ../src/s2s/src:/app/src
+      - ../src/s2s/packages:/app/dist

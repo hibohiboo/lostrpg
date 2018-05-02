@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`s2s-elm-resources index.tsが作成されて、内容が正しいこと: index.tsが作成されて、内容が正しいこと 1`] = `
+"
+empty
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+export * from \\"../../__fixtures__/src/actions/coin\\";
+"
+`;
