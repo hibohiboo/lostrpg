@@ -20,7 +20,7 @@ export const addMessage = functions.https.onRequest((req, res) => {
                          .push({original: original})
                          .then((snapshot) => {
     // Redirect with 303 SEE OTHER to the URL of the pushed object in the Firebase console.
-    const result = ():void => res.redirect(303, snapshot.ref);
+    const result = () => res.redirect(303, snapshot.ref);
     return result;
   });
 });
