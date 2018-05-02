@@ -5,9 +5,13 @@ services:
     build: ./firebase
     env_file: .env
     volumes:
-      - ../app/react/public:/app/public
+      - ../app/public:/app/public
       - ../app/.firebaserc:/app/.firebaserc
       - ../app/firebase.json:/app/firebase.json
+      # function
+      - ../src/firebase-functions/functions/src:/app/functions/src
+      - ../src/firebase-functions/functions/tsconfig.json:/app/functions/tsconfig.json
+      - ../src/firebase-functions/functions/tslint.json:/app/functions/tslint.json      
     ports:
       - 5000:5000
       - 9005:9005
