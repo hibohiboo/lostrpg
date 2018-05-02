@@ -23,11 +23,6 @@ export default {
       { test: /\.ts$/, exclude: /node_modules/, loader: ["babel-loader", "ts-loader"] },
       { test: /\.js$/, exclude: /node_modules/, loader: ["babel-loader"] },
     ]
-  },
-  // プラグイン設定
-  plugins: [
-    new webpack.LoaderOptionsPlugin({
-      minimize: true,
-    }),
+  }
   ]
 };

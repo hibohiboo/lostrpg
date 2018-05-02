@@ -13,7 +13,6 @@ export default (babel: PluginArgs): PluginObj => {
 
   return {
     name: 's2s-elm-resources',
-    inherits: syntaxTypeScript,
     visitor: {
       Program: {
         exit(path: NodePath<Program>, state) {

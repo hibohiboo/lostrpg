@@ -19,7 +19,6 @@ RUN yarn add ts-jest
 # ビルドツール
 RUN yarn add --dev webpack
 RUN yarn add --dev webpack-cli
-RUN yarn add --dev babel-loader
 RUN yarn add --dev ts-loader
 
 # typescript
@@ -33,27 +32,29 @@ RUN yarn add --dev tslint-config-airbnb
 RUN yarn add --dev typedoc 
 
 # es6用トランスパイラ
-RUN yarn add --dev babel-cli@next
-RUN yarn add --dev babel-preset-env@next
-RUN yarn add --dev babel-plugin-transform-react-jsx@next
+RUN yarn add --dev @babel/cli
+RUN yarn add --dev @babel/preset-env
+RUN yarn add --dev @babel/plugin-transform-react-jsx
 
 # babel7をインストール
-RUN yarn add babel-core@next
-RUN yarn add babel-types@next
-RUN yarn add babel-traverse@next
+RUN yarn add @babel/core
+RUN yarn add @babel/types
+RUN yarn add @babel/traverse
+
+# babelのreact用preset
+RUN yarn add --dev @babel/preset-react
+
+# babelのtypescript用preset
+RUN yarn add --dev @babel/plugin-syntax-typescript
 
 # babelテスター
 RUN yarn add babel-plugin-tester
-
-# babelのreact用preset
-RUN yarn add --dev babel-preset-react@next
-
-# babelのtypescript用preset
-RUN yarn add --dev babel-plugin-syntax-typescript@next
-
+RUN yarn add --dev babel-loader@next
 # s2s
 RUN yarn add --dev s2s-utils
 
+# babel7がbetaなので、間をつなぐものが必要
+RUN yarn add --dev babel-core@7.0.0-bridge.0
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tslint\": \"tslint -p 'tsconfig.json'\",/g" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"tsc\": \"tsc -p tsconfig.json \",/g" /app/package.json

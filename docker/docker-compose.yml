@@ -49,8 +49,8 @@ services:
     command: [yarn, dev]
 
   # s2sビルドツール
-  s2s:
-    build: ./s2s
+  s2s_build:
+    build: ./s2s_build
     volumes:
       - ./config/s2s/.babelrc:/app/.babelrc
       - ./config/s2s/tsconfig.json:/app/tsconfig.json

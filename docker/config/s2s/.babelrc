@@ -1,11 +1,5 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "node": ["6.14"]
-      }
-    }]
-  ],
-  "plugins": [
+    ["@babel/preset-env", {"modules": false}]
   ]
 }
