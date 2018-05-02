@@ -40,6 +40,5 @@ characterRow character =
     tr []
         [ td [] [ text character.id ]
         , td [] [ text character.name ]
-        , td []
-            []
+        , td [] []
         ]

@@ -1,15 +1,17 @@
 module View exposing (..)
 
 import Html exposing (Html, div, text)
-import Html.Attributes exposing (class, href)
+import Messages exposing (Msg(..))
 import Models exposing (Model)
-import Msgs exposing (Msg)
+import Characters.List
 
--- ビュー
+
 view : Model -> Html Msg
 view model =
-    div [class "container"]
-      [ 
-        div[class "main"]
-          [text model]
-      ]
+    div []
+        [ page model ]
+
+
+page : Model -> Html Msg
+page model =
+    Html.map CharactersMsg (Characters.List.view model.characters)

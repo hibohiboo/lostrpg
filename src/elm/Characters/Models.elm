@@ -10,8 +10,8 @@ type alias Character =
   }
 
 new : Character
-  new = 
-    {
-      id = "0"
-    , name = ""
-    }
+new = 
+  {
+    id = "0"
+  , name = ""
+  }

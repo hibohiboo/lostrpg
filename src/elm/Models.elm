@@ -1,5 +1,14 @@
 module Models exposing (..)
 
--- モデル
+import Characters.Models exposing (Character)
+
+
 type alias Model =
-    String
+    { characters : List Character
+    }
+
+
+initialModel : Model
+initialModel =
+    { characters = [ Character "1" "Sam" ]
+    }
