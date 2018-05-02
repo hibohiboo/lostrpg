@@ -5,7 +5,7 @@ services:
     build: ./firebase
     env_file: .env
     volumes:
-      - ../app/public:/app/public
+      - ../app/react/public:/app/public
       - ../app/.firebaserc:/app/.firebaserc
       - ../app/firebase.json:/app/firebase.json
     ports:
