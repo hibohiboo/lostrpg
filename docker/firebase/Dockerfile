@@ -19,5 +19,5 @@ RUN yarn add firebase-admin@latest
 
 COPY ./functions /app/functions
 RUN cd /app/functions && npm install
-
+RUN cd /app/functions && npm install -S lodash
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"firebase\": \"firebase\", /g" /app/package.json

@@ -2,7 +2,7 @@
 import * as functions from 'firebase-functions'; 
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 import * as admin from 'firebase-admin';
-
+import {formatCharacters} from './characters';
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 //
@@ -11,6 +11,13 @@ import * as admin from 'firebase-admin';
 // });
 
 admin.initializeApp(functions.config().firebase);
+
+const resSend = (res, sendObject) => {
+  res.header('Content-Type','application/json');
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.send(sendObject);
+}
 
 export const addMessage = functions.https.onRequest((req, res) => {
   // Grab the text parameter.
@@ -43,8 +50,10 @@ export const fetchCharacers =
     const ref = admin.database().ref('/character');
 
     const snapshot = await ref.once('value');
-    const value = snapshot.val();
-    res.send(value);
+    const characters = snapshot.val();
+    const characterList = formatCharacters(characters);
+
+    resSend(res, characterList);
   });
 export const addCharacter = functions.https.onRequest(async (req, res) => {
     // Grab the text parameter.
