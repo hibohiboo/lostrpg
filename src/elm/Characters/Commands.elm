@@ -15,7 +15,7 @@ fetchAll =
 
 fetchAllUrl : String
 fetchAllUrl =
-    "http://192.168.50.10:4000/characters"
+    "https://us-central1-lostrpg-751c1.cloudfunctions.net/fetchCharacters"
 
 
 saveUrl : CharacterId -> String

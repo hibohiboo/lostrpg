@@ -20,8 +20,7 @@ export const addMessage = functions.https.onRequest((req, res) => {
                          .push({original: original})
                          .then((snapshot) => {
     // Redirect with 303 SEE OTHER to the URL of the pushed object in the Firebase console.
-    const result = () => res.redirect(303, snapshot.ref);
-    return result;
+    res.redirect(303, snapshot.ref);
   });
 });
 
@@ -38,3 +37,20 @@ export const makeUppercase =
   // Setting an "uppercase" sibling in the Realtime Database returns a Promise.
   return event.ref.parent.child('uppercase').set(uppercase);
 });
+
+export const fetchCharacers =
+  functions.https.onRequest(async (req, res) => {
+    const ref = admin.database().ref('/character');
+
+    const snapshot = await ref.once('value');
+    const value = snapshot.val();
+    res.send(value);
+  });
+export const addCharacter = functions.https.onRequest(async (req, res) => {
+    // Grab the text parameter.
+    const name = req.query.name;
+    // Push the new message into the Realtime Database using the Firebase Admin SDK.
+    const ref = admin.database().ref('/character');
+    const snapshot = await ref.push({name});
+    res.redirect(303, snapshot.ref);
+  });

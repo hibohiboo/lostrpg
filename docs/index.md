@@ -4,9 +4,9 @@
 
 ## api
 
-メッセージを追加
+キャラクターを追加
 
-https://us-central1-lostrpg-751c1.cloudfunctions.net/addMessage?text=uppercasemetoo
+https://us-central1-lostrpg-751c1.cloudfunctions.net/addCharacter?name=testCharacter
 
 ## 参考
 
