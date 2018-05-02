@@ -1,5 +1,7 @@
 # LOSTRPG支援ツール
 
+[7がbeta時の模索](https://github.com/hibohiboo/lostrpg/tree/85afdb0a07fa7d4f38a2be0d293cd90bfd7cd8ea)
+
 ## 参考
 
 [React + ReduxのプロジェクトでRedux Formを使ったので使い方のまとめと注意点][*1]
