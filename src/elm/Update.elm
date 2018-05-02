@@ -3,7 +3,7 @@ module Update exposing (..)
 import Messages exposing (Msg(..))
 import Models exposing (Model)
 import Characters.Update
-
+import Routing exposing (parseLocation)
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
@@ -14,3 +14,9 @@ update msg model =
                     Characters.Update.update subMsg model.characters
             in
                 ( { model | characters = updatedCharacters }, Cmd.map CharactersMsg cmd )
+        OnLocationChange location ->
+            let
+                newRoute =
+                    parseLocation location
+            in
+                ( { model | route = newRoute }, Cmd.none )

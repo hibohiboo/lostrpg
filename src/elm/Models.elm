@@ -1,14 +1,17 @@
 module Models exposing (..)
 
 import Characters.Models exposing (Character)
+import Routing
 
 
 type alias Model =
     { characters : List Character
+    , route : Routing.Route
     }
 
 
-initialModel : Model
-initialModel =
-    { characters = [ Character "1" "Sam" ]
+initialModel : Routing.Route -> Model
+initialModel route =
+    { characters = []
+    , route = route
     }

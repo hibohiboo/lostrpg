@@ -4,6 +4,7 @@ import Html exposing (..)
 import Html.Attributes exposing (class)
 import Characters.Messages exposing (..)
 import Characters.Models exposing (Character)
+import Html.Events exposing (onClick)
 
 view : List Character -> Html Msg
 view characters =
@@ -11,6 +12,7 @@ view characters =
         [ nav characters
         , list characters
         ]
+
 
 nav : List Character -> Html Msg
 nav characters =
@@ -34,11 +36,20 @@ list characters =
             ]
         ]
 
-
 characterRow : Character -> Html Msg
 characterRow character =
     tr []
-        [ td [] [ text character.id ]
+        [ td [] [ text (toString character.id) ]
         , td [] [ text character.name ]
-        , td [] []
+        , td [] [ text (toString character.level) ]
+        , td []
+            [ editBtn character ]
         ]
+
+editBtn : Character -> Html Msg
+editBtn character =
+    button
+        [ class "btn regular"
+        , onClick (ShowCharacter character.id)
+        ]
+        [ i [ class "fa fa-pencil mr1" ] [], text "Edit" ]
