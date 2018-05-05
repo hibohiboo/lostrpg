@@ -1,13 +1,10 @@
 import * as _ from 'lodash';
+import Character from './models/Character';
 
-class Character {
-  constructor(
-    public id: string,
-    public name: string,
-    public level: number = 1,
-//      public uid: string,
-  ) {}
-}
+/**
+ * データベースのデータをクラスのインスタンスに整形して返す
+ * @param characters 
+ */
 export const formatCharacters = (characters): Character[] => {
     const characterList: Character[] = _.map(characters, (char: Character, key: string) => {
       return new Character(key, char.name, char.level);

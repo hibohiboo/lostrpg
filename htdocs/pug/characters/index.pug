@@ -1,0 +1,20 @@
+extends ../includes/common/_layout
+block title
+  - var title = "LOST～廃墟の森の子供たち～"
+  - var bodyClass = "nohero"
+  title= title
+
+block css
+  link(href="../../assets/css/styles.css" rel="stylesheet" )
+  script(src="../../assets/js/characters/characters.js")
+block headjs
+
+block body
+  header
+    include ../includes/common/header
+  main
+    section.content
+      .container
+        div#main
+
+  include ../includes/common/footer

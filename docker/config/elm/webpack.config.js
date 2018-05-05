@@ -5,7 +5,7 @@ const env = process.env.NODE_ENV;
 module.exports = {
   mode: env || `development`,
   entry: {
-    app: [
+    characters: [
       './src/index.js'
     ]
   },

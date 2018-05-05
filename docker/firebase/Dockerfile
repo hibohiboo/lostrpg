@@ -2,7 +2,6 @@
 # firebase cloud function はv6.11.5で動作
 FROM node:6.11.5
 
-
 # コンテナ上の作業ディレクトリ作成
 WORKDIR /app
 

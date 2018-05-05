@@ -3,14 +3,17 @@ import * as functions from 'firebase-functions';
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 import * as admin from 'firebase-admin';
 import {formatCharacters} from './characters';
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+// 環境変数取得
+const path = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+const serviceAccount = require(path);
 
-admin.initializeApp(functions.config().firebase);
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://lostrpg-751c1.firebaseio.com'
+});
+
+// 本番環境用
+// admin.initializeApp(functions.config().firebase);
 
 const resSend = (res, sendObject) => {
   res.header('Content-Type','application/json');
