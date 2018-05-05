@@ -12,8 +12,16 @@ import Routing exposing (Route(..))
 view : Model -> Html Msg
 view model =
     div []
-        [ page model ]
+        [ 
+          pageHead model ,
+          page model
+        ]
 
+pageHead : Model -> Html Msg
+pageHead model = 
+    div []
+        [ text ("ログイン" ++ model.test)
+        ]
 
 page : Model -> Html Msg
 page model =

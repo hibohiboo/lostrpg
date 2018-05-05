@@ -44,6 +44,7 @@ RUN yarn elm package install evancz/url-parser -y
 RUN yarn elm package install NoRedInk/elm-decode-pipeline -y
 RUN yarn elm package install krisajenkins/remotedata -y
 
+
 # "source-directories": [ "src" ], に変更
 RUN sed -i -e "s/\".\"/\"src\"/" /app/elm-package.json
 
@@ -58,3 +59,15 @@ RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"dev\": \"webpack-dev-server --port
 # https://medium.com/webpack/webpack-4-migration-guide-for-plugins-loaders-20a79b927202
 # deprecateなthis.optionsをthis.queryに置き換え。
 RUN sed -i -e "s/this\.options/this\.query/g" /app/node_modules/elm-webpack-loader/index.js
+
+# typescript
+RUN yarn add --dev typescript
+
+# tslint
+RUN yarn add --dev tslint
+RUN yarn add --dev tslint-config-airbnb
+
+# webpack用typescript loader
+RUN yarn add --dev ts-loader
+
+RUN yarn add  firebase

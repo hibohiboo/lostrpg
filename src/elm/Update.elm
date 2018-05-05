@@ -20,3 +20,4 @@ update msg model =
                     parseLocation location
             in
                 ( { model | route = newRoute }, Cmd.none )
+        GetHello hello -> ( { model | test = hello }, Cmd.none )
