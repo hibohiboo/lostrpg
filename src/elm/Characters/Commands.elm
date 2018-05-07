@@ -1,10 +1,10 @@
 module Characters.Commands exposing (..)
 
+import Characters.Messages exposing (..)
+import Characters.Models exposing (Character, CharacterId)
 import Http
 import Json.Decode as Decode exposing (field)
 import Json.Encode as Encode
-import Characters.Messages exposing (..)
-import Characters.Models exposing (CharacterId, Character)
 
 
 fetchAll : Cmd Msg
@@ -68,5 +68,5 @@ memberEncoded character =
             , ( "level", Encode.int character.level )
             ]
     in
-        list
-            |> Encode.object
+    list
+        |> Encode.object

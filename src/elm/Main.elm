@@ -1,11 +1,12 @@
 module Main exposing (..)
 
-import Navigation exposing (Location)
+import App exposing (init, subscriptions)
 import Messages exposing (Msg(..))
 import Models exposing (Model, initialModel)
-import App exposing (init, subscriptions)
+import Navigation exposing (Location)
 import Update exposing (update)
 import View exposing (view)
+
 
 main : Program Never Model Msg
 main =
@@ -15,4 +16,3 @@ main =
         , update = update
         , subscriptions = subscriptions
         }
-

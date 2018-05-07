@@ -1,8 +1,8 @@
 module Characters.Update exposing (..)
 
+import Characters.Commands exposing (save)
 import Characters.Messages exposing (Msg(..))
 import Characters.Models exposing (Character, CharacterId)
-import Characters.Commands exposing (save)
 import Navigation
 
 
@@ -15,7 +15,7 @@ changeLevelCommands characterId howMuch characters =
             else
                 Cmd.none
     in
-        List.map cmdForCharacter characters
+    List.map cmdForCharacter characters
 
 
 updateCharacter : Character -> List Character -> List Character
@@ -27,7 +27,7 @@ updateCharacter updatedCharacter characters =
             else
                 existingCharacter
     in
-        List.map select characters
+    List.map select characters
 
 
 update : Msg -> List Character -> ( List Character, Cmd Msg )

@@ -1,7 +1,7 @@
 module Messages exposing (..)
 
-import Navigation exposing (Location)
 import Characters.Messages
+import Navigation exposing (Location)
 
 
 type Msg

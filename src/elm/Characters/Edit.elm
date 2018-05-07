@@ -1,10 +1,11 @@
 module Characters.Edit exposing (..)
 
-import Html exposing (..)
-import Html.Attributes exposing (class, value, href)
 import Characters.Messages exposing (..)
 import Characters.Models exposing (..)
+import Html exposing (..)
+import Html.Attributes exposing (class, href, value)
 import Html.Events exposing (onClick)
+
 
 view : Character -> Html Msg
 view model =
@@ -52,6 +53,7 @@ btnLevelIncrease : Character -> Html Msg
 btnLevelIncrease character =
     a [ class "btn ml1 h1", onClick (ChangeLevel character.id 1) ]
         [ i [ class "fa fa-plus-circle" ] [] ]
+
 
 listBtn : Html Msg
 listBtn =

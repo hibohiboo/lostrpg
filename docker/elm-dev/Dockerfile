@@ -71,3 +71,7 @@ RUN yarn add --dev tslint-config-airbnb
 RUN yarn add --dev ts-loader
 
 RUN yarn add  firebase
+
+# formatter
+RUN yarn add  elm-format@exp
+RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"format\": \"elm-format src\/ --yes\", /" /app/package.json

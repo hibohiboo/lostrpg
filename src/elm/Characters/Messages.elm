@@ -1,7 +1,7 @@
 module Characters.Messages exposing (..)
 
+import Characters.Models exposing (Character, CharacterId)
 import Http
-import Characters.Models exposing (CharacterId, Character)
 
 
 type Msg

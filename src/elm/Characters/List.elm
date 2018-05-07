@@ -1,10 +1,11 @@
 module Characters.List exposing (..)
 
-import Html exposing (..)
-import Html.Attributes exposing (class)
 import Characters.Messages exposing (..)
 import Characters.Models exposing (Character)
+import Html exposing (..)
+import Html.Attributes exposing (class)
 import Html.Events exposing (onClick)
+
 
 view : List Character -> Html Msg
 view characters =
@@ -36,6 +37,7 @@ list characters =
             ]
         ]
 
+
 characterRow : Character -> Html Msg
 characterRow character =
     tr []
@@ -45,6 +47,7 @@ characterRow character =
         , td []
             [ editBtn character ]
         ]
+
 
 editBtn : Character -> Html Msg
 editBtn character =

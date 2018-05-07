@@ -1,27 +1,28 @@
 module View exposing (..)
 
-import Html exposing (Html, div, text)
-import Messages exposing (Msg(..))
-import Models exposing (Model)
 import Characters.Edit
 import Characters.List
 import Characters.Models exposing (CharacterId)
+import Html exposing (Html, div, text)
+import Messages exposing (Msg(..))
+import Models exposing (Model)
 import Routing exposing (Route(..))
 
 
 view : Model -> Html Msg
 view model =
     div []
-        [ 
-          pageHead model ,
-          page model
+        [ pageHead model
+        , page model
         ]
 
+
 pageHead : Model -> Html Msg
-pageHead model = 
+pageHead model =
     div []
         [ text ("ログイン" ++ model.test)
         ]
+
 
 page : Model -> Html Msg
 page model =
@@ -44,12 +45,12 @@ characterEditPage model characterId =
                 |> List.filter (\character -> character.id == characterId)
                 |> List.head
     in
-        case maybeCharacter of
-            Just character ->
-                Html.map CharactersMsg (Characters.Edit.view character)
+    case maybeCharacter of
+        Just character ->
+            Html.map CharactersMsg (Characters.Edit.view character)
 
-            Nothing ->
-                notFoundView
+        Nothing ->
+            notFoundView
 
 
 notFoundView : Html msg
