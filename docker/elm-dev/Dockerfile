@@ -1,4 +1,4 @@
-FROM node:10.0.0
+FROM node:10.1.0
 
 # コンテナ上の作業ディレクトリ作成
 WORKDIR /app
@@ -40,14 +40,21 @@ RUN yarn elm package install elm-lang/mouse -y
 RUN yarn elm package install elm-lang/keyboard -y
 RUN yarn elm package install elm-lang/http -y
 RUN yarn elm package install elm-lang/navigation -y
+
+# formatter
+RUN yarn add  elm-format@exp
+
 RUN yarn elm package install evancz/url-parser -y
 RUN yarn elm package install NoRedInk/elm-decode-pipeline -y
 RUN yarn elm package install krisajenkins/remotedata -y
 
+# firebase
+RUN yarn add  firebase
 
 # "source-directories": [ "src" ], に変更
 RUN sed -i -e "s/\".\"/\"src\"/" /app/elm-package.json
 
+RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"format\": \"elm-format src\/ --yes\", /" /app/package.json
 # package.json設定
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"api\": \"node api.js\", /" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"build\": \"webpack\", /" /app/package.json
@@ -59,19 +66,3 @@ RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"dev\": \"webpack-dev-server --port
 # https://medium.com/webpack/webpack-4-migration-guide-for-plugins-loaders-20a79b927202
 # deprecateなthis.optionsをthis.queryに置き換え。
 RUN sed -i -e "s/this\.options/this\.query/g" /app/node_modules/elm-webpack-loader/index.js
-
-# typescript
-RUN yarn add --dev typescript
-
-# tslint
-RUN yarn add --dev tslint
-RUN yarn add --dev tslint-config-airbnb
-
-# webpack用typescript loader
-RUN yarn add --dev ts-loader
-
-RUN yarn add  firebase
-
-# formatter
-RUN yarn add  elm-format@exp
-RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"format\": \"elm-format src\/ --yes\", /" /app/package.json
