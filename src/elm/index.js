@@ -15,23 +15,37 @@ var app = Elm.Main.embed(mountNode);
 
 //ElmからJSへはsubscribe
 app.ports.hello.subscribe(function(fromElm) {
-
   console.log(fromElm);
-  //JSからElmへはsend
-  app.ports.jsHello.send("Hi!");
-
 });
-
-//JSからElmへsend
-app.ports.jsHello.send("Elm! hellooooo");
 
 // F i r e b a s e
 
 // ********** C O N F I G
-// import config from "./Firebase/fb.config.json";
+import firebase from 'firebase';
+import config from "./Firebase/fb.config.json";
 
-// console.log("Using project:", config.projectId);
-// firebase.initializeApp(config);
+console.log("Using project:", config.projectId);
+firebase.initializeApp(config);
+
+var auth = firebase.auth();
+auth.onAuthStateChanged(function(user) {
+  console.log(user)
+  if (user) {
+    // User is signed in.
+    console.log(user);
+    //JSからElmへはsend
+    app.ports.jsHello.send("ログアウト");
+  } else {
+    // User is signed out.
+    //JSからElmへはsend
+    // app.ports.jsHello.send("ログイン");
+    // auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+    // .then(() => {
+    //   const provider = new firebase.auth.TwitterAuthProvider();
+    //   this.auth.signInWithRedirect(provider);
+    // });
+  }
+});
 // // Load main firebase handler
 // import fb from "./Firebase/fb";
 // // Finally, set up Elm to use Firebase handler

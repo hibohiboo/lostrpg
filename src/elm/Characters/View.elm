@@ -7,8 +7,7 @@ import Html exposing (Html, div, text)
 import Messages exposing (Msg(..))
 import Models exposing (Model)
 import Routing exposing (Route(..))
-import View exposing (notFoundView)
-
+import Common.View exposing(notFoundView)
 
 page : Model -> Html Msg
 page model =
