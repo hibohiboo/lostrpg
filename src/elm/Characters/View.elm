@@ -3,11 +3,12 @@ module Characters.View exposing (..)
 import Characters.Edit
 import Characters.List
 import Characters.Models exposing (CharacterId)
+import Common.View exposing (notFoundView)
 import Html exposing (Html, div, text)
 import Messages exposing (Msg(..))
 import Models exposing (Model)
 import Routing exposing (Route(..))
-import Common.View exposing(notFoundView)
+
 
 page : Model -> Html Msg
 page model =

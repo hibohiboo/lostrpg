@@ -58,7 +58,7 @@ function redirectTwitter() {
 //ElmからJSへはsubscribe
 app.ports.redirectTwitter.subscribe(function(fromElm) {
   console.log(fromElm);
-});
+});[]
 
 
 // // Load main firebase handler

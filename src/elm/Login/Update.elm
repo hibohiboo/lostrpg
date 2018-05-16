@@ -2,10 +2,11 @@ module Login.Update exposing (..)
 
 import Login.Messages exposing (Msg(..))
 import Login.Models exposing (..)
-import Login.Ports exposing(redirectTwitter)
+import Login.Ports exposing (redirectTwitter)
+
 
 update : Msg -> ( LoginUser, Cmd Msg )
-update message  =
+update message =
     case message of
         Login ->
             ( newLoginUser, redirectTwitter "login" )

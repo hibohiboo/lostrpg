@@ -1,7 +1,7 @@
 module Models exposing (..)
 
 import Characters.Models exposing (Character)
-import Login.Models exposing(..)
+import Login.Models exposing (..)
 import Routing
 
 

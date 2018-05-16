@@ -1,8 +1,10 @@
 port module Firebase.Firebase exposing (..)
 
+
 setUpAuthListener : Cmd msg
 setUpAuthListener =
     sendToFirebase ListenAuthState
+
 
 sendToFirebase : FBCommand -> Cmd msg
 sendToFirebase cmd =
@@ -19,4 +21,3 @@ sendToFirebase cmd =
 
 type FBCommand
     = ListenAuthState
-    
