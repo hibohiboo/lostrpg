@@ -1,6 +1,7 @@
 module Update exposing (..)
 
 import Characters.Update
+import Login.Update
 import Messages exposing (Msg(..))
 import Models exposing (Model)
 import Routing exposing (parseLocation)
@@ -25,3 +26,10 @@ update msg model =
 
         GetHello hello ->
             ( { model | test = hello }, Cmd.none )
+
+        LoginMsg subMsg ->
+            let
+                ( loginUser, cmd ) =
+                    Login.Update.update subMsg
+            in
+            ( { model | loginUser = loginUser }, Cmd.map LoginMsg cmd )

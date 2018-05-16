@@ -46,6 +46,21 @@ auth.onAuthStateChanged(function(user) {
     // });
   }
 });
+
+function redirectTwitter() {
+  return auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+  .then(() => {
+    const provider = new firebase.auth.TwitterAuthProvider();
+    auth.signInWithRedirect(provider);
+  });
+}
+
+//ElmからJSへはsubscribe
+app.ports.redirectTwitter.subscribe(function(fromElm) {
+  console.log(fromElm);
+});
+
+
 // // Load main firebase handler
 // import fb from "./Firebase/fb";
 // // Finally, set up Elm to use Firebase handler
