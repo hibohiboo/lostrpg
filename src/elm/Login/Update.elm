@@ -9,4 +9,4 @@ update : Msg -> ( LoginUser, Cmd Msg )
 update message =
     case message of
         Login ->
-            ( newLoginUser, redirectTwitter "login" )
+            ( newLoginUser, redirectTwitter() )
