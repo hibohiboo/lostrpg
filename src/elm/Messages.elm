@@ -9,4 +9,4 @@ type Msg
     = CharactersMsg Characters.Messages.Msg
     | LoginMsg Login.Messages.Msg
     | OnLocationChange Location
-    | GetHello String
+  

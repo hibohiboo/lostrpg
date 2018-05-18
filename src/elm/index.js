@@ -13,12 +13,7 @@ var mountNode = document.getElementById('main');
 // .embed()はオプションの第二引数を取り、プログラム開始に必要なデータを与えられる。たとえばuserIDや何らかのトークンなど
 var app = Elm.Main.embed(mountNode);
 
-//ElmからJSへはsubscribe
-app.ports.hello.subscribe(function(fromElm) {
-  console.log(fromElm);
-});
-
-// F i r e b a s e
+// Firebase
 
 // ********** C O N F I G
 import firebase from 'firebase';
@@ -29,21 +24,12 @@ firebase.initializeApp(config);
 
 var auth = firebase.auth();
 auth.onAuthStateChanged(function(user) {
-  console.log(user)
   if (user) {
     // User is signed in.
-    console.log(user);
+    var uid = user.uid;
+    console.log(uid);
     //JSからElmへはsend
-    app.ports.jsHello.send("ログアウト");
-  } else {
-    // User is signed out.
-    //JSからElmへはsend
-    // app.ports.jsHello.send("ログイン");
-    // auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-    // .then(() => {
-    //   const provider = new firebase.auth.TwitterAuthProvider();
-    //   this.auth.signInWithRedirect(provider);
-    // });
+    app.ports.jsLogin.send(uid);
   }
 });
 
@@ -56,8 +42,8 @@ function redirectTwitter() {
 }
 
 //ElmからJSへはsubscribe
-app.ports.redirectTwitter.subscribe(function(fromElm) {
-  console.log(fromElm);
+app.ports.redirectTwitter.subscribe(function() {
+  redirectTwitter();
 });[]
 
 

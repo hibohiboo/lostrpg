@@ -10,3 +10,5 @@ update message =
     case message of
         Login ->
             ( newLoginUser, redirectTwitter() )
+        GetUid uid ->
+            ( {newLoginUser|uid = uid}, Cmd.none)

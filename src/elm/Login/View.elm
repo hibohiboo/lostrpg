@@ -26,7 +26,7 @@ pageHead model =
 logoutButton : LoginUser -> Html Messages.Msg
 logoutButton user =
     div []
-        [ text ("" ++ user.twitterName)
+        [ text ("ログアウト：" ++ user.uid)
         ]
 
 

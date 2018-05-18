@@ -24,12 +24,10 @@ update msg model =
             in
             ( { model | route = newRoute }, Cmd.none )
 
-        GetHello hello ->
-            ( { model | test = hello }, Cmd.none )
-
         LoginMsg subMsg ->
             let
                 ( loginUser, cmd ) =
                     Login.Update.update subMsg
             in
             ( { model | loginUser = loginUser }, Cmd.map LoginMsg cmd )
+
