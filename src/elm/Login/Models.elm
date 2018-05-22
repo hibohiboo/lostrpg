@@ -7,6 +7,7 @@ type alias Uid =
 
 type alias LoginUser =
     { uid : Uid
+    , displayName : String
     , twitterId : String
     , twitterName : String
     }
@@ -15,6 +16,7 @@ type alias LoginUser =
 newLoginUser : LoginUser
 newLoginUser =
     { uid = ""
+    , displayName = ""
     , twitterId = ""
     , twitterName = "unknown"
     }
