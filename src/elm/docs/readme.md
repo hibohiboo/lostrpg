@@ -13,39 +13,6 @@
 * キャラクター詳細編集
 * キャラクター新規作成
 
-## モデル
-
-### ユーザ情報
-{
-  uid: string,
-  twitterId: string,
-  twitterName: string
-}
-
-### キャラクター情報
-
-{
-  characterId: string,
-  characterName: string,
-  campId: string,
-  campName: string,
-  
-  updateAt: datetime,
-  -- ユーザ情報
-  twitterId: string,
-  tiwtterName: string,
-  uid: string
-}
-
-### キャンプ情報
-
-{
-  campId: string,
-  campName: string,
-  twitterId: string,
-  uid: string,
-}
-
 ## ログイン
 
 ### ログイン
@@ -83,5 +50,9 @@
 * ページング
   * 20キャラごとにページング
 
+### キャラクター詳細
 
+* link: キャラクター詳細編集
+
+### キャラクター
 

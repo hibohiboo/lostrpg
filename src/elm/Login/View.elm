@@ -20,13 +20,15 @@ pageHead model =
             Html.map LoginMsg loginButton
 
         _ ->
-            logoutButton user
+            Html.map LoginMsg (logoutButton user)
 
 
-logoutButton : LoginUser -> Html Messages.Msg
+logoutButton : LoginUser -> Html Login.Messages.Msg
 logoutButton user =
     div []
-        [ text ("ログアウト：" ++ user.uid)
+        [ a [class "btn ml1 h1", onClick Logout]
+         [text "ログアウト：" ],
+          text user.uid
         ]
 
 
@@ -36,3 +38,4 @@ loginButton =
         [ a [ class "btn ml1 h1", onClick Login ]
             [ text "ログイン" ]
         ]
+

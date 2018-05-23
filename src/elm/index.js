@@ -44,7 +44,11 @@ function redirectTwitter() {
 //ElmからJSへはsubscribe
 app.ports.redirectTwitter.subscribe(function() {
   redirectTwitter();
-});[]
+});
+
+app.ports.logoutAuth.subscribe(function(){
+  auth.signOut();
+})
 
 
 // // Load main firebase handler

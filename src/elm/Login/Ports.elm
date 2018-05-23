@@ -12,3 +12,4 @@ port jsLogin : (String -> msg) -> Sub msg
 
 
 port redirectTwitter : () -> Cmd msg
+port logoutAuth : ()->Cmd msg
