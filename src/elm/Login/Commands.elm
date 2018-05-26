@@ -14,7 +14,7 @@ fetch uid =
 
 fetchUrl : String -> String
 fetchUrl uid =
-    "https://us-central1-lostrpg-751c1.cloudfunctions.net/fetchMember/" ++ uid
+    "https://us-central1-lostrpg-751c1.cloudfunctions.net/fetchMember/?uid=" ++ uid
 
 memberDecoder : Decode.Decoder Member
 memberDecoder =

@@ -1,6 +1,6 @@
 module Login.View exposing (..)
 
-import Html exposing (Html, a, div, text)
+import Html exposing (Html, a, div, text, button)
 import Html.Attributes exposing (class, href, value)
 import Html.Events exposing (onClick)
 import Login.Messages exposing (Msg(..))
@@ -26,15 +26,15 @@ pageHead model =
 logoutButton : LoginUser -> Html Login.Messages.Msg
 logoutButton user =
     div []
-        [ a [ class "btn ml1 h1", onClick Logout ]
-            [ text "ログアウト：" ]
-        , text user.uid
+        [ button [ class "btn regular", onClick Logout ]
+            [ text "ログアウト" ]
+        , text ( " " ++ user.displayName )
         ]
 
 
 loginButton : Html Login.Messages.Msg
 loginButton =
     div []
-        [ a [ class "btn ml1 h1", onClick Login ]
-            [ text "ログイン" ]
+        [ button [ class "btn ml1 h1", onClick Login ]
+            [ text "twitterでログイン" ]
         ]

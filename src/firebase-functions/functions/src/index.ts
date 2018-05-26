@@ -3,17 +3,19 @@ import * as functions from 'firebase-functions';
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 import * as admin from 'firebase-admin';
 import {formatCharacters} from './characters';
-// 環境変数取得
-const path = process.env.GOOGLE_APPLICATION_CREDENTIALS;
-const serviceAccount = require(path);
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://lostrpg-751c1.firebaseio.com'
-});
+// 環境変数取得
+// const path = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+// const serviceAccount = require(path);
+
+// 検証用
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+//   databaseURL: 'https://lostrpg-751c1.firebaseio.com'
+// });
 
 // 本番環境用
-// admin.initializeApp(functions.config().firebase);
+admin.initializeApp(functions.config().firebase);
 
 const resSend = (res, sendObject) => {
   res.header('Content-Type','application/json');
@@ -69,7 +71,8 @@ export const addCharacter = functions.https.onRequest(async (req, res) => {
 
   export const fetchMember =
   functions.https.onRequest(async (req, res) => {
-    const ref = admin.database().ref('/member/' + req.query.uid);
+    const uid = req.query.uid;
+    const ref = admin.database().ref('/member/' + uid);
 
     const snapshot = await ref.once('value');
     const member = snapshot.val();

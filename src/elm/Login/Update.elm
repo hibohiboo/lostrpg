@@ -18,8 +18,8 @@ update message =
         Logout ->
             ( newLoginUser, logoutAuth () )
 
-        OnFetch (Ok newCharacters) ->
-            ( newLoginUser, Cmd.none )
+        OnFetch (Ok m) ->
+            ( { newLoginUser | uid = m.uid, twitterId = m.twitterId, twitterName = m.twitterName, displayName = m.twitterName }, Cmd.none )
 
         OnFetch (Err error) ->
             ( newLoginUser, Cmd.none )
