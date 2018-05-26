@@ -50,7 +50,13 @@ services:
       - ./config/elm/webpack.config.js:/app/webpack.config.js
       - ../src/elm:/app/src
       - ../app/public/assets/js/forms:/app/dist
+      - ../tests:/app/tests/tests
+      - cache1:/app/elm-stuff
+      - cache2:/app/tests/elm-stuff
     ports:
       - 3000:3000
     command: [yarn, dev]
 
+volumes:
+  cache1: # 名前付きボリューム名
+  cache2:

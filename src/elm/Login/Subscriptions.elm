@@ -1,10 +1,11 @@
 module Login.Subscriptions exposing (..)
 
+import Login.Messages exposing (..)
 import Login.Ports exposing (jsLogin)
-import Login.Messages exposing(..)
 
-subscriptions :  Sub Msg
-subscriptions  =
+
+subscriptions : Sub Msg
+subscriptions =
     Sub.batch
         [ jsLogin GetUid
         ]

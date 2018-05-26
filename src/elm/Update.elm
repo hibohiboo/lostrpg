@@ -30,4 +30,3 @@ update msg model =
                     Login.Update.update subMsg
             in
             ( { model | loginUser = loginUser }, Cmd.map LoginMsg cmd )
-

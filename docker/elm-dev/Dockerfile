@@ -51,10 +51,20 @@ RUN yarn elm package install krisajenkins/remotedata -y
 # firebase
 RUN yarn add  firebase
 
+# elm 高速化
+ADD ./ensure_libsysconfcpus.sh /app/ensure_libsysconfcpus.sh
+ADD ./replace_elm_make.sh /app/replace_elm_make.sh
+
+RUN /app/ensure_libsysconfcpus.sh
+RUN /app/replace_elm_make.sh
+
+# テスト準備
+RUN yarn run elm-test init
+
 # "source-directories": [ "src" ], に変更
 RUN sed -i -e "s/\".\"/\"src\"/" /app/elm-package.json
 
-RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"format\": \"elm-format src\/ --yes\", /" /app/package.json
+RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"format\": \"elm-format .\/ --yes\", /" /app/package.json
 # package.json設定
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"api\": \"node api.js\", /" /app/package.json
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"build\": \"webpack\", /" /app/package.json
@@ -66,3 +76,8 @@ RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"dev\": \"webpack-dev-server --port
 # https://medium.com/webpack/webpack-4-migration-guide-for-plugins-loaders-20a79b927202
 # deprecateなthis.optionsをthis.queryに置き換え。
 RUN sed -i -e "s/this\.options/this\.query/g" /app/node_modules/elm-webpack-loader/index.js
+
+# elmテスト設定
+RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"elm-test\": \"elm-test\", /" /app/package.json
+RUN sed -i -e "s/\(\"source-directories\": \[\)/\1\n        \"..\/src\", /" /app/tests/elm-package.json
+RUN sed -i -e "s/\"\.\"/\".\/tests\"/" /app/tests/elm-package.json

@@ -5,4 +5,3 @@ type Msg
     = Login
     | GetUid String
     | Logout
-

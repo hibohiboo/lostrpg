@@ -18,11 +18,10 @@ fetchUrl uid =
     "https://us-central1-lostrpg-751c1.cloudfunctions.net/fetchMember/" ++ uid
 
 
+
 -- saveUrl : CharacterId -> String
 -- saveUrl characterId =
 --     "http://192.168.50.10:4000/characters/" ++ characterId
-
-
 -- saveRequest : Character -> Http.Request Character
 -- saveRequest character =
 --     Http.request
@@ -34,15 +33,10 @@ fetchUrl uid =
 --         , url = saveUrl character.id
 --         , withCredentials = False
 --         }
-
-
 -- save : Character -> Cmd Msg
 -- save character =
 --     saveRequest character
 --         |> Http.send OnSave
-
-
-
 -- DECODERS
 
 

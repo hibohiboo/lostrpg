@@ -26,9 +26,9 @@ pageHead model =
 logoutButton : LoginUser -> Html Login.Messages.Msg
 logoutButton user =
     div []
-        [ a [class "btn ml1 h1", onClick Logout]
-         [text "ログアウト：" ],
-          text user.uid
+        [ a [ class "btn ml1 h1", onClick Logout ]
+            [ text "ログアウト：" ]
+        , text user.uid
         ]
 
 
@@ -38,4 +38,3 @@ loginButton =
         [ a [ class "btn ml1 h1", onClick Login ]
             [ text "ログイン" ]
         ]
-
