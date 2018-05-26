@@ -76,7 +76,9 @@ RUN yarn elm package install -y mgold/elm-date-format
 RUN yarn elm package install -y rtfeldman/elm-validate
 RUN yarn elm package install -y rtfeldman/selectlist
 
-# "source-directories": [ "src" ], に変更
+ADD ./tests/elm-package.json /app/tests/elm-package.json
+
+# source-directories変更
 RUN sed -i -e "s/\".\"/\".\/src\/src\"/" /app/elm-package.json
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"format\": \"elm-format .\/ --yes\", /" /app/package.json
@@ -94,5 +96,3 @@ RUN sed -i -e "s/this\.options/this\.query/g" /app/node_modules/elm-webpack-load
 
 # elmテスト設定
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"elm-test\": \"elm-test\", /" /app/package.json
-RUN sed -i -e "s/\(\"source-directories\": \[\)/\1\n        \"..\/src\", /" /app/tests/elm-package.json
-RUN sed -i -e "s/\"\.\"/\".\/tests\"/" /app/tests/elm-package.json
