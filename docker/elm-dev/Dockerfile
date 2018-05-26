@@ -61,8 +61,23 @@ RUN /app/replace_elm_make.sh
 # テスト準備
 RUN yarn run elm-test init
 
+# elm spa exampleで必要
+RUN yarn elm package install -y NoRedInk/elm-decode-pipeline
+RUN yarn elm package install -y elm-community/json-extra
+RUN yarn elm package install -y elm-lang/core
+RUN yarn elm package install -y elm-lang/dom
+RUN yarn elm package install -y elm-lang/html
+RUN yarn elm package install -y elm-lang/http
+RUN yarn elm package install -y elm-lang/navigation
+RUN yarn elm package install -y evancz/elm-markdown
+RUN yarn elm package install -y evancz/url-parser
+RUN yarn elm package install -y lukewestby/elm-http-builder
+RUN yarn elm package install -y mgold/elm-date-format
+RUN yarn elm package install -y rtfeldman/elm-validate
+RUN yarn elm package install -y rtfeldman/selectlist
+
 # "source-directories": [ "src" ], に変更
-RUN sed -i -e "s/\".\"/\"src\"/" /app/elm-package.json
+RUN sed -i -e "s/\".\"/\".\/src\/src\"/" /app/elm-package.json
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"format\": \"elm-format .\/ --yes\", /" /app/package.json
 # package.json設定

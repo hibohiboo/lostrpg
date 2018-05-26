@@ -48,9 +48,10 @@ services:
     build: ./elm-dev
     volumes:
       - ./config/elm/webpack.config.js:/app/webpack.config.js
-      - ../src/elm:/app/src
+      - ../src/elm-spa:/app/src
+      - ../src/elm-spa/assets:/app/assets
       - ../app/public/assets/js/forms:/app/dist
-      - ../tests:/app/tests/tests
+      - ../tests/elm-spa:/app/tests/tests
       - cache1:/app/elm-stuff
       - cache2:/app/tests/elm-stuff
     ports:
