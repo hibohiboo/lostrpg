@@ -19,7 +19,6 @@ var app = Elm.Main.embed(mountNode);
 import firebase from 'firebase';
 import config from "./Firebase/fb.config.json";
 
-console.log("Using project:", config.projectId);
 firebase.initializeApp(config);
 
 var auth = firebase.auth();
@@ -27,7 +26,6 @@ auth.onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
     var uid = user.uid;
-    console.log(uid);
     //JSからElmへはsend
     app.ports.jsLogin.send(uid);
   }

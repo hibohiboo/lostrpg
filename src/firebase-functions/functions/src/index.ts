@@ -66,3 +66,13 @@ export const addCharacter = functions.https.onRequest(async (req, res) => {
     const snapshot = await ref.push({name});
     res.redirect(303, snapshot.ref);
   });
+
+  export const fetchMember =
+  functions.https.onRequest(async (req, res) => {
+    const ref = admin.database().ref('/member/' + req.query.uid);
+
+    const snapshot = await ref.once('value');
+    const member = snapshot.val();
+
+    resSend(res, member);
+  });

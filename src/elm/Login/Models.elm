@@ -20,3 +20,10 @@ newLoginUser =
     , twitterId = ""
     , twitterName = "unknown"
     }
+
+
+type alias Member =
+    { uid : Uid
+    , twitterId : String
+    , twitterName : String
+    }
