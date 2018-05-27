@@ -61,6 +61,7 @@ type Username
 
 usernameToString : Username -> String
 usernameToString (Username username) =
+    -- let _ = Debug.log "このコード片は割とどこおいても大丈夫な気がする" username in
     username
 
 

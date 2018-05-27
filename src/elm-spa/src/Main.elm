@@ -58,6 +58,7 @@ type alias Model =
 
 init : Value -> Location -> ( Model, Cmd Msg )
 init val location =
+    let  _ = (Debug.log "log debug:" val) in
     setRoute (Route.fromLocation location)
         { pageState = Loaded initialPage
         , session = { user = decodeUserFromJson val }
@@ -95,7 +96,7 @@ viewPage : Session -> Bool -> Page -> Html Msg
 viewPage session isLoading page =
     let
         frame =
-            Page.frame isLoading session.user
+            Page.frame isLoading (Debug.log "log label" session.user)
     in
     case page of
         NotFound ->
