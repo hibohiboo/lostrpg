@@ -7,6 +7,9 @@ module.exports = {
   entry: {
     elm: [
       './src/index.js'
+    ],
+    native: [
+      './src/native/index.js'
     ]
   },
 
