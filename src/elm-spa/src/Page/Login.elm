@@ -11,12 +11,13 @@ import Html.Events exposing (..)
 import Http
 import Json.Decode as Decode exposing (Decoder, decodeString, field, string)
 import Json.Decode.Pipeline exposing (decode, optional)
+import Ports exposing (redirectTwitter)
 import Request.User exposing (storeSession)
 import Route exposing (Route)
 import Util exposing ((=>))
 import Validate exposing (Validator, ifBlank, validate)
 import Views.Form as Form
-import Ports exposing(redirectTwitter)
+
 
 -- MODEL --
 
@@ -45,19 +46,23 @@ view session model =
     div [ class "auth-page" ]
         [ div [ class "container page" ]
             [ div [ class "row" ]
-                [ div [ class "col-md-6 offset-md-3 col-xs-12" ]
-                    [ h1 [ class "text-xs-center" ] [ text "Sign in" ]
-                    , p [ class "text-xs-center" ]
-                        [ a [ Route.href Route.Register ]
-                            [ text "Need an account?" ]
-                        ]
-                    , Form.viewErrors model.errors
-                    , viewForm
-                    ]
+                [ viewSignIn model
                 ]
             ]
         ]
 
+
+viewSignIn : Model -> Html Msg
+viewSignIn model =
+    div [ class "col-md-6 offset-md-3 col-xs-12" ]
+        [ h1 [ class "text-xs-center" ] [ text "Sign in" ]
+        , p [ class "text-xs-center" ]
+            [ a [ Route.href Route.Register ]
+                [ text "Need an account?" ]
+            ]
+        , Form.viewErrors model.errors
+        , viewForm
+        ]
 
 
 viewForm : Html Msg
@@ -142,10 +147,12 @@ update msg model =
             model
                 => Cmd.batch [ storeSession user, Route.modifyUrl Route.Home ]
                 => SetUser user
+
         TwitterLogin ->
-            model 
-               => redirectTwitter ()
-               => NoOp
+            model
+                => redirectTwitter ()
+                => NoOp
+
 
 
 -- VALIDATION --
