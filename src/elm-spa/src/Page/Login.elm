@@ -16,7 +16,7 @@ import Route exposing (Route)
 import Util exposing ((=>))
 import Validate exposing (Validator, ifBlank, validate)
 import Views.Form as Form
-
+import Ports exposing(redirectTwitter)
 
 -- MODEL --
 
@@ -59,6 +59,7 @@ view session model =
         ]
 
 
+
 viewForm : Html Msg
 viewForm =
     Html.form [ onSubmit SubmitForm ]
@@ -88,6 +89,7 @@ type Msg
     | SetEmail String
     | SetPassword String
     | LoginCompleted (Result Http.Error User)
+    | TwitterLogin
 
 
 type ExternalMsg
@@ -140,7 +142,10 @@ update msg model =
             model
                 => Cmd.batch [ storeSession user, Route.modifyUrl Route.Home ]
                 => SetUser user
-
+        TwitterLogin ->
+            model 
+               => redirectTwitter ()
+               => NoOp
 
 
 -- VALIDATION --

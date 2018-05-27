@@ -10,8 +10,6 @@ app.ports.storeSession.subscribe(function(session) {
 });
 
 window.addEventListener("storage", function(event) {
-  console.log('storage event')
-  console.log(event)
   if (event.storageArea === localStorage && event.key === "session") {
     app.ports.onSessionChange.send(event.newValue);
   }
