@@ -32,7 +32,7 @@ async function makeUser(u){
     "image": null,
     "createdAt": "2018-05-27T01:15:06.996Z",
     "updatedAt": "2018-05-27T01:15:07.002Z",
-    "uid": "u.uid",
+    "uid": u.uid,
     "twitterId": member.twitterId,
     "twitterName": member.twitterName
   };

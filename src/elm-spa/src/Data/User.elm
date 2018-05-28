@@ -19,6 +19,9 @@ type alias User =
     , image : UserPhoto
     , createdAt : String
     , updatedAt : String
+    , uid: String
+    , twitterId: String
+    , twitterName: String
     }
 
 
@@ -36,6 +39,9 @@ decoder =
         |> required "image" UserPhoto.decoder
         |> required "createdAt" Decode.string
         |> required "updatedAt" Decode.string
+        |> required "uid" Decode.string
+        |> required "twitterId" Decode.string
+        |> required "twitterName" Decode.string
 
 
 encode : User -> Value

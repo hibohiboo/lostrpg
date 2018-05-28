@@ -4,11 +4,9 @@ import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import {formatCharacters} from './characters';
 
-// 環境変数取得
+// ローカル検証用
 // const path = process.env.GOOGLE_APPLICATION_CREDENTIALS;
 // const serviceAccount = require(path);
-
-// 検証用
 // admin.initializeApp({
 //   credential: admin.credential.cert(serviceAccount),
 //   databaseURL: 'https://lostrpg-751c1.firebaseio.com'
@@ -17,6 +15,11 @@ import {formatCharacters} from './characters';
 // 本番環境用
 admin.initializeApp(functions.config().firebase);
 
+/**
+ * レスポンス共通設定
+ * @param res 
+ * @param sendObject 
+ */
 const resSend = (res, sendObject) => {
   res.header('Content-Type','application/json');
   res.header('Access-Control-Allow-Origin', '*');
