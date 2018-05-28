@@ -15,4 +15,9 @@ window.addEventListener("storage", function(event) {
   }
 }, false);
 
-import './Firebase/fb';
+import {redirectTwitter} from './Firebase/fb';
+
+//ElmからJSへはsubscribe
+app.ports.redirectTwitter.subscribe(function() {
+  redirectTwitter();
+});

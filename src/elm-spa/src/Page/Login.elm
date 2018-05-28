@@ -46,11 +46,19 @@ view session model =
     div [ class "auth-page" ]
         [ div [ class "container page" ]
             [ div [ class "row" ]
-                [ viewSignIn model
+                [ 
+                  -- viewSignIn model
+                  twitterLoginButton
                 ]
             ]
         ]
 
+twitterLoginButton : Html Msg
+twitterLoginButton =
+    div []
+        [ button [ class "btn ml1 h1", onClick TwitterLogin ]
+            [ text "twitterでログイン" ]
+        ]
 
 viewSignIn : Model -> Html Msg
 viewSignIn model =
@@ -150,7 +158,7 @@ update msg model =
 
         TwitterLogin ->
             model
-                => redirectTwitter ()
+                => Cmd.batch [ redirectTwitter (), Route.modifyUrl Route.Home ]
                 => NoOp
 
 

@@ -39,7 +39,7 @@ async function makeUser(u){
   return user;
 }
 
-function redirectTwitter() {
+export function redirectTwitter() {
   return auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
   .then(() => {
     const provider = new firebase.auth.TwitterAuthProvider();
