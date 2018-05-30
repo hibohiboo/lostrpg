@@ -14,16 +14,15 @@ import Request.Article
 import SelectList exposing (SelectList)
 import Task exposing (Task)
 import Util exposing ((=>), onClickStopPropagation)
-import Views.Article.Feed as Feed exposing (FeedSource, globalFeed, tagFeed, yourFeed)
+-- import Views.Article.Feed as Feed exposing (FeedSource, globalFeed, tagFeed, yourFeed)
 import Views.Page as Page
-
+import Views.Character.Feed as Feed exposing (FeedSource, globalFeed)
 
 -- MODEL --
 
 
 type alias Model =
-    { tags : List Tag
-    , feed : Feed.Model
+    { feed : Feed.Model
     }
 
 
@@ -31,22 +30,24 @@ init : Session -> Task PageLoadError Model
 init session =
     let
         feedSources =
-            if session.user == Nothing then
-                SelectList.singleton globalFeed
-            else
-                SelectList.fromLists [] yourFeed [ globalFeed ]
+            SelectList.singleton globalFeed
+            -- if session.user == Nothing then
+            --     SelectList.singleton globalFeed
+            -- else
+            --     SelectList.fromLists [] yourFeed [ globalFeed ]
 
         loadTags =
             Request.Article.tags
                 |> Http.toTask
 
         loadSources =
-            Feed.init session feedSources
+            -- Feed.init session feedSources
+            Feed.init {session|user = Nothing} feedSources
 
         handleLoadError _ =
             pageLoadError Page.Home "Homepage is currently unavailable."
     in
-    Task.map2 Model loadTags loadSources
+    Task.map Model loadSources
         |> Task.mapError handleLoadError
 
 
@@ -89,8 +90,6 @@ viewFeed feed =
 
 type Msg
     = FeedMsg Feed.Msg
-    | SelectTag Tag
-
 
 update : Session -> Msg -> Model -> ( Model, Cmd Msg )
 update session msg model =
@@ -101,10 +100,3 @@ update session msg model =
                     Feed.update session subMsg model.feed
             in
             { model | feed = newFeed } => Cmd.map FeedMsg subCmd
-
-        SelectTag tagName ->
-            let
-                subCmd =
-                    Feed.selectTag (Maybe.map .token session.user) tagName
-            in
-            model => Cmd.map FeedMsg subCmd
