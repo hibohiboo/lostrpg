@@ -3,4 +3,4 @@ module Request.Helpers exposing (apiUrl)
 
 apiUrl : String -> String
 apiUrl str =
-    "https://conduit.productionready.io/api" ++ str
+    "https://us-central1-lostrpg-751c1.cloudfunctions.net" ++ str

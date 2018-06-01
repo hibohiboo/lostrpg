@@ -309,7 +309,14 @@ setRoute maybeRoute model =
 
         Just (Route.Article slug) ->
             transition ArticleLoaded (Article.init model.session slug)
+        
+        Just (Route.Character slug) ->
+            case model.session.user of
+                Just user ->
+                    { model | pageState = Loaded (Editor Nothing Editor.initNew) } => Cmd.none
 
+                Nothing ->
+                    errored Page.NewArticle "You must be signed in to post an article."
 
 pageErrored : Model -> ActivePage -> String -> ( Model, Cmd msg )
 pageErrored model activePage errorMessage =

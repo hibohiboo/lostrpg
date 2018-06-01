@@ -6,7 +6,7 @@ import Html exposing (Attribute)
 import Html.Attributes as Attr
 import Navigation exposing (Location)
 import UrlParser as Url exposing ((</>), Parser, oneOf, parseHash, s, string)
-
+import Data.Character as Character
 
 -- ROUTING --
 
@@ -22,6 +22,7 @@ type Route
     | Profile Username
     | NewArticle
     | EditArticle Article.Slug
+    | Character Character.Slug
 
 
 route : Parser (Route -> a) a
@@ -36,6 +37,7 @@ route =
         , Url.map Article (s "article" </> Article.slugParser)
         , Url.map NewArticle (s "editor")
         , Url.map EditArticle (s "editor" </> Article.slugParser)
+
         ]
 
 
@@ -77,6 +79,8 @@ routeToString page =
 
                 EditArticle slug ->
                     [ "editor", Article.slugToString slug ]
+                Character slug ->
+                    ["editor"]
     in
     "#/" ++ String.join "/" pieces
 

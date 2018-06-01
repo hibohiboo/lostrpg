@@ -1,7 +1,7 @@
 module Views.Character.Feed exposing (FeedSource, Model, Msg,  globalFeed, init, update, viewArticles, viewFeedSources)
 
 import Data.Article as Article exposing (Article, Tag)
-import Data.Article.Feed exposing (Feed)
+import Data.Character.Feed exposing (Feed)
 import Data.AuthToken exposing (AuthToken)
 import Data.Session exposing (Session)
 import Data.User exposing (Username)
@@ -10,7 +10,7 @@ import Html exposing (..)
 import Html.Attributes exposing (attribute, class, classList, href, id, placeholder, src)
 import Html.Events exposing (onClick)
 import Http
-import Request.Article
+import Request.Character
 import SelectList exposing (Position(..), SelectList)
 import Task exposing (Task)
 import Util exposing ((=>), onClickStopPropagation, pair, viewIf)
@@ -66,7 +66,7 @@ init session feedSources =
 
 viewArticles : Model -> List (Html Msg)
 viewArticles (Model { activePage, feed, feedSources }) =
-    List.map Views.Character.view feed.articles
+    List.map Views.Character.view feed.characters
         ++ [ pagination activePage feed (SelectList.selected feedSources) ]
 
 
@@ -105,11 +105,11 @@ limit feedSource =
 pagination : Int -> Feed -> FeedSource -> Html Msg
 pagination activePage feed feedSource =
     let
-        articlesPerPage =
+        charactersPerPage =
             limit feedSource
 
         totalPages =
-            ceiling (toFloat feed.articlesCount / toFloat articlesPerPage)
+            ceiling (toFloat feed.charactersCount / toFloat charactersPerPage)
     in
     if totalPages > 1 then
         List.range 1 totalPages
@@ -200,7 +200,7 @@ fetch : Maybe AuthToken -> Int -> FeedSource -> Task Http.Error ( Int, Feed )
 fetch token page feedSource =
     let
         defaultListConfig =
-            Request.Article.defaultListConfig
+            Request.Character.defaultListConfig
 
         articlesPerPage =
             limit feedSource
@@ -215,7 +215,7 @@ fetch token page feedSource =
             case feedSource of
 
                 GlobalFeed ->
-                    Request.Article.list listConfig token
+                    Request.Character.list listConfig token
                         |> Http.toTask
     in
     task
