@@ -1,6 +1,6 @@
 module Route exposing (Route(..), fromLocation, href, modifyUrl)
 
-import Data.Article as Article
+-- import Data.Article as Article
 import Data.User as User exposing (Username)
 import Html exposing (Attribute)
 import Html.Attributes as Attr
@@ -18,10 +18,10 @@ type Route
     | Logout
     | Register
     | Settings
-    | Article Article.Slug
+    -- | Article Article.Slug
     | Profile Username
     | NewCharacter
-    | EditArticle Article.Slug
+    -- | EditArticle Article.Slug
     | Character Character.Slug
 
 
@@ -34,9 +34,9 @@ route =
         , Url.map Settings (s "settings")
         , Url.map Profile (s "profile" </> User.usernameParser)
         , Url.map Register (s "register")
-        , Url.map Article (s "article" </> Article.slugParser)
+        -- , Url.map Article (s "article" </> Article.slugParser)
         , Url.map NewCharacter (s "editor")
-        , Url.map EditArticle (s "editor" </> Article.slugParser)
+        -- , Url.map EditArticle (s "editor" </> Article.slugParser)
 
         ]
 
@@ -68,8 +68,8 @@ routeToString page =
                 Settings ->
                     [ "settings" ]
 
-                Article slug ->
-                    [ "article", Article.slugToString slug ]
+                -- Article slug ->
+                --     [ "article", Article.slugToString slug ]
 
                 Profile username ->
                     [ "profile", User.usernameToString username ]
@@ -77,8 +77,8 @@ routeToString page =
                 NewCharacter ->
                     [ "editor" ]
 
-                EditArticle slug ->
-                    [ "editor", Article.slugToString slug ]
+                -- EditArticle slug ->
+                --     [ "editor", Article.slugToString slug ]
                 Character slug ->
                     ["editor"]
     in

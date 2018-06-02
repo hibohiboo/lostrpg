@@ -4,6 +4,7 @@ export default class Character {
     public name: string,
     public twitterName: string,
     public twitterId: string,
-    public uid: string
+    public uid: string,
+    public slug: string
   ) {}
-}
+} 

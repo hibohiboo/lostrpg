@@ -1,7 +1,23 @@
-module Views.Character.Feed exposing (FeedSource, Model, Msg,  globalFeed, init, update, viewArticles, viewFeedSources)
+module Views.Article.Feed exposing (FeedSource, Model, Msg, authorFeed, favoritedFeed, globalFeed, init, selectTag, tagFeed, update, viewArticles, viewFeedSources, yourFeed)
+
+{-| NOTE: This module has its own Model, view, and update. This is not normal!
+If you find yourself doing this often, please watch <https://www.youtube.com/watch?v=DoA4Txr4GUs>
+
+This is the reusable Article Feed that appears on both the Home page as well as
+on the Profile page. There's a lot of logic here, so it's more convenient to use
+the heavyweight approach of giving this its own Model, view, and update.
+
+This means callers must use Html.map and Cmd.map to use this thing, but in
+this case that's totally worth it because of the amount of logic wrapped up
+in this thing.
+
+For every other reusable view in this application, this API would be totally
+overkill, so we use simpler APIs instead.
+
+-}
 
 import Data.Article as Article exposing (Article, Tag)
-import Data.Character.Feed exposing (Feed)
+import Data.Article.Feed exposing (Feed)
 import Data.AuthToken exposing (AuthToken)
 import Data.Session exposing (Session)
 import Data.User exposing (Username)
@@ -10,15 +26,15 @@ import Html exposing (..)
 import Html.Attributes exposing (attribute, class, classList, href, id, placeholder, src)
 import Html.Events exposing (onClick)
 import Http
-import Request.Character
+import Request.Article
 import SelectList exposing (Position(..), SelectList)
 import Task exposing (Task)
 import Util exposing ((=>), onClickStopPropagation, pair, viewIf)
-import Views.Article
+--import Views.Article
 import Views.Errors as Errors
 import Views.Page exposing (bodyId)
 import Views.Spinner exposing (spinner)
-import Views.Character
+
 
 -- MODEL --
 
@@ -66,8 +82,10 @@ init session feedSources =
 
 viewArticles : Model -> List (Html Msg)
 viewArticles (Model { activePage, feed, feedSources }) =
-    List.map Views.Character.view feed.characters
-        ++ [ pagination activePage feed (SelectList.selected feedSources) ]
+    List.map
+    div[][] 
+    -- (Views.Article.view ToggleFavorite) feed.articles
+    --     ++ [ pagination activePage feed (SelectList.selected feedSources) ]
 
 
 viewFeedSources : Model -> Html Msg
@@ -89,27 +107,63 @@ viewFeedSource position source =
         ]
 
 
+selectTag : Maybe AuthToken -> Tag -> Cmd Msg
+selectTag maybeAuthToken tagName =
+    let
+        source =
+            tagFeed tagName
+    in
+    source
+        |> fetch maybeAuthToken 1
+        |> Task.attempt (FeedLoadCompleted source)
+
+
 sourceName : FeedSource -> String
 sourceName source =
     case source of
+        YourFeed ->
+            "Your Feed"
+
         GlobalFeed ->
             "Global Feed"
+
+        TagFeed tagName ->
+            "#" ++ Article.tagToString tagName
+
+        FavoritedFeed username ->
+            "Favorited Articles"
+
+        AuthorFeed username ->
+            "My Articles"
+
 
 limit : FeedSource -> Int
 limit feedSource =
     case feedSource of
+        YourFeed ->
+            10
+
         GlobalFeed ->
             10
+
+        TagFeed tagName ->
+            10
+
+        FavoritedFeed username ->
+            5
+
+        AuthorFeed username ->
+            5
 
 
 pagination : Int -> Feed -> FeedSource -> Html Msg
 pagination activePage feed feedSource =
     let
-        charactersPerPage =
+        articlesPerPage =
             limit feedSource
 
         totalPages =
-            ceiling (toFloat feed.charactersCount / toFloat charactersPerPage)
+            ceiling (toFloat feed.articlesCount / toFloat articlesPerPage)
     in
     if totalPages > 1 then
         List.range 1 totalPages
@@ -139,6 +193,8 @@ type Msg
     = DismissErrors
     | SelectFeedSource FeedSource
     | FeedLoadCompleted FeedSource (Result Http.Error ( Int, Feed ))
+    | ToggleFavorite (Article ())
+    | FavoriteCompleted (Result Http.Error (Article ()))
     | SelectPage Int
 
 
@@ -176,6 +232,31 @@ updateInternal session msg model =
             }
                 => Cmd.none
 
+        ToggleFavorite article ->
+            case session.user of
+                Nothing ->
+                    { model | errors = model.errors ++ [ "You are currently signed out. You must sign in to favorite articles." ] }
+                        => Cmd.none
+
+                Just user ->
+                    Request.Article.toggleFavorite article user.token
+                        |> Http.send FavoriteCompleted
+                        |> pair model
+
+        FavoriteCompleted (Ok article) ->
+            let
+                feed =
+                    model.feed
+
+                newFeed =
+                    { feed | articles = List.map (replaceArticle article) feed.articles }
+            in
+            { model | feed = newFeed } => Cmd.none
+
+        FavoriteCompleted (Err error) ->
+            { model | errors = model.errors ++ [ "Server error while trying to favorite article." ] }
+                => Cmd.none
+
         SelectPage page ->
             let
                 source =
@@ -200,7 +281,7 @@ fetch : Maybe AuthToken -> Int -> FeedSource -> Task Http.Error ( Int, Feed )
 fetch token page feedSource =
     let
         defaultListConfig =
-            Request.Character.defaultListConfig
+            Request.Article.defaultListConfig
 
         articlesPerPage =
             limit feedSource
@@ -213,9 +294,32 @@ fetch token page feedSource =
 
         task =
             case feedSource of
+                YourFeed ->
+                    let
+                        defaultFeedConfig =
+                            Request.Article.defaultFeedConfig
+
+                        feedConfig =
+                            { defaultFeedConfig | offset = offset, limit = articlesPerPage }
+                    in
+                    token
+                        |> Maybe.map (Request.Article.feed feedConfig >> Http.toTask)
+                        |> Maybe.withDefault (Task.fail (Http.BadUrl "You need to be signed in to view your feed."))
 
                 GlobalFeed ->
-                    Request.Character.list listConfig token
+                    Request.Article.list listConfig token
+                        |> Http.toTask
+
+                TagFeed tagName ->
+                    Request.Article.list { listConfig | tag = Just tagName } token
+                        |> Http.toTask
+
+                FavoritedFeed username ->
+                    Request.Article.list { listConfig | favorited = Just username } token
+                        |> Http.toTask
+
+                AuthorFeed username ->
+                    Request.Article.list { listConfig | author = Just username } token
                         |> Http.toTask
     in
     task
@@ -240,8 +344,20 @@ selectFeedSource source sources =
 
         newSources =
             case source of
+                YourFeed ->
+                    withoutTags
+
                 GlobalFeed ->
                     withoutTags
+
+                FavoritedFeed _ ->
+                    withoutTags
+
+                AuthorFeed _ ->
+                    withoutTags
+
+                TagFeed _ ->
+                    withoutTags ++ [ source ]
     in
     case newSources of
         [] ->
@@ -256,6 +372,11 @@ selectFeedSource source sources =
 
 isTagFeed : FeedSource -> Bool
 isTagFeed source =
+    case source of
+        TagFeed _ ->
+            True
+
+        _ ->
             False
 
 
@@ -264,9 +385,33 @@ isTagFeed source =
 
 
 type FeedSource
-    = GlobalFeed
+    = YourFeed
+    | GlobalFeed
+    | TagFeed Tag
+    | FavoritedFeed Username
+    | AuthorFeed Username
+
+
+yourFeed : FeedSource
+yourFeed =
+    YourFeed
 
 
 globalFeed : FeedSource
 globalFeed =
     GlobalFeed
+
+
+tagFeed : Tag -> FeedSource
+tagFeed =
+    TagFeed
+
+
+favoritedFeed : Username -> FeedSource
+favoritedFeed =
+    FavoritedFeed
+
+
+authorFeed : Username -> FeedSource
+authorFeed =
+    AuthorFeed
