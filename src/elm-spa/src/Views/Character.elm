@@ -39,7 +39,7 @@ view  char =
             --     , viewTimestamp article
             --     ]
             ]
-        , a [ class "preview-link", Route.href (Route.Character char.twitterId) ]
+        , a [ class "preview-link", Route.href (Route.Character char.slug) ]
             [ h1 [] [ text char.name ]
 --            , p [] [ text article.description ]
             , span [] [ text "Read more..." ]

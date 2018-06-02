@@ -6,9 +6,12 @@ module Request.Character
         , defaultListConfig
         , feed
         , list
+        , get
+        , create
+        , update
         )
 
-import Data.Character as Character exposing (Character)
+import Data.Character as Character exposing (Character, slugToString)
 import Data.Character.Feed as Feed exposing (Feed)
 import Data.AuthToken exposing (AuthToken, withAuthorization)
 import Data.User as User exposing (Username)
@@ -22,6 +25,19 @@ import Util exposing ((=>))
 
 -- SINGLE --
 
+get : Maybe AuthToken -> Character.Slug -> Http.Request Character
+get maybeToken slug =
+    let
+        expect =
+            Character.decoder
+                |> Decode.field "character"
+                |> Http.expectJson
+    in
+    apiUrl ("/character/" ++ Character.slugToString slug)
+        |> HttpBuilder.get
+        |> HttpBuilder.withExpect expect
+        |> withAuthorization maybeToken
+        |> HttpBuilder.toRequest
 
 -- LIST --
 
@@ -99,3 +115,68 @@ buildFromQueryParams url queryParams =
         |> HttpBuilder.get
         |> withExpect (Http.expectJson Feed.decoder)
         |> withQueryParams queryParams
+
+
+-- CREATE --
+
+
+type alias CreateConfig record =
+    { record
+        | name : String
+    }
+
+
+type alias EditConfig record =
+    { record
+        | name : String
+    }
+
+
+create : CreateConfig record -> AuthToken -> Http.Request Character
+create config token =
+    let
+        expect =
+            Character.decoder
+                |> Decode.field "character"
+                |> Http.expectJson
+
+        character =
+            Encode.object
+                [ "name" => Encode.string config.name
+                ]
+
+        body =
+            Encode.object [ "character" => character ]
+                |> Http.jsonBody
+    in
+    apiUrl "/characters"
+        |> HttpBuilder.post
+        |> withAuthorization (Just token)
+        |> withBody body
+        |> withExpect expect
+        |> HttpBuilder.toRequest
+
+
+update : Character.Slug -> EditConfig record -> AuthToken -> Http.Request Character
+update slug config token =
+    let
+        expect =
+            Character.decoder
+                |> Decode.field "character"
+                |> Http.expectJson
+
+        character =
+            Encode.object
+                [ "name" => Encode.string config.name
+                ]
+
+        body =
+            Encode.object [ "character" => character ]
+                |> Http.jsonBody
+    in
+    apiUrl ("/characters/" ++ slugToString slug)
+        |> HttpBuilder.put
+        |> withAuthorization (Just token)
+        |> withBody body
+        |> withExpect expect
+        |> HttpBuilder.toRequest

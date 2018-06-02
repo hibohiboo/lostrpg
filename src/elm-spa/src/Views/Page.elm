@@ -27,7 +27,7 @@ type ActivePage
     | Register
     | Settings
     | Profile Username
-    | NewArticle
+    | NewCharacter
 
 
 {-| Take a page's Html and frame it with a header and footer.
@@ -75,7 +75,7 @@ viewSignIn page user =
             ]
 
         Just user ->
-            [ linkTo Route.NewArticle [ i [ class "ion-compose" ] [], text " New Post" ]
+            [ linkTo Route.NewCharacter [ i [ class "ion-compose" ] [], text " New Post" ]
             , linkTo Route.Settings [ i [ class "ion-gear-a" ] [], text " Settings" ]
             , linkTo
                 (Route.Profile user.username)
@@ -124,7 +124,7 @@ isActive page route =
         ( Profile pageUsername, Route.Profile routeUsername ) ->
             pageUsername == routeUsername
 
-        ( NewArticle, Route.NewArticle ) ->
+        ( NewCharacter, Route.NewCharacter ) ->
             True
 
         _ ->

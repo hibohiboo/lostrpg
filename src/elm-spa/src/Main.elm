@@ -7,7 +7,6 @@ import Html exposing (..)
 import Json.Decode as Decode exposing (Value)
 import Navigation exposing (Location)
 import Page.Article as Article
-import Page.Article.Editor as Editor
 import Page.Errored as Errored exposing (PageLoadError)
 import Page.Home as Home
 import Page.Login as Login
@@ -20,7 +19,8 @@ import Route exposing (Route)
 import Task
 import Util exposing ((=>))
 import Views.Page as Page exposing (ActivePage)
-
+import Data.Character exposing (Slug)
+import Page.Character.Editor as Editor
 
 -- WARNING: Based on discussions around how asset management features
 -- like code splitting and lazy loading have been shaping up, I expect
@@ -150,7 +150,7 @@ viewPage session isLoading page =
             let
                 framePage =
                     if maybeSlug == Nothing then
-                        Page.NewArticle
+                        Page.NewCharacter
                     else
                         Page.Other
             in
@@ -232,7 +232,7 @@ type Msg
     | HomeLoaded (Result PageLoadError Home.Model)
     | ArticleLoaded (Result PageLoadError Article.Model)
     | ProfileLoaded Username (Result PageLoadError Profile.Model)
-    | EditArticleLoaded Slug (Result PageLoadError Editor.Model)
+    | EditArticleLoaded Data.Article.Slug (Result PageLoadError Editor.Model)
     | HomeMsg Home.Msg
     | SettingsMsg Settings.Msg
     | SetUser (Maybe User)
@@ -257,13 +257,13 @@ setRoute maybeRoute model =
         Nothing ->
             { model | pageState = Loaded NotFound } => Cmd.none
 
-        Just Route.NewArticle ->
+        Just Route.NewCharacter ->
             case model.session.user of
                 Just user ->
                     { model | pageState = Loaded (Editor Nothing Editor.initNew) } => Cmd.none
 
                 Nothing ->
-                    errored Page.NewArticle "You must be signed in to post an article."
+                    errored Page.NewCharacter "You must be signed in to post an article."
 
         Just (Route.EditArticle slug) ->
             case model.session.user of
@@ -316,7 +316,7 @@ setRoute maybeRoute model =
                     { model | pageState = Loaded (Editor Nothing Editor.initNew) } => Cmd.none
 
                 Nothing ->
-                    errored Page.NewArticle "You must be signed in to post an article."
+                    errored Page.NewCharacter "You must be signed in to post an article."
 
 pageErrored : Model -> ActivePage -> String -> ( Model, Cmd msg )
 pageErrored model activePage errorMessage =
@@ -449,11 +449,11 @@ updatePage page msg model =
             case model.session.user of
                 Nothing ->
                     if slug == Nothing then
-                        errored Page.NewArticle
-                            "You must be signed in to post articles."
+                        errored Page.NewCharacter
+                            "You must be signed in to post characters."
                     else
                         errored Page.Other
-                            "You must be signed in to edit articles."
+                            "You must be signed in to edit characters."
 
                 Just user ->
                     toPage (Editor slug) EditorMsg (Editor.update user) subMsg subModel

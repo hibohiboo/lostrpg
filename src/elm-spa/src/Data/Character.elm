@@ -16,7 +16,7 @@ import UrlParser
 
 type alias Character =
     { name : String
-    , twitterId: Slug
+    , slug: Slug
     }
 
 
@@ -31,7 +31,7 @@ baseCharacterDecoder : Decoder Character
 baseCharacterDecoder =
     decode Character
         |> required "name" Decode.string
-        |> required "twitterId" (Decode.map Slug Decode.string)
+        |> required "slug" (Decode.map Slug Decode.string)
 
 -- IDENTIFIERS --
 type Slug
