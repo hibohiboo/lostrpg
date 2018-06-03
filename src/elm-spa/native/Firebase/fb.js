@@ -5,6 +5,8 @@ import config from "./fb.config.json";
 
 firebase.initializeApp(config);
 
+if(!localStorage.session){
+
 // 認証チェック
 var auth = firebase.auth();
 auth.onAuthStateChanged(async function(u) {
@@ -37,6 +39,10 @@ async function makeUser(u){
     "twitterName": member.twitterName
   };
   return user;
+}
+
+
+
 }
 
 export function redirectTwitter() {

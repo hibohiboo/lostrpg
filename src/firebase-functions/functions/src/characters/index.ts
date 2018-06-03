@@ -30,7 +30,7 @@ export default class CharacterWidget {
    * @memberof CharacterWidget
    */
   public async add(body){
-    const obj = JSON.parse(body.character);
+    const obj = body.character;
     const char = await this.storage.createCharacter(obj);
     const result = {character: char};
     return result;

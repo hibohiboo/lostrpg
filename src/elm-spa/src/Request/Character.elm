@@ -149,7 +149,7 @@ create config token =
             Encode.object [ "character" => character ]
                 |> Http.jsonBody
     in
-    let _ = Debug.log "このコード片は割とどこおいても大丈夫な気がする" body in
+    let _ = Debug.log "このコード片は割とどこおいても大丈夫な気がする create" body in
     apiUrl "/characters"
         |> HttpBuilder.post
         -- |> withAuthorization (Just token)

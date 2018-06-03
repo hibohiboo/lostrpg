@@ -4,9 +4,9 @@ import CharactersWidget from './characters';
 import {resSend} from './util';
 import Storage from './firebase';
 
-const storage = new Storage();
 
 exports.characters = functions.https.onRequest(async (req, res) => {
+  const storage = new Storage();
   const charactersWidget = new CharactersWidget(storage);
   const method = req.method;
   let result = null;
@@ -14,22 +14,24 @@ exports.characters = functions.https.onRequest(async (req, res) => {
   if (method === 'GET') {
     result = await charactersWidget.fetch();
   }
-  else if(method === 'POST'){
-    const body = req.query.body;
-    result = await charactersWidget.add(body);
+  else if(method === 'POST' && req.body){
+    result = await charactersWidget.add(req.body);
   }
 
   resSend(res, result);
 });
   
 export const fetchMember =functions.https.onRequest(async (req, res) => {
-    const uid = req.query.uid;
-    const member = await storage.fetchMember(uid);
+  const storage = new Storage();
+  const uid = req.query.uid;
+  const member = await storage.fetchMember(uid);
 
-    resSend(res, member);
+  resSend(res, member);
 });
 
 export const addMessage = functions.https.onRequest( async (req, res) => {
+  const storage = new Storage();
+
   // Grab the text parameter.
   const original = req.query.text;
   const ref = await storage.fetchMember(original);
