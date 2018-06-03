@@ -2,7 +2,8 @@
 import * as functions from 'firebase-functions'; 
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 import * as admin from 'firebase-admin';
-import {formatCharacter} from './characters';
+import {formatCharacter, fetchCharacters} from './characters';
+import {resSend} from './util';
 
 // ローカル検証用
 // const path = process.env.GOOGLE_APPLICATION_CREDENTIALS;
@@ -15,39 +16,7 @@ import {formatCharacter} from './characters';
 // 本番環境用
 admin.initializeApp(functions.config().firebase);
 
-/**
- * レスポンス共通設定
- * @param res 
- * @param sendObject 
- */
-const resSend = (res, sendObject) => {
-  res.header('Content-Type','application/json');
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  res.send(sendObject);
-}
-
-export const fetchCharacters =
-  functions.https.onRequest(async (req, res) => {
-    const ref = admin.database().ref('/character');
-
-    const snapshot = await ref.once('value');
-    const characters = snapshot.val();
-    const characterList = Object.keys(characters)
-      .map(id => {
-      const char = characters[id];
-      char.id = id;
-      const fc = formatCharacter(char);
-      return fc;
-    });
-
-    const result = {
-      'characters' : characterList,
-      'charactersCount': ref.child.length
-    }
-
-    resSend(res, result);
-  });
+exports.fetchCharacters = fetchCharacters;
 
 export const addCharacter = functions.https.onRequest(async (req, res) => {
     // Grab the text parameter.
