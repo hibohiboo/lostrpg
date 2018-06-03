@@ -85,7 +85,7 @@ viewForm model =
             if isEditing then
                 "Update Character"
             else
-                "Publish Character"
+                "キャラクター新規作成"
     in
     Html.form [ onSubmit Save ]
         [ fieldset []
@@ -115,12 +115,14 @@ type Msg
 
 update : User -> Msg -> Model -> ( Model, Cmd Msg )
 update user msg model =
+    let _ = Debug.log "このコード片は割とどこおいても大丈夫な気がする page update " msg in
     case msg of
         Save ->
             case validate modelValidator model of
                 [] ->
                     case model.editingCharacter of
                         Nothing ->
+                            let _ = Debug.log "このコード片は割とどこおいても大丈夫な気がする save " model in
                             user.token
                                 |> Request.Character.create model
                                 |> Http.send CreateCompleted

@@ -149,9 +149,10 @@ create config token =
             Encode.object [ "character" => character ]
                 |> Http.jsonBody
     in
+    let _ = Debug.log "このコード片は割とどこおいても大丈夫な気がする" body in
     apiUrl "/characters"
         |> HttpBuilder.post
-        |> withAuthorization (Just token)
+        -- |> withAuthorization (Just token)
         |> withBody body
         |> withExpect expect
         |> HttpBuilder.toRequest
@@ -174,6 +175,7 @@ update slug config token =
             Encode.object [ "character" => character ]
                 |> Http.jsonBody
     in
+    let _ = Debug.log "このコード片は割とどこおいても大丈夫な気がする update" body in
     apiUrl ("/characters/" ++ slugToString slug)
         |> HttpBuilder.put
         |> withAuthorization (Just token)
