@@ -2,7 +2,7 @@
 import * as functions from 'firebase-functions'; 
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 import * as admin from 'firebase-admin';
-import {formatCharacter, fetchCharacters} from './characters';
+import {characterWidgets} from './characters';
 import {resSend} from './util';
 
 // ローカル検証用
@@ -16,7 +16,7 @@ import {resSend} from './util';
 // 本番環境用
 admin.initializeApp(functions.config().firebase);
 
-exports.fetchCharacters = fetchCharacters;
+exports.characters = characterWidgets;
 
 export const addCharacter = functions.https.onRequest(async (req, res) => {
     // Grab the text parameter.

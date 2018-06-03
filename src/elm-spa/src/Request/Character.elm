@@ -63,7 +63,7 @@ list config maybeToken =
     , "offset" => Just (toString config.offset)
     ]
         |> List.filterMap maybeVal
-        |> buildFromQueryParams "/fetchCharacters"
+        |> buildFromQueryParams "/characters"
         |> withAuthorization maybeToken
         |> HttpBuilder.toRequest
 
@@ -91,7 +91,7 @@ feed config token =
     , "offset" => Just (toString config.offset)
     ]
         |> List.filterMap maybeVal
-        |> buildFromQueryParams "/fetchCharacters"
+        |> buildFromQueryParams "/characters"
         |> withAuthorization (Just token)
         |> HttpBuilder.toRequest
 
