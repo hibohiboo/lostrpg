@@ -14,7 +14,12 @@ exports.characters = functions.https.onRequest(async (req, res) => {
   if (method === 'GET') {
     result = await charactersWidget.fetch();
   }
-  else if(method === 'POST' && req.body){
+  else if(method === 'POST' && req.params[0] && req.params[0].slice(1)) {
+    const id = req.params[0].slice(1);
+    console.log(req.params)
+    result = await charactersWidget.update(id, req.body);
+  }
+  else if(method === 'POST'){
     result = await charactersWidget.add(req.body);
   }
 

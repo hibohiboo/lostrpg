@@ -1,6 +1,5 @@
 import Character from './models/Character';
 import Storage from '../firebase';
-import {resSend} from '../util';
 
 export default class CharacterWidget {
   constructor(private storage:Storage){}
@@ -35,6 +34,13 @@ export default class CharacterWidget {
     const result = {character: char};
     return result;
   }
+  public async update(id, body){
+    const obj = body.character;
+    const char = await this.storage.updateCharacter(id, obj);
+    const result = {character: char};
+    return result;
+  }
+
 }
 
 /**
