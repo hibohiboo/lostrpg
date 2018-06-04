@@ -49,5 +49,5 @@ export default class CharacterWidget {
  */
 function formatCharacter(obj){
   const {id, name, twitterId, twitterName, uid} = obj;
-  return new Character(id, name, twitterId, twitterName, uid, uid)
+  return new Character(id, name, twitterId, twitterName, uid)
 }
