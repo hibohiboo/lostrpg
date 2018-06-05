@@ -21,6 +21,10 @@ export default class Storage {
     //
   }
 
+  public authVerifyToken(idToken) {
+    return admin.auth().verifyIdToken(idToken)
+  }
+
   public async fetchMember(uid){
     const ref = admin.database().ref('/member/' + uid);
     const snapshot = await ref.once('value');
