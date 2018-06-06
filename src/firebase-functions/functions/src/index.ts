@@ -11,7 +11,8 @@ exports.characters = functions.https.onRequest(async (req, res) => {
   let result = null;
 
   if (method === 'GET') {
-    result = await charactersWidget.fetch();
+    const {limit, offset} = req.query;
+    result = await charactersWidget.fetch(+limit, +offset);
   }
   else if(method === 'POST' && req.params[0] && req.params[0].slice(1)) {
     await auth(req, res, storage);
@@ -51,7 +52,7 @@ export const makeUppercase =
   // Grab the current value of what was written to the Realtime Database.
   const event = change.after;
   const original = event.val();
-  console.log('Uppercasing', context.params.pushId, original);
+
   const uppercase = original.toUpperCase();
   // You must return a Promise when performing asynchronous tasks inside a Functions such as
   // writing to the Firebase Realtime Database.

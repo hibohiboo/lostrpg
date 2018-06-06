@@ -6,8 +6,8 @@ export default class CharacterWidget {
   /**
    * 
    */
-  public async fetch(){
-    const {characters, charactersCount} = await this.storage.fetchCharacters();
+  public async fetch(limit:number, offset:number){
+    const {characters, charactersCount} = await this.storage.fetchCharacters(limit, offset);
     const characterList = Object.keys(characters)
     .map(id => {
       const char = characters[id];

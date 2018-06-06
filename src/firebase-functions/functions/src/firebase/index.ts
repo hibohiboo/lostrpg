@@ -13,13 +13,9 @@ admin.initializeApp(functions.config().firebase);
 // });
 
 export default class Storage {
-  private CHARACTER = '/character';
-  private CHARACTER_LIST = '/character/list';
-  private CHARACTER_COUNT = '/character/count';
-
-  constructor(){
-    //
-  }
+  private static CHARACTER = '/character';
+  private static CHARACTER_LIST = `${Storage.CHARACTER}/list`;
+  private static CHARACTER_COUNT = `${Storage.CHARACTER}/count`;
 
   public authVerifyToken(idToken) {
     return admin.auth().verifyIdToken(idToken)
@@ -37,8 +33,13 @@ export default class Storage {
     return snapshot.ref;
   }
 
-  public async fetchCharacters(){
-    const ref = admin.database().ref(`${this.CHARACTER_LIST}`);
+  public async fetchCharacters(limit:number, offset:number){
+    const ref = admin.database()
+                     .ref(`${Storage.CHARACTER_LIST}`)
+                     .orderByChild('sort')
+                     .startAt(offset)
+                     .endAt(limit + offset-1);
+
     const snapshot = await ref.once('value');
     const characters = snapshot.val();
     const count = await this.getCharacterCount();
@@ -46,10 +47,12 @@ export default class Storage {
   }
 
   public async createCharacter(obj){
-    const ref = admin.database().ref(`${this.CHARACTER_LIST}`);
+    const ref = admin.database().ref(`${Storage.CHARACTER_LIST}`);
     const now = Date.now();
+    const cnt = await this.getCharacterCount();
     const o = {
       ...obj,
+      sort: cnt,
       updatedAt: now,
       createdAt: now
     };
@@ -63,7 +66,7 @@ export default class Storage {
   }
 
   public async updateCharacter(id, obj){
-    const ref = admin.database().ref(`${this.CHARACTER_LIST}/${id}`);
+    const ref = admin.database().ref(`${Storage.CHARACTER_LIST}/${id}`);
     const now = Date.now();
     const result = {
       ...obj,
@@ -77,7 +80,7 @@ export default class Storage {
   }
 
   private async addCharacterCount(){
-    const ref = admin.database().ref(`${this.CHARACTER_COUNT}`);
+    const ref = admin.database().ref(`${Storage.CHARACTER_COUNT}`);
     const snapshot = await ref.once('value');
     const count = snapshot.val();
     if(count){
@@ -87,9 +90,12 @@ export default class Storage {
     }
   }
   private async getCharacterCount(){
-    const ref = admin.database().ref(`${this.CHARACTER_COUNT}`);
+    const ref = admin.database().ref(`${Storage.CHARACTER_COUNT}`);
     const snapshot = await ref.once('value');
     const count = snapshot.val();
+    if(!count){
+      return 0;
+    }
     return count;
   }
 }
