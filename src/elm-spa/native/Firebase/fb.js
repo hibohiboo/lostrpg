@@ -22,10 +22,7 @@ var auth = firebase.auth();
     const url = "https://us-central1-lostrpg-751c1.cloudfunctions.net/fetchMember/?uid=" + u.uid;
     const response = await fetch(url);
     const member = await response.json();
-    // const member = JSON.parse(json);
-    console.log(auth)
     const token = await auth.currentUser.getIdToken(true);
-    console.log(token)
     const user = {
       "email": "",
       "token": token,

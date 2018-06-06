@@ -7,22 +7,15 @@ export default class Auth {
 
   async authenticate (req, res) {
     if (!req.headers.authorization || !req.headers.authorization.startsWith('Bearer ')) {
-      console.log('bear?')
-      res.status(403).send('Unauthorized');
-      return null;
+      throw Error('Unauthorized');
     }
     const idToken = req.headers.authorization.split('Bearer ')[1];
-    console.log('idToken')
-    console.log(idToken)
     return  new Promise((resolve, reject) => {
       this.storage.authVerifyToken(idToken)
       .then((decodedIdToken) => {
         req.user = decodedIdToken;
-        console.log(decodedIdToken);
         resolve(decodedIdToken);
       }).catch(() => {
-        console.log('storage?')
-        res.status(403).send('Unauthorized');
         reject(Error('Unauthorized'));
       });
     });

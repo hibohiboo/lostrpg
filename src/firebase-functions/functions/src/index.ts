@@ -1,7 +1,7 @@
 // The Cloud Functions for Firebase SDK to create Cloud Functions and setup triggers.
 import * as functions from 'firebase-functions'; 
 import CharactersWidget from './characters';
-import {resSend, auth, resReject} from './util';
+import {resSend, auth} from './util';
 import Storage from './firebase';
 
 exports.characters = functions.https.onRequest(async (req, res) => {
@@ -14,25 +14,13 @@ exports.characters = functions.https.onRequest(async (req, res) => {
     result = await charactersWidget.fetch();
   }
   else if(method === 'POST' && req.params[0] && req.params[0].slice(1)) {
-    try{
-      await auth(req, res, storage);
-    }catch(error){
-      resReject(res);
-      return;
-    }
+    await auth(req, res, storage);
 
     const id = req.params[0].slice(1);
     result = await charactersWidget.update(id, req.body);
   }
   else if(method === 'POST'){
-    console.log('post')
-    try{
-      await auth(req, res, storage);
-    }catch(error){
-      console.log('rej')
-      resReject(res);
-      return;
-    }
+    await auth(req, res, storage);
 
     result = await charactersWidget.add(req.body);
   }
