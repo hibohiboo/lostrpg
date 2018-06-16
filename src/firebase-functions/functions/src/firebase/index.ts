@@ -48,21 +48,23 @@ export default class Storage {
 
   public async createCharacter(obj){
     const ref = admin.database().ref(`${Storage.CHARACTER_LIST}`);
-    const now = Date.now();
-    const cnt = await this.getCharacterCount();
-    const o = {
-      ...obj,
-      sort: cnt,
-      updatedAt: now,
-      createdAt: now
-    };
-    const pushedPostRef = await ref.push(o);
-
-    await this.addCharacterCount();
-    return {
-      ...o,
-      slug: pushedPostRef.getKey()
-    };
+    return ref.transaction( async a => {
+      const now = Date.now();
+      const cnt = await this.getCharacterCount();
+      const o = {
+        ...obj,
+        sort: cnt,
+        updatedAt: now,
+        createdAt: now
+      };
+      const pushedPostRef = await ref.push(o);
+  
+      await this.addCharacterCount();
+      return {
+        ...o,
+        slug: pushedPostRef.getKey()
+      };
+    });
   }
 
   public async updateCharacter(id, obj){
