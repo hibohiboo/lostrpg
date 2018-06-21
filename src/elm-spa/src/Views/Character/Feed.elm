@@ -25,10 +25,7 @@ type Model
     = Model InternalModel
 
 
-{-| This should not be exposed! We want to benefit from the guarantee that only
-this module can create or alter this model. This way if it ever ends up in
-a surprising state, we know exactly where to look: this file.
--}
+{-| 公開すべきではない内部モデル -}
 type alias InternalModel =
     { errors : List String
     , feed : Feed

@@ -1,8 +1,5 @@
 module Views.Errors exposing (view)
 
-{-| Render dismissable errors. We use this all over the place!
--}
-
 import Html exposing (..)
 import Html.Attributes exposing (class, style)
 import Html.Events exposing (onClick)

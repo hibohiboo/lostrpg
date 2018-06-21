@@ -14,8 +14,6 @@ import Html.Attributes as Attr
 type Image
     = Image String
 
-
-
 -- IMAGES --
 
 
@@ -23,10 +21,7 @@ error : Image
 error =
     Image "/assets/images/error.jpg"
 
-
-
 -- USING IMAGES --
-
 
 src : Image -> Attribute msg
 src (Image url) =

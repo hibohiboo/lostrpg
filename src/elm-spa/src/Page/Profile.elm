@@ -18,7 +18,6 @@ import Task exposing (Task)
 import Util exposing ((=>), pair, viewIf)
 import Views.Errors as Errors
 import Views.Page as Page
-import Views.User.Follow as Follow
 
 -- MODEL --
 
@@ -83,21 +82,13 @@ viewProfileInfo isMyProfile profile =
         [ img [ class "user-img", UserPhoto.src profile.image ] []
         , h4 [] [ User.usernameToHtml profile.username ]
         , p [] [ text (Maybe.withDefault "" profile.bio) ]
-        , viewIf (not isMyProfile) (followButton profile)
         ]
-
-
-
-
 
 -- UPDATE --
 
 
 type Msg
     = DismissErrors
-    | ToggleFollow
-    | FollowCompleted (Result Http.Error Profile)
-
 
 update : Session -> Msg -> Model -> ( Model, Cmd Msg )
 update session msg model =
@@ -108,32 +99,3 @@ update session msg model =
     case msg of
         DismissErrors ->
             { model | errors = [] } => Cmd.none
-
-        ToggleFollow ->
-            case session.user of
-                Nothing ->
-                    { model | errors = model.errors ++ [ "You are currently signed out. You must be signed in to follow people." ] }
-                        => Cmd.none
-
-                Just user ->
-                    user.token
-                        |> Request.Profile.toggleFollow
-                            profile.username
-                            profile.following
-                        |> Http.send FollowCompleted
-                        |> pair model
-
-        FollowCompleted (Ok newProfile) ->
-            { model | profile = newProfile } => Cmd.none
-
-        FollowCompleted (Err error) ->
-            model => Cmd.none
-
-
-followButton : Profile -> Html Msg
-followButton =
-    Follow.button (\_ -> ToggleFollow)
-
-
-
--- INTERNAL --
