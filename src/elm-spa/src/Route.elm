@@ -32,7 +32,7 @@ route =
         , Url.map Profile (s "profile" </> User.usernameParser)
         , Url.map Register (s "register")
         , Url.map NewCharacter (s "editor")
-
+        , Url.map Character (s "character" </> Character.slugParser)
         ]
 
 
@@ -69,8 +69,13 @@ routeToString page =
                 NewCharacter ->
                     [ "editor" ]
 
+                -- EditArticle slug ->
+                --     [ "editor", Article.slugToString slug ]
                 Character slug ->
-                    ["editor"]
+                    ["character", Character.slugToString slug]
+                -- Article slug ->
+                --     [ "article", Article.slugToString slug ]
+
     in
     "#/" ++ String.join "/" pieces
 

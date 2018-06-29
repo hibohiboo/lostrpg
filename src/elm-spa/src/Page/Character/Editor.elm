@@ -19,7 +19,6 @@ import Views.Page as Page
 
 -- MODEL --
 
-
 type alias Model =
     { errors : List Error
     , editingCharacter : Maybe Character.Slug
@@ -83,7 +82,7 @@ viewForm model =
 
         saveButtonText =
             if isEditing then
-                "Update Character"
+                "キャラクター更新"
             else
                 "キャラクター新規作成"
     in

@@ -30,12 +30,4 @@ view  char =
             , span [] [ text "Read more..." ]
             ]
         ]
-
-
-
--- INTERNAL --
-
-
--- formattedTimestamp : Character a -> String
--- formattedTimestamp article =
---     Date.Format.format "%B %e, %Y" article.createdAt
+        

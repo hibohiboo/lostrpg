@@ -10,8 +10,6 @@ type alias Feed =
     , charactersCount : Int
     }
 
-
-
 -- SERIALIZATION --
 
 

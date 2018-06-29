@@ -46,3 +46,15 @@ slugParser =
 slugToString : Slug -> String
 slugToString (Slug slug) =
     slug
+
+-- VIEW --
+
+
+view : Session -> Model -> Html Msg
+view session model =
+    let
+        character =
+            model.character
+    in
+    div [ class "article-page" ]
+        [ text character.name ]
