@@ -8,6 +8,9 @@ module.exports = {
     elm: [
       './src/index.js'
     ],
+    login: [
+      './src/login.js'
+    ],
     native: [
       './src/native/index.js'
     ]

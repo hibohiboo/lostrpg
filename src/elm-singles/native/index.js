@@ -10,9 +10,9 @@ var app = Elm.Main.fullscreen();
 //   }
 // }, false);
 
-// import {redirectTwitter} from './Firebase/fb';
+import {redirectTwitter} from './Firebase/fb';
 
-// //ElmからJSへはsubscribe
-// app.ports.redirectTwitter.subscribe(function() {
-//   redirectTwitter();
-// });
+//ElmからJSへはsubscribe
+app.ports.redirectTwitter.subscribe(function() {
+  redirectTwitter();
+});
