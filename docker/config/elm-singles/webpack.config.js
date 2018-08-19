@@ -13,6 +13,9 @@ module.exports = {
     ],
     native: [
       './src/native/index.js'
+    ],
+    loginJs: [
+      './src/native/login.js'
     ]
   },
 

@@ -1,7 +1,8 @@
 module Main exposing (..)
 
 import Json.Decode as Decode exposing (Value, Decoder, decodeString, field, string)
-import Html exposing (Html, div, text, program)
+import Html exposing (..)
+import Html.Attributes exposing (..)
 
 
 -- モデル
@@ -31,7 +32,9 @@ type Msg
 view : Model -> Html Msg
 view model =
     div []
-        [ text model ]
+        [ a [ href "./login.html" ]
+            [ text "ログイン" ]
+        ]
 
 
 
