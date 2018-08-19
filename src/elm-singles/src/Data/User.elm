@@ -19,9 +19,9 @@ type alias User =
     , image : UserPhoto
     , createdAt : String
     , updatedAt : String
-    , uid: String
-    , twitterId: String
-    , twitterName: String
+    , uid : String
+    , twitterId : String
+    , twitterName : String
     }
 
 

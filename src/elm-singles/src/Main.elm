@@ -1,6 +1,8 @@
 module Main exposing (..)
 
+import Json.Decode as Decode exposing (Value, Decoder, decodeString, field, string)
 import Html exposing (Html, div, text, program)
+
 
 -- モデル
 
@@ -9,8 +11,8 @@ type alias Model =
     String
 
 
-init : ( Model, Cmd Msg )
-init =
+init : Value -> ( Model, Cmd Msg )
+init val =
     ( "Hello", Cmd.none )
 
 
@@ -56,9 +58,9 @@ subscriptions model =
 -- MAIN
 
 
-main : Program Never Model Msg
+main : Program Value Model Msg
 main =
-    program
+    Html.programWithFlags
         { init = init
         , view = view
         , update = update

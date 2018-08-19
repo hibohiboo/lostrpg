@@ -4,20 +4,36 @@ module Main exposing (..)
 -}
 
 import Data.Session exposing (Session)
-import Data.User exposing (User)
+import Data.User exposing (User, decoder)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
-import Json.Decode as Decode exposing (Decoder, decodeString, field, string)
+import Json.Decode as Decode exposing (Value, Decoder, decodeString, field, string)
 import Json.Decode.Pipeline exposing (decode, optional)
-import Ports exposing (redirectTwitter)
+import Ports exposing (redirectTwitter, redirectTop)
 import Util exposing ((=>))
 
 
-init : ( Model, Cmd Msg )
-init =
-    ( initialModel, Cmd.none )
+init : Value -> ( Model, Cmd Msg )
+init val =
+    let
+        model =
+            initialModel val
+
+        cmd =
+            case model.session.user of
+                Nothing ->
+                    Cmd.none
+
+                Just user ->
+                    Cmd.batch [ redirectTop () ]
+    in
+        let
+            _ =
+                Debug.log "このコード片は割とどこおいても大丈夫な気がする" model.session
+        in
+            ( model, cmd )
 
 
 
@@ -25,12 +41,22 @@ init =
 
 
 type alias Model =
-    {}
+    { session : Session
+    }
 
 
-initialModel : Model
-initialModel =
-    {}
+initialModel : Value -> Model
+initialModel val =
+    { session = { user = decodeUserFromJson val }
+    }
+
+
+decodeUserFromJson : Value -> Maybe User
+decodeUserFromJson json =
+    json
+        |> Decode.decodeValue Decode.string
+        |> Result.toMaybe
+        |> Maybe.andThen (Decode.decodeString decoder >> Result.toMaybe)
 
 
 
@@ -39,10 +65,12 @@ initialModel =
 
 view : Model -> Html Msg
 view model =
-    div [ class "auth-page" ]
-        [ div [ class "container page" ]
-            [ div [ class "row" ]
-                [ twitterLoginButton
+    div []
+        [ h1 [] [ text "ログイン" ]
+        , div [ class "auth-page" ]
+            [ div [ class "container page" ]
+                [ div [ class "row" ]
+                    [ twitterLoginButton ]
                 ]
             ]
         ]
@@ -70,17 +98,40 @@ viewSignIn model =
 type Msg
     = TwitterLogin
     | NoOp
+    | SetUser (Maybe User)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-    case msg of
-        TwitterLogin ->
-            model
-                => Cmd.batch [ redirectTwitter () ]
+    let
+        session =
+            model.session
+    in
+        case msg of
+            TwitterLogin ->
+                model
+                    => Cmd.batch [ redirectTwitter () ]
 
-        NoOp ->
-            ( model, Cmd.none )
+            NoOp ->
+                case model.session.user of
+                    Nothing ->
+                        ( model, Cmd.none )
+
+                    Just user ->
+                        model
+                            => Cmd.batch [ redirectTop () ]
+
+            SetUser user ->
+                let
+                    cmd =
+                        -- If we just signed out, then redirect to Home.
+                        if session.user /= Nothing && user == Nothing then
+                            Cmd.none
+                        else
+                            Cmd.batch [ redirectTop () ]
+                in
+                    { model | session = { session | user = user } }
+                        => cmd
 
 
 
@@ -89,12 +140,19 @@ update msg model =
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    Sub.none
+    Sub.batch
+        [ Sub.map SetUser sessionChange
+        ]
 
 
-main : Program Never Model Msg
+sessionChange : Sub (Maybe User)
+sessionChange =
+    Ports.onSessionChange (Decode.decodeValue decoder >> Result.toMaybe)
+
+
+main : Program Value Model Msg
 main =
-    program
+    Html.programWithFlags
         { init = init
         , view = view
         , update = update
