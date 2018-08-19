@@ -62,7 +62,7 @@ services:
     volumes:
       - ./config/elm-singles/webpack.config.js:/app/webpack.config.js
       - ../src/elm-singles:/app/src
-      - ../src/elm-singles/assets:/app/assets
+      - ../src/elm-singles/public:/app/public
       - ../app/public/assets/js/forms:/app/dist
       - ../tests/elm-singles:/app/tests/tests
       - cache1:/app/elm-stuff
