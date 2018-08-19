@@ -44,14 +44,27 @@ services:
       - ../dist/lost:/app/src
       - ../app/public/lost:/app/dist
 
-  elm-dev:
-    build: ./elm-dev
+  # elm-dev:
+  #   build: ./elm-dev
+  #   volumes:
+  #     - ./config/elm/webpack.config.js:/app/webpack.config.js
+  #     - ../src/elm-spa:/app/src
+  #     - ../src/elm-spa/assets:/app/assets
+  #     - ../app/public/assets/js/forms:/app/dist
+  #     - ../tests/elm-spa:/app/tests/tests
+  #     - cache1:/app/elm-stuff
+  #     - cache2:/app/tests/elm-stuff
+  #   ports:
+  #     - 3000:3000
+  #   command: [yarn, dev]
+  elm-singles:
+    build: ./elm-singles
     volumes:
-      - ./config/elm/webpack.config.js:/app/webpack.config.js
-      - ../src/elm-spa:/app/src
-      - ../src/elm-spa/assets:/app/assets
+      - ./config/elm-singles/webpack.config.js:/app/webpack.config.js
+      - ../src/elm-singles:/app/src
+      - ../src/elm-singles/assets:/app/assets
       - ../app/public/assets/js/forms:/app/dist
-      - ../tests/elm-spa:/app/tests/tests
+      - ../tests/elm-singles:/app/tests/tests
       - cache1:/app/elm-stuff
       - cache2:/app/tests/elm-stuff
     ports:
