@@ -1,4 +1,4 @@
-module Data.User exposing (User, Username, decoder, encode, usernameDecoder, usernameParser, usernameToHtml, usernameToString)
+module Data.User exposing (User, Username, decoder, encode, usernameDecoder, usernameParser, usernameToHtml, usernameToString, decodeUserFromJson)
 
 import Data.AuthToken as AuthToken exposing (AuthToken)
 import Data.UserPhoto as UserPhoto exposing (UserPhoto)
@@ -89,3 +89,10 @@ encodeUsername (Username username) =
 usernameToHtml : Username -> Html msg
 usernameToHtml (Username username) =
     Html.text username
+
+decodeUserFromJson : Value -> Maybe User
+decodeUserFromJson json =
+    json
+        |> Decode.decodeValue Decode.string
+        |> Result.toMaybe
+        |> Maybe.andThen (Decode.decodeString decoder >> Result.toMaybe)

@@ -3,18 +3,25 @@ module Main exposing (..)
 import Json.Decode as Decode exposing (Value, Decoder, decodeString, field, string)
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Data.Session exposing (Session)
+import Data.User exposing (User, decoder, decodeUserFromJson, usernameToString)
 
 
 -- モデル
 
 
 type alias Model =
-    String
+    { session : Session }
 
 
 init : Value -> ( Model, Cmd Msg )
 init val =
-    ( "Hello", Cmd.none )
+    ( initialModel val, Cmd.none )
+
+
+initialModel : Value -> Model
+initialModel val =
+    { session = { user = decodeUserFromJson val } }
 
 
 
@@ -31,10 +38,24 @@ type Msg
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ a [ href "./login.html" ]
-            [ text "ログイン" ]
-        ]
+    loginView model
+
+
+loginView : Model -> Html Msg
+loginView model =
+    let
+        user =
+            model.session.user
+    in
+        case user of
+            Nothing ->
+                div []
+                    [ a [ href "./login.html" ]
+                        [ text "ログイン" ]
+                    ]
+
+            Just user ->
+                Html.text ("Hello " ++ usernameToString user.username)
 
 
 

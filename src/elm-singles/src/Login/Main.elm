@@ -4,7 +4,7 @@ module Main exposing (..)
 -}
 
 import Data.Session exposing (Session)
-import Data.User exposing (User, decoder)
+import Data.User exposing (User, decoder, decodeUserFromJson)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
@@ -47,18 +47,7 @@ type alias Model =
 
 initialModel : Value -> Model
 initialModel val =
-    { session = { user = decodeUserFromJson val }
-    }
-
-
-decodeUserFromJson : Value -> Maybe User
-decodeUserFromJson json =
-    json
-        |> Decode.decodeValue Decode.string
-        |> Result.toMaybe
-        |> Maybe.andThen (Decode.decodeString decoder >> Result.toMaybe)
-
-
+    { session = { user = decodeUserFromJson val }}
 
 -- VIEW --
 
