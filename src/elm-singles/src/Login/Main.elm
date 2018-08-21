@@ -64,7 +64,16 @@ decodeUserFromJson json =
 
 
 view : Model -> Html Msg
-view model =
+view model =  
+            case model.session.user of
+                Nothing ->
+                    page
+
+                Just user ->
+                    Html.text ""
+
+page: Html Msg
+page = 
     div []
         [ h1 [] [ text "ログイン" ]
         , div [ class "auth-page" ]
@@ -74,8 +83,6 @@ view model =
                 ]
             ]
         ]
-
-
 twitterLoginButton : Html Msg
 twitterLoginButton =
     div []
