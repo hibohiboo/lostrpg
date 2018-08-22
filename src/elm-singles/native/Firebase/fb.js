@@ -13,13 +13,15 @@ var event = new Event('sessionSet');
 // 認証チェック
 auth.onAuthStateChanged(async function(u) {
   if (u) {
+    // カスタムイベントの発火(loading)
+    document.dispatchEvent(event);
+
     var user = await makeUser(u);
     window.localStorage.setItem('session', JSON.stringify(user));
 
     // カスタムイベントの発火
     document.dispatchEvent(event);
   }
-  console.log('user', u)
 });
 
 /**

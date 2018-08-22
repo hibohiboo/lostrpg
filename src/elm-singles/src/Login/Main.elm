@@ -42,12 +42,31 @@ init val =
 
 type alias Model =
     { session : Session
+    , status : Status
     }
+
+
+type Status
+    = Blank
+    | Display
+    | Loading
 
 
 initialModel : Value -> Model
 initialModel val =
-    { session = { user = decodeUserFromJson val } }
+    let
+        user =
+            decodeUserFromJson val
+
+        status =
+           case user of
+            Nothing ->
+                Display
+
+            Just user ->
+                Blank
+    in
+        { session = { user = user }, status = status }
 
 
 
@@ -56,13 +75,14 @@ initialModel val =
 
 view : Model -> Html Msg
 view model =
-    case model.session.user of
-        Nothing ->
+    case model.status of
+        Display ->
             page
 
-        Just user ->
+        Blank ->
             Html.text ""
-
+        Loading ->
+            Html.text "now loading ..."
 
 page : Html Msg
 page =
@@ -133,8 +153,13 @@ update msg model =
                                 Cmd.none
                             else
                                 Cmd.batch [ redirectTop () ]
+                    status =
+                            if user == Nothing then
+                                Loading
+                            else
+                                Blank
                 in
-                    { model | session = { session | user = user } }
+                    { model | session = { session | user = user }, status = status }
                         => cmd
 
 
