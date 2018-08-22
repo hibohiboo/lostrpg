@@ -9,7 +9,6 @@ window.addEventListener("storage", function(event) {
 
 // カスタムイベントを待ち受ける。ローカルストレージへのセッションの保存をelmに伝える
 document.addEventListener('sessionSet', function (e) { 
-  console.log('session', localStorage.session)
   app.ports.onSessionChange.send(localStorage.session);
  }, false);
 

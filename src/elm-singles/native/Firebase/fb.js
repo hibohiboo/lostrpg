@@ -13,12 +13,8 @@ var event = new Event('sessionSet');
 // 認証チェック
 auth.onAuthStateChanged(async function(u) {
   if (u) {
-    // カスタムイベントの発火(loading)
-    document.dispatchEvent(event);
-
     var user = await makeUser(u);
     window.localStorage.setItem('session', JSON.stringify(user));
-
     // カスタムイベントの発火
     document.dispatchEvent(event);
   }
@@ -33,7 +29,6 @@ async function makeUser(u){
   const response = await fetch(url);
   const member = await response.json();
   const token = await auth.currentUser.getIdToken(true);
-  console.log('create', u.metadata.creationTime)
 
   const user = {
     "email": "",
