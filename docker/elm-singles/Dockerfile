@@ -78,6 +78,9 @@ RUN yarn elm package install -y rtfeldman/selectlist
 
 ADD ./tests/elm-package.json /app/tests/elm-package.json
 
+# フロントエンドライブラリ追加
+RUN yarn add moment
+
 # source-directories変更
 RUN sed -i -e "s/\".\"/\".\/src\/src\"/" /app/elm-package.json
 

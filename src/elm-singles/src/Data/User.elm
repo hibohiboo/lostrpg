@@ -92,6 +92,10 @@ usernameToHtml (Username username) =
 
 decodeUserFromJson : Value -> Maybe User
 decodeUserFromJson json =
+                        let
+                            _ =
+                                Debug.log "decodeUser" json
+                                in
     json
         |> Decode.decodeValue Decode.string
         |> Result.toMaybe

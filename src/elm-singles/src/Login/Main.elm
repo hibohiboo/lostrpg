@@ -47,22 +47,25 @@ type alias Model =
 
 initialModel : Value -> Model
 initialModel val =
-    { session = { user = decodeUserFromJson val }}
+    { session = { user = decodeUserFromJson val } }
+
+
 
 -- VIEW --
 
 
 view : Model -> Html Msg
-view model =  
-            case model.session.user of
-                Nothing ->
-                    page
+view model =
+    case model.session.user of
+        Nothing ->
+            page
 
-                Just user ->
-                    Html.text ""
+        Just user ->
+            Html.text ""
 
-page: Html Msg
-page = 
+
+page : Html Msg
+page =
     div []
         [ h1 [] [ text "ログイン" ]
         , div [ class "auth-page" ]
@@ -72,6 +75,8 @@ page =
                 ]
             ]
         ]
+
+
 twitterLoginButton : Html Msg
 twitterLoginButton =
     div []
@@ -120,11 +125,14 @@ update msg model =
             SetUser user ->
                 let
                     cmd =
-                        -- If we just signed out, then redirect to Home.
-                        if session.user /= Nothing && user == Nothing then
-                            Cmd.none
-                        else
-                            Cmd.batch [ redirectTop () ]
+                        let
+                            _ =
+                                Debug.log "setuser" user
+                        in
+                            if user == Nothing then
+                                Cmd.none
+                            else
+                                Cmd.batch [ redirectTop () ]
                 in
                     { model | session = { session | user = user } }
                         => cmd
@@ -137,13 +145,12 @@ update msg model =
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.batch
-        [ Sub.map SetUser sessionChange
-        ]
+        [ Sub.map SetUser sessionChange ]
 
 
 sessionChange : Sub (Maybe User)
 sessionChange =
-    Ports.onSessionChange (Decode.decodeValue decoder >> Result.toMaybe)
+    Ports.onSessionChange (decodeUserFromJson)
 
 
 main : Program Value Model Msg

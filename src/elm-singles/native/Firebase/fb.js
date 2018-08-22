@@ -2,16 +2,24 @@
 // ********** C O N F I G
 import firebase from 'firebase';
 import config from "./fb.config.json";
+import moment from 'moment';
 
 firebase.initializeApp(config);
 var auth = firebase.auth();
+
+// カスタムイベントの設定
+var event = new Event('sessionSet');
 
 // 認証チェック
 auth.onAuthStateChanged(async function(u) {
   if (u) {
     var user = await makeUser(u);
     window.localStorage.setItem('session', JSON.stringify(user));
+
+    // カスタムイベントの発火
+    document.dispatchEvent(event);
   }
+  console.log('user', u)
 });
 
 /**
@@ -23,14 +31,16 @@ async function makeUser(u){
   const response = await fetch(url);
   const member = await response.json();
   const token = await auth.currentUser.getIdToken(true);
+  console.log('create', u.metadata.creationTime)
+
   const user = {
     "email": "",
     "token": token,
     "username": member.twitterName,
     "bio": null,
     "image": null,
-    "createdAt": "2018-05-27T01:15:06.996Z",
-    "updatedAt": "2018-05-27T01:15:07.002Z",
+    "createdAt": moment(u.metadata.creationTime).format('YYYY-MM-DDTHH:mm:ssZ'),
+    "updatedAt": moment(u.metadata.lastSignInTime).format('YYYY-MM-DDTHH:mm:ssZ'), //"2018-05-27T01:15:07.002Z",
     "uid": u.uid,
     "twitterId": member.twitterId,
     "twitterName": member.twitterName
@@ -39,9 +49,15 @@ async function makeUser(u){
 }
 
 export function redirectTwitter() {
-return auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-.then(() => {
-  const provider = new firebase.auth.TwitterAuthProvider();
-  auth.signInWithRedirect(provider);
-});
+  return auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+  .then(() => {
+    const provider = new firebase.auth.TwitterAuthProvider();
+    auth.signInWithRedirect(provider);
+  });
+}
+
+export function signOut() {
+  auth.signOut().then(function() {
+    console.log("Signed out.");
+  });
 }

@@ -5,7 +5,9 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Data.Session exposing (Session)
 import Data.User exposing (User, decoder, decodeUserFromJson, usernameToString)
-
+import Util exposing ((=>))
+import Html.Events exposing (onClick)
+import Ports exposing (storeSession)
 
 -- モデル
 
@@ -30,6 +32,7 @@ initialModel val =
 
 type Msg
     = NoOp
+    | Logout
 
 
 
@@ -55,7 +58,10 @@ loginView model =
                     ]
 
             Just user ->
-                Html.text ("Hello " ++ usernameToString user.username)
+                div []
+                    [ Html.text ("Hello " ++ usernameToString user.username)
+                    , button [ onClick Logout ] [ text "Logout" ]
+                    ]
 
 
 
@@ -67,6 +73,13 @@ update msg model =
     case msg of
         NoOp ->
             ( model, Cmd.none )
+
+        Logout ->
+            let
+                session =
+                    model.session
+            in
+                { model | session = { session | user = Nothing } } => Cmd.batch [ Ports.storeSession Nothing ]
 
 
 
