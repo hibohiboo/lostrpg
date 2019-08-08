@@ -57,19 +57,19 @@ services:
   #   ports:
   #     - 3000:3000
   #   command: [yarn, dev]
-  elm-singles:
-    build: ./elm-singles
-    volumes:
-      - ./config/elm-singles/webpack.config.js:/app/webpack.config.js
-      - ../src/elm-singles:/app/src
-      - ../src/elm-singles/public:/app/public
-      - ../app/public/assets/js/forms:/app/dist
-      - ../tests/elm-singles:/app/tests/tests
-      - cache1:/app/elm-stuff
-      - cache2:/app/tests/elm-stuff
-    ports:
-      - 3000:3000
-    command: [yarn, dev]
+  # elm-singles:
+  #   build: ./elm-singles
+  #   volumes:
+  #     - ./config/elm-singles/webpack.config.js:/app/webpack.config.js
+  #     - ../src/elm-singles:/app/src
+  #     - ../src/elm-singles/public:/app/public
+  #     - ../app/public/assets/js/forms:/app/dist
+  #     - ../tests/elm-singles:/app/tests/tests
+  #     - cache1:/app/elm-stuff
+  #     - cache2:/app/tests/elm-stuff
+  #   ports:
+  #     - 3000:3000
+  #   command: [yarn, dev]
 
 volumes:
   cache1: # 名前付きボリューム名
