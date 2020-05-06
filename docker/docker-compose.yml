@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   # firebase cli
   firebase:
@@ -13,7 +13,7 @@ services:
       - ../src/firebase-functions/functions/tsconfig.json:/app/functions/tsconfig.json
       - ../src/firebase-functions/functions/tslint.json:/app/functions/tslint.json
       # functions auth
-      - ./config/firebase/keys:/keys  
+      - ./config/firebase/keys:/keys
     ports:
       - 5000:5000
       - 9005:9005
@@ -28,7 +28,7 @@ services:
       - ../app/public/assets/css:/app/dest
     command: [npm, run, run]
 
-# htmlテンプレートエンジン
+  # htmlテンプレートエンジン
   pug:
     build: ./pug
     volumes:
@@ -37,39 +37,12 @@ services:
     environment:
       - SHELL=/bin/bash
     command: [npm, run, watch]
-  
+
   html2jade:
     build: ./html2jade
     volumes:
       - ../dist/lost:/app/src
       - ../app/public/lost:/app/dist
-
-  # elm-dev:
-  #   build: ./elm-dev
-  #   volumes:
-  #     - ./config/elm/webpack.config.js:/app/webpack.config.js
-  #     - ../src/elm-spa:/app/src
-  #     - ../src/elm-spa/assets:/app/assets
-  #     - ../app/public/assets/js/forms:/app/dist
-  #     - ../tests/elm-spa:/app/tests/tests
-  #     - cache1:/app/elm-stuff
-  #     - cache2:/app/tests/elm-stuff
-  #   ports:
-  #     - 3000:3000
-  #   command: [yarn, dev]
-  # elm-singles:
-  #   build: ./elm-singles
-  #   volumes:
-  #     - ./config/elm-singles/webpack.config.js:/app/webpack.config.js
-  #     - ../src/elm-singles:/app/src
-  #     - ../src/elm-singles/public:/app/public
-  #     - ../app/public/assets/js/forms:/app/dist
-  #     - ../tests/elm-singles:/app/tests/tests
-  #     - cache1:/app/elm-stuff
-  #     - cache2:/app/tests/elm-stuff
-  #   ports:
-  #     - 3000:3000
-  #   command: [yarn, dev]
 
 volumes:
   cache1: # 名前付きボリューム名
