@@ -15,45 +15,13 @@ block body
     section.content
       .container
         h1 LOSTRPG サマリー
-        h2 キャラクターメイキング
-        .mermaid
-           | graph TD
-           |   A[クラス選択]
-           |   click A "rulebook.html#decide-class"
-           |   b[アビリティ選択]
-           |   click b "rulebook.html#decide-ability"
-           |   B[アビリティ選択]
-           |   click B "rulebook.html#decide-ability"
-           |   C[特技選択]
-           |   click C "rulebook.html#decide-skill"
-           |   D[体力の決定]
-           |   click D "rulebook.html#decide-HP"
-           |   E[気力の決定]
-           |   click E "rulebook.html#decide-MP"
-           |   F[所持限界の決定]
-           |   click F "rulebook.html#decide-limitedweight"
-           |   G[アイテムの購入]
-           |   click G "rulebook.html#decide-item"
-           |   H["名前の決定"]
-           |   click H "rulebook.html#decide-name"
-           |   I["性別・年齢の決定"]
-           |   click I "rulebook.html#decide-sex"
-           |   J[背景の設定]
-           |   click J "rulebook.html#decide-background"
-           |   K["完成!"]
-           |
-           |   A-->|1つ| b
-           |   A-->|2つ| B
-           |   b-->|4つ|C
-           |   B-->|3つ|C
-           |   C-->|6つ|D
-           |   D-->|10点|E
-           |   E-->|10点|F
-           |   F-->|5点|G
-           |   G-->|10J+リュックサック|H
-           |   H-->|自由|I
-           |   I-->|自由|J
-           |   J-->|自由|K
+        div(style="display:flex;flex-wrap:wrap;")
+          section
+            h2#character キャラクターメイキング
+            include includes/summary/character
+          section(style="margin-left:30px")
+            h2#check 行為判定
+            include includes/summary/check
   include includes/common/footer
 
 block footjs
