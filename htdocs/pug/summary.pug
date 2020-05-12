@@ -15,12 +15,13 @@ block body
     section.content
       .container
         h1 LOSTRPG サマリー
+        p #[a(href="chart.html") チャート類はこちら→●]
         div(style="display:flex;flex-wrap:wrap;")
           section
-            h2#character キャラクターメイキング
+            h2#character #[a(href="rulebook.html#character") キャラクターメイキング]
             include includes/summary/character
-          section(style="margin-left:30px")
-            h2#check 行為判定
+          section(style="overflow:scroll;width:100%")
+            h2#check #[a(href="rulebook.html#check") 行為判定]
             include includes/summary/check
   include includes/common/footer
 
