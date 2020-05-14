@@ -624,12 +624,13 @@
             <li>キャンプの仲間と友情を結んだ(1点)</li>
           </ol>
           <h3>経験点の使用</h3>
+          <p>キャラクターは経験点を使用して、「背景」を取得できるようになります。</p>
           <table class="responsive" id="charcter-backbone">
             <caption>背景表</caption>
             <thead>
               <tr>
                 <th>名前 
-                  <th>必要CP</th> 
+                  <th>必要経験点</th> 
                   <th>タイプ</th> 
                   <th>指定特技</th> 
                   <th>レベル</th> 
@@ -640,7 +641,7 @@
             </thead>
             <tr>
               <td class="txt-center">ペット</td>
-              <td data-title="必要CP">3</td>
+              <td data-title="必要経験点">3</td>
               <td data-title="タイプ">常駐</td>
               <td class="nowrap" data-title="指定特技">-</td>
               <td data-title="最大レベル">-</td>
@@ -649,7 +650,7 @@
             </tr>
             <tr>
               <td class="txt-center">病気の身内</td>
-              <td data-title="必要CP">5</td>
+              <td data-title="必要経験点">5</td>
               <td data-title="タイプ">割り込み</td>
               <td class="nowrap" data-title="指定特技">-</td>
               <td data-title="最大レベル">-</td>
@@ -658,7 +659,7 @@
             </tr>
             <tr>
               <td class="txt-center">親友</td>
-              <td data-title="必要CP">10</td>
+              <td data-title="必要経験点">10</td>
               <td data-title="タイプ">常駐</td>
               <td class="nowrap" data-title="指定特技">-</td>
               <td data-title="最大レベル">-</td>
@@ -679,86 +680,107 @@
               </tr>
             </thead>
             <tr>
+              <td>11</td>
               <td class="txt-center" data-title="11">変貌</td>
               <td>あなたは目が覚めたら変わってしまっていた。外見、性格、体質……。5年前の自分を今はどう思うだろう。</td>
             </tr>
             <tr>
+              <td>12</td>
               <td class="txt-center" data-title="12">守るべきもの</td>
               <td>あなたはキャンプに大切なものができた。親友、ペット、場所など。</td>
             </tr>
             <tr>
+              <td>13</td>
               <td class="txt-center" data-title="13">兄弟</td>
               <td>あなたには兄弟/姉妹がいた。今は何をしているだろう。</td>
             </tr>
             <tr>
+              <td>14</td>
               <td class="txt-center" data-title="14">形見</td>
               <td>あなたは大切だった人の形見を大事に持っている。今際の際のその人の言葉は……。</td>
             </tr>
             <tr>
+              <td>15</td>
               <td class="txt-center" data-title="15">放浪</td>
               <td>あなたが以前居たキャンプは壊滅してしまった。このキャンプでやりなおせるだろうか。</td>
             </tr>
             <tr>
+              <td>16</td>
               <td class="txt-center" data-title="16">忘却</td>
               <td>あなたには抜け落ちた記憶がある。思い出さなくてはいけないことか、思い出してはいけないことか。</td>
             </tr>
             <tr>
+              <td>22</td>
               <td class="txt-center" data-title="22">望郷</td>
               <td>あなたの故郷は遠い。いつか帰ることができるだろうか。</td>
             </tr>
             <tr>
+              <td>23</td>
               <td class="txt-center" data-title="23">恩人</td>
               <td>あなたはとある人物に危機を救われたことがある。その人は今……。</td>
             </tr>
             <tr>
+              <td>24</td>
               <td class="txt-center" data-title="24">喪失</td>
               <td>あなたは何かを失った。それを、取り戻したいと思っている。</td>
             </tr>
             <tr>
+              <td>25</td>
               <td class="txt-center" data-title="25">飢え</td>
               <td>あなたは空腹で死にそうになったことがある。家に帰れば夕食が待っていた頃が夢のようだ。</td>
             </tr>
             <tr>
+              <td>26</td>
               <td class="txt-center" data-title="26">生き別れ</td>
               <td>あなたは大切な人と生き別れになった。彼もきっと生きていると信じている。</td>
             </tr>
             <tr>
+              <td>33</td>
               <td class="txt-center" data-title="33">恋</td>
               <td>あなたは恋に落ちた。あの人の顔を見るだけで胸が高鳴った。</td>
             </tr>
             <tr>
+              <td>34</td>
               <td class="txt-center" data-title="34">夢</td>
               <td>あなたには夢があった。その夢は今は叶えられるものだろうか。</td>
             </tr>
             <tr>
+              <td>35</td>
               <td class="txt-center" data-title="35">トラウマ</td>
               <td>あなたは心に傷をおった。暗闇、水、炎、怒号、死、あなたに降りかかったのは？</td>
             </tr>
             <tr>
+              <td>36</td>
               <td class="txt-center" data-title="36">復讐</td>
               <td>あなたは理不尽に奪われた。ヌシだったろうか、それとも同じヒトだっただろうか。あなたの脳裏にはヤツの姿が焼き付いている。</td>
             </tr>
             <tr>
+              <td>44</td>
               <td class="txt-center" data-title="44">探求</td>
               <td>あなたには探し求めているものがある。それはあなたにとって、命をかけるに足るものだ。</td>
             </tr>
             <tr>
+              <td>45</td>
               <td class="txt-center" data-title="45">孤独</td>
               <td>あなたはひとりぼっちだった時期がある。今はどうだろうか。</td>
             </tr>
             <tr>
+              <td>46</td>
               <td class="txt-center" data-title="46">師</td>
               <td>あなたに道を示してくれた人がいる。いまのあなたがあるのは彼のおかげだ。</td>
             </tr>
             <tr>
+              <td>55</td>
               <td class="txt-center" data-title="55">罪</td>
               <td>あなたは罪を犯したことがある。許される日はくるのだろうか。</td>
             </tr>
             <tr>
+              <td>56</td>
               <td class="txt-center" data-title="56">感謝</td>
               <td>あなたは大きく感謝されることをしたことがある。</td>
             </tr>
             <tr>
+              <td>66</td>
               <td class="txt-center" data-title="66">死</td>
               <td>あなたは死んだ、はずだった。しかし何故かあなたは今、生きている。</td>
             </tr>

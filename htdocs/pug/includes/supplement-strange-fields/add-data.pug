@@ -4,15 +4,18 @@ h3#get_exp 経験点の入手
 ol
   li 新たなアイテムを手に入れた(1点)
   li キャンプの仲間と友情を結んだ(1点)
+
 h3 経験点の使用
+p キャラクターは経験点を使用して、「背景」を取得できるようになります。
+
 table.responsive#charcter-backbone
   caption 背景表
   thead
-    tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
+    tr: th 名前 #[th 必要経験点] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
   each facility in backboneList
     tr
       td.txt-center= facility.name
-      td(data-title='必要CP')= facility.cp
+      td(data-title='必要経験点')= facility.cp
       td(data-title='タイプ')= facility.type
       td.nowrap(data-title='指定特技')= facility.specialty
       td(data-title='最大レベル')= facility.maxLv
@@ -26,6 +29,7 @@ table.responsive#table-experience
     tr: th 2d6 #[th 経験] #[th 内容] 
   each item in experienceList
     tr
+      td= item.d66
       td.txt-center(data-title=item.d66)= item.a
       td= item.b
 h3#add-class 追加クラス
