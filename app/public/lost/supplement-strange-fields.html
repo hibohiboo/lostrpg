@@ -632,9 +632,6 @@
                 <th>名前 
                   <th>必要経験点</th> 
                   <th>タイプ</th> 
-                  <th>指定特技</th> 
-                  <th>レベル</th> 
-                  <th>前提</th> 
                   <th>効果</th>
                 </th>
               </tr>
@@ -643,27 +640,18 @@
               <td class="txt-center">ペット</td>
               <td data-title="必要経験点">3</td>
               <td data-title="タイプ">常駐</td>
-              <td class="nowrap" data-title="指定特技">-</td>
-              <td data-title="最大レベル">-</td>
-              <td data-title="前提"></td>
               <td data-title="効果">	アイテムの「ペット」を１つ入手する。あなたはペットを飼っている。このペットで買い物することはできない。</td>
             </tr>
             <tr>
               <td class="txt-center">病気の身内</td>
               <td data-title="必要経験点">5</td>
               <td data-title="タイプ">割り込み</td>
-              <td class="nowrap" data-title="指定特技">-</td>
-              <td data-title="最大レベル">-</td>
-              <td data-title="前提"></td>
               <td data-title="効果">	セッション中1度だけ、自身の振ったダイスを裏返すことができる(1ゾロならば6ゾロになる）。 あなたには家族同然に思っている人物がいる。その人物は病気である。貴方が守ってあげなくてはならない。 セッション終了時に、「コカの葉」など【体力】の回復するアイテムを消費しないと、病気の身内は死亡する。</td>
             </tr>
             <tr>
               <td class="txt-center">親友</td>
               <td data-title="必要経験点">10</td>
               <td data-title="タイプ">常駐</td>
-              <td class="nowrap" data-title="指定特技">-</td>
-              <td data-title="最大レベル">-</td>
-              <td data-title="前提"></td>
               <td data-title="効果">	あなたはキャンプフェイズに2回行動できる。あなたには親友がいて、キャンプフェイズに準備を手伝ってくれる。</td>
             </tr>
           </table>
@@ -843,6 +831,54 @@
               <td class="nowrap" data-title="指定特技">《休む》</td>
               <td data-title="対象">自身</td>
               <td data-title="効果">指定特技の判定に成功すると、自身の【気力】を[気力基準値÷2]点回復する。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-big">
+            <caption>ビッグ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">強靭</td>
+              <td data-title="グループ">ビッグ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">死亡判定の達成値にプラス1の修正がつく。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-little">
+            <caption>チビ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">大樹の陰</td>
+              <td data-title="グループ">チビ</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">3</td>
+              <td class="nowrap" data-title="指定特技">《かわす》</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">対象：全体の攻撃の命中判定後に使用する。指定特技の判定に成功すると、攻撃対象から自身を外すことが出来る。</td>
             </tr>
           </table>
           <table class="responsive" id="ability-adult">
@@ -1381,7 +1417,7 @@
               <td data-title="重量">6</td>
               <td data-title="タイプ">道具</td>
               <td data-title="部位">-</td>
-              <td class="nowrap" data-title="指定特技">-</td>
+              <td class="wrap" data-title="指定特技">-</td>
               <td data-title="対象">-</td>
               <td data-title="特性">袋</td>
               <td data-title="効果">総重量40まで袋の中にアイテムを入れることができる。袋の中のアイテムの重量は所持限界から無視する。回避判定にマイナス1の修正がつく。商人御用達の特大の背負い袋。</td>
@@ -1392,7 +1428,7 @@
               <td data-title="重量">6</td>
               <td data-title="タイプ">装備</td>
               <td data-title="部位">両手</td>
-              <td class="nowrap" data-title="指定特技">《撃つ》</td>
+              <td class="wrap" data-title="指定特技">《撃つ》</td>
               <td data-title="対象">単体</td>
               <td data-title="特性">武器、射撃</td>
               <td data-title="効果">攻撃力5。防御力無視ダメージを与える。弾が必要。装備している間、回避判定にプラス2の修正がつく。</td>
@@ -1403,7 +1439,7 @@
               <td data-title="重量">0</td>
               <td data-title="タイプ">道具</td>
               <td data-title="部位">-</td>
-              <td class="nowrap" data-title="指定特技">-</td>
+              <td class="wrap" data-title="指定特技">-</td>
               <td data-title="対象">-</td>
               <td data-title="特性">消耗品、使用回数：10</td>
               <td data-title="効果">これを所持していないと猟銃の効果をうけることができない。猟銃で命中判定を行うごとに1消費する。</td>
@@ -1414,7 +1450,7 @@
               <td data-title="重量">3</td>
               <td data-title="タイプ">装備</td>
               <td data-title="部位">両手</td>
-              <td class="nowrap" data-title="指定特技">《撃つ》</td>
+              <td class="wrap" data-title="指定特技">《撃つ》</td>
               <td data-title="対象">単体</td>
               <td data-title="特性">武器、射撃</td>
               <td data-title="効果">攻撃力3。矢が必要。装備している間、回避判定にプラス2の修正がつく。ハンター専用。</td>
@@ -1425,7 +1461,7 @@
               <td data-title="重量">1</td>
               <td data-title="タイプ">装備</td>
               <td data-title="部位">片手</td>
-              <td class="nowrap" data-title="指定特技">《投げる》</td>
+              <td class="wrap" data-title="指定特技">《投げる》</td>
               <td data-title="対象">単体</td>
               <td data-title="特性">武器、射撃</td>
               <td data-title="効果">攻撃力1。割り込みのタイミングで攻撃することが可能。手番は消費しない。投げた後、手元から失われる。戦闘終了後に回収できる。バランスの取れた投射用の短刀。</td>
@@ -1436,7 +1472,7 @@
               <td data-title="重量">2</td>
               <td data-title="タイプ">装備</td>
               <td data-title="部位">片手</td>
-              <td class="nowrap" data-title="指定特技">《斬る》《投げる》</td>
+              <td class="wrap" data-title="指定特技">《斬る》《投げる》</td>
               <td data-title="対象">単体</td>
               <td data-title="特性">武器、射撃</td>
               <td data-title="効果">攻撃力2。《投げる》を使って判定した場合、手元から失われる。支援行動で回収できる。</td>
@@ -1447,7 +1483,7 @@
               <td data-title="重量">1</td>
               <td data-title="タイプ">装備</td>
               <td data-title="部位">片手</td>
-              <td class="nowrap" data-title="指定特技">《刺す》</td>
+              <td class="wrap" data-title="指定特技">《刺す》</td>
               <td data-title="対象">単体</td>
               <td data-title="特性">武器、白兵</td>
               <td data-title="効果">攻撃力1。先制判定の達成値にプラス1の修正がつく。この武器は割込みのタイミングで装備できる。取り回しやすい本格的なナイフ。</td>
@@ -1458,7 +1494,7 @@
               <td data-title="重量">6</td>
               <td data-title="タイプ">装備</td>
               <td data-title="部位">両手</td>
-              <td class="nowrap" data-title="指定特技">《振る》</td>
+              <td class="wrap" data-title="指定特技">《振る》</td>
               <td data-title="対象">単体</td>
               <td data-title="特性">武器、白兵、収納不可</td>
               <td data-title="効果">攻撃力5。死神が振るうような鎌、或いは、大地を耕す鍬。</td>
@@ -1469,7 +1505,7 @@
               <td data-title="重量">6</td>
               <td data-title="タイプ">装備</td>
               <td data-title="部位">両手</td>
-              <td class="nowrap" data-title="指定特技">《走る》</td>
+              <td class="wrap" data-title="指定特技">《走る》</td>
               <td data-title="対象">単体</td>
               <td data-title="特性">武器、白兵、防具、収納不可</td>
               <td data-title="効果">攻撃力3。命中判定の達成値にマイナス2の修正がつく。装備している間、回避判定にプラス2の修正がつく。</td>
@@ -1480,7 +1516,7 @@
               <td data-title="重量">2</td>
               <td data-title="タイプ">装備</td>
               <td data-title="部位">胴部</td>
-              <td class="nowrap" data-title="指定特技">-</td>
+              <td class="wrap" data-title="指定特技">-</td>
               <td data-title="対象">-</td>
               <td data-title="特性">防具</td>
               <td data-title="効果">こんな世界でも身だしなみを大切に。</td>
@@ -1491,7 +1527,7 @@
               <td data-title="重量">1</td>
               <td data-title="タイプ">装備</td>
               <td data-title="部位">任意</td>
-              <td class="nowrap" data-title="指定特技">-</td>
+              <td class="wrap" data-title="指定特技">-</td>
               <td data-title="対象">-</td>
               <td data-title="特性">防具</td>
               <td data-title="効果">任意の部位に装備することができる。お気に入りの逸品。</td>
@@ -1502,7 +1538,7 @@
               <td data-title="重量">1</td>
               <td data-title="タイプ">道具</td>
               <td data-title="部位">-</td>
-              <td class="nowrap" data-title="指定特技">-</td>
+              <td class="wrap" data-title="指定特技">-</td>
               <td data-title="対象">-</td>
               <td data-title="特性">購入不可、食料</td>
               <td data-title="効果">魚肉。足が早いので、すぐに干物にすべし。</td>
@@ -1513,7 +1549,7 @@
               <td data-title="重量">1</td>
               <td data-title="タイプ">道具</td>
               <td data-title="部位">-</td>
-              <td class="nowrap" data-title="指定特技">-</td>
+              <td class="wrap" data-title="指定特技">-</td>
               <td data-title="対象">-</td>
               <td data-title="特性">購入不可</td>
               <td data-title="効果">固くて大きな鱗。齢を経たサカナほど刻まれる年輪は多くなる</td>
@@ -1524,7 +1560,7 @@
               <td data-title="重量">1</td>
               <td data-title="タイプ">道具</td>
               <td data-title="部位">-</td>
-              <td class="nowrap" data-title="指定特技">-</td>
+              <td class="wrap" data-title="指定特技">-</td>
               <td data-title="対象">-</td>
               <td data-title="特性">購入不可</td>
               <td data-title="効果">透明感のある虹色の鱗。宝石代わりに装飾品に使われる。</td>

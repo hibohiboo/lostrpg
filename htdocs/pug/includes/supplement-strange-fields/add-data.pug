@@ -11,15 +11,12 @@ p キャラクターは経験点を使用して、「背景」を取得できる
 table.responsive#charcter-backbone
   caption 背景表
   thead
-    tr: th 名前 #[th 必要経験点] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
+    tr: th 名前 #[th 必要経験点] #[th タイプ] #[th 効果]
   each facility in backboneList
     tr
       td.txt-center= facility.name
       td(data-title='必要経験点')= facility.cp
       td(data-title='タイプ')= facility.type
-      td.nowrap(data-title='指定特技')= facility.specialty
-      td(data-title='最大レベル')= facility.maxLv
-      td(data-title='前提')= facility.precondition
       td(data-title='効果')= facility.effect
 h3#experience 経験表
 p プレイヤーはキャラクター作成時にキャラクターの経験表を使用することができます。
@@ -71,7 +68,7 @@ table.responsive#item
       td(data-title='重量')= item.weight
       td(data-title='タイプ')= item.type
       td(data-title='部位')= item.area
-      td.nowrap(data-title='指定特技')= item.specialty
+      td.wrap(data-title='指定特技')= item.specialty
       td(data-title='対象')= item.target
       td(data-title='特性')= item.trait
       td(data-title='効果')= item.effect
