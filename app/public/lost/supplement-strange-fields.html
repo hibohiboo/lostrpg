@@ -77,6 +77,9 @@
             <li><a href="#get_exp">経験点の入手・使用</a></li>
             <li><a href="#guardian-spirit">死者の助け</a></li>
             <li><a href="#pvp">PVPルール</a></li>
+            <li><a href="#get_trophy">称号の入手</a></li>
+            <li><a href="#trophy">称号表</a></li>
+            <li><a href="#trophy-ability">称号アビリティ</a></li>
             <li><a href="#experience">経験表</a></li>
             <li><a href="#charcter-backbone">追加背景</a></li>
             <li><a href="#add-item">追加アイテム</a></li>
@@ -618,11 +621,363 @@
           <p>例えば、先制判定の成功度が同じキャラクターAとBがいたとします。便宜的にAが先に 【スタンガン】を使って攻撃を行いました。それにより、Bは気力を1点消費して回避判定を行い、それにファンブルしました。 ファンブル表の結果は、気力が5点減ることでした。通常であれば、Bはダメージ2点を受けた上に『麻痺』の変調を受け、気力を6点減少させます。 しかし、同時攻撃の場合、それらの効果はBの攻撃の処理が終了するまで適用されません。</p>
           <h2>追加データ</h2>
           <p>追加されたデータです。一部のデータのみを使用するといったことも可能です。</p>
-          <h3 id="get_exp">経験点の入手</h3>
-          <ol>
-            <li>新たなアイテムを手に入れた(1点)</li>
-            <li>キャンプの仲間と友情を結んだ(1点)</li>
-          </ol>
+          <h3 id="get_trophy">称号の入手</h3>
+          <p><a href="rulebook.html#ending">結果フェイズ</a>に「称号の入手」を追加します</p>
+          <p>「称号」とは、冒険者がどんな振る舞いをしていたかで獲得するものです。「アビリティの習得」で経験点を消費して、称号アビリティが取得できるようになります。</p>
+          <p>生き残った冒険者ごとに、今回の冒険の振る舞いを振り返ります。 </p>
+          <p>各プレイヤーの、パーティメンバーのメモ欄を順番に確認していくとよいでしょう。</p>
+          <p>最終的に相応しい称号を相談あるいは多数決で決定します。</p>
+          <p>称号には以下があります。全員の合意があれば、表にない称号を与えることもできます。</p>
+          <table class="responsive" id="trophy">
+            <caption>称号表</caption>
+            <thead>
+              <tr>
+                <th>名前 
+                  <th>説明</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">パッション</td>
+              <td data-title="説明">元気に熱くフィールドに向かっていったものに与えられる称号</td>
+            </tr>
+            <tr>
+              <td class="txt-center">クール</td>
+              <td data-title="説明">冷静に物事を見つめていたものに与えられる称号</td>
+            </tr>
+            <tr>
+              <td class="txt-center">ピンク</td>
+              <td data-title="説明">甘い雰囲気や恋をしていたものに与えられる称号</td>
+            </tr>
+            <tr>
+              <td class="txt-center">癒し</td>
+              <td data-title="説明">のんびり皆を和ませていたものに与えられる称号</td>
+            </tr>
+            <tr>
+              <td class="txt-center">スター</td>
+              <td data-title="説明">大きな活躍をしたものに与えられる称号</td>
+            </tr>
+            <tr>
+              <td class="txt-center">ハシラ</td>
+              <td data-title="説明">堅実に皆を支えていたものに与えられる称号。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">サムライ</td>
+              <td data-title="説明">戦闘で活躍したものに与えられる称号。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">シノビ</td>
+              <td data-title="説明">探索で活躍したものに与えられる称号。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">ボケ</td>
+              <td data-title="説明">笑いで盛り上げたものに与えられる称号。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">ツッコミ</td>
+              <td data-title="説明">ボケに流されず軌道修正をきちんとしたものに与えられる称号。</td>
+            </tr>
+          </table>
+          <h3 id="trophy-ability">称号アビリティ</h3>
+          <p>称号アビリティは、所持している称号の数だけ取得できます。</p>
+          <p>例えば、「パッション」「スター」の称号を持っている場合、それぞれ１つまでアビリティを取得できます。この場合、「パッション」のアビリティを2つ取得することはできません。</p>
+          <table class="responsive" id="ability-trophy-passion">
+            <caption>パッション</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">気合ため</td>
+              <td data-title="グループ">パッション</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">2</td>
+              <td class="nowrap" data-title="指定特技">《叫ぶ》</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">指定特技の判定に成功すると、次に行う攻撃のダメージを2倍にする。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">期待に応える</td>
+              <td data-title="グループ">パッション</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">あなたが他者のアビリティやアイテムの効果で気力を獲得するときに余分に1点多く獲得できる。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-trophy-cool">
+            <caption>クール</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">完璧な振る舞い</td>
+              <td data-title="グループ">クール</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">ダイスを振る前に宣言することで判定を自動成功する。成功度は1として扱う。シナリオ１回。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">手間をかけさせるな</td>
+              <td data-title="グループ">クール</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">5</td>
+              <td class="nowrap" data-title="指定特技">《掴む》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">自身以外がファンブルを振った時に割込んで使用する。指定特技の判定に成功した場合、対象はファンブル表を振らなくてもよい。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-trophy-pink">
+            <caption>ピンク</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">秘密のレッスン</td>
+              <td data-title="グループ">ピンク</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">3</td>
+              <td class="nowrap" data-title="指定特技">《伝える》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">対象が判定を行う直前に割込んで使用できる。指定特技の判定に成功すると、対象が行う次の判定の間のみアビリティ使用者の所持している特技を習得させる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">真っ赤な誓い</td>
+              <td data-title="グループ">ピンク</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">3</td>
+              <td class="nowrap" data-title="指定特技">《閃く》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると、対象にキャラクター1人のダメージを肩代わりさせる</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-trophy-healer">
+            <caption>癒し</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">暖かい時間</td>
+              <td data-title="グループ">癒し</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">休憩表であなたが選んだ相手、もしくはあなたを選んだ相手は【気力】を1点増加させる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">のんびりお散歩</td>
+              <td data-title="グループ">癒し</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">2</td>
+              <td class="nowrap" data-title="指定特技">《歩く》</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">探索フェイズにいつでも割込んで使用できる。指定特技の判定に成功すると、あなたは休憩表を一回振る</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-trophy-start">
+            <caption>スター</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">ピンチのときほど</td>
+              <td data-title="グループ">スター</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">3</td>
+              <td class="nowrap" data-title="指定特技">《閃く》</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">ファンブルを振った時に使用できる。指定特技の判定に成功すると、ファンブルをスペシャルに変更する。シナリオ1回。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">チャンスは逃さない</td>
+              <td data-title="グループ">スター</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">あなたが命中判定でスペシャルをしたとき、与えるダメージにプラス1D6する</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-trophy-samurai">
+            <caption>サムライ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">気炎万丈</td>
+              <td data-title="グループ">サムライ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">【気力】が【気力基準値】以上の場合、与えるダメージにプラス1点する</td>
+            </tr>
+            <tr>
+              <td class="txt-center">後の先</td>
+              <td data-title="グループ">サムライ</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">2</td>
+              <td class="nowrap" data-title="指定特技">《待つ》</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">先制判定に割込んで使用する。指定特技の判定に成功すると、先制判定を振らず、行動順が後攻となる。ラウンドの間、命中判定の達成値にプラス1点。与えるダメージにプラス2点する。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-trophy-sinobi">
+            <caption>シノビ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">身代わりの術</td>
+              <td data-title="グループ">シノビ</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">8</td>
+              <td class="nowrap" data-title="指定特技">《隠れる》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">自身が【棍棒】を装備している場合、部位ダメージが発生したときに割込んで使用できる。指定特技の判定に成功した場合、自身が装備している【棍棒】を破壊して部位ダメージを打ち消す。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">二重罠</td>
+              <td data-title="グループ">シノビ</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">2</td>
+              <td class="nowrap" data-title="指定特技">《罠》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">対象の変調が解除されたときに割込んで使用する。指定特技の判定に成功すると、対象に1点のダメージを与える</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-trophy-clown">
+            <caption>ボケ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">ウェーイ！</td>
+              <td data-title="グループ">ボケ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">スペシャルを振った時、【気力】がさらに1D6増加する</td>
+            </tr>
+            <tr>
+              <td class="txt-center">ひっさつわざ！</td>
+              <td data-title="グループ">ボケ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">1d6</td>
+              <td class="nowrap" data-title="指定特技">ランダム</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると対象に[装備している武器1つの攻撃力+(反動で消費した気力×1d3)]点のダメージを与える。</td>
+            </tr>
+          </table>
+          <table class="responsive" id="ability-trophy-thrust">
+            <caption>ツッコミ</caption>
+            <thead>
+              <tr>
+                <th>名前  
+                  <th>グループ</th> 
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">鋭い視点</td>
+              <td data-title="グループ">ツッコミ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">暴露の変調を受けている対象へ与えるダメージにプラス1点する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">待った！</td>
+              <td data-title="グループ">ツッコミ</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">6</td>
+              <td class="nowrap" data-title="指定特技">《刺す》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">タイプが【割込み】のアビリティが使用されたときに割込んで使用する。指定特技の判定に成功するとそのアビリティの効果を打ち消す。</td>
+            </tr>
+          </table>
           <h3>経験点の使用</h3>
           <p>キャラクターは経験点を使用して、「背景」を取得できるようになります。</p>
           <table class="responsive" id="charcter-backbone">
@@ -640,17 +995,23 @@
               <td class="txt-center">ペット</td>
               <td data-title="必要経験点">3</td>
               <td data-title="タイプ">常駐</td>
-              <td data-title="効果">	アイテムの「ペット」を１つ入手する。あなたはペットを飼っている。このペットで買い物することはできない。</td>
+              <td data-title="効果">アイテムの「ペット」を１つ入手する。あなたはペットを飼っている。このペットで買い物することはできない。</td>
             </tr>
             <tr>
               <td class="txt-center">病気の身内</td>
               <td data-title="必要経験点">5</td>
               <td data-title="タイプ">割り込み</td>
-              <td data-title="効果">	セッション中1度だけ、自身の振ったダイスを裏返すことができる(1ゾロならば6ゾロになる）。 あなたには家族同然に思っている人物がいる。その人物は病気である。貴方が守ってあげなくてはならない。 セッション終了時に、「コカの葉」など【体力】の回復するアイテムを消費しないと、病気の身内は死亡する。</td>
+              <td data-title="効果">セッション中1度だけ、自身の振ったダイスを裏返すことができる(1ゾロならば6ゾロになる）。 あなたには家族同然に思っている人物がいる。その人物は病気である。貴方が守ってあげなくてはならない。 セッション終了時に、「コカの葉」など【体力】の回復するアイテムを消費しないと、病気の身内は死亡する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">駆逐系</td>
+              <td data-title="必要経験点">15</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="効果">あなたは＜ヌシ＞に大切な人たちを蹂躙された過去がある。あなたの与えるダメージが1点上昇する。キャンプフェイズの行動で、墓参りを行うこと（演出だけしてパス扱い）。</td>
             </tr>
             <tr>
               <td class="txt-center">親友</td>
-              <td data-title="必要経験点">10</td>
+              <td data-title="必要経験点">20</td>
               <td data-title="タイプ">常駐</td>
               <td data-title="効果">	あなたはキャンプフェイズに2回行動できる。あなたには親友がいて、キャンプフェイズに準備を手伝ってくれる。</td>
             </tr>
@@ -953,7 +1314,7 @@
               <td data-title="効果">命中判定に組み合わせて使用する。【体力】を1d6点消費する。[消費した体力]点のダメージを追加する。体力が0未満になるようには消費できない。</td>
             </tr>
           </table>
-          <table class="responsive" id="ability-scount">
+          <table class="responsive" id="ability-scout">
             <caption>スカウト</caption>
             <thead>
               <tr>
