@@ -9,16 +9,16 @@
   ]
 -
   var trophyList = [
-    {"name":"パッション", "description":"元気に熱くフィールドに向かっていったものに与えられる称号" },
-    {"name":"クール", "description":"冷静に物事を見つめていたものに与えられる称号" },
-    {"name":"ピンク", "description":"甘い雰囲気や恋をしていたものに与えられる称号" },
-    {"name":"癒し", "description":"のんびり皆を和ませていたものに与えられる称号" },
-    {"name":"スター", "description":"大きな活躍をしたものに与えられる称号" },
-    {"name":"ハシラ", "description":"堅実に皆を支えていたものに与えられる称号。" },
-    {"name":"サムライ", "description":"戦闘で活躍したものに与えられる称号。" },
-    {"name":"シノビ", "description":"探索で活躍したものに与えられる称号。" },
-    {"name":"ボケ", "description":"笑いで盛り上げたものに与えられる称号。" },
-    {"name":"ツッコミ", "description":"ボケに流されず軌道修正をきちんとしたものに与えられる称号。" },
+    {"name":"パッション", "id": "passion", "description":"元気に熱くフィールドに向かっていったものに与えられる称号" },
+    {"name":"クール","id": "cool", "description":"冷静に物事を見つめていたものに与えられる称号" },
+    {"name":"ピンク","id": "pink", "description":"甘い雰囲気や恋をしていたものに与えられる称号" },
+    {"name":"癒し", "id": "healer","description":"のんびり皆を和ませていたものに与えられる称号" },
+    {"name":"スター","id": "star", "description":"大きな活躍をしたものに与えられる称号" },
+    {"name":"ハシラ", "id": "pillar","description":"堅実に皆を支えていたものに与えられる称号。" },
+    {"name":"サムライ", "id": "samurai", "description":"戦闘で活躍したものに与えられる称号。" },
+    {"name":"シノビ","id": "sinobi", "description":"探索で活躍したものに与えられる称号。" },
+    {"name":"ボケ", "id": "clown","description":"笑いで盛り上げたものに与えられる称号。" },
+    {"name":"ツッコミ", "id": "thrust","description":"ボケに流されず軌道修正をきちんとしたものに与えられる称号。" },
     ]
 
   var trophyAbilityList = [
@@ -61,7 +61,7 @@
     },
     {
       "name": "スター",
-      "id": "start",
+      "id": "star",
       "list": [
         {"name":"ピンチのときほど","group":"スター","type":"割込み","recoil":"3","specialty":"《閃く》","target":"自身","effect":"ファンブルを振った時に使用できる。指定特技の判定に成功すると、ファンブルをスペシャルに変更する。シナリオ1回。"},
         {"name":"チャンスは逃さない","group":"スター","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"あなたが命中判定でスペシャルをしたとき、与えるダメージにプラス1D6する"},
@@ -69,7 +69,7 @@
     },
     {
       "name": "ハシラ",
-      "id": "hashira",
+      "id": "pillar",
       "list": [
         {"name":"支度","group":"ハシラ","type":"割込み","recoil":"6","specialty":"《休まない》","target":"単体","effect":"対象はキャンプフェイズで行える行動を、キャンプにいるものとして一度だけ行える。シナリオ1回。"},
         {"name":"一歩ずつ","group":"ハシラ","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"ギャップを1列塗りつぶすことができる。塗りつぶされたギャップは代用判定の際数えない。"},
