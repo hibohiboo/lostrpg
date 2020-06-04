@@ -596,7 +596,7 @@
           <h3 id="success-point">成功度 </h3>
           <p>行為判定を行ったとき、[達成値から目標値を引いた値]が成功度になります。</p>
           <p>例えば目標値5のとき、達成値6なら成功度1、達成値5なら成功度0、達成値4なら成功度マイナス1となります。 ファンブルのときは成功度マイナス10、スペシャルの時は成功度10になります。</p>
-          <h3>ランダムな特技の決定</h3>
+          <h3 id="random-skill">ランダムな特技の決定</h3>
           <p>最初に1d6を振り、分野を決定した後、2D6を振り出目に対応した特技を決定します。 分野は「1:技術」「2:頭部」「3:腕部」「4:胴部」「5:脚部」「6:環境」になります。</p>
           <h3 id="wisdom-and-innovative">知恵と工夫</h3>
           <p><a href="#check-pl-proposal">プレイヤーの提案による判定特技の変更</a>に【知恵と工夫】と名付け、回数制限をもうけるルールです。</p>
@@ -713,6 +713,15 @@
               <td data-title="対象">自身</td>
               <td data-title="効果">あなたが他者のアビリティやアイテムの効果で気力を獲得するときに余分に1点多く獲得できる。</td>
             </tr>
+            <tr>
+              <td class="txt-center">奥義</td>
+              <td data-title="グループ">パッション</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">10</td>
+              <td class="nowrap" data-title="指定特技">自由</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">指定特技の判定に成功すると、装備中の《指定特技》が一致している武器1つの[攻撃力+成功度]点のダメージを与える。</td>
+            </tr>
           </table>
           <table class="responsive" id="ability-trophy-cool">
             <caption>クール</caption>
@@ -745,6 +754,15 @@
               <td class="nowrap" data-title="指定特技">《掴む》</td>
               <td data-title="対象">単体</td>
               <td data-title="効果">自身以外がファンブルを振った時に割込んで使用する。指定特技の判定に成功した場合、対象はファンブル表を振らなくてもよい。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">計算通り</td>
+              <td data-title="グループ">クール</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">5</td>
+              <td class="nowrap" data-title="指定特技">《見つける》</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">自身がファンブルを振った時に割込んで使用する。指定特技の判定に成功した場合、判定は成功となる</td>
             </tr>
           </table>
           <table class="responsive" id="ability-trophy-pink">
@@ -779,6 +797,15 @@
               <td data-title="対象">単体</td>
               <td data-title="効果">指定特技の判定に成功すると、対象にキャラクター1人のダメージを肩代わりさせる</td>
             </tr>
+            <tr>
+              <td class="txt-center">手と手を取って</td>
+              <td data-title="グループ">ピンク</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">このアビリティを習得したときにキャラクターを1人選ぶ。そのキャラクターと連携攻撃行うとき、補助アビリティを2つ選択できる。</td>
+            </tr>
           </table>
           <table class="responsive" id="ability-trophy-healer">
             <caption>癒し</caption>
@@ -811,6 +838,15 @@
               <td class="nowrap" data-title="指定特技">《歩く》</td>
               <td data-title="対象">自身</td>
               <td data-title="効果">探索フェイズにいつでも割込んで使用できる。指定特技の判定に成功すると、あなたは休憩表を一回振る</td>
+            </tr>
+            <tr>
+              <td class="txt-center">陽だまりの庭</td>
+              <td data-title="グループ">癒し</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">2</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">キャンプフェイズでの判定の達成値にプラス1の修正を得る</td>
             </tr>
           </table>
           <table class="responsive" id="ability-trophy-star">
@@ -845,6 +881,15 @@
               <td data-title="対象">自身</td>
               <td data-title="効果">あなたが命中判定でスペシャルをしたとき、与えるダメージにプラス1D6する</td>
             </tr>
+            <tr>
+              <td class="txt-center">とどめの一撃</td>
+              <td data-title="グループ">サムライ</td>
+              <td data-title="タイプ">補助</td>
+              <td data-title="反動">5</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">【体力】が0となっているヌシへの命中判定に組み合わせて使用する。この攻撃で与える部位ダメージの個数は【組み合わせた攻撃のダメージ/(ヌシのレベル×2)】個となる。</td>
+            </tr>
           </table>
           <table class="responsive" id="ability-trophy-pillar">
             <caption>ハシラ</caption>
@@ -877,6 +922,15 @@
               <td class="nowrap" data-title="指定特技">-</td>
               <td data-title="対象">自身</td>
               <td data-title="効果">ギャップを1列塗りつぶすことができる。塗りつぶされたギャップは代用判定の際数えない。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">こんなこともあろうかと</td>
+              <td data-title="グループ">ハシラ</td>
+              <td data-title="タイプ">補助</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">任意の特技を１つ習得しているものとして判定できる。シナリオ1回。</td>
             </tr>
           </table>
           <table class="responsive" id="ability-trophy-samurai">
@@ -911,6 +965,15 @@
               <td data-title="対象">自身</td>
               <td data-title="効果">先制判定に割込んで使用する。指定特技の判定に成功すると、先制判定を振らず、行動順が後攻となる。ラウンドの間、命中判定の達成値にプラス1点。与えるダメージにプラス2点する。</td>
             </tr>
+            <tr>
+              <td class="txt-center">全集中</td>
+              <td data-title="グループ">サムライ</td>
+              <td data-title="タイプ">補助</td>
+              <td data-title="反動">4</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">命中判定に組み合わせて使用する。組み合わせた攻撃への回避判定に、[成功度]点のマイナス修正を加える。</td>
+            </tr>
           </table>
           <table class="responsive" id="ability-trophy-sinobi">
             <caption>シノビ</caption>
@@ -943,6 +1006,15 @@
               <td class="nowrap" data-title="指定特技">《罠》</td>
               <td data-title="対象">単体</td>
               <td data-title="効果">対象の変調が解除されたときに割込んで使用する。指定特技の判定に成功すると、対象に1点のダメージを与える</td>
+            </tr>
+            <tr>
+              <td class="txt-center">縄結界</td>
+              <td data-title="グループ">シノビ</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">3</td>
+              <td class="nowrap" data-title="指定特技">《追い込む》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">使用時にロープを消費する。戦闘が終了するまで、目標が行う回避判定にマイナス1の修正がつく（最大マイナス3まで)</td>
             </tr>
           </table>
           <table class="responsive" id="ability-trophy-clown">
@@ -977,6 +1049,15 @@
               <td data-title="対象">単体</td>
               <td data-title="効果">指定特技の判定に成功すると対象に[装備している武器1つの攻撃力+(反動で消費した気力×1d3)]点のダメージを与える。</td>
             </tr>
+            <tr>
+              <td class="txt-center">ころげまわる</td>
+              <td data-title="グループ">ボケ</td>
+              <td data-title="タイプ">支援</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">体力を3点消費する。自分の受けている変調を全て回復する。消費できない場合このアビリティは使用できない。</td>
+            </tr>
           </table>
           <table class="responsive" id="ability-trophy-thrust">
             <caption>ツッコミ</caption>
@@ -1009,6 +1090,15 @@
               <td class="nowrap" data-title="指定特技">《刺す》</td>
               <td data-title="対象">単体</td>
               <td data-title="効果">タイプが【割込み】のアビリティが使用されたときに割込んで使用する。指定特技の判定に成功するとそのアビリティの効果を打ち消す。シナリオ回数制限のあるアビリティは打ち消せない。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">アドバイス</td>
+              <td data-title="グループ">ツッコミ</td>
+              <td data-title="タイプ">割込み</td>
+              <td data-title="反動">3</td>
+              <td class="nowrap" data-title="指定特技">《伝える》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">自分以外の判定の直前に使用する。指定特技の判定に成功すると対象の達成値にプラス1の修正がつく</td>
             </tr>
           </table>
           <h3>経験点の使用</h3>
@@ -2208,6 +2298,15 @@
               <td class="nowrap" data-title="指定特技">-</td>
               <td data-title="対象">-</td>
               <td data-title="効果">装備を１つ選ぶ。それを所持していることになる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">暴虐</td>
+              <td data-title="グループ">ヌシ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td class="nowrap" data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="効果">【体力】が0のキャラクターに与える部位ダメージの個数が【組み合わせた攻撃のダメージ/(体力基準値)】個となる。</td>
             </tr>
           </table>
           <table class="responsive" id="add-ability-mutation">
