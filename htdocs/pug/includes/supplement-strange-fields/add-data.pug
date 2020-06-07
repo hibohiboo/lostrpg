@@ -55,7 +55,7 @@ p プレイヤーはキャラクター作成時にキャラクターの経験表
 table.responsive#table-experience
   caption 経験表
   thead
-    tr: th 2d6 #[th 経験] #[th 内容] 
+    tr: th d66 #[th 経験] #[th 内容] 
   each item in experienceList
     tr
       td= item.d66
