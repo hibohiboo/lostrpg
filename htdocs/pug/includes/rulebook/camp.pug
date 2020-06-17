@@ -8,28 +8,80 @@ section#camp
   h3 1.名前の決定
   p まず、プレイヤーキャラクター全員が所属するキャンプの名前を決めましょう。
     | 近くの公民館や学校の名前を使うと、イメージしやすいかもしれません。
-  p 表を振ってランダムに決めることもできます#[a(href="chart.html#campname") →キャンプ名表]
+  p 表を振ってランダムに決めることもできます
+  details#campname
+    summary キャンプ名表（クリックで開きます）
+    p キャンプ名決定表A, Bと建物表を組み合わせてキャンプ名を決定します。
+    table.chart#table-campnameA
+      caption キャンプ名決定表A
+      thead
+        tr: th d66 #[th ジャンル] #[th 例] 
+      each name in campNameA
+        tr
+          td= name.d66
+          td= name.genre
+          td= name.exe
+
+    table.chart#table-campnameB
+      caption キャンプ名決定表B
+      thead
+        tr: th d66 #[th 奇数] #[th 偶数] 
+      each name in campNameB
+        tr
+          td= name.d66
+          td= name.a
+          td= name.b
+      
+    table.chart#table-campnameC
+      caption 建物表
+      thead
+        tr: th d66 #[th 奇数] #[th 偶数] 
+      each name in campNameC
+        tr
+          td= name.d66
+          td= name.a
+          td= name.b
+
+
   h3 2.施設・人材の決定
   p キャンプには、最初、レベル1の「屋根」「壁」「寝床」「水場」「倉庫」「食料庫」があります。
     | キャンプは5年の間にぼろぼろになっており、ガタがきています。
-  table.responsive
-    caption キャンプ初期設備表
-    thead
-      tr: th 名前 #[th タイプ] #[th 指定特技] #[th レベル] #[th 効果]
-    each facility in facilities
-      tr
-        td.txt-center= facility.name
-        td(data-title='タイプ')= facility.type
-        td(data-title='指定特技')= facility.specialty
-        td(data-title='レベル')= facility.level
-        td(data-title='効果')= facility.effect
+  details
+    summary キャンプ初期設備表
+    table.responsive
+      caption キャンプ初期設備表
+      thead
+        tr: th 名前 #[th タイプ] #[th 指定特技] #[th レベル] #[th 効果]
+      each facility in facilities
+        tr
+          td.txt-center= facility.name
+          td(data-title='タイプ')= facility.type
+          td(data-title='指定特技')= facility.specialty
+          td(data-title='レベル')= facility.level
+          td(data-title='効果')= facility.effect
   p 上の表の効果をまとめると、以下のようになります。
   ul
     li 「パーティ全員の【気力基準値】プラス7」
     li 「パーティ全員の【体力基準値】プラス2」
     li 「キャンプに10個までのアイテムを置いておける」
 
-  p 次に1D6を振り、さらにそのキャンプにあるものを決定します。
-    | 《指定特技》はキャンプフェイズに設備を利用するために必要な行為判定に使う特技です。
-    | #[a( href="chart.html#camp-equipment_first") →追加設備決定表]
+  p 次に1D6を振り、さらにそのキャンプにあるものを決定します。追加設備決定表を参照してください。
+    | 《指定特技》は設備を利用するために必要な行為判定に使う特技です。設備はキャンプフェイズに利用できます。
+    //- | #[a( href="chart.html#camp-equipment_first") →追加設備決定表]
+  details
+    summary 追加設備決定表
+    table.responsive#camp-equipment_first
+      caption 追加設備決定表
+      thead
+        tr: th d6 #[th 名前] #[th タイプ] #[th 指定特技] #[th レベル] #[th 効果]
+      each facility in addFacilityList
+        tr
+          td.mobile-hidden=facility.d6
+          td(data-title=facility.d6).txt-center= facility.name
+          td(data-title='タイプ')= facility.type
+          td(data-title='指定特技')= facility.specialty
+          td(data-title='レベル')= facility.level
+          td(data-title='効果')= facility.effect
+
+
   p キャンプについての詳細は#[a(href="#camp-improve") 「→キャンプの成長」]でも解説しています。

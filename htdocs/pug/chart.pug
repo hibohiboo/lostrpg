@@ -173,6 +173,22 @@ block body
               td(data-title='前提')= facility.precondition
               td(data-title='効果')= facility.effect
 
+        h2#ability アビリティ
+        each ability in abilityList
+          table(class="responsive", id='ability-'+ability.id)
+            caption= ability.name
+            thead
+              tr: th 名前  #[th グループ] #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+            each item in ability.list
+              tr
+                td.txt-center= item.name
+                td(data-title='グループ')= item.group
+                td(data-title='タイプ')= item.type
+                td(data-title='反動')= item.recoil
+                td(data-title='指定特技')= item.specialty
+                td(data-title='対象')= item.target
+                td(data-title='効果')= item.effect
+
         h2#table-item アイテム
         table.responsive#item
           caption アイテム一覧
@@ -284,6 +300,7 @@ block body
           caption 回避判定ファンブル表
           thead
             tr: th d6 #[th 説明] 
+            
           each name in fumbleDodgeList
             tr
               td= name.d6

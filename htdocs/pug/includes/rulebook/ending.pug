@@ -1,91 +1,142 @@
-.
-  <section id="ending">
-  <hgroup>
-  <h1>結果フェイズ</h1>
-  <h2>終幕シーン</h2>
-  <p>
-  このフェイズでは、＜ヌシ＞との戦いのすえ、どんな結末を迎えたかを描写します。
-  </p>
-  <p>
-  物資を求めに行ったのならば、＜フィールド＞が解除された森にキャンプの皆で調達に入り、
-  収穫祭をひらき、冒険者たちを称えるでしょう。
-  </p>
-  <h2>報酬の獲得</h2>
-  <p>
-  解放された＜フィールド＞には、手付かずの物資がまだ残っている可能性が高いです。
-  冒険者たちは、解放の主役としてその物資を最初に手に入れる権利があります。
-  「冒険者1人につき、[＜ヌシ＞のレベル×3]J以下の好きなアイテムを1つ手に入れる」
-  程度が目安です。
-  GMは状況によって増やしてもいいですし、キャンプの施設の増加などの報酬を与えてもかまいません。
-  </p>
-  <h2 id="camp-improve">キャンプの成長</h2>
-  <p>キャンプは[＜ヌシ＞のレベル]点のCP（キャンプポイント）を手に入れます。
-  これを使ってキャンプの施設や人材を増やしたりレベルをあげることができます。
-  以降、施設と人材をあわせて設備といいます。</p>
-  <p>
-  CPのある限り、設備はいくらでも入手することができます。
-  余ったCPは次回以降に繰越しとなります。
-  </p>
-  <p>キャンプの設備には以下の要素があります。</p>
-  <dl>
-  <dt>名前</dt>
-  <dd>設備の名前です。</dd>
-  <dt>必要CP</dt>
-  <dd>設備を入手するために必要なCPです。
-  既に設備を入手している状態でこのCPを払うと、レベルを上げることができます。
-  また、1C（缶詰）を1CPとして扱うことができます。
-  </dd>
-  <dt>タイプ</dt>
-  <dd>常駐、支援があります。常駐は常に効果を発揮しています。
-  支援はキャンプフェイズに使用することで効果を受けることができます。</dd>
-  <dt>指定特技</dt>
-  <dd>設備を使用するのに必要な特技です。なしの場合は判定の必要なく使用できます。</dd>
-  <dt>レベル</dt>
-  <dd>設備のレベルです。設備を入手したときは1レベルになります。</dd>
-  <dt>最大レベル</dt>
-  <dd>設備の最大レベルです。</dd>
-  <dt>前提</dt>
-  <dd>前提のある設備は前提となる設備がキャンプにない場合、効果を発揮しません。</dd>
-  <dt>効果</dt>
-  <dd>施設や人材を使用した時の効果です。</dt>
-  </dl>
-  <p>設備は<a href="chart.html#camp-equipment">「→設備表」</a>から選んで下さい。
-  </p>
-  <h2>称号の入手（選択ルール）</h2>
-  <p>追加で<a href="supplement-strange-fields.html#get_trophy">「称号の入手」</a>をすることもできます。
-  </p>
+section#ending
+  hgroup
+    h1 結果フェイズ
+    h2 終幕シーン
+    p
+      | このフェイズでは、＜ヌシ＞との戦いのすえ、どんな結末を迎えたかを描写します。
+    p
+      | 物資を求めに行ったのならば、＜フィールド＞が解除された森にキャンプの皆で調達に入り、
+      | 収穫祭をひらき、冒険者たちを称えるでしょう。
+    h2 報酬の獲得
+    p
+      | 解放された＜フィールド＞には、手付かずの物資がまだ残っている可能性が高いです。
+      | 冒険者たちは、解放の主役としてその物資を最初に手に入れる権利があります。
+      | 「冒険者1人につき、[＜ヌシ＞のレベル×3]J以下の好きなアイテムを1つ手に入れる」
+      | 程度が目安です。
+      | GMは状況によって増やしてもいいですし、キャンプの施設の増加などの報酬を与えてもかまいません。
+    h2#camp-improve キャンプの成長
+    p
+      | キャンプは[＜ヌシ＞のレベル]点のCP（キャンプポイント）を手に入れます。
+      | これを使ってキャンプの施設や人材を増やしたりレベルをあげることができます。
+      | 以降、施設と人材をあわせて設備といいます。
+    p
+      | CPのある限り、設備はいくらでも入手することができます。
+      | 余ったCPは次回以降に繰越しとなります。
+    p キャンプの設備には以下の要素があります。
+    dl
+      dt 名前
+      dd 設備の名前です。
+      dt 必要CP
+      dd
+        | 設備を入手するために必要なCPです。
+        | 既に設備を入手している状態でこのCPを払うと、レベルを上げることができます。
+        | また、1C（缶詰）を1CPとして扱うことができます。
+      dt タイプ
+      dd
+        | 常駐、支援があります。常駐は常に効果を発揮しています。
+        | 支援はキャンプフェイズに使用することで効果を受けることができます。
+      dt 指定特技
+      dd 設備を使用するのに必要な特技です。なしの場合は判定の必要なく使用できます。
+      dt レベル
+      dd 設備のレベルです。設備を入手したときは1レベルになります。
+      dt 最大レベル
+      dd 設備の最大レベルです。
+      dt 前提
+      dd 前提のある設備は前提となる設備がキャンプにない場合、効果を発揮しません。
+      dt 効果
+      dd
+        | 施設や人材を使用した時の効果です。
+    p
+      | 設備は
+      a(href='chart.html#camp-equipment') 「→施設・人材表」
+      | から選んで下さい。
+    details
+      summary 施設・人材表
+      table.responsive#camp-equipment
+        caption キャンプ施設表
+        thead
+          tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
+        each facility in equipmentList
+          tr
+            td.txt-center= facility.name
+            td(data-title='必要CP')= facility.cp
+            td(data-title='タイプ')= facility.type
+            td(data-title='指定特技')= facility.specialty
+            td(data-title='最大レベル')= facility.maxLv
+            td(data-title='前提')= facility.precondition
+            td(data-title='効果')= facility.effect
 
+      table.responsive#camp-personality
+        caption キャンプ人材表
+        thead
+          tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
+        each facility in campPersonalityList
+          tr
+            td.txt-center= facility.name
+            td(data-title='必要CP')= facility.cp
+            td(data-title='タイプ')= facility.type
+            td(data-title='指定特技')= facility.specialty
+            td(data-title='最大レベル')= facility.maxLv
+            td(data-title='前提')= facility.precondition
+            td(data-title='効果')= facility.effect
+    h2 称号の入手（選択ルール）
+    p
+      | 追加で
+      a(href='supplement-strange-fields.html#get_trophy') 「称号の入手」
+      | をすることもできます。
+    details
+      summary 称号表
+      table.responsive#trophy
+        caption 称号表
+        thead
+          tr: th 名前 #[th 説明]
+        each trophy in trophyList
+          tr
+            td.txt-center= trophy.name
+            td(data-title='説明')= trophy.description
+    details
+      summary 称号アビリティ
+      each ability in trophyAbilityList
+        table(class="responsive", id='ability-trophy-'+ability.id)
+          caption= ability.name
+          thead
+            tr: th 名前  #[th グループ] #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+          each item in ability.list
+            tr
+              td.txt-center= item.name
+              td(data-title='グループ')= item.group
+              td(data-title='タイプ')= item.type
+              td(data-title='反動')= item.recoil
+              td.nowrap(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='効果')= item.effect
 
-  <h2>経験値の獲得</h2>
-  <p>経験値は生き残った冒険者ごとに与えられ、プレイヤーはそれを使ってキャラクターを成長させることができます。
-  経験値は以下の項目の条件を満たすことにより獲得できます。
-  </p>
-  <ol>
-  <li>生き残った！(3点)</li>
-  <li>キャンプに希望を与えた(1点)</li>
-  <li>失敗を糧にした(ファンブル1回につき1点)</li>
-  <li>＜ヌシ＞を倒した(ヌシのレベル点)</li>
-  <li>＜チェックポイント＞を訪れた（1箇所につき1点)</li>
-  <li>障害を突破した(1つにつき1点)</li>
-  <li>リミットよりも早く＜ヌシ＞に挑んだ（1サイクル早いごとに1点）</li>
-  <li>よいロールプレイをした(1点)</li>
-  <li>他の人を助けた(1点)</li>
-  <li>セッションの進行を助けた(1点)</li>
-  </ol>
-  </hgroup>
-  </section><!--ending-->
-  <hr><!--*******************************************************-->
-  <section id="afterplay">
-  <hgroup>
-  <h1>セッション終了後</h1>
-  セッションが終了すると、キャラクターは以下の効果を受けます。
-  <ul>
-  <li>【体力】が「基準値×2」になる。</li>
-  <li>【気力】が「基準値」になる。</li>
-  <li>受けている部位ダメージが全て回復する。（キズモノの＜キズ＞は回復しない）</li>
-  <li>（任意）《特技》の組み換え。（習得している特技を未習得にし、別の特技を習得する）</li>
-  <li>（任意）【アビリティ】の組み換え。（習得しているアビリティを未習得にし、別のアビリティを習得する）</li>
-
-  </ul>
-  </hgroup>
-  </section><!--afterplay-->
+    h2 経験値の獲得
+    p
+      | 経験値は生き残った冒険者ごとに与えられ、プレイヤーはそれを使ってキャラクターを成長させることができます。
+      | 経験値は以下の項目の条件を満たすことにより獲得できます。
+    ol
+      li 生き残った！(3点)
+      li キャンプに希望を与えた(1点)
+      li 失敗を糧にした(ファンブル1回につき1点)
+      li ＜ヌシ＞を倒した(ヌシのレベル点)
+      li ＜チェックポイント＞を訪れた（1箇所につき1点)
+      li 障害を突破した(1つにつき1点)
+      li リミットよりも早く＜ヌシ＞に挑んだ（1サイクル早いごとに1点）
+      li よいロールプレイをした(1点)
+      li 他の人を助けた(1点)
+      li セッションの進行を助けた(1点)
+// ending
+hr
+// *******************************************************
+section#afterplay
+  hgroup
+    h1 セッション終了後
+    |   セッションが終了すると、キャラクターは以下の効果を受けます。
+    ul
+      li 【体力】が「基準値×2」になる。
+      li 【気力】が「基準値」になる。
+      li 受けている部位ダメージが全て回復する。（キズモノの＜キズ＞は回復しない）
+      li （任意）《特技》の組み換え。（習得している特技を未習得にし、別の特技を習得する）
+      li （任意）【アビリティ】の組み換え。（習得しているアビリティを未習得にし、別のアビリティを習得する）
+// afterplay

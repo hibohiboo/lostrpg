@@ -57,6 +57,25 @@ section#check
   p 命中判定でファンブルを振った場合、命中ファンブル表を、
     | 回避判定でファンブルを振った場合には、回避ファンブル表を振ります。
   p 判定へのマイナス修正によってファンブルが起こることはありません。
+  details
+    summary ファンブル表
+    table.chart#fumble-attack
+      caption 命中判定ファンブル表
+      thead
+        tr: th d6 #[th 説明] 
+      each name in fumbleAttackList
+        tr
+          td= name.d6
+          td= name.a
+
+    table.chart#fumble-dodge
+      caption 回避判定ファンブル表
+      thead
+        tr: th d6 #[th 説明] 
+      each name in fumbleDodgeList
+        tr
+          td= name.d6
+          td= name.a
 
   h4 ○スペシャル
   p 行為判定の2D6の出目が2つとも6だった場合、スペシャルが発生します。
@@ -65,7 +84,16 @@ section#check
   p スペシャルが発生した場合、【気力】が1D6点増加し、変調が1つ解除されます。
   p 命中判定でのスペシャルでは、さらに命中スペシャル表を振りその効果を適用します。
   p 判定へのプラス修正によってスペシャルが起こることはありません。
-
+  details
+    summary 命中判定スペシャル表
+    table.chart#special-attack
+      caption 命中判定スペシャル表
+      thead
+        tr: th d6 #[th 説明] 
+      each name in specialAttackList
+        tr
+          td= name.d6
+          td= name.a
   h3#check-gm-counter ゲームマスターのつっこみ
   p ゲームマスターは、プレイヤーがキャラクターの特技を代用して行為判定をした場合、つっこむことができます。
   p プレイヤーは、キャラクターが特技をどのように使って代用を行ったか、具体的に説明しなければなりません。
