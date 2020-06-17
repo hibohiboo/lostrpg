@@ -13,7 +13,9 @@ p 称号には以下があります。全員の合意があれば、表にない
 table.responsive#trophy
   caption 称号表
   thead
-    tr: th 名前 #[th 説明]
+    tr
+      th 名前 
+      th 説明
   each trophy in trophyList
     tr
       td.txt-center= trophy.name
@@ -27,7 +29,14 @@ each ability in trophyAbilityList
   table(class="responsive", id='ability-trophy-'+ability.id)
     caption= ability.name
     thead
-      tr: th 名前  #[th グループ] #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+      tr
+        th 名前  
+        th グループ 
+        th タイプ 
+        th 反動 
+        th 指定特技 
+        th 対象 
+        th 効果
     each item in ability.list
       tr
         td.txt-center= item.name
@@ -44,7 +53,11 @@ p キャラクターは経験点を使用して、「背景」を取得できる
 table.responsive#charcter-backbone
   caption 背景表
   thead
-    tr: th 名前 #[th 必要経験点] #[th タイプ] #[th 効果]
+    tr
+      th 名前
+      th 必要経験点] 
+      th タイプ] 
+      th 効果]
   each facility in backboneList
     tr
       td.txt-center= facility.name
@@ -56,7 +69,10 @@ p プレイヤーはキャラクター作成時にキャラクターの経験表
 table.responsive#table-experience
   caption 経験表
   thead
-    tr: th d66 #[th 経験] #[th 内容] 
+    tr
+      th d66 
+      th 経験
+      th 内容
   each item in experienceList
     tr
       td= item.d66
@@ -78,7 +94,14 @@ each ability in strangeFieldsAbilityList
   table(class="responsive", id='ability-'+ability.id)
     caption= ability.name
     thead
-      tr: th 名前  #[th グループ] #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+      tr
+        th 名前
+        th グループ
+        th タイプ
+        th 反動
+        th 指定特技
+        th 対象
+        th 効果
     each item in ability.list
       tr
         td.txt-center= item.name
@@ -93,7 +116,16 @@ h3#add-item 追加アイテム
 table.responsive#item
   caption アイテム一覧
   thead
-    tr: th 名前 #[th 価格] #[th 重量] #[th タイプ]  #[th 部位] #[th 指定特技] #[th 対象] #[th 特性] #[th 効果]
+    tr
+      th 名前 
+      th 価格
+      th 重量
+      th タイプ
+      th 部位
+      th 指定特技
+      th 対象
+      th 特性
+      th 効果
   each item in strangeFieldsItemList
     tr
       td.txt-center= item.name
@@ -110,7 +142,14 @@ h3#add-enemy-ability エネミーアビリティ
 table(class="responsive", id='ability-enemy')
   caption エネミーアビリティ
   thead
-    tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+    tr
+      th 名前 
+      th グループ
+      th タイプ
+      th 反動
+      th 指定特技
+      th 対象
+      th 効果
   each item in strangeFieldsEnemyAbilityList
     tr
       td.txt-center= item.name
@@ -124,7 +163,14 @@ table(class="responsive", id='ability-enemy')
 table(class="responsive", id='add-ability-mutation')
   caption 追加突然変異表
   thead
-    tr: th d6 * d6 #[th ムシ(1)] #[th ムシ(2)] #[th ケモノ(3)] #[th ケモノ(4)] #[th ミュータント(5)] #[th ミュータント(6)]
+    tr
+      th d6 * d6 
+      th ムシ(1)
+      th ムシ(2)
+      th ケモノ(3)
+      th ケモノ(4)
+      th ミュータント(5)
+      th ミュータント(6)
   each item in strangeFieldsMutationList
     tr
       td.txt-center= item.d6
@@ -138,7 +184,15 @@ h3#add-enemy 追加エネミー
 table.responsive#add-enemylist
   caption 追加エネミー
   thead
-    tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
+    tr
+      th 名前
+      th レベル
+      th タイプ
+      th 体力
+      th 気力
+      th 特技
+      th アビリティ
+      th 解説
   each enemy in  strangeFieldsEnemyList
     tr
       td.txt-center= enemy.name
@@ -153,7 +207,10 @@ table.responsive#add-enemylist
 table.responsive#add-droplist
   caption ドロップ
   thead
-    tr: th 1d6 #[th サカナA] #[th  サカナB]
+    tr
+      th d6
+      th サカナA
+      th  サカナB
   each drop in strangeFieldsDropList
     tr
       td.txt-center= drop.d6
@@ -164,7 +221,9 @@ p 採用する場合、キャンプフェイズの判定でファンブルが起
 table.chart#table-camp-happening
   caption キャンプフェイズハプニング表
   thead
-    tr: th 2d6 #[th 結果] 
+    tr
+      th 2d6
+      th 結果
   each name in campHappeningList
     tr
       td= name["2d6"]
@@ -174,7 +233,9 @@ p 採用する場合、探索フェイズの判定でファンブルが起きた
 table.chart#table-explorer-happening
   caption 探索フェイズハプニング表
   thead
-    tr: th 2d6 #[th 結果] 
+    tr
+      th 2d6
+      th 結果
   each name in explorerHappeningList
     tr
       td= name["2d6"]
@@ -184,7 +245,9 @@ p 採用する場合、先制判定でファンブルが起きた時にそのキ
 table.chart#table-fumble-initiative
   caption 先制判定ファンブル表
   thead
-    tr: th d6 #[th 説明] 
+    tr
+      th d6 
+      th 説明 
   each name in fumbleInitiativeList
     tr
       td= name.d6
@@ -196,7 +259,10 @@ p GMは、フィールドに任意の特性をつけることができます。
 table.chart#table-field-attribute
   caption フィールド特性表
   thead
-    tr: th d6 #[th 特性] #[th 効果] 
+    tr
+      th d6
+      th 特性
+      th 効果
   each item in fieldAttributeList
     tr
       td= item["d6"]
@@ -208,7 +274,10 @@ p GMは戦闘を行う時、任意の戦場で戦闘を開始することがで�
 table.chart#table-battle-fieldA
   caption 戦場表A
   thead
-    tr: th d6 #[th 戦場] #[th 効果] 
+    tr
+      th d6 
+      th 戦場
+      th 効果
   each item in battleFieldListA
     tr
       td= item["d6"]
@@ -217,7 +286,10 @@ table.chart#table-battle-fieldA
 table.chart#table-battle-fieldB
   caption 戦場表B
   thead
-    tr: th d6 #[th 戦場] #[th 効果] 
+    tr
+      th d6 
+      th 戦場
+      th 効果 
   each item in battleFieldListB
     tr
       td= item["d6"]
@@ -228,9 +300,12 @@ p ニューエイジの追加特技「輪廻転生」を習得したときに、
 table.chart#table-reincarnation
   caption 輪廻転生表
   thead
-    tr: th d6 #[th 前世] #[th 説明] 
+    tr
+      th 2d6
+      th 前世
+      th 説明
   each item in reincarnationList
     tr
-      td= item["d6"]
+      td= item["2d6"]
       td.nowrap= item.name
       td= item.detail
