@@ -52,10 +52,25 @@
             </ul>
           </nav>
         </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+        <style>
+          @media(min-width:1024px){
+            .content .container.js-toc-content {
+              max-width: 800px;
+              padding-right: 400px;
+            }
+            .content .toc.js-toc {
+              top: 75px;
+              height: calc(100vh - 75px - 400px);
+            }
+          
+          }
+        </style>
       </header>
       <main id="main">
         <section class="content">
-          <div class="container">
+          <nav class="toc js-toc toc-right transition--300 is-position-fixed"></nav>
+          <div class="container js-toc-content">
             <div class="bread">
               <ol>
                 <li><a href="index.html">トップ</a></li>
@@ -163,17 +178,17 @@
               </div>
             </details>
             <h2 id="commonRule">このルールの読み方</h2>
-            <h3>かっこの種類</h3>
+            <h3 id="h3-commonRule-braces">かっこの種類</h3>
             <ul> 
               <li>【】：キャラクターの能力値やアビリティを表します。</li>
               <li>《》：特技を表します。</li>
               <li>＜＞：このゲームで使われる固有名詞を表します。</li>
             </ul>
-            <h3>端数の処理</h3>
+            <h3 id="commonRule-fraction">端数の処理</h3>
             <p>このゲームでは、割り算を行う場合常に端数は切り上げになります。</p>
             <section id="world">
-              <h2>ワールド</h2>
-              <h3>世界は滅びました</h3>
+              <h2 id="world-title">ワールド</h2>
+              <h3 id="world-apocalipus">世界は滅びました</h3>
               <p>
                 5年前、富士山に隕石が落ちて噴火しました。その3日後、日本中に未知の感染症が流行しました。
                 感染してすぐに発症、高熱を出して意識を失うものでした。
@@ -186,7 +201,7 @@
               <p>日本中が森に覆われました。森には、角の生えたうさぎや巨大な昆虫が棲みつき、生態系は一変しました。</p>
               <p>
                 変異は動植物に留まらず、人間の幼子にも現れました。大人並に発育した身体を持つ十歳児、生え変わった原色の髪、超能力の発現……その変化は様々でした。</p>
-              <h3>でも頑張って生きています</h3>
+              <h3 id="world-alive">でも頑張って生きています</h3>
               <p>
                 現在、人々は集まったキャンプを単位にコミュニティを作り、森に囲まれた中で生きています。食料は保存食を食べ繋いでいましたが、近年は森で捕れる獣の肉も食べています。
                 キャンプ間は森により遮られ、交流は困難なものとなっています。
@@ -195,7 +210,7 @@
                 都市にはいくつかのキャンプが合流した大きなコミュニティがあり、
                 そこがラジオの発信を行なっているようです。
               </p>
-              <h3>冒険者</h3>
+              <h3 id="world-explorers">冒険者</h3>
               <p>
                 森には、＜フィールド＞と呼ばれる危険地域があり、そこには強力な＜ヌシ＞がいます。5年のうちに、比較的安全な場所の物資は全て取り尽くしてしまいました。
                 物資を得るためには、＜フィールド＞に挑まなくてはなりません。
@@ -205,11 +220,11 @@
               <p>危険を承知で、＜フィールド＞に挑む者。彼らは今、冒険者と呼ばれています。</p><img src="../assets/images/takibi.png" alt="イメージ画像" title="冒険者の休息">
             </section>
             <section id="camp">
-              <h2>キャンプ</h2>
+              <h2 id="h2-camp">キャンプ</h2>
               <p>キャンプでは、生き残っている人々が協力して暮らしています。</p>
               <p><a href="https://create-now.now.sh/lostrpg/camps/list" rel="noopener noreferrer" target="_blank">→キャンプシートリスト</a></p>
               <p><a href="https://create-now.now.sh/lostrpg/public/ja/camp?id=JWf2PdnO8EPlU9EUnEGL" rel="noopener noreferrer" target="_blank">→サンプルキャンプ</a></p>
-              <h3>1.名前の決定</h3>
+              <h3 id="h3-camp-name">1.名前の決定</h3>
               <p>
                 まず、プレイヤーキャラクター全員が所属するキャンプの名前を決めましょう。近くの公民館や学校の名前を使うと、イメージしやすいかもしれません。</p>
               <p>表を振ってランダムに決めることもできます</p>
@@ -565,7 +580,7 @@
                   </tr>
                 </table>
               </details>
-              <h3>2.施設・人材の決定</h3>
+              <h3 id="h3-camp-facilities">2.施設・人材の決定</h3>
               <p>
                 キャンプには、最初、レベル1の「屋根」「壁」「寝床」「水場」「倉庫」「食料庫」があります。キャンプは5年の間にぼろぼろになっており、ガタがきています。</p>
               <details>
@@ -710,7 +725,7 @@
               <p>キャンプについての詳細は<a href="#camp-improve">「→キャンプの成長」</a>でも解説しています。</p>
             </section>
             <section id="character">
-              <h2>キャラクター</h2>
+              <h2 id="character-title">キャラクター</h2>
               <p>
                 プレイヤーはキャンプに暮らす人の中でも、＜フィールド＞に挑む力のある冒険者と呼ばれるキャラクターを演じます。</p>
               <p><a href="https://create-now.now.sh/lostrpg/characters/ja/list" rel="noopener noreferrer" target="_blank">→キャラクターシートリスト</a></p>
@@ -724,74 +739,62 @@
                 <div class="container">
                   <article><a href="#ビッグ">
                       <div class="image" style="background-image: url('../assets/images/big.png');"></div>
-                      <div class="text">
-                        <h2>ビッグ</h2>
+                      <div class="text"><strong>ビッグ</strong>
                         <p>体が大きいことを表すクラス。恵まれた体格を活かしたアビリティを習得できる。チビと同時に選ぶことはできない。</p>
                       </div></a></article>
                   <article><a href="#チビ">
                       <div class="image" style="background-image: url('../assets/images/tibi.png');"></div>
-                      <div class="text">
-                        <h2>チビ</h2>
+                      <div class="text"><strong>チビ</strong>
                         <p>体が小さいことを表すクラス。 小器用な立ち回りを活かしたアビリティを習得できる。 ビッグと同時に選ぶことはできない。</p>
                       </div></a></article>
                   <article><a href="#オトナ">
                       <div class="image" style="background-image: url('../assets/images/otona.png');"></div>
-                      <div class="text">
-                        <h2>オトナ</h2>
+                      <div class="text"><strong>オトナ</strong>
                         <p>オトナの立ち位置であることを表すクラス。 経験に裏打ちされたアビリティを習得できる。 ２０歳以上でなければ取得できない。</p>
                       </div></a></article>
                   <article><a href="#ニューエイジ">
                       <div class="image" style="background-image: url('../assets/images/new.png');"></div>
-                      <div class="text">
-                        <h2>ニューエイジ</h2>
+                      <div class="text"><strong>ニューエイジ</strong>
                         <p>５年前の災害により、変異を起こしたことを表すクラス。 超能力のアビリティを習得できる。 １０歳以下でなければ取得できない。</p>
                       </div></a></article>
                   <article><a href="#キズモノ">
                       <div class="image" style="background-image: url('../assets/images/kizu.png');"></div>
-                      <div class="text">
-                        <h2>キズモノ</h2>
+                      <div class="text"><strong>キズモノ</strong>
                         <p>消えない傷を受けてしまったことを表すクラス。 その不利を補い生きていくためのアビリティを習得できる。 このクラスを選択した場合、部位ダメージを1受けている状態でスタートする。 この、部位ダメージの入っている「身体部位」を＜キズ＞と呼ぶ。 ＜キズ＞はいかなる手段でも回復しない。</p>
                       </div></a></article>
                   <article><a href="#センシ">
                       <div class="image" style="background-image: url('../assets/images/sensi.png');"></div>
-                      <div class="text">
-                        <h2>センシ</h2>
+                      <div class="text"><strong>センシ</strong>
                         <p>戦闘が得意なことを表すクラス。 戦闘に必要なアビリティを習得できる。</p>
                       </div></a></article>
                   <article><a href="#スカウト">
                       <div class="image" style="background-image: url('../assets/images/sukauto.png');"></div>
-                      <div class="text">
-                        <h2>スカウト</h2>
+                      <div class="text"><strong>スカウト</strong>
                         <p>偵察・調査が得意なことを表すクラス。 探索を有利にするアビリティを習得できる。</p>
                       </div></a></article>
                   <article><a href="#ハンター">
                       <div class="image" style="background-image: url('../assets/images/hunter.png');"></div>
-                      <div class="text">
-                        <h2>ハンター</h2>
+                      <div class="text"><strong>ハンター</strong>
                         <p>狩りが得意なことを表すクラス。 飛び道具や罠を用いたアビリティを習得できる。</p>
                       </div></a></article>
                   <article><a href="#ハカセ">
                       <div class="image" style="background-image: url('../assets/images/hakase.png');"></div>
-                      <div class="text">
-                        <h2>ハカセ</h2>
+                      <div class="text"><strong>ハカセ</strong>
                         <p>物知りであることを表すクラス。 知識を活かしたアビリティを習得できる。</p>
                       </div></a></article>
                   <article><a href="#ショクニン">
                       <div class="image" style="background-image: url('../assets/images/syokunin.png');"></div>
-                      <div class="text">
-                        <h2>ショクニン</h2>
+                      <div class="text"><strong>ショクニン</strong>
                         <p>手先が器用であることを表すクラス。 モノづくりに関するアビリティを習得できる。</p>
                       </div></a></article>
                   <article><a href="#ホープ">
                       <div class="image" style="background-image: url('../assets/images/kibou.png');"></div>
-                      <div class="text">
-                        <h2>ホープ</h2>
+                      <div class="text"><strong>ホープ</strong>
                         <p>皆の希望である表すクラス。 希望を持つことで運命を変えるアビリティを習得できる。</p>
                       </div></a></article>
                   <article><a href="#ママ">
                       <div class="image" style="background-image: url('../assets/images/mama.png');"></div>
-                      <div class="text">
-                        <h2>ママ</h2>
+                      <div class="text"><strong>ママ</strong>
                         <p>おかんな立ち位置を表すクラス。 周囲に活力を与えるアビリティを習得できる。</p>
                       </div></a></article>
                 </div>
@@ -3318,7 +3321,7 @@
               </details><img src="../assets/images/uni-01.jpg" alt="イメージ画像" title="この先に進むには……  @lioneeeee 様作">
             </section>
             <section id="check">
-              <h2>行為判定</h2>
+              <h2 id="h2-check">行為判定</h2>
               <p>キャラクターが成功するか失敗するか分からない行動をとったときには行為判定を行います。</p>
               <h3 id="check-flow">行為判定の流れ</h3>
               <p>行為判定は以下の順番で行います。<a href="summary.html#check">→サマリー</a></p>
@@ -3509,7 +3512,7 @@
             </section>
             <section id="session">
               <hgroup>
-                <h1>セッション</h1>
+                <h1 id="session-title">セッション</h1>
                 <p>一回のゲームのことをセッションと呼びます。</p>
                 <p>
                   セッションは、いくつかのフェイズに分かれています。
@@ -3526,7 +3529,7 @@
             <hr>
             <section id="cycle">
               <hgroup>
-                <h1>サイクル</h1>
+                <h1 id="session-cycle-title">サイクル</h1>
                 <p>
                   このゲームでは、セッション中のプレイヤーの行動機会を均等にするために、
                   サイクルという概念を使用します。
@@ -3544,7 +3547,7 @@
                   全プレイヤーの行動が終了した時に、サイクルは終了します。そして、また新しいサイクルが
                   はじまり、プレイヤー全員が1回ずつ主要な行動をとることができます。
                 </p>
-                <h2>未行動と行動済み</h2>
+                <h2 id="session-cycle-ready-done">未行動と行動済み</h2>
                 <p>
                   プレイヤーは、サイクル中に自分のキャラクターの行動を終わらせたとき、
                   キャラクターシートのイラスト欄にサイコロや筆記用具など、
@@ -3564,12 +3567,12 @@
             <hr>
             <section id="campF">
               <hgroup>
-                <h1>キャンプフェイズ</h1>
+                <h1 id="campF-title">キャンプフェイズ</h1>
                 <p>
                   冒険者のキャンプでの行動を処理するフェイズです。
                   このフェイズでは事件の発端と探索の準備を行います。
                 </p>
-                <h2>プロローグ</h2>
+                <h2 id="campF-prologue">プロローグ</h2>
                 <p>
                   キャンプフェイズが始まったら、GMはプロローグの処理を行います。
                   ここでは、シナリオの背景や＜フィールド＞へ冒険者たちが向かうための動機を
@@ -3583,7 +3586,7 @@
                   主な動機として、物資の調達や他のキャンプへの護衛、迷い込んだ仲間の救出、＜フィールド＞の
                   拡大を防ぐなどが考えられるでしょう。
                 </p>
-                <h2>行動の処理</h2>
+                <h2 id="campF-actions">行動の処理</h2>
                 <p>プロローグが終了すると、各キャラクターは探索の準備をすることができます。</p>
                 <p>
                   行動の処理は1サイクルです。
@@ -3666,7 +3669,7 @@
             <hr>
             <section id="exploration">
               <hgroup>
-                <h1>探索フェイズ</h1>
+                <h1 id="exploration-title">探索フェイズ</h1>
                 <p>
                   探索フェイズは、キャンプから目的の＜フィールド＞に侵入し、
                   ＜チェックポイント＞ごとに障害の突破と探索を繰り返すフェイズです。
@@ -3682,7 +3685,7 @@
                   →「行動の処理」の順に処理を行います。探索フェイズの1サイクルで経過する時間は
                   およそ1日が目安です。GMの任意で1サイクルの時間は自由に調整してかまいません。
                 </p>
-                <h2>移動</h2>
+                <h2 id="exploration-move">移動</h2>
                 <p>
                   隣接する＜チェックポイント＞へ移動します。
                   ただし、その間に＜障害＞が設置されている＜チェックポイント＞への移動は行えません。
@@ -4236,7 +4239,7 @@
                     </table>
                   </details>
                 </p>
-                <h2>描写</h2>
+                <h2 id="exploration-view">描写</h2>
                 <p>
                   ＜チェックポイント＞の描写を行います。
                   ＜チェックポイント＞とは、＜フィールド＞に存在する構造物や地形で、
@@ -4250,7 +4253,7 @@
                   また、他の冒険者や行商人などとは交渉が発生する場合もあります。
                 </p>
                 <p>風景描写・戦闘・交渉などが終わったら、行動の処理に移って下さい。</p>
-                <h2>行動の処理</h2>
+                <h2 id="exploration-actions">行動の処理</h2>
                 <p>
                   各キャラクターは以下の行動から１つ選んで、
                   行動の処理を行います。
@@ -4276,7 +4279,7 @@
                   <dt>パス</dt>
                   <dd>特に何もしません。</dd>
                 </dl>
-                <h3>■障害の突破</h3>
+                <h3 id="exploration-actions-toppa">■障害の突破</h3>
                 <h4>＜障害＞</h4>
                 <p>
                   GMは新たな＜チェックポイント＞へ続く道に任意の数の＜障害＞を設置できます。
@@ -4300,7 +4303,7 @@
                   プレイヤーは、突破判定の《指定特技》の変更を提案することができます。
                   GMはその提案を聞き、納得した場合、《指定特技》を提案されたものに変更します。
                 </p>
-                <h3>■探索</h3>
+                <h3 id="exploration-actions-explorer">■探索</h3>
                 <h4>アイテムの探索</h4>
                 <p>2D6を振り、探索表の結果を適用します。</p>
                 <details>
@@ -4360,7 +4363,7 @@
                     </tr>
                   </table>
                 </details>
-                <h3>■休憩</h3>
+                <h3 id="exploration-actions-rest">■休憩</h3>
                 <p>2D6を振り、休憩表の結果を適用します。</p>
                 <details>
                   <summary>休憩表</summary>
@@ -4419,18 +4422,18 @@
                     </tr>
                   </table>
                 </details>
-                <h3>■アビリティなどの使用</h3>
+                <h3 id="exploration-actions-use-ability">■アビリティなどの使用</h3>
                 <p>支援タイプのアビリティやアイテムを使用できます。</p>
-                <h3>■オブジェクトへの接触</h3>
+                <h3 id="exploration-actions-touch-object">■オブジェクトへの接触</h3>
                 <p>
                   オブジェクトを調べたり、会話したりできます。GMは判定が必要な場合、《指定特技》を決定し、
                   成功したら何が起こるか決定しておくこと。
                 </p>
                 <p>例1：オブジェクトの行商人から買い物を行う。</p>
                 <p>例2：オブジェクトの果物の木から収穫する。指定特技は《掴む/腕部7》で成功すると果物(2J)を得る。</p>
-                <h3>■パス</h3>
+                <h3 id="exploration-pass">■パス</h3>
                 <p>なにもしません</p>
-                <h2>リミット</h2>
+                <h2 id="exploration-limit">リミット</h2>
                 <p>
                   探索フェイズのサイクル数にはリミットが定められています。これは、冒険者たちが所持している
                   食料の残量や疲労による探索の限界を表しています。リミットであるサイクルが終了するまでに、
@@ -4441,7 +4444,7 @@
                   キャラクターの人数や＜障害＞の数によっては、
                   それより多くしたり少なくしてもかまいません。
                 </p>
-                <h3>リミットの増加</h3>
+                <h3 id="exploration-limit-add">リミットの増加</h3>
                 <p>
                   GMは＜チェックポイント＞に、「水場」や「シェルター」など安全に休めそうなオブジェクトを「リミット増加用オブジェクト」として設置できます。
                   リミット増加用オブジェクトがある場合、
@@ -4458,7 +4461,7 @@
             <hr>
             <section id="battle">
               <hgroup><img src="../assets/images/usagi.png" alt="イメージ画像" title="エンカウント！">
-                <h1>戦闘</h1>
+                <h1 id="h1-battle">戦闘</h1>
                 <p>
                   戦闘では、サイクルの代わりにラウンドという単位を使用します。
                   プレイヤーの行動順は、先制判定という
@@ -4714,7 +4717,7 @@
                   さらに、部位ダメージが入った「身体部位」に隣接する周囲8マスにある特技も使用不能になります。
                   この時、ギャップは無視してください。
                 </p>
-                <h3>4.1.死亡</h3>
+                <h3 id="battle-damage-dead">4.1.死亡</h3>
                 <h4>死亡判定</h4>
                 <p>
                   戦闘によって部位ダメージを受けた場合、死亡判定を行います。
@@ -4729,7 +4732,7 @@
                   任意の点数の【気力】を消費してその分だけ出目にプラスの修正を与えることができます。
                 </p>
                 <p>『本気状態』（後述）の＜ヌシ＞はこの行動を行えません。</p>
-                <h3>4.2.敵の死亡</h3>
+                <h3 id="battle-damage-dead-enemies">4.2.敵の死亡</h3>
                 <p>＜ヌシ＞は冒険者と同じように【体力】が0になった後、死亡判定を行います。</p>
                 <p>
                   ＜ヌシ＞以外の敵は、【体力】が0になったら死亡します。
@@ -4984,7 +4987,7 @@
                       </dt>
                     </dl>
                   </details>
-                  <h2 id="badstatus">10.無力化状態</h2>
+                  <h2 id="battle-neutralization">10.無力化状態</h2>
                   <p>
                     【気力】が0となり、戦闘終了まで全ての行動を行えなくなります。
                     戦闘終了後、『無力化状態』は解除されます。
@@ -5005,8 +5008,8 @@
             <!-- *******************************************************-->
             <section id="lastbattle">
               <hgroup>
-                <h1>決戦フェイズ</h1>
-                <h2>移動</h2>
+                <h1 id="h1-lastbattle">決戦フェイズ</h1>
+                <h2 id="h2-lastbattle-move">移動</h2>
                 <p>
                   ＜ヌシ＞のいる場所への＜障害＞を突破している場合、
                   リミットであるサイクルが終わると＜ヌシ＞のいる＜チェックポイント＞へと移動し、
@@ -5015,12 +5018,12 @@
                   移動すれば決戦フェイズになります。
                 </p>
                 <p>この移動でもランダムエンカウントは発生します。→<a href="chart.html#table-randomencountAB">ランダムエンカウント表</a></p>
-                <h2>描写</h2>
+                <h2 id="h2-lastbattle-view">描写</h2>
                 <p>
                   決戦フェイズでは、GMはまず＜ヌシ＞のいる場所の風景描写、
                   そして＜ヌシ＞の描写を行なって下さい。
                 </p>
-                <h2>ヌシとの戦闘</h2>
+                <h2 id="h2-lastbattle-battle">ヌシとの戦闘</h2>
                 <p>
                   描写が終了したら、＜ヌシ＞との戦闘になります。
                   強力なチカラをもつヌシと冒険者たちとの死闘がはじまります。
@@ -5032,14 +5035,14 @@
             <!-- *******************************************************-->
             <section id="ending">
               <hgroup>
-                <h1>結果フェイズ</h1>
-                <h2>終幕シーン</h2>
+                <h1 id="ending-title">結果フェイズ</h1>
+                <h2 id="endig-view">終幕シーン</h2>
                 <p>このフェイズでは、＜ヌシ＞との戦いのすえ、どんな結末を迎えたかを描写します。</p>
                 <p>
                   物資を求めに行ったのならば、＜フィールド＞が解除された森にキャンプの皆で調達に入り、
                   収穫祭をひらき、冒険者たちを称えるでしょう。
                 </p>
-                <h2>報酬の獲得</h2>
+                <h2 id="endig-get-reward">報酬の獲得</h2>
                 <p>
                   解放された＜フィールド＞には、手付かずの物資がまだ残っている可能性が高いです。
                   冒険者たちは、解放の主役としてその物資を最初に手に入れる権利があります。
@@ -5450,7 +5453,7 @@
                     </tr>
                   </table>
                 </details>
-                <h2>称号の入手（選択ルール）</h2>
+                <h2 id="ending-get-trophy">称号の入手（選択ルール）</h2>
                 <p>追加で<a href="supplement-strange-fields.html#get_trophy">「称号の入手」</a>をすることもできます。</p>
                 <details>
                   <summary>称号表</summary>
@@ -5946,7 +5949,7 @@
                     </tr>
                   </table>
                 </details>
-                <h2>経験値の獲得</h2>
+                <h2 id="ending-get-exp">経験値の獲得</h2>
                 <p>
                   経験値は生き残った冒険者ごとに与えられ、プレイヤーはそれを使ってキャラクターを成長させることができます。
                   経験値は以下の項目の条件を満たすことにより獲得できます。
@@ -5970,7 +5973,7 @@
             <!-- *******************************************************-->
             <section id="afterplay">
               <hgroup>
-                <h1>セッション終了後</h1>  セッションが終了すると、キャラクターは以下の効果を受けます。
+                <h1 id="afterplay-title">セッション終了後</h1>  セッションが終了すると、キャラクターは以下の効果を受けます。
                 <ul>
                   <li>【体力】が「基準値×2」になる。</li>
                   <li>【気力】が「基準値」になる。</li>
@@ -5985,7 +5988,7 @@
             <!-- *******************************************************-->
             <section id="improve">
               <hgroup>
-                <h1>キャラクターの成長</h1>
+                <h1 id="improve-title">キャラクターの成長</h1>
                 <p>
                   冒険者はセッションを通して成長していきます。獲得した経験点を消費して成長することができます。
                   使用しなかった経験点は次回以降に持ち越すことができます。
@@ -6018,19 +6021,19 @@
             <section id="GMpart">
               <hgroup>
                 <h1 id="make-boss">＜ヌシ＞の作成</h1>
-                <h2>1.名前・外見</h2>
+                <h2 id="make-boss-name">1.名前・外見</h2>
                 <p>
                   名前や外見は自由に決めて下さい。
                   ＜ヌシ＞の外見は動物を中心に、機械や災害などの要素を組み合わせたものが多いようです。
                 </p>
-                <h2>2.レベル</h2>
+                <h2 id="make-boss-lv">2.レベル</h2>
                 <p>レベルは、＜ヌシ＞の強さを大まかに表す数値です。</p>
                 <p>初期作成の冒険者を相手にする場合、人数と等しい数にするとよいでしょう。</p>
-                <h2>3.特技</h2>
+                <h2 id="make-boss-specialty">3.特技</h2>
                 <p>＜ヌシ＞は全ての特技を習得しています。</p>
-                <h2>4.ギャップ</h2>
+                <h2 id="make-boss-gap">4.ギャップ</h2>
                 <p>＜ヌシ＞は特技リストのギャップを埋めません。</p>
-                <h2>5.アビリティ</h2>
+                <h2 id="make-boss-ability">5.アビリティ</h2>
                 <p>
                   ＜ヌシ＞はヌシグループの【アビリティ】をまず４つ習得しています。
                   さらに、レベルと同じ数の【アビリティ】を全てのグループから習得できます。
@@ -6315,33 +6318,33 @@
                   </table>
                 </details>
                 <p>＜ヌシ＞は4レベル以降は2つ、8レベル以降は3つの補助アビリティを組み合わせることができます。</p>
-                <h2>6.体力</h2>
+                <h2 id="make-boss-stamina">6.体力</h2>
                 <p>＜ヌシ＞は[レベル×5]点の【体力】を持っています。</p>
-                <h2>7.気力</h2>
+                <h2 id="make-boss-willPower">7.気力</h2>
                 <p>＜ヌシ＞は[10+レベル]点の【気力】を持っています。</p>
               </hgroup>
             </section>
             <!-- GMpart-->
             <section id="next">
-              <h2>次のステップ</h2>
-              <h3>さっそくセッションをしたい!</h3>
+              <h2 id="next-step-tile">次のステップ</h2>
+              <h3 id="next-step-session">さっそくセッションをしたい!</h3>
               <p>サンプルシナリオを用意しております。</p>
               <ul>
                 <li><a href="scenario-sample.html">→サンプルシナリオ1:塩と胡椒</a> </li>
                 <li><a href="scenario-sample.html#sample-scenario2">→サンプルシナリオ2:嵐の濁流</a> </li>
                 <li><a href="scenario-island.html">現代編：無人島漂流記 </a></li>
               </ul>
-              <h3>実際の遊び方を知りたい</h3>
+              <h3 id="next-step-reply">実際の遊び方を知りたい</h3>
               <p>遊んだ様子を読み物にしたリプレイを用意しております。</p>
               <ul>
                 <li><a href="reply-sample1.html">→ リプレイ1: 塩と胡椒 </a></li>
                 <li><a href="reply-sample2.html">→ リプレイ2: 嵐の濁流 </a></li>
               </ul>
-              <h3>キャンプやキャラクターを作りたい</h3>
+              <h3 id="next-step-make-char">キャンプやキャラクターを作りたい</h3>
               <p>サポートサイトがあります。キャンプ・キャラクター・ヌシなどが作成できます。</p>
               <p>キャラクターを作った後は、レコードシートを利用可能になりますのでお役立てください。</p>
               <p> <a href="https://create-now.now.sh/lostrpg" rel="noopener noreferrer">→ サポートサイト </a></p>
-              <h3>もっとデータを見たい</h3>
+              <h3 id="next-step-add-data">もっとデータを見たい</h3>
               <p>拡張データ集（サプリメント）があります。</p>
               <p>追加のクラスやアイテムをお楽しみください。</p>
               <p> <a href="supplement-strange-fields.html" rel="noopener noreferrer">→ Strange Fields 終末列島百景 </a></p>
@@ -6349,8 +6352,8 @@
             <hr>
             <section id="FAQ">
             <hgroup>
-            <h1 >FAQ</h1>
-            <h2>クラスに関するFAQ</h2>
+            <h1 id="faq-title">FAQ</h1>
+            <h2 id="faq-class">クラスに関するFAQ</h2>
             <dl>
             <dt>Q.キズモノのキズを「利き腕」に指定した場合、「右腕」や「左腕」にアイテムを装備することはできますか？</dt>
             <dd>A.装備できます。
@@ -6358,7 +6361,7 @@
             <dd>A.装備できます。ペナルティはありません。
             </dl>
             
-            <h2>行動に関するFAQ</h2>
+            <h2 id="faq-action">行動に関するFAQ</h2>
             <dl>
             <dt>Q.行動済みでも割込みタイプの行動は行えますか？</dt>
             <dd>A.はい、可能です。割込みタイプの行動は行動済み未行動に関わらず、割込んで使用できます。 </dd>
@@ -6367,7 +6370,7 @@
             </dl>
             
             
-            <h2>アビリティに関するFAQ</h2>
+            <h2 id="faq-ability">アビリティに関するFAQ</h2>
             <dl>
             <dt>Q.【毒矢】は矢を所持していなくても使えますか？</dt>
             <dd>A.使用できます。
@@ -6408,7 +6411,7 @@
             </dl>
             
             
-            <h2>アイテムに関するFAQ</h2>
+            <h2 id="faq-item">アイテムに関するFAQ</h2>
             <dl>
             <dt>Q.キャラクターメイキング時にリュックサックを売ることはできますか？</dt>
             <dd>A.可能です。10Jにリュックを売った5Jを加えて、
@@ -6461,7 +6464,7 @@
               <dd>A. 支援行動のため、1サイクルに何度つかっても効果があります。</dd>
             </dl>
             
-            <h2>行為判定に関するFAQ</h2>
+            <h2 id="faq-check">行為判定に関するFAQ</h2>
             <dl>
             <dt>Q.死亡判定は判定ですか？</dt>
             <dd>A.判定です。ホープの【希望の光】やキズモノの【悪運】の効果を使うこともできます。</dd>
@@ -6472,19 +6475,19 @@
             <dd>A. 「4.2.敵の死亡」にあるように、デフォルトでヌシは死亡判定を行います。【死亡判定】はヌシ以外のエネミー用スキルとなっております。</dd>
             </dl>
             
-            <h2>キャンプに関するFAQ</h2>
+            <h2 id="faq-camp">キャンプに関するFAQ</h2>
             <dl>
             <dt>Q.追加設備決定表で6の目が出た場合、ドラム缶とお風呂を両方取得できますか？ どちらかを選ばなければなりませんか？</dt>
             <dd>A.ドラム缶とお風呂を両方取得できます。 </dd>
             </dl>
             
-            <h2>キャンプフェイズに関するFAQ</h2>
+            <h2 id="faq-campphase">キャンプフェイズに関するFAQ</h2>
             <dl>
             <dt>Q.散策表11番が2回出た場合の処理を教えて下さい。</dt>
             <dd>A.効果は重複します。その回で購入できるキャンプの施設の必要CPはマイナス２されます。 </dd>
             </dl>
             
-            <h2>探索フェイズに関するFAQ</h2>
+            <h2 id="faq-explorer-phase">探索フェイズに関するFAQ</h2>
             <dl>
             <dt>Q.＜チェックポイント＞の＜障害＞の有無や内容、＜ヌシ＞の情報はいつわかりますか？</dt>
             <dd>A.＜障害＞の有無や内容、チェックポイントの内容は、基本的にはチェックポイントを訪れた時に分かります。
@@ -6493,7 +6496,7 @@
             </dd>
             
             </dl>
-            <h2>変調に関するFAQ</h2>
+            <h2 id="faq-badstatus">変調に関するFAQ</h2>
             <dl>
             <dt>Q.【体力】が0の時、『炎上』の効果の1ダメージで部位ダメージは入りますか。</dt>
             <dd>A.はい、部位ダメージは入ります。ダメージの入る部位を決定してください。</dd>
@@ -6506,7 +6509,7 @@
             <hr><!--*******************************************************-->
             <section id="sankou">
             <hgroup>
-            <h1 >参考作品</h1>
+            <h1 id="bibliography">参考作品</h1>
             <dl>
             <dt>リセット・ワールド</dt>
             <dd>著：鷹見一幸。伝染病の蔓延により世界は一度リセットされました。
@@ -6592,7 +6595,7 @@
               <a href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%87%E3%83%83%E3%82%BB%E3%82%A4_(%E6%98%A0%E7%94%BB)">→wikiedia</a>
             </dd>
             </dl>
-            <h2>イメージ画像</h2>
+            <h2 id="bibliography-images">イメージ画像</h2>
             <ul>
             <li>
             <a target="_blank" href="http://haikyo-channel.sakura.ne.jp/index.html">
@@ -6611,7 +6614,7 @@
             廃墟前廃墟後風景 | 彩玉 [pixiv] 
             </a></li>
             </ul>
-            <h2>冒険企画局様のTRPG</h2>
+            <h2 id="bibliography-boken">冒険企画局様のTRPG</h2>
             <li>
             <a target="_blank" href="http://www.bouken.jp/pd/sf/">
             サイコロ・フィクション │冒険企画局
@@ -6640,7 +6643,7 @@
             <hr><!--*******************************************************-->
             <section id="thanks">
             <hgroup>
-            <h1 >謝辞</h1>
+            <h1 id="thnks">謝辞</h1>
             <p>この作品を作るにあたり、アドバイス、テストプレイ、挿絵などの協力いただいた友人に感謝いたします。</p>
             <p>uni様からイラスト使用の許可をいただきました。ありがとうございます。</p>
             </hgroup>
@@ -6712,6 +6715,20 @@
           <div class="footC">© hibohiboo. All rights.</div>
         </div>
       </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+      <script>
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.js-toc',
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.js-toc-content',
+          // Which headings to grab inside of the contentSelector element.
+          headingSelector: 'h1, h2, h3',
+          // For headings inside relative or absolute positioned containers within content.
+          collapseDepth: 3,
+          hasInnerContainers: false,
+        });
+      </script>
     </body>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>$(()=>{$(".headC").click(()=>$(".headB").slideToggle("fast"))})</script>

@@ -1,5 +1,5 @@
 section#character
-  h2 キャラクター
+  h2#character-title キャラクター
   p プレイヤーはキャンプに暮らす人の中でも、＜フィールド＞に挑む力のある
     | 冒険者と呼ばれるキャラクターを演じます。
   p #[a(href="https://create-now.now.sh/lostrpg/characters/ja/list",rel="noopener noreferrer",target="_blank") →キャラクターシートリスト]
@@ -18,7 +18,7 @@ section#character
           a(href="#"+obj.name)
             .image(style="background-image: url('../assets/images/" + obj.image + "');")
             .text
-              h2= obj.name
+              strong= obj.name
               p= obj.description
 
   h3#decide-skill 2.特技の決定

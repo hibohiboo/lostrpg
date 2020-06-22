@@ -13,9 +13,23 @@ block body
   body.nohero
     header
       include includes/common/header
+      link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css")
+      style.
+        @media(min-width:1024px){
+          .content .container.js-toc-content {
+            max-width: 800px;
+            padding-right: 400px;
+          }
+          .content .toc.js-toc {
+            top: 75px;
+            height: calc(100vh - 75px - 400px);
+          }
+
+        }
     main#main
       section.content
-        .container
+        nav.toc.js-toc.toc-right.transition--300.is-position-fixed
+        .container.js-toc-content
           include includes/rulebook/bread
           h1 LOSTRPG 基本ルールブック
           img(src="../assets/images/losttop.png" alt="イメージ画像"  title="LOST～廃墟の森の子供たち～")
@@ -37,3 +51,16 @@ block body
           include includes/rulebook/bibliography
           include includes/rulebook/thanks
     include includes/common/footer
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js")
+    script.
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        collapseDepth: 3,
+        hasInnerContainers: false,
+      });

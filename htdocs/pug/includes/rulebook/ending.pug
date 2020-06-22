@@ -1,13 +1,13 @@
 section#ending
   hgroup
-    h1 結果フェイズ
-    h2 終幕シーン
+    h1#ending-title 結果フェイズ
+    h2#endig-view 終幕シーン
     p
       | このフェイズでは、＜ヌシ＞との戦いのすえ、どんな結末を迎えたかを描写します。
     p
       | 物資を求めに行ったのならば、＜フィールド＞が解除された森にキャンプの皆で調達に入り、
       | 収穫祭をひらき、冒険者たちを称えるでしょう。
-    h2 報酬の獲得
+    h2#endig-get-reward 報酬の獲得
     p
       | 解放された＜フィールド＞には、手付かずの物資がまだ残っている可能性が高いです。
       | 冒険者たちは、解放の主役としてその物資を最初に手に入れる権利があります。
@@ -79,7 +79,7 @@ section#ending
             td(data-title='最大レベル')= facility.maxLv
             td(data-title='前提')= facility.precondition
             td(data-title='効果')= facility.effect
-    h2 称号の入手（選択ルール）
+    h2#ending-get-trophy 称号の入手（選択ルール）
     p
       | 追加で
       a(href='supplement-strange-fields.html#get_trophy') 「称号の入手」
@@ -111,7 +111,7 @@ section#ending
               td(data-title='対象')= item.target
               td(data-title='効果')= item.effect
 
-    h2 経験値の獲得
+    h2#ending-get-exp 経験値の獲得
     p
       | 経験値は生き残った冒険者ごとに与えられ、プレイヤーはそれを使ってキャラクターを成長させることができます。
       | 経験値は以下の項目の条件を満たすことにより獲得できます。
@@ -131,7 +131,7 @@ hr
 // *******************************************************
 section#afterplay
   hgroup
-    h1 セッション終了後
+    h1#afterplay-title セッション終了後
     |   セッションが終了すると、キャラクターは以下の効果を受けます。
     ul
       li 【体力】が「基準値×2」になる。

@@ -2,7 +2,7 @@ hr
 section#battle
   hgroup
     img(src='../assets/images/usagi.png', alt='イメージ画像', title='エンカウント！')
-    h1 戦闘
+    h1#h1-battle 戦闘
     p
       | 戦闘では、サイクルの代わりにラウンドという単位を使用します。
       | プレイヤーの行動順は、先制判定という
@@ -119,7 +119,7 @@ section#battle
       | 行為判定に使用できなくなります。
       | さらに、部位ダメージが入った「身体部位」に隣接する周囲8マスにある特技も使用不能になります。
       | この時、ギャップは無視してください。
-    h3 4.1.死亡
+    h3#battle-damage-dead 4.1.死亡
     h4 死亡判定
     p
       | 戦闘によって部位ダメージを受けた場合、死亡判定を行います。
@@ -132,7 +132,7 @@ section#battle
       | 死亡判定のダイスを振った後、
       | 任意の点数の【気力】を消費してその分だけ出目にプラスの修正を与えることができます。
     p 『本気状態』（後述）の＜ヌシ＞はこの行動を行えません。
-    h3 4.2.敵の死亡
+    h3#battle-damage-dead-enemies 4.2.敵の死亡
     p
       | ＜ヌシ＞は冒険者と同じように【体力】が0になった後、死亡判定を行います。
     p
@@ -256,7 +256,7 @@ section#battle
           each status in badStatusList
             dt= status.name
               dd= status.effect
-      h2#badstatus 10.無力化状態
+      h2#battle-neutralization 10.無力化状態
       p
         | 【気力】が0となり、戦闘終了まで全ての行動を行えなくなります。
         | 戦闘終了後、『無力化状態』は解除されます。
@@ -273,8 +273,8 @@ hr
 // *******************************************************
 section#lastbattle
   hgroup
-    h1 決戦フェイズ
-    h2 移動
+    h1#h1-lastbattle 決戦フェイズ
+    h2#h2-lastbattle-move 移動
     p
       | ＜ヌシ＞のいる場所への＜障害＞を突破している場合、
       | リミットであるサイクルが終わると＜ヌシ＞のいる＜チェックポイント＞へと移動し、
@@ -284,11 +284,11 @@ section#lastbattle
     p
       | この移動でもランダムエンカウントは発生します。→
       a(href='chart.html#table-randomencountAB') ランダムエンカウント表
-    h2 描写
+    h2#h2-lastbattle-view 描写
     p
       | 決戦フェイズでは、GMはまず＜ヌシ＞のいる場所の風景描写、
       | そして＜ヌシ＞の描写を行なって下さい。
-    h2 ヌシとの戦闘
+    h2#h2-lastbattle-battle ヌシとの戦闘
     p
       | 描写が終了したら、＜ヌシ＞との戦闘になります。
       | 強力なチカラをもつヌシと冒険者たちとの死闘がはじまります。
