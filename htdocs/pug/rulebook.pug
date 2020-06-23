@@ -61,7 +61,7 @@ block body
             i(class="fas fa-book" style="font-size: 25px") 
             i(class="fas fa-book-open" style="font-size: 25px") 
             div 目次
-        nav.toc.js-toc.toc-right.transition--300.is-position-fixed
+        nav.toc.js-toc.toc-right.transition.is-position-fixed
         .container.js-toc-content
           include includes/rulebook/bread
           h1 LOSTRPG 基本ルールブック
@@ -95,4 +95,5 @@ block body
         // For headings inside relative or absolute positioned containers within content.
         collapseDepth: 3,
         hasInnerContainers: true,
+        onClick: ()=>document.getElementById('toc').checked = false
       });

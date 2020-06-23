@@ -102,7 +102,7 @@
               <div>目次</div>
             </div>
           </label>
-          <nav class="toc js-toc toc-right transition--300 is-position-fixed"></nav>
+          <nav class="toc js-toc toc-right transition is-position-fixed"></nav>
           <div class="container js-toc-content">
             <div class="bread">
               <ol>
@@ -6760,6 +6760,7 @@
           // For headings inside relative or absolute positioned containers within content.
           collapseDepth: 3,
           hasInnerContainers: true,
+          onClick: ()=>document.getElementById('toc').checked = false
         });
       </script>
     </body>
