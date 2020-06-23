@@ -1,3 +1,6 @@
+.dn {
+  display: none;
+}
 .transition--300 {
   transition: all 300ms ease-in-out;
 }
@@ -51,9 +54,10 @@ a.toc-link {
   display: block !important;
 }
 .toc-icon {
-  position: fixed;
+  /* position: fixed;
   top: 0;
-  right: 0;
+  right: 0; */
+  z-index: 2;
 }
 #toc:checked ~ .toc {
   box-shadow: 0 0 5px #c8c8c8;
@@ -67,6 +71,7 @@ a.toc-link {
   transform: translateX(100%);
   right: 0;
 }
+
 @media (min-width: 52em) {
   .toc {
     transform: translateX(0);

@@ -20,7 +20,7 @@
     <meta name="twitter:description" content="これは、文明崩壊後の日本を生き延びる人々を演じるゲームです。プレイヤーの分身であるキャラクター（以下、PC)は、物資を求めて危険な森を探索する冒険者となります。">
     <meta name="twitter:image" content="https://lostrpg-751c1.firebaseapp.com/assets/images/losttop.png">
     <script> FontAwesomeConfig = { searchPseudoElements: true };</script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.1/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;text=LOSTRPG" rel="stylesheet">
     <link href="../assets/css/styles.css" rel="stylesheet">
     <!-- Google Tag Manager -->
@@ -54,21 +54,54 @@
         </div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
         <style>
+          .toc-icon {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: var(--main-color);
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            border: solid 1px #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .toc-icon div div{
+            color: white;
+          }
+          #toc ~ .toc-icon .fa-book-open {
+            display: none;
+          }
+          #toc:checked ~ .toc-icon .fa-book {
+            display: none;
+          }
+          #toc:checked ~ .toc-icon .fa-book-open {
+            display: block;
+          }
           @media(min-width:1024px){
+            .toc-icon {
+              display: none;
+            }
             .content .container.js-toc-content {
               max-width: 800px;
               padding-right: 400px;
             }
             .content .toc.js-toc {
               top: 75px;
-              height: calc(100vh - 75px - 400px);
+              height: calc(100vh - 75px - 412px);
             }
-          
           }
         </style>
       </header>
       <main id="main">
         <section class="content">
+          <input class="dn" id="toc" type="checkbox">
+          <label class="toc-icon" for="toc"> 
+            <div><i class="fas fa-book" style="font-size: 25px"> </i><i class="fas fa-book-open" style="font-size: 25px"> </i>
+              <div>目次</div>
+            </div>
+          </label>
           <nav class="toc js-toc toc-right transition--300 is-position-fixed"></nav>
           <div class="container js-toc-content">
             <div class="bread">
@@ -6726,7 +6759,7 @@
           headingSelector: 'h1, h2, h3',
           // For headings inside relative or absolute positioned containers within content.
           collapseDepth: 3,
-          hasInnerContainers: false,
+          hasInnerContainers: true,
         });
       </script>
     </body>
