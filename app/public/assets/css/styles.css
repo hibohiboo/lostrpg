@@ -997,3 +997,41 @@ a.toc-link {
     margin-right: 280px;
   }
 }
+.toc-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--main-color);
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border: solid 1px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toc-icon div div {
+  color: #fff;
+}
+#toc ~ .toc-icon .fa-book-open {
+  display: none;
+}
+#toc:checked ~ .toc-icon .fa-book {
+  display: none;
+}
+#toc:checked ~ .toc-icon .fa-book-open {
+  display: block;
+}
+@media (min-width: 1024px) {
+  .toc-icon {
+    display: none;
+  }
+  .content .container.js-toc-content {
+    max-width: 800px;
+    padding-right: 400px;
+  }
+  .content .toc.js-toc {
+    top: 75px;
+    height: calc(100vh - 75px - 412px);
+  }
+}

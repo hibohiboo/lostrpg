@@ -1,4 +1,4 @@
-h2 追加データ
+h2#add-data 追加データ
 p 追加されたデータです。一部のデータのみを使用するといったことも可能です。
 
 h3#get_trophy 称号の入手
@@ -47,7 +47,7 @@ each ability in trophyAbilityList
         td(data-title='対象')= item.target
         td(data-title='効果')= item.effect
 
-h3 経験点の使用
+h3#use-exp 経験点の使用
 p キャラクターは経験点を使用して、「背景」を取得できるようになります。
 
 table.responsive#charcter-backbone
@@ -86,7 +86,7 @@ h3#add-class 追加クラス
         a(href="#")
           .image(style="background-image: url('../assets/images/" + obj.image + "');")
           .text
-            h2= obj.name
+            strong= obj.name
             p= obj.description
 
 h3#add-ability 追加アビリティ
@@ -240,6 +240,20 @@ table.chart#table-explorer-happening
     tr
       td= name["2d6"]
       td= name.a
+
+h3#special-initiative 先制判定スペシャル表
+p 採用する場合、先制判定でスペシャルが起きた時にそのキャラクターはこの表を振ること。
+table.chart#table-special-initiative
+  caption 先制判定スペシャル表
+  thead
+    tr
+      th d6 
+      th 説明 
+  each name in specialInitiativeList
+    tr
+      td= name.d6
+      td= name.a
+
 h3#fumble-initiative 先制判定ファンブル表
 p 採用する場合、先制判定でファンブルが起きた時にそのキャラクターはこの表を振ること。
 table.chart#table-fumble-initiative

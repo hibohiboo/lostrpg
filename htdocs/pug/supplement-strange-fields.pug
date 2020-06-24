@@ -7,7 +7,8 @@ block title
   title= title
 
 block css
-  link(href="../assets/css/styles.css" rel="stylesheet" )
+  link(href="../assets/css/styles.css" rel="stylesheet")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css")
 block headjs
 
 block body
@@ -15,13 +16,20 @@ block body
     include includes/common/header
   main#main
     section.content
-      .container
+      input(id='toc' type='checkbox' class="dn")
+      label(class='toc-icon' for='toc') 
+        div
+          i(class="fas fa-book" style="font-size: 25px") 
+          i(class="fas fa-book-open" style="font-size: 25px") 
+          div 目次
+      nav.toc.js-toc.toc-right.transition.is-position-fixed
+      .container.js-toc-content
         include includes/rulebook/bread
         h1 LOSTRPG サプリメント Strange Fields  終末列島百景
         p 世界の変貌は止まらない
         h2 広がる世界
-        p LOSTTRPGサプリメント「Strange Fields  終末列島百景」はLOSTRPGの追加データ集です。
-        p  PLの同意の上で、GMはサプリメントのデータおよびルールを使用してもかまいません。
+        p LOSTRPGサプリメント「Strange Fields  終末列島百景」はLOSTRPGの追加データ集です。
+        p 参加者の合意の上ならば、サプリメントのデータ・ルールの一部のみを使用することもできます。
         include includes/supplement-strange-fields/contents
         include includes/supplement-strange-fields/scenario-craft
         include includes/supplement-strange-fields/add-rules
@@ -29,3 +37,13 @@ block body
         include includes/supplement-strange-fields/faq
 
   include includes/common/footer
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js")
+  script.
+    tocbot.init({
+      tocSelector: '.js-toc',
+      contentSelector: '.js-toc-content',
+      headingSelector: 'h1, h2, h3',
+      collapseDepth: 3,
+      hasInnerContainers: true,
+      onClick: ()=>document.getElementById('toc').checked = false
+    });

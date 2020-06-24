@@ -23,6 +23,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.13.1/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;text=LOSTRPG" rel="stylesheet">
     <link href="../assets/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -54,7 +55,14 @@
     </header>
     <main id="main">
       <section class="content">
-        <div class="container">
+        <input class="dn" id="toc" type="checkbox">
+        <label class="toc-icon" for="toc"> 
+          <div><i class="fas fa-book" style="font-size: 25px"> </i><i class="fas fa-book-open" style="font-size: 25px"> </i>
+            <div>目次</div>
+          </div>
+        </label>
+        <nav class="toc js-toc toc-right transition is-position-fixed"></nav>
+        <div class="container js-toc-content">
           <div class="bread">
             <ol>
               <li><a href="index.html">トップ</a></li>
@@ -63,8 +71,8 @@
           <h1>LOSTRPG サプリメント Strange Fields  終末列島百景</h1>
           <p>世界の変貌は止まらない</p>
           <h2>広がる世界</h2>
-          <p>LOSTTRPGサプリメント「Strange Fields  終末列島百景」はLOSTRPGの追加データ集です。</p>
-          <p> PLの同意の上で、GMはサプリメントのデータおよびルールを使用してもかまいません。</p>
+          <p>LOSTRPGサプリメント「Strange Fields  終末列島百景」はLOSTRPGの追加データ集です。</p>
+          <p>参加者の合意の上ならば、サプリメントのデータ・ルールの一部のみを使用することもできます。</p>
           <h2>目次 </h2>
           <ol>
             <li><a href="#scenario-craft">ランダム表を使ったシナリオ</a></li>
@@ -89,6 +97,7 @@
             <li><a href="#add-enemy">追加エネミー</a></li>
             <li><a href="#camp-happening">キャンプフェイズハプニング表</a></li>
             <li><a href="#explorer-happening">探索フェイズハプニング表</a></li>
+            <li><a href="#special-initiative">先制判定スペシャル表</a></li>
             <li><a href="#fumble-initiative">先制判定ファンブル表</a></li>
             <li><a href="#field-attribute">フィールド特性表</a></li>
             <li><a href="#battle-field">戦場表</a></li>
@@ -96,11 +105,11 @@
             <li><a href="#faq">FAQ</a></li>
           </ol>
           <h2 id="scenario-craft">ランダム表を使ったシナリオ</h2>
-          <h3>前提条件</h3>
+          <h3 id="scenario-craft-ready">前提条件</h3>
           <p>ランダム表を使ったシナリオでは、ランダム表の結果を最大限に活かすため、後述の<a href="#wisdom-and-innovative">知恵と工夫ルール</a>を使用します。</p>
-          <h3>事前準備</h3>
+          <h3 id="scenario-craft-pre">事前準備</h3>
           <p>GMは、【ヌシのデータ】【チェックポイントの数】を最初に決めます。チェックポイントの数はセッションの長さに比例します。ゲームに慣れていない場合は3で始めるとよいでしょう。</p>
-          <h3>キャンプフェイズ</h3>
+          <h3 id="scenario-craft-camp">キャンプフェイズ</h3>
           <p>GMはプロローグ表を振ります。表の結果を演出し、プロローグと行動の処理を行なって下さい。</p>
           <p>プロローグではリミットを伝えてください。リミットは【チェックポイントの数プラス１】になります。</p>
           <h4 id="prologue">プロローグ表</h4>
@@ -146,7 +155,7 @@
               <td>何故行くのか。そこにフィールドがあるからだ。</td>
             </tr>
           </table>
-          <h3>探索フェイズ</h3>
+          <h3 id="scenario-craft-explorer">探索フェイズ</h3>
           <p>＜チェックポイント＞ごとにGMはシーン表と障害表を振り、 描写を行います。 この時、表の結果を見ながらプレイヤーと一緒にどんな＜チェックポイント＞か演出すると よいでしょう。</p>
           <p>ランダム表を使ったシナリオでは、1つの＜チェックポイント＞に存在する障害は1つです。 また、分岐はなく＜チェックポイント＞は一本道となります。</p>
           <h4 id="scene">シーン表</h4>
@@ -589,11 +598,11 @@
               <td>天然か人工か罠だらけの道。突破判定に失敗したものはランダムに『変調』を1つうける。</td>
             </tr>
           </table>
-          <h3>決戦フェイズ</h3>
+          <h3 id="scenario-craft-boss">決戦フェイズ</h3>
           <p>通常通り処理を行います。</p>
-          <h3>結果フェイズ</h3>
+          <h3 id="scenario-craft-results">結果フェイズ</h3>
           <p>通常通り処理を行います。</p>
-          <h2>追加ルール</h2>
+          <h2 id="add-rules">追加ルール</h2>
           <p>追加されたルールです。一部のルールのみを使用するといったことも可能です。</p>
           <h3 id="success-point">成功度 </h3>
           <p>行為判定を行ったとき、[達成値から目標値を引いた値]が成功度になります。</p>
@@ -621,7 +630,7 @@
           <p>もしも成功度が同じキャラクターがいた場合、同時行動となります。 便宜的に処理の順番はゲームマスターに近い位置のプレイヤーから行いますが、 ゲーム内では同時に行ったものとして扱います。</p>
           <p>同時攻撃が発生した場合、その成功度のキャラクター全員の行動の処理が終了した後に、 ダメージ、変調、その他行動の結果を適用して下さい。</p>
           <p>例えば、先制判定の成功度が同じキャラクターAとBがいたとします。便宜的にAが先に 【スタンガン】を使って攻撃を行いました。それにより、Bは気力を1点消費して回避判定を行い、それにファンブルしました。 ファンブル表の結果は、気力が5点減ることでした。通常であれば、Bはダメージ2点を受けた上に『麻痺』の変調を受け、気力を6点減少させます。 しかし、同時攻撃の場合、それらの効果はBの攻撃の処理が終了するまで適用されません。</p>
-          <h2>追加データ</h2>
+          <h2 id="add-data">追加データ</h2>
           <p>追加されたデータです。一部のデータのみを使用するといったことも可能です。</p>
           <h3 id="get_trophy">称号の入手</h3>
           <p><a href="rulebook.html#ending">結果フェイズ</a>に「称号の入手」を追加します</p>
@@ -1111,7 +1120,7 @@
               <td data-title="効果">自分以外の判定の直前に使用する。指定特技の判定に成功すると対象の達成値にプラス1の修正がつく</td>
             </tr>
           </table>
-          <h3>経験点の使用</h3>
+          <h3 id="use-exp">経験点の使用</h3>
           <p>キャラクターは経験点を使用して、「背景」を取得できるようになります。</p>
           <table class="responsive" id="charcter-backbone">
             <caption>背景表</caption>
@@ -1270,32 +1279,27 @@
             <div class="container">
               <article><a href="#">
                   <div class="image" style="background-image: url('../assets/images/akindo.png');"></div>
-                  <div class="text">
-                    <h2>アキンド</h2>
+                  <div class="text"><strong>アキンド</strong>
                     <p>他人との交渉のみならず、道具の扱いにも習熟しているあきんど。</p>
                   </div></a></article>
               <article><a href="#">
                   <div class="image" style="background-image: url('../assets/images/kainusi.png');"></div>
-                  <div class="text">
-                    <h2>カイヌシ</h2>
+                  <div class="text"><strong>カイヌシ</strong>
                     <p>獣使い。一匹のパートナーと共に戦うものもいれば、多くの動物を操るものもいる。</p>
                   </div></a></article>
               <article><a href="#">
                   <div class="image" style="background-image: url('../assets/images/ogamiya.png');"></div>
-                  <div class="text">
-                    <h2>オガミヤ</h2>
+                  <div class="text"><strong>オガミヤ</strong>
                     <p>占い師や巫女、神父などの神秘的な力をもっているクラス。</p>
                   </div></a></article>
               <article><a href="#">
                   <div class="image" style="background-image: url('../assets/images/idol.png');"></div>
-                  <div class="text">
-                    <h2>アイドル</h2>
+                  <div class="text"><strong>アイドル</strong>
                     <p>歌って踊って明るく皆を励ますムードメーカー。</p>
                   </div></a></article>
               <article><a href="#">
                   <div class="image" style="background-image: url('../assets/images/yaseizi3.png');"></div>
-                  <div class="text">
-                    <h2>ヤセイジ</h2>
+                  <div class="text"><strong>ヤセイジ</strong>
                     <p>森に生きる者。人語を解するケモノもこのクラスとなる。</p>
                   </div></a></article>
             </div>
@@ -2634,6 +2638,41 @@
               <td>突然のスランプ！ このセッションの間、習得しているアビリティを１つ選んで未習得にする。</td>
             </tr>
           </table>
+          <h3 id="special-initiative">先制判定スペシャル表</h3>
+          <p>採用する場合、先制判定でスペシャルが起きた時にそのキャラクターはこの表を振ること。</p>
+          <table class="chart" id="table-special-initiative">
+            <caption>先制判定スペシャル表</caption>
+            <thead>
+              <tr>
+                <th>d6 </th>
+                <th>説明 </th>
+              </tr>
+            </thead>
+            <tr>
+              <td>1</td>
+              <td>追加行動を得ます。</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>敵一体を選び、『転倒』の変調を与えることができます。</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>敵一体を選び、そのラウンドに行う行為判定にマイナス１の修正を与えることができます。</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>そのラウンドに行う行為判定にプラス1の修正を得ます。</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>【気力】が1D6点増加します。</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>そのラウンドに行う攻撃のダメージにプラス1の修正を得ます。</td>
+            </tr>
+          </table>
           <h3 id="fumble-initiative">先制判定ファンブル表</h3>
           <p>採用する場合、先制判定でファンブルが起きた時にそのキャラクターはこの表を振ること。</p>
           <table class="chart" id="table-fumble-initiative">
@@ -2940,6 +2979,17 @@
         <div class="footC">© hibohiboo. All rights.</div>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script>
+      tocbot.init({
+        tocSelector: '.js-toc',
+        contentSelector: '.js-toc-content',
+        headingSelector: 'h1, h2, h3',
+        collapseDepth: 3,
+        hasInnerContainers: true,
+        onClick: ()=>document.getElementById('toc').checked = false
+      });
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>$(()=>{$(".headC").click(()=>$(".headB").slideToggle("fast"))})</script>
   </body>
