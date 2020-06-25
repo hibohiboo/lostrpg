@@ -2288,7 +2288,7 @@
                   <tr>
                     <td class="txt-center">バッテリー</td>
                     <td data-title="価格">2</td>
-                    <td data-title="重量">0</td>
+                    <td data-title="重量">1</td>
                     <td data-title="タイプ">割込み</td>
                     <td data-title="部位">-</td>
                     <td data-title="指定特技">-</td>
@@ -2332,13 +2332,13 @@
                   <tr>
                     <td class="txt-center">矢筒</td>
                     <td data-title="価格">1</td>
-                    <td data-title="重量">0</td>
+                    <td data-title="重量">1</td>
                     <td data-title="タイプ">装備</td>
                     <td data-title="部位">-</td>
                     <td data-title="指定特技">-</td>
                     <td data-title="対象">-</td>
                     <td data-title="特性">袋</td>
-                    <td data-title="効果">名前に『矢』のつくアイテムを2束（使用回数20回分）まで入れることができる。袋の中のアイテムの重量は所持限界から無視する。戦闘中でも袋の中のアイテムを使用できる。</td>
+                    <td data-title="効果">名前に『矢』のつくアイテムを3束（使用回数30回分）まで入れることができる。袋の中のアイテムの重量は所持限界から無視する。戦闘中でも袋の中のアイテムを使用できる。</td>
                   </tr>
                   <tr>
                     <td class="txt-center">胡椒玉</td>
@@ -2365,7 +2365,7 @@
                   <tr>
                     <td class="txt-center">なんこう</td>
                     <td data-title="価格">3</td>
-                    <td data-title="重量">0</td>
+                    <td data-title="重量">1</td>
                     <td data-title="タイプ">割込み</td>
                     <td data-title="部位">-</td>
                     <td data-title="指定特技">-</td>
@@ -2404,7 +2404,7 @@
                     <td data-title="指定特技">-</td>
                     <td data-title="対象">-</td>
                     <td data-title="特性">消耗品</td>
-                    <td data-title="効果">【応急手当て】の効果プラス1。</td>
+                    <td data-title="効果">【応急手当て】【ちちんぷいぷい】の効果プラス1。</td>
                   </tr>
                   <tr>
                     <td class="txt-center">ペット</td>
@@ -4948,7 +4948,7 @@
                   </details>
                   <h2 id="badstatus">9.変調</h2>
                   <p>
-                    キャラクターやアビリティの効果やアイテムなどによって、変調という特殊な効果をうけることがあります。
+                    キャラクターはアビリティの効果やアイテムなどによって、変調という特殊な効果をうけることがあります。
                     変調は、戦闘が終了すれば解除されます。
                     スペシャル、アイテム、アビリティの効果、または変調ごとに設定された条件を満たすことで解除されることもあります。
                     変調を2つ以上うけている状態で、1つ回復する場合、任意の変調を解除することができます。
@@ -6341,6 +6341,7 @@
               <p>拡張データ集（サプリメント）があります。</p>
               <p>追加のクラスやアイテムをお楽しみください。</p>
               <p> <a href="supplement-strange-fields.html" rel="noopener noreferrer">→ Strange Fields 終末列島百景 </a></p>
+              <p> <a href="supplement-seki-dragon-plain.html" rel="noopener noreferrer">→ 関ヶ原暴竜平原 </a></p>
             </section>
             <hr>
             <section id="FAQ">
@@ -6640,7 +6641,7 @@
                 <p>この作品を作るにあたり、アドバイス、テストプレイ、挿絵などの協力いただいた友人に感謝いたします。</p>
                 <p><a href="https://twitter.com/bananannboo">オムレッツ</a> 様からアイテム案をいただきました。ありがとうございます。</p>
                 <p><a href="https://twitter.com/lioneeeee">uni</a>様からイラスト使用の許可をいただきました。ありがとうございます。</p>
-                <p><a href="https://twitter.com/hagure_g"></a> はぐれけだま] 様からデータの提供をいただきました。ありがとうございます。</p>
+                <p><a href="https://twitter.com/hagure_g">はぐれけだま</a> 様からデータの提供をいただきました。ありがとうございます。</p>
               </hgroup>
             </section>
           </div>
@@ -6701,7 +6702,9 @@
                 <li><a href="chart.html"> チャート</a></li>
                 <li><a href="summary.html"> サマリー</a></li>
                 <li><a href="/assets/data/sheet.pdf"> キャラシートPDF</a></li>
+                <li><a href="https://create-now.now.sh/lostrpg">オンラインキャラシート一覧</a></li>
                 <li><a href="supplement-strange-fields.html"> サプリ：終末列島百景</a></li>
+                <li><a href="supplement-seki-dragon-plain.html"> サプリ：関ヶ原暴竜平原</a></li>
                 <li><a href="history.html"> 更新履歴</a></li>
                 <li><a target="_blank" href="http://www.nicovideo.jp/watch/sm22594742"> ニコニコ動画：卓M@sリプレイ</a></li>
               </ul>
@@ -6713,13 +6716,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
       <script>
         tocbot.init({
-          // Where to render the table of contents.
           tocSelector: '.js-toc',
-          // Where to grab the headings to build the table of contents.
           contentSelector: '.js-toc-content',
-          // Which headings to grab inside of the contentSelector element.
           headingSelector: 'h1, h2, h3',
-          // For headings inside relative or absolute positioned containers within content.
           collapseDepth: 3,
           hasInnerContainers: true,
           onClick: ()=>document.getElementById('toc').checked = false

@@ -1,0 +1,10 @@
+script(src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js")
+script.
+  tocbot.init({
+    tocSelector: '.js-toc',
+    contentSelector: '.js-toc-content',
+    headingSelector: 'h1, h2, h3',
+    collapseDepth: 3,
+    hasInnerContainers: true,
+    onClick: ()=>document.getElementById('toc').checked = false
+  });

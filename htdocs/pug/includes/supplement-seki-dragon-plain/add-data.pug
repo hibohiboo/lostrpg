@@ -1,0 +1,73 @@
+h2#add-data 追加データ
+p 追加されたデータです。
+
+h3#add-item 追加アイテム
+p 以下の特性が追加されています。
+dl
+  dt 判定強化
+  dd 装備中、特定の判定の達成値を強化するアイテムです。
+  dt アビリティ強化
+  dd アビリティを強化するアイテムです。
+
+table.responsive#item
+  caption アイテム一覧
+  thead
+    tr
+      th 名前 
+      th 価格
+      th 重量
+      th タイプ
+      th 部位
+      th 指定特技
+      th 対象
+      th 特性
+      th 効果
+  each item in dragonPlainItemList
+    tr
+      td.txt-center= item.name
+      td(data-title='価格')= item.j
+      td(data-title='重量')= item.weight
+      td(data-title='タイプ')= item.type
+      td(data-title='部位')= item.area
+      td.wrap(data-title='指定特技')= item.specialty
+      td(data-title='対象')= item.target
+      td(data-title='特性')= item.trait
+      td(data-title='効果')= item.effect
+
+h3#add-ability 追加アビリティ
+each ability in dragonPlainAbilityList
+  table(class="responsive", id='ability-'+ability.id)
+    caption= ability.name
+    thead
+      tr
+        th 名前
+        th グループ
+        th タイプ
+        th 反動
+        th 指定特技
+        th 対象
+        th 効果
+    each item in ability.list
+      tr
+        td.txt-center= item.name
+        td(data-title='グループ')= item.group
+        td(data-title='タイプ')= item.type
+        td(data-title='反動')= item.recoil
+        td.nowrap(data-title='指定特技')= item.specialty
+        td(data-title='対象')= item.target
+        td(data-title='効果')= item.effect
+
+h3#add-camp-equipment 追加施設
+table.responsive#camp-equipment
+  caption キャンプ施設表
+  thead
+    tr: th 名前 #[th 必要CP] #[th タイプ] #[th 指定特技] #[th レベル] #[th 前提] #[th 効果]
+  each facility in dragonPlainEquipmentList
+    tr
+      td.txt-center= facility.name
+      td(data-title='必要CP')= facility.cp
+      td(data-title='タイプ')= facility.type
+      td(data-title='指定特技')= facility.specialty
+      td(data-title='最大レベル')= facility.maxLv
+      td(data-title='前提')= facility.precondition
+      td(data-title='効果')= facility.effect

@@ -1,0 +1,66 @@
+h2#add-rules 追加ルール
+p 追加されたルールです。一部のルールのみを使用するといったことも可能です。
+h3#star-fragment ＜星の欠片＞による＜ヌシ＞の強化
+p ＜星の欠片＞を体に埋め込み、＜ヌシ＞を強化することができます。
+p ＜星の欠片＞の色ごとに、強化される内容がことなります。
+p 同じ色の欠片を複数埋め込むことで効果は重複します。
+p ＜星の欠片＞は＜ヌシ＞のLv個まで埋め込むことができます。
+p 強化された＜ヌシ＞を倒した冒険者はドロップ品として＜星の欠片＞を得ます。
+
+table.responsive#boss-star-fragment
+  caption 星の欠片強化表
+  thead
+    tr
+      th 星の欠片 
+      th 強化内容
+  each fragment in bossFragmentList
+    tr
+      td.txt-center= fragment.name
+      td(data-title='強化内容')= fragment.description
+
+h3#blacksmith ＜星の欠片＞による装備の強化
+p キャンプに【工房】の施設か、【鍛冶屋】の人材がいる場合、キャンプフェイズの行動で、「装備の強化」を選ぶことができます。
+p 必要な素材と＜星の欠片＞を消費することで、装備の強化レベルを1つ上げることができます。
+p ＜星の欠片＞の色によって、強化できる内容が異なります。
+p 攻撃力強化・命中力強化は武器を、防御力強化・回避力強化は装備部位が胴部の装備品を強化することができます。
+p ＜星の欠片：白＞は装備のレベルを上げた時にその装備を『☾高品質』にします。高品質表を参照してください。
+
+table.responsive#boss-star-fragment
+  caption 星の欠片強化表
+  thead
+    tr
+      th 強化内容 
+      th 必要素材
+      th 強化内容
+  each fragment in recipeFragmentList
+    tr
+      td.txt-center= fragment.name+":Lv"+fragment.Lv
+      td(data-title='必要素材')= fragment.recipe
+      td(data-title='強化内容')= fragment.description
+
+
+
+table.responsive#greater-item
+  caption 高品質アイテム一覧
+  thead
+    tr
+      th 名前 
+      th 価格
+      th 重量
+      th タイプ
+      th 部位
+      th 指定特技
+      th 対象
+      th 特性
+      th 効果
+  each item in dragonPlainGreaterItemList
+    tr
+      td.txt-center= item.name
+      td(data-title='価格')= item.j
+      td(data-title='重量')= item.weight
+      td(data-title='タイプ')= item.type
+      td(data-title='部位')= item.area
+      td.wrap(data-title='指定特技')= item.specialty
+      td(data-title='対象')= item.target
+      td(data-title='特性')= item.trait
+      td(data-title='効果')= item.effect
