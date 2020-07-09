@@ -1035,3 +1035,85 @@ a.toc-link {
     height: calc(100vh - 75px - 412px);
   }
 }
+.skill-table table {
+  border: solid 1px #000;
+  border-collapse: collapse;
+  width: 700px;
+}
+.skill-table table td {
+  border: solid 1px #000;
+}
+.skill-table table th {
+  border: solid 1px #000;
+}
+.skill-table div {
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  vertical-align: top;
+  margin: 0px;
+}
+.skill-table div.nopadding {
+  padding: 0px;
+  margin: 0px;
+}
+.skill-table .clickcolumn {
+  cursor: pointer;
+}
+.skill-table span.clickcolumn {
+  display: block;
+}
+.skill-table .pain {
+  border: 2pt solid #f00;
+  outline: 2pt solid #f00;
+  background: #f00;
+}
+.skill-table .selected {
+  background: #000;
+  color: #fff;
+}
+.skill-table .spacer {
+  width: 17px;
+  border-top: 1pt solid #000;
+  border-right: 1pt solid #000;
+  border-bottom: 1pt solid #000;
+  border-left: 1pt solid #000;
+}
+.skill-table .spacer_black {
+  width: 17px;
+  color: #fff;
+  border-top: 1pt solid #000;
+  border-right: 1pt solid #000;
+  border-bottom: 1pt solid #000;
+  border-left: 1pt solid #000;
+  background: #000;
+  font-size: 9pt;
+}
+.skill-table #learned\.0 {
+  display: none;
+}
+.skill-table .big {
+  font-size: 11pt !important;
+}
+.skill-table .small {
+  font-size: 8pt !important;
+}
+.skill-table .check {
+  width: 20px;
+  text-align: center;
+}
+.skill-table .baseinput {
+  width: 105px;
+}
+.skill-table .basename {
+  width: 245px;
+}
+.skill-table .basenum {
+  width: 45px;
+  text-align: right;
+}
+.skill-table .skillcol {
+  text-align: center;
+  height: 18px;
+}

@@ -7,6 +7,9 @@ block title
 block css
   link(href="../assets/css/styles.css" rel="stylesheet" )
 block headjs
+  script(defer src="/app/public/assets/js/json_table.js")
+  script(defer src="/app/public/assets/js/dice_fiction.js")
+  script(defer src="/app/public/assets/js/specialties.js")
 
 block body
   header
@@ -14,10 +17,12 @@ block body
   main#main
     section.content
       .container
-
         h1 チャート
         p 奇数・偶数とあるものは、d66の後に1d6を振って奇数偶数を決める。
-
+        
+        h2 特技表
+        include includes/chart/specialty
+        hr 
         h2#campname キャンプ名
         p キャンプ名決定表A, Bと建物表を組み合わせてキャンプ名を決定します。
         table.chart#table-campnameA
