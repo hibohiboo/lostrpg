@@ -1,4 +1,4 @@
-FROM node:14.4.0
+FROM node:14.15.4
 
 # コンテナ上の作業ディレクトリ作成
 WORKDIR /app
