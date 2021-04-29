@@ -1,6 +1,6 @@
 # https://firebase.google.com/docs/functions/get-started?authuser=0
 # firebase cloud function はv6.11.5で動作
-FROM node:14
+FROM node:16
 
 # コンテナ上の作業ディレクトリ作成
 WORKDIR /app
