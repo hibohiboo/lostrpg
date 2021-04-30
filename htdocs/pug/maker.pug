@@ -1,0 +1,25 @@
+extends includes/common/_layout
+block title
+  - var title="廃墟の森の子供たちメーカー"
+  - var bodyClass = "nohero"
+  title= title
+block css
+  link(href="../assets/css/styles.css" rel="stylesheet" )
+block headjs
+
+block body
+  header.head-fixed
+    include includes/common/header
+  main#main
+    section.content
+      .container
+        .image
+        .text
+          h2=title
+          p 更新するたびに結果は変わります。
+          p #[a#twi(href="https://twitter.com/share?ref_src=twsrc%5Etfw",class="twitter-share-button",data-show-count="false") Tweet ]
+          div
+            p#result(style="white-space:pre-wrap")
+  include includes/common/footer
+  script(src="https://platform.twitter.com/widgets.js",charset="utf-8")
+  script(src="../assets/js/tweetmaker.js")
