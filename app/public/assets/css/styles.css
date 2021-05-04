@@ -487,6 +487,13 @@ header {
   border-left: solid 0.75rem var(--accent-color);
   font-size: 2rem;
 }
+.content h2 {
+  padding-left: 0.5rem;
+  border-left: solid 0.5rem var(--dark-color);
+}
+.content section {
+  padding-top: 0.5rem;
+}
 .content p {
   font-size: 1rem;
   line-height: 2;
