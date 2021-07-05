@@ -225,8 +225,7 @@ table.chart td:first-child {
 .hero-header a,
 .conC a,
 .conC2 a,
-.conD a,
-.conD2 a {
+.conD a {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 30px;
@@ -241,8 +240,7 @@ table.chart td:first-child {
 .hero-header a:hover,
 .conC a:hover,
 .conC2 a:hover,
-.conD a:hover,
-.conD2 a:hover {
+.conD a:hover {
   background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
 }
 .hero-header .yun_c {
@@ -265,7 +263,6 @@ table.chart td:first-child {
 .conC h2,
 .conC2 h2,
 .conD h2,
-.conD2 h2,
 .history h2 {
   margin-top: 0;
   margin-bottom: 10px;
@@ -275,7 +272,6 @@ table.chart td:first-child {
 .conC p,
 .conC2 p,
 .conD p,
-.conD2 p,
 .history p {
   margin-top: 0;
   margin-bottom: 20px;
@@ -337,32 +333,27 @@ footer .container,
 }
 .conC a,
 .conC2 a,
-.conD a,
-.conD2 a {
+.conD a {
   display: block;
   width: 200px;
 }
 .conC2 .image {
   background-image: url("../images/takibi.png");
 }
-.conD .image,
-.conD2 .image {
+.conD .image {
   height: 400px;
   max-width: 490px;
   background-image: url("../images/losttop_s.png");
   background-position: center;
   background-size: cover;
 }
-.conD .text,
-.conD2 .text {
+.conD .text {
   padding: 20px;
 }
-.conD .container,
-.conD2 .container {
+.conD .container {
   padding-top: 2px;
 }
-.conD a,
-.conD2 a {
+.conD a {
   border: solid 3px var(--gray-color);
 }
 .conD2 .image {
