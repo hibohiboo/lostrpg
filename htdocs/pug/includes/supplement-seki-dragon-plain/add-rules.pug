@@ -64,3 +64,31 @@ table.responsive#greater-item
       td(data-title='対象')= item.target
       td(data-title='特性')= item.trait
       td(data-title='効果')= item.effect
+
+
+h3#interlude 冒険の合間のひと時
+
+
+p PC達は冒険者として
+  | 〈フィールド〉に繰り出し、荒んだ地を駆け抜け、ヌシとの対決に挑む勇敢な子供たちです。
+p しかし普段から戦いばかりをしているわけではありません。
+  | キャンプの修繕、消耗品の補充など日々の生活にもやるべきことは多くあります。
+  | たまにはのんびりと過ごす日もあるでしょう。
+p 冒険と冒険の間の、ちょっとした日常をどうPC達が過ごしているのか演出するのが「冒険の合間のひと時」ルールです。
+p このルールを選択した場合、各キャラクターはキャンプフェイズのプロローグの前に「冒険の合間表」を振ることができます。
+  | 演出はGMとPLが相談して決定しましょう。
+
+
+
+table.responsive#interlude-events
+  caption 冒険の合間表
+  thead
+    tr
+      th 2d6 
+      th イベント
+  each item in interludeEventList
+    tr
+      td(data-title='2d6')= item.d6
+      td(data-title='イベント')= item.event
+      td(data-title='効果')= item.detail
+
