@@ -83,7 +83,7 @@ h3#add-class 追加クラス
   .container
     each obj in strangeFieldsClassList
       article
-        a(href="#")
+        a(href="#" + 'ability-'+obj.id)
           .image(style="background-image: url('../assets/images/" + obj.image + "');")
           .text
             strong= obj.name
