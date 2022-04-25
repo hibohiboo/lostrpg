@@ -166,7 +166,7 @@
             <dd>「これを持って行ってくれ。」</dd>
           </dl>
           <h2>探索フェイズ</h2>
-          <h3><i class="far fa-check-circle"></i> チェックポイント： 公園だった場所</h3>
+          <h3><i class="far fa-check-circle"></i> 第1チェックポイント： 公園だった場所</h3>
           <dl> 
             <dt>環境</dt>
             <dd>平地　開けた場所。</dd>
@@ -216,7 +216,7 @@
               <td data-title="解説">全長60cmほどのコウモリ。生餌も死肉も好む</td>
             </tr>
           </table>
-          <table class="responsive" id="ability-enemy">
+          <table class="responsive">
             <caption>エネミーアビリティ</caption>
             <thead>
               <tr>
@@ -274,6 +274,413 @@
             <tr>
               <td data-title="d6">6</td>
               <td data-title="イベント">宝物発見！　[価格:3J]までの好きなアイテムを3つ獲得できます。</td>
+            </tr>
+          </table>
+          <h4><i class="fas fa-shoe-prints"></i> トンネル入り口</h4>
+          <p>次のチェックポイントに進む道です。一部が崩壊していて先に進めません。</p>
+          <h5><i class="fas fa-lock"></i> 障害: 邪魔な瓦礫</h5>
+          <p> 指定特技：《掴む》　or 《雑学》</p>
+          <h3><i class="far fa-check-circle"></i> 第2チェックポイント： 暗闇のトンネル</h3>
+          <dl> 
+            <dt>環境</dt>
+            <dd>暗闇</dd>
+            <dd>「ライト」や「たいまつ」などの明かりを持っていない限り、PCのすべての行為判定にマイナス1の修正がつく。「たいまつ」は1サイクルで1つ消費される。</dd>
+          </dl>
+          <h4> <i class="fas fa-flask"></i>   描写</h4>
+          <p>
+            暗くて何も見えない。イヌコウモリがどこかに潜んでいる。 なにか明かりがあれば……。</p>
+          <h4><i class="fas fa-shoe-prints"></i> トンネル出口</h4>
+          <p>次のチェックポイントに進む道です。</p>
+          <h5><i class="fas fa-lock"></i> 障害: コウモリイヌ</h5>
+          <p> １体しかいないが、数多の人間を殺害してきた、巨大な生物です。</p>
+          <p>ここでは障害突破に行動を消費せず、次のチェックポイントへ進むときに自動的に判定します。</p>
+          <p>PCのうち誰か１人が《予感》に成功することで、コウモリイヌの索敵範囲を予測し、戦うことなく先へ進めます。</p>
+          <p>また、ここではランダムエンカウントは発生しません。</p>
+          <table class="responsive">
+            <caption>エネミー</caption>
+            <thead>
+              <tr>
+                <th>名前 
+                  <th>レベル</th> 
+                  <th>タイプ</th> 
+                  <th>体力</th>  
+                  <th>気力</th> 
+                  <th>特技</th> 
+                  <th>アビリティ</th> 
+                  <th>解説</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">コウモリイヌ</td>
+              <td data-title="レベル">2</td>
+              <td data-title="タイプ">ケモノ</td>
+              <td data-title="体力">6</td>
+              <td data-title="気力">5</td>
+              <td data-title="特技">《走る》《聴く》《噛む》</td>
+              <td data-title="アビリティ">【牙】【撹乱音波】【体当たり：《噛む》】</td>
+              <td data-title="ドロップ">ケモノA</td>
+              <td data-title="解説">コウモリのような顔をした目のない犬。超音波で獲物を捕らえる。</td>
+            </tr>
+          </table>
+          <table class="responsive">
+            <caption>エネミーアビリティ</caption>
+            <thead>
+              <tr>
+                <th>名前 
+                  <th>グループ</th>  
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">体当たり</td>
+              <td data-title="グループ">ケモノ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">0</td>
+              <td data-title="指定特技">自由</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると対象に1点のダメージを与える。この時命中判定の達成値にプラス2の修正がつく。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">牙</td>
+              <td data-title="グループ">ケモノ</td>
+              <td data-title="タイプ">補助</td>
+              <td data-title="反動">2</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="効果">命中判定に組み合わせて使用する。ダメージを2点増加させる。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">撹乱音波</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">補助</td>
+              <td data-title="反動">1</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="効果">命中判定に組み合わせて使用する。攻撃が命中した相手は、次のラウンドの終了まで全ての行為判定の達成値にマイナス１の修正がつく。</td>
+            </tr>
+          </table>
+          <h3><i class="far fa-check-circle"></i> 第3チェックポイント： 迷路の商店街</h3>
+          <dl> 
+            <dt>環境</dt>
+            <dd>商店</dd>
+            <dd>ショッピングモールやデパート跡など。サイクル終了時に1つだけ「嗜好品」を手に入れることができる。</dd>
+            <dd>また、探索のモチベーションが上がり、探索/オブジェクト探索選択時に気力が追加で１点回復する。</dd>
+          </dl>
+          <h4> <i class="fas fa-flask"></i>   描写</h4>
+          <p>
+            暗闇のトンネルを抜けると、冒険者たちは第３のチェックポイントに到達します。日光を少しまぶしく感じながらうっすらと目を開けると……</p>
+          <p>
+            そこには……かつての商店街が広がっていました。人の気配はありません。壊れたレジ、散乱した駄菓子袋、濡れたアスファルトの香り……
+            隕石が落ちる前の、文化に溢れた世界を思い出すPCもいるかもしれません。
+          </p>
+          <h4><i class="fas fa-list-ol"></i> オブジェクト:商店街</h4>
+          <p>1d6を振って出た目に応じた結果を解決します。</p>
+          <table class="responsive">
+            <caption>商店街</caption>
+            <thead>
+              <tr>
+                <th>d6 
+                  <th>イベント</th> 
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td data-title="d6">1</td>
+              <td data-title="イベント">腐敗臭のする動く死体が、瓦礫の隙間から這い出て襲いかかってきました。(ゾンビx2)</td>
+            </tr>
+            <tr>
+              <td data-title="d6">2</td>
+              <td data-title="イベント">コカの葉（0W,割込、体力+2）を見つけました。</td>
+            </tr>
+            <tr>
+              <td data-title="d6">3</td>
+              <td data-title="イベント">「嗜好品」（0W,割込、気力+2）を見つけました。</td>
+            </tr>
+            <tr>
+              <td data-title="d6">4</td>
+              <td data-title="イベント">「嗜好品」（0W,割込、気力+2）を２つ見つけました。</td>
+            </tr>
+            <tr>
+              <td data-title="d6">5</td>
+              <td data-title="イベント">「嗜好品」（0W,割込、気力+2）を２つ見つけ、更に[休憩表]を１度振ることができます。</td>
+            </tr>
+            <tr>
+              <td data-title="d6">6</td>
+              <td data-title="イベント">宝物発見！　[価格:5J]までの好きなアイテム/武器/防具を1つ獲得できます。更に[3J]を獲得します。更に[休憩表]を１度振ることができます。</td>
+            </tr>
+          </table>
+          <h4><i class="fas fa-shoe-prints"></i> 迷路の先</h4>
+          <p>次のチェックポイントに進む道です。</p>
+          <h5><i class="fas fa-lock"></i> 障害: 迷路</h5>
+          <p>複雑に入り組んだ道。選ぶ道を間違えるともとの道に戻ってきてしまう。</p>
+          <p><i class="fas fa-dice"></i>  障害突破判定 《考える》 or 《閃く》</p>
+          <p>次のチェックポイントに進む際に、ランダムエンカウント後、「強敵」との戦闘になる。（＜ヌシ＞ではない）</p>
+          <h4> <i class="fas fa-ghost"></i>  戦闘</h4>
+          <p>
+            轟音と共に現れたのは……『人斬り巨大蟹』でした。商店街からでてきたあなた達を見つけると、問答無用で襲いかかってきます。</p>
+          <table class="responsive">
+            <caption>エネミー</caption>
+            <thead>
+              <tr>
+                <th>名前 
+                  <th>レベル</th> 
+                  <th>タイプ</th> 
+                  <th>体力</th>  
+                  <th>気力</th> 
+                  <th>特技</th> 
+                  <th>アビリティ</th> 
+                  <th>解説</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">人斬り巨大蟹</td>
+              <td data-title="レベル">4</td>
+              <td data-title="タイプ">ミュータント</td>
+              <td data-title="体力">15</td>
+              <td data-title="気力">5</td>
+              <td data-title="特技">《斬る》《噛む》《歩く》《休まない》</td>
+              <td data-title="アビリティ">【人斬りハサミ】【おおぶり】【怪力】【鈍い】【鋼鱗】</td>
+              <td data-title="ドロップ">生肉(1J、1W、食料)ｘ2　嗜好品x1</td>
+              <td data-title="解説">巨大な身体のカニ。鈍いが、強力なハサミを駆使して一撃で敵を仕留める。</td>
+            </tr>
+          </table>
+          <table class="responsive">
+            <caption>エネミーアビリティ</caption>
+            <thead>
+              <tr>
+                <th>名前 
+                  <th>グループ</th>  
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">人斬りハサミ</td>
+              <td data-title="グループ">ムシ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">0</td>
+              <td data-title="指定特技">《斬る》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">指定特技の判定に成功すると対象に4点のダメージを与える。このとき命中判定の達成値にプラス2の修正がつく。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">おおぶり</td>
+              <td data-title="グループ">ケモノ</td>
+              <td data-title="タイプ">補助</td>
+              <td data-title="反動">3</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">-</td>
+              <td data-title="効果">命中判定に組み合わせて使用する。命中判定にマイナス1の修正がつき、ダメージが3点増加する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">鋼鱗</td>
+              <td data-title="グループ">ミュータント</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">自身が受けるダメージを2点軽減する。ただしその際に気力が1点減少する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">怪力</td>
+              <td data-title="グループ">ビッグ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">白兵攻撃や肉体を使った攻撃により与えるダメージが1点上昇する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">鈍い</td>
+              <td data-title="グループ">-</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">2ラウンドに1回しか動けない。</td>
+            </tr>
+          </table>
+          <h3><i class="far fa-check-circle"></i> 第4チェックポイント： 嵐の大橋</h3>
+          <dl> 
+            <dt>環境</dt>
+            <dd>追い風</dd>
+            <dd>全アビリティの反動が-1される。0以下にはならない。</dd>
+          </dl>
+          <h4> <i class="fas fa-flask"></i>   描写</h4>
+          <p>
+            商店街を抜けると、そこは……強風の吹き付ける大橋でした。このまま渡っては吹き飛ばされてしまいます。</p>
+          <p>
+            ここでは２つの障害が存在します。２つの障害を突破しなければ先に進めません。進む先から強烈な気配を感じます。このチェックポイントから先に進むとヌシがいます。 </p>
+          <h4><i class="fas fa-list-ol"></i> オブジェクト:商店街</h4>
+          <p>1d6を振って出た目に応じた結果を解決します。</p>
+          <table class="responsive">
+            <caption>廃棄された自動車たち</caption>
+            <thead>
+              <tr>
+                <th>d6 
+                  <th>イベント</th> 
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td data-title="d6">1</td>
+              <td data-title="イベント">川からダーツフィッシュが襲いかかってきました。戦闘です。（1d6匹）</td>
+            </tr>
+            <tr>
+              <td data-title="d6">2</td>
+              <td data-title="イベント">積み上げられた自動車がバランスを崩し、倒れてきました(回避失敗すると1d3ダメージ)。《反応》or 《かわす》 この回避判定では気力を消費しません。</td>
+            </tr>
+            <tr>
+              <td data-title="d6">3</td>
+              <td data-title="イベント">鉄クズ（2W、商人に渡すと即4J化）と　コカの葉（0W,割込、体力+2）を見つけました。</td>
+            </tr>
+            <tr>
+              <td data-title="d6">4</td>
+              <td data-title="イベント">コカの葉（0W,割込、体力+2）を見つけ、更に、気持ち良さそうな葉っぱのベッドを見つけました。体力が基準値ぶん回復します。</td>
+            </tr>
+            <tr>
+              <td data-title="d6">5</td>
+              <td data-title="イベント">救急箱を発見しました。[コカの葉]と[嗜好品]を見つけ、更に[なんこう]も発見しました。</td>
+            </tr>
+            <tr>
+              <td data-title="d6">6</td>
+              <td data-title="イベント">宝物発見！　[価格:5J]までの好きなアイテム/武器/防具を2つ獲得できます。</td>
+            </tr>
+          </table>
+          <h4><i class="fas fa-shoe-prints"></i> 大橋</h4>
+          <p>次のチェックポイントに進む道です。</p>
+          <h5><i class="fas fa-lock"></i> 障害: 橋の強化</h5>
+          <p><i class="fas fa-dice"></i>  障害突破判定 《作る》 or 《考える》</p>
+          <h5><i class="fas fa-lock"></i> 障害: 橋を渡り切る</h5>
+          <p><i class="fas fa-dice"></i>  障害突破判定 《バランス》 or 《走る》</p>
+          <h2>決戦フェイズ</h2>
+          <dl> 
+            <dt>環境</dt>
+            <dd>平地</dd>
+            <dd>特殊効果なし</dd>
+          </dl>
+          <p>
+            嵐の大橋を渡り切り、ヌシのフィールドの中心にやってきました。水力発電所跡を護るヌシの正体は……</p>
+          <p>
+            巨大な獣でした。足元には、近くにあったキャンプの住民であろう人間たちの死体が倒れています。
+            巨大な獣はこちらに気付くと、食事を中断し、襲いかかってきます。
+            ＜ヌシ＞との戦闘です。
+          </p>
+          <h4> <i class="fas fa-dragon"></i>  戦闘</h4>
+          <table class="responsive">
+            <caption>嵐のキマイラ</caption>
+            <thead>
+              <tr>
+                <th>名前 
+                  <th>レベル</th> 
+                  <th>タイプ</th> 
+                  <th>体力</th>  
+                  <th>気力</th> 
+                  <th>特技</th> 
+                  <th>アビリティ</th> 
+                  <th>解説</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">嵐のキマイラ</td>
+              <td data-title="レベル">4</td>
+              <td data-title="タイプ">ヌシ/ケモノ</td>
+              <td data-title="体力">20</td>
+              <td data-title="気力">15</td>
+              <td data-title="特技">すべて</td>
+              <td data-title="アビリティ">【キマイラブロウ】【嵐の翼】【跳びかかり】【毒蛇の尻尾】【習性：体力が0になった】【本気（高性能）】【雷無効】</td>
+              <td data-title="ドロップ">-</td>
+              <td data-title="解説">獅子と山羊の性質を併せ持った、双頭の巨大生物。水力発電所を中心とした＜フィールド＞を作っている。</td>
+            </tr>
+          </table>
+          <table class="responsive">
+            <caption>エネミーアビリティ</caption>
+            <thead>
+              <tr>
+                <th>名前 
+                  <th>グループ</th>  
+                  <th>タイプ</th> 
+                  <th>反動</th> 
+                  <th>指定特技</th> 
+                  <th>対象</th> 
+                  <th>効果</th>
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="txt-center">キマイラブロウ</td>
+              <td data-title="グループ">ヌシ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">0</td>
+              <td data-title="指定特技">《殴る》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">目標に2d3+[経過ラウンド数]点のダメージを与える。この攻撃の命中判定＋２。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">嵐の翼</td>
+              <td data-title="グループ">ヌシ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">2</td>
+              <td data-title="指定特技">《耐える》</td>
+              <td data-title="対象">全体</td>
+              <td data-title="効果">目標の体力と気力に２点のダメージを与え、[転倒]の変調を与える。この攻撃の命中判定＋２。最初のターンと&lt;本気&gt;直後に使用する。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">跳びかかり</td>
+              <td data-title="グループ">ヌシ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">4</td>
+              <td data-title="指定特技">《跳ぶ》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">目標に６点のダメージを与え、「転倒」の変調を与える。「転倒」…回避判定-2</td>
+            </tr>
+            <tr>
+              <td class="txt-center">毒蛇の尻尾</td>
+              <td data-title="グループ">ヌシ</td>
+              <td data-title="タイプ">攻撃</td>
+              <td data-title="反動">1</td>
+              <td data-title="指定特技">《斬る》《捕らえる》</td>
+              <td data-title="対象">単体</td>
+              <td data-title="効果">目標に５点のダメージを与え、『重傷』の変調を与える。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">本気(高性能)</td>
+              <td data-title="グループ">ヌシ</td>
+              <td data-title="タイプ">割込</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">以後、[回避]を含む全行動の反動がなくなる。回避[-2]。このターン、追加行動を1つ得る。さらに、◆嵐の翼を再使用できるようになる。[本気]中は、死亡判定時に気力を使えない（踏ん張れない）。</td>
+            </tr>
+            <tr>
+              <td class="txt-center">雷無効</td>
+              <td data-title="グループ">ヌシ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">スタンガンなど、雷の攻撃を無効化する</td>
+            </tr>
+            <tr>
+              <td class="txt-center">習性</td>
+              <td data-title="グループ">ヌシ</td>
+              <td data-title="タイプ">常駐</td>
+              <td data-title="反動">-</td>
+              <td data-title="指定特技">-</td>
+              <td data-title="対象">自身</td>
+              <td data-title="効果">その戦闘中に条件を満たした時、追加行動を得る。条件は【体力】が0になった時</td>
             </tr>
           </table>
         </div>
