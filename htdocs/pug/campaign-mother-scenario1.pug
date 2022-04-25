@@ -97,6 +97,13 @@ block title
     ]
 
 
+  - 
+    var facilities = [
+    {"name":"水路","cp":"10","type":"常駐","specialty":"-","level":"1","precondition":"水場","effect":"全員の【精神力】にプラス2する。川からキャンプまで水を引く。"},
+    {"name":"水車","cp":"20","type":"常駐","specialty":"-","level":"1","precondition":"水場","effect":"「電気」が必要なアイテムをキャンプで自動充電できるようになる。"},
+
+    ]
+
   title= title
 
 block css
@@ -462,10 +469,65 @@ block body
               td(data-title='対象')= item.target
               td(data-title='効果')= item.effect
 
+        h2 結果フェイズ
+        h3 描写1: 戦闘終了後
+        p ＜ヌシ＞の嵐のキマイラを倒すと、嵐が止み……水力発電所が解放されました。
+        p PCたちがキャンプの生き残りを探すと、瓦礫の中から生存者を１人発見します。
+        p 彼はカジオと名乗り、（PCたちのキャンプ名）に連れて行ってくれと頼みます。
+        dl 
+          dt ▼ カジオ
+          dd 「うう……助かった」
+          dd 「助けてくれてありがとう。すごいな、あのキマイラを倒してしまうなんて」
+          dd 「君たちのような強い人間と一緒にいれば安全そうだ……」
+          dd 「すまないが、君たちのキャンプに住まわせてもらえないだろうか？」
+          dd 「俺は、装備を加工する技術を持っている。役に立てるはずだ。」
 
+        h3 描写2: キャンプにて
+        p キャンプにて、冒険者たちのねぎらいと、設備の追加が行われます。
+        p キャンプに戻ると、リルムがちょうど貝から炭酸カルシウムを作っている所でした。壁の補強をしようとしてくれていたのでしょう。（石鹸とモルタル）
+        dl 
+          dt リルム
+          dd 「うおお！　おかえり！　ヌシを倒したんだな！！」
+          dd 「フィールドが解除されたのを確認した。」
+          dd 「本当に助かる、ありがとう……！」
+          dd 「それに、生存者も発見してくれたんだな」
+        dl 
+          dt カジオ
+          dd 「よろしく、俺は鍛冶屋だ。役に立つから安心してくれ」
+          dd 「そうだな……バッテリーの仕組みはあるんだな？」
+          dd 「じゃあまず[水車]を作ってやろう。」
+          dd 「水力発電……？　本場と比べると電気の貯まりは遅いけどな」
+        p 鍛冶屋が水路を使って水車を作ってくれます。
+        p 以後、「電気」が必要なアイテムをキャンプで自動充電できるようになります。
+          | しかし……体育館や小学校全体に光を灯す、まではまだいかないようです。
 
+        h3  #[i(class="fas fa-gem")] 報酬 
+        p キャンプの設備[水路][水車]を取得します。
+        p ＜星の欠片:赤＞を１つ取得します
+        p 各PCはフィールド解放の主役として、この場所の物資を最初に手に入れる権利があります。12J以下のアイテムを1つ取得します。
 
+        h4 カジオ
+        dl
+         dt 基本情報
+         dd 20歳 男　鍛冶屋
+         dt 特殊効果
+         dd ＜星の欠片＞とJを消費することでアイテムの強化を行える。 #[a(href="/lost/supplement-seki-dragon-plain.html") 強化について]
+         dt 設定
+         dd 水力発電所のキャンプで鍛冶屋をやっていた。
 
+        table.responsive
+          caption キャンプ設備
+          thead
+            tr: th 名前 #[th タイプ] #[th 指定特技] #[th レベル] #[th 効果]
+          each facility in facilities
+            tr
+              td.txt-center= facility.name
+              td(data-title='タイプ')= facility.type
+              td(data-title='指定特技')= facility.specialty
+              td(data-title='レベル')= facility.level
+              td(data-title='効果')= facility.effect
+        h2 テキストセッション用コピペ用文字列
+        include includes/campaign/mother/scenario1
 
   include includes/common/footer
   include includes/common/toc-footer
