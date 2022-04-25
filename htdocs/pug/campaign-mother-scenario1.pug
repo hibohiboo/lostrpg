@@ -1,0 +1,195 @@
+extends includes/common/_layout
+block title
+  include includes/campaign/mother/variables
+  - var bodyClass = "nohero"
+
+  -
+    var itemList = [
+      {"name":"なんこう","j":"3","weight":"1","type":"割込み","area":"-","specialty":"-","target":"自身","trait":"消耗品","effect":"変調を１つ回復する。"},
+      {"name":"火付け道具","j":"2","weight":"0","type":"道具","area":"-","specialty":"-","target":"-","trait":"","effect":"マッチやライター、火打ち石とほくちのセットなどのこと。焚き火があれば休憩しやすくなる。"},
+      {"name":"たいまつ","j":"1","weight":"1","type":"装備","area":"片手","specialty":"-","target":"-","trait":"消耗品","effect":"火をつけるには火付け道具が必要、戦闘中の点火は支援行動。効果は1サイクル。暗闇のペナルティを打ち消したり蜘蛛の巣を燃やしたり。"}
+    ]
+  -
+    var objectYuguList = [
+      {"d6":"1","event":"錆びた蛇口を捻りました。何も出てきませんでした。かなしいきもちになりました。"},
+      {"d6":"2","event":"ロープ（2W）を見つけました。"},
+      {"d6":"3","event":"寝ている野兎のむれを発見しました。　3Jを獲得できます。"},
+      {"d6":"4","event":"寝ているおっきい野兎のむれを発見しました。　野兎肉(6J)を獲得できます。"},
+      {"d6":"5","event":"コカの葉（0W,割込、体力+2）を３枚見つけました！"},
+      {"d6":"6","event":"宝物発見！　[価格:3J]までの好きなアイテムを3つ獲得できます。"},
+
+    ]
+
+  -
+    var enemyList1 = [
+      {"name":"ヒトクイコウモリ","lv":"1","group":"ケモノ","stamina":"1","willpower":"3","specialties":"《跳ぶ》《噛む》《落ちる》","abilities":"【噛みつき】","drop":"ケモノA","comment":"全長60cmほどのコウモリ。生餌も死肉も好む"},
+
+    ]
+
+  -
+    var enemyAbilityList = [
+      {"name":"噛みつき","group":"ケモノ","type":"攻撃","recoil":"0","specialty":"《噛む》","target":"単体","effect":"指定特技の判定に成功すると対象に2点のダメージを与える。"},
+
+    ]
+
+
+
+  title= title
+
+block css
+  link(href="../assets/css/styles.css" rel="stylesheet" )
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css")
+block headjs
+
+
+block body
+  header
+    include includes/common/header
+  main#main
+    section.content
+      input(id='toc' type='checkbox' class="dn")
+      label(class='toc-icon' for='toc') 
+        div
+          i(class="fas fa-book" style="font-size: 25px") 
+          i(class="fas fa-book-open" style="font-size: 25px") 
+          div 目次
+      nav.toc.js-toc.toc-right.transition.is-position-fixed
+      .container.js-toc-content
+        h1 Mother 第一話
+        dl
+          dt #[i(class="fas fa-user-friends")] 推奨人数 
+          dd  3人
+          dt #[i(class="far fa-clock")] プレイ時間 
+          dd  4時間
+          dt #[i(class="fas fa-hourglass-half")] リミット 
+          dd 7サイクル
+        h2 キャンプフェイズ
+        h3 プロローグ
+        p PCたちのキャンプの現状を説明します。
+          | キャンプは追い込まれており、昨夜も肺炎で死亡した"クマノ"（享年3歳)のお墓を作ったところです。
+          |  夕食時、PCたちはマグとリルムから＜フィールド＞へ挑戦してほしいと頼まれます。
+          |  このキャンプに残された最後の戦力、それがPCたちです。
+        p PCたちがキャンプでどのようなことをしているか、軽く演出した後、夕飯のシーンにしてください。
+        p 夕飯のシーンでは、水が枯れそうなこと、解決のためには"水力発電所"の＜フィールド＞の＜ヌシ＞を倒すしかないことを伝えてください。
+          | 今回のリミットは7になることも合わせて伝えます。また、リルムが探索用のアイテムをくれます。
+        p PCたちが"水力発電所"の＜フィールド＞に向かうことを了承したら、プロローグを終了し、キャンプフェイズの行動となります。
+        
+        h4 #[i(class="fas fa-flask")]  獲得アイテム
+        table.responsive#item
+          caption リルムの探索用アイテム
+          thead
+            tr: th 名前 #[th 価格] #[th 重量] #[th タイプ]  #[th 部位] #[th 指定特技] #[th 対象] #[th 特性] #[th 効果]
+          each item in itemList
+            tr
+              td.txt-center= item.name
+              td(data-title='価格')= item.j
+              td(data-title='重量')= item.weight
+              td(data-title='タイプ')= item.type
+              td(data-title='部位')= item.area
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='特性')= item.trait
+              td(data-title='効果')= item.effect
+
+        h4 セリフ例
+        dl 
+          dt ▼ マグ
+          dd 「みんな、ゴハンだよ」
+          dd 「食べながらでいいので、聞いてほしいことがあります」
+          dd 「ここ（キャンプ名）小学校の南にある"水力発電所"の＜フィールド＞なんですが……」
+          dd 「そこから新生物が溢れ出し、周辺のキャンプ住民を殺害しまわっています。」
+          dd 「その＜フィールド＞はどんどん拡大して……」
+          dd 「もうすぐこの小学校にまで届きそうです」
+          dd 「そして、もうひとつ残念なお知らせがあります」
+          dd 「（カレーの入った皿を見ながら）食糧と飲料水が尽きかけています。」
+          dd 「飲料水は、”川”から確保しているのですが……」
+          dd 「それも＜フィールド＞の影響でどんどん少なくなっています。」
+          dd 「＜フィールド＞は環境を狂わせてしまうのです」
+          dd 「＜フィールド＞の＜ヌシ＞が倒されれば＜フィールド＞は消えるんですが」
+          dd 「その＜ヌシ＞が誰かに倒される気配もありません」
+          dd 「……切羽詰まっています」
+          dt ▼ リルム
+          dd 「そこで、水力発電所の＜フィールド＞に向かい、＜ヌシ＞を殺してほしいんだ」
+          dd 「もちろんこれは命に関わる仕事だ……しかし、しかし……やらなければこの小学校は終わりだ」
+          dd 「フィールド内にある廃墟には、食料もあるかもしれない」
+          dd 「……頼む、皆の生活を守るため……水力発電所の＜フィールド＞を滅ぼしてくれ」
+          dt ▼ マグ
+          dd (PCが了承した) 「ありがとう」
+          dd 「本当に気をつけてね、生きて帰ってきてね」
+          dt ▼ リルム
+          dd 「フィールドは常に環境を変え、好戦的な新生物も跋扈している」
+          dd 「何が起きてもおかしくない場所だ」
+          dd 「これを持って行ってくれ。」
+
+
+        h2 探索フェイズ
+        h3 #[i(class="far fa-check-circle")] チェックポイント： 公園だった場所
+        dl 
+          dt 環境
+          dd 平地　開けた場所。
+          dd 特殊効果なし
+        h4  #[i(class="fas fa-flask")]   描写
+        p 森の中に広場があります。
+          | 誰も使っていないジャングルジムには蔦が絡みつき、砂場だった場所には草が生い茂っています。
+          | 次のチェックポイントへ進むためのトンネルが崩れています。
+          | ジャングルジム近くに新しい看板が立っています。
+          | 看板には拙い日本語でなにか書いてあります。
+          | 「現地球は我々新生物のもの。愚かな人類よ。座して滅びを待て」
+        h4  #[i(class="fas fa-ghost")]  戦闘
+        p 冒険者たちが看板を読んでいると、上空から何かが飛来してきます。
+          | それは、フィールドを低空飛行で飛びまわる"ヒトクイコウモリ"でした。全部で３匹います。
+          | 戦闘です。
+        p 戦闘終了後、行動の処理に移ります。
+          | オブジェクトとして、遊具があります。
+          | 次のチェックポイントへの障害として瓦礫があります。
+ 
+ 
+        table.responsive
+          caption エネミー
+          thead
+            tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
+          each enemy in enemyList1
+            tr
+              td.txt-center= enemy.name
+              td(data-title='レベル')= enemy.lv
+              td(data-title='タイプ')= enemy.group
+              td(data-title='体力')= enemy.stamina
+              td(data-title='気力')= enemy.willpower
+              td(data-title='特技')= enemy.specialties
+              td(data-title='アビリティ')= enemy.abilities
+              td(data-title='ドロップ')= enemy.drop
+              td(data-title='解説')= enemy.comment
+ 
+        table(class="responsive", id='ability-enemy')
+          caption エネミーアビリティ
+          thead
+            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+          each item in enemyAbilityList
+            tr
+              td.txt-center= item.name
+              td(data-title='グループ')= item.group
+              td(data-title='タイプ')= item.type
+              td(data-title='反動')= item.recoil
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='効果')= item.effect
+
+
+
+        h4 #[i(class="fas fa-list-ol")] オブジェクト: 遊具
+        p 1d6を振って出た目に応じた結果を解決します。
+
+        table.responsive
+          caption 遊具
+          thead
+            tr: th d6 #[th イベント] 
+          each item in objectYuguList
+            tr
+              td(data-title='d6')= item.d6
+              td(data-title='イベント')= item.event
+ 
+
+
+
+  include includes/common/footer
+  include includes/common/toc-footer

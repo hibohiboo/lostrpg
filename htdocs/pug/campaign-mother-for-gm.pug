@@ -1,0 +1,41 @@
+extends includes/common/_layout
+block title
+  include includes/campaign/mother/variables
+  - var bodyClass = "nohero"
+
+  title= title
+
+block css
+  link(href="../assets/css/styles.css" rel="stylesheet" )
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css")
+block headjs
+
+
+block body
+  header
+    include includes/common/header
+  main#main
+    section.content
+      input(id='toc' type='checkbox' class="dn")
+      label(class='toc-icon' for='toc') 
+        div
+          i(class="fas fa-book" style="font-size: 25px") 
+          i(class="fas fa-book-open" style="font-size: 25px") 
+          div 目次
+      nav.toc.js-toc.toc-right.transition.is-position-fixed
+      .container.js-toc-content
+        h1 Mother GM用情報
+        h2 ニューエイジへの秘匿ハンドアウト
+        p ニューエイジのPCのプレイヤーには以下の情報を伝えてください。
+        ul 
+          li 最後に確定でロストします。キャンペーン終了までに最期の演出を相談してください。
+          li ミュータントが元気になり、人間が苦しむ環境 "領域"で、ニューエイジだけは元気で過ごせます
+        p ニューエイジはキャンペーンボスの＜マザー＞を倒した後は徐々に体が弱っていき死んでしまいます。
+        dl 
+          dt エンディング例
+          dd みんなに看取ってもらいたい
+          dd 旅に出て孤独死
+          dd ラスボスと相打ち
+
+  include includes/common/footer
+  include includes/common/toc-footer
