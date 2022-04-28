@@ -125,7 +125,7 @@ block body
           div 目次
       nav.toc.js-toc.toc-right.transition.is-position-fixed
       .container.js-toc-content
-        h1 Mother 第一話
+        h1(id="h1-mother1") Mother 第一話
         dl
           dt #[i(class="fas fa-user-friends")] 推奨人数 
           dd  3人
@@ -133,8 +133,8 @@ block body
           dd  4時間
           dt #[i(class="fas fa-hourglass-half")] リミット 
           dd 7サイクル
-        h2 キャンプフェイズ
-        h3 プロローグ
+        h2(id="h2-camp") キャンプフェイズ
+        h3(id="h3-prolog")  プロローグ
         p PCたちのキャンプの現状を説明します。
           | キャンプは追い込まれており、昨夜も肺炎で死亡した"クマノ"（享年3歳)のお墓を作ったところです。
           |  夕食時、PCたちはマグとリルムから＜フィールド＞へ挑戦してほしいと頼まれます。
@@ -192,8 +192,8 @@ block body
           dd 「これを持って行ってくれ。」
 
 
-        h2 探索フェイズ
-        h3 #[i(class="far fa-check-circle")] 第1チェックポイント： 公園だった場所
+        h2(id="h2-search")  探索フェイズ
+        h3(id="h3-cp-1") #[i(class="far fa-check-circle")] 第1チェックポイント： 公園だった場所
         dl 
           dt 環境
           dd 平地　開けた場所。
@@ -266,7 +266,7 @@ block body
 
 
 
-        h3 #[i(class="far fa-check-circle")] 第2チェックポイント： 暗闇のトンネル
+        h3(id="h3-cp-2") #[i(class="far fa-check-circle")] 第2チェックポイント： 暗闇のトンネル
         dl 
           dt 環境
           dd 暗闇
@@ -318,7 +318,7 @@ block body
 
 
 
-        h3 #[i(class="far fa-check-circle")] 第3チェックポイント： 迷路の商店街
+        h3(id="h3-cp-3") #[i(class="far fa-check-circle")] 第3チェックポイント： 迷路の商店街
         dl 
           dt 環境
           dd 商店
@@ -389,7 +389,7 @@ block body
 
 
 
-        h3 #[i(class="far fa-check-circle")] 第4チェックポイント： 嵐の大橋
+        h3(id="h3-cp-4") #[i(class="far fa-check-circle")] 第4チェックポイント： 嵐の大橋
         dl 
           dt 環境
           dd 追い風
@@ -423,7 +423,7 @@ block body
 
 
 
-        h2 決戦フェイズ
+        h2(id="h2-showdown") 決戦フェイズ
         dl 
           dt 環境
           dd 平地
@@ -469,8 +469,8 @@ block body
               td(data-title='対象')= item.target
               td(data-title='効果')= item.effect
 
-        h2 結果フェイズ
-        h3 描写1: 戦闘終了後
+        h2(id="h2-result") 結果フェイズ
+        h3(id="h3-result-1") 描写1: 戦闘終了後
         p ＜ヌシ＞の嵐のキマイラを倒すと、嵐が止み……水力発電所が解放されました。
         p PCたちがキャンプの生き残りを探すと、瓦礫の中から生存者を１人発見します。
         p 彼はカジオと名乗り、（PCたちのキャンプ名）に連れて行ってくれと頼みます。
@@ -482,7 +482,7 @@ block body
           dd 「すまないが、君たちのキャンプに住まわせてもらえないだろうか？」
           dd 「俺は、装備を加工する技術を持っている。役に立てるはずだ。」
 
-        h3 描写2: キャンプにて
+        h3(id="h3-result-2") 描写2: キャンプにて
         p キャンプにて、冒険者たちのねぎらいと、設備の追加が行われます。
         p キャンプに戻ると、リルムがちょうど貝から炭酸カルシウムを作っている所でした。壁の補強をしようとしてくれていたのでしょう。（石鹸とモルタル）
         dl 
@@ -501,7 +501,7 @@ block body
         p 以後、「電気」が必要なアイテムをキャンプで自動充電できるようになります。
           | しかし……体育館や小学校全体に光を灯す、まではまだいかないようです。
 
-        h3  #[i(class="fas fa-gem")] 報酬 
+        h3(id="h3-rewards")  #[i(class="fas fa-gem")] 報酬 
         p キャンプの設備[水路][水車]を取得します。
         p ＜星の欠片:赤＞を１つ取得します
         p 各PCはフィールド解放の主役として、この場所の物資を最初に手に入れる権利があります。12J以下のアイテムを1つ取得します。
@@ -528,7 +528,7 @@ block body
               td(data-title='指定特技')= facility.specialty
               td(data-title='レベル')= facility.level
               td(data-title='効果')= facility.effect
-        h2 テキストセッション用コピペ用文字列
+        h2(id="h2-copy") テキストセッション用コピペ用文字列
         include includes/campaign/mother/scenario1
 
   include includes/common/footer
