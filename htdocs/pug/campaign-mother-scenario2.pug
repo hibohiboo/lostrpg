@@ -77,63 +77,63 @@ block title
 
       ]
 
-  -
-    var enemyList3 = [
-      {"name":"人斬り巨大蟹","lv":"4","group":"ミュータント","stamina":"15","willpower":"5","specialties":"《斬る》《噛む》《歩く》《休まない》","abilities":"【人斬りハサミ】【おおぶり】【怪力】【鈍い】【鋼鱗】","drop":"生肉(1J、1W、食料)ｘ2　嗜好品x1","comment":"巨大な身体のカニ。鈍いが、強力なハサミを駆使して一撃で敵を仕留める。"},
-    ]
-  -
-    var enemyAbilityList3 = [
-      {"name":"人斬りハサミ","group":"ムシ","type":"攻撃","recoil":"0","specialty":"《斬る》","target":"単体","effect":"指定特技の判定に成功すると対象に4点のダメージを与える。このとき命中判定の達成値にプラス2の修正がつく。"},
-      {"name":"おおぶり","group":"ケモノ","type":"補助","recoil":"3","specialty":"-","target":"-","effect":"命中判定に組み合わせて使用する。命中判定にマイナス1の修正がつき、ダメージが3点増加する。"},
-      {"name":"鋼鱗","group":"ミュータント","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"自身が受けるダメージを2点軽減する。ただしその際に気力が1点減少する。"},
-      {"name":"怪力","group":"ビッグ","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"白兵攻撃や肉体を使った攻撃により与えるダメージが1点上昇する。"},
-      {"name":"鈍い","group":"-","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"2ラウンドに1回しか動けない。"},
 
-    ]
 
   -
-    var objectShops = [
-      {"d6":"1","event":"腐敗臭のする動く死体が、瓦礫の隙間から這い出て襲いかかってきました。(ゾンビx2)"},
-      {"d6":"2","event":"コカの葉（0W,割込、体力+2）を見つけました。"},
-      {"d6":"3","event":"「嗜好品」（0W,割込、気力+2）を見つけました。"},
-      {"d6":"4","event":"「嗜好品」（0W,割込、気力+2）を２つ見つけました。"},
-      {"d6":"5","event":"「嗜好品」（0W,割込、気力+2）を２つ見つけ、更に[休憩表]を１度振ることができます。"},
-      {"d6":"6","event":"宝物発見！　[価格:5J]までの好きなアイテム/武器/防具を1つ獲得できます。更に[3J]を獲得します。更に[休憩表]を１度振ることができます。"},
-
-    ]
-
-  -
-    var objectCars = [
-      {"d6":"1","event":"川からダーツフィッシュが襲いかかってきました。戦闘です。（1d6匹）"},
-      {"d6":"2","event":"積み上げられた自動車がバランスを崩し、倒れてきました(回避失敗すると1d3ダメージ)。《反応》or 《かわす》 この回避判定では気力を消費しません。"},
-      {"d6":"3","event":"鉄クズ（2W、商人に渡すと即4J化）と　コカの葉（0W,割込、体力+2）を見つけました。"},
-      {"d6":"4","event":"コカの葉（0W,割込、体力+2）を見つけ、更に、気持ち良さそうな葉っぱのベッドを見つけました。体力が基準値ぶん回復します。"},
-      {"d6":"5","event":"救急箱を発見しました。[コカの葉]と[嗜好品]を見つけ、更に[なんこう]も発見しました。"},
-      {"d6":"6","event":"宝物発見！　[価格:5J]までの好きなアイテム/武器/防具を2つ獲得できます。"},
+    var objectFlowerGarden = [
+      {"d6":"1","event":"何も見つかりませんでした。美しい花を見て休憩します。気力+1。"},
+      {"d6":"2","event":"1Jぶんの保存食を発見し、美しい花を見て休憩します。気力+2。"},
+      {"d6":"3","event":"花のベッドを見つけました。フカフカです。少しだけ休憩していきましょう。体力+2 気力+5"},
+      {"d6":"4","event":"「コカの葉」を２枚見つけました。さらに、美しい花を見て休憩します。気力+4。"},
+      {"d6":"5","event":"キャンピングに使われていたものでしょうか？　「テント」を発見しました！ 更に美しい花の香りで気力+3。"},
+      {"d6":"6","event":"牧場施設から宝物発見！　[価格:5J]までの好きなアイテム/武器/防具を1つ獲得できます。更に美しい花の香りで気力が基準値の半分回復。"},
 
     ]
 
   -
     var enemyListBoss = [
-      {"name":"嵐のキマイラ","lv":"4","group":"ヌシ/ケモノ","stamina":"20","willpower":"15","specialties":"すべて","abilities":"【キマイラブロウ】【嵐の翼】【跳びかかり】【毒蛇の尻尾】【習性：体力が0になった】【本気（高性能）】【雷無効】","drop":"-","comment":"獅子と山羊の性質を併せ持った、双頭の巨大生物。水力発電所を中心とした＜フィールド＞を作っている。"},
+      {"name":"アクマ","lv":"4","group":"ヌシ/ミュータント","stamina":"24","willpower":"18","specialties":"すべて","abilities":"【醜悪な眼光】【大暴れ】【電撃】【牙】【押し倒し】【習性：体力が0になった】【恒常性】","drop":" ＜星の欠片＞","comment":"恐ろしい姿をした蛇。ムカデのような形をした醜い虫を手下に従えている。"},
     ]
   -
     var enemyAbilityListBoss = [
-      {"name":"キマイラブロウ","group":"ヌシ","type":"攻撃","recoil":"0","specialty":"《殴る》","target":"単体","effect":"目標に2d3+[経過ラウンド数]点のダメージを与える。この攻撃の命中判定＋２。"},
-      {"name":"嵐の翼","group":"ヌシ","type":"攻撃","recoil":"2","specialty":"《耐える》","target":"全体","effect":"目標の体力と気力に２点のダメージを与え、[転倒]の変調を与える。この攻撃の命中判定＋２。最初のターンと<本気>直後に使用する。"},
-      {"name":"跳びかかり","group":"ヌシ","type":"攻撃","recoil":"4","specialty":"《跳ぶ》","target":"単体","effect":"目標に６点のダメージを与え、「転倒」の変調を与える。「転倒」…回避判定-2"},
-      {"name":"毒蛇の尻尾","group":"ヌシ","type":"攻撃","recoil":"1","specialty":"《斬る》《捕らえる》","target":"単体","effect":"目標に５点のダメージを与え、『重傷』の変調を与える。"},
-      {"name":"本気(高性能)","group":"ヌシ","type":"割込","recoil":"-","specialty":"-","target":"自身","effect":"以後、[回避]を含む全行動の反動がなくなる。回避[-2]。このターン、追加行動を1つ得る。さらに、◆嵐の翼を再使用できるようになる。[本気]中は、死亡判定時に気力を使えない（踏ん張れない）。"},
-      {"name":"雷無効","group":"ヌシ","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"スタンガンなど、雷の攻撃を無効化する"},
+      {"name":"醜悪な眼光","group":"ヌシ","type":"攻撃","recoil":"3","specialty":"《見つける》","target":"全体","effect":"目標の体力と気力に[醜い虫の数]+2点のダメージを与える。このアビリティの命中判定に＋[醜い虫の数]の修正を得る。<本気>中は使用できない。"},
+      {"name":"大暴れ","group":"ヌシ","type":"攻撃","recoil":"0","specialty":"《※感覚器》","target":"単体","effect":"<本気状態>でのみ使用。自身と対象に2d6点のダメージを与える。"},
+      {"name":"電撃","group":"ヌシ","type":"攻撃","recoil":"2","specialty":"《仕掛ける》","target":"単体","effect":"攻撃が成功すると目標に3点のダメージを与え、さらに『麻痺』の変調を与える。"},
+      {"name":"牙","group":"ケモノ","type":"補助","recoil":"2","specialty":"-","target":"-","effect":"命中判定に組み合わせて使用する。ダメージを2点増加させる。"},
+      {"name":"押し倒し","group":"ビッグ","type":"補助","recoil":"2","specialty":"-","target":"-","effect":"白兵攻撃や肉体を使った攻撃の命中判定に組み合わせて使用する。対象に『転倒』の変調を与える。"},
       {"name":"習性","group":"ヌシ","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"その戦闘中に条件を満たした時、追加行動を得る。条件は【体力】が0になった時"},
+    ]
+  -
+    var enemyList3 = [
+      {"name":"醜い虫","lv":"2","group":"ムシ","stamina":"3","willpower":"2","specialties":"全て","abilities":"【大アゴ】【ヌシのわけみ】【炎弱点】","drop":"-","comment":"アクマの周囲に湧いているムカデのようなムシ。"},
+    ]
+  -
+    var enemyAbilityList3 = [
+      {"name":"大アゴ","group":"ムシ","type":"攻撃","recoil":"0","specialty":"《噛む》","target":"単体","effect":"指定特技の判定に成功すると対象に3点のダメージを与える。"},
+      {"name":"ヌシのわけみ","group":"ヌシ","type":"常駐","recoil":"-","specialty":"-","target":"-","effect":"すべての判定にマイナス3の習性がつく。ヌシに暴露を与えた際、同時に情報が開示される。ヌシの死亡と同時に死亡する。"},
+      {"name":"炎弱点","group":"汎用","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"【火炎弾】【火炎瓶】【爆発物】【火炎放射】など、炎を使った攻撃に対し、ダメージを2点余分に受ける。さらに【炎上】の変調となる"},
+
+    ]
+
+  -
+    var npcList = [
+      {"name":"ラグナ","lv":"2","group":"ニューエイジ/ハカセ/ヤセイジ","stamina":"10","willpower":"10","specialties":"《撃つ》《考える》《塞ぐ》《感覚器》《しゃがむ》《噛む》","abilities":"【武器攻撃：ボウガン】【観察眼】【超回復】【戦術】【攪乱音波】【限界】","drop":"-","comment":""},
+    ]
+  -
+    var npcAbilityList = [
+      {"name":"武器攻撃：撃つ","group":"汎用","type":"攻撃","recoil":"0","specialty":"《撃つ》","target":"単体","effect":"指定特技の判定に成功すると、[3]点のダメージを与える。"},
+      {"name":"観察眼","group":"ハカセ","type":"支援","recoil":"3","specialty":"《考える》","target":"単体","effect":"指定特技の判定に成功すると、対象に『暴露』の変調を与える。"},
+      {"name":"戦術","group":"ハカセ","type":"補助","recoil":"3","specialty":"-","target":"全体","effect":"先制判定に組み合わせて使用する。先制判定の達成値にプラス1の修正がつく。先制判定に成功した場合、味方全員が先攻で行動できる。"},
+      {"name":"撹乱音波","group":"ミュータント","type":"補助","recoil":"1","specialty":"-","target":"-","effect":"命中判定に組み合わせて使用する。攻撃が命中した相手は、次のラウンドの終了まで全ての行為判定の達成値にマイナス１の修正がつく。"},
+      {"name":"超回復","group":"ヤセイジ","type":"割込み","recoil":"5","specialty":"《塞ぐ》","target":"自身","effect":"指定特技の判定に成功すると、自身の【体力】が1D6点増加する。"},
+      {"name":"限界","group":"NPC","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"体力が0以下になると即座に行動不能になり、攻撃の対象にならなくなる。戦闘が終了するまで復活しない。PC達が全滅すると彼も死亡する。また、回避を行えない。"},
+
     ]
 
 
   - 
     var facilities = [
-    {"name":"水路","cp":"10","type":"常駐","specialty":"-","level":"1","precondition":"水場","effect":"全員の【精神力】にプラス2する。川からキャンプまで水を引く。"},
-    {"name":"水車","cp":"20","type":"常駐","specialty":"-","level":"1","precondition":"水場","effect":"「電気」が必要なアイテムをキャンプで自動充電できるようになる。"},
-
+    {"name":"牧場","cp":"3","type":"支援","specialty":"《捕らえる》","maxLv":"3","precondition":"","effect":"指定特技の判定に成功すると、あなたはジャーキーか「毛皮」を[レベル]個まで得ることができる。最大レベルに達している場合、食堂の効果にプラス1する。"},
     ]
 
   title= title
@@ -355,7 +355,7 @@ block body
           dd 雲は何層にも重なり、まるで夜かのように暗い場所です。
           dd 水場の水は清潔です。
 
-        h4 #[i(class="fas fa-list-ol")] オブジェクト:商店街
+        h4 #[i(class="fas fa-list-ol")] オブジェクト:民家跡
         p 1d6を振って出た目に応じた結果を解決します。
 
         table.responsive
@@ -371,8 +371,8 @@ block body
         h4 #[i(class="fas fa-shoe-prints")] 入り組んだ洞窟
         p 次のチェックポイントに進む道です。
         p 正しい道を進まないと、ここからは出られません。
-        p 正しい道を知るのは、うっすらと光るホタルウサギのみです。
-        p ホタルウサギを追い込んでゆけば、先へ続く道を教えてくれるだろう。
+          | 正しい道を知るのは、うっすらと光るホタルウサギのみです。
+          | ホタルウサギを追い込んでゆけば、先へ続く道を教えてくれるでしょう。
         p この障害は突破判定に２回成功する必要があります。
         h5 #[i(class="fas fa-lock")] 障害: 無限ループ1
         p #[i(class="fas fa-dice")]  障害突破判定 《追跡》 or 《追い込む》or 《見つける》
@@ -382,37 +382,47 @@ block body
         p 2回目の突破判定に成功すると、洞窟の出口を見つけたうえで、ホタルウサギを捕まえることができます。 生肉[1J,1W]を獲得してもかまいません。
 
 
-        h3(id="h3-cp-4") #[i(class="far fa-check-circle")] 第4チェックポイント： 嵐の大橋
+        h3(id="h3-cp-4") #[i(class="far fa-check-circle")] 第4チェックポイント： 果てしない空の下
         dl 
           dt 環境
-          dd 追い風
-          dd 全アビリティの反動が-1される。0以下にはならない。
-
+          dd 広漠　＆　花畑
+          dt 広漠
+          dd フィールド内はとても広大だ。行けども行けども終わりの見えない地形に気が滅入る。
+          dd サイクルの終了時に【気力】が1点減少する。この効果で1未満にはならない。
+          dt 花畑
+          dd 美しい花畑。戦闘で『毒』が発生しない。美しい光景はあなた達の力になる。
+          dd PCの行う全判定が＋１される。
+          dd また、オブジェクト探索の表に[気力回復]が多く追加される。
+       
         h4  #[i(class="far fa-image")]   描写
-        p 商店街を抜けると、そこは……強風の吹き付ける大橋でした。
-          | このまま渡っては吹き飛ばされてしまいます。
-        p ここでは２つの障害が存在します。２つの障害を突破しなければ先に進めません。
-          | 進む先から強烈な気配を感じます。このチェックポイントから先に進むとヌシがいます。 
-        h4 #[i(class="fas fa-list-ol")] オブジェクト:商店街
+        p 最期のチェックポイントです。
+        p 広大な花畑が広がっています。【オブジェクト:花畑】
+        p 遠くから、恐ろしい殺気を感じます。この先にヌシがいることは間違いありません。【障害：長い道のり】
+        dl 
+          dt ▼ 描写例
+          dd ホタルウサギの示した道を進み、常闇の水辺を抜けると……
+          dd 眩しい日差しと共に現れたのは、終わりの見えない広漠たる空間でした。
+          dd どこまで歩けば次の目的地に辿りつけるのか……。
+          dd 進む先から恐ろしい殺気を感じます。どうやらここが最後のチェックポイントのようです。
+
+
+        h4 #[i(class="fas fa-list-ol")] オブジェクト:花畑
         p 1d6を振って出た目に応じた結果を解決します。
 
         table.responsive
-          caption 廃棄された自動車たち
+          caption 花畑
           thead
             tr: th d6 #[th イベント] 
-          each item in objectCars
+          each item in objectFlowerGarden
             tr
               td(data-title='d6')= item.d6
               td(data-title='イベント')= item.event
 
 
-        h4 #[i(class="fas fa-shoe-prints")] 大橋
-        p 次のチェックポイントに進む道です。
-        h5 #[i(class="fas fa-lock")] 障害: 橋の強化
-        p #[i(class="fas fa-dice")]  障害突破判定 《作る》 or 《考える》
-        h5 #[i(class="fas fa-lock")] 障害: 橋を渡り切る
-        p #[i(class="fas fa-dice")]  障害突破判定 《バランス》 or 《走る》
-        
+        h4 #[i(class="fas fa-shoe-prints")] 花砂漠
+        p ＜ヌシ＞のチェックポイントに進む道です。
+        h5 #[i(class="fas fa-lock")] 障害: 長い道のり
+        p #[i(class="fas fa-dice")]  障害突破判定 《歩く》
 
 
 
@@ -423,17 +433,17 @@ block body
           dd 特殊効果なし
 
 
-        p 嵐の大橋を渡り切り、ヌシのフィールドの中心にやってきました。
-          | 水力発電所跡を護るヌシの正体は……
-        p 巨大な獣でした。
-          | 足元には、近くにあったキャンプの住民であろう人間たちの死体が倒れています。
-          | 巨大な獣はこちらに気付くと、食事を中断し、襲いかかってきます。
+        p 果てしない空の下を歩き、長い長い道のりを越え、ヌシのフィールドの中心にやってきました。
+          | マザー牧場跡を護るヌシの正体は……
+        p 巨大な……蛇のような不気味な生物でした。
+          | 巨大な蛇はこちらに気付くと、４匹の[醜い虫]をけしかけ、襲いかかってきます。
           | ＜ヌシ＞との戦闘です。
+
 
 
         h4  #[i(class="fas fa-dragon")]  戦闘
         table.responsive
-          caption 嵐のキマイラ
+          caption アクマ
           thead
             tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
           each enemy in enemyListBoss
@@ -449,7 +459,7 @@ block body
               td(data-title='解説')= enemy.comment
 
         table(class="responsive")
-          caption エネミーアビリティ
+          caption アクマのアビリティ
           thead
             tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
           each item in enemyAbilityListBoss
@@ -462,53 +472,73 @@ block body
               td(data-title='対象')= item.target
               td(data-title='効果')= item.effect
 
+        table.responsive
+          caption 醜い虫
+          thead
+            tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
+          each enemy in enemyList3
+            tr
+              td.txt-center= enemy.name
+              td(data-title='レベル')= enemy.lv
+              td(data-title='タイプ')= enemy.group
+              td(data-title='体力')= enemy.stamina
+              td(data-title='気力')= enemy.willpower
+              td(data-title='特技')= enemy.specialties
+              td(data-title='アビリティ')= enemy.abilities
+              td(data-title='ドロップ')= enemy.drop
+              td(data-title='解説')= enemy.comment
+
+        table(class="responsive")
+          caption 醜い虫のアビリティ
+          thead
+            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+          each item in enemyAbilityList3
+            tr
+              td.txt-center= item.name
+              td(data-title='グループ')= item.group
+              td(data-title='タイプ')= item.type
+              td(data-title='反動')= item.recoil
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='効果')= item.effect
+
+
+
         h2(id="h2-result") 結果フェイズ
         h3(id="h3-result-1") 描写1: 戦闘終了後
-        p ＜ヌシ＞の嵐のキマイラを倒すと、嵐が止み……水力発電所が解放されました。
-        p PCたちがキャンプの生き残りを探すと、瓦礫の中から生存者を１人発見します。
-        p 彼はカジオと名乗り、（PCたちのキャンプ名）に連れて行ってくれと頼みます。
+        p フィールドは消え……マザー牧場跡が解放されました。しかしマザー牧場は元通りにはならず、滅びたままです。
+        p PCたちは、フィールドの中から生存者を１人発見します。外見はほぼウサギのニューエイジです。
+        p 彼はラグナと名乗り、避難させていた家畜たちを連れ、キャンプに合流します。
+          | ラグナは[映画のフィルム]を持ち、いつかみんなで観たいと話します。
         dl 
-          dt ▼ カジオ
-          dd 「うう……助かった」
-          dd 「助けてくれてありがとう。すごいな、あのキマイラを倒してしまうなんて」
-          dd 「君たちのような強い人間と一緒にいれば安全そうだ……」
-          dd 「すまないが、君たちのキャンプに住まわせてもらえないだろうか？」
-          dd 「俺は、装備を加工する技術を持っている。役に立てるはずだ。」
+          dt ▼ ラグナ
+          dd 「……助かった」
+          dd 「すごいな、あの蛇を倒してしまうなんて」
+          dd 「……マザー牧場、よいキャンプだったんだが……。残念だ。」
+          dd 「これからは君たちのキャンプに住まわせてもらおう」
+          dd 「そうだ。生き残りの豚や牛たちがいるんだ。連れてってくれ。」
+          dd 「ああ、これだけは忘れずにもっていかないと」（[映画のフィルム]）
 
         h3(id="h3-result-2") 描写2: キャンプにて
-        p キャンプにて、冒険者たちのねぎらいと、設備の追加が行われます。
-        p キャンプに戻ると、リルムがちょうど貝から炭酸カルシウムを作っている所でした。壁の補強をしようとしてくれていたのでしょう。（石鹸とモルタル）
+        p マザー牧場跡から、生き残った「豚」「鶏」「牛」を何匹か連れ帰りました。
+        p マザー牧場が滅びていたことを伝えると、マグとリルムはショックを受けつつも、家畜を連れてきてくれたことに喜びます。
+        p ラグナをキャンプのみんなは快く迎えます。特に、小さい子はラグナの毛並みを撫でたがります。
+        dl 
+          dt マグ
+          dd 「マザー牧場がフィールドに……！　そんな……」
+          dd 「でもヌシを倒してくれたんだね！　さすがだよ」
+          dd 「それは……牛と豚と鳥の……助かるよ、これで将来的に食料に困ることは……！」
         dl 
           dt リルム
-          dd 「うおお！　おかえり！　ヌシを倒したんだな！！」
-          dd 「フィールドが解除されたのを確認した。」
-          dd 「本当に助かる、ありがとう……！」
-          dd 「それに、生存者も発見してくれたんだな」
-        dl 
-          dt カジオ
-          dd 「よろしく、俺は鍛冶屋だ。役に立つから安心してくれ」
-          dd 「そうだな……バッテリーの仕組みはあるんだな？」
-          dd 「じゃあまず[水車]を作ってやろう。」
-          dd 「水力発電……？　本場と比べると電気の貯まりは遅いけどな」
-        p 鍛冶屋が水路を使って水車を作ってくれます。
-        p 以後、「電気」が必要なアイテムをキャンプで自動充電できるようになります。
-          | しかし……体育館や小学校全体に光を灯す、まではまだいかないようです。
+          dd 「……育てなきゃな」
+
 
         h3(id="h3-rewards")  #[i(class="fas fa-gem")] 報酬 
-        p キャンプの設備[水路][水車]を取得します。
-        p ＜星の欠片:赤＞を１つ取得します
+        p キャンプの設備[牧場]を取得します。
+        p ヌシのドロップアイテムとして、＜星の欠片＞を１つ取得します。色はランダムです。
+        p ヌシを倒してフィールドを解放したことによりCP4点を獲得します。
         p 各PCはフィールド解放の主役として、この場所の物資を最初に手に入れる権利があります。12J以下のアイテムを1つ取得します。
 
-        h4 カジオ
-        img(src="../assets/images/scenario/mother/kajio.png" width=225  alt="マグ" title="はぐれけだま様作")
-
-        dl
-         dt 基本情報
-         dd 20歳 男　鍛冶屋
-         dt 特殊効果
-         dd ＜星の欠片＞とJを消費することでアイテムの強化を行える。 #[a(href="/lost/supplement-seki-dragon-plain.html") 強化について]
-         dt 設定
-         dd 水力発電所のキャンプで鍛冶屋をやっていた。
 
         table.responsive
           caption キャンプ設備
@@ -521,8 +551,51 @@ block body
               td(data-title='指定特技')= facility.specialty
               td(data-title='レベル')= facility.level
               td(data-title='効果')= facility.effect
-        h2(id="h2-copy") テキストセッション用コピペ用文字列
-        include includes/campaign/mother/scenario1
+
+        h4 ラグナ
+        img(src="../assets/images/scenario/mother/raguna.png" width=225  alt="ラグナ" title="はぐれけだま様作")
+
+        dl
+         dt 基本情報
+         dd 10歳 男　
+         dd ニューエイジ/ハカセ/ヤセイジ
+         dt 特殊効果
+         dd 施設を作るのに必要なCPを[1]点減少する。（最低1)
+
+         dt 設定
+         dd マザー牧場で暮らしていた。
+         dd 映画のフィルム集めが趣味。表紙から中身を想像している。
+         dd いつか、映画を観てみたいと思っている。
+
+        table.responsive
+          caption ラグナ
+          thead
+            tr: th 名前 #[th クラス] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] 
+          each enemy in npcList
+            tr
+              td.txt-center= enemy.name
+              td(data-title='クラス')= enemy.group
+              td(data-title='体力')= enemy.stamina
+              td(data-title='気力')= enemy.willpower
+              td(data-title='特技')= enemy.specialties
+              td(data-title='アビリティ')= enemy.abilities
+
+
+        table(class="responsive")
+          caption ラグナのアビリティ
+          thead
+            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+          each item in npcAbilityList
+            tr
+              td.txt-center= item.name
+              td(data-title='グループ')= item.group
+              td(data-title='タイプ')= item.type
+              td(data-title='反動')= item.recoil
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='効果')= item.effect
+
+
 
   include includes/common/footer
   include includes/common/toc-footer
