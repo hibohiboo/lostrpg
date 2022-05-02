@@ -29,6 +29,29 @@ block title
 
     ]
 
+    var objectKamakuraList = [
+      {"d6":"1","event":"かまくらの中には良い香りの花が咲いていました。ラベンダー(1J,0W,【腐敗】を１回だけ無効化)を1つ手に入れます。"},
+      {"d6":"2","event":"小屋の中の収納箱から　コカの葉（0W,割込、体力+2）を見つけました。"},
+      {"d6":"3","event":"弱った雪兎たちを仕留めました！　1Jを獲得。"},
+      {"d6":"4","event":"元住民の持っていた[たいまつ]を見つけました。保存状態は良好。ありがたく頂戴しました。"},
+      {"d6":"5","event":"急な寒さで弱った獣を仕留めました！　貴重なタンパク源です。　2Jを獲得。"},
+      {"d6":"6","event":"宝物発見！　[価格:５J]までの好きなアイテムを2つ獲得できます。更に白クマを仕留めました。+3J"},
+
+    ]
+
+
+  -
+    var objectKurayamiHaikyo = [
+      {"d6":"1","event":"何も見つかりませんでした。　しかも数十匹のコウガイビルに噛まれました。　気力-1"},
+      {"d6":"2","event":"1Jの保存食を発見しました。ありがたくいただきました。"},
+      {"d6":"3","event":"箱の中からなんこうを２つ見つけました。ありがたくいただきましょう。"},
+      {"d6":"4","event":"元住民の持っていた[たいまつ]を見つけました。保存状態は良好。ありがたく頂戴しました。"},
+      {"d6":"5","event":"高級品「抗生物質」を見つけました。ありがたく頂戴しました。"},
+      {"d6":"6","event":"僥倖！　保存状態が完璧な[缶詰]を発見しました。"},
+
+    ]
+
+
   -
     var enemyList1 = [
       {"name":"ヒトクイコウモリ","lv":"1","group":"ケモノ","stamina":"1","willpower":"3","specialties":"《跳ぶ》《噛む》《落ちる》","abilities":"【噛みつき】","drop":"ケモノA","comment":"全長60cmほどのコウモリ。生餌も死肉も好む"},
@@ -268,125 +291,95 @@ block body
 
         h3(id="h3-cp-2") #[i(class="far fa-check-circle")] 第2チェックポイント： 血濡れた雪原
         dl 
-          dt 環境
-          dd 暗闇
-          dd 「ライト」や「たいまつ」などの明かりを持っていない限り、PCのすべての行為判定にマイナス1の修正がつく。「たいまつ」は1サイクルで1つ消費される。
+          dt 極寒
+          dd 極寒の地。
+          dd PCはサイクルの終了時に《耐える/胴部12》の判定を行い、失敗したら軽減不可の1D6点のダメージを受ける。
+            | この判定にはマイナス[経過ラウンド数]の修正がつく。
+            | 割込で火つけ道具を消費することで《耐える+2》、たいまつ消費で《耐える+3》の修正を得られる。
         h4  #[i(class="far fa-image")]   描写
-        p 暗くて何も見えない。イヌコウモリがどこかに潜んでいる。 
-          | なにか明かりがあれば……。
-
+        p 重異形フィールド特有の唐突な環境変化、極寒の雪原が広がっています。かまくらと小屋が建っています。【オブジェクト：かまくらと古い小屋】
+        p 雪原には、白骨死体（かつての小屋の住人）が埋まっており、凶悪なサツジンウサギの存在を知らせます。
+        dl 
+          dt ▼描写例
+          dd 大岩をかわし、川沿いを進み続けていると……突然肌寒さを感じます。
+          dd そこには……雪原が広がっていました。
+          dd 足元の雪の中に何かが埋まっています。
+          dd 少し雪を掻いてみると、そこから人間の冷たい手が出てきました。
+          dd さらに掘ると、雪の中から２つの白骨死体が見つかりました。父親と、その父親が抱いていた男の子のものです。
+          dd 父親の死体の骨には「鋭い爪による攻撃」からの防御創があります。
+          dd 死体からは役立つものは見つかりませんでした。
+          dd （おそらくこのチェックポイントの障害「サツジンウサギ」によるもの！）
  
 
-        h4 #[i(class="fas fa-shoe-prints")] トンネル出口
-        p 次のチェックポイントに進む道です。
-        h5 #[i(class="fas fa-lock")] 障害: コウモリイヌ
-        p  １体しかいないが、数多の人間を殺害してきた、巨大な生物です。
-        p ここでは障害突破に行動を消費せず、次のチェックポイントへ進むときに自動的に判定します。
-        p PCのうち誰か１人が《予感》に成功することで、コウモリイヌの索敵範囲を予測し、戦うことなく先へ進めます。
-        p また、ここではランダムエンカウントは発生しません。
-
+        h4 #[i(class="fas fa-list-ol")] オブジェクト: かまくら・古い小屋
+        p 白い雪原にぽつんとかまくらと古びた小屋が建っています。
+        p 1d6を振って出た目に応じた結果を解決します。
 
         table.responsive
-          caption エネミー
+          caption かまくら・古い小屋
           thead
-            tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
-          each enemy in enemyList2
+            tr: th d6 #[th イベント] 
+          each item in objectKamakuraList
             tr
-              td.txt-center= enemy.name
-              td(data-title='レベル')= enemy.lv
-              td(data-title='タイプ')= enemy.group
-              td(data-title='体力')= enemy.stamina
-              td(data-title='気力')= enemy.willpower
-              td(data-title='特技')= enemy.specialties
-              td(data-title='アビリティ')= enemy.abilities
-              td(data-title='ドロップ')= enemy.drop
-              td(data-title='解説')= enemy.comment
+              td(data-title='d6')= item.d6
+              td(data-title='イベント')= item.event
 
-        table(class="responsive")
-          caption エネミーアビリティ
-          thead
-            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
-          each item in enemyAbilityList2
-            tr
-              td.txt-center= item.name
-              td(data-title='グループ')= item.group
-              td(data-title='タイプ')= item.type
-              td(data-title='反動')= item.recoil
-              td(data-title='指定特技')= item.specialty
-              td(data-title='対象')= item.target
-              td(data-title='効果')= item.effect
+        h4 #[i(class="fas fa-shoe-prints")] ヒトカリ雪原
+        p 次のチェックポイントに進む道です。雪原の向こうにぽっかりと空いた洞窟があります。
+        h5 #[i(class="fas fa-lock")] 障害: サツジンウサギのつがい
+        p  数多の人間を殺害してきた、凶悪な兎たちです。
+        p ここでは障害突破に行動を消費せず、次のチェックポイントへ進むときに自動的に判定します。
+        p PCのうち誰か１人が《滑る》に成功することで、雪原上を高速で滑り降り、サツジンウサギたちをスルーできます。
+        p 全員が突破判定に失敗するとサツジンウサギx2との戦闘になります。
+        p サツジンウサギ達の判定後、改めてランダムエンカウントが発生します。
 
 
 
-        h3(id="h3-cp-3") #[i(class="far fa-check-circle")] 第3チェックポイント： 迷路の商店街
+        h3(id="h3-cp-3") #[i(class="far fa-check-circle")] 第3チェックポイント： 常闇の水辺
         dl 
-          dt 環境
-          dd 商店
-          dd ショッピングモールやデパート跡など。サイクル終了時に1つだけ「嗜好品」を手に入れることができる。
-          dd また、探索のモチベーションが上がり、探索/オブジェクト探索選択時に気力が追加で１点回復する。
+          dt 水場　＆　暗闇
+          dd ここは２種類の環境が合わさった特殊なチェックポイントです。
+          dt 水場
+          dd 『炎上』が発生しない。休憩の質が上がり、休憩選択時に気力が追加で１回復する。
+          dt 暗闇
+          dd 「ライト」や「たいまつ」などの明かりを持っていない限り、PCの行為判定にマイナス1の修正がつく。
+          dd 「たいまつ」は1サイクルで1つ消費される。
+
 
         h4  #[i(class="far fa-image")]   描写
-        p 暗闇のトンネルを抜けると、冒険者たちは第３のチェックポイントに到達します。
-          | 日光を少しまぶしく感じながらうっすらと目を開けると……
-        p そこには……かつての商店街が広がっていました。人の気配はありません。
-          | 壊れたレジ、散乱した駄菓子袋、濡れたアスファルトの香り……
-          | 隕石が落ちる前の、文化に溢れた世界を思い出すPCもいるかもしれません。
- 
+        p 極寒の雪原に比べると洞窟の中は暖かく、凍っていない水辺があります。水辺には民家の廃墟が建っています。【オブジェクト：民家跡】
+        p 洞窟は入り組んでおり、抜けるのは難しいですが、毛に花を絡ませた光るウサギが、出口を教えてくれるかもしれません。
+        dl 
+          dt ▼描写例
+          dd 極寒の雪原を抜けると、そこは……日の光の通らない場所にある水辺でした。
+          dd 雲は何層にも重なり、まるで夜かのように暗い場所です。
+          dd 水場の水は清潔です。
+
         h4 #[i(class="fas fa-list-ol")] オブジェクト:商店街
         p 1d6を振って出た目に応じた結果を解決します。
 
         table.responsive
-          caption 商店街
+          caption 民家跡
           thead
             tr: th d6 #[th イベント] 
-          each item in objectShops
+          each item in objectKurayamiHaikyo
             tr
               td(data-title='d6')= item.d6
               td(data-title='イベント')= item.event
 
 
-        h4 #[i(class="fas fa-shoe-prints")] 迷路の先
+        h4 #[i(class="fas fa-shoe-prints")] 入り組んだ洞窟
         p 次のチェックポイントに進む道です。
-        h5 #[i(class="fas fa-lock")] 障害: 迷路
-        p 複雑に入り組んだ道。選ぶ道を間違えるともとの道に戻ってきてしまう。
-        p #[i(class="fas fa-dice")]  障害突破判定 《考える》 or 《閃く》
-        p 次のチェックポイントに進む際に、ランダムエンカウント後、「強敵」との戦闘になる。（＜ヌシ＞ではない）
+        p 正しい道を進まないと、ここからは出られません。
+        p 正しい道を知るのは、うっすらと光るホタルウサギのみです。
+        p ホタルウサギを追い込んでゆけば、先へ続く道を教えてくれるだろう。
+        p この障害は突破判定に２回成功する必要があります。
+        h5 #[i(class="fas fa-lock")] 障害: 無限ループ1
+        p #[i(class="fas fa-dice")]  障害突破判定 《追跡》 or 《追い込む》or 《見つける》
 
-        h4  #[i(class="fas fa-ghost")]  戦闘
-        p 轟音と共に現れたのは……『人斬り巨大蟹』でした。
-          | 商店街からでてきたあなた達を見つけると、問答無用で襲いかかってきます。
-        table.responsive
-          caption エネミー
-          thead
-            tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
-          each enemy in enemyList3
-            tr
-              td.txt-center= enemy.name
-              td(data-title='レベル')= enemy.lv
-              td(data-title='タイプ')= enemy.group
-              td(data-title='体力')= enemy.stamina
-              td(data-title='気力')= enemy.willpower
-              td(data-title='特技')= enemy.specialties
-              td(data-title='アビリティ')= enemy.abilities
-              td(data-title='ドロップ')= enemy.drop
-              td(data-title='解説')= enemy.comment
-
-        table(class="responsive")
-          caption エネミーアビリティ
-          thead
-            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
-          each item in enemyAbilityList3
-            tr
-              td.txt-center= item.name
-              td(data-title='グループ')= item.group
-              td(data-title='タイプ')= item.type
-              td(data-title='反動')= item.recoil
-              td(data-title='指定特技')= item.specialty
-              td(data-title='対象')= item.target
-              td(data-title='効果')= item.effect
-
-
-
+        h5 #[i(class="fas fa-lock")] 障害: 無限ループ2
+        p #[i(class="fas fa-dice")]  障害突破判定 《追跡》 or 《追い込む》or 《見つける》
+        p 2回目の突破判定に成功すると、洞窟の出口を見つけたうえで、ホタルウサギを捕まえることができます。 生肉[1J,1W]を獲得してもかまいません。
 
 
         h3(id="h3-cp-4") #[i(class="far fa-check-circle")] 第4チェックポイント： 嵐の大橋
