@@ -37,5 +37,21 @@ block body
           dd 旅に出て孤独死
           dd ラスボスと相打ち
 
+        h2#field-attribute チェックポイント環境表
+        p 本シナリオではチェックポイントに環境が設定されています。
+        table.chart#table-field-attribute
+          caption チェックポイント環境表
+          thead
+            tr
+              th 環境
+              th 効果
+          each item in fieldAttributeList
+            tr
+              td.nowrap= item.a
+              td= item.effect
+
+
+        p  #[a(href="/lost/campaign-mother.html") キャンペーン: Motherに戻る]
+
   include includes/common/footer
   include includes/common/toc-footer

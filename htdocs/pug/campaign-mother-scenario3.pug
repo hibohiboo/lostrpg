@@ -81,6 +81,12 @@ block title
 
     ]
 
+  -
+    var itemEbinaStationList = [
+    {"name":"快適な下着","j":"10","weight":"1","type":"装備","area":"胴部","specialty":"-","target":"自身","trait":"","effect":"【精神力】をプラス1する。"},
+
+    ]
+
 
   -
     var enemyListBoss = [
@@ -123,6 +129,15 @@ block title
     var facilities = [
     {"name":"映画館","cp":"2","type":"常駐","specialty":"-","maxLv":"10","precondition":"","effect":"キャンプを出発時、全員の体力+(LV)"},
     ]
+
+
+  -
+    var itemRewardList = [
+    {"name":"森の恵み","j":"15","weight":"2","type":"支援","area":"-","specialty":"-","target":"単体","trait":"消耗品","effect":"対象の【体力】・【気力】を5点増加する"},
+    {"name":"奇跡の雫","j":"20","weight":"2","type":"支援","area":"-","specialty":"-","target":"単体","trait":"消耗品","effect":"対象の部位ダメージを1つ回復し、変調を全て回復する"},
+
+    ]
+
 
   title= title
 
@@ -369,7 +384,7 @@ block body
           dt 環境
           dd 領域 ＆ 商店
           dt 領域
-          dd ＜フィールド＞の中でも特に敵が得意とする地域。プレイヤーの行う全判定が-1される。
+          dd ＜フィールド＞の中でも特に敵が得意とする地域。PCの行う全判定が-1される。
           dd 探索中ファンブルが発生すると、体調を崩して1D3のダメージを受ける。
           dd 戦闘中ファンブルが発生すると、敵1体が追加行動を得る。
           dt 商店
@@ -514,6 +529,24 @@ block body
             tr
               td(data-title='d6')= item.d6
               td(data-title='イベント')= item.event
+
+
+        table.responsive#item
+          caption 海老名駅での獲得アイテム
+          thead
+            tr: th 名前 #[th 価格] #[th 重量] #[th タイプ]  #[th 部位] #[th 指定特技] #[th 対象] #[th 特性] #[th 効果]
+          each item in itemEbinaStationList
+            tr
+              td.txt-center= item.name
+              td(data-title='価格')= item.j
+              td(data-title='重量')= item.weight
+              td(data-title='タイプ')= item.type
+              td(data-title='部位')= item.area
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='特性')= item.trait
+              td(data-title='効果')= item.effect
+
 
 
         h4 #[i(class="fas fa-shoe-prints")] 瓦礫の迷路
@@ -746,9 +779,9 @@ block body
         h3(id="h3-rewards")  #[i(class="fas fa-gem")] 報酬 
         p キャンプの設備[映画館]をLV2で取得します。
         p ヌシのドロップアイテムとして、＜星の欠片＞を１つ取得します。色はランダムです。
+        p クルスがお礼として、森の恵みx2　奇跡の雫x1を渡してくれます 
         p ヌシを倒してフィールドを解放したことによりCP5点を獲得します。
         p 各PCはフィールド解放の主役として、この場所の物資を最初に手に入れる権利があります。15J以下のアイテムを1つ取得します。
-
 
         table.responsive
           caption キャンプ設備
@@ -763,6 +796,25 @@ block body
               td(data-title='効果')= facility.effect
 
 
+        table.responsive#item
+          caption 獲得アイテム
+          thead
+            tr: th 名前 #[th 価格] #[th 重量] #[th タイプ]  #[th 部位] #[th 指定特技] #[th 対象] #[th 特性] #[th 効果]
+          each item in itemRewardList
+            tr
+              td.txt-center= item.name
+              td(data-title='価格')= item.j
+              td(data-title='重量')= item.weight
+              td(data-title='タイプ')= item.type
+              td(data-title='部位')= item.area
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='特性')= item.trait
+              td(data-title='効果')= item.effect
+
+
+         
+        p  #[a(href="/lost/campaign-mother.html") キャンペーン: Motherに戻る]
 
 
   include includes/common/footer
