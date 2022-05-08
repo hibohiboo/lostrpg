@@ -161,11 +161,22 @@ block title
     ]
 
 
-  -
-    var itemRewardList = [
-    {"name":"森の恵み","j":"15","weight":"2","type":"支援","area":"-","specialty":"-","target":"単体","trait":"消耗品","effect":"対象の【体力】・【気力】を5点増加する"},
-    {"name":"奇跡の雫","j":"20","weight":"2","type":"支援","area":"-","specialty":"-","target":"単体","trait":"消耗品","effect":"対象の部位ダメージを1つ回復し、変調を全て回復する"},
 
+
+  -
+    var motherEnemyList = [
+      {"name":"毒葬蝶","lv":"3","group":"ムシ","stamina":"2","willpower":"4","specialties":"《塞ぐ》《休む》《動かない》《聴く》","abilities":"【毒リンプン】【アクロバット】【飛行】【痩身】","drop":"4~5　蝶の美しい羽（1J,1W）　6　毒の矢","comment":"即死級の猛毒を持つ蝶"},
+      {"name":"オオヨロイバチ","lv":"5","group":"ムシ","stamina":"6","willpower":"9","specialties":"《噛む》《跳ぶ》《刺す》","abilities":"【大アゴ】【毒針】【鋭角】【飛行】【外骨格】","drop":"1~3硬い羽(1J,1W)　4~5硬い殻(1J,1W)　6毒針(2J,1W)","comment":"1m程のスズメバチ。ガチガチと音を立てながら飛行する。"},
+      {"name":"肉吸い花","lv":"6","group":"ミュータント","stamina":"20","willpower":"9","specialties":"《掴む》《撃つ》《休む》《休まない》《罠》","abilities":"【吸肉】【やどりぎの種】【大地の養分】","drop":"2~5　美しい花(4J,1W)　6 ミツ（3J,1W）","comment":"獲物の肉を吸い成長する花"},
+
+    ]
+
+  -
+    var motherEnemyAbilityList = [
+      {"name":"毒リンプン","group":"ムシ","type":"攻撃","recoil":"1","specialty":"《塞ぐ》","target":"単体","effect":"目標に『毒』の変調を与える。"},
+      {"name":"吸肉","group":"ミュータント","type":"攻撃","recoil":"2","specialty":"《掴む》","target":"単体","effect":"目標に４点のダメージを与える。自身の体力と気力を4点回復する。"},
+      {"name":"やどりぎの種","group":"ミュータント","type":"攻撃","recoil":"2","specialty":"《撃つ》","target":"単体","effect":"目標に２点のダメージを与え、１点でもダメージが通れば『呪い』の変調を与える。『呪い』 …… [攻撃行動]を選ぶたびに【体力】が1点減少。"},
+      {"name":"大地の養分","group":"ミュータント","type":"支援","recoil":"2","specialty":"《休まない》","target":"自身","effect":"目標の体力を3点回復し、２回の追加行動を得る。"},
     ]
 
 
@@ -592,6 +603,41 @@ block body
               td= name.a
 
 
+
+        table.responsive
+          caption 追加エネミー
+          thead
+            tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
+          each enemy in motherEnemyList
+            tr
+              td.txt-center= enemy.name
+              td(data-title='レベル')= enemy.lv
+              td(data-title='タイプ')= enemy.group
+              td(data-title='体力')= enemy.stamina
+              td(data-title='気力')= enemy.willpower
+              td(data-title='特技')= enemy.specialties
+              td(data-title='アビリティ')= enemy.abilities
+              td(data-title='ドロップ')= enemy.drop
+              td(data-title='解説')= enemy.comment
+
+        table(class="responsive")
+          caption 追加エネミーアビリティ
+          thead
+            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+          each item in motherEnemyAbilityList
+            tr
+              td.txt-center= item.name
+              td(data-title='グループ')= item.group
+              td(data-title='タイプ')= item.type
+              td(data-title='反動')= item.recoil
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='効果')= item.effect
+
+
+
+
+
         h3(id="h3-cp-3") #[i(class="far fa-check-circle")] 第3チェックポイント： 夢の国の瓦礫
         dl 
           dt 環境
@@ -619,6 +665,9 @@ block body
             tr
               td(data-title='d6')= item.d6
               td(data-title='イベント')= item.event
+
+
+
 
 
         h4 #[i(class="fas fa-shoe-prints")] うつろな中心への道
