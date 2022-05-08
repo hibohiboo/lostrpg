@@ -60,16 +60,15 @@ block title
 
 
   -
-    var objectKurayamiHaikyo = [
-      {"d6":"1","event":"何も見つかりませんでした。　しかも数十匹のコウガイビルに噛まれました。　気力-1"},
-      {"d6":"2","event":"1Jの保存食を発見しました。ありがたくいただきました。"},
-      {"d6":"3","event":"箱の中からなんこうを２つ見つけました。ありがたくいただきましょう。"},
-      {"d6":"4","event":"元住民の持っていた[たいまつ]を見つけました。保存状態は良好。ありがたく頂戴しました。"},
-      {"d6":"5","event":"高級品「抗生物質」を見つけました。ありがたく頂戴しました。"},
-      {"d6":"6","event":"僥倖！　保存状態が完璧な[缶詰]を発見しました。"},
+    var objectDreamLandWarehouseList = [
+      {"d6":"1","event":"夢の国のパンフレットを見つけました。読んでいると懐かしい気持ちになります。気力+1。"},
+      {"d6":"2","event":"夢の国の歌詞を発見。《歌う》に成功すると、全員の気力が3点回復します。"},
+      {"d6":"3","event":"夢の国の[嗜好品]、そして[1d3J]を獲得しました。"},
+      {"d6":"4","event":"夢の国には大量の保存食が保管されていました！　[1d6+1]Jを獲得できます。"},
+      {"d6":"5","event":"宝物発見！　[価格:3J]までの好きなアイテム/武器/防具を1つ獲得できます。"},
+      {"d6":"6","event":"宝物発見！　[価格:6J]までの好きなアイテム/武器/防具を2つ獲得できます。さらに気力が基準値の半分回復します"},
 
     ]
-
   -
     var objectPlantHouseList = [
       {"d6":"1","event":"おいしい木の実を見つけました。つまみ喰いしました。+1J。しかし……毒虫に噛まれそうです。《しゃがむ》に成功した場合、うまく毒虫を避け、体力+2の効果を得ます。"},
@@ -528,76 +527,39 @@ block body
         h3(id="h3-cp-2") #[i(class="far fa-check-circle")] 第2チェックポイント：春の足音
         dl 
           dt 環境
-          dd 領域 ＆ 商店
-          dt 領域
-          dd ＜フィールド＞の中でも特に敵が得意とする地域。PCの行う全判定が-1される。
-          dd 探索中ファンブルが発生すると、体調を崩して1D3のダメージを受ける。
-          dd 戦闘中ファンブルが発生すると、敵1体が追加行動を得る。
-          dt 商店
-          dd ショッピングモールやデパート跡など。サイクル終了時に1つだけ「嗜好品」を手に入れることができる。
-          dd また、探索のモチベーションが上がり、探索/オブジェクト選択時に気力が追加で１回復する。
+          dd 春風 ＆ 花畑
+          dt 春風 
+          dd 暖かい春の陽気。サイクル終了時に体力が２回復する。
+          dt 花畑
+          dd 美しい花畑。戦闘で『毒』が発生しない。美しい光景はあなた達の力になる。
+          dd PCの行う全判定が＋１される。
+          dd また、オブジェクト探索の表に[気力回復]が多く追加される。
+       
         h4  #[i(class="far fa-image")]   描写
-        p ミュータントに暮らしやすい環境となっている商店街です。
-        p ここからの移動では、ランダムエンカウントは発生しません。ただし、移動時に【偵察】で避けられない強敵との戦闘が発生します。
-        dl 
-          dt ▼描写例
-          dd 不気味な虫達をやりすごし、海老名の廃墟を進んでいると……
-          dd 身の毛もよだつ恐ろしい雰囲気の商店街にやってきました。
-          dd 初めて見る環境……　どうやらここは、新生物たちにとって最も暮らしやすい環境である"領域"のようです。
+        p あたたかくて気持ちの良い場所です。
+        p ディ〇ニーランドの倉庫らしき瓦礫が転がり落ちています。
+        p 瓦礫でまともな道は使えず、ジェットコースターのレールをつたえば、次のチェックポイントに向かえそうです。
 
-        h4 #[i(class="fas fa-list-ol")] オブジェクト:領域の商店街
+        h4 #[i(class="fas fa-list-ol")] オブジェクト:夢の国の倉庫
         p 1d6を振って出た目に応じた結果を解決します。
 
         table.responsive
-          caption 領域の商店街
+          caption :夢の国の倉庫
           thead
             tr: th d6 #[th イベント] 
-          each item in objectKurayamiHaikyo
+          each item in objectDreamLandWarehouseList
             tr
               td(data-title='d6')= item.d6
               td(data-title='イベント')= item.event
 
-        h4 #[i(class="fas fa-shoe-prints")] 鉄塔の道
-        p 次のチェックポイントに進む道です。斜めに傾いた鉄塔。目的地はその上を進んだ先です。登らなければなりません。
+        h4 #[i(class="fas fa-shoe-prints")] ジェットコースターのレール
+        p 次のチェックポイントに進む道です。先に進むためには、スペースマウンテンのレールだったものを伝っていく必要があります。
         p この障害は突破判定に２回成功する必要があります。
-        h5 #[i(class="fas fa-lock")] 障害: 鉄塔の道1
-        p  指定特技：《※利き腕》
-        h5 #[i(class="fas fa-lock")] 障害: 鉄塔の道2
-        p  指定特技：《※利き腕》
-        p 鉄塔を昇って、次のチェックポイントへと向かいます。
-        p このとき、『ゴウカギュウ』との戦闘になります。 ※強敵ですが、ヌシではありません。
-        p 領域内での戦闘となり、プレイヤーに不利な状況です。判定値マイナス1と、ファンブル時の敵の追加行動を忘れないよう注意してください。
-        p ※中ボスですが、アビリティ『森へおかえり』　の対象です。2Jで和解できます。 撤退して戦闘を回避することも可能です。
+        h5 #[i(class="fas fa-lock")] 障害: スペースマウンテン1
+        p  指定特技：《バランス》 or 《地理》
+        h5 #[i(class="fas fa-lock")] 障害: スペースマウンテン2
+        p  指定特技：《バランス》 or 《地理》
 
-        table.responsive
-          caption ゴウカギュウ
-          thead
-            tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
-          each enemy in enemyList1
-            tr
-              td.txt-center= enemy.name
-              td(data-title='レベル')= enemy.lv
-              td(data-title='タイプ')= enemy.group
-              td(data-title='体力')= enemy.stamina
-              td(data-title='気力')= enemy.willpower
-              td(data-title='特技')= enemy.specialties
-              td(data-title='アビリティ')= enemy.abilities
-              td(data-title='ドロップ')= enemy.drop
-              td(data-title='解説')= enemy.comment
-
-        table(class="responsive")
-          caption ゴウカギュウのアビリティ
-          thead
-            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
-          each item in enemyAbilityList1
-            tr
-              td.txt-center= item.name
-              td(data-title='グループ')= item.group
-              td(data-title='タイプ')= item.type
-              td(data-title='反動')= item.recoil
-              td(data-title='指定特技')= item.specialty
-              td(data-title='対象')= item.target
-              td(data-title='効果')= item.effect
 
 
 
