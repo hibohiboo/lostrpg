@@ -45,6 +45,16 @@
   }
 }
 
+/* 表紙用設定 */
+@page :nth(1) {
+  @bottom-left-corner {
+    content: none;
+  }
+  @bottom-right-corner {
+    content: none;
+  }
+}
+
 :root {
   font-size: var(--base-font-size);
   font-family: var(--base-font-family);
@@ -64,5 +74,15 @@ p {
 
 h2 {
   break-before: var(--head-break-setting);
+}
+
+figure {
+  margin-block: 4mm;
+  margin-inline: 0;
+}
+
+img {
+  max-inline-size: 100%;
+  border: solid 0.5mm #000;
 }
 
