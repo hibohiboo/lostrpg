@@ -1,0 +1,17 @@
+{
+  "name": "lostrpg",
+  "version": "1.0.0",
+  "description": "lostrpg paper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "trpg"
+  ],
+  "author": "hibo",
+  "license": "MIT",
+  "devDependencies": {
+    "@vivliostyle/cli": "^8.0.0"
+  }
+}
