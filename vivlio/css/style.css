@@ -8,6 +8,12 @@
 /* 共通ページ設定 */
 @page {
   size: var(--paper-size);
+  font-size: var(--page-font-size); /* 全マージンボックスに適用される文字サイズ */
+
+  /* ページ下中央にページ表示 */
+  @bottom-center {
+    content: counter(page);
+  }
 }
 
 @page :left { /* 左ページ設定 */
