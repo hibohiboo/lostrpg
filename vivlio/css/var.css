@@ -6,9 +6,14 @@
   --outside-margin: 13mm; /* 小口 */
 
   --base-font-size: 13Q; /* 本文中のベース文字サイズ */
+  --base-font-family: 'Noto Sans JP'; /* 太さは400と70をインポート */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
   --page-font-size: 10Q; /* 本文外(ノンブル(ページ番号)など)の文字サイズ */
   --leading: 24Q; /* 行送り */
 
+  --distance-from-page_number-and-printing_plate: 4mm;/* 反面端からの距離 */
+  --head-break-setting: verso; /* 見出しの前で改ページする設定 */
 }
 
 /**
@@ -31,3 +36,29 @@
 
   https://www.w3.org/TR/css-text-4/#text-spacing-property
 */
+
+/**
+  font: Noto Sans JP
+  https://fonts.google.com/noto/specimen/Noto+Sans+JP
+
+*/
+
+/**
+  改ページについて(break-before, break-after,break-insideの設定値)
+
+  page その位置で改ページ
+  column その位置で改段
+  always 段組み内では改段。段組みでない場合は改ページ
+  left  ページが左始まりになるよう１，２回の改ページを行う
+  right ページが右始まりになるよう１，２回の改ページを行う
+  recto 奇数ページになるよう１，２回の改ページを行う
+  verso 偶数ページになるよう１，２回の改ページを行う
+  avoid その位置での改ページや改段を避ける
+  avoid-page
+  avoid-column
+
+  avoidは予想外に次ページに送られすぎる可能性。結果の予想が難しいので、
+  どうしても分離させたくないときに `break-inside:avoid;` を使うくらいに留めておくのが無難。
+
+  versoは話が必ず左ページから始まるので、初心者が読みやすいとされる設定。
++/
