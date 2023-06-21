@@ -6,7 +6,7 @@
   "type": "Book",
   "conformsTo": "https://github.com/vivliostyle/vivliostyle-cli",
   "author": "Isaac Newton",
-  "dateModified": "2023-06-21T13:49:09.007Z",
+  "dateModified": "2023-06-21T15:42:53.216Z",
   "name": "Principia",
   "readingOrder": [
     {
@@ -14,8 +14,8 @@
       "name": "はじめに"
     },
     {
-      "url": "rulebook/world.html",
-      "name": "ワールド"
+      "url": "rulebook/chart.html",
+      "name": "チャート: LOST～廃墟の森の子供たち～"
     }
   ],
   "resources": [],

@@ -10,8 +10,9 @@ const vivliostyleConfig = {
   image: "ghcr.io/vivliostyle/cli:8.0.0",
   entry: [
     "index.md",
-    "./rulebook/world.md",
-    "./rulebook/camp.md",
+    "./rulebook/chart.html",
+    // "./rulebook/world.md",
+    // "./rulebook/camp.md",
     // **required field**
     // 'introduction.md', // 'title' is automatically guessed from the file (frontmatter > first heading)
     // {
