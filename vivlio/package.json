@@ -4,7 +4,7 @@
   "description": "lostrpg paper",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "to-pdf": "vivliostyle build"
   },
   "keywords": [
     "trpg"

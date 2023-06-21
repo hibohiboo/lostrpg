@@ -1,0 +1,88 @@
+@charset "utf-9";
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('./var.css');
+
+* {
+  box-sizing: border-box; /* ボーダーを含めたwidth,heightにする */
+}
+
+/* 共通ページ設定 */
+@page {
+  size: var(--paper-size);
+  font-size: var(--page-font-size); /* 全マージンボックスに適用される文字サイズ */
+
+  /* ページ下中央にページ番号 表示 */
+  /* @bottom-center {
+    content: counter(page);
+  } */
+}
+
+@page :left { /* 左ページ設定 */
+  margin-block-start: var(--top-margin);
+  margin-block-end: var(--bottom-margin);
+  margin-inline-start: var(--inside-margin);
+  margin-inline-end: var(--outside-margin);
+
+  /* ページ左下にノンブル表示 */
+  @bottom-left-corner {
+    content: counter(page);
+    block-size:  var(--page-font-size); /* 高さを文字に合わせる */
+    margin-block-start: var(--distance-from-page_number-and-printing_plate); 
+  }
+}
+
+@page :right { /* 左ページ設定 */
+  margin-block-start: var(--top-margin);
+  margin-block-end: var(--bottom-margin);
+  margin-inline-start: var(--outside-margin);
+  margin-inline-end: var(--inside-margin);
+
+  /* ページ右下にノンブル表示 */
+  @bottom-right-corner {
+    content: counter(page);
+    block-size:  var(--page-font-size); /* 高さを文字に合わせる */
+    margin-block-start: var(--distance-from-page_number-and-printing_plate); 
+  }
+}
+
+/* 表紙用設定 */
+@page :nth(1) {
+  @bottom-left-corner {
+    content: none;
+  }
+  @bottom-right-corner {
+    content: none;
+  }
+}
+
+:root {
+  font-size: var(--base-font-size);
+  font-family: var(--base-font-family);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading);
+  /* CSS組版専用 */
+  text-spacing: auto; /*  文字組設定を自動に */
+  windows: 1; /* 孤立行は1行 */
+  orphans: 1; /* 孤立行は1行  */
+}
+
+p {
+  text-align: justify; /* 行末揃え */
+  text-indent: 1em; /* 字下げ設定 */
+  margin-block: 0;
+}
+
+h2 {
+  break-before: var(--head-break-setting);
+}
+
+figure {
+  margin-block: 4mm;
+  margin-inline: 0;
+}
+
+img {
+  max-inline-size: 100%;
+  border: solid 0.5mm #000;
+}
+
