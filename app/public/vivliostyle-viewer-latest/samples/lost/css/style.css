@@ -83,6 +83,72 @@ figure {
 
 img {
   max-inline-size: 100%;
-  border: solid 0.5mm #000;
+  /* border: solid 0.5mm #000; */
 }
 
+table {
+  border-collapse: collapse;
+  font-size: 12Q;
+  line-height: 1.25em;
+}
+td,th {
+  border: solid 0.1mm #000;
+  padding: 1mm;
+}
+th {
+  background-color: #bbb;
+  white-space:nowrap;
+}
+tr:nth-child(even){
+  background-color: #eee;
+}
+
+.pc-class-images img {
+  width: 50mm;
+}
+
+.break-page {
+  break-before: page;
+}
+
+table.responsive td:nth-child(1), 
+table.responsive td:nth-child(2),
+table.responsive td:nth-child(3),
+table.responsive td:nth-child(4),
+table.responsive td:nth-child(5),
+#item td:nth-child(6)
+ {
+  white-space: nowrap;
+}
+
+.content .diceroll-sample {
+  border: solid 3px #000;
+  padding: 15px 30px;
+}
+
+.content .icon {
+  display: inline-box;
+  border: solid 1px #fff;
+  border-radius: 6px;
+  padding: 1px 3px;
+  color: #fff;
+}
+.content .success .icon {
+  background-color: #28a745;
+}
+.content .fail .icon {
+  background-color: #f10000;
+  margin-left: 5px;
+}
+.content .fail {
+  margin-top: 10px;
+}
+.content hgroup h1 {
+  padding-left: 0;
+  border-left: none;
+  font-size: 1.8rem;
+}
+
+#lastbattle h2,#ending h2, #afterplay h2,#improve h2   {
+  break-before:auto;
+}

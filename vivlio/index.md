@@ -5269,4 +5269,4 @@ link:
 
 ### github
 
-[hibohiboo - lostrpg](https://github.com/hibohiboo/lostrpg/tree/feature/addVivlioStyle/vivlio)
+[hibohiboo - lostrpg](https://github.com/hibohiboo/lostrpg/tree/feature/addVivlioStyle/app/public/vivliostyle-viewer-latest/samples/lost)
