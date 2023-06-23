@@ -4,7 +4,8 @@
   "description": "lostrpg paper",
   "main": "index.js",
   "scripts": {
-    "to-pdf": "vivliostyle build"
+    "to-pdf": "vivliostyle build",
+    "postto-pdf": "cp ./book/index.html ../app/public/vivliostyle-viewer-latest/samples/lost/index.html && cp  ./css/style.css ../app/public/vivliostyle-viewer-latest/samples/lost/css/style.css"
   },
   "keywords": [
     "trpg"

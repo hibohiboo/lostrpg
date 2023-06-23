@@ -172,7 +172,7 @@ link:
 <img src='./assets/images/big.png'/><img src='./assets/images/tibi.png'/><img src='./assets/images/otona.png'/><img src='./assets/images/new.png'/><img src='./assets/images/kizu.png'/><img src='./assets/images/sensi.png'/><img src='./assets/images/sukauto.png'/><img src='./assets/images/hunter.png'/><img src='./assets/images/hakase.png'/><img src='./assets/images/syokunin.png'/><img src='./assets/images/kibou.png'/><img src='./assets/images/mama.png'/>
 </div>
 
-### 2. 特技の決定
+### 2. 特技の決定{.break-page}
 
 キャラクターの特技を特技表の中から 6 つ選んで決定します。
 

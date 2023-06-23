@@ -103,8 +103,14 @@ tr:nth-child(even){
   background-color: #eee;
 }
 
+.pc-class-images {
+  padding-top: 3mm;
+  text-align: center;
+}
+
 .pc-class-images img {
-  width: 50mm;
+  width: 45mm;
+  margin-left: 5mm;
 }
 
 .break-page {
