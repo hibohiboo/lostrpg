@@ -5250,6 +5250,14 @@ link:
 
 ## リンク
 
+### オンラインルールブック
+
+[LOSTRPG](https://lostrpg-751c1.firebaseapp.com/lost/)
+
+### オンラインキャラクターシート
+
+[create-now](https://create-now.vercel.app/lostrpg)
+
 ### 利用素材 - アイコン
 
 - [Game-Icons Scar by Lorc](https://game-icons.net/1x1/lorc/scar-wound.html)
