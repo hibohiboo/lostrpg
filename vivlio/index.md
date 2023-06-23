@@ -5260,3 +5260,5 @@ link:
 [Vivliostyle CSS 組版](https://vivliostyle.org/ja/)
 
 ### github
+
+[hibohiboo - lostrpg](https://github.com/hibohiboo/lostrpg/tree/feature/addVivlioStyle/vivlio)
