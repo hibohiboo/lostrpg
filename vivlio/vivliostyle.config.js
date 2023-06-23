@@ -26,10 +26,10 @@ const vivliostyleConfig = {
   output: [
     // path to generate draft file(s). default to '{title}.pdf'
     "./output.pdf", // the output format will be inferred from the name.
-    // {
-    //   path: './book',
-    //   format: 'webpub',
-    // },
+    {
+      path: "./book",
+      format: "webpub",
+    },
   ],
   // workspaceDir: '.vivliostyle', // directory which is saved intermediate files.
   // toc: true, // whether generate and include ToC HTML or not, default to 'false'.
