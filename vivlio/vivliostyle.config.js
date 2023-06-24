@@ -10,6 +10,10 @@ const vivliostyleConfig = {
   image: "ghcr.io/vivliostyle/cli:8.0.0",
   entry: [
     "index.md",
+    "./rulebook/ability.md",
+    "./rulebook/item.md",
+    "./rulebook/pl.md",
+    "./rulebook/faq.md",
     "./rulebook/chart.html",
     // "./rulebook/world.md",
     // "./rulebook/camp.md",
