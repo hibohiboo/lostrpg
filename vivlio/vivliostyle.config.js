@@ -1,8 +1,8 @@
 // @ts-check
 /** @type {import('@vivliostyle/cli').VivliostyleConfigSchema} */
 const vivliostyleConfig = {
-  title: "Principia", // populated into 'publication.json', default to 'title' of the first entry or 'name' in 'package.json'.
-  author: "Isaac Newton", // default to 'author' in 'package.json' or undefined
+  title: "LOSTRPG", // populated into 'publication.json', default to 'title' of the first entry or 'name' in 'package.json'.
+  author: "hibo", // default to 'author' in 'package.json' or undefined
   // language: 'la',
   // readingProgression: 'rtl', // reading progression direction, 'ltr' or 'rtl'.
   // size: 'A4',

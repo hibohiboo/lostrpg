@@ -13,6 +13,6 @@
   "author": "hibo",
   "license": "MIT",
   "devDependencies": {
-    "@vivliostyle/cli": "^8.0.0"
+    "@vivliostyle/cli": "^8.0.1"
   }
 }
