@@ -356,163 +356,325 @@ link:
   <div class="card-content">指定特技の判定に成功すると、対象の気力を2点減少させる。</div>
 </div>
 
-### ビッグ{.break-page}
+### ビッグ{.break-verso}
 
 <div style="display:flex">
- <img src="../assets/images/icon/big.png" width="50" height="50"/>
+ <img src="../assets/images/icon/big.png" width="100" height="100"/>
 <img width="100" src='../assets/images/big.png' style="display:block;"/>
 <!-- <p>恵まれた体格を活かしたアビリティを習得できます。</p> -->
 </div>
 
-<table class="responsive" id="ability-big">
-  <caption>ビッグ</caption>
-  <thead>
-    <tr>
-      <th>名前  
-        <th>グループ</th> 
-        <th>タイプ</th> 
-        <th>反動</th> 
-        <th>指定特技</th> 
-        <th>対象</th> 
-        <th>効果</th>
-      </th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="txt-center">におうだち</td>
-    <td data-title="グループ">ビッグ</td>
-    <td data-title="タイプ">割込み</td>
-    <td data-title="反動">5</td>
-    <td data-title="指定特技">《塞ぐ》</td>
-    <td data-title="対象">自身</td>
-    <td data-title="効果">指定特技の判定に成功すると、今行われている攻撃の対象を自分1人に変更する。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">鉄拳</td>
-    <td data-title="グループ">ビッグ</td>
-    <td data-title="タイプ">攻撃</td>
-    <td data-title="反動">0</td>
-    <td data-title="指定特技">《殴る》</td>
-    <td data-title="対象">単体</td>
-    <td data-title="効果">指定特技の判定に成功すると、1点のダメージを与える。このとき命中判定の達成値にプラス3の修正がつく。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">怪力</td>
-    <td data-title="グループ">ビッグ</td>
-    <td data-title="タイプ">常駐</td>
-    <td data-title="反動">-</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">自身</td>
-    <td data-title="効果">白兵攻撃や肉体を使った攻撃により与えるダメージが1点上昇する。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">頑強</td>
-    <td data-title="グループ">ビッグ</td>
-    <td data-title="タイプ">常駐</td>
-    <td data-title="反動">-</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">自身</td>
-    <td data-title="効果">あなたの【生命力】をプラス2点する。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">馬鹿力</td>
-    <td data-title="グループ">ビッグ</td>
-    <td data-title="タイプ">常駐</td>
-    <td data-title="反動">-</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">自身</td>
-    <td data-title="効果">あなたは「装備部位：両手」のアイテムを「装備部位：片手」として扱うことができる。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">押し倒し</td>
-    <td data-title="グループ">ビッグ</td>
-    <td data-title="タイプ">補助</td>
-    <td data-title="反動">2</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">-</td>
-    <td data-title="効果">白兵攻撃や肉体を使った攻撃の命中判定に組み合わせて使用する。対象に『転倒』の変調を与える。</td>
-  </tr>
-</table>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>におうだち</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《塞ぐ》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、今行われている攻撃の対象を自分1人に変更する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>鉄拳</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《殴る》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、1点のダメージを与える。このとき命中判定の達成値にプラス3の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>怪力</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">白兵攻撃や肉体を使った攻撃により与えるダメージが1点上昇する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>頑強</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">あなたの【生命力】をプラス2点する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>馬鹿力</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">あなたは「装備部位：両手」のアイテムを「装備部位：片手」として扱うことができる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>押し倒し</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">白兵攻撃や肉体を使った攻撃の命中判定に組み合わせて使用する。対象に『転倒』の変調を与える。</div>
+</div>
 
-### チビ
+### チビ{.break-verso}
 
 <div style="display:flex">
- <img src="../assets/images/icon/small.png" width="50" height="50"/>
+ <img src="../assets/images/icon/small.png" width="100" height="100"/>
 <img width="100" src='../assets/images/tibi.png' style="display:block;"/>
 <!-- <p>小器用な立ち回りを活かしたアビリティを習得できます。</p> -->
 </div>
 
-<table class="responsive" id="ability-little">
-  <caption>チビ</caption>
-  <thead>
-    <tr>
-      <th>名前  
-        <th>グループ</th> 
-        <th>タイプ</th> 
-        <th>反動</th> 
-        <th>指定特技</th> 
-        <th>対象</th> 
-        <th>効果</th>
-      </th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="txt-center">痩身</td>
-    <td data-title="グループ">チビ</td>
-    <td data-title="タイプ">常駐</td>
-    <td data-title="反動">-</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">自身</td>
-    <td data-title="効果">回避判定の達成値にプラス1の修正がつく。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">両手利き</td>
-    <td data-title="グループ">チビ</td>
-    <td data-title="タイプ">常駐</td>
-    <td data-title="反動">-</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">自身</td>
-    <td data-title="効果">《利き腕》と《逆腕》の特技を追加で習得する。さらに、代用判定の時、腕部分野の上下のリストが繋がっているように扱う。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">奇襲</td>
-    <td data-title="グループ">チビ</td>
-    <td data-title="タイプ">割込み</td>
-    <td data-title="反動">5</td>
-    <td data-title="指定特技">《隠れる》</td>
-    <td data-title="対象">自身</td>
-    <td data-title="効果">戦闘開始時の先制判定の前に使用する。指定特技の判定に成功すると、追加行動を得る。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">アクロバット</td>
-    <td data-title="グループ">チビ</td>
-    <td data-title="タイプ">補助</td>
-    <td data-title="反動">2</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">-</td>
-    <td data-title="効果">回避判定に組み合わせて使用する。達成値にプラス2の修正がつく。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">うろちょろ</td>
-    <td data-title="グループ">チビ</td>
-    <td data-title="タイプ">補助</td>
-    <td data-title="反動">2</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">-</td>
-    <td data-title="効果">命中判定に組み合わせて使用する。対象の気力を1点減少させる。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">死角</td>
-    <td data-title="グループ">チビ</td>
-    <td data-title="タイプ">補助</td>
-    <td data-title="反動">2</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">-</td>
-    <td data-title="効果">命中判定に組み合わせて使用する。達成値にプラス2の修正がつく。</td>
-  </tr>
-</table>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>痩身</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">回避判定の達成値にプラス1の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>両手利き</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">《利き腕》と《逆腕》の特技を追加で習得する。さらに、代用判定の時、腕部分野の上下のリストが繋がっているように扱う。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>奇襲</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《隠れる》</div>
+  </div>
+  <div class="card-content">戦闘開始時の先制判定の前に使用する。指定特技の判定に成功すると、追加行動を得る。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>アクロバット</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">回避判定に組み合わせて使用する。達成値にプラス2の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>うろちょろ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。対象の気力を1点減少させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>死角</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。達成値にプラス2の修正がつく。</div>
+</div>
 
-### オトナ
+### オトナ{.break-verso}
 
 <div style="display:flex">
  <img src="../assets/images/icon/adult.svg" width="50" height="50"/>
@@ -520,77 +682,158 @@ link:
 <!-- <p>経験に裏打ちされたアビリティを習得できます。</p> -->
 </div>
 
-  <table class="responsive" id="ability-adult">
-    <caption>オトナ</caption>
-    <thead>
-      <tr>
-        <th>名前  
-          <th>グループ</th> 
-          <th>タイプ</th> 
-          <th>反動</th> 
-          <th>指定特技</th> 
-          <th>対象</th> 
-          <th>効果</th>
-        </th>
-      </tr>
-    </thead>
-    <tr>
-      <td class="txt-center">手練</td>
-      <td data-title="グループ">オトナ</td>
-      <td data-title="タイプ">常駐</td>
-      <td data-title="反動">-</td>
-      <td data-title="指定特技">-</td>
-      <td data-title="対象">自身</td>
-      <td data-title="効果">「アクション」の特技から１つ選択する。その特技は隣接する部位にダメージを受けても使用不能とならない。</td>
-    </tr>
-    <tr>
-      <td class="txt-center">百戦錬磨</td>
-      <td data-title="グループ">オトナ</td>
-      <td data-title="タイプ">常駐</td>
-      <td data-title="反動">-</td>
-      <td data-title="指定特技">-</td>
-      <td data-title="対象">自身</td>
-      <td data-title="効果">命中判定の達成値にプラス1の修正がつく。</td>
-    </tr>
-    <tr>
-      <td class="txt-center">人生経験</td>
-      <td data-title="グループ">オトナ</td>
-      <td data-title="タイプ">常駐</td>
-      <td data-title="反動">-</td>
-      <td data-title="指定特技">-</td>
-      <td data-title="対象">自身</td>
-      <td data-title="効果">ギャップを2列塗りつぶすことができる。塗りつぶされたギャップは代用判定の際数えない。</td>
-    </tr>
-    <tr>
-      <td class="txt-center">遭遇歴</td>
-      <td data-title="グループ">オトナ</td>
-      <td data-title="タイプ">支援</td>
-      <td data-title="反動">3</td>
-      <td data-title="指定特技">《雑学》</td>
-      <td data-title="対象">単体</td>
-      <td data-title="効果">指定特技の判定に成功すると、対象に『暴露』の変調を与える。</td>
-    </tr>
-    <tr>
-      <td class="txt-center">へそくり</td>
-      <td data-title="グループ">オトナ</td>
-      <td data-title="タイプ">常駐</td>
-      <td data-title="反動">-</td>
-      <td data-title="指定特技">-</td>
-      <td data-title="対象">自身</td>
-      <td data-title="効果">キャラメイク時の初期Jにプラス3Jする。また、セッション開始時に3J獲得できる。</td>
-    </tr>
-    <tr>
-      <td class="txt-center">旧友</td>
-      <td data-title="グループ">オトナ</td>
-      <td data-title="タイプ">常駐</td>
-      <td data-title="反動">-</td>
-      <td data-title="指定特技">-</td>
-      <td data-title="対象">自身</td>
-      <td data-title="効果">あなたを訪ねて古い友人がやってくる。あなたはキャンプフェイズに任意の[タイミング：支援]のキャンプ人材表1つの効果を使用できる。人材のレベルは1とする。指定特技の判定は行うこと。</td>
-    </tr>
-  </table>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div>手練</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">「アクション」の特技から１つ選択する。その特技は隣接する部位にダメージを受けても使用不能とならない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div>百戦錬磨</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定の達成値にプラス1の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div>人生経験</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">ギャップを2列塗りつぶすことができる。塗りつぶされたギャップは代用判定の際数えない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div>遭遇歴</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《雑学》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に『暴露』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div>へそくり</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">キャラメイク時の初期Jにプラス3Jする。また、セッション開始時に3J獲得できる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div>旧友</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">あなたを訪ねて古い友人がやってくる。あなたはキャンプフェイズに任意の[タイミング：支援]のキャンプ人材表1つの効果を使用できる。人材のレベルは1とする。指定特技の判定は行うこと。</div>
+</div>
 
-### ニューエイジ
+### ニューエイジ{.break-verso}
 
 <div style="display:flex">
  <img src="../assets/images/icon/newage.svg" width="50" height="50"/>
@@ -668,7 +911,7 @@ link:
   </tr>
 </table>
 
-### キズモノ
+### キズモノ{.break-verso}
 
 <div style="display:flex">
  <img src="../assets/images/icon/scar-wound.svg" width="50" height="50"/>
@@ -746,7 +989,7 @@ link:
   </tr>
 </table>
 
-### センシ
+### センシ{.break-verso}
 
 <div style="display:flex">
  <img src="../assets/images/icon/fighter.svg" width="50" height="50"/>
@@ -824,7 +1067,7 @@ link:
   </tr>
 </table>
 
-### スカウト
+### スカウト{.break-verso}
 
 <div style="display:flex">
  <img src="../assets/images/icon/scout.svg" width="50" height="50"/>
@@ -902,7 +1145,7 @@ link:
   </tr>
 </table>
 
-### ハンター
+### ハンター{.break-verso}
 
 <div style="display:flex">
  <img src="../assets/images/icon/hunter.svg" width="50" height="50"/>
@@ -980,7 +1223,7 @@ link:
   </tr>
 </table>
 
-### ハカセ
+### ハカセ{.break-verso}
 
 <div style="display:flex">
  <img src="../assets/images/icon/hakase.svg" width="50" height="50"/>
@@ -1058,7 +1301,7 @@ link:
   </tr>
 </table>
 
-### ショクニン
+### ショクニン{.break-verso}
 
 <div style="display:flex">
  <img src="../assets/images/icon/shokunin.svg" width="50" height="50"/>
@@ -1136,7 +1379,7 @@ link:
   </tr>
 </table>
 
-### ホープ
+### ホープ{.break-verso}
 
 <div style="display:flex">
  <img src="../assets/images/icon/hope.svg" width="50" height="50"/>
@@ -1214,7 +1457,7 @@ link:
   </tr>
 </table>
 
-### ママ
+### ママ{.break-verso}
 
 <div style="display:flex">
  <img src="../assets/images/icon/mama.svg" width="50" height="50"/>

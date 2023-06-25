@@ -198,6 +198,8 @@ dt {
   border: solid 1px #000;
   padding: 1mm 2mm;
   break-inside: avoid;
+  font-size: 10Q;
+  line-height: 1.2;
 }
 .ability-card .card-title {
  font-size: 1.1em;
