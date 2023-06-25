@@ -6,7 +6,8 @@
   "scripts": {
     "to-pdf": "vivliostyle build",
     "postto-pdf": "cp ./book/index.html ../app/public/vivliostyle-viewer-latest/samples/lost/index.html && cp  ./css/style.css ../app/public/vivliostyle-viewer-latest/samples/lost/css/style.css",
-    "build-pug": "pug pug/templates -o ./dist/pug -P "
+    "build-pug": "pug pug/templates -o ./dist/pug -P ",
+    "preview": "vivliostyle preview ./index.md"
   },
   "keywords": [
     "trpg"

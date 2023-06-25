@@ -165,12 +165,13 @@ dt {
   font-weight: var(--font-weight-bold);
 }
 
+/* 解説（B6用） */
 .small-dl {
   font-size: 10Q;
   line-height: 1.25em;
 }
 .small-dl dt {
-  margin-top: 0;
+  margin-top: 1mm;
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -187,3 +188,57 @@ dt {
   padding-top: 0;
   padding-bottom: 0;
 }
+
+/* アビリティ表示 B6 用*/
+
+.ability-card {
+  width: 96.6mm; /* 1.43 x 1(白銀). 1.61 x 1 (黄金)*/
+  /* min-height: 60mm; */
+  margin-top: 5mm;
+  border: solid 1px #000;
+  padding: 1mm 2mm;
+  break-inside: avoid;
+}
+.ability-card .card-title {
+ font-size: 1.1em;
+ display: flex;
+}
+.ability-card .card-title div:nth-child(1) {
+  margin-right: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.ability-card .card-title img {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+ }
+ .ability-card .row {
+  display: flex;
+ }
+ .ability-card .tag {
+  display: flex;
+  margin-left: 2mm;
+  margin-top: 2mm;
+ }
+ .ability-card .tag div {
+  border: 0.2mm solid #000;
+  padding: 0 2mm;
+ }
+ 
+ .ability-card .tag div:nth-child(1) {
+  background-color: #333;
+  color: #eee;
+  border-top-left-radius: 2mm;
+  border-bottom-left-radius: 2mm;
+ }
+ .ability-card .tag div:nth-child(2) {
+  border-top-right-radius: 2mm;
+  border-bottom-right-radius: 2mm;
+ }
+
+ .ability-card .card-content {
+margin-top: 2mm;
+ }

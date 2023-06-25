@@ -4,6 +4,28 @@ link:
     href: "../css/style.css"
 ---
 
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>武器攻撃</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">自由</div>
+  <div class="card-content">指定特技の判定に成功すると、装備中の《指定特技》が一致している武器1つの[攻撃力]点のダメージを与える。この時、命中判定の達成値にプラス2の修正がつく。指定特技ごとに別の【アビリティ】として扱う。</div>
+</div>
+
 ## アビリティ{.break-verso}
 
 アビリティには、以下の要素があります。
@@ -83,111 +105,256 @@ link:
 
 <br>
 
-<table class="responsive" id="ability-general">
-  <caption>汎用グループ</caption>
-  <thead>
-    <tr>
-      <th style="width:6rem;">名前  </th>
-        <th>グループ</th> 
-        <th>タイプ</th> 
-        <th>反動</th> 
-        <th>指定特技</th> 
-        <th>対象</th> 
-        <th>効果</th>
-      </th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="txt-center">武器攻撃</td>
-    <td data-title="グループ">汎用</td>
-    <td data-title="タイプ">攻撃</td>
-    <td data-title="反動">0</td>
-    <td data-title="指定特技">自由</td>
-    <td data-title="対象">単体</td>
-    <td data-title="効果">指定特技の判定に成功すると、装備中の《指定特技》が一致している武器1つの[攻撃力]点のダメージを与える。この時、命中判定の達成値にプラス2の修正がつく。指定特技ごとに別の【アビリティ】として扱う。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">かばう</td>
-    <td data-title="グループ">汎用</td>
-    <td data-title="タイプ">割込み</td>
-    <td data-title="反動">2</td>
-    <td data-title="指定特技">《受ける》</td>
-    <td data-title="対象">単体</td>
-    <td data-title="効果">指定特技の判定に成功すると、キャラクター1人のダメージを肩代わりできる。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">見切り</td>
-    <td data-title="グループ">汎用</td>
-    <td data-title="タイプ">補助</td>
-    <td data-title="反動">2</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">-</td>
-    <td data-title="効果">回避判定に組み合わせて使用する。回避判定の指定特技を《かわす/胴部9》に変更する。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">強打</td>
-    <td data-title="グループ">汎用</td>
-    <td data-title="タイプ">補助</td>
-    <td data-title="反動">2</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">-</td>
-    <td data-title="効果">命中判定に組み合わせて使用する。命中した攻撃のダメージを1増加させる。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">応急手当</td>
-    <td data-title="グループ">汎用</td>
-    <td data-title="タイプ">支援</td>
-    <td data-title="反動">3</td>
-    <td data-title="指定特技">《手当》</td>
-    <td data-title="対象">単体</td>
-    <td data-title="効果">指定特技の判定に成功すると、対象の【体力】が1点増加する。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">足払い</td>
-    <td data-title="グループ">汎用</td>
-    <td data-title="タイプ">攻撃</td>
-    <td data-title="反動">3</td>
-    <td data-title="指定特技">《しゃがむ》</td>
-    <td data-title="対象">単体</td>
-    <td data-title="効果">指定特技の判定に成功すると、対象に『転倒』の変調を与える。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">乱舞</td>
-    <td data-title="グループ">汎用</td>
-    <td data-title="タイプ">補助</td>
-    <td data-title="反動">8</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">-</td>
-    <td data-title="効果">命中判定に組み合わせて使用する。命中した攻撃のダメージを3増加させる。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">集中</td>
-    <td data-title="グループ">汎用</td>
-    <td data-title="タイプ">補助</td>
-    <td data-title="反動">2</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">-</td>
-    <td data-title="効果">命中判定に組み合わせて使用する。命中判定の達成値にプラス1の修正がつく。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">たからもの</td>
-    <td data-title="グループ">汎用</td>
-    <td data-title="タイプ">割込み</td>
-    <td data-title="反動">3</td>
-    <td data-title="指定特技">-</td>
-    <td data-title="対象">自身</td>
-    <td data-title="効果">自身の振ったダイス1つの出目を6にする。シナリオ1回。また、生死判定に失敗したとき、この【アビリティ】を失うことでそれを成功にできる。これには気力を消費しない。</td>
-  </tr>
-  <tr>
-    <td class="txt-center">説得</td>
-    <td data-title="グループ">汎用</td>
-    <td data-title="タイプ">攻撃</td>
-    <td data-title="反動">6</td>
-    <td data-title="指定特技">自由</td>
-    <td data-title="対象">単体</td>
-    <td data-title="効果">指定特技の判定に成功すると、対象の気力を2点減少させる。</td>
-  </tr>
-</table>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>武器攻撃</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>自由</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、装備中の《指定特技》が一致している武器1つの[攻撃力]点のダメージを与える。この時、命中判定の達成値にプラス2の修正がつく。指定特技ごとに別の【アビリティ】として扱う。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>かばう</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《受ける》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、キャラクター1人のダメージを肩代わりできる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>見切り</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">回避判定に組み合わせて使用する。回避判定の指定特技を《かわす/胴部9》に変更する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>強打</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。命中した攻撃のダメージを1増加させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>応急手当</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《手当》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象の【体力】が1点増加する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>足払い</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《しゃがむ》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に『転倒』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>乱舞</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。命中した攻撃のダメージを3増加させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>集中</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。命中判定の達成値にプラス1の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>たからもの</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">自身の振ったダイス1つの出目を6にする。シナリオ1回。また、生死判定に失敗したとき、この【アビリティ】を失うことでそれを成功にできる。これには気力を消費しない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>説得</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>自由</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象の気力を2点減少させる。</div>
+</div>
 
 ### ビッグ{.break-page}
 
