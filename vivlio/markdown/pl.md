@@ -6,7 +6,7 @@ link:
 
 <!---->
 
-<section id="check">
+<section id="check" class="break-verso">
 
 ## 行為判定
 
@@ -251,7 +251,7 @@ link:
   </hgroup>
 </section>
 
-<section id="campF">
+<section id="campF" class="break-page">
   <hgroup>
     <h2 id="campF-title">キャンプフェイズ</h2>
     <p>
