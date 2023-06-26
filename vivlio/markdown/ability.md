@@ -4,28 +4,6 @@ link:
     href: "../css/style.css"
 ---
 
-  <div class="card-title">
-    <div><img src="../assets/images/icon/asterisk.svg"/></div>
-    <div>武器攻撃</div>
-  </div>
-  <div class="row">
-    <div class="tag">
-      <div>タイプ</div>
-      <div>攻撃</div>
-    </div>
-    <div class="tag">
-      <div>反動</div>
-      <div>0</div>
-    </div>
-    <div class="tag">
-      <div>対象</div>
-      <div>単体</div>
-    </div>
-  </div>
-  <div class="tag">自由</div>
-  <div class="card-content">指定特技の判定に成功すると、装備中の《指定特技》が一致している武器1つの[攻撃力]点のダメージを与える。この時、命中判定の達成値にプラス2の修正がつく。指定特技ごとに別の【アビリティ】として扱う。</div>
-</div>
-
 ## アビリティ{.break-verso}
 
 アビリティには、以下の要素があります。
