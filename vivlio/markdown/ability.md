@@ -4,7 +4,7 @@ link:
     href: "../css/style.css"
 ---
 
-## アビリティ{.break-verso}
+## アビリティ{#ability .break-verso}
 
 アビリティには、以下の要素があります。
 
@@ -76,7 +76,7 @@ link:
 
   <img src="../assets/images/mother/fire.jpg" width="250" alt="イメージ画像" title="火炎弾！  はぐれけだま様作">
 
-### 汎用{.break-page}
+### 汎用{.break-verso}
 
 冒険者なら誰でも取得できるアビリティです。
 手に馴染んだ武器による【武器攻撃】で＜ヌシ＞へのとどめを確実に成功させましょう。
@@ -662,7 +662,7 @@ link:
 
 <div class="ability-card">
   <div class="card-title">
-    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div><img src="../assets/images/icon/adult.svg"/></div>
     <div>手練</div>
   </div>
   <div class="row">
@@ -687,7 +687,7 @@ link:
 </div>
 <div class="ability-card">
   <div class="card-title">
-    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div><img src="../assets/images/icon/adult.svg"/></div>
     <div>百戦錬磨</div>
   </div>
   <div class="row">
@@ -712,7 +712,7 @@ link:
 </div>
 <div class="ability-card">
   <div class="card-title">
-    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div><img src="../assets/images/icon/adult.svg"/></div>
     <div>人生経験</div>
   </div>
   <div class="row">
@@ -737,7 +737,7 @@ link:
 </div>
 <div class="ability-card">
   <div class="card-title">
-    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div><img src="../assets/images/icon/adult.svg"/></div>
     <div>遭遇歴</div>
   </div>
   <div class="row">
@@ -762,7 +762,7 @@ link:
 </div>
 <div class="ability-card">
   <div class="card-title">
-    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div><img src="../assets/images/icon/adult.svg"/></div>
     <div>へそくり</div>
   </div>
   <div class="row">
@@ -787,7 +787,7 @@ link:
 </div>
 <div class="ability-card">
   <div class="card-title">
-    <div><img src="../assets/images/icon/adult.sng"/></div>
+    <div><img src="../assets/images/icon/adult.svg"/></div>
     <div>旧友</div>
   </div>
   <div class="row">

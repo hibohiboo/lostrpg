@@ -230,17 +230,65 @@ dt {
   padding: 0 2mm;
  }
  
- .ability-card .tag div:nth-child(1) {
+.ability-card .tag div:nth-child(1) {
   background-color: #333;
   color: #eee;
   border-top-left-radius: 2mm;
   border-bottom-left-radius: 2mm;
- }
- .ability-card .tag div:nth-child(2) {
+}
+.ability-card .tag div:nth-child(2) {
   border-top-right-radius: 2mm;
   border-bottom-right-radius: 2mm;
- }
+}
 
- .ability-card .card-content {
-margin-top: 2mm;
- }
+.ability-card .card-content {
+  margin-top: 2mm;
+}
+
+/* 目次 */
+
+#toc {
+  text-spacing: no-autospace; /* 和欧文間なし（スペースによるずれを防ぐ） */
+}
+
+#toc ul {
+  list-style: none;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+  counter-reset: toc-list-counter 0;
+}
+#toc a {
+  color: #000;
+  text-decoration: none;
+}
+#toc a::after{
+  content: target-counter(after(href url), page); /* ページ番号を表示 */
+  margin-inline-start: 1em;
+  text-align: end; /* 右揃え */
+}
+
+.toc-chapter {
+  font-size: 24Q;
+  line-height: 1.25em;
+  font-weight: var(--font-weight-bold);
+  margin-block-end: 2mm;
+  display: grid;
+  grid-template-columns: auto 3em; /* 横方向にauto 3emに2分割(右端に目次のページ番号を表示するため) */
+}
+
+.toc-chapter::before {
+  content: "Chapter " counters(toc-list-counter, "-"); /* 章番号 */
+  counter-increment: toc-list-counter; /* カウンターを増やす */
+  grid-column: 1/3; /* 列グリッド １ - 3 に */
+  font-size: 15Q;
+  line-height: 1.5em;
+  border-bottom: solid 0.5mm #000;
+}
+
+.toc-chapter::after {
+  font-size: 18Q;
+}
+
+li:has(> .toc-chapter){
+  margin-block-end: 8mm; /* 次の章との間隔調整 */
+}

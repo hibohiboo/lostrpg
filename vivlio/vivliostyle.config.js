@@ -9,13 +9,14 @@ const vivliostyleConfig = {
   // theme: '', // .css or local dir or npm package. default to undefined
   image: "ghcr.io/vivliostyle/cli:8.0.0",
   entry: [
-    "index.md",
-    "./markdown/pc.md",
-    "./markdown/ability.md",
-    "./markdown/item.md",
-    "./markdown/pl.md",
-    "./markdown/faq.md",
-    "./markdown/chart.html",
+    "./md/bundle.md",
+    // "index.md",
+    // "./markdown/pc.md",
+    // "./markdown/ability.md",
+    // "./markdown/item.md",
+    // "./markdown/pl.md",
+    // "./markdown/faq.md",
+    // "./markdown/chart.html",
     // "./rulebook/world.md",
     // "./rulebook/camp.md",
     // **required field**
@@ -36,7 +37,7 @@ const vivliostyleConfig = {
       format: "webpub",
     },
   ],
-  workspaceDir: ".vivliostyle", // directory which is saved intermediate files.
+  // workspaceDir: ".vivliostyle", // directory which is saved intermediate files.
   // toc: true, // whether generate and include ToC HTML or not, default to 'false'.
   // cover: './cover.png', // cover image. default to undefined.
   // vfm: { // options of VFM processor

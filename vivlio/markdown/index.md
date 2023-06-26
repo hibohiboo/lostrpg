@@ -1,12 +1,12 @@
 ---
 link:
   - rel: "stylesheet"
-    href: "./css/style.css"
+    href: "../css/style.css"
 ---
 
-<img src="./assets/images/losttop.png" alt="イメージ画像" title="LOST～廃墟の森の子供たち～">
+<img src="../assets/images/losttop.png" alt="イメージ画像" title="LOST～廃墟の森の子供たち～">
 
-<img src="./assets/images/LOST.png" alt="LOST～廃墟の森の子供たち～" title="LOST～廃墟の森の子供たち～" style="border:none;">
+<img src="../assets/images/LOST.png" alt="LOST～廃墟の森の子供たち～" title="LOST～廃墟の森の子供たち～" style="border:none;">
 
 ## はじめに {.break-verso}
 
@@ -59,10 +59,10 @@ link:
 <dd>GMと一緒にゲームを遊ぶ人です。本ゲームの目的は、参加者全員が楽しいときを過ごすことです。</dd>
 </dl>
 
-<img src="./assets/images/uni-02.jpg" alt="イメージ画像" title="廃墟の森に一人  @lioneeeee 様作">
+<img src="../assets/images/uni-02.jpg" alt="イメージ画像" title="廃墟の森に一人  @lioneeeee 様作">
 
 <nav id="toc" role="doc-toc">
-- <a class="toc-chapter" href="./markdown/pc.html#world-title">ワールド</a>
-- <a class="toc-chapter" href="./markdown/pc.html#title-camp">キャンプ</a>
+- <a class="toc-chapter" href="#world-title">ワールド</a>
+- <a class="toc-chapter" href="#title-camp">キャンプ</a>
 
 </nav>

@@ -6,36 +6,12 @@
   "type": "Book",
   "conformsTo": "https://github.com/vivliostyle/vivliostyle-cli",
   "author": "hibo",
-  "dateModified": "2023-06-25T23:50:19.936Z",
+  "dateModified": "2023-06-26T13:23:00.070Z",
   "name": "LOSTRPG",
   "readingOrder": [
     {
-      "url": "index.html",
+      "url": "md/bundle.html",
       "name": "はじめに"
-    },
-    {
-      "url": "markdown/pc.html",
-      "name": "ワールド"
-    },
-    {
-      "url": "markdown/ability.html",
-      "name": "アビリティ"
-    },
-    {
-      "url": "markdown/item.html",
-      "name": "アイテム"
-    },
-    {
-      "url": "markdown/pl.html",
-      "name": "行為判定"
-    },
-    {
-      "url": "markdown/faq.html",
-      "name": "FAQ"
-    },
-    {
-      "url": "markdown/chart.html",
-      "name": "チャート: LOST～廃墟の森の子供たち～"
     }
   ],
   "resources": [],
