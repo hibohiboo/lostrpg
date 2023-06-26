@@ -60,9 +60,3 @@ link:
 </dl>
 
 <img src="../assets/images/uni-02.jpg" alt="イメージ画像" title="廃墟の森に一人  @lioneeeee 様作">
-
-<nav id="toc" role="doc-toc">
-- <a class="toc-chapter" href="#world-title">ワールド</a>
-- <a class="toc-chapter" href="#title-camp">キャンプ</a>
-
-</nav>

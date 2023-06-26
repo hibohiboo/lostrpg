@@ -262,11 +262,12 @@ dt {
   text-decoration: none;
 }
 #toc a::after{
-  content: target-counter(after(href url), page); /* ページ番号を表示 */
+  content: target-counter(attr(href url), page); /* ページ番号を表示 */
   margin-inline-start: 1em;
   text-align: end; /* 右揃え */
 }
 
+/* 章 */
 .toc-chapter {
   font-size: 24Q;
   line-height: 1.25em;
@@ -291,4 +292,35 @@ dt {
 
 li:has(> .toc-chapter){
   margin-block-end: 8mm; /* 次の章との間隔調整 */
+}
+
+/* 節 */
+
+li:has(> .toc-section) {
+  font-size: 18Q;
+  line-height: 1.2em;
+  font-weight: var(--font-weight-bold);
+  margin-inline-start: 15mm; /* 節番号を表示するアキを作る */
+  margin-block-end: 2mm;
+  break-inside: avoid; /* 途中でのページ分割を避ける */
+  position: relative; /* 絶対配置の基準にする。 leader関数とCSSGridの相性が悪いため */
+}
+
+.toc-section::before {
+  content: counters(toc-list-counter, "-"); /* 節番号 */
+  counter-increment: toc-list-counter;
+  position: absolute; /* 絶対配置 */
+  inset-inline-start: -15mm; /* 左位置を-15mmにしてアキに節番号を入れる */
+  display: block;
+  inline-size: 13mm; /* 幅13mm */
+  text-align: end; /* 右揃え */
+}
+
+#toc .toc-section::after {
+  content: leader(dotted) target-counter(attr(href url), page);
+  margin-inline-start: 0.5em; /* 左マージン0.5ミリ */
+}
+
+li:has(> .toc-section) > ul {
+  margin-block-start: 1mm;
 }

@@ -68,8 +68,8 @@ link:
 - <a class="toc-chapter" href="#world-title">ワールド</a>
 - <a class="toc-chapter" href="#title-camp">キャンプ</a>
 - <a class="toc-chapter" href="#character">キャラクター</a>
-  - <a class="toc-chapter" href="#ability">アビリティ</a>
-- <a class="toc-chapter" href="#character">キャラクター</a>
+  - <a class="toc-section" href="#ability">アビリティ</a>
+  - <a class="toc-section" href="#items">アイテム</a>
 - <a class="toc-chapter" href="#check">行為判定</a>
 - <a class="toc-chapter" href="#session">セッション</a>
 - <a class="toc-chapter" href="#FAQ">FAQ</a>
@@ -299,7 +299,8 @@ link:
 望むならば [経験表](./chart.html#table-experience)を振り、キャラクターの過去を決定することができます。
 
  <img src="../assets/images/uni-01.jpg" alt="イメージ画像" title="この先に進むには……  @lioneeeee 様作">
-## アビリティ{.break-verso}
+
+## アビリティ{#ability .break-verso}
 
 アビリティには、以下の要素があります。
 
