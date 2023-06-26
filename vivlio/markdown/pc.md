@@ -4,6 +4,8 @@ link:
     href: "../css/style.css"
 ---
 
+<!---->
+
 ## ワールド{#world-title .break-verso }
 
 ### 世界は滅びました{#world-apocalipus}

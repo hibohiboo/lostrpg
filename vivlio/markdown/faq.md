@@ -4,7 +4,9 @@ link:
     href: "../css/style.css"
 ---
 
-## FAQ
+<!---->
+
+## FAQ{#FAQ .break-verso }
 
 ### クラスに関する FAQ
 

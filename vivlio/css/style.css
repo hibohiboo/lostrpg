@@ -245,6 +245,65 @@ dt {
   margin-top: 2mm;
 }
 
+/* アイテム表示 B6 用*/
+
+.item-card {
+  width: 96.6mm; /* 1.43 x 1(白銀). 1.61 x 1 (黄金)*/
+  margin-top: 5mm;
+  border: solid 1px #000;
+  padding: 1mm 2mm;
+  break-inside: avoid;
+  font-size: 10Q;
+  line-height: 1.2;
+}
+.item-card .card-title {
+ font-size: 1.1em;
+ display: flex;
+}
+.item-card .card-title div:nth-child(1) {
+  margin-right: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.item-card .card-title img {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+ }
+ .item-card .row {
+  display: flex;
+  flex-wrap: wrap;
+ }
+ .item-card .tag {
+  display: flex;
+  margin-left: 2mm;
+  margin-top: 2mm;
+ }
+ .item-card .tag div {
+  border: 0.2mm solid #000;
+  padding: 0 2mm;
+ }
+ .item-card .row .tag.trait{
+  white-space: nowrap;
+ }
+ 
+.item-card .tag div:nth-child(1) {
+  background-color: #333;
+  color: #eee;
+  border-top-left-radius: 2mm;
+  border-bottom-left-radius: 2mm;
+}
+.item-card .tag div:nth-child(2) {
+  border-top-right-radius: 2mm;
+  border-bottom-right-radius: 2mm;
+}
+
+.item-card .card-content {
+  margin-top: 2mm;
+}
+
 /* 目次 */
 
 #toc {
