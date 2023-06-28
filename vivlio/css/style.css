@@ -84,6 +84,25 @@ img {
   /* border: solid 0.5mm #000; */
 }
 
+/* 拡張子がsvgのときはボーダーなし */
+img[src$=".svg"] {
+  border: none;
+}
+figure:has(.float-right) {
+  float:inline-end;
+  inline-size: 17em;
+  margin-block: 2mm;
+  margin-inline: 2em 0;
+}
+figure:has(.float-left) {
+  float:inline-start;
+  margin-block: 2mm;
+  margin-inline: 1em 0;
+}
+.float-clear {
+  clear: both;
+}
+
 table {
   border-collapse: collapse;
   font-size: 12Q;
