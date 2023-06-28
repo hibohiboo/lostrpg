@@ -1,0 +1,29 @@
+include ../includes/var
+
+
+each item in enemyList
+  div.item-card
+    div.card-title
+      div=item.name
+    div.row
+      div.tag
+        div グループ
+        div=item.group
+      div.tag
+        div 体力
+        div=item.stamina
+      div.tag
+        div 気力
+        div=item.willpower
+    div.row
+      div.tag
+        div 特技
+        div=item.specialties
+      div.tag
+        div アビリティ
+        div=item.abilities
+    div.tag
+      div ドロップ
+      div=item.drop
+    div.card-content=item.comment
+

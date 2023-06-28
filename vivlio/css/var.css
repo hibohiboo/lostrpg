@@ -1,11 +1,13 @@
 :root {
-  --paper-size: JIS-A6; /* 版型. B6 = 128mm x 182mm */
-  --top-margin: 20mm; /* 天 */
+  --paper-size: JIS-B6; /* 版型. B6 = 128mm x 182mm */
+  --top-margin: 10mm; /* 天 */
   --bottom-margin: 10mm; /* 地 */
   --inside-margin: 20mm; /* ノド */
   --outside-margin: 13mm; /* 小口 */
 
   --base-font-size: 13Q; /* 本文中のベース文字サイズ */
+  --small-font-size: 10Q; /* 小さい文字サイズ */
+  --ss-font-size: 9Q; /* とても小さい文字サイズ */
   --base-font-family: 'Noto Sans JP'; /* 太さは400と70をインポート */
   --font-weight-regular: 400;
   --font-weight-bold: 700;

@@ -6,16 +6,12 @@
   "type": "Book",
   "conformsTo": "https://github.com/vivliostyle/vivliostyle-cli",
   "author": "hibo",
-  "dateModified": "2023-06-24T12:22:58.981Z",
+  "dateModified": "2023-06-26T14:04:34.918Z",
   "name": "LOSTRPG",
   "readingOrder": [
     {
-      "url": "index.html",
+      "url": "md/bundle.html",
       "name": "はじめに"
-    },
-    {
-      "url": "rulebook/chart.html",
-      "name": "チャート: LOST～廃墟の森の子供たち～"
     }
   ],
   "resources": [],

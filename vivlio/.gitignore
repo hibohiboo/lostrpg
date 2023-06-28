@@ -4,3 +4,5 @@ index.html
 *.pdf
 book
 tmp
+dist
+.vivliostyle
