@@ -120,6 +120,11 @@ tr:nth-child(even){
   background-color: #eee;
 }
 
+/* ユーティリティ */
+.small-size {
+  font-size: var(--small-font-size);
+}
+
 .pc-class-images {
   padding-top: 3mm;
   text-align: center;
@@ -136,6 +141,10 @@ tr:nth-child(even){
 
 .break-verso {
   break-before: var(--head-break-setting);
+}
+
+.no-wrap-1 td:nth-child(1){
+  white-space: nowrap;
 }
 
 .no-wrap-2 td:nth-child(1),.no-wrap-2 td:nth-child(2){
@@ -401,4 +410,22 @@ li:has(> .toc-section) {
 
 li:has(> .toc-section) > ul {
   margin-block-start: 1mm;
+}
+
+/* 項目次 */
+li:has(> .toc-subsection) {
+  font-size: 13Q;
+  line-height: 1.25;
+  font-weight: var(--font-weight-regular);;
+  margin-inline-start: 3em;
+  text-indent: -3em;
+  margin-inline-end: 1em;
+  margin-block-end: 0.1em;
+}
+.toc-subsection::before{
+  display: inline-block;
+  min-inline-size: 2.5em;
+  text-indent: 0;
+  margin-inline-end: 0.5em;
+  text-align: start;
 }

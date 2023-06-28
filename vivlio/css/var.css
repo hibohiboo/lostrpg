@@ -6,6 +6,7 @@
   --outside-margin: 13mm; /* 小口 */
 
   --base-font-size: 13Q; /* 本文中のベース文字サイズ */
+  --small-font-size: 10Q; /* 小さい文字サイズ */
   --base-font-family: 'Noto Sans JP'; /* 太さは400と70をインポート */
   --font-weight-regular: 400;
   --font-weight-bold: 700;
