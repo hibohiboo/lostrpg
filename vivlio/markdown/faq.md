@@ -82,8 +82,8 @@ link:
   <dt>Q. ヌシグループから4つ習得した後に習得するアビリティは、ヌシグループからも習得できますか？</dt>
   <dd>A. 取得できます。</dd>
   </dl>
-  
-### アイテムに関するFAQ
+
+### アイテムに関する FAQ
 
 <dl>
 <dt>Q.キャラクターメイキング時にリュックサックを売ることはできますか？</dt>
@@ -183,7 +183,7 @@ link:
 <dd>A.はい、『無力化状態』になります。</dd>
 </dl>
 
-## 参考作品
+## 参考作品{.break-verso}
 
 <dl>
 <dt>リセット・ワールド</dt>
@@ -273,6 +273,50 @@ link:
   <a href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%87%E3%83%83%E3%82%BB%E3%82%A4_(%E6%98%A0%E7%94%BB)">→wikiedia</a>
 </dd>
 </dl>
+
+  <section id="next">
+    <h2 id="next-step-tile">次のステップ</h2>
+    <h3 id="next-step-session">さっそくセッションをしたい!</h3>
+    <p>サンプルシナリオを用意しております。</p>
+    <ul>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/scenario-sample.html" target="_blank">→サンプルシナリオ1:塩と胡椒</a> </li>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/scenario-sample.html#sample-scenario2" target="_blank">→サンプルシナリオ2:嵐の濁流</a> </li>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/scenario-island.html" target="_blank">現代編：無人島漂流記 </a></li>
+    </ul>
+    <p><a href="https://twitter.com/lioneeeee" target="_blank">uni</a>さんがシナリオ・素材を公開してくださっています。</p><a href="https://uni-unistar.booth.pm/items/2985062" target="_blank"><img src="../assets/images/scenario/please.gif" width="250px"></a><a href="https://uni-unistar.booth.pm/items/3105601" target="_blank"><img src="../assets/images/scenario/dive_under_ground.jpg" width="250px"></a><a href="https://uni-unistar.booth.pm/items/3061398" target="_blank"><img src="../assets/images/booth/material_uni.jpg" width="250px"></a>
+    <p><a href="https://twitter.com/LabanS_Lab" target="_blank">戯言脳髄Laboratory</a>さんがシナリオ・素材を公開してくださっています。</p><a href="https://labans-lab.booth.pm/items/2749749" target="_blank"><img src="../assets/images/scenario/kizuna_badge.jpg" width="250px"></a><a href="https://labans-lab.booth.pm/items/3094686" target="_blank"><img src="../assets/images/booth/lost_bg_labans-lab.jpg" width="250px"></a><a href="https://labans-lab.booth.pm/items/2681803" target="_blank"><img src="../assets/images/booth/map_icon_labans-lab.jpg" width="250px"></a>
+    <p>シナリオ公開サイトもあります。
+      <p><a href="https://create-now.vercel.app/lostrpg/scenario/ja/list" target="_blank">くりえいとなう！ LOSTRPGシナリオ一覧</a></p>
+      <p><a href="https://talto.cc/c/lost" target="_blank">TALTO</a> ... 投稿お願いします！</p>
+    </p>
+    <p>キャンプを育てていく楽しみが存分に味わえるキャンペーンシナリオを公開しています。</p>
+    <p><a href="https://lostrpg-751c1.firebaseapp.com/lost/campaign-mother.html" target="_blank">キャンペーン: Mother</a> ... <a href="https://twitter.com/hagure_g">はぐれけだま</a>様</p>
+    <h3 id="next-step-reply">実際の遊び方を知りたい</h3>
+    <p>遊んだ様子を読み物にしたリプレイを用意しております。</p>
+    <ul>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/reply-sample1.html">→ リプレイ1: 塩と胡椒 </a></li>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/reply-sample2.html">→ リプレイ2: 嵐の濁流 </a></li>
+    </ul>
+    <h3 id="next-step-make-char">キャンプやキャラクターを作りたい</h3>
+    <h4>サポートサイト</h4>
+    <p>サポートサイトがあります。キャンプ・キャラクター・ヌシなどを作成できます。</p>
+    <p>キャラクターを作った後は、レコードシートを利用可能になりますのでお役立てください。</p>
+    <p> <a href="https://create-now.now.sh/lostrpg" rel="noopener noreferrer">→ サポートサイト </a></p>
+    <h4>PDFダウンロード</h4>
+    <p>キャラクターシート</p><a href="https://lostrpg-751c1.firebaseapp.com/lost/assets/data/sheet.pdf"><img src="../assets/images/lost-character-sheet.png" alt="キャラクターシート" style="width: 250px; height: 174px;"></a>
+    <h4>サマリーなど</h4>
+    <ul>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/chart.html"> チャート</a></li>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/summary.html"> サマリー</a></li>
+      <li><a href="http://asuwa.mistysky.net/s/table/table-skills.htm"> 判定値サポート</a></li>
+      <li><a href="https://uni-unistar.booth.pm/items/3061398">ココフォリア用素材集</a></li>
+    </ul>
+    <h3 id="next-step-add-data">もっとデータを見たい</h3>
+    <p>拡張データ集（サプリメント）があります。</p>
+    <p>追加のクラスやアイテムをお楽しみください。</p>
+    <p> <a href="https://lostrpg-751c1.firebaseapp.com/lost/supplement-strange-fields.html" rel="noopener noreferrer">→ Strange Fields 終末列島百景 </a></p>
+    <p> <a href="https://lostrpg-751c1.firebaseapp.com/lost/supplement-seki-dragon-plain.html" rel="noopener noreferrer">→ 関ヶ原暴竜平原 </a></p>
+  </section>
 
 ## リンク
 

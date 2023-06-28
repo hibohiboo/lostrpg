@@ -6,7 +6,7 @@ link:
 
 <!---->
 
-<section id="GMpart">
+<section id="GMpart" class="break-verso">
   <hgroup>
     <h1 id="make-boss">＜ヌシ＞の作成</h1>
     <h2 id="make-boss-name">1.名前・外見</h2>
@@ -33,7 +33,7 @@ link:
     <p>＜ヌシ＞は[10+レベル]点の【気力】を持っています。</p>
   </hgroup>
   <hgroup class="break-page">
-  <h2>エネミー</h2>
+  <h2 id="enemies">エネミー</h2>
   
 <div class="item-card">
   <div class="card-title">
@@ -410,7 +410,7 @@ link:
   <div class="card-content">青い鱗が細長い身体をびっしり覆った竜。水力発電所跡を中心とした＜フィールド＞を広げている。</div>
 </div>
 
-  <h2 class="break-page">エネミーアビリティ</h2>
+  <h2 id="enemy-abirities" class="break-page">エネミーアビリティ</h2>
   
 <div class="ability-card">
   <div class="card-title">
@@ -1224,7 +1224,7 @@ link:
   </div>
   <div class="card-content">達成値が目標値にとどかない場合でも命中判定に成功する。その場合、相手の回避判定には[（目標値-達成値）×2]点の修正がつく。</div>
 </div>
-  <h2 class="break-page">ドロップ</h2>
+  <h2  class="break-page">ドロップ</h2>
   <table class="responsive" id="droplist">
   <caption>ドロップ</caption>
   <thead><tr>
