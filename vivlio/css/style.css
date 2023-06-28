@@ -121,7 +121,7 @@ tr:nth-child(even){
 }
 
 /* ユーティリティ */
-.small-size {
+.small-size-font {
   font-size: var(--small-font-size);
 }
 .ss-size-font {
@@ -333,6 +333,10 @@ dt {
 
 .item-card .card-content {
   margin-top: 2mm;
+}
+
+.item-card .tag:has(div:empty) {
+  display: none;
 }
 
 /* 目次 */

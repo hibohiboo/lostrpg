@@ -1,0 +1,55 @@
+include ../includes/var
+
+h4 設備（施設）
+
+each item in equipmentList
+  div.item-card
+    div.card-title
+      div
+        img(src="../assets/images/icon/tent.svg")
+      div=item.name
+    div.row
+      div.tag
+        div タイプ
+        div=item.type
+      div.tag
+        div CP
+        div=item.cp
+      div.tag
+        div 最大Lv
+        div=item.maxLv
+      div.tag
+        div 前提
+        div=item.precondition
+    div.row
+      div.tag
+        div 指定特技
+        div=item.specialty
+    div.card-content=item.effect
+
+h4.break-page 設備（人材）
+
+each item in campPersonalityList
+  div.item-card
+    div.card-title
+      div
+        img(src="../assets/images/icon/tent.svg")
+      div=item.name
+    div.row
+      div.tag
+        div タイプ
+        div=item.type
+      div.tag
+        div CP
+        div=item.cp
+      div.tag
+        div 最大Lv
+        div=item.maxLv
+      div.tag
+        div 前提
+        div=item.precondition
+    div.row
+      div.tag
+        div 指定特技
+        div=item.specialty
+    div.card-content=item.effect

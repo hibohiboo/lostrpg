@@ -42,15 +42,403 @@ link:
 
 ![冒険者の休息](../assets/images/takibi.png)
 
-## キャンプ{#title-camp}
+<section id="npc" class="break-page">
+  <h2>NPC一覧</h2>
+  <p>今も生き延びている人々を紹介します。</p>
+  <p>キャンプの一員として、＜フィールド＞で出会う冒険者として、自由にお使いください。</p>
+  <div style="display:flex;border: solid 0px #000; padding: 5px;">
+    <div style="width:600px; height: 300px;overflow:hidden"><img src="../assets/images/npc/kame/001.png" alt="かめや" title="かめや @LabanS_Lab 様作"></div>
+    <div> 
+      <p> <strong>かめや <br></strong></p>
+      <p><strong>16歳 / 女<br></strong><strong>アキンド / カイヌシ / チビ</strong></p>
+      <p>「わさわさ、仕入れてきたです。缶詰払い歓迎なのですよ」</p>
+      <p>大きな亀（名前はハイゼット）に山ほどの商品を載せて、キャンプを渡り歩く商人です。<br>買い物をすると、ポイントカードにスタンプを押してくれます。
+        ＜フィールド＞へ仕入にゆくために、護衛を冒険者たちに頼むこともあります。
+      </p>
+    </div>
+  </div>
+  <div style="display:flex;border: solid 0px #000; padding: 5px;" class="break-page">
+    <div style="width:600px; height: 280px;overflow:hidden"><img src="../assets/images/npc/yuni/006.png" alt="ゆう兄" title="ゆう兄 @LabanS_Lab 様作"></div>
+    <div> 
+      <p> <strong>ゆう兄 <br></strong></p>
+      <p><strong>18歳 / 男<br></strong><strong>ビッグ</strong></p>
+      <p>「うん。無事に帰ってきたネェ。よかったネェ」</p>
+      <p>仏と呼ばれるほど穏やかな、体も器も大きなリーダーです。<br>いつも静かな笑顔を絶やさず、ゆったりと話します。
+        ぼーっとしているように見えて誰よりキャンプのことを考えています。
+      </p>
+    </div>
+  </div>
+</section>
 
-キャンプでは、生き残っている人々が協力して暮らしています。[オンラインの場合、公開されているキャンプを見ることができます。](https://create-now.vercel.app/lostrpg)
+## キャンプ{#title-camp .break-verso}
+
+キャンプでは、生き残っている人々が協力して暮らしています。[\*](https://create-now.vercel.app/lostrpg)
 
 キャンプの作成手順を説明します。
 
 ### 1.名前の決定
 
 まず、プレイヤーキャラクター全員が所属するキャンプの名前を決めましょう。近くの公民館や学校をキャンプにするのも、イメージの共有がしやすくておススメです。
+
+#### キャンプ名表
+
+表を使って決定することもできます。
+
+キャンプ名決定表 A, B と建物表を組み合わせてキャンプ名を決定します。
+
+<div style="display:flex;">
+<table class="chart ss-size-font" id="table-campnameA">
+  <caption>キャンプ名決定表A</caption>
+  <thead>
+    <tr>
+      <th>d66 
+        <th>ジャンル</th> 
+        <th>例</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>11</td>
+    <td>都道府県</td>
+    <td>東京</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>色名</td>
+    <td>紅</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>天候</td>
+    <td>青空</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>動物</td>
+    <td>きつね</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>天体</td>
+    <td>スバル</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>化学物質</td>
+    <td>ダイナマイト</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>衣装</td>
+    <td>麦わら</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>楽器</td>
+    <td>スピーカー</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>時代</td>
+    <td>明治</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>地形</td>
+    <td>泉</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>植物</td>
+    <td>サクラ</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>方角</td>
+    <td>北</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>数字</td>
+    <td>第三</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>神様</td>
+    <td>天照</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>英語</td>
+    <td>Excite</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>飲食物</td>
+    <td>バナナ</td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td>幻獣</td>
+    <td>ドラゴン</td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td>国名・文明</td>
+    <td>ローマ</td>
+  </tr>
+  <tr>
+    <td>55</td>
+    <td>地名</td>
+    <td>雛見沢</td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>会社名</td>
+    <td>トヨタ</td>
+  </tr>
+  <tr>
+    <td>66</td>
+    <td>GMの名字</td>
+    <td>鈴木</td>
+  </tr>
+</table>
+
+<table class="chart ss-size-font" style="margin-left:1mm;" id="table-campnameB">
+  <caption>キャンプ名決定表B</caption>
+  <thead>
+    <tr>
+      <th>d66 
+        <th>奇数</th> 
+        <th>偶数</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>11</td>
+    <td>暗黒</td>
+    <td>夜明けの</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>エンドレス</td>
+    <td>トラベル</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>トロピカル</td>
+    <td>荒野の</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>さまよう</td>
+    <td>迷える</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>クレイジー</td>
+    <td>ゴスロリ</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>魔王</td>
+    <td>勇者</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>ミッドナイト</td>
+    <td>サンシャイン</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>サーカス</td>
+    <td>プラネット</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>ルートイン</td>
+    <td>グリーン</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>ドルフィン</td>
+    <td>マンボー</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>ドリーマーズ</td>
+    <td>ガールズ</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>ひまわり</td>
+    <td>どんぐり</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>ブラボー</td>
+    <td>ハロー</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>紅の</td>
+    <td>蒼の</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>軍団</td>
+    <td>研究会</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>一家</td>
+    <td>組</td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td>サークル</td>
+    <td>チーム</td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td>子供会</td>
+    <td>パーティ</td>
+  </tr>
+  <tr>
+    <td>55</td>
+    <td>軍団</td>
+    <td>研究会</td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>プロジェクト</td>
+    <td>同盟</td>
+  </tr>
+  <tr>
+    <td>66</td>
+    <td>合唱団</td>
+    <td>バンド</td>
+  </tr>
+</table>
+
+<table class="chart ss-size-font" style="margin-left:1mm;" id="table-campnameC">
+  <caption>建物表</caption>
+  <thead>
+    <tr>
+      <th>d66 
+        <th>奇数</th> 
+        <th>偶数</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>11</td>
+    <td>寺</td>
+    <td>神社</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>タワー</td>
+    <td>屋敷</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>駅</td>
+    <td>旅館</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>トンネル</td>
+    <td>大橋</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>デパート</td>
+    <td>レストラン</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>会社</td>
+    <td>ビル</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>保育園</td>
+    <td>幼稚園</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>小学校</td>
+    <td>中学校</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>高校</td>
+    <td>大学</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>市役所</td>
+    <td>派出所</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>荘</td>
+    <td>ハイツ</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>動物園</td>
+    <td>水族館</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>博物館</td>
+    <td>美術館</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>公民館</td>
+    <td>公園</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>球場</td>
+    <td>ドーム</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>ゲームセンター</td>
+    <td>図書館</td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td>映画館</td>
+    <td>遊園地</td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td>研究室</td>
+    <td>実験場</td>
+  </tr>
+  <tr>
+    <td>55</td>
+    <td>病院</td>
+    <td>薬局</td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>農場</td>
+    <td>港</td>
+  </tr>
+  <tr>
+    <td>66</td>
+    <td>セッション会場</td>
+    <td>GMの勤め先（通い先）</td>
+  </tr>
+</table>
+
+</div>
 
 ### 2.設備・人材の決定
 
@@ -71,21 +459,78 @@ link:
 
 設備はキャンプフェイズに利用できます。
 
-###### 追加設備決定表
+<table class="responsive small-size-font break-page" id="camp-equipment_first">
+  <caption>追加設備決定表</caption>
+  <thead>
+    <tr>
+      <th>d6 
+        <th>名前</th> 
+        <th>タイプ</th> 
+        <th>指定特技</th> 
+        <th>レベル</th> 
+        <th>効果</th>
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="mobile-hidden">1</td>
+    <td class="txt-center" data-title="1">商人</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">《伝える》</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">指定特技の判定に成功すると、あなたはアイテムを[レベル+3]個まで買うことができる。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">2</td>
+    <td class="txt-center" data-title="2">先生</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">《考える》</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">指定特技の判定に成功すると、あなたはそのセッションの間、ランダムに特技を1つ習得する。1D6を振り分野を決め、2D6を振って習得する特技を決める。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">3</td>
+    <td class="txt-center" data-title="3">歌姫</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">《歌う》</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">指定特技の判定に成功すると、あなたの【気力】が2D6点増加する。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">4</td>
+    <td class="txt-center" data-title="4">畑</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">《作る》</td>
+    <td data-title="レベル">3</td>
+    <td data-title="効果">指定特技の判定に成功すると、あなたは[レベル]Jを得る。最大レベルに達している場合、食堂の効果にプラス1する。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">5</td>
+    <td class="txt-center" data-title="5">太陽電池</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">なし</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">あなたが所持しているか装備しているアイテムを[レベル]個まで「充電」できる。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">6</td>
+    <td class="txt-center" data-title="6">お風呂</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">なし</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">あなたの【精神力】にプラス[レベル]点する。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">6</td>
+    <td class="txt-center" data-title="6">ドラム缶</td>
+    <td data-title="タイプ">-</td>
+    <td data-title="指定特技">-</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">水などを貯めることができる。</td>
+  </tr>
+</table>
 
-<div class="no-wrap-2">
-
-| d6  | 名前     | タイプ | 指定特技   | Lv  | 効果                                                                                                          |
-| :-: | -------- | ------ | ---------- | :-: | ------------------------------------------------------------------------------------------------------------- |
-|  1  | 商人     | 支援   | 《伝える》 |  1  | 指定特技の判定に成功すると、あなたはアイテムを[レベル+3]個まで買うことができる。                              |
-|  2  | 先生     | 支援   | 《考える》 |  1  | 指定特技の判定に成功すると、あなたはそのセッションの間、[ランダム](#faq-skill)に特技を 1 つ習得する。         |
-|  3  | 歌姫     | 支援   | 《歌う》   |  1  | 指定特技の判定に成功すると、あなたの【気力】が 2D6 点増加する。                                               |
-|  4  | 畑       | 支援   | 《作る》   |  3  | 指定特技の判定に成功すると、あなたは[レベル]J を得る。最大レベルに達している場合、食堂の効果にプラス 1 する。 |
-|  5  | 太陽電池 | 支援   | なし       |  1  | あなたが所持しているか装備しているアイテムを[レベル]個まで「充電」できる。                                    |
-|  6  | お風呂   | 支援   | なし       |  1  | あなたの【精神力】にプラス[レベル]点する。                                                                    |
-|  6  | ドラム缶 | -      | -          |  1  | 水などを貯めることができる。                                                                                  |
-
-</div>
+<img src="../assets/images/npc/kame/002.png" width="225" height="300" alt="ハイゼットかめや" title="かめや @LabanS_Lab 様作">
 
 ## キャラクター{#character .break-verso}
 
@@ -360,7 +805,7 @@ link:
 
 #### 経験表{.break-page}
 
-<table class="no-wrap-1 small-size" id="table-experience">
+<table class="no-wrap-1 small-size-font" id="table-experience">
   <thead>
     <tr>
       <th>d66 

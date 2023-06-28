@@ -944,7 +944,10 @@ link:
     <div>指定特技</div>
     <div>-</div>
   </div>
-  <div class="card-content">ムシ、ケモノ、ミュータントのグループアビリティからランダムに１つアビリティを習得できる。ただし、その反動が1増加する。常駐タイプのアビリティを習得した場合、【精神力】が2点減少する。</div>
+  <div class="card-content">
+    ムシ、ケモノ、ミュータントのグループアビリティからランダムに１つアビリティを習得できる。ただし、その反動が1増加する。常駐タイプのアビリティを習得した場合、【精神力】が2点減少する。
+    毎セッションの開始時に、ランダムに習得しなおしてもよい。
+  </div>
 </div>
 <div class="ability-card">
   <div class="card-title">
@@ -971,6 +974,55 @@ link:
   </div>
   <div class="card-content">回避判定に組み合わせて使用する。回避に成功したとき、あなた以外のキャラクター1人も回避できたことになる。このアビリティを使用する場合、あなたが攻撃の対象でない場合にも回避判定を行える。</div>
 </div>
+
+<table class="responsive" id="ability-mutation">
+  <caption>突然変異表</caption>
+  <thead>
+    <tr>
+      <th>d6 * d3 
+        <th>ムシ(1,2)</th>  
+        <th>ケモノ(3,4)</th> 
+        <th>ミュータント(5,6)</th>
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="txt-center">1</td>
+    <td data-title="ムシ(1,2)">大アゴ</td>
+    <td data-title="ケモノ(3,4)">体当たり</td>
+    <td data-title="ミュータント(5,6)">撹乱音波</td>
+  </tr>
+  <tr>
+    <td class="txt-center">2</td>
+    <td data-title="ムシ(1,2)">毒針</td>
+    <td data-title="ケモノ(3,4)">噛みつき</td>
+    <td data-title="ミュータント(5,6)">鋼鱗</td>
+  </tr>
+  <tr>
+    <td class="txt-center">3</td>
+    <td data-title="ムシ(1,2)">外骨格</td>
+    <td data-title="ケモノ(3,4)">突撃</td>
+    <td data-title="ミュータント(5,6)">ドリル</td>
+  </tr>
+  <tr>
+    <td class="txt-center">4</td>
+    <td data-title="ムシ(1,2)">飛行</td>
+    <td data-title="ケモノ(3,4)">鋭角</td>
+    <td data-title="ミュータント(5,6)">火炎放射</td>
+  </tr>
+  <tr>
+    <td class="txt-center">5</td>
+    <td data-title="ムシ(1,2)">大鎌</td>
+    <td data-title="ケモノ(3,4)">牙</td>
+    <td data-title="ミュータント(5,6)">冷気</td>
+  </tr>
+  <tr>
+    <td class="txt-center">6</td>
+    <td data-title="ムシ(1,2)">触手</td>
+    <td data-title="ケモノ(3,4)">咆哮</td>
+    <td data-title="ミュータント(5,6)">腐敗</td>
+  </tr>
+</table>
 
 ### キズモノ{.break-verso}
 
