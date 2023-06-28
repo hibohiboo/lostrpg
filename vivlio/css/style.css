@@ -124,6 +124,9 @@ tr:nth-child(even){
 .small-size {
   font-size: var(--small-font-size);
 }
+.ss-size-font {
+  font-size: var(--ss-font-size);
+}
 
 .pc-class-images {
   padding-top: 3mm;

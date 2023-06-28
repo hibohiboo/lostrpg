@@ -516,6 +516,8 @@ link:
     </tr>
   </table>
 
+ <img src="../assets/images/uni-01.jpg" alt="イメージ画像" title="この先に進むには……  @lioneeeee 様作">
+
 <h3  class="break-page" id="exploration-actions-rest">■休憩</h3>
 <p>2D6を振り、休憩表の結果を適用します。</p>
 
