@@ -1196,7 +1196,7 @@ link:
   <div class="row">
     <div class="tag">
       <div>タイプ</div>
-      <div>支援</div>
+      <div>割込み</div>
     </div>
     <div class="tag">
       <div>反動</div>
@@ -1261,7 +1261,7 @@ link:
     <div>指定特技</div>
     <div>-</div>
   </div>
-  <div class="card-content">命中判定に組み合わせて使用する。命中した攻撃のダメージを3増加させる。</div>
+  <div class="card-content">命中判定に組み合わせて使用する。ダメージを使用した武器の[重量]増加させる。</div>
 </div>
 <div class="ability-card">
   <div class="card-title">
@@ -1275,7 +1275,7 @@ link:
     </div>
     <div class="tag">
       <div>反動</div>
-      <div>2</div>
+      <div>3</div>
     </div>
     <div class="tag">
       <div>対象</div>
@@ -1286,7 +1286,7 @@ link:
     <div>指定特技</div>
     <div>-</div>
   </div>
-  <div class="card-content">命中判定に組み合わせて使用する。命中判定の達成値にプラス1の修正がつく。</div>
+  <div class="card-content">行為判定に組み合わせて使用する。達成値にプラス1の修正がつく。</div>
 </div>
 <div class="ability-card">
   <div class="card-title">
@@ -1325,7 +1325,7 @@ link:
     </div>
     <div class="tag">
       <div>反動</div>
-      <div>6</div>
+      <div>4</div>
     </div>
     <div class="tag">
       <div>対象</div>
@@ -1788,7 +1788,7 @@ link:
     <div>指定特技</div>
     <div>-</div>
   </div>
-  <div class="card-content">キャラメイク時の初期Jにプラス3Jする。また、セッション開始時に3J獲得できる。</div>
+  <div class="card-content">キャラメイク時の初期Jにプラス5Jする。また、セッション開始時に3J獲得できる。</div>
 </div>
 <div class="ability-card">
   <div class="card-title">
@@ -1897,7 +1897,7 @@ link:
     <div>指定特技</div>
     <div>《逸らす》</div>
   </div>
-  <div class="card-content">ダメージ適用の直前に使用する。指定特技の判定に成功するとダメージを1点軽減できる。</div>
+  <div class="card-content">ダメージ適用の直前に使用する。指定特技の判定に成功するとダメージを1点軽減できる。追加で気力を1点消費し、指定特技の判定に成功すると、さらに1点のダメージを軽減できる。これは判定に失敗するまで続けてよい。</div>
 </div>
 <div class="ability-card">
   <div class="card-title">
@@ -1949,7 +1949,7 @@ link:
   </div>
   <div class="card-content">
     ムシ、ケモノ、ミュータントのグループアビリティからランダムに１つアビリティを習得できる。ただし、その反動が1増加する。常駐タイプのアビリティを習得した場合、【精神力】が2点減少する。
-    毎セッションの開始時に、ランダムに習得しなおしてもよい。
+    毎セッションの終了時に、ランダムに習得しなおしてもよい。
   </div>
 </div>
 <div class="ability-card">
@@ -5996,6 +5996,7 @@ link:
   <p>判定へのプラス修正によってスペシャルが起こることはありません。</p>
 
   <caption>命中判定スペシャル表</caption>
+  <table>
   <thead>
     <tr>
       <th>d6 
@@ -8004,11 +8005,11 @@ link:
     </div>
     <div class="tag">
       <div>CP</div>
-      <div>10</div>
+      <div>3</div>
     </div>
     <div class="tag">
       <div>最大Lv</div>
-      <div>3</div>
+      <div>5</div>
     </div>
     <div class="tag">
       <div>前提</div>

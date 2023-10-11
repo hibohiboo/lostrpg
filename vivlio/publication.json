@@ -5,9 +5,9 @@
   ],
   "type": "Book",
   "conformsTo": "https://github.com/vivliostyle/vivliostyle-cli",
-  "author": "hibo",
-  "dateModified": "2023-06-26T14:04:34.918Z",
   "name": "LOSTRPG",
+  "author": "hibo",
+  "dateModified": "2023-10-11T11:47:23.612Z",
   "readingOrder": [
     {
       "url": "md/bundle.html",

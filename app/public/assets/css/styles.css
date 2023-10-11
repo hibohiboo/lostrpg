@@ -1128,10 +1128,8 @@ a.toc-link {
   height: 18px;
 }
 .first-toc ul {
-  -webkit-padding-start: 10px;
-          padding-inline-start: 10px;
-  -webkit-margin-before: 0.25em;
-          margin-block-start: 0.25em;
+  padding-inline-start: 10px;
+  margin-block-start: 0.25em;
 }
 .first-toc ul li {
   position: relative;
