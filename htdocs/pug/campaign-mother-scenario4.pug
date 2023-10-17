@@ -813,6 +813,37 @@ block body
               td(data-title='対象')= item.target
               td(data-title='効果')= item.effect
 
+
+        table.responsive
+          caption 悪夢
+          thead
+            tr: th 名前 #[th レベル] #[th タイプ] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ] #[th 解説]
+          each enemy in enemyListBoss3
+            tr
+              td.txt-center= enemy.name
+              td(data-title='レベル')= enemy.lv
+              td(data-title='タイプ')= enemy.group
+              td(data-title='体力')= enemy.stamina
+              td(data-title='気力')= enemy.willpower
+              td(data-title='特技')= enemy.specialties
+              td(data-title='アビリティ')= enemy.abilities
+              td(data-title='ドロップ')= enemy.drop
+              td(data-title='解説')= enemy.comment
+
+        table(class="responsive")
+          caption 悪夢のアビリティ
+          thead
+            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+          each item in enemyAbilityListBoss3
+            tr
+              td.txt-center= item.name
+              td(data-title='グループ')= item.group
+              td(data-title='タイプ')= item.type
+              td(data-title='反動')= item.recoil
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='効果')= item.effect
+
         h4 スズ
 
         dl
