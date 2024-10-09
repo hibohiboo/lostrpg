@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "lostrpg-751c1",
     "public": "public",
     "rewrites": [
       {
