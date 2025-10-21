@@ -7,7 +7,7 @@ const vivliostyleConfig = {
   // readingProgression: 'rtl', // reading progression direction, 'ltr' or 'rtl'.
   // size: 'A4',
   // theme: '', // .css or local dir or npm package. default to undefined
-  image: "ghcr.io/vivliostyle/cli:8.0.0",
+  image: "ghcr.io/vivliostyle/cli:9.7.1",
   entry: [
     "./md/bundle.md",
     // "index.md",

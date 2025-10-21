@@ -3,6 +3,332 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.35.0](https://github.com/vivliostyle/vivliostyle.js/compare/v2.34.1...v2.35.0) (2025-09-18)
+
+### Bug Fixes
+
+- Fix accessibility problem in output PDF (failed to read aloud) ([b5a04a7](https://github.com/vivliostyle/vivliostyle.js/commit/b5a04a7a1e8756b5c94f725f1e784e51e8c9f8ec)), closes [#1555](https://github.com/vivliostyle/vivliostyle.js/issues/1555)
+- Fix margin-block-start ignored on block with forced page break after clearing a page float ([656891a](https://github.com/vivliostyle/vivliostyle.js/commit/656891a1d6e7d457b974d1931b63955f67b37633)), closes [#1557](https://github.com/vivliostyle/vivliostyle.js/issues/1557)
+- Top page float should not absorb margin/border/padding of the block below (Regression in v2.33.0) ([ba6f670](https://github.com/vivliostyle/vivliostyle.js/commit/ba6f6701aa88c9ad46b1a259c0ab48f981c5ba39)), closes [#1071](https://github.com/vivliostyle/vivliostyle.js/issues/1071) [#1075](https://github.com/vivliostyle/vivliostyle.js/issues/1075) [#1519](https://github.com/vivliostyle/vivliostyle.js/issues/1519)
+
+### Features
+
+- Support clear:left/right/inline-start/inline-end/both for page floats ([6b69026](https://github.com/vivliostyle/vivliostyle.js/commit/6b69026e1c908052442465c9804785e4d867e5b3)), closes [#1550](https://github.com/vivliostyle/vivliostyle.js/issues/1550) [#1549](https://github.com/vivliostyle/vivliostyle.js/issues/1549)
+- Support clear:page/column/region for clearing page floats ([9fa3341](https://github.com/vivliostyle/vivliostyle.js/commit/9fa3341e530a3eb65791f8d2d446ac12b2b9cce0)), closes [#1551](https://github.com/vivliostyle/vivliostyle.js/issues/1551)
+
+## [2.34.1](https://github.com/vivliostyle/vivliostyle.js/compare/v2.34.0...v2.34.1) (2025-08-11)
+
+### Bug Fixes
+
+- Fix broken internal links in output PDF (workaround for Chromium>=138 bug) ([526179c](https://github.com/vivliostyle/vivliostyle.js/commit/526179c203702b58000d871a317c7d47bafd0bf8)), closes [#1541](https://github.com/vivliostyle/vivliostyle.js/issues/1541)
+
+# [2.34.0](https://github.com/vivliostyle/vivliostyle.js/compare/v2.33.2...v2.34.0) (2025-08-01)
+
+### Bug Fixes
+
+- Fix incorrect positioning in page area with page padding ([ee4f59b](https://github.com/vivliostyle/vivliostyle.js/commit/ee4f59bfcf1cb6b1d538fe18bcf1c30f8e800331)), closes [#1447](https://github.com/vivliostyle/vivliostyle.js/issues/1447)
+- Fix page-margin box image size with `box-sizing: border-box` ([df65d6d](https://github.com/vivliostyle/vivliostyle.js/commit/df65d6db8c5fc1c4c7c763aa5761dd424e1e4ce1)), closes [#1535](https://github.com/vivliostyle/vivliostyle.js/issues/1535)
+- Fix page-margin boxes overlapping issue when center width is auto and left or right one is fixed ([2145a89](https://github.com/vivliostyle/vivliostyle.js/commit/2145a89f144da3ce6bcdff9a81ba5ef8fc0e41d2)), closes [#1538](https://github.com/vivliostyle/vivliostyle.js/issues/1538)
+
+### Features
+
+- Improve CSS properties support for page context and page-margin boxes ([341571a](https://github.com/vivliostyle/vivliostyle.js/commit/341571af37380da37e4e4e728983f666d5bdd7fd)), closes [#1473](https://github.com/vivliostyle/vivliostyle.js/issues/1473)
+- Support `fit-content` / `min-content` / `max-content` sizing values on page-margin boxes ([9633a1f](https://github.com/vivliostyle/vivliostyle.js/commit/9633a1f15d08260b20f0c64437ccee48e9c9bf96)), closes [#1520](https://github.com/vivliostyle/vivliostyle.js/issues/1520)
+- Support GitHub Gist URL with fragment as source file ([854f361](https://github.com/vivliostyle/vivliostyle.js/commit/854f36108f3de8f6365615482a9fbc565f90fda5))
+
+## [2.33.2](https://github.com/vivliostyle/vivliostyle.js/compare/v2.33.1...v2.33.2) (2025-06-30)
+
+### Bug Fixes
+
+- Fix margin-inline-start/end on at-page not working (Regression in v2.33.1) ([e868812](https://github.com/vivliostyle/vivliostyle.js/commit/e868812d0a644005ec44b4cbc21abb48a6e90c88)), closes [#1531](https://github.com/vivliostyle/vivliostyle.js/issues/1531) [#1530](https://github.com/vivliostyle/vivliostyle.js/issues/1530)
+
+## [2.33.1](https://github.com/vivliostyle/vivliostyle.js/compare/v2.33.0...v2.33.1) (2025-06-26)
+
+### Bug Fixes
+
+- Fix cascading between _-inside/outside and _-inline-start/end properties ([7fd5cfc](https://github.com/vivliostyle/vivliostyle.js/commit/7fd5cfc35bc3a52abdad9ef18f972b450b56b303)), closes [#1529](https://github.com/vivliostyle/vivliostyle.js/issues/1529)
+
+# [2.33.0](https://github.com/vivliostyle/vivliostyle.js/compare/v2.32.1...v2.33.0) (2025-06-25)
+
+### Bug Fixes
+
+- Fix EPUB footnote (epub:type="footnote") not working (Regression in v2.31.2) ([3190e39](https://github.com/vivliostyle/vivliostyle.js/commit/3190e391cd82a2e5950722beb5ad076b37c37db1)), closes [#1461](https://github.com/vivliostyle/vivliostyle.js/issues/1461) [#1521](https://github.com/vivliostyle/vivliostyle.js/issues/1521)
+- Fix Vivliostyle Viewer TOC links not working with data URL HTML ([8cb927f](https://github.com/vivliostyle/vivliostyle.js/commit/8cb927fffa3718be2cf869aae094a3aef6e8014c)), closes [#1496](https://github.com/vivliostyle/vivliostyle.js/issues/1496)
+- Prevent 404 error for META-INF/encryption.xml when EPUB OPF file is directly specified ([b56a03f](https://github.com/vivliostyle/vivliostyle.js/commit/b56a03ff207b8d16365ba76252ad7f75d6a0c34f)), closes [#1523](https://github.com/vivliostyle/vivliostyle.js/issues/1523)
+
+### Features
+
+- Add page spread inside/outside support for CSS margin, float, etc. properties ([3e7eb1c](https://github.com/vivliostyle/vivliostyle.js/commit/3e7eb1c1112c53fee60e33d1a6dac8dc08113e45)), closes [#1508](https://github.com/vivliostyle/vivliostyle.js/issues/1508)
+
+## [2.32.1](https://github.com/vivliostyle/vivliostyle.js/compare/v2.32.0...v2.32.1) (2025-06-10)
+
+### Bug Fixes
+
+- Avoid error in older browsers not supporting `:has()` selector ([b7f88fc](https://github.com/vivliostyle/vivliostyle.js/commit/b7f88fc6a820217562d732ae5ffd444382cf8e3e)), closes [#1509](https://github.com/vivliostyle/vivliostyle.js/issues/1509)
+- Fix :blank page selector misapplied to next page using target-counter() ([325cfba](https://github.com/vivliostyle/vivliostyle.js/commit/325cfbae9c473595185ac49f46acbeb433b2c3ef)), closes [#1513](https://github.com/vivliostyle/vivliostyle.js/issues/1513)
+- Set print-color-adjust:exact to avoid background graphics from being removed ([3d736a3](https://github.com/vivliostyle/vivliostyle.js/commit/3d736a395e4e2a344091a51e91fde2fccb6532d7))
+
+# [2.32.0](https://github.com/vivliostyle/vivliostyle.js/compare/v2.31.2...v2.32.0) (2025-05-08)
+
+### Bug Fixes
+
+- Do not ignore prefixed CSS properties such as -webkit-line-clamp ([fdf4290](https://github.com/vivliostyle/vivliostyle.js/commit/fdf4290f0d84aa130302e3421d34ed07eb78b924)), closes [#1489](https://github.com/vivliostyle/vivliostyle.js/issues/1489)
+- Fix table fragmentation problem overflowing page area ([79b8689](https://github.com/vivliostyle/vivliostyle.js/commit/79b8689a7e229d3421dba256e3703b859077aaa6)), closes [#1475](https://github.com/vivliostyle/vivliostyle.js/issues/1475)
+- **viewer:** Do not remove console output in vivliostyle-viewer.js ([216181a](https://github.com/vivliostyle/vivliostyle.js/commit/216181acb4f85b18d565306fcbd36549ab5589ae))
+
+### Features
+
+- Add crop-marks-line-color property for at-page rule ([ced404a](https://github.com/vivliostyle/vivliostyle.js/commit/ced404a99a7f1e4766e7e740b1f3327083d71dd1)), closes [#1502](https://github.com/vivliostyle/vivliostyle.js/issues/1502)
+- Support CSS font descriptors: size-adjust, ascent-override, etc. ([2b024e8](https://github.com/vivliostyle/vivliostyle.js/commit/2b024e80dd5649e1e0aaaade8d0eacf802aa2dc2)), closes [#1478](https://github.com/vivliostyle/vivliostyle.js/issues/1478) [#1484](https://github.com/vivliostyle/vivliostyle.js/issues/1484)
+
+## [2.31.2](https://github.com/vivliostyle/vivliostyle.js/compare/v2.31.1...v2.31.2) (2025-04-07)
+
+### Bug Fixes
+
+- Error with `@-epubx-page-master { writing-mode: vertical-rl; … }` ([64d8180](https://github.com/vivliostyle/vivliostyle.js/commit/64d818004de50f14789040b9e10ad10c4bf59c71)), closes [#1470](https://github.com/vivliostyle/vivliostyle.js/issues/1470)
+- Fix multi-column balancing ([b947545](https://github.com/vivliostyle/vivliostyle.js/commit/b947545efa3b2b7ffde7ceef7a67405b23b6486e)), closes [#1451](https://github.com/vivliostyle/vivliostyle.js/issues/1451)
+- Fix table layout bugs on page/column break inside rowspanning cells ([d7dc893](https://github.com/vivliostyle/vivliostyle.js/commit/d7dc893bd9a49bad99e3172f5b2dad99b1cf85f4)), closes [#1458](https://github.com/vivliostyle/vivliostyle.js/issues/1458)
+- Fix table layout problem with table-cells across pages ([ec4ad5a](https://github.com/vivliostyle/vivliostyle.js/commit/ec4ad5aacbc08a77ba8411b9f798e538b44e310d)), closes [#980](https://github.com/vivliostyle/vivliostyle.js/issues/980)
+- Prevent wrong break at span with horizontal writing mode in vertical writing mode ([9e9123d](https://github.com/vivliostyle/vivliostyle.js/commit/9e9123ddb72d4919c3c34475d52462e2c46cf0f1)), closes [#1459](https://github.com/vivliostyle/vivliostyle.js/issues/1459)
+- Replace XMLHttpRequest with fetch API ([7fb4a3d](https://github.com/vivliostyle/vivliostyle.js/commit/7fb4a3d8350a07c5e94c40a807a86b21a3987c2e))
+
+## [2.31.1](https://github.com/vivliostyle/vivliostyle.js/compare/v2.31.0...v2.31.1) (2025-03-01)
+
+### Bug Fixes
+
+- Do not remove table top border with thead and bottom border with tfoot at page break ([02507b9](https://github.com/vivliostyle/vivliostyle.js/commit/02507b9dafacda7b7e62beee11c496c72597c5e9))
+- Fix `break-inside: avoid` ignored in table cells ([cf3d911](https://github.com/vivliostyle/vivliostyle.js/commit/cf3d91189c2f0dcca24c35506bd3a6d920fb2bb1)), closes [#1452](https://github.com/vivliostyle/vivliostyle.js/issues/1452)
+- Fix auto spread view behavior when page size changes ([0fef05e](https://github.com/vivliostyle/vivliostyle.js/commit/0fef05e7a18ed94650f987c999a26b646b077707))
+- Fix incorrect column balancing in vertical writing mode ([520d8df](https://github.com/vivliostyle/vivliostyle.js/commit/520d8df2c9f2035f62b0e51f10a8dd02f4152baa)), closes [#1451](https://github.com/vivliostyle/vivliostyle.js/issues/1451)
+- Fix named page not applied after a spread break ([a71699a](https://github.com/vivliostyle/vivliostyle.js/commit/a71699a2e09226c05f9720f3c75b802cca6d0663)), closes [#1450](https://github.com/vivliostyle/vivliostyle.js/issues/1450)
+
+# [2.31.0](https://github.com/vivliostyle/vivliostyle.js/compare/v2.30.8...v2.31.0) (2025-01-17)
+
+### Features
+
+- Support extended CSS Page float values such as `float: top right` ([8f8b0cc](https://github.com/vivliostyle/vivliostyle.js/commit/8f8b0cc56cd787bc13e5f014839480c7b95512ce)), closes [#543](https://github.com/vivliostyle/vivliostyle.js/issues/543)
+- support logical values for CSS clear property ([f9751ba](https://github.com/vivliostyle/vivliostyle.js/commit/f9751ba980ef8945102b1f26c4cc90fbd6e331ab))
+
+## [2.30.8](https://github.com/vivliostyle/vivliostyle.js/compare/v2.30.7...v2.30.8) (2025-01-10)
+
+### Bug Fixes
+
+- fix broken table layout when table row has id attribute ([63b91aa](https://github.com/vivliostyle/vivliostyle.js/commit/63b91aa6c889bca1658f571f81f75960932f292f)), closes [#1439](https://github.com/vivliostyle/vivliostyle.js/issues/1439)
+- fix calc() not working for unitless values ([91bbadc](https://github.com/vivliostyle/vivliostyle.js/commit/91bbadcf4e07c3615a05b4d8e99f99f905de44db)), closes [#1442](https://github.com/vivliostyle/vivliostyle.js/issues/1442)
+- fix named page not applied at first page with running element ([7102c4b](https://github.com/vivliostyle/vivliostyle.js/commit/7102c4b0a5c2773f3d5c5f2fe86317dc2e2b325d)), closes [#1405](https://github.com/vivliostyle/vivliostyle.js/issues/1405)
+- fix wrong cascading with -webkit-box-sizing and box-sizing ([5c9b401](https://github.com/vivliostyle/vivliostyle.js/commit/5c9b401c8992b222fa7768f17af3d3d33fe48b92)), closes [#1427](https://github.com/vivliostyle/vivliostyle.js/issues/1427)
+- prevent running elements and absolutely positioned elements from being broken ([651065e](https://github.com/vivliostyle/vivliostyle.js/commit/651065ef4950d294a1ab769bdd51f0c41216a0ee)), closes [#1430](https://github.com/vivliostyle/vivliostyle.js/issues/1430)
+- prevent wrong page/column break at ruby ([25ab417](https://github.com/vivliostyle/vivliostyle.js/commit/25ab417af055ccb744e07ebaf74d7f68bd66ef29)), closes [#1401](https://github.com/vivliostyle/vivliostyle.js/issues/1401)
+- Table cell with rowspan may disappear after page break ([690b3de](https://github.com/vivliostyle/vivliostyle.js/commit/690b3deb08c3302adf17ff2843ddae83b798dff3)), closes [#1403](https://github.com/vivliostyle/vivliostyle.js/issues/1403)
+- Text-decoration-line should not be skipped at space inserted by text-spacing ([ea465b6](https://github.com/vivliostyle/vivliostyle.js/commit/ea465b615be748d3a671fc85058b558f6afd114e)), closes [#1061](https://github.com/vivliostyle/vivliostyle.js/issues/1061)
+
+## [2.30.7](https://github.com/vivliostyle/vivliostyle.js/compare/v2.30.6...v2.30.7) (2024-11-27)
+
+### Bug Fixes
+
+- Float box may appear twice at page break (Regression in v2.30.5) ([4d7caa5](https://github.com/vivliostyle/vivliostyle.js/commit/4d7caa5b6fe783e7fe58a391b7d5df9d81344e96)), closes [#1422](https://github.com/vivliostyle/vivliostyle.js/issues/1422)
+- prevent breaking inside SVG ([f58e457](https://github.com/vivliostyle/vivliostyle.js/commit/f58e4570d666300e03c6627408b327ed1929e5d8)), closes [#1406](https://github.com/vivliostyle/vivliostyle.js/issues/1406)
+- prevent wrong break at beginning of paragraph ([3cfca03](https://github.com/vivliostyle/vivliostyle.js/commit/3cfca030b428d74f984621942b9177ad4c8ee1cc)), closes [#1401](https://github.com/vivliostyle/vivliostyle.js/issues/1401)
+
+## [2.30.6](https://github.com/vivliostyle/vivliostyle.js/compare/v2.30.5...v2.30.6) (2024-11-17)
+
+### Bug Fixes
+
+- Broken text layout at page break when ruby-text font size is larger than usual ([2bb4d0e](https://github.com/vivliostyle/vivliostyle.js/commit/2bb4d0e2343734421f5082849e692d17846b4eee)), closes [#1401](https://github.com/vivliostyle/vivliostyle.js/issues/1401)
+- Broken text layout at page/column break caused by inline SVG ([ecb01ef](https://github.com/vivliostyle/vivliostyle.js/commit/ecb01efed0e75499b3c6dd2e6abae6be46e96ab6)), closes [#1406](https://github.com/vivliostyle/vivliostyle.js/issues/1406)
+- error in react/storybook ([7e947f9](https://github.com/vivliostyle/vivliostyle.js/commit/7e947f9b00a554c1d2b209ddd5077f047e2d2523)), closes [#1419](https://github.com/vivliostyle/vivliostyle.js/issues/1419)
+- Improve epub:noteref/footnote support ([6c894e7](https://github.com/vivliostyle/vivliostyle.js/commit/6c894e75b27c19578e0ccd03d591ba93c0629fe9)), closes [sample.xhtml#fn1](https://github.com/sample.xhtml/issues/fn1)
+- Make Arabic letters look connected before and after break at soft hyphen ([03bc5ea](https://github.com/vivliostyle/vivliostyle.js/commit/03bc5ea3c5467b27de7ca0a76721ae845415e308)), closes [#1414](https://github.com/vivliostyle/vivliostyle.js/issues/1414)
+- text-autospace should not put space glyph in PDF ([bc3346f](https://github.com/vivliostyle/vivliostyle.js/commit/bc3346fd49f9b73ff760aa096c8bd88f04e78477)), closes [#1411](https://github.com/vivliostyle/vivliostyle.js/issues/1411)
+
+## [2.30.5](https://github.com/vivliostyle/vivliostyle.js/compare/v2.30.4...v2.30.5) (2024-10-20)
+
+### Bug Fixes
+
+- "Failed to parse stylesheet" warning (Firefox and Safari) ([0b57769](https://github.com/vivliostyle/vivliostyle.js/commit/0b57769eba89705611b1cf0a5463fb366cc75a73))
+- CSS counter-increment and counter-reset should be ignored for elements with `display: none` ([5ed23e8](https://github.com/vivliostyle/vivliostyle.js/commit/5ed23e869f98417aafe1593bb34ad6a0afca3520)), closes [#1385](https://github.com/vivliostyle/vivliostyle.js/issues/1385)
+- CSS counter-reset scoping problem ([100c101](https://github.com/vivliostyle/vivliostyle.js/commit/100c101e1a62728e62202aff1a797e2adc9ab729)), closes [#1389](https://github.com/vivliostyle/vivliostyle.js/issues/1389)
+- CSS direction property ignored on margin boxes ([61719eb](https://github.com/vivliostyle/vivliostyle.js/commit/61719eb4b540362ddc80469f32f88a2379752c4f)), closes [#1393](https://github.com/vivliostyle/vivliostyle.js/issues/1393)
+- CSS implicit list-item counter ([56941e5](https://github.com/vivliostyle/vivliostyle.js/commit/56941e5f7706ec68639c711e55a961b168a00115)), closes [#1391](https://github.com/vivliostyle/vivliostyle.js/issues/1391)
+- Float box inside inline element disappeared at page break ([6805ff9](https://github.com/vivliostyle/vivliostyle.js/commit/6805ff992c128f0beadbb1c4f11fcc2d8a3a0660)), closes [#1383](https://github.com/vivliostyle/vivliostyle.js/issues/1383)
+- Prevent "A network error occurred." in console when using web fonts ([5cd0afc](https://github.com/vivliostyle/vivliostyle.js/commit/5cd0afca5d09257a9ab6cb613dfd85ecd38b66c9))
+- **viewer:** Deprecated meta tag "apple-mobile-web-app-capable" ([d1a23a4](https://github.com/vivliostyle/vivliostyle.js/commit/d1a23a4262b6235be44b0ebf49313deedc1402b4))
+- writing-mode on `@page` not inherited properly to margin boxes ([c5f8eb9](https://github.com/vivliostyle/vivliostyle.js/commit/c5f8eb90cd6dc741c540b9703658da42e4a47969)), closes [#1392](https://github.com/vivliostyle/vivliostyle.js/issues/1392)
+- Wrong processing order of counter-set and counter-increment ([d1ca8cd](https://github.com/vivliostyle/vivliostyle.js/commit/d1ca8cd9645ac3c6a958c278bbb3d05fdf2662fe)), closes [#1390](https://github.com/vivliostyle/vivliostyle.js/issues/1390)
+
+## [2.30.4](https://github.com/vivliostyle/vivliostyle.js/compare/v2.30.3...v2.30.4) (2024-08-20)
+
+### Bug Fixes
+
+- Chromium's standard CSS zoom support check ([469c2e8](https://github.com/vivliostyle/vivliostyle.js/commit/469c2e8052e8c680be554429a44d276ece3a6fe1))
+
+## [2.30.3](https://github.com/vivliostyle/vivliostyle.js/compare/v2.30.2...v2.30.3) (2024-08-19)
+
+### Bug Fixes
+
+- Viewer page display size is abnormally reduced and layout is broken with Chrome 128 ([cd4f25e](https://github.com/vivliostyle/vivliostyle.js/commit/cd4f25e8e70446f3bfb588f5b679d12600ef763b)), closes [#1370](https://github.com/vivliostyle/vivliostyle.js/issues/1370)
+
+## [2.30.2](https://github.com/vivliostyle/vivliostyle.js/compare/v2.30.1...v2.30.2) (2024-07-21)
+
+### Bug Fixes
+
+- `-adapt-template: footnote` should work for "user-agent.xml#footnote" ([2b2aa83](https://github.com/vivliostyle/vivliostyle.js/commit/2b2aa835ea6ac49bf3c7e327f6edb92f132213a1))
+- `epub:type="footnote"` on non-`aside` element should not cause footnote layout ([1f21f56](https://github.com/vivliostyle/vivliostyle.js/commit/1f21f56eea9fcf3f498444cc866d639496e6c35a)), closes [#1363](https://github.com/vivliostyle/vivliostyle.js/issues/1363)
+- Attribute selectors with wildcard namespace not worked ([b7c45f7](https://github.com/vivliostyle/vivliostyle.js/commit/b7c45f7e39010a1f1dc1895de8787b5f7de4a90d))
+- Browser-native MathML should be enabled when MathJax is not loaded ([c1a760e](https://github.com/vivliostyle/vivliostyle.js/commit/c1a760e30db8d0e54bdb49923bd3e99367e985ab))
+- Flexbox not working on page floats (Regression in v2.28.0) ([eb4b6e1](https://github.com/vivliostyle/vivliostyle.js/commit/eb4b6e12bad0c76fbdba0e5c7e82df040e24052b)), closes [#1354](https://github.com/vivliostyle/vivliostyle.js/issues/1354)
+- unsupported nested media rule causes subsequent rules to fail ([6098105](https://github.com/vivliostyle/vivliostyle.js/commit/6098105b2b386ad0dc70b533bc2bbada9f783016)), closes [#1360](https://github.com/vivliostyle/vivliostyle.js/issues/1360)
+
+## [2.30.1](https://github.com/vivliostyle/vivliostyle.js/compare/v2.30.0...v2.30.1) (2024-06-14)
+
+### Bug Fixes
+
+- InvalidNodeTypeError may happen during table pagination (Regression in v2.30.0) ([9c1db41](https://github.com/vivliostyle/vivliostyle.js/commit/9c1db4118be43b8c0b6b26bce26e1482049dea8b)), closes [#1345](https://github.com/vivliostyle/vivliostyle.js/issues/1345)
+
+# [2.30.0](https://github.com/vivliostyle/vivliostyle.js/compare/v2.29.0...v2.30.0) (2024-06-04)
+
+### Bug Fixes
+
+- Images with percentage height cause page overflow ([f5192f7](https://github.com/vivliostyle/vivliostyle.js/commit/f5192f7fbb7cbaa3f7efe9d6891cd222c5a5955f)), closes [#1335](https://github.com/vivliostyle/vivliostyle.js/issues/1335)
+- Images with width and height specified causes page overflow ([abb8f78](https://github.com/vivliostyle/vivliostyle.js/commit/abb8f78b8ea703119a9edbf70ed5f926fa3d744d)), closes [#1343](https://github.com/vivliostyle/vivliostyle.js/issues/1343)
+- Images with width and height specified may dissapear in print ([985095f](https://github.com/vivliostyle/vivliostyle.js/commit/985095f4ca84fadf8d5f484685f0f78af3f3fdd0)), closes [#1321](https://github.com/vivliostyle/vivliostyle.js/issues/1321)
+- internal use of `class="table-cell-container"` may conflict with author/user's use ([83c443e](https://github.com/vivliostyle/vivliostyle.js/commit/83c443e1085076652e5d22c5184f32823097bb70))
+- Page breaks not made between some inline elements such as images ([4380055](https://github.com/vivliostyle/vivliostyle.js/commit/438005535c2778d0116666335bbeb15dafbdbbd4)), closes [#1319](https://github.com/vivliostyle/vivliostyle.js/issues/1319) [#1051](https://github.com/vivliostyle/vivliostyle.js/issues/1051)
+- running element page counter incorrect ([#1327](https://github.com/vivliostyle/vivliostyle.js/issues/1327)) ([8c390b8](https://github.com/vivliostyle/vivliostyle.js/commit/8c390b8b1690d1ecbe4d72cb775085c96929b7d6)), closes [#1325](https://github.com/vivliostyle/vivliostyle.js/issues/1325)
+- table pagination problem ([09e472d](https://github.com/vivliostyle/vivliostyle.js/commit/09e472dc7768e10c798ac0c6db8e8d9b25b0c426)), closes [#1326](https://github.com/vivliostyle/vivliostyle.js/issues/1326)
+- The windows environment failed to yarn dev ([#1337](https://github.com/vivliostyle/vivliostyle.js/issues/1337)) ([20fee03](https://github.com/vivliostyle/vivliostyle.js/commit/20fee03dd00c1be0898671c9fef94eb7260751ee))
+- TypeError occurs when `:has(+ …)` is used with universal or root selector ([d124d62](https://github.com/vivliostyle/vivliostyle.js/commit/d124d62d2117b16d831eba97abc92707f7b07d7e)), closes [#1341](https://github.com/vivliostyle/vivliostyle.js/issues/1341)
+
+### Features
+
+- add i18n zh_cn ([79b4d06](https://github.com/vivliostyle/vivliostyle.js/commit/79b4d06ab8c1a25a4e8a097ed3b618bf23dee46c))
+- **i18n:zh_CN:** add Chinese translation ([b20e712](https://github.com/vivliostyle/vivliostyle.js/commit/b20e712f99498871b0c7380f2579fd6089e7fe49))
+- **viewer:** UI Chinese language support (zh-Hans, zh-Hant) ([29dc959](https://github.com/vivliostyle/vivliostyle.js/commit/29dc959e8db34816a46dacd6e2e81c1b07e6b645))
+
+# [2.29.0](https://github.com/vivliostyle/vivliostyle.js/compare/v2.28.1...v2.29.0) (2024-05-03)
+
+### Bug Fixes
+
+- CSS font descriptors wrongly validated as font properties ([44f63fa](https://github.com/vivliostyle/vivliostyle.js/commit/44f63fa68aa3feec7afaa9cc44cf5c7dcc09d1a2)), closes [#1307](https://github.com/vivliostyle/vivliostyle.js/issues/1307)
+- layout precision problem on float boxes ([a561a32](https://github.com/vivliostyle/vivliostyle.js/commit/a561a320a191b135e8868bc063f2ebd2ca4f7092)), closes [#1312](https://github.com/vivliostyle/vivliostyle.js/issues/1312)
+- Named page wrongly applied to blank pages ([07b6a24](https://github.com/vivliostyle/vivliostyle.js/commit/07b6a24d6be084314511cea8c065eca0cca4be5a)), closes [#1309](https://github.com/vivliostyle/vivliostyle.js/issues/1309)
+- text-spacing-trim may not work properly between different font sizes ([2fd345d](https://github.com/vivliostyle/vivliostyle.js/commit/2fd345d05634352074241ff79db7ad78161ca8f6)), closes [#1302](https://github.com/vivliostyle/vivliostyle.js/issues/1302)
+- Unnecessary page break at footnote or page bottom float ([6e4e367](https://github.com/vivliostyle/vivliostyle.js/commit/6e4e3673077ed4f8d4d881387193e70d8d006fe3)), closes [#1311](https://github.com/vivliostyle/vivliostyle.js/issues/1311)
+- Wrong handling of shorthand properties with variables in conditional rules ([a26d179](https://github.com/vivliostyle/vivliostyle.js/commit/a26d179b27de4a954f72b07530d18e3e409c8e26)), closes [#1313](https://github.com/vivliostyle/vivliostyle.js/issues/1313)
+
+### Features
+
+- Update CSS text-spacing-trim support: Rename trim-auto to trim-both ([83ca0c7](https://github.com/vivliostyle/vivliostyle.js/commit/83ca0c76a25a139e37829748923b3f589e8a9a25)), closes [#1305](https://github.com/vivliostyle/vivliostyle.js/issues/1305)
+
+## [2.28.1](https://github.com/vivliostyle/vivliostyle.js/compare/v2.28.0...v2.28.1) (2024-03-12)
+
+### Bug Fixes
+
+- Footnote causes layout problem on page breaking ([aa22bbd](https://github.com/vivliostyle/vivliostyle.js/commit/aa22bbdc321b5b1903c0d4748de7df3ab00bd790)), closes [#1298](https://github.com/vivliostyle/vivliostyle.js/issues/1298)
+
+# [2.28.0](https://github.com/vivliostyle/vivliostyle.js/compare/v2.27.0...v2.28.0) (2024-03-03)
+
+### Bug Fixes
+
+- adjust TOC box width to account for scrollbar width ([47e5d5b](https://github.com/vivliostyle/vivliostyle.js/commit/47e5d5b8832f1c2b8aea8f7ae60e69cef31a94d6))
+- All `<nav epub:type="…">` elements in EPUB navigation doc should be shown in TOC box ([d31010f](https://github.com/vivliostyle/vivliostyle.js/commit/d31010f28f775bd5415b78300fb68f835c7c06f8)), closes [#1270](https://github.com/vivliostyle/vivliostyle.js/issues/1270)
+- blank page selector misapplied when target-counter is used ([40a760b](https://github.com/vivliostyle/vivliostyle.js/commit/40a760bb1ce90a71afc7d47481ac8cc7c4f6ff43)), closes [#1131](https://github.com/vivliostyle/vivliostyle.js/issues/1131)
+- break-before specified on floats may not work ([06890fe](https://github.com/vivliostyle/vivliostyle.js/commit/06890fef89aa00fd39333d7f4d26ee794dfbac75)), closes [#1288](https://github.com/vivliostyle/vivliostyle.js/issues/1288)
+- Column floats disappear ([52ede7d](https://github.com/vivliostyle/vivliostyle.js/commit/52ede7d85e270e899e8aa137686a3c3a90ba57ea)), closes [#1273](https://github.com/vivliostyle/vivliostyle.js/issues/1273)
+- Float box pushed out of the page area ([7e86951](https://github.com/vivliostyle/vivliostyle.js/commit/7e869519da420a44098bd7295708937ca6e6dbe7)), closes [#1295](https://github.com/vivliostyle/vivliostyle.js/issues/1295)
+- float margins collapsed wrongly ([03121f2](https://github.com/vivliostyle/vivliostyle.js/commit/03121f2275f258336031dfb56b49127c2639fa4f)), closes [#1282](https://github.com/vivliostyle/vivliostyle.js/issues/1282)
+- remove old EPUB NCX handling ([56ca0ed](https://github.com/vivliostyle/vivliostyle.js/commit/56ca0edc09cace813b40ce8bee3b968fb3907758))
+- set overflow property of `@-epubx-partition` to hidden by default ([c196685](https://github.com/vivliostyle/vivliostyle.js/commit/c196685b04615bf4e92a8d924e388325457fa510)), closes [/idpf.org/epub/pgt/#s3](https://github.com//idpf.org/epub/pgt//issues/s3)
+- target-counter leads to pagination to wrong named page ([980632d](https://github.com/vivliostyle/vivliostyle.js/commit/980632d0fedc89a2ffb1c265c371bb576a6435c0)), closes [#1272](https://github.com/vivliostyle/vivliostyle.js/issues/1272)
+- Top margin at unforced page break not truncated correctly ([97779f3](https://github.com/vivliostyle/vivliostyle.js/commit/97779f3d43149a4b31c1b189da0c60a0aec19084)), closes [#1279](https://github.com/vivliostyle/vivliostyle.js/issues/1279)
+- Top margin of floats at page start should be kept ([6c1fb7f](https://github.com/vivliostyle/vivliostyle.js/commit/6c1fb7f65320dfca76cf19d867e3b2083784ac9b)), closes [#1292](https://github.com/vivliostyle/vivliostyle.js/issues/1292)
+- TypeError occurs on repeating_elements/nesting test ([819e1fd](https://github.com/vivliostyle/vivliostyle.js/commit/819e1fd84ad4d1c4fde151606e09db74027bdea0))
+
+### Features
+
+- Add errorCallback config option to VivliostylePrint/printHTML() ([9602d61](https://github.com/vivliostyle/vivliostyle.js/commit/9602d61240060c846cf45818c26dea748b2b654c))
+
+# [2.27.0](https://github.com/vivliostyle/vivliostyle.js/compare/v2.26.0...v2.27.0) (2024-02-09)
+
+### Bug Fixes
+
+- HTML documents listed in "resources" in pub-manifest should not be rendered as if in "readingOrder" ([0bbbd48](https://github.com/vivliostyle/vivliostyle.js/commit/0bbbd48337afe8d415cd70e106577b5a005dc210)), closes [#1257](https://github.com/vivliostyle/vivliostyle.js/issues/1257)
+- remove ruby font-size workaround no longer necessary ([3138fda](https://github.com/vivliostyle/vivliostyle.js/commit/3138fdaefc8407f30dce3ab260fad816509d39de))
+- text-spacing not working properly with text-spacing natively enabled browser ([42e16f4](https://github.com/vivliostyle/vivliostyle.js/commit/42e16f4ce65a8a2d9f518dbcd65078fecc85ddd8)), closes [#1252](https://github.com/vivliostyle/vivliostyle.js/issues/1252)
+- text-spacing-trim:space-first not working properly in some case ([398b53e](https://github.com/vivliostyle/vivliostyle.js/commit/398b53eed8b7bc1f59fc14c0dab14c67e82b7f4a)), closes [#1261](https://github.com/vivliostyle/vivliostyle.js/issues/1261)
+- TOC box should contain only the TOC element content ([754a70c](https://github.com/vivliostyle/vivliostyle.js/commit/754a70cb9d5da9b746d69e6129a19dd0b4cc880f)), closes [#1258](https://github.com/vivliostyle/vivliostyle.js/issues/1258)
+- Units vi and vb are mishandled when writing-mode is different from the root element ([286cc1e](https://github.com/vivliostyle/vivliostyle.js/commit/286cc1e8e654b3752979fba64976ab8634856577)), closes [#1265](https://github.com/vivliostyle/vivliostyle.js/issues/1265)
+- vertical-in-horizontal block height and horizontal-in-vertical block width not computed properly ([0f7d45e](https://github.com/vivliostyle/vivliostyle.js/commit/0f7d45e1a62be4c144d7b5cff9878fe0d7316ec3)), closes [#1264](https://github.com/vivliostyle/vivliostyle.js/issues/1264)
+- Viewer page navigation hangs with EPUB/webpub with undetermined page-progression-direction ([a7f5572](https://github.com/vivliostyle/vivliostyle.js/commit/a7f557239a871484cef29fe7dbf1355ee14d75eb)), closes [#1260](https://github.com/vivliostyle/vivliostyle.js/issues/1260)
+
+### Features
+
+- Update CSS user agent default style sheet ([b0993a0](https://github.com/vivliostyle/vivliostyle.js/commit/b0993a053aff91fc8220b3b8a4079ad9f8ee3383)), closes [#1128](https://github.com/vivliostyle/vivliostyle.js/issues/1128)
+
+# [2.26.0](https://github.com/vivliostyle/vivliostyle.js/compare/v2.25.9...v2.26.0) (2024-01-20)
+
+### Bug Fixes
+
+- set hanging-punctuation:none for pre-formatted text default style ([52d50c9](https://github.com/vivliostyle/vivliostyle.js/commit/52d50c95c05611c296839a7939204034b4ef8d52))
+- text-spacing-trim not working properly in some cases ([99b3af3](https://github.com/vivliostyle/vivliostyle.js/commit/99b3af3d78aba1491bc87d40ef6a8343aa901af9)), closes [#1251](https://github.com/vivliostyle/vivliostyle.js/issues/1251)
+
+### Features
+
+- Update CSS text-spacing-trim property to support the latest spec change ([114fd6d](https://github.com/vivliostyle/vivliostyle.js/commit/114fd6ded949e029ff3802ad758df88b29efd693)), closes [#1244](https://github.com/vivliostyle/vivliostyle.js/issues/1244)
+
+## [2.25.9](https://github.com/vivliostyle/vivliostyle.js/compare/v2.25.8...v2.25.9) (2023-12-04)
+
+### Bug Fixes
+
+- page breaking inside table with table-header may cause unexpected page type reset ([7865dea](https://github.com/vivliostyle/vivliostyle.js/commit/7865deae5bcd751d9d2f65e8847ae8f0eef46fcb)), closes [#1233](https://github.com/vivliostyle/vivliostyle.js/issues/1233)
+- page-area content may disappear on print ([2f2f85a](https://github.com/vivliostyle/vivliostyle.js/commit/2f2f85af8c9c983468a50a9ec67a39052bb23f6a)), closes [#1240](https://github.com/vivliostyle/vivliostyle.js/issues/1240)
+
+## [2.25.8](https://github.com/vivliostyle/vivliostyle.js/compare/v2.25.7...v2.25.8) (2023-11-06)
+
+### Bug Fixes
+
+- page breaking inside table may cause unexpected page type reset ([59929ea](https://github.com/vivliostyle/vivliostyle.js/commit/59929eaab71c9c560696c41ed5f09dcdd4254893)), closes [#1233](https://github.com/vivliostyle/vivliostyle.js/issues/1233)
+
+## [2.25.7](https://github.com/vivliostyle/vivliostyle.js/compare/v2.25.6...v2.25.7) (2023-10-24)
+
+### Bug Fixes
+
+- Pagination result depends on viewer window width ([7980721](https://github.com/vivliostyle/vivliostyle.js/commit/79807214799d2e08a20ac057b8d83a5886a535bf)), closes [#1228](https://github.com/vivliostyle/vivliostyle.js/issues/1228)
+
+## [2.25.6](https://github.com/vivliostyle/vivliostyle.js/compare/v2.25.5...v2.25.6) (2023-10-03)
+
+### Bug Fixes
+
+- **viewer:** Current page should be kept after Find results in "Not Found" ([fb28b64](https://github.com/vivliostyle/vivliostyle.js/commit/fb28b647ecd881b06052895e49b1383d288012d8))
+- **viewer:** Exclude generated page margin box content from text search ([ea8a447](https://github.com/vivliostyle/vivliostyle.js/commit/ea8a447f2ce6733c61fab3f072ab3f24179f371c))
+- **viewer:** Navigation with page slider should not affect browser history stack ([7b3f117](https://github.com/vivliostyle/vivliostyle.js/commit/7b3f1178d7d241395b53ba5cb8730d66dcbebdce)), closes [#1219](https://github.com/vivliostyle/vivliostyle.js/issues/1219)
+- **viewer:** selection highlighting problems on iOS ([abb3ee2](https://github.com/vivliostyle/vivliostyle.js/commit/abb3ee276652886847d9a8f657e7820c6c948de7))
+- **viewer:** tweak viewer UI for mobile devices ([167adee](https://github.com/vivliostyle/vivliostyle.js/commit/167adee3b2afef41776c17bcc542f17498739bab))
+- **viewer:** tweak viewer UI style for mobile devices ([f6ef23b](https://github.com/vivliostyle/vivliostyle.js/commit/f6ef23b31cd45ec911d3ff9d7f680e69090650eb))
+
+## [2.25.5](https://github.com/vivliostyle/vivliostyle.js/compare/v2.25.4...v2.25.5) (2023-08-09)
+
+### Bug Fixes
+
+- negative page margin values not working as expected ([3f352d2](https://github.com/vivliostyle/vivliostyle.js/commit/3f352d2007fbb0dbbf19cea7735f92880098a506)), closes [#1217](https://github.com/vivliostyle/vivliostyle.js/issues/1217)
+- TOC box disappeared when resizing window ([115205f](https://github.com/vivliostyle/vivliostyle.js/commit/115205f5b936d3ed045991802f1ac19f3c767e12))
+
+## [2.25.4](https://github.com/vivliostyle/vivliostyle.js/compare/v2.25.3...v2.25.4) (2023-07-28)
+
+### Bug Fixes
+
+- **viewer:** Page navigation left/right buttons disappeared in v2.25.3 ([294e085](https://github.com/vivliostyle/vivliostyle.js/commit/294e08555dfbf67b5e37ab559595f534eb746e3e)), closes [#1214](https://github.com/vivliostyle/vivliostyle.js/issues/1214)
+
+## [2.25.3](https://github.com/vivliostyle/vivliostyle.js/compare/v2.25.2...v2.25.3) (2023-07-24)
+
+### Bug Fixes
+
+- EPUB font deobfuscation not working ([2bbd58b](https://github.com/vivliostyle/vivliostyle.js/commit/2bbd58b84bbfca48dcb482aaa4174c0734ed8a48))
+- Failed to load when publication manifest has stylesheet URL without extension ([5e092c4](https://github.com/vivliostyle/vivliostyle.js/commit/5e092c4a531730092bc36875b4553a1436601c28)), closes [#1207](https://github.com/vivliostyle/vivliostyle.js/issues/1207)
+- Numbered list counts go wrong when footnote-related pseudo-elements exist ([871bef7](https://github.com/vivliostyle/vivliostyle.js/commit/871bef7724006236488bbf2af5edfd68bbdefcf5)), closes [#1200](https://github.com/vivliostyle/vivliostyle.js/issues/1200)
+- **viewer:** Unexpected scrollbar appears when loading W3C documents ([e96f6f0](https://github.com/vivliostyle/vivliostyle.js/commit/e96f6f00e549471f89caf75d5cf4ff73068b3376))
+- wrong URL resolution when baseURL has no file name extension ([776791f](https://github.com/vivliostyle/vivliostyle.js/commit/776791ff509cadcd76de491157e8bed59cda364e)), closes [#1211](https://github.com/vivliostyle/vivliostyle.js/issues/1211)
+
 ## [2.25.2](https://github.com/vivliostyle/vivliostyle.js/compare/v2.25.1...v2.25.2) (2023-06-22)
 
 ### Bug Fixes
