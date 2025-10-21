@@ -6,3 +6,6 @@ npm run build-pug で dist に成果物が作成される。
 
 目次の関係で、複数ページをまとめる必要がある。
 npm run bundle で複数ページを 1 枚にしている。md/bundle.md が成果物。
+
+app/public/vivliostyle-viewer-latest は https://vivliostyle.github.io/ からダウンロードしたものを展開し、
+app/public/vivliostyle-viewer-latest/samples/lostにLOSTRPGのファイルを設定している。
