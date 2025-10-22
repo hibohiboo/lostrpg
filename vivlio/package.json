@@ -17,7 +17,7 @@
   "author": "hibo",
   "license": "MIT",
   "devDependencies": {
-    "@vivliostyle/cli": "^9.7.1",
+    "@vivliostyle/cli": "^9.7.2",
     "pug": "^3.0.3",
     "pug-cli": "^1.0.0-alpha6"
   }
