@@ -1,0 +1,22 @@
+include ../includes/var
+
+each item in abilityList[10].list
+  div.ability-card
+    div.card-title
+      div
+        img(src="../assets/images/icon/shokunin.svg")
+      div=item.name
+    div.row
+      div.tag
+        div タイプ
+        div=item.type
+      div.tag
+        div 反動
+        div=item.recoil
+      div.tag
+        div 対象
+        div=item.target
+    div.tag
+      div 指定特技
+      div=item.specialty
+    div.card-content=item.effect

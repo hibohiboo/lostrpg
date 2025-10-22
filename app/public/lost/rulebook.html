@@ -20,7 +20,7 @@
     <meta name="twitter:description" content="これは、文明崩壊後の日本を生き延びる人々を演じるゲームです。プレイヤーの分身であるキャラクター（以下、PC)は、物資を求めて危険な森を探索する冒険者となります。">
     <meta name="twitter:image" content="https://lostrpg-751c1.firebaseapp.com/assets/images/losttop.png">
     <script> FontAwesomeConfig = { searchPseudoElements: true };</script>
-    <script defer src="https://use.fontawesome.com/releases/v5.13.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;text=LOSTRPG" rel="stylesheet">
     <link rel="icon" href="../assets/images/favicon/favicon.png">
     <link href="../assets/css/styles.css" rel="stylesheet">
@@ -902,7 +902,7 @@
                   <tr>
                     <td class="txt-center">応急手当</td>
                     <td data-title="グループ">汎用</td>
-                    <td data-title="タイプ">支援</td>
+                    <td data-title="タイプ">割込み</td>
                     <td data-title="反動">3</td>
                     <td data-title="指定特技">《手当》</td>
                     <td data-title="対象">単体</td>
@@ -924,16 +924,16 @@
                     <td data-title="反動">8</td>
                     <td data-title="指定特技">-</td>
                     <td data-title="対象">-</td>
-                    <td data-title="効果">命中判定に組み合わせて使用する。命中した攻撃のダメージを3増加させる。</td>
+                    <td data-title="効果">命中判定に組み合わせて使用する。命中した攻撃のダメージを使用した武器の[重量]増加させる。</td>
                   </tr>
                   <tr>
                     <td class="txt-center">集中</td>
                     <td data-title="グループ">汎用</td>
                     <td data-title="タイプ">補助</td>
-                    <td data-title="反動">2</td>
+                    <td data-title="反動">3</td>
                     <td data-title="指定特技">-</td>
                     <td data-title="対象">-</td>
-                    <td data-title="効果">命中判定に組み合わせて使用する。命中判定の達成値にプラス1の修正がつく。</td>
+                    <td data-title="効果">行為判定に組み合わせて使用する。達成値にプラス1の修正がつく。</td>
                   </tr>
                   <tr>
                     <td class="txt-center">たからもの</td>
@@ -948,7 +948,7 @@
                     <td class="txt-center">説得</td>
                     <td data-title="グループ">汎用</td>
                     <td data-title="タイプ">攻撃</td>
-                    <td data-title="反動">6</td>
+                    <td data-title="反動">4</td>
                     <td data-title="指定特技">自由</td>
                     <td data-title="対象">単体</td>
                     <td data-title="効果">指定特技の判定に成功すると、対象の気力を2点減少させる。</td>
@@ -1083,7 +1083,7 @@
                     <td class="txt-center">うろちょろ</td>
                     <td data-title="グループ">チビ</td>
                     <td data-title="タイプ">補助</td>
-                    <td data-title="反動">2</td>
+                    <td data-title="反動">1</td>
                     <td data-title="指定特技">-</td>
                     <td data-title="対象">-</td>
                     <td data-title="効果">命中判定に組み合わせて使用する。対象の気力を1点減少させる。</td>
@@ -1158,7 +1158,7 @@
                     <td data-title="反動">-</td>
                     <td data-title="指定特技">-</td>
                     <td data-title="対象">自身</td>
-                    <td data-title="効果">キャラメイク時の初期Jにプラス3Jする。また、セッション開始時に3J獲得できる。</td>
+                    <td data-title="効果">キャラメイク時の初期Jにプラス5Jする。また、セッション開始時に3J獲得できる。</td>
                   </tr>
                   <tr>
                     <td class="txt-center">旧友</td>
@@ -1212,7 +1212,7 @@
                     <td data-title="反動">2</td>
                     <td data-title="指定特技">《逸らす》</td>
                     <td data-title="対象">単体</td>
-                    <td data-title="効果">ダメージ適用の直前に使用する。指定特技の判定に成功するとダメージを1点軽減できる。</td>
+                    <td data-title="効果">ダメージ適用の直前に使用する。指定特技の判定に成功するとダメージを1点軽減できる。追加で気力を1点消費し、指定特技の判定に成功すると、さらに1点のダメージを軽減できる。これは判定に失敗するまで続けてよい。</td>
                   </tr>
                   <tr>
                     <td class="txt-center">治癒</td>
@@ -1230,7 +1230,7 @@
                     <td data-title="反動">-</td>
                     <td data-title="指定特技">-</td>
                     <td data-title="対象">自身</td>
-                    <td data-title="効果">ムシ、ケモノ、ミュータントのグループアビリティからランダムに１つアビリティを習得できる。ただし、その反動が1増加する。常駐タイプのアビリティを習得した場合、【精神力】が2点減少する。</td>
+                    <td data-title="効果">突然変異表を振り、ムシ、ケモノ、ミュータントのグループアビリティからランダムに１つアビリティを習得できる。ただし、その反動が1増加する。常駐タイプのアビリティを習得した場合、【精神力】が2点減少する。毎セッションの終了時に突然変異表を振りなおしてもよい。</td>
                   </tr>
                   <tr>
                     <td class="txt-center">瞬間移動</td>
@@ -1818,7 +1818,7 @@
                     <td data-title="効果">対象が本気状態を宣言した時に使用する。指定特技の判定に成功すると、そのラウンドの間、＜ヌシ＞は本気状態になれない。</td>
                   </tr>
                 </table>
-              </details><img src="../assets/images/mother/fire.jpg" width="250" alt="イメージ画像" title="火炎弾！  はぐれけだま様作">
+              </details><img src="../assets/images/mother/fire.jpg" width="250" alt="イメージ画像" title="火炎弾！  はぐれけだま様作"><a href="/lost/chart.html#ability-mutation" target="_blank">ニューエイジ 突然変異表</a>
               <h3 id="decide-Vitarity">4.生命力の決定</h3>
               <p>
                 【生命力】は後述する【体力】の初期値やセッション中での増加量および【所持限界】に関わる数値です。【生命力】の初期値は3点です。ここに、アビリティなどによる修正を加えてください</p>
@@ -4367,7 +4367,7 @@
                         <td data-title="反動">-</td>
                         <td data-title="指定特技">-</td>
                         <td data-title="対象">-</td>
-                        <td data-title="効果">ヌシ以外のエネミーと同時に登場できる。【とりまき】によって登場するエネミーの合計レベルは[ヌシのレベル×2]、数は[ヌシのレベル]体までとなる。</td>
+                        <td data-title="効果">ヌシ以外のエネミーと同時に登場できる。【とりまき】によって登場するエネミーの合計レベルは[ヌシのレベル×2]、数は[ヌシのレベル]体までとなる。とりまきによって追加されたエネミーは、すべての判定にマイナス2の修正がつく。</td>
                       </tr>
                       <tr>
                         <td class="txt-center">追加体力</td>
@@ -6554,7 +6554,7 @@
                       <td data-title="反動">-</td>
                       <td data-title="指定特技">-</td>
                       <td data-title="対象">-</td>
-                      <td data-title="効果">ヌシ以外のエネミーと同時に登場できる。【とりまき】によって登場するエネミーの合計レベルは[ヌシのレベル×2]、数は[ヌシのレベル]体までとなる。</td>
+                      <td data-title="効果">ヌシ以外のエネミーと同時に登場できる。【とりまき】によって登場するエネミーの合計レベルは[ヌシのレベル×2]、数は[ヌシのレベル]体までとなる。とりまきによって追加されたエネミーは、すべての判定にマイナス2の修正がつく。</td>
                     </tr>
                     <tr>
                       <td class="txt-center">追加体力</td>
@@ -6635,6 +6635,8 @@
                 <p><a href="https://create-now.vercel.app/lostrpg/scenario/ja/list" target="_blank">くりえいとなう！ LOSTRPGシナリオ一覧</a></p>
                 <p><a href="https://talto.cc/c/lost" target="_blank">TALTO</a> ... 投稿お願いします！</p>
               </p>
+              <p>キャンプを育てていく楽しみが存分に味わえるキャンペーンシナリオを公開しています。</p>
+              <p><a href="campaign-mother.html" target="_blank">キャンペーン: Mother</a> ... <a href="https://twitter.com/hagure_g">はぐれけだま</a>様</p>
               <h3 id="next-step-reply">実際の遊び方を知りたい</h3>
               <p>遊んだ様子を読み物にしたリプレイを用意しております。</p>
               <ul>
@@ -6902,7 +6904,7 @@
             →Amazon
             </a></dd>
             <dt>やせいのいしおの！</dt>
-            <dd>3人の子供が、迷い込んだ異世界でサバイバル。異世界だけど、地味にこつこつサバイバルします。
+            <dd>著：佐藤ケイ。3人の子供が、迷い込んだ異世界でサバイバル。異世界だけど、地味にこつこつサバイバルします。
             <a href="https://www.amazon.co.jp/%E3%82%84%E3%81%9B%E3%81%84%E3%81%AE%E3%81%84%E3%81%97%E3%81%8A%E3%81%AE%EF%BC%81-%EF%BD%9E%E7%95%B0%E4%B8%96%E7%95%8C%E3%82%B1%E3%83%A2%E3%83%9F%E3%83%9F%E3%82%B5%E3%83%90%E3%82%A4%E3%83%90%E3%83%AB%EF%BD%9E-%E9%9B%BB%E6%92%83%E6%96%87%E5%BA%AB-%E4%BD%90%E8%97%A4-%E3%82%B1%E3%82%A4-ebook/dp/B07YNGKHDY">
             →Amazon
             </a>特筆すべきが、作者が実際にいろいろやっているところ<a href="https://twitter.com/i/events/928619530942783490">→ツイートまとめ</a>
@@ -6920,6 +6922,14 @@
               離れたキャンプのメンバーからの支援演出も取り入れられたら面白そう。
               <a href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%87%E3%83%83%E3%82%BB%E3%82%A4_(%E6%98%A0%E7%94%BB)">→wikiedia</a>
             </dd>
+            
+            <dt>崩壊世界の魔法杖職人</dt>
+             <dd>著： <a href="https://mypage.syosetu.com/59791/" >黒留ハガネ</a>。電気文明の滅び。魔法文明を手探りで技術を発見していく。常識が変わってしまった後の世界の参考に。言語学者が活躍する珍しい作品。
+            ポストアポカリプスな日本の雰囲気の参考にも◎。
+            <a href="https://ncode.syosetu.com/n8281jr/">
+            →小説家になろう
+            </a></dd>
+            
             </dl>
             <h2 id="bibliography-images">イメージ画像</h2>
             <ul>
@@ -6974,6 +6984,12 @@
             <a target="_blank" href="https://booth.pm/ja/items/3685171">
             終末紀行ＲＰＧ World's End Journey│DONKEY HEAD QUARTERS
             </a>……ロボとヒトとの二人旅。さくっと短時間で遊びたい方へオススメ</li>
+            <li>
+            <a target="_blank" href="https://mimizukuan.booth.pm/items/6164662">
+            ガラクティア
+            </a>……滅びかけた世界で、ロストテクノロジーのロボに憑依して、ダンジョン探索。タウンルールで拠点も作れる。クリーチャーやアイテムのフレーバーが楽しい。ポストアポカリプスのビジュアルアートとしても一見の価値あり
+            </li>
+            
             
             </ul>
             

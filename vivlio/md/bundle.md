@@ -1,0 +1,10171 @@
+---
+link:
+  - rel: "stylesheet"
+    href: "../css/style.css"
+---
+
+<img src="../assets/images/losttop.png" alt="イメージ画像" title="LOST～廃墟の森の子供たち～">
+
+<img src="../assets/images/LOST.png" alt="LOST～廃墟の森の子供たち～" title="LOST～廃墟の森の子供たち～" style="border:none;">
+
+## はじめに {.break-verso}
+
+<div style="text-align:center;width:100%;">
+
+大人たちは死に絶えた。子どもたちは残された。
+
+日本中を森が覆い、異形の獣たちが我が物顔で闊歩する。
+
+<br>
+
+変わり果てた世界。
+
+<br>
+
+その中で、彼らは生きることを選択した。
+
+自分たちだけのサバイバル。
+
+<br>
+<br>
+
+――これは、文明崩壊から５年後の物語。
+
+</div>
+<br><br>
+
+本ゲームは、文明崩壊後の日本を生き延びる人々を演じるゲームです。
+
+プレイヤーの分身であるキャラクター（以下、PC)は、 物資を求めて危険な森を探索する冒険者となります。
+
+### このルールの読み方
+
+### かっこの種類
+
+- 【】：キャラクターの能力値やアビリティを表します。
+- 《》：特技を表します。
+- ＜＞：このゲームで使われる固有名詞を表します。
+
+### 端数の処理
+
+このゲームでは、割り算を行う場合常に端数は切り上げになります。
+
+### 用語
+
+<dl>
+<dt>ゲームマスター(GM)</dt>
+<dd>ゲームを遊ぶ時の進行役です。ゲームを遊ぶときは、本ルールよりもGMの裁定が最優先となります。</dd>
+<dt>プレイヤー(PL)</dt>
+<dd>GMと一緒にゲームを遊ぶ人です。本ゲームの目的は、参加者全員が楽しいときを過ごすことです。</dd>
+</dl>
+
+<img src="../assets/images/uni-02.jpg" alt="イメージ画像" title="廃墟の森に一人  @lioneeeee 様作">
+<!---->
+
+## 目次{ .break-verso }
+
+<nav id="toc" role="doc-toc">
+
+- <a class="toc-chapter" href="#world-title">ワールド</a>
+- <a class="toc-chapter" href="#title-camp">キャンプ</a>
+- <a class="toc-chapter" href="#character">キャラクター</a>
+  - <a class="toc-section" href="#ability">アビリティ</a>
+  - <a class="toc-section" href="#items">アイテム</a>
+- <a class="toc-chapter" href="#check">行為判定</a>
+- <a class="toc-chapter" href="#session">セッション</a>
+  - <a class="toc-section" href="#campF">キャンプフェイズ</a>
+  - <a class="toc-section" href="#exploration">探索フェイズ</a>
+    - <a class="toc-subsection" href="#exploration-move">移動</a>
+    - <a class="toc-subsection" href="#exploration-limit">リミット</a>
+    - <a class="toc-subsection" href="#battle">戦闘</a>
+    - <a class="toc-subsection" href="#battle-damage">ダメージと部位ダメージ</a>
+    - <a class="toc-subsection" href="#badstatus">変調</a>
+  - <a class="toc-section" href="#lastbattle">決戦フェイズ</a>
+  - <a class="toc-section" href="#ending">結果フェイズ</a>
+- <a class="toc-chapter" href="#GMpart">GM セクション</a>
+  - <a class="toc-section" href="#make-boss">＜ヌシ＞の作成</a>
+  - <a class="toc-section" href="#enemies">エネミー</a>
+  - <a class="toc-section" href="#enemy-abirities">エネミーアビリティ</a>
+  - <a class="toc-section" href="#droplist">ドロップアイテム</a>
+- <a class="toc-chapter" href="#FAQ">FAQ</a>
+- <a class="toc-chapter" href="#sankou">参考作品</a>
+
+</nav>
+<!---->
+
+## ワールド{#world-title .break-verso }
+
+### 世界は滅びました{#world-apocalipus}
+
+5 年前、富士山に隕石が落ちて噴火しました。その 3 日後、日本中に未知の感染症が流行しました。
+感染してすぐに発症、高熱を出して意識を失うものでした。
+致死率は年齢が高くなるほど高くなり 20 歳で 100%。
+意識を失った後、目覚めたのは子供たちだけでした。
+維持していた大人たちがいなくなり、インフラは壊滅。あちこちで火災が発生しました。
+
+子供たちは、学校や公民館に集まり、キャンプをしながら生き延びました。
+焼け跡からはすぐに芽がでました。それは、見たこともない速度で成長する新種の植物でした。
+日本中が森に覆われました。森には、角の生えたうさぎや巨大な昆虫が棲みつき、生態系は一変しました。
+
+変異は動植物に留まらず、人間の幼子にも現れました。大人並に発育した身体を持つ十歳児、生え変わった原色の髪、超能力の発現……その変化は様々でした。
+
+### でも頑張って生きています{world-alive}
+
+現在、人々は集まったキャンプを単位にコミュニティを作り、森に囲まれた中で生きています。食料は保存食を食べ繋いでいましたが、近年は森で捕れる獣の肉も食べています。
+キャンプ間は森により遮られ、交流は困難なものとなっています。
+電話や TV はもちろん使えず、なんとか電力を確保したキャンプはアマチュア無線や
+ラジオ放送で情報を交換しています。
+都市にはいくつかのキャンプが合流した大きなコミュニティがあり、
+そこがラジオの発信を行なっているようです。
+
+### 冒険者{#world-explorers}
+
+5 年のうちに、比較的安全な場所の物資は全て取り尽くしてしまいました。物資を得るためには、強力な＜ヌシ＞が発生させる＜フィールド＞と呼ばれる危険地域に挑まなくてはなりません。
+同盟を組んだキャンプの間に＜フィールド＞が現れた場合、
+＜ヌシ＞を倒し＜フィールド＞を消滅させなければ、交流は途絶えてしまうでしょう。
+
+危険を承知で、＜フィールド＞に挑む者。彼らは今、冒険者と呼ばれています。
+
+![冒険者の休息](../assets/images/takibi.png)
+
+<section id="npc" class="break-page">
+  <h2>NPC一覧</h2>
+  <p>今も生き延びている人々を紹介します。</p>
+  <p>キャンプの一員として、＜フィールド＞で出会う冒険者として、自由にお使いください。</p>
+  <div style="display:flex;border: solid 0px #000; padding: 5px;">
+    <div style="width:600px; height: 300px;overflow:hidden"><img src="../assets/images/npc/kame/001.png" alt="かめや" title="かめや @LabanS_Lab 様作"></div>
+    <div> 
+      <p> <strong>かめや <br></strong></p>
+      <p><strong>16歳 / 女<br></strong><strong>アキンド / カイヌシ / チビ</strong></p>
+      <p>「わさわさ、仕入れてきたです。缶詰払い歓迎なのですよ」</p>
+      <p>大きな亀（名前はハイゼット）に山ほどの商品を載せて、キャンプを渡り歩く商人です。<br>買い物をすると、ポイントカードにスタンプを押してくれます。
+        ＜フィールド＞へ仕入にゆくために、護衛を冒険者たちに頼むこともあります。
+      </p>
+    </div>
+  </div>
+  <div style="display:flex;border: solid 0px #000; padding: 5px;" class="break-page">
+    <div style="width:600px; height: 280px;overflow:hidden"><img src="../assets/images/npc/yuni/006.png" alt="ゆう兄" title="ゆう兄 @LabanS_Lab 様作"></div>
+    <div> 
+      <p> <strong>ゆう兄 <br></strong></p>
+      <p><strong>18歳 / 男<br></strong><strong>ビッグ</strong></p>
+      <p>「うん。無事に帰ってきたネェ。よかったネェ」</p>
+      <p>仏と呼ばれるほど穏やかな、体も器も大きなリーダーです。<br>いつも静かな笑顔を絶やさず、ゆったりと話します。
+        ぼーっとしているように見えて誰よりキャンプのことを考えています。
+      </p>
+    </div>
+  </div>
+</section>
+
+## キャンプ{#title-camp .break-verso}
+
+キャンプでは、生き残っている人々が協力して暮らしています。[\*](https://create-now.vercel.app/lostrpg)
+
+キャンプの作成手順を説明します。
+
+### 1.名前の決定
+
+まず、プレイヤーキャラクター全員が所属するキャンプの名前を決めましょう。近くの公民館や学校をキャンプにするのも、イメージの共有がしやすくておススメです。
+
+#### キャンプ名表
+
+表を使って決定することもできます。
+
+キャンプ名決定表 A, B と建物表を組み合わせてキャンプ名を決定します。
+
+<div style="display:flex;">
+<table class="chart ss-size-font" id="table-campnameA">
+  <caption>キャンプ名決定表A</caption>
+  <thead>
+    <tr>
+      <th>d66 
+        <th>ジャンル</th> 
+        <th>例</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>11</td>
+    <td>都道府県</td>
+    <td>東京</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>色名</td>
+    <td>紅</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>天候</td>
+    <td>青空</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>動物</td>
+    <td>きつね</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>天体</td>
+    <td>スバル</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>化学物質</td>
+    <td>ダイナマイト</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>衣装</td>
+    <td>麦わら</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>楽器</td>
+    <td>スピーカー</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>時代</td>
+    <td>明治</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>地形</td>
+    <td>泉</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>植物</td>
+    <td>サクラ</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>方角</td>
+    <td>北</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>数字</td>
+    <td>第三</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>神様</td>
+    <td>天照</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>英語</td>
+    <td>Excite</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>飲食物</td>
+    <td>バナナ</td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td>幻獣</td>
+    <td>ドラゴン</td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td>国名・文明</td>
+    <td>ローマ</td>
+  </tr>
+  <tr>
+    <td>55</td>
+    <td>地名</td>
+    <td>雛見沢</td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>会社名</td>
+    <td>トヨタ</td>
+  </tr>
+  <tr>
+    <td>66</td>
+    <td>GMの名字</td>
+    <td>鈴木</td>
+  </tr>
+</table>
+
+<table class="chart ss-size-font" style="margin-left:1mm;" id="table-campnameB">
+  <caption>キャンプ名決定表B</caption>
+  <thead>
+    <tr>
+      <th>d66 
+        <th>奇数</th> 
+        <th>偶数</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>11</td>
+    <td>暗黒</td>
+    <td>夜明けの</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>エンドレス</td>
+    <td>トラベル</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>トロピカル</td>
+    <td>荒野の</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>さまよう</td>
+    <td>迷える</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>クレイジー</td>
+    <td>ゴスロリ</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>魔王</td>
+    <td>勇者</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>ミッドナイト</td>
+    <td>サンシャイン</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>サーカス</td>
+    <td>プラネット</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>ルートイン</td>
+    <td>グリーン</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>ドルフィン</td>
+    <td>マンボー</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>ドリーマーズ</td>
+    <td>ガールズ</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>ひまわり</td>
+    <td>どんぐり</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>ブラボー</td>
+    <td>ハロー</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>紅の</td>
+    <td>蒼の</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>軍団</td>
+    <td>研究会</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>一家</td>
+    <td>組</td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td>サークル</td>
+    <td>チーム</td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td>子供会</td>
+    <td>パーティ</td>
+  </tr>
+  <tr>
+    <td>55</td>
+    <td>軍団</td>
+    <td>研究会</td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>プロジェクト</td>
+    <td>同盟</td>
+  </tr>
+  <tr>
+    <td>66</td>
+    <td>合唱団</td>
+    <td>バンド</td>
+  </tr>
+</table>
+
+<table class="chart ss-size-font" style="margin-left:1mm;" id="table-campnameC">
+  <caption>建物表</caption>
+  <thead>
+    <tr>
+      <th>d66 
+        <th>奇数</th> 
+        <th>偶数</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>11</td>
+    <td>寺</td>
+    <td>神社</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>タワー</td>
+    <td>屋敷</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>駅</td>
+    <td>旅館</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>トンネル</td>
+    <td>大橋</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>デパート</td>
+    <td>レストラン</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>会社</td>
+    <td>ビル</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>保育園</td>
+    <td>幼稚園</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>小学校</td>
+    <td>中学校</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>高校</td>
+    <td>大学</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>市役所</td>
+    <td>派出所</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>荘</td>
+    <td>ハイツ</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>動物園</td>
+    <td>水族館</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>博物館</td>
+    <td>美術館</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>公民館</td>
+    <td>公園</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>球場</td>
+    <td>ドーム</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>ゲームセンター</td>
+    <td>図書館</td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td>映画館</td>
+    <td>遊園地</td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td>研究室</td>
+    <td>実験場</td>
+  </tr>
+  <tr>
+    <td>55</td>
+    <td>病院</td>
+    <td>薬局</td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>農場</td>
+    <td>港</td>
+  </tr>
+  <tr>
+    <td>66</td>
+    <td>セッション会場</td>
+    <td>GMの勤め先（通い先）</td>
+  </tr>
+</table>
+
+</div>
+
+### 2.設備・人材の決定
+
+#### 基本の初期設備
+
+初期作成のキャンプには、「雨漏りする屋根」「隙間風の吹く壁」「キノコの生えた寝床」「水場」「小さな倉庫」「生命線の食料庫」という基本の初期設備があります。
+キャンプは 5 年の間にぼろぼろになっており、ガタがきているのです。
+
+基本の初期設備の効果をまとめると、以下のようになります。
+
+- 「パーティ全員の【精神力】プラス 7」
+- 「パーティ全員の【生命力】プラス 2」
+- 「キャンプに 10 個までのアイテムを置いておける」
+
+#### 追加の初期設備
+
+次に 1D6 を振り、さらにそのキャンプにあるものを決定します。追加設備決定表を参照してください。
+
+設備はキャンプフェイズに利用できます。
+
+<table class="responsive small-size-font break-page" id="camp-equipment_first">
+  <caption>追加設備決定表</caption>
+  <thead>
+    <tr>
+      <th>d6 
+        <th>名前</th> 
+        <th>タイプ</th> 
+        <th>指定特技</th> 
+        <th>レベル</th> 
+        <th>効果</th>
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="mobile-hidden">1</td>
+    <td class="txt-center" data-title="1">商人</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">《伝える》</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">指定特技の判定に成功すると、あなたはアイテムを[レベル+3]個まで買うことができる。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">2</td>
+    <td class="txt-center" data-title="2">先生</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">《考える》</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">指定特技の判定に成功すると、あなたはそのセッションの間、ランダムに特技を1つ習得する。1D6を振り分野を決め、2D6を振って習得する特技を決める。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">3</td>
+    <td class="txt-center" data-title="3">歌姫</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">《歌う》</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">指定特技の判定に成功すると、あなたの【気力】が2D6点増加する。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">4</td>
+    <td class="txt-center" data-title="4">畑</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">《作る》</td>
+    <td data-title="レベル">3</td>
+    <td data-title="効果">指定特技の判定に成功すると、あなたは[レベル]Jを得る。最大レベルに達している場合、食堂の効果にプラス1する。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">5</td>
+    <td class="txt-center" data-title="5">太陽電池</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">なし</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">あなたが所持しているか装備しているアイテムを[レベル]個まで「充電」できる。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">6</td>
+    <td class="txt-center" data-title="6">お風呂</td>
+    <td data-title="タイプ">支援</td>
+    <td data-title="指定特技">なし</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">あなたの【精神力】にプラス[レベル]点する。</td>
+  </tr>
+  <tr>
+    <td class="mobile-hidden">6</td>
+    <td class="txt-center" data-title="6">ドラム缶</td>
+    <td data-title="タイプ">-</td>
+    <td data-title="指定特技">-</td>
+    <td data-title="レベル">1</td>
+    <td data-title="効果">水などを貯めることができる。</td>
+  </tr>
+</table>
+
+<img src="../assets/images/npc/kame/002.png" width="200" height="270" alt="ハイゼットかめや" title="かめや @LabanS_Lab 様作">
+
+## キャラクター{#character .break-verso}
+
+プレイヤーはキャンプに暮らす子どもたちの中でも、＜フィールド＞に挑む力のあるキャラクターを演じます。  
+危険を冒して森に挑む彼らは、冒険者と呼ばれています。
+
+キャラクターの作成手順を説明します。
+
+### 1. クラスの決定
+
+クラスはキャラクターの才能や立ち位置を表したものです。これを以下の 12 クラスから２つまで選び、キャラクターを作成します。
+
+クラスを１つしか選ばなかった場合、後述のアビリティを１つ余分に取得できます。
+
+<div class="no-wrap-2">
+
+|                                                               |    クラス    | 説明                                                                                                                                                                                                                                                             |
+| :-----------------------------------------------------------: | :----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|    <img src="../assets/images/icon/big.png" width="50" />     |    ビッグ    | 体が大きいことを表すクラス。恵まれた体格を活かしたアビリティを習得できる。チビと同時に選ぶことはできない。                                                                                                                                                       |
+|   <img src="../assets/images/icon/small.png" width="50" />    |     チビ     | 体が小さいことを表すクラス。 小器用な立ち回りを活かしたアビリティを習得できる。 ビッグと同時に選ぶことはできない。                                                                                                                                               |
+|   <img src="../assets/images/icon/adult.svg" width="50" />    |    オトナ    | オトナの立ち位置であることを表すクラス。 経験に裏打ちされたアビリティを習得できる。 ２０歳以上でなければ取得できない。                                                                                                                                           |
+|   <img src="../assets/images/icon/newage.svg" width="50" />   | ニューエイジ | ５年前の災害により、変異を起こしたことを表すクラス。 超能力のアビリティを習得できる。 １０歳以下でなければ取得できない。                                                                                                                                         |
+| <img src="../assets/images/icon/scar-wound.svg" width="50" /> |   キズモノ   | 消えない傷を受けてしまったことを表すクラス。 その不利を補い生きていくためのアビリティを習得できる。 <br>このクラスを選択した場合、部位ダメージを 1 受けている状態でスタートする。 その「身体部位」を＜キズ＞と呼ぶ。 <br> ＜キズ＞はいかなる手段でも回復しない。 |
+|  <img src="../assets/images/icon/fighter.svg" width="50" />   |    センシ    | 戦闘が得意なことを表すクラス。 戦闘に必要なアビリティを習得できる。                                                                                                                                                                                              |
+|   <img src="../assets/images/icon/scout.svg" width="50" />    |   スカウト   | 偵察・調査が得意なことを表すクラス。 探索を有利にするアビリティを習得できる。                                                                                                                                                                                    |
+|   <img src="../assets/images/icon/hunter.svg" width="50" />   |   ハンター   | 狩りが得意なことを表すクラス。 飛び道具や罠を用いたアビリティを習得できる。                                                                                                                                                                                      |
+|   <img src="../assets/images/icon/hakase.svg" width="50" />   |    ハカセ    | 物知りであることを表すクラス。 知識を活かしたアビリティを習得できる。                                                                                                                                                                                            |
+|  <img src="../assets/images/icon/shokunin.svg" width="50" />  |  ショクニン  | 手先が器用であることを表すクラス。 モノづくりに関するアビリティを習得できる。                                                                                                                                                                                    |
+|    <img src="../assets/images/icon/hope.svg" width="50" />    |    ホープ    | 皆の希望である表すクラス。 希望を持つことで運命を変えるアビリティを習得できる。                                                                                                                                                                                  |
+|    <img src="../assets/images/icon/mama.svg" width="50" />    |     ママ     | おかんな立ち位置を表すクラス。 周囲に活力を与えるアビリティを習得できる。                                                                                                                                                                                        |
+
+</div>
+
+### 2. 特技の決定{.break-page}
+
+キャラクターの特技を特技表の中から 6 つ選んで決定します。
+
+後述のアビリティによって指定特技が指定されるので、アビリティから先に決定してもよいでしょう。
+
+特技には「身体部位」と「アクション」というカテゴリがあります。どちらも同様に取得できます。
+
+「身体部位」は身体にある様々な場所のことを表し「※心臓」のように※印をつけて表記されます。
+
+「アクション」は身体を使って行う様々なことを表します。
+
+特技は６つの分野に分かれています。縦列が分野です。
+
+分野と分野の間の細い空白マスをギャップと呼びます。代用判定（後述）のときには、このマスも数えます。
+
+【アビリティ】の効果で、このギャップを塗りつぶす場合があります。 ギャップを塗りつぶした場合、そのマスは数えないことになります。
+
+通常のキャラクターはギャップを塗りつぶしません。
+
+「特技を修得する」ということは、アクションの場合は「その動作が得意」、身体部位の場合は「その部位が高性能または丈夫」ということです。
+
+### 3. アビリティの決定
+
+アビリティとは、キャラクターがゲーム中に使う技や能力のことです。
+
+クラスが 2 つのキャラクターはアビリティを 3 つ習得します。
+クラスが 1 つのキャラクターはアビリティを 4 つ習得します。
+
+### 4.生命力・体力の決定
+
+| 初期生命力 | 初期設備込みの生命力 | 体力 |
+| :--------: | :------------------: | :--: |
+|     3      |          5           |  10  |
+
+#### 生命力
+
+【生命力】は後述する【体力】の初期値やセッション中での増加量および【所持限界】に関わる数値です。【生命力】の初期値は 3 点です。ここに、アビリティなどによる修正を加えてください
+
+特にアビリティを取得していない場合、キャンプの初期設備による修正を含めて初期作成のキャラクターの【生命力】は 5 点になります。
+
+#### 体力
+
+【体力】はダメージへの耐久を表す数値です。ダメージを受けることで減少し、【体力】が 0 になると部位ダメージを受ける可能性が発生します。
+
+【体力】に上限はありません。
+
+ゲーム開始時には【生命力】の 2 倍の【体力】を所持します。
+
+### 5. 精神力・気力の決定{.break-page}
+
+| 初期精神力 | 初期設備込みの精神力 | 気力 |
+| :--------: | :------------------: | :--: |
+|     3      |          10          |  10  |
+
+#### 精神力
+
+【精神力】は後述する【気力】の初期値やセッション中での増加量に関わる数値です。【精神力】の初期値は 3 点です。ここに、キャンプの設備やアビリティなどによる修正を加えてください。
+
+特にアビリティを取得していない場合、キャンプの初期設備による修正を含めて初期作成のキャラクターの【精神力】は 10 点になります。
+
+#### 気力
+
+【気力】はやる気や心の余裕を表す数値です。 アビリティの使用などで減少し、【気力】が 0 になると『無力化状態』になり行動不能になります。
+
+【気力】に上限はありません。
+
+ゲーム開始時には【精神力】と同値の【気力】を所持します。
+
+### 6.所持限界の決定
+
+所持品、つまり装備せずに持ち運べるアイテムの総重量の最大値を【所持限界】といいます。【所持限界】の初期値は【生命力】と同じ値です。ここにアビリティなどによる修正を加えます。
+
+特にアビリティを取得していない場合、初期作成のキャラクターの【所持限界】は 5 になります。
+
+### 7.アイテムの購入
+
+アイテムを購入します。現在、通貨は食料でやり取りされています。 通貨単位は一日分の干し肉＝ 1J（ジャーキー）です。 また、10J=1C（缶詰）となっています。
+
+<br>
+
+キャラクターは初期状態でリュックサック 1 つと 10J を所持しています。最初にこれらを使って買い物します。
+
+買い物で使いきらなかったジャーキーはそのまま所持品となります。ジャーキーも重量 1 なので、【所持限界】を超えていないか注意してください。
+
+<br>
+
+アイテムは戦闘中以外ならば行動を使うことなく、自由に受け渡しできます。
+
+<br>
+
+セッション中にアイテムを買うことができる機会があります。その際、既に所持しているアイテムを J 換算して買い物を行えます。 11（例：「価格 3J のほうちょう 3 つと 1J」で「10J の缶詰 1 つ」を買うことができます）
+
+### 8. 名前の決定{.break-page}
+
+キャラクターの名前を決めましょう。
+
+### 9. 性別・年齢の決定
+
+キャラクターの性別は自由に決めることができます。
+
+キャラクターの年齢は 25 歳までです。年齢によって制限のかかるクラスがあります。
+
+### （10.背景の決定）
+
+望むならば 経験表を振り、キャラクターの過去を決定することができます。
+
+**名前表**
+
+<div style="display:flex;">
+<table class="ss-size-font" id="table-firstname">
+  <thead>
+    <tr>
+      <th>d66 
+        <th>男性</th> 
+        <th>女性</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>11</td>
+    <td>コウ/ユウ</td>
+    <td>ナミ/アイ</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>ダイチ/タケル</td>
+    <td>ソラ/ヒカリ</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>シキ/カンタ</td>
+    <td>サツキ/メイ</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>サトル/トオル</td>
+    <td>アイコ/ナギ</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>シューヤ/ヨシトキ</td>
+    <td>ノリコ/ミツコ</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>ショウゴ/ハジメ</td>
+    <td>カオリ/ミユキ</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>ジョージ/レイジ</td>
+    <td>マリア/アリサ</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>ケータロー/ケーイチ</td>
+    <td>リン/レイナ</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>カズオ/マサト</td>
+    <td>マミ/ミキ</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>ヒロ/レン</td>
+    <td>ムギ/アカネ</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>マサオ/シンスケ</td>
+    <td>ジュリ/ナオミ</td>
+  </tr>
+</table>
+
+<table class="ss-size-font">
+  <thead>
+    <tr>
+      <th>d66 
+        <th>男性</th> 
+        <th>女性</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>33</td>
+    <td>シロウ/アカヤ</td>
+    <td>クロエ/シオン</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>フユヒコ/トシアキ</td>
+    <td>ナツミ/ハルナ</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>ヒロシ/タカシ</td>
+    <td>ナルミ/マヤ</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>シンジ/マコト</td>
+    <td>サクラ/エミ</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>テツヤ/ランマル</td>
+    <td>ギン/ユカリ</td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td>リューイチ/ケン</td>
+    <td>チヒロ/コトリ</td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td>トモヤ/リョウスケ</td>
+    <td>リカ/アスカ</td>
+  </tr>
+  <tr>
+    <td>55</td>
+    <td>ツヨシ/タクヤ</td>
+    <td>スズネ/マキ</td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>セイジ/オリベ</td>
+    <td>シノ/ルリ</td>
+  </tr>
+  <tr>
+    <td>66</td>
+    <td>コーヘイ/ジュンペー</td>
+    <td>カナタ/アマネ</td>
+  </tr>
+</table>
+
+</div>
+
+#### 経験表{.break-page}
+
+<table class="no-wrap-1 small-size-font" id="table-experience">
+  <thead>
+    <tr>
+      <th>d66 
+        <th>経験</th> 
+        <th>内容</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>11</td>
+    <td class="txt-center" data-title="11">変貌</td>
+    <td>目が覚めたら変わってしまっていた。外見、性格、体質……。5年前の自分を今はどう思うだろう。</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td class="txt-center" data-title="12">守るべきもの</td>
+    <td>キャンプに大切なものができた。親友、ペット、居場所。</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td class="txt-center" data-title="13">兄弟</td>
+    <td>兄弟/姉妹がいた。今は何をしているだろう。</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td class="txt-center" data-title="14">形見</td>
+    <td>大切だった人の形見を大事に持っている。今際の際のその人の言葉は……。</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td class="txt-center" data-title="15">放浪</td>
+    <td>以前居たキャンプは壊滅してしまった。このキャンプでやりなおせるだろうか。</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td class="txt-center" data-title="16">忘却</td>
+    <td>あなたには抜け落ちた記憶がある。思い出さなくてはいけないことか、思い出してはいけないことか。</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td class="txt-center" data-title="22">望郷</td>
+    <td>あなたの故郷は遠い。いつか帰ることができるだろうか。</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td class="txt-center" data-title="23">恩人</td>
+    <td>とある人物に危機を救われたことがある。その人は今……。</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td class="txt-center" data-title="24">喪失</td>
+    <td>何かを失った。それを、取り戻したいと思っている。</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td class="txt-center" data-title="25">飢え</td>
+    <td>空腹で死にそうになったことがある。家に帰れば夕食が待っていた頃が夢のようだ。</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td class="txt-center" data-title="26">生き別れ</td>
+    <td>大切な人と生き別れになった。この青い空の下で、あの人も、きっと生きていると信じている。</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td class="txt-center" data-title="33">恋</td>
+    <td>恋に落ちた。あの人の顔を見るだけで胸が高鳴った。</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td class="txt-center" data-title="34">夢</td>
+    <td>あなたには夢があった。その夢は今は叶えられるものだろうか。</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td class="txt-center" data-title="35">トラウマ</td>
+    <td>心に傷を負った。暗闇、水、炎、怒号、死、あなたに降りかかったのは？</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td class="txt-center" data-title="36">復讐</td>
+    <td>理不尽に奪われた。ヌシだったろうか、それとも同じヒトだっただろうか。あなたの脳裏にはヤツの姿が焼き付いている。</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td class="txt-center" data-title="44">探求</td>
+    <td>探し求めている。その探求は、命をかけるに足るものだ。</td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td class="txt-center" data-title="45">孤独</td>
+    <td>ひとりぼっちだった時期がある。今は……。</td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td class="txt-center" data-title="46">師</td>
+    <td>あなたに道を示してくれた人がいる。いまのあなたがあるのは彼のおかげだ。</td>
+  </tr>
+  <tr>
+    <td>55</td>
+    <td class="txt-center" data-title="55">罪</td>
+    <td>罪を犯した。許される日はくるのだろうか。</td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td class="txt-center" data-title="56">感謝</td>
+    <td>大きく感謝されることをしたことがある。</td>
+  </tr>
+  <tr>
+    <td>66</td>
+    <td class="txt-center" data-title="66">死</td>
+    <td>死んだ、はずだった。何故か、今、生きている。</td>
+  </tr>
+</table>
+<!---->
+
+## アビリティ{#ability .break-verso}
+
+アビリティには、以下の要素があります。
+
+| アビリティの要素 | 概要                                                                          |
+| ---------------- | ----------------------------------------------------------------------------- |
+| 名前             | 同名アビリティの効果は重複しない。                                            |
+| グループ         | 取得したクラスと汎用のグループのアビリティを習得できる。                      |
+| タイプ           | タイプによって使用タイミングが決まる。攻撃、支援、補助、割込み、常駐の 5 つ。 |
+| 反動             | アビリティを使うために消費する【気力】。                                      |
+| 指定特技         | アビリティを使うために必要な判定の《指定特技》。                              |
+| 対象             | アビリティの効果の対象。                                                      |
+| 効果             | アビリティの効果。                                                            |
+
+<dl class="small-dl">
+  <dt>名前</dt>
+  <dd>
+    アビリティの名前です。同じ名前のアビリティの効果は重複しません。</dd>
+  <dt>グループ</dt>
+  <dd>汎用、クラスのグループがあります。
+    <dl>
+      <dt>汎用グループ</dt>
+      <dd>冒険者なら誰でも習得できます。</dd>
+      <dt>クラスグループ</dt>
+      <dd>クラスを選択していれば習得できます。</dd>
+    </dl>
+  </dd>
+  <dt>タイプ</dt>
+  <dd>攻撃、支援、補助、割込み、常駐の５つのタイプがあります。
+    <dl>
+      <dt>攻撃タイプ</dt>
+      <dd>自分の手番に使います。相手を攻撃するために使います。</dd>
+      <dt>支援タイプ</dt>
+      <dd>自分の手番に使います。攻撃以外の行動をするために使います。</dd>
+      <dt>補助タイプ</dt>
+      <dd>特技の行為判定に組み合わせて使います。１つの行為判定に組み合わせられる補助タイプのアビリティは一つだけです。</dd>
+      <dt>割込みタイプ</dt>
+      <dd>
+        誰かの行動に割りこんで使います。同じ名前の割込みタイプのアビリティは、１サイクル（戦闘中ならば1ラウンド）１回のみ使えます。<br></dd>
+      <dt>常駐タイプ</dt>
+      <dd>習得していれば常に効果を発揮します。</dd>
+    </dl>
+  </dd>
+  <br>
+  <dt>反動</dt>
+  <dd>
+    アビリティを使うことで消費する【気力】の値です。【気力】がマイナスになるようには消費できません。</dd>
+  <dt>指定特技</dt>
+  <dd>アビリティを使用するために判定が必要な特技です。</dd>
+  <dl> 
+    <dt>《指定特技》</dt>
+    <dd>《指定特技》の判定に成功すると効果を発揮します。</dd>
+    <dt>なし</dt>
+    <dd>判定をすることなく効果を発揮します。</dd>
+    <dt>自由</dt>
+    <dd>アビリティを習得したときに自由に特技を１つ選択します。</dd>
+    <dt>任意</dt>
+    <dd>判定をする時に自由に特技を選ぶことができます。</dd>
+    <dt>可変</dt>
+    <dd>判定をする時にランダムに特技を決定します。1d6を振って分野を、2d6を振って特技を決定してください。</dd>
+    <dt>-</dt>
+    <dd>
+      常駐・補助アビリティです。 常に効果を発揮、または他の判定に組み合わせることで効果を発揮します。 </dd>
+  </dl>
+  <dt>対象</dt>
+  <dd>アビリティの効果の対象です。</dd>
+  <dt>効果</dt>
+  <dd>アビリティの効果です。</dd>
+</dl>
+
+  <img src="../assets/images/mother/fire.jpg" width="250" alt="イメージ画像" title="火炎弾！  はぐれけだま様作">
+
+### 汎用{.break-verso}
+
+冒険者なら誰でも取得できるアビリティです。
+手に馴染んだ武器による【武器攻撃】で＜ヌシ＞へのとどめを確実に成功させましょう。
+
+<br>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>武器攻撃</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>自由</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、装備中の《指定特技》が一致している武器1つの[攻撃力]点のダメージを与える。この時、命中判定の達成値にプラス2の修正がつく。指定特技ごとに別の【アビリティ】として扱う。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>かばう</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《受ける》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、キャラクター1人のダメージを肩代わりできる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>見切り</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">回避判定に組み合わせて使用する。回避判定の指定特技を《かわす/胴部9》に変更する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>強打</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。命中した攻撃のダメージを1増加させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>応急手当</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《手当》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象の【体力】が1点増加する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>足払い</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《しゃがむ》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に『転倒』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>乱舞</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。ダメージを使用した武器の[重量]増加させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>集中</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">行為判定に組み合わせて使用する。達成値にプラス1の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>たからもの</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">自身の振ったダイス1つの出目を6にする。シナリオ1回。また、生死判定に失敗したとき、この【アビリティ】を失うことでそれを成功にできる。これには気力を消費しない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/asterisk.svg"/></div>
+    <div>説得</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>4</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>自由</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象の気力を2点減少させる。</div>
+</div>
+
+### ビッグ{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/big.png" width="100" height="100"/>
+<img width="100" src='../assets/images/big.png' style="display:block;"/>
+<!-- <p>恵まれた体格を活かしたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>におうだち</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《塞ぐ》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、今行われている攻撃の対象を自分1人に変更する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>鉄拳</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《殴る》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、1点のダメージを与える。このとき命中判定の達成値にプラス3の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>怪力</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">白兵攻撃や肉体を使った攻撃により与えるダメージが1点上昇する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>頑強</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">あなたの【生命力】をプラス2点する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>馬鹿力</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">あなたは「装備部位：両手」のアイテムを「装備部位：片手」として扱うことができる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/big.png"/></div>
+    <div>押し倒し</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">白兵攻撃や肉体を使った攻撃の命中判定に組み合わせて使用する。対象に『転倒』の変調を与える。</div>
+</div>
+
+### チビ{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/small.png" width="100" height="100"/>
+<img width="100" src='../assets/images/tibi.png' style="display:block;"/>
+<!-- <p>小器用な立ち回りを活かしたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>痩身</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">回避判定の達成値にプラス1の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>両手利き</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">《利き腕》と《逆腕》の特技を追加で習得する。さらに、代用判定の時、腕部分野の上下のリストが繋がっているように扱う。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>奇襲</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《隠れる》</div>
+  </div>
+  <div class="card-content">戦闘開始時の先制判定の前に使用する。指定特技の判定に成功すると、追加行動を得る。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>アクロバット</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">回避判定に組み合わせて使用する。達成値にプラス2の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>うろちょろ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。対象の気力を1点減少させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/small.png"/></div>
+    <div>死角</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。達成値にプラス2の修正がつく。</div>
+</div>
+
+### オトナ{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/adult.svg" width="50" height="50"/>
+<img width="100" src='../assets/images/otona.png' style="display:block;"/>
+<!-- <p>経験に裏打ちされたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.svg"/></div>
+    <div>手練</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">「アクション」の特技から１つ選択する。その特技は隣接する部位にダメージを受けても使用不能とならない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.svg"/></div>
+    <div>百戦錬磨</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定の達成値にプラス1の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.svg"/></div>
+    <div>人生経験</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">ギャップを2列塗りつぶすことができる。塗りつぶされたギャップは代用判定の際数えない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.svg"/></div>
+    <div>遭遇歴</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《雑学》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に『暴露』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.svg"/></div>
+    <div>へそくり</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">キャラメイク時の初期Jにプラス5Jする。また、セッション開始時に3J獲得できる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/adult.svg"/></div>
+    <div>旧友</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">あなたを訪ねて古い友人がやってくる。あなたはキャンプフェイズに任意の[タイミング：支援]のキャンプ人材表1つの効果を使用できる。人材のレベルは1とする。指定特技の判定は行うこと。</div>
+</div>
+
+### ニューエイジ{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/newage.svg" width="50" height="50"/>
+<img width="100" src='../assets/images/new.png' style="display:block;"/>
+<!-- <p>経験に裏打ちされたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/newage.svg"/></div>
+    <div>火炎弾</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《投げる》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に『炎上』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/newage.svg"/></div>
+    <div>発電</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>アイテム</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《機械》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、アイテム１つを「充電」できる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/newage.svg"/></div>
+    <div>念動力</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《逸らす》</div>
+  </div>
+  <div class="card-content">ダメージ適用の直前に使用する。指定特技の判定に成功するとダメージを1点軽減できる。追加で気力を1点消費し、指定特技の判定に成功すると、さらに1点のダメージを軽減できる。これは判定に失敗するまで続けてよい。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/newage.svg"/></div>
+    <div>治癒</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《手当》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象の部位ダメージを1つ回復できる。ただし、この判定の達成値には[対象の部位ダメージ数]だけのマイナス修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/newage.svg"/></div>
+    <div>突然変異</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">
+    ムシ、ケモノ、ミュータントのグループアビリティからランダムに１つアビリティを習得できる。ただし、その反動が1増加する。常駐タイプのアビリティを習得した場合、【精神力】が2点減少する。
+    毎セッションの終了時に、ランダムに習得しなおしてもよい。
+  </div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/newage.svg"/></div>
+    <div>瞬間移動</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">回避判定に組み合わせて使用する。回避に成功したとき、あなた以外のキャラクター1人も回避できたことになる。このアビリティを使用する場合、あなたが攻撃の対象でない場合にも回避判定を行える。</div>
+</div>
+
+<table class="responsive" id="ability-mutation">
+  <caption>突然変異表</caption>
+  <thead>
+    <tr>
+      <th>d6 * d3 
+        <th>ムシ(1,2)</th>  
+        <th>ケモノ(3,4)</th> 
+        <th>ミュータント(5,6)</th>
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="txt-center">1</td>
+    <td data-title="ムシ(1,2)">大アゴ</td>
+    <td data-title="ケモノ(3,4)">体当たり</td>
+    <td data-title="ミュータント(5,6)">撹乱音波</td>
+  </tr>
+  <tr>
+    <td class="txt-center">2</td>
+    <td data-title="ムシ(1,2)">毒針</td>
+    <td data-title="ケモノ(3,4)">噛みつき</td>
+    <td data-title="ミュータント(5,6)">鋼鱗</td>
+  </tr>
+  <tr>
+    <td class="txt-center">3</td>
+    <td data-title="ムシ(1,2)">外骨格</td>
+    <td data-title="ケモノ(3,4)">突撃</td>
+    <td data-title="ミュータント(5,6)">ドリル</td>
+  </tr>
+  <tr>
+    <td class="txt-center">4</td>
+    <td data-title="ムシ(1,2)">飛行</td>
+    <td data-title="ケモノ(3,4)">鋭角</td>
+    <td data-title="ミュータント(5,6)">火炎放射</td>
+  </tr>
+  <tr>
+    <td class="txt-center">5</td>
+    <td data-title="ムシ(1,2)">大鎌</td>
+    <td data-title="ケモノ(3,4)">牙</td>
+    <td data-title="ミュータント(5,6)">冷気</td>
+  </tr>
+  <tr>
+    <td class="txt-center">6</td>
+    <td data-title="ムシ(1,2)">触手</td>
+    <td data-title="ケモノ(3,4)">咆哮</td>
+    <td data-title="ミュータント(5,6)">腐敗</td>
+  </tr>
+</table>
+
+### キズモノ{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/scar-wound.svg" width="50" height="50"/>
+<img width="100" src='../assets/images/kizu.png' style="display:block;"/>
+<!-- <p>経験に裏打ちされたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scar-wound.svg"/></div>
+    <div>銀の腕</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">あなたはダメージを受ける時、先にそのダメージの命中部位を決める。＜キズ＞の部位に攻撃が命中した場合、そのダメージを無効化する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scar-wound.svg"/></div>
+    <div>克服</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">ギャップを2列塗りつぶすことができる。塗りつぶされたギャップは代用判定の際数えない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scar-wound.svg"/></div>
+    <div>肉を斬らせて</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>4</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《耐える》</div>
+  </div>
+  <div class="card-content">自身が部位ダメージを受けた時に使用できる。指定特技の判定に成功すると自身は追加行動を得る。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scar-wound.svg"/></div>
+    <div>悪運</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>なし</div>
+  </div>
+  <div class="card-content">対象の判定の直後に使用。サイコロ1つの出目をマイナス1する。シナリオ3回。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scar-wound.svg"/></div>
+    <div>リハビリ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">＜キズ＞に隣接する8つのアクションの《特技》から１つ選び追加で習得する。このアクションは使用可能になる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scar-wound.svg"/></div>
+    <div>刺し違え</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《撃つ》</div>
+  </div>
+  <div class="card-content">あなたが部位ダメージを受けた時に割り込んで使用する。指定特技の判定に成功すると、対象に、受けた部位ダメージと同じ部位ダメージを与える。</div>
+</div>
+
+### センシ{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/fighter.svg" width="50" height="50"/>
+<img width="100" src='../assets/images/sensi.png' style="display:block;"/>
+<!-- <p>経験に裏打ちされたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/fighter.svg"/></div>
+    <div>渾身撃</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>自由</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると対象に[装備している武器1つの攻撃力+3]点のダメージを与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/fighter.svg"/></div>
+    <div>追撃</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。命中した攻撃のダメージを1増加させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/fighter.svg"/></div>
+    <div>切り返し</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>なし</div>
+  </div>
+  <div class="card-content">命中判定の直後に使用する。その判定を振り直す。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/fighter.svg"/></div>
+    <div>急所狙い</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。その攻撃によるダメージは軽減されない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/fighter.svg"/></div>
+    <div>なぎ払い</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>3体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《振る》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、3体までの対象に装備中の武器1つの[攻撃力]点のダメージを与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/fighter.svg"/></div>
+    <div>一刀流</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">装備している武器が1つだけの場合、武器の攻撃力が1点増加する。</div>
+</div>
+
+### スカウト{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/scout.svg" width="50" height="50"/>
+<img width="100" src='../assets/images/sukauto.png' style="display:block;"/>
+<!-- <p>経験に裏打ちされたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scout.svg"/></div>
+    <div>偵察</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>全体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《見つける》</div>
+  </div>
+  <div class="card-content">ランダムエンカウントの表を振る直前に使用する。指定特技の判定に成功すると、表を振った後に、その遭遇を無視できるようになる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scout.svg"/></div>
+    <div>マルチワーク</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《休まない》</div>
+  </div>
+  <div class="card-content">探索フェイズの行動前に使用する。判定に成功すると、行動を2回行うことができる。同じ行動を選んでもよい。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scout.svg"/></div>
+    <div>とんずら</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>全体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《逃げる》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、味方を好きなだけ選んで（自身含む）戦闘から撤退させることができる。ただし、この判定の達成値にはマイナス[自身以外に撤退させる人数]の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scout.svg"/></div>
+    <div>踏破</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">突破判定及び探索表による判定の達成値にプラス1の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scout.svg"/></div>
+    <div>先手必勝</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">先制判定の達成値にプラス1の修正がつく。先攻で攻撃した場合のみ、あなたの与えるダメージにプラス1の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/scout.svg"/></div>
+    <div>小器用</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">あなたは補助タイプの特技を2つまで組み合わせられるようになる。</div>
+</div>
+
+### ハンター{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/hunter.svg" width="50" height="50"/>
+<img width="100" src='../assets/images/hunter.png' style="display:block;"/>
+<!-- <p>経験に裏打ちされたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hunter.svg"/></div>
+    <div>毒矢</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《撃つ》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、1点のダメージを与える。その結果対象の【体力】が減少した場合、対象に『毒』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hunter.svg"/></div>
+    <div>狙い撃ち</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。攻撃が命中した時、命中する部位が必ず任意となる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hunter.svg"/></div>
+    <div>罠設置</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《罠》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に『捕縛』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hunter.svg"/></div>
+    <div>打込み</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。攻撃が命中した時、対象に『重傷』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hunter.svg"/></div>
+    <div>火炎瓶</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《投げる》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に『炎上』の変調と1点のダメージを与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hunter.svg"/></div>
+    <div>影牢</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《追い込む》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、[対象が受けている変調]点のダメージを与える。</div>
+</div>
+
+### ハカセ{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/hakase.svg" width="50" height="50"/>
+<img width="100" src='../assets/images/hakase.png' style="display:block;"/>
+<!-- <p>経験に裏打ちされたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hakase.svg"/></div>
+    <div>観察眼</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《考える》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に『暴露』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hakase.svg"/></div>
+    <div>弱点看破</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《見つける》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、そのラウンドの間、味方の与えるダメージは軽減されない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hakase.svg"/></div>
+    <div>戦術</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>全体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">先制判定に組み合わせて使用する。先制判定の達成値にプラス1の修正がつく。先制判定に成功した場合、味方全員が先攻で行動できる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hakase.svg"/></div>
+    <div>爆発物</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>4</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>全体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《科学》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると敵全体に2点のダメージを与える。判定に失敗した場合、味方全員に2点のダメージを与える。この攻撃によるダメージは軽減できない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hakase.svg"/></div>
+    <div>応用と実践</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">あなたの特技リストは技術と環境の分野が繋がっているものとして扱うことができる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hakase.svg"/></div>
+    <div>ピタゴラ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《地理》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、ラウンドの終了時に対象に2点のダメージを与える。この攻撃によるダメージは軽減できない。周囲の環境を利用した攻撃を行う。</div>
+</div>
+
+### ショクニン{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/shokunin.svg" width="50" height="50"/>
+<img width="100" src='../assets/images/syokunin.png' style="display:block;"/>
+<!-- <p>経験に裏打ちされたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/shokunin.svg"/></div>
+    <div>改造</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>アイテム</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《作る》</div>
+  </div>
+  <div class="card-content">武器1つを対象にする。指定特技の判定に成功すると、セッション中その武器の攻撃力にプラス1の修正を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/shokunin.svg"/></div>
+    <div>愛刀</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">装備している武器1つを愛刀として指定する。愛刀を使った命中判定の達成値にプラス1の修正がつく。さらに愛刀の[攻撃力]が1点増加する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/shokunin.svg"/></div>
+    <div>限界突破</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">武器を使用した攻撃の命中判定に組み合わせて使用する。攻撃に使用する武器の[攻撃力]を2倍にする。攻撃が終わった後、その武器は破壊される。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/shokunin.svg"/></div>
+    <div>目利き</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《鑑定》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、ランダムにアイテムを入手する時の表の出目にプラス1かマイナス1の修正をつけることができる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/shokunin.svg"/></div>
+    <div>修理</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>アイテム</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《耐える》</div>
+  </div>
+  <div class="card-content">武器が破壊される時に割り込んで使用する。指定特技の判定に成功した場合、1D6を振る。5か6の出目が出た場合、その武器を修理しすぐにもう一度装備する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/shokunin.svg"/></div>
+    <div>試作品</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《作る》</div>
+  </div>
+  <div class="card-content">食料・消耗品以外のアイテムを1つ消費する。指定特技の判定に成功すると、対象に1D6点のダメージを与える。</div>
+</div>
+
+### ホープ{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/hope.svg" width="50" height="50"/>
+<img width="100" src='../assets/images/kibou.png' style="display:block;"/>
+<!-- <p>経験に裏打ちされたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hope.svg"/></div>
+    <div>みなぎる力</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">あなたの【精神力】にプラス3する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hope.svg"/></div>
+    <div>希望の光</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>なし</div>
+  </div>
+  <div class="card-content">対象の判定の直後に使用。サイコロ1つの出目をプラス1する。シナリオ3回。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hope.svg"/></div>
+    <div>幸運の星</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">あなたの行う行為判定では出目が6,5の時にもスペシャルとなる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hope.svg"/></div>
+    <div>揺らぐ運命</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>なし</div>
+  </div>
+  <div class="card-content">対象の行為判定の直後に使用。その判定を振り直す。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hope.svg"/></div>
+    <div>努力</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《休まない》</div>
+  </div>
+  <div class="card-content">対象が何らかの表を振った直後に使用。その出目をプラス1かマイナス1する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/hope.svg"/></div>
+    <div>因果応報</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">回避判定に組み合わせて使用する。回避が成功した場合、あなたが受ける予定の攻撃の対象を攻撃者に移し替える。</div>
+</div>
+
+### ママ{.break-verso}
+
+<div style="display:flex">
+ <img src="../assets/images/icon/mama.svg" width="50" height="50"/>
+<img width="100" src='../assets/images/mama.png' style="display:block;"/>
+<!-- <p>経験に裏打ちされたアビリティを習得できます。</p> -->
+</div>
+
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/mama.svg"/></div>
+    <div>声援</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《伝える》</div>
+  </div>
+  <div class="card-content">自分以外の判定の直前に使用する。指定特技の判定に成功すると対象の達成値にプラス2の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/mama.svg"/></div>
+    <div>ごちそう</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>全体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《料理》</div>
+  </div>
+  <div class="card-content">人数分の食料を消費する。指定特技の判定に成功すると全員の【気力】が1D6点増加し、【体力】が1点増加する。戦闘中は使用できない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/mama.svg"/></div>
+    <div>激励</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《叫ぶ》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると対象の【気力】が3点増加する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/mama.svg"/></div>
+    <div>ちちんぷいぷい</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《手当》</div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象の【体力】が3点増加する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/mama.svg"/></div>
+    <div>節約</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>アイテム</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>-</div>
+  </div>
+  <div class="card-content">自身が消耗品を使用した時に、1D6を振る。5か6が出た場合、そのアイテムは失われない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/mama.svg"/></div>
+    <div>なだめる</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>指定特技</div>
+    <div>《止める》</div>
+  </div>
+  <div class="card-content">対象が本気状態を宣言した時に使用する。指定特技の判定に成功すると、そのラウンドの間、＜ヌシ＞は本気状態になれない。</div>
+</div>
+<!---->
+
+## アイテム{#items .break-verso }
+
+<p>アイテムには以下の要素があります。</p>
+<table class="chart" id="item-element-summary">
+  <tbody> 
+    <tr>
+      <th>名前  
+        <td>アイテム名。</td> 
+      </th>
+    </tr>
+    <tr>
+      <th>価格  
+        <td>アイテムの価格。単位はJ(ジャーキー)。</td> 
+      </th>
+    </tr>
+    <tr>
+      <th>重量  
+        <td>アイテムの重量。単位はW。【所持限界】までのアイテムを持てる。</td> 
+      </th>
+    </tr>
+    <tr>
+      <th>タイプ  
+        <td>タイプによって使用タイミングが決まる。装備、支援、割込み、道具の4つ。</td> 
+      </th>
+    </tr>
+    <tr>
+      <th>部位  
+        <td>アイテムの装備部位。同部位に装備できるアイテムは1つ。</td> 
+      </th>
+    </tr>
+    <tr>
+      <th>指定特技  
+        <td>アイテムを使うために必要な判定の《指定特技》。</td> 
+      </th>
+    </tr>
+    <tr>
+      <th>対象  
+        <td>アイテムの効果の対象。</td> 
+      </th>
+    </tr>
+    <tr>
+      <th>特性  
+        <td>アイテムの特性。武器、防具、袋など。</td> 
+      </th>
+    </tr>
+    <tr>
+      <th>効果  
+        <td>アイテムの効果。</td> 
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<dl class="small-dl">
+  <dt>名前</dt>
+  <dd>アイテムの名前です。</dd>
+  <dt>価格</dt>
+  <dd>アイテムの価格です。単位は1Jで表されています。</dd>
+  <dt>重量</dt>
+  <dd>
+    アイテムの重量です。重量1=1Wと略すこともあります。キャラクターは総重量が【所持限界】までの所持品を持ち運ぶことができます。
+    所持品とは装備していないアイテムのことを指します。
+  </dd>
+  <dt>タイプ</dt>
+  <dd>装備、支援、割込み、道具の4つのタイプがあります。
+    <dl>
+      <dt>装備タイプ</dt>
+      <dd>
+        装備している限り常に効果を発揮します。装備しているアイテムの重量は【所持限界】から無視されます。</dd>
+      <dt>支援タイプ</dt>
+      <dd>探索フェイズや戦闘中の自分の手番に使います。支援タイプのアイテムを使用すると行動済みになります。</dd>
+      <dt>割込みタイプ</dt>
+      <dd>
+        誰かの行動に割りこんで使います。同じ名前の割込みタイプのアイテムは、1サイクル（戦闘中ならば1ラウンド）1個のみ使えます。
+        ただし消耗品は、同じ名前のアイテムを1サイクルに複数個使えます。
+      </dd>
+      <dt>道具タイプ</dt>
+      <dd>所持していると判定に有利になることがあります。</dd>
+    </dl>
+  </dd>
+  <dt class="break-page">部位</dt>
+  <dd>装備タイプのアイテムには装備する部位が書かれています。
+    <ul> 
+      <li>同じ部位に2つのアイテムを装備することはできません。</li>
+      <li>片手には装備する代わりに、任意のタイプのアイテムを1つ持つこともできます。</li>
+      <li>片手に持ったアイテムの重量は所持限界から無視されます。</li>
+    </ul>
+  </dd>
+  <dt>指定特技</dt>
+  <dd>
+    アイテムを使用するために判定が必要な特技です。「-」の場合、判定をすることなく効果を発揮します。
+      2つ以上の《指定特技》の場合、どちらの特技を使用しても構いません。
+  </dd>
+  <dt>対象</dt>
+  <dd>アイテムの効果の対象です</dd>
+  <dt>特性</dt>
+  <dd>アイテムの特性です。下記に特殊な処理が必要な特性を記載します。
+    <dl>
+      <dt>武器</dt>
+      <dd>武器です。《指定特技》の判定に成功すると対象に[攻撃力]点のダメージを与えます。 </dd>
+      <dt>袋</dt>
+      <dd>
+        <ul>
+          <li>このアイテムは所持しているだけで効果を発揮します。</li>
+          <li>袋の中に入れたアイテムの重量を所持限界から無視します。</li>
+          <li>袋の中に入れた袋は上記の効果を発揮しません。</li>
+          <li>袋の中に入れたアイテムを戦闘中に使用することはできません。</li>
+          <li>戦闘中に袋からアイテムを取り出す行為は支援行動です。</li>
+        </ul>
+      </dd>
+      <dt>収納不可</dt>
+      <dd>このアイテムは袋の中に入れることができません。</dd>
+      <dt>食料</dt>
+      <dd>食料です。食料として使用すると失われます。</dd>
+      <dt>消耗品</dt>
+      <dd>使用回数がない場合、一度使用すると失われます。</dd>
+      <dt>充電</dt>
+      <dd>
+        使用するには充電が必要です。 使用回数がない場合、一度充電したらセッション終了まで使用できます。</dd>
+      <dt>使用回数：x</dt>
+      <dd>
+        消耗品ならば、x回使用すると失われます。充電ならば、x回使用すると再度充電が必要です。
+      </dd>
+      <dt>購入不可</dt>
+      <dd>探索やドロップにより手に入るアイテムです。GMが特別に許可した場合を除き、購入はできません。</dd>
+    </dl>
+  </dd>
+  <dt>効果</dt>
+  <dd>アイテムの効果です。</dd>
+</dl>
+
+### アイテム一覧 {#items-list .break-verso }
+
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ジャーキー</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>食料</div>
+    </div>
+  </div>
+  <div class="card-content">1日分の食料。【気力】が1点増加する。通貨単位J。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>缶詰</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>10</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>食料</div>
+    </div>
+  </div>
+  <div class="card-content">缶詰1つ。文明の味。【気力】が【精神力】点増加する。通貨単位10J=1C。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ベルトポーチ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>袋</div>
+    </div>
+  </div>
+  <div class="card-content">総重量4まで袋の中にアイテムを入れることができる。袋の中のアイテムの重量は所持限界から無視する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>リュックサック</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>袋</div>
+    </div>
+  </div>
+  <div class="card-content">総重量10まで袋の中にアイテムを入れることができる。袋の中のアイテムの重量は所持限界から無視する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>大きなリュック</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>10</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>袋</div>
+    </div>
+  </div>
+  <div class="card-content">総重量20まで袋の中にアイテムを入れることができる。袋の中のアイテムの重量は所持限界から無視する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>肩掛けカバン</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>袋</div>
+    </div>
+  </div>
+  <div class="card-content">総重量4まで袋の中にアイテムを入れることができる。袋の中のアイテムの重量は所持限界から無視する。戦闘中でも袋の中のアイテムを使用できる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>手提げかばん</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>袋</div>
+    </div>
+  </div>
+  <div class="card-content">総重量5まで袋の中にアイテムを入れることができる。袋の中のアイテムの重量は所持限界から無視する。戦闘中でも袋の中のアイテムを使用できる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>トランクケース</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>7</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《殴る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>両手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>袋、武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力3。総重量5まで袋の中にアイテムを入れることができる。袋の中のアイテムの重量は所持限界から無視する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>棍棒</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《殴る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力1。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>バール</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>4</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《殴る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力2。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>槍</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>4</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>4</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《刺す》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>両手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵、収納不可</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力3。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ナタ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《斬る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力3。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ハンマー</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《殴る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>両手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力4。硬くて長くて重たいの。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>農具</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>15</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《振る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>両手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵、収納不可</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力5。死神が振るうような鎌、或いは、大地を耕す鍬。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ダガーナイフ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《刺す》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力1。先制判定の達成値にプラス1の修正がつく。この武器は割込みのタイミングで装備できる。取り回しやすい本格的なナイフ。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>カタナ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>15</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《斬る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力4。命中判定でスペシャルを振った場合、攻撃力にプラス1D6する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ほうちょう</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《斬る》《刺す》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力1。この武器は割込みのタイミングで装備できる。この武器は破壊して死亡判定をキャンセルできない。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>手斧</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《斬る》《投げる》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、射撃</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力2。《投げる》を使って判定した場合、手元から失われる。支援行動で回収できる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>杭</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>7</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《刺す》《跳ぶ》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力2。くい。突き刺す武器。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>斧</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>4</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《斬る》《振る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力3。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>鎖</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《振る》《捕らえる》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力3。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>シャベル</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>4</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《殴る》《斬る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>両手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力3。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ツルハシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>9</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《刺す》《振る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>両手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力4。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>百科事典</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>9</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《殴る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力2。所持していると《雑学》の判定の達成値にプラス1の修正がつく。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>スリング</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《投げる》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>両手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、射撃</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力2。投石器。弾にする石は何処でも手に入るため明記不要。石以外も投げることができる。装備している間、回避判定にプラス1の修正がつく。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ボウガン</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《撃つ》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>両手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、射撃</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力3。矢が必要。装備している間、回避判定にプラス2の修正がつく。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>スタンガン</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《殴る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵、充電、使用回数：1</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力2。この武器によるダメージは軽減されない。さらに、『麻痺』の変調を与える。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>剥ぎ取りナイフ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>9</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《斬る》《刺す》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力2。ドロップ表の結果にプラス1の修正がつく。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>追打茨のムチ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>12</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《振る》《捕らえる》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力3。変調を持つ相手へのダメージをプラス1。変調が2つなら+3、4つ以上で+6。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>血染桜のシャベル</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>12</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《殴る》《斬る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力3。自身の体力が1以下の時、攻撃力プラス3。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>疾風竹の槍</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>13</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《刺す》《跳ぶ》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力2。先攻での攻撃時、命中判定にプラス1と攻撃力にプラス2の修正がつく。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>なべぶた</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《殴る》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>武器、白兵、防具</div>
+    </div>
+  </div>
+  <div class="card-content">攻撃力0。回避判定の達成値にプラス1の修正がつく。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>なべ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>10</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>頭部</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>防具</div>
+    </div>
+  </div>
+  <div class="card-content">頭部分野の《身体部位》への部位ダメージをキャンセルすることができる。そうした場合、このアイテムを破壊する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>レザー</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>10</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>胴部</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>防具</div>
+    </div>
+  </div>
+  <div class="card-content">胴部分野の《身体部位》への部位ダメージをキャンセルすることができる。そうした場合、このアイテムを破壊する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ポケットジャケット</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>12</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>胴部</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="card-content">ポケットのたくさんついたジャケット。所持限界プラス1</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>籠手</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>10</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>腕部</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>防具</div>
+    </div>
+  </div>
+  <div class="card-content">腕部分野の《身体部位》への部位ダメージをキャンセルすることができる。そうした場合、このアイテムを破壊する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>安全ブーツ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>10</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>脚部</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>防具</div>
+    </div>
+  </div>
+  <div class="card-content">脚部分野の《身体部位》への部位ダメージをキャンセルすることができる。そうした場合、このアイテムを破壊する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>嗜好品</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>消耗品</div>
+    </div>
+  </div>
+  <div class="card-content">おやつやタバコなど。【気力】を2点増加させる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ライト</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>充電</div>
+    </div>
+  </div>
+  <div class="card-content">《探索》の達成値にプラス1の修正がつく。明るく照らす。暗闇のペナルティを打ち消す。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>バッテリー</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>消耗品</div>
+    </div>
+  </div>
+  <div class="card-content">あなたが装備しているか所持しているアイテム1つを「充電」できる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>トランシーバー</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《機械》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>充電</div>
+    </div>
+  </div>
+  <div class="card-content">キャンプの仲間と通信し、【気力】を2点増加させる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>携帯ラジオ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>全体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《操作》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>充電</div>
+    </div>
+  </div>
+  <div class="card-content">探索フェイズに使用可能。全員の【気力】を1D3点増加させる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>矢</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>消耗品、使用回数：10</div>
+    </div>
+  </div>
+  <div class="card-content">ボウガンの矢。これを所持していないとボウガンの効果をうけることができない。ボウガンで命中判定を行うごとに1消費する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>矢筒</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>袋</div>
+    </div>
+  </div>
+  <div class="card-content">名前に『矢』のつくアイテムを3束（使用回数30回分）まで入れることができる。袋の中のアイテムの重量は所持限界から無視する。戦闘中でも袋の中のアイテムを使用できる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>胡椒玉</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>消耗品</div>
+    </div>
+  </div>
+  <div class="card-content">スリングで投げることができる。攻撃の対象に『麻痺』の変調を与える。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>コカの葉</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>消耗品</div>
+    </div>
+  </div>
+  <div class="card-content">【体力】を2点増加させる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>なんこう</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>消耗品</div>
+    </div>
+  </div>
+  <div class="card-content">変調を１つ回復する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>鎮痛剤</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>消耗品</div>
+    </div>
+  </div>
+  <div class="card-content">【体力】を3点増加させる。変調を1つ回復する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>手書きのメモ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>消耗品</div>
+    </div>
+  </div>
+  <div class="card-content">対象に『暴露』の変調を与える。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ばんそうこう</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>消耗品</div>
+    </div>
+  </div>
+  <div class="card-content">【応急手当て】【ちちんぷいぷい】の効果プラス1。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ペット</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>10</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>食料</div>
+    </div>
+  </div>
+  <div class="card-content">【気力】を1D3点増加させる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ロープ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="card-content">丈夫なロープ。使い方次第で休憩しやすくなったり障害の突破に。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>たいまつ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>装備</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>片手</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>消耗品</div>
+    </div>
+  </div>
+  <div class="card-content">火をつけるには火付け道具が必要、戦闘中の点火は支援行動。効果は1サイクル。暗闇のペナルティを打ち消したり蜘蛛の巣を燃やしたり。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>火付け道具</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="card-content">マッチやライター、火打ち石とほくちのセットなどのこと。焚き火があれば休憩しやすくなる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>毛布</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="card-content">軽くて丈夫な毛布。寒い日の休憩には必須。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>寝袋</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="card-content">休憩をした時に増加する【気力】プラス1。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>ポリタンク</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="card-content">キャンプや水場で水を補充できる。水が補充されている場合、いつでもリミットの増加を試みることができる。一度使うと水はなくなる。空なら重量3、水を満タンにすると重量は8となる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>釣竿</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>7</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《待つ》</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="card-content">川や池を見つけた時に使用出来る。指定特技の判定に成功すると1Jを得る。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>なぞの葉</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>割込み</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>購入不可、消耗品</div>
+    </div>
+  </div>
+  <div class="card-content">使用するときに1D6を振る。出目が偶数の場合、【体力】が2点増加する。奇数の場合、2点のダメージを受ける。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>生肉</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>購入不可、食料</div>
+    </div>
+  </div>
+  <div class="card-content">お肉にくにく。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>硬い殻</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>購入不可</div>
+    </div>
+  </div>
+  <div class="card-content">武器・防具の材料に使える硬い殻</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>硬い羽</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>購入不可</div>
+    </div>
+  </div>
+  <div class="card-content">透き通った硬い羽。武器防具以外に窓ガラスの修理にも。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>毒針</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>購入不可</div>
+    </div>
+  </div>
+  <div class="card-content">毒は薬にも。針は武器や工具に使用される。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/item.svg"/></div>
+    <div>毛皮</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>道具</div>
+    </div>
+    <div class="tag">
+      <div>価格</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>重量</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>部位</div>
+      <div>-</div>
+    </div>
+    <div class="tag trait">
+      <div>特性</div>
+      <div>購入不可</div>
+    </div>
+  </div>
+  <div class="card-content">もふもふ</div>
+</div>
+<!---->
+
+<section id="check" class="break-verso">
+
+## 行為判定
+
+  <p>キャラクターが成功するか失敗するか分からない行動をとったときには行為判定を行います。</p>
+  <h3 id="check-flow">行為判定の流れ</h3>
+  <p>行為判定は以下の順番で行います。</p>
+  <h4>A:指定特技の決定</h4>
+  <p>
+    行為判定を行う場合、ゲームマスターがその行為判定に使うのにふさわしい特技を選んで決定します。これを《指定特技》といいます。
+    アビリティを使用するときの行為判定などは、
+    あらかじめルールで特技が指定されています。
+  </p>
+  <h4>B:特技の確認</h4>
+  <p>プレイヤーは、決定された特技を自分のキャラクターが習得しているかどうかを確認します。</p>
+  <p>
+    指定された特技を習得していなかった場合、習得している特技の中から、《指定特技》に最も近いものを探します。そして、探し出した特技をスタート地点として
+    《指定特技》まで上下左右に何マス離れているか数えて下さい。特技リストの各分野の
+    間にあるギャップも1マスと数えます。
+    ただし、塗りつぶされているギャップはないものとして扱います。
+  </p>
+  <p>こうして、習得している特技で別の特技の判定を行うことを、特技の代用による代用判定といいます。</p>
+  <h4>C:目標値の確認</h4>
+  <p>行為判定の目標値を算出します。目標値が高ければ高いほど、その行為判定は難しいことになります。</p>
+  <p>
+    行為判定の目標値は「5＋習得している特技から《指定特技》までのマス数」です。習得している特技が《指定特技》と同じ場合、マス数は0です。</p>
+  <h4>D:サイコロを振る</h4>
+  <p>
+    目標値の算出が終わったら2D6を振ります。その目が目標値以上であれば、行為判定は成功です。目標値未満の目が出た場合、行為判定は失敗です。</p>
+  <div class="diceroll-sample">
+    <div class="success"><code>2D6 ≧ 目標値</code> <span class="icon">成功！</span></div>
+    <div class="fail"><code>2D6 <  目標値 </code> <span class="icon">失敗！</span></div>
+  </div>
+  <p>このようにして行為判定で行動の成功と失敗が決まります。</p>
+  <p>また、行為判定には「修正」「特別な出目」「プレイヤーの提案」という3つの特例があります。</p>
+  <h3 id="check-adjusting">修正</h3>
+  <p>
+    成功しやすい行動や失敗しやすい行動には修正が発生する可能性があります。成功しやすい行動にはプラスの修正がつき、失敗しやすい行動にはマイナスの修正がつきます。</p>
+  <p>
+    判定に修正がついた場合、2D6の目に修正の値を加えます。2D6に修正を加えた値を達成値と呼びます。</p>
+  <p>達成値が目標値以上の場合、行為判定は成功となります。</p>
+  <h3 id="check-special"> 特別な出目</h3>
+  <p>
+    行為判定で特別な出目を出すと、特殊な状況が発生します。特殊な出目にはファンブルとスペシャルがあります。</p>
+  <h4>○ファンブル</h4>
+  <p>
+    行為判定で2D6の出目が2つとも1だった場合、ファンブルが発生します。ファンブルとは思いもよらぬ大失敗です。
+    修正により達成値が目標値以上になったとしても、
+    必ず行為判定は失敗になります。
+  </p>
+  <p>
+    命中判定や回避判定でのファンブルでは、さらに<a href="#fumble-attack">ファンブル表</a>を振りその効果を適用します。</p>
+  <p>判定へのマイナス修正によってファンブルが起こることはありません。</p>
+  <p>大失敗からは得るものも多いです。結果フェイズで、[ファンブル回数]点の経験点を得ます。ファンブルの回数はメモしておきましょう。</p>
+
+  <h4 class=" break-page">○スペシャル</h4>
+  <p>
+    行為判定の2D6の出目が2つとも6だった場合、スペシャルが発生します。スペシャルとは偶然に助けられた素晴らしい成功です。達成値が目標値未満だったとしても、
+    必ず行為判定は成功になります。
+  </p>
+  <p>スペシャルが発生した場合、【気力】が1D6点増加し、変調が1つ解除されます。</p>
+  <p>命中判定でのスペシャルでは、さらに <a href="#special-attack">命中判定スペシャル表</a> を振りその効果を適用します。</p>
+  <p>判定へのプラス修正によってスペシャルが起こることはありません。</p>
+
+  <caption>命中判定スペシャル表</caption>
+  <table>
+  <thead>
+    <tr>
+      <th>d6 
+        <th>説明</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>1</td>
+    <td>渾身の一撃！ 与えるダメージにプラス1D6されます。</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>スキマを直撃！この攻撃によるダメージは軽減されません。</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>鋭い太刀筋！ 武器の攻撃力を2倍としてダメージを算出します。</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>強力な一撃が相手を揺るがす！ 対象に『転倒』の変調を与えます。</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>みなぎる力！【気力】が1D6点増加します。</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>チャンス！ あなたは追加行動を得ます。</td>
+  </tr>
+</table>
+  
+  <h3 id="check-pl-proposal" class="break-page">プレイヤーの提案</h3>
+  <p>プレイヤーは、ロールプレイによって《指定特技》の変更を提案することができます。</p>
+  <p>プレイヤーは、まずキャラクターが特技をどのように使って技能判定を行うか、具体的に説明します。</p>
+  <p>
+    ゲームマスターが説明に納得した場合、《指定特技》は変更されます。また説明の内容によっては、修正をいれて判定を行わせることもできます。
+    相応しいロールプレイを行い、行為判定の処理を続けてください。
+    納得できなかった場合、
+    ゲームマスターは提案を拒否することができます。
+  </p>
+  <p>
+    例1：撤退判定を行う時、プレイヤーから周囲に物が多いので《指定特技》を《隠れる》に変更できないか、と提案されました。戦闘が障害物の多い建物で行われていたため、GMは納得し、指定特技の変更を許可します。PCは棚の後ろに隠れ、屈みこんでやり過ごして逃げて行きました。</p>
+  <p>
+    例2：撤退判定を行う時、プレイヤーから周囲に茂みが多いので《指定特技》を《隠れる》に変更できないか、と提案されました。戦闘が森の中で行われていますが、音の立てやすい茂みに隠れてやり過ごすのは難しいと感じたため、マイナス3の修正で《隠れる》で判定することを許可しました。</p>
+  <h3 id="check-when"  class="break-page">判定するときしないとき</h3>
+  <p>ゲームマスターは、セッションが楽しくなるように、判定を行うかどうか判断します。</p>
+  <h4>判定するとき</h4>
+  <ul> 
+    <li>キャラクターが成功するか失敗するか分からない行動をとったとき</li>
+    <li>ダイスを振ったほうが盛り上がるとき</li>
+  </ul>
+  <h4>判定しないとき</h4>
+  <ul> 
+    <li>キャラクターの行動が確実に成功するとき</li>
+    <li>キャラクターの行動が確実に失敗するとき</li>
+    <li>キャラクターの行動の成否が問題にならないとき</li>
+    <li>ダイスを振っても盛り上がらないとき</li>
+  </ul>
+</section>
+
+  <section id="session" class="break-verso">
+    <hgroup>
+      <h1 id="session-title">セッション</h1>
+      <p>一回のゲームのことをセッションと呼びます。</p>
+      <p>
+        セッションは、いくつかのフェイズに分かれています。
+        各フェイズは順番に進行していきます。
+      </p>
+      <ol>
+        <li>キャンプフェイズ</li>
+        <li>探索フェイズ</li>
+        <li>決戦フェイズ</li>
+        <li>結果フェイズ</li>
+      </ol>
+    </hgroup>
+  </section>
+
+<section id="cycle">
+  <hgroup>
+    <h1 id="session-cycle-title">サイクル</h1>
+    <p>
+      このゲームでは、セッション中のプレイヤーの行動機会を均等にするために、
+      サイクルという概念を使用します。
+      基本的に、各プレイヤーは1サイクルに1回、主要な行動を行えます。
+      どんな行動ができるかはフェイズによって異なります。仲間と相談したり、
+      周囲の様子を確かめたりといった簡単な行動には、回数の制限はありません。
+    </p>
+    <p>
+      サイクル中に行動を行うプレイヤーの順番は、それぞれのフェイズのルールで決めます。
+      同じタイミングで行動を行うプレイヤーが複数いる場合には、
+      その順番はプレイヤー間で相談して決めます。
+    </p>
+    <p>行動はプレイヤー1人ごとに処理します。</p>
+    <p>
+      全プレイヤーの行動が終了した時に、サイクルは終了します。そして、また新しいサイクルが
+      はじまり、プレイヤー全員が1回ずつ主要な行動をとれます。
+    </p>
+    <div style="display:flex;flex-wrap:wrap;align-items: flex-start;"><img src="../assets/images/monster/tinurekarasu.png" width="150" alt="イメージ画像：チヌレガラス" title="チヌレガラス @hagure_g 様作"><img src="../assets/images/monster/onitombo.png" width="200" alt="イメージ画像：オニトンボ" title="オニトンボ @hagure_g 様作"></div>
+    <h3 id="session-cycle-ready-done">未行動と行動済み</h3>
+    <p>サイクル中にキャラクターが行動を終わらせた後の状態のことを、行動済みと呼びます。</p>
+    <p>
+      行動を終わらせていないキャラクターは未行動という状態です。
+      未行動のキャラクターは、そのサイクルにまだ行動をとることができます。
+    </p>
+    <p>新しいサイクルが始まった時に、行動済みのキャラクターは全員が未行動になります。</p>
+  </hgroup>
+</section>
+
+<section id="campF" class="break-page">
+  <hgroup>
+    <h2 id="campF-title">キャンプフェイズ</h2>
+    <p>
+      冒険者のキャンプでの行動を処理するフェイズです。
+      このフェイズでは事件の発端と探索の準備を行います。
+    </p>
+    <h3 id="campF-prologue">プロローグ</h3>
+    <p>
+      キャンプフェイズが始まったら、GMはプロローグの処理を行います。
+      ここでは、シナリオの背景や＜フィールド＞へ冒険者たちが向かうための動機を描写します。
+      また、探索フェイズが何サイクルで終了するかのリミットを伝えて下さい。
+    </p>
+    <p>
+      主な動機として、物資の調達、他のキャンプへの護衛、迷い込んだ仲間の救出、＜フィールド＞の
+      拡大を防ぐなどが考えられるでしょう。
+    </p>
+    <p>
+      シナリオによっては判定や戦闘を行なえます。探索に出るまでの経緯を簡単に説明するだけでもよいです。
+    </p>
+
+<h3 id="campF-actions">行動の処理</h3>
+<p>プロローグが終了すると、各キャラクターは探索の準備をすることができます。</p>
+<p>
+  行動の処理は1サイクルです。
+  各キャラクターは以下の行動から1つ選んで行動の処理を行なって下さい。
+</p>
+
+<dl>
+<dt>散策</dt>
+<dd>
+2D6を振って、散策表の結果を適用します。
+複数人が散策を行い、同じ結果が出た場合、表の効果は重複します。
+
+<table class="chart" id="walking">
+<caption>散策表</caption>
+<thead>
+<tr>
+<th>2d6 
+<th>結果</th> 
+</th>
+</tr>
+</thead>
+<tr>
+<td>2</td>
+<td>出発前の宴だ！カンパーイ！全員の【体力】が2点増加します。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>キャンプの仲間に成長の兆しがみえます。結果フェイズで人材を獲得する際の必要CPが-1されます。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>今回の＜ヌシ＞にキャンプの仲間がやられたことがあります。セッション中に一度だけ、＜ヌシ＞へのダメージ決定時にダメージを2点増加させることができます。また、あなたの攻撃で＜ヌシ＞が死亡した場合、あなたは経験点を1点獲得します。ダメージを1点も与えることができなかった場合、あなたの獲得できる経験点は1点減少します。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>キャンプに新たな仲間が増えました。名前をつけてあげてと頼まれます。【気力】が2D6点増加します。</td>
+</tr>
+<tr>
+<td>6</td>
+<td>子供たちが元気に遊んでいるところに遭遇しました。【気力】が1D6点増加します。</td>
+</tr>
+<tr>
+<td>7</td>
+<td>キャンプに食料が足りていないことを相談されます。セッション中に食料を5個手に入れるたび、全員の【気力】が1点増加します。また、10個以上手に入れた場合、全員は経験点を1点獲得します。1つも手に入れられなかった場合、全員の獲得できる経験点が1点減少します。</td>
+</tr>
+<tr>
+<td>8</td>
+<td>配給係から食料を多めに準備してもらえました。リミットが1サイクル増加します。</td>
+</tr>
+<tr>
+<td>9</td>
+<td>キャンプの奥から掘り出しものが出て来ました。1D6を振り、1、2ならバッテリー、3、4なら1J、5ならほうちょう、6なら缶詰を手に入れます。</td>
+</tr>
+<tr>
+<td>10</td>
+<td>他のキャンプから商人がやってきています。結果フェイズで報酬獲得後、任意個のアイテムを取引できます。</td>
+</tr>
+<tr>
+<td>11</td>
+<td>キャンプの大工が張りきっています。結果フェイズで獲得する施設の必要CPが-1されます。ただし１未満にはなりません。</td>
+</tr>
+<tr>
+<td>12</td>
+<td>嵐の気配。キャンプの補修に使える材料を集めてきて欲しいと頼まれます。結果フェイズに1CPを消費して嵐への備えを行えます。嵐への備えができない場合、キャンプの施設が1つランダムに破壊されます。また、このセッション中、探索フェイズで行える行動に＜資材集め＞が追加されます。＜資材集め＞は支援行動として扱い、《探索》の判定に成功するとCPを1点得ることができます。</td>
+</tr>
+</table>
+
+</dd>
+<dt >施設の利用</dt>
+<dd>キャンプにある施設の効果を使用します。</dd>
+<dt>人材の利用</dt>
+<dd>キャンプにいる人材の効果を使用します。</dd>
+<dt>アビリティなどの使用</dt>
+<dd>タイプが支援のアビリティやアイテムを使用します。</dd>
+<dt>パス</dt>
+<dd>特に何もしません。</dd>
+</dl>
+  </hgroup>
+</section>
+<img src="../assets/images/monster/koumoriinu.png" width="200" alt="イメージ画像：コウモリイヌ" title="コウモリイヌ @hagure_g 様作" />
+
+<img src="../assets/images/monster/zombi.png" width="200" alt="イメージ画像：ゾンビ" title="ゾンビ @hagure_g 様作" />
+
+<section id="exploration" class="break-verso">
+  <hgroup>
+    <h2 id="exploration-title">探索フェイズ</h2>
+    <p>
+      探索フェイズは、キャンプから目的の＜フィールド＞に侵入し、
+      訪れる場所である＜チェックポイント＞ごとに障害の突破と探索を繰り返すフェイズです。
+    </p>
+    <p>
+      探索フェイズにはリミットが存在し、
+      プロローグで伝えられたリミットのサイクルが経過すると終了します。
+      冒険者は探索フェイズの終了までに＜チェックポイント＞を辿り、
+      ＜ヌシ＞のいる所まで辿り着いてください。
+    </p>
+    <p>
+      探索フェイズの1サイクルは「移動」→「描写」
+      →「行動の処理」の順に処理を行います。探索フェイズの1サイクルで経過する時間は
+      およそ1日が目安です。GMの任意で1サイクルの時間は自由に調整してかまいません。
+    </p>
+    <p>GMは <a href="https://create-now.vercel.app/lostrpg/public/ja/scenario?id=gCEg1GNpTmbkjPwy1g8g" target="_brank">サンプルシナリオ2:嵐の濁流</a>のチャートも参考にしてください。（※PLはネタバレ注意)</p>
+
+<h3 id="exploration-move">移動</h3>
+<p>
+  隣接する＜チェックポイント＞へ移動します。
+  ただし、その間に＜障害＞が設置されている＜チェックポイント＞への移動は行えません。
+</p>
+<p>
+  移動の際には敵の遭遇が発生する可能性があります。
+  GMはランダムエンカウント表Aを振り、その結果を適用してください。
+</p>
+<p>
+  移動はパスすることもできます。その場合ランダムエンカウントは発生しません。
+  障害の突破が行えなかったなどの理由で、次の＜チェックポイント＞に向かえない時には移動をパスしてください。
+</p>
+
+<br>
+
+<table class="chart" id="table-randomencountA">
+<caption>ランダムエンカウント表A</caption>
+<thead>
+<tr>
+<th>d6 
+<th>説明</th> 
+</th>
+</tr>
+</thead>
+<tr>
+<td>1</td>
+<td>ツノウサギ[1D6+PT人数]体と戦闘になります。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ナガムカデ[1D3]体と戦闘になります。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ヨロイバチ[PT人数÷2]体と戦闘になります。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ゾンビ[1D6]体と戦闘になります。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>オニトンボ[1D6+PT人数]体と戦闘になります。</td>
+</tr>
+<tr>
+<td>6</td>
+<td>ランダムエンカウント表Bを振ります。</td>
+</tr>
+</table>
+<table class="chart" id="table-randomencountB">
+<caption>ランダムエンカウント表B</caption>
+<thead>
+<tr>
+<th>d6 
+<th>説明</th> 
+</th>
+</tr>
+</thead>
+<tr>
+<td>1</td>
+<td>なにもなし</td>
+</tr>
+<tr>
+<td>2</td>
+<td>デブドリ[1d6]体と戦闘になります</td>
+</tr>
+<tr>
+<td>3</td>
+<td>冒険商人と出会います。1人1つアイテムを買うことができます。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>他の冒険者と出くわし、語らいます。全員【気力】が1D6点増加します。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>屍を見つけます。ほうちょうを1つ手に入れます。</td>
+</tr>
+<tr>
+<td>6</td>
+<td>休憩できる「水場：リミット増加用オブジェクト」を見つけます。全員【体力】が1点増加します。</td>
+</tr>
+</table>
+
+<div style="display:flex;flex-wrap:wrap;align-items: flex-start;"><img src="../assets/images/monster/debudori.png" width="80" alt="イメージ画像：デブドリ" title="でぶどり  @eugle777 様作"><img src="../assets/images/monster/tsunousagi.png" width="60" alt="イメージ画像：ツノウサギ" title="ツノウサギ @hagure_g 様作"><img src="../assets/images/monster/haganekabuto.png" width="150" alt="イメージ画像：ハガネカブト" title="ハガネカブト @hagure_g 様作"></div>
+<h2 id="exploration-view"class="break-page">描写</h2>
+<p>
+  ＜チェックポイント＞の描写を行います。
+  ＜チェックポイント＞とは、＜フィールド＞に存在する構造物や地形で、
+  冒険者たちが訪れる場所のことです。
+  GMは＜チェックポイント＞がどのような場所か、何があるか、道はどちらに続いているか、
+  どんな生き物がいるか、などの説明をします。
+</p>
+<p>
+  その場所にいる生き物によっては戦闘になる可能性もあります。
+  また、他の冒険者や行商人などとは交渉が発生する場合もあります。
+</p>
+<p>場所によっては特殊な効果が発生することもあります。例えば、寒い場所なので行為判定マイナス1、花畑なので休憩時【気力】プラス1などです。</p>
+<p>風景描写・戦闘・交渉などが終わったら、行動の処理になります。</p>
+<div style="display:flex;flex-wrap:wrap;align-items: flex-start;margin-top:2mm"><img src="../assets/images/monster/nagamukade.png" width="100" alt="イメージ画像：ナガムカデ" title="ナガムカデ @hagure_g 様作"><img src="../assets/images/monster/yoroibachi.png" width="100" alt="イメージ画像：ヨロイバチ" title="ヨロイバチ @hagure_g 様作"></div>
+<h3 id="exploration-actions" class="break-page">行動の処理</h3>
+<p>
+  各キャラクターは以下の行動から１つ選んで、
+  行動の処理を行います。
+</p>
+<dl class="table-dl">
+  <dt>障害の突破</dt>
+  <dd>障害の突破を試みます。</dd>
+  <dt>探索</dt>
+  <dd>森の探索を行いアイテムを入手します。</dd>
+  <dt>休憩</dt>
+  <dd>休んで【気力】を増加させます。</dd>
+  <dt>支援行動</dt>
+  <dd>
+    支援タイプのアビリティやアイテムを使用します。
+    または、GMが支援行動とみなした行動を行います。
+  </dd>
+  <dt>オブジェクトへの接触</dt>
+  <dd>
+    ＜チェックポイント＞にあるオブジェクトに対して行動します。
+    オブジェクトとは、木や建物、人物や動物などGMがオブジェクトとして設定したものをいいます。
+    オブジェクトへの接触で何が起こるかはGMが決めます。
+  </dd>
+  <dt>パス</dt>
+  <dd>特に何もしません。</dd>
+</dl>
+<h3 class="break-page" id="exploration-actions-toppa">■障害の突破</h3>
+<h4>＜障害＞</h4>
+<p>
+  GMは新たな＜チェックポイント＞へ続く道に任意の数の＜障害＞を設置できます。
+  ＜障害＞ごとに突破するための《指定特技》を決定してください。
+  同じ＜障害＞を複数設置することも可能です。
+  また、2つの道を塞ぐように＜障害＞を設置することも可能です。
+</p>
+<h4>突破</h4>
+<p>
+  冒険者は、＜障害＞に設定された《指定特技》の判定に成功することで、
+  障害を1つ突破できます。これを突破判定と呼びます。
+</p>
+<p>
+  新たな＜チェックポイント＞への道に設置された＜障害＞が全て突破されるまで、
+  その＜チェックポイント＞へは移動できません。＜障害＞が全て突破された時、GMは
+  道の先の＜チェックポイント＞の簡単な説明をしてください。
+  道の先に＜ヌシ＞がいる場合、そのことも伝えて下さい。
+</p>
+<h4>《指定特技》の変更</h4>
+<p>
+  プレイヤーは、突破判定の《指定特技》の変更を提案することができます。
+  GMはその提案を聞き、納得した場合、《指定特技》を提案されたものに変更します。
+</p><img src="../assets/images/mother/in_the_car.jpg" width="400" alt="イメージ画像" title="廃車であそぼ  はぐれけだま様作">
+<h3  class="break-page" id="exploration-actions-explorer">■探索</h3>
+<h4>アイテムの探索</h4>
+<p>2D6を振り、探索表の結果を適用します。</p>
+
+  <table class="chart" id="table-explorer">
+    <caption>探索表</caption>
+    <thead>
+      <tr>
+        <th>2d6 
+          <th>説明</th> 
+        </th>
+      </tr>
+    </thead>
+    <tr>
+      <td>2</td>
+      <td>侵食がすすまず、そのままキャンプの施設に使えそうな建物を発見する。 問題は、ここまで道が引けるかだが……。《地理/環境2》の判定に成功すると、 現在キャンプにある施設1つのレベルを上げることができる。</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>これは、施設の材料に使えるんじゃないか？ 《雑学/技術6》の判定に成功すると、CPを1点得る。</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>「シェルター：リミット増加用オブジェクト」を見つける。 ここでは休憩がしやすそうだ。《休む/環境7》の判定に成功すると、休憩表を振ってその効果を適用した上に、【体力】が1点増加する。</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>「泉：リミット増加用オブジェクト」をみつける。泉にはかつての民家が水没している。その底にきらり光るものが。 《泳ぐ/脚部2》の判定に成功した場合、1D6をふる。出目が1～3の場合、棍棒を1個手に入れる。4,5の場合、なべぶたを1個手に入れる。 6の場合、なべを1個手に入れる。</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>たぶんコカの葉が生えている。 《鑑定/技術4》の判定に成功すると、「コカの葉」を1個手に入れる。 失敗した場合、「なぞの葉」を[1D3]個手に入れる。</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>腰掛けるのに丁度いい場所をみつけ、そこから風景を眺めながら仲間1人と語り合う。 1D6を振って話のテーマを決める（1.失った/失いたくないもの、2.キャンプのこと、3.今回の冒険、4.欲しいもの、5.過去、6.恋バナ）。 その後、仲間を1人選び、話をする。話ができたら、あなたは[【生命力】の半分]点、仲間は1点【体力】が増加する。 話が浮かばない場合、《聞く/頭部2》の判定に成功したら、 【体力】を獲得してもよい。</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>この辺りは森が茂っている。 キノコ、野草、木の実、ウサギ……《探索/技術3》に成功すると、[1D6]Jを手に入れる。</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>探索中、足元が抜ける。部屋の天井が脆くなっているところに落ち葉が積もっていたようだ。 《落ちる/胴部10》の判定に成功すると、うまく着地し部屋の探索を行える。価格3J以下のアイテムを 1個手に入れる。失敗した場合、1点のダメージをうけ、探索している場合ではない。 仲間に助けてもらうこと。</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>野鶏クルックコッコをみつける。《歌う/技術12》の判定に成功すると、クルックコッコは 卵を産む。栄養価は満点だ。全員の【体力】が1点増加する。</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>崩れてダンジョンのようになった廃屋をみつける。 《探索/技術3》の判定に成功すると、[達成値]J以下のアイテムを1個手に入れる。</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>森のざわつく気配。《見つける/頭部4》の判定を行う。 成功すると、＜ヌシ＞を遠目で眺め、来る決戦に身を引き締める。【体力】が【生命力】点増加する。 失敗した場合、あなたと＜ヌシ＞は1ラウンドのみ1対1で戦闘する。</td>
+    </tr>
+  </table>
+
+ <img src="../assets/images/uni-01.jpg" alt="イメージ画像" title="この先に進むには……  @lioneeeee 様作">
+
+<h3  class="break-page" id="exploration-actions-rest">■休憩</h3>
+<p>2D6を振り、休憩表の結果を適用します。</p>
+
+  <table class="chart" id="table-rest">
+    <caption>休憩表</caption>
+    <thead>
+      <tr>
+        <th>2d6 
+          <th>説明</th> 
+        </th>
+      </tr>
+    </thead>
+    <tr>
+      <td>2</td>
+      <td>茂みががさがさとなっている。《隠れる/環境6》の判定に失敗すると、ランダムエンカウント表を振る。成功した場合、【気力】が[【精神力】の半分]点増加する。</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>地上に安全なところが見つからない。木の上で休まなければ。《バランス/環境8》の判定に成功すれば、【気力】が3点増加する。失敗した場合、落下して1点のダメージを受ける。「ロープ」があれば、判定の必要なく休むことができる。</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>ケモノの声がうるさい。あなた以外の誰か1人を見張りとして選ぶ。見張りが《聴く/頭部2》の判定に成功しないとあなたは休めない。休めた場合、あなたの【気力】が4点増加する。</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>今夜はとても冷える。「毛布」か「寝袋」があれば【気力】が3点増加する。「火付け道具」があれば【気力】が3点増加する。</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>雨が降ってくる。雨宿りできるものがあるか、《見つける/頭部4》の判定に成功すれば休める。休むと、【気力】が3点増加する。「火付け道具」があれば、さらに【気力】が3点増加する。</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>眠れない夜。仲間1人と語り合う。1D6を振って話をテーマを決める（1.悩み、2.将来・夢、3.好きなもの、4.嫌いなもの、5.過去、6.恋バナ）。その後、仲間を1人選び、話をする。話ができたら、あなたは[【精神力】の半分]点、仲間は2点【気力】が増加する。話が浮かばない場合、《伝える/技術11》の判定に成功したら、【気力】を獲得してもよい。</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>目が覚めたら、仲間の料理がちょうどできていた。【気力】を3点増加させる。さらに、料理当番として仲間を1人選ぶ。料理当番が《料理/技術10》に成功した場合、全員が2点の【気力】を増加させる。失敗した場合、全員の【気力】が1点減少する。</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>仲間と模擬戦をしてから眠りにつく。【気力】が3点増加する。相手として仲間1人を選ぶ。相手が《振る/腕部11》の判定に成功すると、次の戦闘であなたの与えるダメージが1点増加する。</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>あなたは泥のように深く眠る。【気力】が[【精神力】の半分]点増加する。眠ったあなたの荷物を狙ってネズミリスがやってくる。仲間を1人選ぶ。選ばれた仲間は《反応/頭部5》の判定を行う。成功すると1Jを得る。失敗した場合、あなたの所持品が1つランダムに失われる。</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>野営に最適な場所を見つけ、気持ちよく寝ることができる。【気力】が[【精神力】の半分]点と【体力】が1点増加する。そして幸せだった時代の夢をみる。あなたは幸せそうなシチュエーションを考え、仲間やGMに伝える。その夢が、幸せそうだと感じる者がいたら、さらに【気力】が3点増加する。</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>森のざわつく気配。《予感/頭部9》の判定を行う。成功すると、＜ヌシ＞を遠目で眺め、来る決戦に身を引き締める。【気力】が【精神力】点増加する。失敗した場合、あなたと＜ヌシ＞は1ラウンドのみ1対1で戦闘する。</td>
+    </tr>
+  </table>
+
+<h3 id="exploration-actions-use-ability" class="break-page">■アビリティなどの使用</h3>
+<p>支援タイプのアビリティやアイテムを使用できます。</p>
+<h3 id="exploration-actions-touch-object">■オブジェクトへの接触</h3>
+<p>
+  オブジェクトを調べたり、会話したりできます。GMは判定が必要な場合、《指定特技》を決定し、
+  成功したら何が起こるか決めておいてください。
+</p>
+<p>例1：オブジェクトの行商人から買い物を行う。</p>
+<p>例2：オブジェクトの果物の木から収穫する。指定特技は《掴む/腕部7》で成功すると果物(2J)を得る。</p>
+<p>例3：オブジェクトの商店街を探索する。1D6を振って商店街探索表を参照する。「1:何もなし/2,3:食料発見(1J)/4,5:嗜好品/6:好みのおもちゃ発見(気力+3)」</p>
+<h3 id="exploration-pass">■パス</h3>
+<p>なにもしません</p>
+
+<div class="break-page" style="display:flex;flex-wrap:wrap;align-items: flex-start;">
+<img src="../assets/images/monster/hotaruusagi.png" width="200" alt="イメージ画像：ホタルウサギ" title="ホタルウサギ @hagure_g 様作">
+</div>
+<h2 id="exploration-limit" class="break-verso">リミット</h2>
+<p>
+  探索フェイズのサイクル数にはリミットが定められています。これは、冒険者たちが所持している
+  食料の残量や疲労による探索の限界を表しています。リミットであるサイクルが終了するまでに、
+  ＜ヌシ＞のいる場所への＜障害＞を突破できていない場合、セッションは失敗となります。
+</p>
+<p>
+  リミットのサイクル数は、[＜チェックポイント＞の数+1]程度が目安です。
+  キャラクターの人数や＜障害＞の数で増減してください。
+</p>
+<h3 id="exploration-limit-add">リミットの増加</h3>
+<p>
+  GMは＜チェックポイント＞に、「水場」や「シェルター」など安全に休めそうなオブジェクトを「リミット増加用オブジェクト」として設置できます。
+  リミット増加用オブジェクトがある場合、
+  人数分の食料を消費し、誰か1人が指定特技《休む／環境7》の判定に成功することでリミットを1増加させることができます。
+</p>
+<p>
+  リミットの増加は試みる度にマイナス[リミットの増加を試みた回数]の
+  修正がはいります。最初の挑戦なら修正なし、
+  2回めにはマイナス1、3回めはマイナス2…のようになります。
+</p>
+<p>リミットの増加は割込み行動として1サイクルに1度行うことができ、試みても行動済みとなりません。</p>
+  </hgroup>
+
+  <img src="../assets/images/mother/table.jpg" alt="アルティメットテーブルマナー" title="アルティメットテーブルマナー @hagure_g 様作">
+
+</section>
+
+<section id="battle">
+<hgroup>
+<h2  class="break-verso"  id="h1-battle">戦闘</h2>
+<p>
+  戦闘では、サイクルの代わりにラウンドという単位を使用します。
+  プレイヤーの行動順は、先制判定で決めます。
+</p>
+<h3 id="battle-round">1.ラウンドの流れ</h3>
+<p>戦闘のラウンドは、以下のA～Eの順番に処理します。</p>
+<ul>
+  <li>A:先制判定</li>
+  <li>B:冒険者の行動（先攻）</li>
+  <li>C:敵の行動</li>
+  <li>D:冒険者の行動（後攻）</li>
+  <li>E:追加行動</li>
+</ul>
+<h3 id="battle-initiative">2.先制判定</h3>
+<p>
+  各プレイヤーは、キャラクターがラウンドのどのタイミングで行動を行うか決定するため、先制判定と呼ばれる行為判定を行います。
+  先制判定の《指定特技》は、以下の表で決定されます。
+</p>
+<br>
+<div>
+<figure>
+  <table class="chart float-left" id="table-initiative" style="margin-right: 2mm">
+    <caption>先制判定指定特技表</caption>
+    <thead>
+      <tr>
+        <th>d6 
+          <th>説明</th> 
+        </th>
+      </tr>
+    </thead>
+    <tr>
+      <td>1</td>
+      <td>《反応／頭部5》</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>《予感／頭部9》</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>《動かない／胴部5》</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>《走る／脚部3》</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>《隠れる／環境6》</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>《追い込む／環境10》</td>
+    </tr>
+  </table>
+</figure>
+</div>
+<p>
+  先制判定に成功した場合は「冒険者の行動（先攻）」、失敗した場合は「冒険者の行動（後攻）」のタイミングで行動を行います。
+</p>
+<p>先攻もしくは後攻での行動のタイミング内での行動順は自由です。</p>
+<h3 id="battle-action">3.冒険者の行動</h3>
+<p>各プレイヤーのキャラクターは、ラウンドごとに以下の行動のうち一つを行います。</p>
+<dl>
+  <dt>攻撃</dt>
+  <dd>
+    <p>
+      習得している攻撃タイプのアビリティから一つを選び、目標を選びます。
+      または、アイテムの武器を使用して同様に目標を選びます。
+      アビリティまたは武器の《指定特技》の行為判定に成功すると、その効果が目標に適用されます。
+      この判定を命中判定ともいいます。
+    </p>
+    <p>命中判定でスペシャル/ファンブルをした場合、<a href="#battle-special">スペシャル表/ファンブル表</a>を振って効果を適用します。</p>
+
+  </dd>
+  <dt>連携攻撃</dt>
+  <dd>
+    <p>
+      自分以外の冒険者を1体目標とし、可能なら自分の補助タイプのアビリティから1つ選択します。
+      判定は必要ありません。目標は次に行う攻撃に、選択されたアビリティを組み合わせられます。
+    </p>
+    <p>
+      連携攻撃に寄って組み合わされたアビリティは、「行為判定に組み合わせられる補助タイプのアビリティは一つだけ」
+      というルールの例外として扱います。組み合わせるアビリティの反動は、連携攻撃を行うキャラクターが連携攻撃を宣言したときに受けます。
+    </p>
+    <p>連携攻撃の効果はラウンド終了時に失われます。</p>
+  </dd>
+  <dt>支援行動</dt>
+  <dd>
+    取得している支援タイプのアビリティかアイテムを使用します。
+    また、GMが支援行動とした行動ができます。
+  </dd>
+  <dt>撤退</dt>
+  <dd> 
+    <p>指定特技《逃げる／環境11》の判定に成功すると戦闘から撤退できます。</p>
+    <p>拡張ルール：<a href="supplement-strange-fields.html#escape">撤退の指定特技をランダムにする</a></p>
+  </dd>
+  <dt>武器の装備</dt>
+  <dd>所持品にある武器を装備状態にできます。</dd>
+  <dt>アイテムの受け渡し</dt>
+  <dd>アイテムを1つ、味方1人に渡すか受け取れます。</dd>
+  <dt>アイテムの取り出し</dt>
+  <dd>アイテムを1つ、袋の中から取り出すか、袋の中に入れます。</dd>
+  <dt>パス</dt>
+  <dd>何もせず行動済みとなります。</dd>
+</dl>
+
+<h4 class="break-page"></h4>
+<img  src="../assets/images/usagi.png" alt="イメージ画像" title="エンカウント！">
+
+<h3 class="break-verso" id="battle-damage">4.ダメージと部位ダメージ</h3>
+<p>
+  攻撃によってダメージが発生する際、
+  【体力】が0でない場合、ダメージ分の【体力】を減少させます。
+  これによって【体力】が0未満になる場合や、既に【体力】が0のときにダメージを受けた場合、部位ダメージが発生し、【体力】は0となります。
+</p>
+<p></p>
+<p>
+  部位ダメージが発生した場合、身体部位決定表を振り、その攻撃が命中した部位を決定します。
+  既にダメージを受けている部位が出たら振り直しです。
+</p>
+
+  <table class="chart" id="table-hitarea">
+    <caption>身体部位決定表</caption>
+    <thead>
+      <tr>
+        <th>2d6 
+          <th>説明</th> 
+        </th>
+      </tr>
+    </thead>
+    <tr>
+      <td>2</td>
+      <td>《脳／頭部7》</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>《利き腕／腕部5》</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>《利き足／脚部5》</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>《消化器／胴部11》</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>《感覚器／頭部3》</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>攻撃したキャラクターの任意</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>《口／頭部11》</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>《呼吸器／胴部3》</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>《逆足／脚部9》</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>《逆腕／腕部9》</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>《心臓／胴部7》</td>
+    </tr>
+  </table>
+
+<p>
+  部位ダメージを受けた「身体部位」は使用不能になり、
+  行為判定に使用できなくなります。
+  さらに、部位ダメージが入った「身体部位」に隣接する周囲8マスにある特技も使用不能になります。
+  この時、ギャップは無視します。
+</p>
+
+#### ダメージ例
+
+逆腕に部位ダメージが入った例です。
+この場合、習得している《逸らす》が使用不能になります。
+
+![](../assets/images/description/damage-sample.png)
+
+<h3 class="break-page" id="battle-damage-dead">4.1.死亡</h3>
+<h4>死亡判定</h4>
+<p>
+  戦闘によって部位ダメージを受けた場合、死亡判定を行います。
+  1D6を振り、受けている部位ダメージの数を超える出目をだせば成功です。
+  部位ダメージ数以下の出目の場合、死亡判定失敗となり死亡します。
+</p>
+<h4>武器破壊</h4>
+<p>死亡判定を行う前に、装備している武器を1つ破壊すると宣言することで死亡判定をキャンセルできます。</p>
+<h4>【気力】を振り絞る</h4>
+<p>
+  死亡判定のダイスを振った後、
+  任意の点数の【気力】を消費してその分だけ出目にプラスの修正を与えられます。
+</p>
+<p>『本気状態』（後述）の＜ヌシ＞はこの行動を行えません。</p>
+<h3 id="battle-damage-dead-enemies">4.2.敵の死亡</h3>
+<p>＜ヌシ＞は冒険者と同じように【体力】が0になった後、死亡判定を行います。</p>
+<p>
+  ＜ヌシ＞以外の敵は、【体力】が0になったら死亡します。
+  GMは、死亡の代わりに『無力化状態』になることにしてもかまいません。
+</p>
+
+  <h3 id="battle-neutralization" class="break-page">5.無力化状態</h3>
+  <p>
+    【気力】が0となり、戦闘終了まで全ての行動を行えなくなります。
+    戦闘終了後、『無力化状態』は解除されます。
+    『無力化状態』が解除されたとき、【気力】の値は1となります。
+    また、なんらかの要因で【気力】が1以上になった場合、この『無力化状態』は解除されます。
+    無力化状態のキャラクターは常に行動済み状態です。
+  </p>
+  <p>「先制判定」など行動を消費しない判定は行うことができます。</p>
+  <p>
+    戦闘中以外で無力化状態となった場合、行動解決後、
+    気力1となって無力化状態が解除されます。
+  </p>
+</p>
+
+<h3 id="battle-enemy" class="break-page">6.敵の行動</h3>
+<p>敵も冒険者と同じように行動します。</p>
+<dl>
+  <dt>攻撃</dt>
+  <dd>
+    冒険者の行動と同様です。
+    ＜ヌシ＞は判定に組み合わせられる補助アビリティの数が、レベルにより増加します。
+  </dd>
+  <dt>支援</dt>
+  <dd>冒険者の行動と同様です。</dd>
+  <dt>本気を出す</dt>
+  <dd>
+    これは＜ヌシ＞のみが行うことのできる行動です。
+    ＜ヌシ＞の【気力】が[半分以下]の状態ならいつでも宣言でき、宣言しても行動済みになりません。
+    この宣言を行った瞬間から＜ヌシ＞は『本気状態』となります。
+    通常状態から『本気状態』となったラウンドに＜ヌシ＞は追加行動を一回得ます。
+    『本気状態』では、＜ヌシ＞は以下の状態となります。
+    <ul>
+      <li>全ての【アビリティ】の反動が0になる</li>
+      <li>「回避判定」にマイナス2の修正がつく</li>
+      <li>死亡判定に【気力】を消費できない</li>
+    </ul>
+  </dd>
+  <dt>復活</dt>
+  <dd>
+    ＜ヌシ＞が『無力化状態』の時、1ラウンドに1回宣言できる割込み行動です。
+    《叫ぶ》の判定に成功した場合、自身の【気力】が1点となります。
+    この行動は『無力化状態』でも特別に行うことが出来ます。
+  </dd>
+  <dt>パス</dt>
+  <dd>冒険者の行動と同様です。</dd>
+</dl>
+
+<h3 id="battle-dodge">7.回避</h3>
+<p>冒険者と敵は、【気力】を1点消費することで攻撃に対して回避を行うことができます。</p>
+<p>
+  回避は命中判定が成功し、ダメージを決定した後で行います。
+  部位ダメージが入るダメージの場合、命中した部位を決定した後に回避を行うことができます。
+</p>
+<p>
+  攻撃目標は、命中判定の《指定特技》を、回避するための《指定特技》とした行為判定を行います。
+  回避判定の目標値は通常の行為判定と異なり、「<b>【命中判定の達成値】＋習得している特技から《指定特技》までのマス数</b>」となります。
+    命中判定がスペシャルの場合、回避判定でスペシャルをだすことでのみ回避できます。
+
+  <p>この判定に成功すると、攻撃は失敗となり、攻撃に付随する全ての効果が無効化されます。この判定を回避判定と呼びます。</p>
+  <p>
+    一度の攻撃に対して、回避は一度だけ可能です。
+  </p>
+  <p>回避判定でファンブルした場合、<a href="#battle-special">ファンブル表</a>を振って効果を適用します。</p>
+
+  <h3 id="battle-secondaction" class="break-page">8.追加行動</h3>
+  <p>
+    ＜ヌシ＞は特定の条件でラウンドの行動回数が増えることがあります。
+    これを追加行動と呼びます。
+    追加行動は冒険者の行動（後攻）が終わった後に行われます。
+  </p>
+  <p>
+    まれに冒険者が追加行動を行うこともあります。このときも冒険者の行動（後攻）のあとに追加行動を行いますが、
+    ＜ヌシ＞の追加行動より早いか遅いかは、そのラウンドの先制判定の結果によります。
+  </p>
+  <p>
+    1ラウンド中にアビリティ【習性】の条件を何度も満たしたり、スペシャル表により、同じキャラクターが追加行動を複数回得ることがあります。
+    その場合は追加行動が複数回発生します。
+  </p>
+  <h3 id="battle-special">9.戦闘中のスペシャルやファンブル</h3>
+  <p>
+    戦闘中に、命中判定でスペシャルを発生させた場合、通常の効果に加えて、
+    スペシャル表を振りその効果を適用します。
+    逆にファンブルを発生させた場合、命中ファンブル表を振りその結果を適用します。
+    回避判定でファンブルを発生させた場合、回避ファンブル表を振りその結果を適用します。
+  </p>
+
+<table class="chart break-page" id="special-attack">
+  <caption>命中判定スペシャル表
+    <thead>
+      <tr>
+        <th>d6 
+          <th>説明</th> 
+        </th>
+      </tr>
+    </thead>
+    <tr>
+      <td>1</td>
+      <td>渾身の一撃！ 与えるダメージにプラス1D6される。</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>スキマを直撃！この攻撃によるダメージは軽減されない。</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>鋭い太刀筋！ 武器の攻撃力を2倍としてダメージを算出する。</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>強力な一撃が相手を揺るがす！ 対象に『転倒』の変調を与える。</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>みなぎる力！【気力】が1D6点増加する。</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>チャンス！ あなたは追加行動を得る。</td>
+    </tr>
+  </caption>
+</table>
+<table class="chart" id="fumble-attack">
+  <caption>命中判定ファンブル表</caption>
+  <thead>
+    <tr>
+      <th>d6 
+        <th>説明</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>1</td>
+    <td>何を間違えたか、攻撃が自分に命中する。</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>おおっと！ 武器を落とす。 落とした武器は支援行動で拾って装備できる。</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>嫌な音が！ 装備している武器が壊れてしまう。武器がない場合は軽減不可の2点のダメージを受ける。</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>すってん！『転倒』の変調を受ける。</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>……。【気力】が1D6点減少する。</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>ヤツは！？ 相手の一体が追加行動を得る。 誰が動くかは相手が選ぶ。</td>
+  </tr>
+</table>
+<table class="chart" id="fumble-dodge">
+  <caption>回避判定ファンブル表</caption>
+  <thead>
+    <tr>
+      <th>d6 
+        <th>説明</th> 
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>1</td>
+    <td>痛恨！ 受けるダメージにプラス1D6される。</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>おおっと！ 隙間を抜けて命中します。この攻撃によるダメージは軽減できない。</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>嫌な音が！ 装備している防具が1つ壊れてしまいます。防具がない場合は軽減不可の2点のダメージを受ける。</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>すってん！『転倒』の変調を受ける。</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>……。【気力】が1D6点減少する。</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>ヤツは！？ 相手の一体が追加行動を得る。 誰が動くかは相手が選ぶ。</td>
+  </tr>
+</table>
+  
+  <h3 id="badstatus">10.変調</h3>
+  <p>
+    キャラクターはアビリティの効果やアイテムなどによって、変調という特殊な効果をうけることがあります。
+    変調は、戦闘が終了すれば解除されます。
+    スペシャル、アイテム、アビリティの効果などでも解除されます。
+  </p>
+  <p>同名の変調を受けることはありません。</p>
+  
+<dl>
+  <dt>毒
+    <dd>ラウンド終了時に【体力】が1D6点減少します。 部位ダメージは発生しません。</dd>
+  </dt>
+  <dt>炎上
+    <dd>ラウンド終了時に【体力】と【気力】が1点減少します。</dd>
+  </dt>
+  <dt>麻痺
+    <dd>全ての行為判定の達成値にマイナス1の修正がつきます。</dd>
+  </dt>
+  <dt>捕縛
+    <dd>命中判定の達成値にマイナス1の修正がつきます。</dd>
+  </dt>
+  <dt>転倒
+    <dd>回避判定の達成値にマイナス2の修正がつきます。</dd>
+  </dt>
+  <dt>重傷
+    <dd>死亡判定にマイナス1の修正がつきます。</dd>
+  </dt>
+  <dt>暴露
+    <dd>キャラクターのデータが公開されます。また、攻撃により受けるダメージが 1点増加します。</dd>
+  </dt>
+</dl>
+
+![](../assets//images/stable-diffusion/scar.png)
+
+  </hgroup>
+</section>
+
+  <section id="lastbattle">
+    <hgroup>
+      <h1 class="break-verso" id="h1-lastbattle">決戦フェイズ</h1>
+      <h2 id="h2-lastbattle-move">移動</h2>
+      <p>
+        ＜ヌシ＞のいる場所への＜障害＞を突破している場合、
+        リミットであるサイクルが終わると＜ヌシ＞のいる＜チェックポイント＞へと移動し、
+        決戦フェイズになります。
+        また、リミット前でも＜ヌシ＞のいる＜チェックポイント＞へ
+        移動すれば決戦フェイズになります。
+      </p>
+      <p>シナリオに特記がない限り、この移動でもランダムエンカウントは発生します。</p>
+      <h2 id="h2-lastbattle-view">描写</h2>
+      <p>
+        決戦フェイズでは、GMはまず＜ヌシ＞のいる場所の風景描写、
+        そして＜ヌシ＞の描写を行なって下さい。
+      </p>
+      <h2 id="h2-lastbattle-battle">ヌシとの戦闘</h2>
+      <p>
+        描写が終了したら、＜ヌシ＞との戦闘になります。
+        強力なチカラをもつヌシと冒険者たちとの死闘がはじまります。
+      </p>
+    </hgroup>
+
+![](../assets/images/mother/vs_nusi.jpg)
+
+  </section>
+
+  <section id="ending" class="break-verso" >
+    <hgroup>
+      <h1 id="ending-title">結果フェイズ</h1>
+      <h2 id="endig-view">終幕シーン</h2>
+      <p>このフェイズでは、＜ヌシ＞との戦いのすえ、どんな結末を迎えたかを描写します。</p>
+      <p>
+        物資を求めに行ったのならば、＜フィールド＞が解除された森にキャンプの皆で調達に入り、
+        収穫祭をひらき、冒険者たちを称えるでしょう。
+      </p>
+      <h2 id="endig-get-reward">報酬の獲得</h2>
+      <p>
+        解放された＜フィールド＞に残されていた手付かずの物資を、キャンプの皆と分け合います。
+        冒険者たちは、解放の主役としてその物資を最初に手に入れる権利があります。
+        「冒険者1人につき、[＜ヌシ＞のレベル×3]J以下の好きなアイテムを1つ手に入れる」
+        程度が目安です。
+        GMは状況によって増やしてもいいですし、キャンプの施設の増加などの報酬を与えてもかまいません。
+      </p>
+      <h2 id="camp-improve">キャンプの成長</h2>
+      <p>
+        キャンプは[＜ヌシ＞のレベル]点のCP（キャンプポイント）を手に入れます。
+        これを使ってキャンプの施設や人材を増やしたりレベルをあげることができます。
+        以降、施設と人材をあわせて設備といいます。
+      </p>
+      <p>
+        CPのある限り、設備はいくらでも入手することができます。
+        余ったCPは次回以降に繰越しとなります。
+      </p>
+
+## 称号の入手{#ending-get-trophy}
+
+「称号」とは、冒険者がどんな振る舞いをしていたかで獲得するものです。「アビリティの習得」で経験点を消費して、称号アビリティが習得できるようになります。
+
+「称号の入手」では、生き残った冒険者ごとに、今回の冒険の振る舞いを振り返ります。
+各プレイヤーの、パーティメンバーのメモ欄を順番に確認していき、ふさわしい称号を称号表から、相談あるいは多数決で 1 つ決定します。票が割れた時はそのキャラクターのプレイヤーが選ぶとよいでしょう。
+
+<table class="responsive" id="trophy">
+  <caption>称号表</caption>
+  <thead>
+    <tr>
+      <th>名前
+        <th>説明</th>
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="txt-center">パッション</td>
+    <td data-title="説明">元気に熱くフィールドに向かっていったもの</td>
+  </tr>
+  <tr>
+    <td class="txt-center">クール</td>
+    <td data-title="説明">冷静に物事を見つめていたもの</td>
+  </tr>
+  <tr>
+    <td class="txt-center">ピンク</td>
+    <td data-title="説明">甘い雰囲気や恋をしていたもの</td>
+  </tr>
+  <tr>
+    <td class="txt-center">癒し</td>
+    <td data-title="説明">のんびり皆を和ませていたもの</td>
+  </tr>
+  <tr>
+    <td class="txt-center">スター</td>
+    <td data-title="説明">大きな活躍をしたもの</td>
+  </tr>
+  <tr>
+    <td class="txt-center">ハシラ</td>
+    <td data-title="説明">堅実に皆を支えていたもの</td>
+  </tr>
+  <tr>
+    <td class="txt-center">サムライ</td>
+    <td data-title="説明">戦闘で活躍したもの</td>
+  </tr>
+  <tr>
+    <td class="txt-center">シノビ</td>
+    <td data-title="説明">探索で活躍したもの</td>
+  </tr>
+  <tr>
+    <td class="txt-center">ボケ</td>
+    <td data-title="説明">笑いで盛り上げたもの</td>
+  </tr>
+  <tr>
+    <td class="txt-center">ツッコミ</td>
+    <td data-title="説明">ボケに流されず軌道修正をきちんとしたもの</td>
+  </tr>
+  <tr>
+    <td class="txt-center">グンシ</td>
+    <td data-title="説明">支援や閃きなどでうまく他人をサポートしたもの</td>
+  </tr>
+</table>
+
+  <h2 id="ending-get-exp" class="break-page">経験値の獲得</h2>
+  <p>
+    経験値は生き残った冒険者ごとに与えられます。
+    経験値は以下の項目の条件を満たすことにより獲得できます。
+  </p>
+  <ol>
+    <li>生き残った！(3点)</li>
+    <li>キャンプに希望を与えた(1点)</li>
+    <li>失敗を糧にした(ファンブル1回につき1点)</li>
+    <li>＜ヌシ＞を倒した(ヌシのレベル点)</li>
+    <li>＜チェックポイント＞を訪れた（1箇所につき1点)</li>
+    <li>障害を突破した(1つにつき1点)</li>
+    <li>リミットよりも早く終わった（1サイクル早いごとに1点）</li>
+    <li>よいロールプレイをした(1点)</li>
+    <li>他の人を助けた(1点)</li>
+    <li>セッションの進行を助けた(1点)</li>
+  </ol>
+</hgroup>
+
+  </section>
+
+<section id="afterplay">
+  <hgroup>
+    <h1 id="afterplay-title">セッション終了後</h1>  セッションが終了すると、キャラクターは以下の効果を受けます。
+    <ul>
+      <li>【体力】が「【生命力】×2」になる。</li>
+      <li>【気力】が「【精神力】」になる。</li>
+      <li>受けている部位ダメージが全て回復する。（キズモノの＜キズ＞は回復しない）</li>
+      <li>（任意）《特技》の組み換え。（習得している特技を未習得にし、別の特技を習得する）</li>
+      <li>（任意）【アビリティ】の組み換え。（習得しているアビリティを未習得にし、別のアビリティを習得する）</li>
+    </ul>
+  </hgroup>
+</section>
+
+<section id="improve">
+  <hgroup>
+    <h1 id="improve-title">キャラクターの成長</h1>
+    <p>
+      冒険者はセッションを通して成長していきます。獲得した経験点を消費して成長することができます。
+      使用しなかった経験点は次回以降に持ち越すことができます。
+    </p>
+    <dl>
+      <dt>特技の習得（15点）</dt>
+      <dd>新たな《特技》を１つ習得します。</dd>
+      <dt>アビリティの習得（15点）</dt>
+      <dd>
+        <p></p>汎用グループ、自身のクラスグループ、称号グループから選び、
+        新たな【アビリティ】を１つ習得します。
+      </dd>
+      <dt>精神力の上昇（10点）</dt>
+      <dd>精神力が1点上昇します。</dd>
+      <dt>生命力の上昇（20点）</dt>
+      <dd>生命力が1点上昇します。</dd>
+      <dt>クラスの取得（30点）</dt>
+      <dd>
+        新たなクラスを１つ取得し、取得したクラスグループの【アビリティ】を1つ習得します。
+        1人のキャラクターが取得できるクラスは3つまでです。
+      </dd>
+    </dl>
+  </hgroup>
+</section>
+<!---->
+
+<h3 class="break-verso" id="camp-improve">キャンプの設備</h3>
+<p>キャンプの設備には以下の要素があります。</p>
+
+  <table class="chart" id="camp-equipment-element-summary">
+<tbody>
+  <tr>
+    <th>名前
+      <td>設備名。</td>
+    </th>
+  </tr>
+  <tr>
+    <th>必要CP
+      <td>設備を入手・レベルアップするために必要なCP。</td>
+    </th>
+  </tr>
+  <tr>
+    <th>タイプ
+      <td>タイプによって使用タイミングが決まる。支援、常駐の2つ。</td>
+    </th>
+  </tr>
+  <tr>
+    <th>指定特技
+      <td> 設備を使うために必要な判定の《指定特技》。</td>
+    </th>
+  </tr>
+  <tr>
+    <th>レベル
+      <td>設備のレベル。入手時はレベル1</td>
+    </th>
+  </tr>
+  <tr>
+    <th>最大レベル
+      <td> 設備の最大レベル。</td>
+    </th>
+  </tr>
+  <tr>
+    <th>前提
+      <td> 前提となる設備がキャンプにない場合、効果を発揮しない。</td>
+    </th>
+  </tr>
+  <tr>
+    <th>効果
+      <td> 設備の効果。</td>
+    </th>
+  </tr>
+</tbody>
+
+  </table>
+
+<dl>
+  <dt>名前</dt>
+  <dd>設備の名前です。</dd>
+  <dt>必要CP</dt>
+  <dd>
+    設備を入手するために必要なCPです。
+    既に設備を入手している状態でこのCPを払うと、レベルを上げることができます。
+    また、1C（缶詰）を1CPとして扱うことができます。
+  </dd>
+  <dt>タイプ</dt>
+  <dd>
+    常駐、支援があります。常駐は常に効果を発揮しています。
+    支援はキャンプフェイズに使用することで効果を受けることができます。
+  </dd>
+  <dt>指定特技</dt>
+  <dd>設備を使用するのに必要な特技です。なしの場合は判定の必要なく使用できます。</dd>
+  <dt>レベル</dt>
+  <dd>設備のレベルです。設備を入手したときは1レベルになります。</dd>
+  <dt>最大レベル</dt>
+  <dd>設備の最大レベルです。</dd>
+  <dt>前提</dt>
+  <dd>前提のある設備は前提となる設備がキャンプにない場合、効果を発揮しません。</dd>
+  <dt>効果</dt>
+  <dd>施設や人材を使用した時の効果です。</dd>
+</dl>
+
+### 設備一覧表{.break-verso}
+
+<h4>設備（施設）</h4>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>屋根</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">全員の【精神力】にプラス[レベル]する。1レベルでは雨漏りしている。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>壁</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">全員の【精神力】にプラス[レベル]する。1レベルでは隙間風が吹く。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>寝床</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">全員の【精神力】にプラス[レベル×2]する。1レベルでは茸が生えたぼろ毛布。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>水場</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>10</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">全員の【精神力】にプラス3する。水を汲める川が近くにある。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>水路</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>10</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div>水場</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">全員の【精神力】にプラス2する。川からキャンプまで水を引く。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>井戸</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>15</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">全員の【精神力】にプラス3する。水を汲める井戸がキャンプにある。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>物見やぐら</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">全員の【精神力】にプラス1する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>倉庫</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>10</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">[レベル×10]個までのアイテムを保存できる。出し入れはキャンプでのみ可能。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>食料庫</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>20</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">全員の【生命力】をプラス２する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>ドラムカン</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">水などを貯めることができる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>お風呂</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div>水場、ドラムカン</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>なし</div>
+    </div>
+  </div>
+  <div class="card-content">あなたの【精神力】にプラス[レベル]点する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>温泉</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>15</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>なし</div>
+    </div>
+  </div>
+  <div class="card-content">あなたの【精神力】と【生命力】にプラス[レベル]点する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>畑</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《作る》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたは[レベル]Jを得る。最大レベルに達している場合、食堂の効果にプラス1する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>食堂</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div>料理人</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《料理》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたの【生命力】にプラス1する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>牧場</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《捕らえる》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたはジャーキーか「毛皮」を[レベル]個まで得ることができる。最大レベルに達している場合、食堂の効果にプラス1する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>薬草園</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《鑑定》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたは「コカの葉」を[レベル]個得る。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>病院</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div>医者</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《手当》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたは「鎮痛剤」を1つ得る。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>図書館</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《見つける》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたはセッション中1度だけ、ダイスの出目をプラス1できる。これは、あの時の本でみたことある！</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>工房</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《作る》</div>
+    </div>
+  </div>
+  <div class="card-content">任意個のアイテムを消費する。指定特技の判定に成功すると、あなたは武器か防具を1つ作ることができる。消費するアイテムの合計額は作りたい武具の価格から[レベル]J引いた価格となる。ここで消費できるアイテムは「毛皮」「殻」「羽」「武器」「防具」である。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>広場</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">[レベル]人が、追加で1回散策表を振れる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>映画館</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>10</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>なし</div>
+    </div>
+  </div>
+  <div class="card-content">キャンプを出発するとき、全員の【体力】を[Lv]点増加する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>太陽電池</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>4</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>なし</div>
+    </div>
+  </div>
+  <div class="card-content">あなたが所持しているか装備しているアイテムを[レベル]個まで「充電」できる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>ラジオ局</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>15</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div>物見やぐら、太陽電池、技術屋</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《伝える》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、キャンプは結果フェイズに、任意の人材1人を獲得する。同じ種類の人材を獲得した場合レベルが上がる。この判定にはマイナス[獲得したい人材の必要CP]の修正がつく。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>鐘</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div>物見やぐら、鍛冶屋</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>なし</div>
+    </div>
+  </div>
+  <div class="card-content">使用すると、1サイクルごとに、全員の【気力】が1点増加する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>砦</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div>物見やぐら</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>なし</div>
+    </div>
+  </div>
+  <div class="card-content">＜ヌシ＞の回避判定にマイナス[レベル]の修正を与える。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>ドラムカン砲</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div>物見やぐら</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>なし</div>
+    </div>
+  </div>
+  <div class="card-content">使用すると、セッション中に1回、割込みでキャンプの「ドラムカン」を破壊して、＜ヌシ＞に[レベル]×3点のダメージを与える効果を使えるようになる</div>
+</div>
+<h4 class="break-page">設備（人材）</h4>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>商人</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>4</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《伝える》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたはアイテムを[レベル+3]個まで買うことができる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>先生</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《考える》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたはそのセッションの間、ランダムに特技を1つ習得する。1D6を振り分野を決め、2D6を振って習得する特技を決める。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>歌姫</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《歌う》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたの【気力】が2D6点上昇する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>料理人</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《料理》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたの所持する1Jを「嗜好品」１つと交換する。1回の判定で[レベル]個まで交換可能。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>大工</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">施設を作るのに必要なCPを[レベル]点減少する。（最低1)</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>リーダー</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《休まない》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、キャンプは[レベル]点のCPを得る。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>医者</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《手当》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたは「なんこう」を[レベル]個得る。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>司書</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">「図書館」の効果の使用回数をプラス[レベル]回する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>鍛冶屋</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">「工房」のレベルにプラス[レベル]する。また、「工房」の判定に失敗した時に一度だけ振り直せる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>働き者</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">任意の人材1人のレベルをプラス1して扱う。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>猟師</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《捕らえる》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたは「毛皮」か「ジャーキー」を[レベル]J分得る。また、常に牧場の必要CPをマイナス1する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>技術屋</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">施設を使う時に必要な判定の達成値にプラス[レベル]の修正をつける。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>戦士</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《振る》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたはセッション中[レベル]回、ダメージ適用のタイミングで与えるダメージを[レベル]点増加させることができる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>旅人</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>支援</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《雑学》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、あなたはセッション中1回、1体に『暴露』の変調を与えることができる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div><img src="../assets/images/icon/tent.svg"/></div>
+    <div>危険物取扱者</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>CP</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>最大Lv</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>前提</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">「ドラムカン砲」の威力を[レベル]×3から[レベル]×5に変更する。</div>
+</div>
+<!---->
+
+<section id="GMpart" class="break-verso">
+  <hgroup>
+    <h1 id="make-boss">＜ヌシ＞の作成</h1>
+    <h2 id="make-boss-name">1.名前・外見</h2>
+    <p>
+      名前や外見は自由に決めて下さい。
+      多くの＜ヌシ＞の外見は、動物を中心に機械や災害などの要素を組み合わせたものです。
+    </p>
+    <h2 id="make-boss-lv">2.レベル</h2>
+    <p>レベルは、＜ヌシ＞の強さを大まかに表す数値です。</p>
+    <p>初期作成の冒険者を相手にする場合、人数と等しい数にするとよいでしょう。</p>
+    <h2 id="make-boss-specialty">3.特技</h2>
+    <p>＜ヌシ＞は全ての特技を習得しています。</p>
+    <h2 id="make-boss-gap">4.ギャップ</h2>
+    <p>＜ヌシ＞は特技リストのギャップを埋めません。</p>
+    <h2 id="make-boss-ability">5.アビリティ</h2>
+    <p>
+      ＜ヌシ＞はヌシグループの【アビリティ】をまず４つ習得しています。
+      さらに、レベルと同じ数の【アビリティ】を全てのグループから習得できます。
+    </p>
+    <p>＜ヌシ＞は4レベル以降は2つ、8レベル以降は3つの補助アビリティを組み合わせることができます。</p>
+    <h2 id="make-boss-stamina">6.体力</h2>
+    <p>＜ヌシ＞は[レベル×5]点の【体力】を持っています。</p>
+    <h2 id="make-boss-willPower">7.気力</h2>
+    <p>＜ヌシ＞は[10+レベル]点の【気力】を持っています。</p>
+  </hgroup>
+  <hgroup class="break-page">
+  <h2 id="enemies">エネミー</h2>
+  
+<div class="item-card">
+  <div class="card-title">
+    <div>デブドリ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>グループ</div>
+      <div>ケモノ</div>
+    </div>
+    <div class="tag">
+      <div>体力</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>気力</div>
+      <div>1</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>特技</div>
+      <div>《蹴る》</div>
+    </div>
+    <div class="tag">
+      <div>アビリティ</div>
+      <div>【体当たり：《跳ぶ》】</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>ドロップ</div>
+    <div>生肉（1J、1W、食料)と卵（2J、1W、食料)</div>
+  </div>
+  <div class="card-content">ぼてぼて歩く鳥。雑食。よく食べ、よく育ち、よく増える。気づけば卵産んでる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div>オニトンボ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>グループ</div>
+      <div>ムシ</div>
+    </div>
+    <div class="tag">
+      <div>体力</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>気力</div>
+      <div>3</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>特技</div>
+      <div>《噛む》《跳ぶ》</div>
+    </div>
+    <div class="tag">
+      <div>アビリティ</div>
+      <div>【大アゴ】【飛行】</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>ドロップ</div>
+    <div>ムシA</div>
+  </div>
+  <div class="card-content">40cmはある巨大なトンボ。大きなアゴでばりばり噛む。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div>ナガムカデ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>グループ</div>
+      <div>ムシ</div>
+    </div>
+    <div class="tag">
+      <div>体力</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>気力</div>
+      <div>2</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>特技</div>
+      <div>《噛む》《走る》</div>
+    </div>
+    <div class="tag">
+      <div>アビリティ</div>
+      <div>【噛みつき】【外骨格】</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>ドロップ</div>
+    <div>ムシB</div>
+  </div>
+  <div class="card-content">1m級のムカデ。毒はないが、噛まれるとすごく痛い。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div>ヨロイバチ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>グループ</div>
+      <div>ムシ</div>
+    </div>
+    <div class="tag">
+      <div>体力</div>
+      <div>4</div>
+    </div>
+    <div class="tag">
+      <div>気力</div>
+      <div>7</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>特技</div>
+      <div>《噛む》《跳ぶ》《刺す》</div>
+    </div>
+    <div class="tag">
+      <div>アビリティ</div>
+      <div>【大アゴ】【外骨格】【毒針】【飛行】</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>ドロップ</div>
+    <div>ムシC</div>
+  </div>
+  <div class="card-content">20cm程のスズメバチ。ガチガチと音を立てながら飛行する。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div>ハガネカブト</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>グループ</div>
+      <div>ムシ</div>
+    </div>
+    <div class="tag">
+      <div>体力</div>
+      <div>7</div>
+    </div>
+    <div class="tag">
+      <div>気力</div>
+      <div>3</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>特技</div>
+      <div>《跳ぶ》《仕掛ける》</div>
+    </div>
+    <div class="tag">
+      <div>アビリティ</div>
+      <div>【鋼鱗】【体当たり：《跳ぶ》】</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>ドロップ</div>
+    <div>ムシA</div>
+  </div>
+  <div class="card-content">金属の甲殻をもつカブトムシ。ロケットのように体当たりをし獲物を仕留め、卵を産み付ける。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div>ツノウサギ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>グループ</div>
+      <div>ケモノ</div>
+    </div>
+    <div class="tag">
+      <div>体力</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>気力</div>
+      <div>3</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>特技</div>
+      <div>《跳ぶ》《刺す》《かわす》</div>
+    </div>
+    <div class="tag">
+      <div>アビリティ</div>
+      <div>【鋭角】【体当たり：《刺す》】</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>ドロップ</div>
+    <div>ケモノA</div>
+  </div>
+  <div class="card-content">角の生えたウサギ。信条は攻撃は最大の防御。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div>コウモリイヌ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>グループ</div>
+      <div>ケモノ</div>
+    </div>
+    <div class="tag">
+      <div>体力</div>
+      <div>6</div>
+    </div>
+    <div class="tag">
+      <div>気力</div>
+      <div>5</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>特技</div>
+      <div>《走る》《聴く》《噛む》</div>
+    </div>
+    <div class="tag">
+      <div>アビリティ</div>
+      <div>【牙】【撹乱音波】【体当たり：《噛む》】</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>ドロップ</div>
+    <div>ケモノA</div>
+  </div>
+  <div class="card-content">コウモリのような顔をした目のない犬。超音波で獲物を捕らえる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div>チヌレガラス</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>グループ</div>
+      <div>ケモノ</div>
+    </div>
+    <div class="tag">
+      <div>体力</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>気力</div>
+      <div>7</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>特技</div>
+      <div>《跳ぶ》《叫ぶ》《落ちる》</div>
+    </div>
+    <div class="tag">
+      <div>アビリティ</div>
+      <div>【飛行】【体当たり：《落ちる》】【ドリル】</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>ドロップ</div>
+    <div>ケモノB</div>
+  </div>
+  <div class="card-content">白い羽をした大型のカラス。しかし、その羽は常に獲物の血で赤黒く汚れている。獲物の上空からきりもみ回転で体当たりして仕留める。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div>ゾンビ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>グループ</div>
+      <div>ミュータント</div>
+    </div>
+    <div class="tag">
+      <div>体力</div>
+      <div>8</div>
+    </div>
+    <div class="tag">
+      <div>気力</div>
+      <div>1</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>特技</div>
+      <div>《歩く》《噛む》《殴る》</div>
+    </div>
+    <div class="tag">
+      <div>アビリティ</div>
+      <div>【武器攻撃：《殴る》】【噛みつき】【腐敗】</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>ドロップ</div>
+    <div>棍棒</div>
+  </div>
+  <div class="card-content">動く死体。武器攻撃で使用する武器は「棍棒」となる。喋るものもいるが、生前に覚えた言葉を壊れたレコーダーのように繰り返すだけである。知性はなく、人間を目にすると襲い掛かってくる。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div>ゴウカギュウ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>グループ</div>
+      <div>ヌシ</div>
+    </div>
+    <div class="tag">
+      <div>体力</div>
+      <div>15</div>
+    </div>
+    <div class="tag">
+      <div>気力</div>
+      <div>13</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>特技</div>
+      <div>全て</div>
+    </div>
+    <div class="tag">
+      <div>アビリティ</div>
+      <div>【単体攻撃】【全体攻撃】【恒常性】【習性:自身の体力0】【火炎放射】【突撃】【鋭角】</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>ドロップ</div>
+    <div></div>
+  </div>
+  <div class="card-content">赤く大きな牛。尻尾の先には赤々と火が灯っている。レストランを中心とした＜フィールド＞を作っている。</div>
+</div>
+<div class="item-card">
+  <div class="card-title">
+    <div>アラシノドラゴン</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>グループ</div>
+      <div>ヌシ</div>
+    </div>
+    <div class="tag">
+      <div>体力</div>
+      <div>20</div>
+    </div>
+    <div class="tag">
+      <div>気力</div>
+      <div>14</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>特技</div>
+      <div>全て</div>
+    </div>
+    <div class="tag">
+      <div>アビリティ</div>
+      <div>【範囲攻撃】【全体攻撃】【恒常性】【習性：床】【コア：感覚器】【牙】【咆哮】【外骨格】</div>
+    </div>
+  </div>
+  <div class="tag">
+    <div>ドロップ</div>
+    <div></div>
+  </div>
+  <div class="card-content">青い鱗が細長い身体をびっしり覆った竜。水力発電所跡を中心とした＜フィールド＞を広げている。</div>
+</div>
+
+  <h2 id="enemy-abirities" class="break-page">エネミーアビリティ</h2>
+  
+<div class="ability-card">
+  <div class="card-title">
+    <div>大アゴ</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ムシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《噛む》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると対象に3点のダメージを与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>毒針</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ムシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《刺す》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると対象に1点のダメージを与える。その結果1点でも【HP】が減った場合、対象に『毒』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>外骨格</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ムシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">あなたが受けるダメージを1点軽減する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>飛行</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ムシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">回避判定の達成値にプラス1の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>大鎌</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ムシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>5</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。ダメージを1D6点増加させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>触手</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ムシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《操作》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に1点のダメージを与える。さらに、対象はラウンド終了まで割込みタイプと補助タイプのアビリティが使用不可になる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>体当たり</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ケモノ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>自由</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると対象に1点のダメージを与える。この時命中判定の達成値にプラス2の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>噛みつき</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ケモノ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《噛む》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると対象に2点のダメージを与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>突撃</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ケモノ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>全体</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《走る》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、3点のダメージを与える。ただし、対象は1D6を振って奇数がでた場合、攻撃の対象から外れる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>鋭角</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ケモノ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。ダメージを1点増加させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>牙</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ケモノ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。ダメージを2点増加させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>咆哮</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ケモノ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>全体</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《叫ぶ》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に『麻痺』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>撹乱音波</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ミュータント</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。攻撃が命中した相手は、次のラウンドの終了まで全ての行為判定の達成値にマイナス１の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>鋼鱗</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ミュータント</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">自身が受けるダメージを2点軽減する。ただしその際に気力が1点減少する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>ドリル</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ミュータント</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>3</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。ダメージを2点増加させ、対象に『重傷』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>火炎放射</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ミュータント</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>2</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>全体</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>《呼吸器》</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、敵全体に『炎上』の変調を与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>冷気</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ミュータント</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>補助</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>1</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">命中判定に組み合わせて使用する。対象の特技リストから「腕部」分野の特技を１つランダムに使用不能にする。この効果は重複する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>腐敗</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ミュータント</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">ラウンド終了時に全体の【気力】を1点減少させる。【腐敗】のアビリティを習得している対象には効果を発揮しない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>死亡判定</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>その他</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">【体力】が０になっても死亡せず、死亡判定が発生する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>単体攻撃</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ヌシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>単体</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>任意</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に2D6点のダメージを与える。この攻撃の命中判定の達成値にプラス2の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>全体攻撃</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ヌシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>全体</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>任意</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に1点のダメージを与える。連続した手番には使用できない。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>範囲攻撃</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ヌシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>攻撃</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>0</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>二体</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>任意</div>
+    </div>
+  </div>
+  <div class="card-content">指定特技の判定に成功すると、対象に3点のダメージを与える。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>恒常性</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ヌシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">変調を受けているとき、自分の手番の前に1D6を振る。その出目が受けている変調の数以下ならば、任意の変調を１つ解除できる。『無力化状態』の時にはラウンドの最後に1D6を振り、[受けている変調の数＋1]以下の出目が出た場合『無力化状態』を回復する。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>習性</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ヌシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">その戦闘中に条件を満たした時、追加行動を得る。条件はセッション前にGMが決定する。（例：自分が死亡判定を行った時、【体力】が0になった時、床にダイスが落ちた時など）</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>コア</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ヌシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">死亡判定のダイスを１つ増やす。弱点として「身体部位」を１つ指定する。弱点に部位ダメージが入るとこの効果は失われる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>とりまき</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ヌシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">ヌシ以外のエネミーと同時に登場できる。【とりまき】によって登場するエネミーの合計レベルは[ヌシのレベル×2]、数は[ヌシのレベル]体までとなる。とりまきによって追加されたエネミーは、すべての判定にマイナス2の修正がつく。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>追加体力</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ヌシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">【体力】を[自身のレベル×3]点増加させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>追加気力</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ヌシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">【気力】を[自身のレベル×3]点増加させる。</div>
+</div>
+<div class="ability-card">
+  <div class="card-title">
+    <div>絶対成功</div>
+  </div>
+  <div class="tag">
+    <div>グループ</div>
+    <div>ヌシ</div>
+  </div>
+  <div class="row">
+    <div class="tag">
+      <div>タイプ</div>
+      <div>常駐</div>
+    </div>
+    <div class="tag">
+      <div>反動</div>
+      <div>-</div>
+    </div>
+    <div class="tag">
+      <div>対象</div>
+      <div>自身</div>
+    </div>
+    <div class="tag">
+      <div>指定特技</div>
+      <div>-</div>
+    </div>
+  </div>
+  <div class="card-content">達成値が目標値にとどかない場合でも命中判定に成功する。その場合、相手の回避判定には[（目標値-達成値）×2]点の修正がつく。</div>
+</div>
+  <h2  class="break-page">ドロップ</h2>
+  <table class="responsive" id="droplist">
+  <caption>ドロップ</caption>
+  <thead><tr>
+          <th>1d6</th>
+          <th>ケモノA</th>  
+          <th>ケモノB</th> 
+   </tr></thead>
+  <tr>
+      <td class="txt-center">1</td>
+      <td data-title="ケモノA">なし</td>
+      <td data-title="ケモノB">なし</td>
+  </tr>
+  <tr>
+      <td class="txt-center">2</td>
+    <td data-title="ケモノA">なし</td>
+    <td data-title="ケモノB">生肉（1J、1W、食料)</td>
+  </tr>
+  <tr>
+      <td class="txt-center">3</td>
+    <td data-title="ケモノA">生肉（1J、1W、食料)</td>
+    <td data-title="ケモノB">生肉（1J、1W、食料)</td>
+  </tr>
+  <tr>
+      <td class="txt-center">4</td>
+    <td data-title="ケモノA">生肉（1J、1W、食料)</td>
+    <td data-title="ケモノB">生肉（1J、1W、食料)</td>
+  </tr>
+  <tr>
+      <td class="txt-center">5</td>
+    <td data-title="ケモノA">生肉（1J、1W、食料)</td>
+    <td data-title="ケモノB">生肉（1J、1W、食料)</td>
+  </tr>
+  <tr>
+      <td class="txt-center">6</td>
+    <td data-title="ケモノA">毛皮（1J、1W)</td>
+    <td data-title="ケモノB">生肉（1J、1W、食料)</td>
+  </tr>
+  </table>
+  <table class="responsive" id="droplist">
+  <caption>ドロップ</caption>
+  <thead>
+    <tr>
+        <th>1d6</th>
+        <th>ムシA</th> 
+        <th> ムシB</th> 
+        <th> ムシC</th> 
+    </tr>
+  </thead>
+  <tr>
+    <td class="txt-center">1</td>
+    <td data-title="ムシA">なし</td>
+    <td data-title="ムシB">なし</td>
+    <td data-title="ムシC">硬い羽（1J、1W)</td>
+  </tr>
+  <tr>
+    <td class="txt-center">2</td>
+    <td data-title="ムシA">なし</td>
+    <td data-title="ムシB">なし</td>
+    <td data-title="ムシC">硬い羽（1J、1W)</td>
+
+  </tr>
+  <tr>
+    <td class="txt-center">3</td>
+    <td data-title="ムシA">硬い殻（1J、1W)</td>
+    <td data-title="ムシB">硬い殻（1J、1W)</td>
+    <td data-title="ムシC">硬い羽（1J、1W)</td>
+
+  </tr>
+  <tr>
+    <td class="txt-center">4</td>
+    <td data-title="ムシA">硬い殻（1J、1W)</td>
+    <td data-title="ムシB">硬い殻（1J、1W)</td>
+    <td data-title="ムシC">硬い殻（1J、1W)</td>
+
+  </tr>
+  <tr>
+    <td class="txt-center">5</td>
+    <td data-title="ムシA">硬い羽（1J、1W)</td>
+    <td data-title="ムシB">コカの葉（3J、0W)</td>
+    <td data-title="ムシC">硬い殻（1J、1W)</td>
+
+  </tr>
+  <tr>
+    <td class="txt-center">6</td>
+    <td data-title="ムシA">硬い羽（1J、1W)</td>
+    <td data-title="ムシB">コカの葉（3J、0W)</td>
+    <td data-title="ムシC">毒針（2J、1W)</td>
+
+  </tr>
+</table>
+  </hgroup>
+</section>
+<!---->
+
+## FAQ{#FAQ .break-verso }
+
+### クラスに関する FAQ
+
+<dl>
+<dt>Q.キズモノのキズを「利き腕」に指定した場合、「右腕」や「左腕」にアイテムを装備することはできますか？</dt>
+<dd>A.装備できます。
+<dt>Q.キズモノのキズを「利き腕」に指定した場合、「槍」などの装備部位が両手の武器は装備できますか？ ペナルティなどはありませんか？</dt>
+<dd>A.装備できます。ペナルティはありません。
+</dl>
+
+### 行動に関する FAQ
+
+  <dl>
+  <dt>Q.行動済みでも割込みタイプの行動は行えますか？</dt>
+  <dd>A.はい、可能です。割込みタイプの行動は行動済み未行動に関わらず、割込んで使用できます。 </dd>
+  <dt>Q. 戦闘行動の武器の装備で一度に複数の武器を装備できますか？</dt>
+  <dd>A. 所持しているものならば複数装備することができます。</dd>
+  <dt>Q. 「本気を出す」について質問です。<q>通常状態から『本気状態』となったラウンドに＜ヌシ＞は追加行動を一回得ます。</q>とあります。追加行動は本気状態となったラウンド以降、毎ラウンド得られますか？ そのラウンドのみですか？</dt>
+  <dd>A. そのラウンドのみです。</dd>
+  <dt>Q. 「本気を出す」について質問です。反動を受けないとありますが回避に消費する気力はなしになりますか？</dt>
+  <dd>A. 「回避」の気力消費は反動ではありません。そのため、本気を出した後ても気力の消費は必要です。</dd>
+  </dl>
+
+### 特技に関する FAQ {#faq-skill}
+
+<dl>
+<dt>Q.ランダムに特技を習得する場合はどのように決めればよいですか。</dt>
+<dd>A.1D6 を振り分野を決め、2D6 を振って習得する特技を決めてください。</dd>
+</dl>
+
+### アビリティに関する FAQ
+
+  <dl>
+  <dt>Q.【毒矢】は矢を所持していなくても使えますか？</dt>
+  <dd>A.使用できます。
+  アビリティを取得した時点で、毒矢用の矢と毒を所持していることになります。</dd>
+  <dt>Q.【渾身撃】の指定特技は武器の指定特技と一致させる必要がありますか？</dt>
+  <dd>A.いいえ、【渾身撃】の指定特技は武器と合わせる必要のある【武器攻撃】と違い、
+  完全に自由です。
+  《殴る》で槍を使うなどしてもかまいません。
+  その指定特技でどのように攻撃するのかをしっかり演出してください。。</dd>
+  <dt>Q.【刺し違え】を使った時、自分がダメージを負った部位に敵が既に部位ダメージを受けていた場合どうなりますか？</dt>
+  <dd>A.何も起こりません。相手の受けている部位ダメージを確認してから使いましょう。</dd>
+  <dt>Q.【ピタゴラ】などのダメージを与える支援アビリティに回避判定をおこなうことはできますか？</dt>
+  <dd>A.いいえ、できません。</dd>
+  <dt>Q.【咆哮】などの変調を与えるアビリティに対して回避は行えますか？</dt>
+  <dd>A.回避判定可能です。タイプ：攻撃のアビリティはすべて攻撃として扱います。 </dd>
+  
+  <dt>Q.キズモノのアビリティの【リハビリ】で取得した特技は、他の部位ダメージによって使用不能な状態になりますか？</dt>
+  <dd>A.使用不能になります。「選択した特技が使用不能な状態にならない」という効果は【リハビリ】にはありません。</dd>
+  
+  <dt>Q.キャラクターメイキング時に汎用アビリティのみを取得したキャラクターを作成できますか。</dt>
+  <dd>A.可能です。</dd>
+  
+  <dt>Q. ショクニンの『改造』を同じアイテムに使用した場合、効果は重複しますか？</dt>
+  <dd>A. 同じ名前のアビリティの効果は重複しません。別のアイテムの改造は可能です。</dd>
+  
+  <dt>Q. ママのアビリティ【ごちそう】と【節約】を両方所持している場合、【ごちそう】を使うときに消費する食料アイテムに対して【節約】の使用は可能ですか？</dt>
+  <dd>A. いいえ、【ごちそう】で消費する食料を【節約】することはできません。【ごちそう】は食料を「消費」する効果で、【節約】は消耗品を「使用」したときに、1D6を振る効果です。</dd>
+  
+  <dt>Q. 散策表の７「セッション中に食料を5個手に入れるたび」に対して、オトナの【へそくり】「セッション開始時に3J獲得できる」の3Jはカウントしますか？</dt>
+  <dd>A. カウントします。セッション開始時は、セッション中に含まれます。</dd>
+  
+  <dt>Q.汎用アビリティ【たからもの】の「失う」というのは文字通り消えてしまうのでしょうか？　それとも消費するだけでセッション後に復活するのでしょうか？</dt>
+  <dd>A. 文字通り消えてしまうことになります。セッション後に復活することもありません。アビリティ欄には【たからもの（破損）】や【たからもの（喪失）】などと記すと思い出になるでしょう。失っているので、経験値を消費して再取得可能です。</dd>
+  
+  <dt>Q. 【鋼鱗】は強制的に発動しますか？ 気力が尽きても発動しますか？</dt>
+  <dd>A. 強制的に発動します。気力が尽きても発動します。</dd>
+  <dt>Q. エネミーアビリティ【冷気】で使用不能の対象になるのは、未取得の特技含めてランダムですか？ それとも取得済みの中からだけですか？</dt>
+  <dd>A. 未習得含めてランダムです。</dd>
+  <dt>Q. ＜ヌシ＞は全てのグループから取得できるとありますが、PCのクラスアビリティも取得できますか？</dt>
+  <dd>A. 取得できます。</dd>
+  <dt>Q. ヌシグループから4つ習得した後に習得するアビリティは、ヌシグループからも習得できますか？</dt>
+  <dd>A. 取得できます。</dd>
+  </dl>
+
+### アイテムに関する FAQ
+
+<dl>
+<dt>Q.キャラクターメイキング時にリュックサックを売ることはできますか？</dt>
+<dd>A.可能です。10Jにリュックを売った5Jを加えて、
+15Jで買えるアイテムを自由に買って下さい。
+</dd>
+<dt>Q.手提げかばんは装備しないと効果を発揮しませんか？</dt>
+<dd>A.はい、片手に装備しないと効果を発揮しません。重量2のただの所持品になります。
+</dd>
+<dt>Q.6Jのナタで4Jの槍を買いたいと思います。おつりはでますか？</dt>
+<dd>A.場合によります。購入のタイミングで「１つだけ買うことができる」とされていた場合、
+おつりはでません。そうでなければ、4Jの槍と2Jを買うことができます。
+</dd>
+<dt>Q.戦闘中、袋にいれた武器を取り出してすぐ装備することはできますか？</dt>
+<dd>A.いいえ。袋から取り出すのが1行動、装備するのに1行動で合計2ラウンドかかります。
+</dd>
+<dt>Q.なべぶたを2つ装備した場合、回避判定にプラス2はつきますか？</dt>
+<dd>A.いいえ。同じ名前の装備品を2つ装備しても、発揮される効果は1つとなります。
+</dd>
+<dt>Q.2つコカの葉を持っていたとします。タイミングが割込みですが、1ラウンドに2つ
+使うことはできますか？</dt>
+<dd>A.はい、可能です。消耗品は同じ名前でもそれぞれ別のアイテムとして扱います。
+</dd>
+<dt>Q.ペットは使用したら食べちゃうのですか？</dt>
+<dd>A.いいえ。支援行動で使用すれば、可愛がることによって【気力】が1D3点増加します。
+いざというときに、食料としても扱うことができる、ということです。
+</dd>
+<dt>Q.胡椒玉どう使うの？</dt>
+<dd>A.攻撃と同時に使います。「スリング」を装備している時、命中判定直前に胡椒玉を消費することで使用できます。
+攻撃が命中した場合、目標に『麻痺』の変調を与えます。
+</dd>
+<dt>Q.カタナでスペシャル！ 攻撃力２倍！ 攻撃力1D6は前、後？</dt>
+<dd>A.先に攻撃力が1D6増加し、その後攻撃力を2倍にします。
+</dd>
+<dt>Q.【改造】や【値切り】などの「対象：アイテム」のアビリティは他人のアイテムを対象にとれますか？</dt>
+<dd>A.はい、可能です。他人のアイテムでも対象にとることができます。
+</dd>
+<dt>Q.部位：両手のアイテムや、部位：片手のアイテムを右手左手両方に装備していたとします。このとき、所持品のコカの葉などの消費アイテムは使えますか？</dt>
+<dd>A.はい、使用できます。装備部位とアイテムの使用については関連ありません。
+</dd>
+<dt>Q.《※利き腕》に部位ダメージをうけました。装備しているアイテムは使えなくなりますか？</dt>
+<dd>A.いいえ、部位ダメージを受けても装備は問題なく使えます。武器は持てるが、《特技》を使うには厳しい傷を受けたなどと解釈してください。
+</dd>
+<dt>Q.購入不可のアイテムに価格が設定されている場合、J換算はできますか？</dt>
+<dd>A.可能です。例えば、1Jの価格が設定されている「硬い殻」で、1Jを購入できます。
+</dd>
+
+  <dt>Q.  携帯ラジオは1サイクルに何度でも効果がありますか？</dt>
+  <dd>A. 支援行動のため、1サイクルに何度つかっても効果があります。</dd>
+</dl>
+
+### 行為判定に関する FAQ
+
+<dl>
+<dt>Q.死亡判定は判定ですか？</dt>
+<dd>A.判定です。ホープの【希望の光】やキズモノの【悪運】の効果を使うこともできます。</dd>
+<dt>Q.スペシャルを振り直しさせられ、スペシャルでなくなった場合気力の回復はありますか？</dt>
+<dd>A.スペシャル・ファンブルの発生は振り直し後の出目で判断します。
+スペシャルは起こらなかったとみなし、気力の回復はありません。</dd>
+<dt>Q. 〈ヌシ〉はエネミー特技【死亡判定】を取らなくてもデフォで死亡判定ができるのでしょうか？</dt>
+<dd>A. 「4.2.敵の死亡」にあるように、デフォルトでヌシは死亡判定を行います。【死亡判定】はヌシ以外のエネミー用スキルとなっております。</dd>
+</dl>
+
+### キャンプに関する FAQ
+
+<dl>
+<dt>Q.追加設備決定表で6の目が出た場合、ドラム缶とお風呂を両方取得できますか？ どちらかを選ばなければなりませんか？</dt>
+<dd>A.ドラム缶とお風呂を両方取得できます。 </dd>
+</dl>
+
+### キャンプフェイズに関する FAQ
+
+<dl>
+<dt>Q.散策表11番が2回出た場合の処理を教えて下さい。</dt>
+<dd>A.効果は重複します。その回で購入できるキャンプの施設の必要CPはマイナス２されます。 </dd>
+<dt>Q.散策表12番が出た場合、＜資材集め＞のチャンスは1回のみでしょうか</dt>
+<dd>A.そのセッション中なら、何回でも行うことができ、成功するたびにCPを獲得できます。この支援行動は、散策表を振ったキャラクター以外でも行うことができます。</dd>
+</dl>
+
+### 探索フェイズに関する FAQ
+
+<dl>
+<dt>Q.＜チェックポイント＞の＜障害＞の有無や内容、＜ヌシ＞の情報はいつわかりますか？</dt>
+<dd>A.＜障害＞の有無や内容、チェックポイントの内容は、基本的にはチェックポイントを訪れた時に分かります。
+ただし、例外があってもかまいません。他の冒険者が探索に行っていたりすれば、そこまでの情報はあるでしょう。
+地図があるなら、予想できる＜障害＞もあるでしょう。＜ヌシ＞の外見情報や大まかな強さはわかっていてかまいません。
+</dd>
+
+</dl>
+
+### 変調に関する FAQ
+
+<dl>
+<dt>Q.【体力】が0の時、『炎上』の効果の1ダメージで部位ダメージは入りますか。</dt>
+<dd>A.はい、部位ダメージは入ります。ダメージの入る部位を決定してください。</dd>
+<dt>Q.『炎上』の効果で【気力】が0になったら『無力化状態』になりますか。</dt>
+<dd>A.はい、『無力化状態』になります。</dd>
+</dl>
+
+## 参考作品{.break-verso}
+
+<dl>
+<dt>リセット・ワールド</dt>
+<dd>著：鷹見一幸。伝染病の蔓延により世界は一度リセットされました。
+この世界がイメージの大本です。
+<a href="http://ja.wikipedia.org/wiki/%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88%E3%83%BB%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89">
+→wikipedia
+</a></dd>
+<dt>デジモンアドベンチャー</dt>
+<dd>子供たちがデジタルワールドでデジモンたちとサバイバルな冒険をします。
+子供たちの戦いという意味で参考になるでしょう。
+<a href="http://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%83%A2%E3%83%B3%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC">
+→wikipedia
+</a>
+<dt>サバイバル・キッズ～孤島の冒険者～</dt>
+<dd>コナミ制作。無人島で子供が1人でいき、そして脱出するゲームです。
+古代遺跡もあって、浪漫あふれる一作、無人島のサプリも作りたいですね。
+<a href="http://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%90%E3%82%A4%E3%83%90%E3%83%AB%E3%82%AD%E3%83%83%E3%82%BA#.E5.AD.A4.E5.B3.B6.E3.81.AE.E5.86.92.E9.99.BA.E8.80.85">
+→wikipedia
+</a>
+</dd>
+</dd>
+<dt>ワールズエンドクラブ</dt>
+<dd>Switch版LOSTRPGと言ってもいいですね！ まずはPV見てみてください。 <a href="https://www.deathmarchclub.com/">→ワールズエンドクラブ</a></dd>
+
+<dt>少女終末旅行</dt>
+<dd>廃墟を巡る、二人旅。明るさを失わない二人の姿はホープのイメージにぴったりです。<a href="http://www.kurage-bunch.com/manga/shojoshumatsu/">→くらげバンチ</a></dd>
+<dt>ケムリクサ</dt>
+<dd>廃墟？を巡る旅。重異形化フィールドの参考になるでしょう。<a href="https://ja.wikipedia.org/wiki/%E3%82%B1%E3%83%A0%E3%83%AA%E3%82%AF%E3%82%B5">→Wikipedia</a> TRPGもありますよ<a href="http://ihp.sakura.ne.jp/kemurikusatrpg/">→TRPG</a></dd>
+<dt>けものフレンズ（アニメ）</dt>
+<dd>ヤセイジの参考に。こちらは割とやさしい森。<a href="https://ja.wikipedia.org/wiki/%E3%81%91%E3%82%82%E3%81%AE%E3%83%95%E3%83%AC%E3%83%B3%E3%82%BA_(%E3%82%A2%E3%83%8B%E3%83%A1)">→Wikipedia</a></dd>  
+<dt>クレヨンしんちゃん映画版</dt>
+<dd>家族・仲間の絆はキャンプのつながりの参考になるでしょう。
+この世界は、もう少しだけ血の匂いがしますけれども。
+</dd>
+<dt>僕らの勇気・未満都市</dt>
+<dd>キンキキッズ主演。隕石の落下で20歳以上を殺すウイルスがばら撒かれ、
+都市は大きな壁で閉鎖されます。
+土曜九時のドラマ、大好きでした。
+<a href="http://ja.wikipedia.org/wiki/%E3%81%BC%E3%81%8F%E3%82%89%E3%81%AE%E5%8B%87%E6%B0%97_%E6%9C%AA%E6%BA%80%E9%83%BD%E5%B8%82">
+→wikipedia
+</a>
+</dd>
+<dt>神秘の島</dt>
+<dd>著：ジュール・ベルヌ。
+ロビンソン・クルーソーや十五少年漂流記のような無人島サバイバルもののなかで、
+屈指の名作だと思います。
+マッチ一本、麦一粒から生み出される文明は圧巻です。
+0からの家つくり、道具作りの参考になるでしょう。
+<a href="http://ja.wikipedia.org/wiki/%E7%A5%9E%E7%A7%98%E3%81%AE%E5%B3%B6">
+→wikipedia
+</a>
+</dd>
+<dt>Dr.STONE</dt>
+<dd>数万年後に復活してサバイバル。化学でチート無双！ ロールの参考にもシナリオの参考にもなると思います。
+<a href="https://ja.wikipedia.org/wiki/Dr.STONE">
+→Wikipedia
+</a></dd>
+
+<dt>サバイバル</dt>
+<dd>著：さいとうたかを。崩壊した日本を生き抜く少年の物語です。
+<a href="http://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%90%E3%82%A4%E3%83%90%E3%83%AB_%28%E6%BC%AB%E7%94%BB%29">
+→wikipedia
+</a></dd>
+<dt>冒険図鑑～野外で生活するために～</dt>
+<dd>さとうち藍文 /松岡達英絵　福音館書店。実際に使える野外の技術がいっぱい。子供向けとあなどるなかれ。
+<a href="http://www.amazon.co.jp/%E5%86%92%E9%99%BA%E5%9B%B3%E9%91%91%E2%80%95%E9%87%8E%E5%A4%96%E3%81%A7%E7%94%9F%E6%B4%BB%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB-Do-%E5%9B%B3%E9%91%91%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E3%81%95%E3%81%A8%E3%81%86%E3%81%A1-%E8%97%8D/dp/4834002632">
+→Amazon
+</a></dd>
+<dt>やせいのいしおの！</dt>
+<dd>3人の子供が、迷い込んだ異世界でサバイバル。異世界だけど、地味にこつこつサバイバルします。
+<a href="https://www.amazon.co.jp/%E3%82%84%E3%81%9B%E3%81%84%E3%81%AE%E3%81%84%E3%81%97%E3%81%8A%E3%81%AE%EF%BC%81-%EF%BD%9E%E7%95%B0%E4%B8%96%E7%95%8C%E3%82%B1%E3%83%A2%E3%83%9F%E3%83%9F%E3%82%B5%E3%83%90%E3%82%A4%E3%83%90%E3%83%AB%EF%BD%9E-%E9%9B%BB%E6%92%83%E6%96%87%E5%BA%AB-%E4%BD%90%E8%97%A4-%E3%82%B1%E3%82%A4-ebook/dp/B07YNGKHDY">
+→Amazon
+</a>特筆すべきが、作者が実際にいろいろやっているところ<a href="https://twitter.com/i/events/928619530942783490">→ツイートまとめ</a>
+</dd>
+
+<dt>アフターマン</dt>
+<dd>著：ドゥーガル・ディクソン（1981年）。森にはこんな感じのヤツラもいる。
+<a href="http://www.geocities.co.jp/technopolis/9540/index.html">
+→アフターマンワールド
+</a></dd>
+<dt>オデッセイ</dt>
+<dd>
+  著：アンディ・ウェアーの「火星の人」原作の映画。
+  極限状況でのサバイバル。生き残る意思の大切さとチームとの絆はきっと心を打つだろう。
+  離れたキャンプのメンバーからの支援演出も取り入れられたら面白そう。
+  <a href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%87%E3%83%83%E3%82%BB%E3%82%A4_(%E6%98%A0%E7%94%BB)">→wikiedia</a>
+</dd>
+</dl>
+
+  <section id="next">
+    <h2 id="next-step-tile">次のステップ</h2>
+    <h3 id="next-step-session">さっそくセッションをしたい!</h3>
+    <p>サンプルシナリオを用意しております。</p>
+    <ul>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/scenario-sample.html" target="_blank">→サンプルシナリオ1:塩と胡椒</a> </li>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/scenario-sample.html#sample-scenario2" target="_blank">→サンプルシナリオ2:嵐の濁流</a> </li>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/scenario-island.html" target="_blank">現代編：無人島漂流記 </a></li>
+    </ul>
+    <p><a href="https://twitter.com/lioneeeee" target="_blank">uni</a>さんがシナリオ・素材を公開してくださっています。</p><a href="https://uni-unistar.booth.pm/items/2985062" target="_blank"><img src="../assets/images/scenario/please.gif" width="250px"></a><a href="https://uni-unistar.booth.pm/items/3105601" target="_blank"><img src="../assets/images/scenario/dive_under_ground.jpg" width="250px"></a><a href="https://uni-unistar.booth.pm/items/3061398" target="_blank"><img src="../assets/images/booth/material_uni.jpg" width="250px"></a>
+    <p><a href="https://twitter.com/LabanS_Lab" target="_blank">戯言脳髄Laboratory</a>さんがシナリオ・素材を公開してくださっています。</p><a href="https://labans-lab.booth.pm/items/2749749" target="_blank"><img src="../assets/images/scenario/kizuna_badge.jpg" width="250px"></a><a href="https://labans-lab.booth.pm/items/3094686" target="_blank"><img src="../assets/images/booth/lost_bg_labans-lab.jpg" width="250px"></a><a href="https://labans-lab.booth.pm/items/2681803" target="_blank"><img src="../assets/images/booth/map_icon_labans-lab.jpg" width="250px"></a>
+    <p>シナリオ公開サイトもあります。
+      <p><a href="https://create-now.vercel.app/lostrpg/scenario/ja/list" target="_blank">くりえいとなう！ LOSTRPGシナリオ一覧</a></p>
+      <p><a href="https://talto.cc/c/lost" target="_blank">TALTO</a> ... 投稿お願いします！</p>
+    </p>
+    <p>キャンプを育てていく楽しみが存分に味わえるキャンペーンシナリオを公開しています。</p>
+    <p><a href="https://lostrpg-751c1.firebaseapp.com/lost/campaign-mother.html" target="_blank">キャンペーン: Mother</a> ... <a href="https://twitter.com/hagure_g">はぐれけだま</a>様</p>
+    <h3 id="next-step-reply">実際の遊び方を知りたい</h3>
+    <p>遊んだ様子を読み物にしたリプレイを用意しております。</p>
+    <ul>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/reply-sample1.html">→ リプレイ1: 塩と胡椒 </a></li>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/reply-sample2.html">→ リプレイ2: 嵐の濁流 </a></li>
+    </ul>
+    <h3 id="next-step-make-char" class="break-page">キャンプやキャラクターを作りたい</h3>
+    <h4>サポートサイト</h4>
+    <p>サポートサイトがあります。キャンプ・キャラクター・ヌシなどを作成できます。</p>
+    <p>キャラクターを作った後は、レコードシートを利用可能になりますのでお役立てください。</p>
+    <p> <a href="https://create-now.now.sh/lostrpg" rel="noopener noreferrer">→ サポートサイト </a></p>
+    <h4>PDFダウンロード</h4>
+    <p>キャラクターシート</p><a href="https://lostrpg-751c1.firebaseapp.com/lost/assets/data/sheet.pdf"><img src="../assets/images/lost-character-sheet.png" alt="キャラクターシート" style="width: 250px; height: 174px;"></a>
+    <h4>サマリーなど</h4>
+    <ul>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/chart.html"> チャート</a></li>
+      <li><a href="https://lostrpg-751c1.firebaseapp.com/lost/summary.html"> サマリー</a></li>
+      <li><a href="http://asuwa.mistysky.net/s/table/table-skills.htm"> 判定値サポート</a></li>
+      <li><a href="https://uni-unistar.booth.pm/items/3061398">ココフォリア用素材集</a></li>
+    </ul>
+    <h3 id="next-step-add-data">もっとデータを見たい</h3>
+    <p>拡張データ集（サプリメント）があります。</p>
+    <p>追加のクラスやアイテムをお楽しみください。</p>
+    <p> <a href="https://lostrpg-751c1.firebaseapp.com/lost/supplement-strange-fields.html" rel="noopener noreferrer">→ Strange Fields 終末列島百景 </a></p>
+    <p> <a href="https://lostrpg-751c1.firebaseapp.com/lost/supplement-seki-dragon-plain.html" rel="noopener noreferrer">→ 関ヶ原暴竜平原 </a></p>
+  </section>
+
+## リンク{.break-page}
+
+### オンラインルールブック
+
+[LOSTRPG](https://lostrpg-751c1.firebaseapp.com/lost/)
+
+### オンラインキャラクターシート
+
+[create-now](https://create-now.vercel.app/lostrpg)
+
+### 利用素材 - アイコン
+
+- [Game-Icons Scar by Lorc](https://game-icons.net/1x1/lorc/scar-wound.html)
+- [icooon-mono](https://icooon-mono.com/)
+
+### 利用ライブラリ - 組版
+
+[Vivliostyle CSS 組版](https://vivliostyle.org/ja/)
+
+### github
+
+[hibohiboo - lostrpg](https://github.com/hibohiboo/lostrpg/tree/feature/addVivlioStyle/app/public/vivliostyle-viewer-latest/samples/lost)

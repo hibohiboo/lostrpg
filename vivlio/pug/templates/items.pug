@@ -1,0 +1,32 @@
+include ../includes/var
+
+each item in itemList
+  div.item-card
+    div.card-title
+      div
+        img(src="../assets/images/icon/item.svg")
+      div=item.name
+    div.row
+      div.tag
+        div タイプ
+        div=item.type
+      div.tag
+        div 価格
+        div=item.j
+      div.tag
+        div 重量
+        div=item.weight
+      div.tag
+        div 対象
+        div=item.target
+    div.row
+      div.tag
+        div 指定特技
+        div=item.specialty
+      div.tag
+        div 部位
+        div=item.area
+      div.tag.trait
+        div 特性
+        div=item.trait
+    div.card-content=item.effect

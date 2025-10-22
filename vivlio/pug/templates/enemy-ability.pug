@@ -1,0 +1,25 @@
+include ../includes/var
+
+each item in enemyAbilityList
+  div.ability-card
+
+    div.card-title
+      div=item.name
+    div.tag
+      div グループ
+      div=item.group
+    div.row
+      div.tag
+        div タイプ
+        div=item.type
+      div.tag
+        div 反動
+        div=item.recoil
+      div.tag
+        div 対象
+        div=item.target
+
+      div.tag
+        div 指定特技
+        div=item.specialty
+    div.card-content=item.effect

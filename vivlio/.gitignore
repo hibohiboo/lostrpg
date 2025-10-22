@@ -1,0 +1,8 @@
+node_modules
+.vs-*
+index.html
+*.pdf
+book
+tmp
+dist
+.vivliostyle

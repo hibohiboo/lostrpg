@@ -1,0 +1,11 @@
+アビリティは項目が多いため json で管理している。 (pug/includes/var)
+npm run build-pug で dist に成果物が作成される。
+
+複数ページに分けてマークダウンを管理し、プレビューしている。
+ただし、複数ページを一気にみようとするとレンダリングまでの時間がかかるため、個別で見ている。
+
+目次の関係で、複数ページをまとめる必要がある。
+npm run bundle で複数ページを 1 枚にしている。md/bundle.md が成果物。
+
+app/public/vivliostyle-viewer-latest は https://vivliostyle.github.io/ からダウンロードしたものを展開し、
+app/public/vivliostyle-viewer-latest/samples/lostにLOSTRPGのファイルを設定している。

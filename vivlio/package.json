@@ -1,0 +1,24 @@
+{
+  "name": "lostrpg",
+  "version": "1.0.0",
+  "description": "lostrpg paper",
+  "main": "index.js",
+  "scripts": {
+    "to-pdf": "vivliostyle build",
+    "postto-pdf": "cp ./book/index.html ../app/public/vivliostyle-viewer-latest/samples/lost/index.html && cp  ./css/style.css ../app/public/vivliostyle-viewer-latest/samples/lost/css/style.css",
+    "build-pug": "pug pug/templates -o ./dist/pug -P ",
+    "build": "vivliostyle build",
+    "bundle": "cd ./md && cat index.md toc.md pc.md ability.md item.md pl.md camp-equipment.md gm.md faq.md > bundle.md",
+    "preview": "vivliostyle preview --config vivliostyle.config.js"
+  },
+  "keywords": [
+    "trpg"
+  ],
+  "author": "hibo",
+  "license": "MIT",
+  "devDependencies": {
+    "@vivliostyle/cli": "^9.7.1",
+    "pug": "^3.0.3",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

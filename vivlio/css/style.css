@@ -1,0 +1,438 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('./var.css');
+
+* {
+  box-sizing: border-box; /* ボーダーを含めたwidth,heightにする */
+}
+
+/* 共通ページ設定 */
+@page {
+  size: var(--paper-size);
+  font-size: var(--page-font-size); /* 全マージンボックスに適用される文字サイズ */
+
+  /* ページ下中央にページ番号 表示 */
+  /* @bottom-center {
+    content: counter(page);
+  } */
+}
+
+@page :left { /* 左ページ設定 */
+  margin-block-start: var(--top-margin);
+  margin-block-end: var(--bottom-margin);
+  margin-inline-start: var(--inside-margin);
+  margin-inline-end: var(--outside-margin);
+
+  /* ページ左下にノンブル表示 */
+  @bottom-left-corner {
+    content: counter(page);
+    block-size:  var(--page-font-size); /* 高さを文字に合わせる */
+    margin-block-start: var(--distance-from-page_number-and-printing_plate); 
+  }
+}
+
+@page :right { /* 左ページ設定 */
+  margin-block-start: var(--top-margin);
+  margin-block-end: var(--bottom-margin);
+  margin-inline-start: var(--outside-margin);
+  margin-inline-end: var(--inside-margin);
+
+  /* ページ右下にノンブル表示 */
+  @bottom-right-corner {
+    content: counter(page);
+    block-size:  var(--page-font-size); /* 高さを文字に合わせる */
+    margin-block-start: var(--distance-from-page_number-and-printing_plate); 
+  }
+}
+
+/* 表紙用設定 */
+@page :nth(1) {
+  @bottom-left-corner {
+    content: none;
+  }
+  @bottom-right-corner {
+    content: none;
+  }
+}
+
+:root {
+  font-size: var(--base-font-size);
+  font-family: var(--base-font-family);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading);
+  /* CSS組版専用 */
+  text-spacing: auto; /*  文字組設定を自動に */
+  windows: 1; /* 孤立行は1行 */
+  orphans: 1; /* 孤立行は1行  */
+}
+
+p {
+  text-align: justify; /* 行末揃え */
+  text-indent: 1em; /* 字下げ設定 */
+  margin-block: 0;
+}
+
+
+
+figure {
+  margin-block: 4mm;
+  margin-inline: 0;
+}
+
+img {
+  max-inline-size: 100%;
+  /* border: solid 0.5mm #000; */
+}
+
+/* 拡張子がsvgのときはボーダーなし */
+img[src$=".svg"] {
+  border: none;
+}
+figure:has(.float-right) {
+  float:inline-end;
+  inline-size: 17em;
+  margin-block: 2mm;
+  margin-inline: 2em 0;
+}
+figure:has(.float-left) {
+  float:inline-start;
+  margin-block: 2mm;
+  margin-inline: 1em 0;
+}
+.float-clear {
+  clear: both;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 12Q;
+  line-height: 1.25em;
+}
+td,th {
+  border: solid 0.1mm #000;
+  padding: 1mm;
+}
+th {
+  background-color: #bbb;
+  white-space:nowrap;
+}
+tr:nth-child(even){
+  background-color: #eee;
+}
+
+/* ユーティリティ */
+.small-size-font {
+  font-size: var(--small-font-size);
+}
+.ss-size-font {
+  font-size: var(--ss-font-size);
+}
+
+.pc-class-images {
+  padding-top: 3mm;
+  text-align: center;
+}
+
+.pc-class-images img {
+  width: 45mm;
+  margin-left: 5mm;
+}
+
+.break-page {
+  break-before: page;
+}
+
+.break-verso {
+  break-before: var(--head-break-setting);
+}
+
+.no-wrap-1 td:nth-child(1){
+  white-space: nowrap;
+}
+
+.no-wrap-2 td:nth-child(1),.no-wrap-2 td:nth-child(2){
+  white-space: nowrap;
+}
+
+table.responsive td:nth-child(1), 
+table.responsive td:nth-child(2),
+table.responsive td:nth-child(3),
+table.responsive td:nth-child(4),
+table.responsive td:nth-child(5),
+#item td:nth-child(6)
+ {
+  white-space: nowrap;
+}
+
+.content .diceroll-sample {
+  border: solid 3px #000;
+  padding: 15px 30px;
+}
+
+.content .icon {
+  display: inline-box;
+  border: solid 1px #fff;
+  border-radius: 6px;
+  padding: 1px 3px;
+  color: #fff;
+}
+.content .success .icon {
+  background-color: #28a745;
+}
+.content .fail .icon {
+  background-color: #f10000;
+  margin-left: 5px;
+}
+.content .fail {
+  margin-top: 10px;
+}
+.content hgroup h1 {
+  padding-left: 0;
+  border-left: none;
+  font-size: 1.8rem;
+}
+
+dt {
+  font-weight: var(--font-weight-bold);
+}
+
+/* 解説（B6用） */
+.small-dl {
+  font-size: 10Q;
+  line-height: 1.25em;
+}
+.small-dl dt {
+  margin-top: 1mm;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.small-dl dd {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.small-dl dl {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* アビリティ表示 B6 用*/
+
+.ability-card {
+  width: 96.6mm; /* 1.43 x 1(白銀). 1.61 x 1 (黄金)*/
+  /* min-height: 60mm; */
+  margin-top: 5mm;
+  border: solid 1px #000;
+  padding: 1mm 2mm;
+  break-inside: avoid;
+  font-size: 10Q;
+  line-height: 1.2;
+}
+.ability-card .card-title {
+ font-size: 1.1em;
+ display: flex;
+}
+.ability-card .card-title div:nth-child(1) {
+  margin-right: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.ability-card .card-title img {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+ }
+ .ability-card .row {
+  display: flex;
+ }
+ .ability-card .tag {
+  display: flex;
+  margin-left: 2mm;
+  margin-top: 2mm;
+ }
+ .ability-card .tag div {
+  border: 0.2mm solid #000;
+  padding: 0 2mm;
+ }
+ 
+.ability-card .tag div:nth-child(1) {
+  background-color: #333;
+  color: #eee;
+  border-top-left-radius: 2mm;
+  border-bottom-left-radius: 2mm;
+}
+.ability-card .tag div:nth-child(2) {
+  border-top-right-radius: 2mm;
+  border-bottom-right-radius: 2mm;
+}
+
+.ability-card .card-content {
+  margin-top: 2mm;
+}
+
+/* アイテム表示 B6 用*/
+
+.item-card {
+  width: 96.6mm; /* 1.43 x 1(白銀). 1.61 x 1 (黄金)*/
+  margin-top: 5mm;
+  border: solid 1px #000;
+  padding: 1mm 2mm;
+  break-inside: avoid;
+  font-size: 10Q;
+  line-height: 1.2;
+}
+.item-card .card-title {
+ font-size: 1.1em;
+ display: flex;
+}
+.item-card .card-title div:nth-child(1) {
+  margin-right: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.item-card .card-title img {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+ }
+ .item-card .row {
+  display: flex;
+  flex-wrap: wrap;
+ }
+ .item-card .tag {
+  display: flex;
+  margin-left: 2mm;
+  margin-top: 2mm;
+ }
+ .item-card .tag div {
+  border: 0.2mm solid #000;
+  padding: 0 2mm;
+ }
+ .item-card .row .tag.trait{
+  white-space: nowrap;
+ }
+ 
+.item-card .tag div:nth-child(1) {
+  background-color: #333;
+  color: #eee;
+  border-top-left-radius: 2mm;
+  border-bottom-left-radius: 2mm;
+}
+.item-card .tag div:nth-child(2) {
+  border-top-right-radius: 2mm;
+  border-bottom-right-radius: 2mm;
+}
+
+.item-card .card-content {
+  margin-top: 2mm;
+}
+
+.item-card .tag:has(div:empty) {
+  display: none;
+}
+
+/* 目次 */
+
+#toc {
+  text-spacing: no-autospace; /* 和欧文間なし（スペースによるずれを防ぐ） */
+}
+
+#toc ul {
+  list-style: none;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+  counter-reset: toc-list-counter 0;
+}
+#toc a {
+  color: #000;
+  text-decoration: none;
+}
+#toc a::after{
+  content: target-counter(attr(href url), page); /* ページ番号を表示 */
+  margin-inline-start: 1em;
+  text-align: end; /* 右揃え */
+}
+
+/* 章 */
+.toc-chapter {
+  font-size: 24Q;
+  line-height: 1.25em;
+  font-weight: var(--font-weight-bold);
+  margin-block-end: 2mm;
+  display: grid;
+  grid-template-columns: auto 3em; /* 横方向にauto 3emに2分割(右端に目次のページ番号を表示するため) */
+}
+
+.toc-chapter::before {
+  content: "Chapter " counters(toc-list-counter, "-"); /* 章番号 */
+  counter-increment: toc-list-counter; /* カウンターを増やす */
+  grid-column: 1/3; /* 列グリッド １ - 3 に */
+  font-size: 15Q;
+  line-height: 1.5em;
+  border-bottom: solid 0.5mm #000;
+}
+
+.toc-chapter::after {
+  font-size: 18Q;
+}
+
+li:has(> .toc-chapter){
+  margin-block-end: 8mm; /* 次の章との間隔調整 */
+}
+
+/* 節 */
+
+li:has(> .toc-section) {
+  font-size: 18Q;
+  line-height: 1.2em;
+  font-weight: var(--font-weight-bold);
+  margin-inline-start: 15mm; /* 節番号を表示するアキを作る */
+  margin-block-end: 2mm;
+  break-inside: avoid; /* 途中でのページ分割を避ける */
+  position: relative; /* 絶対配置の基準にする。 leader関数とCSSGridの相性が悪いため */
+}
+
+.toc-section::before {
+  content: counters(toc-list-counter, "-"); /* 節番号 */
+  counter-increment: toc-list-counter;
+  position: absolute; /* 絶対配置 */
+  inset-inline-start: -15mm; /* 左位置を-15mmにしてアキに節番号を入れる */
+  display: block;
+  inline-size: 13mm; /* 幅13mm */
+  text-align: end; /* 右揃え */
+}
+
+#toc .toc-section::after {
+  content: leader(dotted) target-counter(attr(href url), page);
+  margin-inline-start: 0.5em; /* 左マージン0.5ミリ */
+}
+
+li:has(> .toc-section) > ul {
+  margin-block-start: 1mm;
+}
+
+/* 項目次 */
+li:has(> .toc-subsection) {
+  font-size: 13Q;
+  line-height: 1.25;
+  font-weight: var(--font-weight-regular);;
+  margin-inline-start: 3em;
+  text-indent: -3em;
+  margin-inline-end: 1em;
+  margin-block-end: 0.1em;
+}
+.toc-subsection::before{
+  display: inline-block;
+  min-inline-size: 2.5em;
+  text-indent: 0;
+  margin-inline-end: 0.5em;
+  text-align: start;
+}
