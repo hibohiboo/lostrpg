@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:24
 # コンテナ上の作業ディレクトリ作成
 WORKDIR /app
 
@@ -8,3 +8,4 @@ RUN npm init -y
 RUN yarn add --dev html2jade
 
 RUN sed -i -e "s/\(\"scripts\": {\)/\1\n    \"html2jade\": \"html2jade\",/g" /app/package.json
+

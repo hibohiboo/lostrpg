@@ -1,5 +1,5 @@
 # https://firebase.google.com/docs/functions/get-started?authuser=0
-# firebase cloud function はv6.11.5で動作
+# https://firebase.google.com/docs/hosting/quickstart
 FROM node:22
 
 # コンテナ上の作業ディレクトリ作成
