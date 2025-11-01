@@ -33,6 +33,16 @@ table.responsive#item
       td(data-title='対象')= item.target
       td(data-title='特性')= item.trait
       td(data-title='効果')= item.effect
+h3#add-class 追加クラス
+.listB
+  .container
+    each obj in dragonPlainClassList
+      article
+        a(href="#" + 'ability-'+obj.id)
+          .image(style="background-image: url('../assets/images/" + obj.image + "');")
+          .text
+            strong= obj.name
+            p= obj.description
 
 h3#add-ability 追加アビリティ
 each ability in dragonPlainAbilityList
