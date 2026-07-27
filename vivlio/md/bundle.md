@@ -2500,7 +2500,7 @@ link:
     <div>指定特技</div>
     <div>-</div>
   </div>
-  <div class="card-content">あなたは補助タイプの特技を2つまで組み合わせられるようになる。</div>
+  <div class="card-content">あなたは補助タイプの【アビリティ】を2つまで組み合わせられるようになる。</div>
 </div>
 
 ### ハンター{.break-verso}
