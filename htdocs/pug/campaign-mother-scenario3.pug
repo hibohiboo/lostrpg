@@ -116,12 +116,9 @@ block title
     var npcAbilityList = [
       {"name":"武器攻撃：刺す","group":"汎用","type":"攻撃","recoil":"0","specialty":"《刺す》","target":"単体","effect":"指定特技の判定に成功すると、[3]点のダメージを与える。この時、命中判定の達成値にプラス2の修正がつく。"},
       {"name":"悪運","group":"キズモノ","type":"割込み","recoil":"3","specialty":"なし","target":"単体","effect":"対象の判定の直後に使用。サイコロ1つの出目をマイナス1する。シナリオ3回。"},
-        {"name":"希望の光","group":"ホープ","type":"割込み","recoil":"3","specialty":"なし","target":"単体","effect":"対象の判定の直後に使用。サイコロ1つの出目をプラス1する。シナリオ3回。"},
-        {"name":"幸運の星","group":"ホープ","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"あなたの行う行為判定では出目が6,5の時にもスペシャルとなる。"},
-
-
+      {"name":"希望の光","group":"ホープ","type":"割込み","recoil":"3","specialty":"なし","target":"単体","effect":"対象の判定の直後に使用。サイコロ1つの出目をプラス1する。シナリオ3回。"},
+      {"name":"幸運の星","group":"ホープ","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"あなたの行う行為判定では出目が6,5の時にもスペシャルとなる。"},
       {"name":"限界","group":"NPC","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"体力が0以下になると即座に行動不能になり、攻撃の対象にならなくなる。戦闘が終了するまで復活しない。PC達が全滅すると彼も死亡する。また、回避を行えない。"},
-
     ]
 
 
@@ -649,7 +646,7 @@ block body
 
 
         table(class="responsive")
-          caption ラグナのアビリティ
+          caption クルスのアビリティ
           thead
             tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
           each item in npcAbilityList
