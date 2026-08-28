@@ -97,6 +97,49 @@ block title
       {"form":"(6)【植物】","effect":"即座に体力+5、全変調解除","waza":"◆別れの吹雪　指定特技：《※呼吸器》　目標に[1d24]点のダメージを与え、以下から追加効果を対象に選ばせる。①体力に[10]の確定ダメージ　②武器を１段階破壊　③任意特技２つ消滅"},
     ]
 
+
+  -
+    var npcList = [
+      {"name":"ラグナ","lv":"2","group":"ニューエイジ/ハカセ/ヤセイジ","stamina":"10","willpower":"10","specialties":"《撃つ》《考える》《塞ぐ》《感覚器》《しゃがむ》《噛む》","abilities":"【武器攻撃：ボウガン】【観察眼】【超回復】【戦術】【攪乱音波】【限界】","drop":"-","comment":"今回はラグナ・クルス・スズのうち選んだ１人が決戦に参戦します。クルス・スズを選んだ場合、GMはラグナのデータを流用し、演出のみ差し替えてください。"},
+    ]
+  -
+    var npcAbilityList = [
+      {"name":"武器攻撃：撃つ","group":"汎用","type":"攻撃","recoil":"0","specialty":"《撃つ》","target":"単体","effect":"指定特技の判定に成功すると、[3]点のダメージを与える。この時、命中判定の達成値にプラス2の修正がつく。"},
+      {"name":"観察眼","group":"ハカセ","type":"支援","recoil":"3","specialty":"《考える》","target":"単体","effect":"指定特技の判定に成功すると、対象に『暴露』の変調を与える。"},
+      {"name":"戦術","group":"ハカセ","type":"補助","recoil":"3","specialty":"-","target":"全体","effect":"先制判定に組み合わせて使用する。先制判定の達成値にプラス1の修正がつく。先制判定に成功した場合、味方全員が先攻で行動できる。"},
+      {"name":"撹乱音波","group":"ミュータント","type":"補助","recoil":"1","specialty":"-","target":"-","effect":"命中判定に組み合わせて使用する。攻撃が命中した相手は、次のラウンドの終了まで全ての行為判定の達成値にマイナス１の修正がつく。"},
+      {"name":"超回復","group":"ヤセイジ","type":"割込","recoil":"5","specialty":"《塞ぐ》","target":"自身","effect":"指定特技の判定に成功すると、自身の【体力】が1D6点増加する。"},
+      {"name":"限界","group":"NPC","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"体力が0以下になると即座に行動不能になり、攻撃の対象にならなくなる。戦闘が終了するまで復活しない。また、回避を行えない。パーティが全滅した場合、己の命と引き換えに味方全員の体力・気力を20点、部位ダメージ、変調を全て回復させる。その後、自身は回復不可の死亡状態になる。"},
+    ]
+
+  -
+    var npcList2 = [
+      {"name":"クルス","group":"キズモノ/ホープ","stamina":"12","willpower":"15","specialties":"《刺す》","abilities":"【武器攻撃：槍】【悪運】【希望の光】【幸運の星】【限界】"},
+    ]
+  -
+    var npcAbilityList2 = [
+      {"name":"武器攻撃：刺す","group":"汎用","type":"攻撃","recoil":"0","specialty":"《刺す》","target":"単体","effect":"指定特技の判定に成功すると、[3]点のダメージを与える。この時、命中判定の達成値にプラス2の修正がつく。"},
+      {"name":"悪運","group":"キズモノ","type":"割込み","recoil":"3","specialty":"なし","target":"単体","effect":"対象の判定の直後に使用。サイコロ1つの出目をマイナス1する。シナリオ3回。"},
+      {"name":"希望の光","group":"ホープ","type":"割込み","recoil":"3","specialty":"なし","target":"単体","effect":"対象の判定の直後に使用。サイコロ1つの出目をプラス1する。シナリオ3回。"},
+      {"name":"幸運の星","group":"ホープ","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"あなたの行う行為判定では出目が6,5の時にもスペシャルとなる。"},
+      {"name":"限界","group":"NPC","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"体力が0以下になると即座に行動不能になり、攻撃の対象にならなくなる。戦闘が終了するまで復活しない。また、回避を行えない。パーティが全滅した場合、己の命と引き換えに味方全員の体力・気力を20点、部位ダメージ、変調を全て回復させる。その後、自身は回復不可の死亡状態になる。"},
+    ]
+
+  -
+    var npcList3 = [
+      {"name":"スズ","group":"ママ/アキンド/ショクニン","stamina":"10","willpower":"15","specialties":"《斬る》《伝える》《投げる》","abilities":"【武器攻撃：ナタ】【愛刀：ナタ】【声援】【お届け！】【限界】"},
+    ]
+  -
+    var npcAbilityList3 = [
+      {"name":"武器攻撃：斬る","group":"汎用","type":"攻撃","recoil":"0","specialty":"《刺す》","target":"単体","effect":"指定特技の判定に成功すると、[4]点のダメージを与える。(愛刀込み）この時、命中判定の達成値にプラス2の修正がつく。"},
+      {"name": "愛刀", "group": "ショクニン", "type": "常駐", "recoil": "-", "specialty": "-", "target": "自身", "effect": "装備している武器1つを愛刀として指定する。愛刀を使った命中判定の達成値にプラス1の修正がつく。さらに愛刀の[攻撃力]が1点増加する。"}, 
+      {"name":"声援","group":"ママ","type":"割込み","recoil":"3","specialty":"《伝える》","target":"単体","effect":"自分以外の判定の直前に使用する。指定特技の判定に成功すると対象の達成値にプラス2の修正がつく。"},
+      {"name":"お届け！","group":"アキンド","type":"割込み","recoil":"3","specialty":"《投げる》","target":"単体","effect":"指定特技の判定に成功すると、自身の所持しているアイテムを1つ目標に渡す。ただしそれを渡すことによって相手が所持限界を超えてしまう場合にはこの判定は必ず失敗する。「肩掛けカバン」「手提げ袋」以外の袋の中のものを渡すことはできない。"},
+      {"name":"限界","group":"NPC","type":"常駐","recoil":"-","specialty":"-","target":"自身","effect":"体力が0以下になると即座に行動不能になり、攻撃の対象にならなくなる。戦闘が終了するまで復活しない。また、回避を行えない。パーティが全滅した場合、己の命と引き換えに味方全員の体力・気力を20点、部位ダメージ、変調を全て回復させる。その後、自身は回復不可の死亡状態になる。"},
+    ]
+
+
+
   title= title
 
 block css
@@ -452,6 +495,100 @@ block body
           
           p 気付くと、見知らぬ美麗な場所に立っていました。
 
+
+
+
+        h4 参戦NPC
+
+        h5  #[a(href="https://lostrpg-cloudflare.hibohiboo66-cloudflare.workers.dev/character/5d2a6a88-33b6-4eae-ad49-edc8eb3ec6cb" target="_blank") ラグナ]
+
+        table.responsive
+          caption ラグナ
+          thead
+            tr: th 名前 #[th クラス] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ]
+          each enemy in npcList
+            tr
+              td.txt-center= enemy.name
+              td(data-title='クラス')= enemy.group
+              td(data-title='体力')= enemy.stamina
+              td(data-title='気力')= enemy.willpower
+              td(data-title='特技')= enemy.specialties
+              td(data-title='アビリティ')= enemy.abilities
+
+        table(class="responsive")
+          caption ラグナのアビリティ
+          thead
+            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+          each item in npcAbilityList
+            tr
+              td.txt-center= item.name
+              td(data-title='グループ')= item.group
+              td(data-title='タイプ')= item.type
+              td(data-title='反動')= item.recoil
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='効果')= item.effect
+
+        table.responsive
+          caption クルス
+          thead
+            tr: th 名前 #[th クラス] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ]
+          each enemy in npcList2
+            tr
+              td.txt-center= enemy.name
+              td(data-title='クラス')= enemy.group
+              td(data-title='体力')= enemy.stamina
+              td(data-title='気力')= enemy.willpower
+              td(data-title='特技')= enemy.specialties
+              td(data-title='アビリティ')= enemy.abilities
+
+        h5 #[a(href="https://lostrpg-cloudflare.hibohiboo66-cloudflare.workers.dev/character/d55138d0-c127-4a64-b93f-abc19a625402" target="_blank") クルス]
+
+        table(class="responsive")
+          caption クルスのアビリティ
+          thead
+            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+          each item in npcAbilityList2
+            tr
+              td.txt-center= item.name
+              td(data-title='グループ')= item.group
+              td(data-title='タイプ')= item.type
+              td(data-title='反動')= item.recoil
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='効果')= item.effect
+
+        h5 #[a(href="https://lostrpg-cloudflare.hibohiboo66-cloudflare.workers.dev/character/962ebff3-6f0e-4cad-9e0b-18036cd887d6" target="_blank") スズ]
+
+        table.responsive
+          caption スズ
+          thead
+            tr: th 名前 #[th クラス] #[th 体力]  #[th 気力] #[th 特技] #[th アビリティ]
+          each enemy in npcList3
+            tr
+              td.txt-center= enemy.name
+              td(data-title='クラス')= enemy.group
+              td(data-title='体力')= enemy.stamina
+              td(data-title='気力')= enemy.willpower
+              td(data-title='特技')= enemy.specialties
+              td(data-title='アビリティ')= enemy.abilities
+
+        table(class="responsive")
+          caption スズのアビリティ
+          thead
+            tr: th 名前 #[th グループ]  #[th タイプ] #[th 反動] #[th 指定特技] #[th 対象] #[th 効果]
+          each item in npcAbilityList3
+            tr
+              td.txt-center= item.name
+              td(data-title='グループ')= item.group
+              td(data-title='タイプ')= item.type
+              td(data-title='反動')= item.recoil
+              td(data-title='指定特技')= item.specialty
+              td(data-title='対象')= item.target
+              td(data-title='効果')= item.effect
+
+
+
         h3(id="h3-cp-z") チェックポイントZ：最後の場所
         dl
           dt 環境
@@ -545,7 +682,6 @@ block body
           dd 「この戦い、汝らの完全勝利だ。マザーは死んだ。我らも消え行こう。永久に、さらばだ」
           dt ▼描写
           dd その瞬間、世界中の＜ヌシ＞が一斉に息絶え、凶悪な新生物たちも大人しくなりました。世界は新生物から救われました。マザーは死に、新生物への生命の供給も止まりましたが、＜ニューエイジ＞の身体には特に異変はないようです。
-
 
         h2(id="h2-result") 結果フェイズ
         h3(id="h3-result-1") 描写1: キャンプに戻って
