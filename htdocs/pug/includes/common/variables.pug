@@ -67,7 +67,7 @@
     {"d6": 3,"name":"歌姫",     "type":"支援", "specialty": "《歌う》",   "level":1, "effect":"指定特技の判定に成功すると、あなたの【気力】が2D6点増加する。"},
     {"d6": 4,"name":"畑",       "type":"支援", "specialty": "《作る》",   "level":3, "effect":"指定特技の判定に成功すると、あなたは[レベル]Jを得る。最大レベルに達している場合、食堂の効果にプラス1する。"},
     {"d6": 5,"name":"太陽電池",  "type":"支援", "specialty": "なし",      "level":1, "effect":"あなたが所持しているか装備しているアイテムを[レベル]個まで「充電」できる。"},
-    {"d6": 6,"name":"お風呂",    "type":"支援", "specialty": "なし",      "level":1, "effect":"あなたの【精神力】にプラス[レベル]点する。"},
+    {"d6": 6,"name":"お風呂",    "type":"支援", "specialty": "なし",      "level":1, "effect":"あなたの【精神力】【気力】にプラス[レベル]点する。"},
     {"d6": 6,"name":"ドラム缶",  "type":"-",    "specialty": "-",        "level":1, "effect":"水などを貯めることができる。"},
   ]
 
@@ -83,10 +83,10 @@
     {"name":"倉庫","cp":"2","type":"常駐","specialty":"-","maxLv":"10","precondition":"","effect":"[レベル×10]個までのアイテムを保存できる。出し入れはキャンプでのみ可能。"},
     {"name":"食料庫","cp":"20","type":"常駐","specialty":"-","maxLv":"1","precondition":"","effect":"全員の【生命力】をプラス２する。"},
     {"name":"ドラムカン","cp":"1","type":"-","specialty":"-","maxLv":"1","precondition":"","effect":"水などを貯めることができる。"},
-    {"name":"お風呂","cp":"3","type":"支援","specialty":"なし","maxLv":"3","precondition":"水場、ドラムカン","effect":"あなたの【精神力】にプラス[レベル]点する。"},
-    {"name":"温泉","cp":"15","type":"支援","specialty":"なし","maxLv":"3","precondition":"","effect":"あなたの【精神力】と【生命力】にプラス[レベル]点する。"},
+    {"name":"お風呂","cp":"3","type":"支援","specialty":"なし","maxLv":"3","precondition":"水場、ドラムカン","effect":"あなたの【精神力】【気力】にプラス[レベル]点する。"},
+    {"name":"温泉","cp":"15","type":"支援","specialty":"なし","maxLv":"3","precondition":"","effect":"あなたの【精神力】【生命力】【気力】【体力】にプラス[レベル]点する。"},
     {"name":"畑","cp":"2","type":"支援","specialty":"《作る》","maxLv":"5","precondition":"","effect":"指定特技の判定に成功すると、あなたは[レベル]Jを得る。最大レベルに達している場合、食堂の効果にプラス1する。"},
-    {"name":"食堂","cp":"5","type":"支援","specialty":"《料理》","maxLv":"1","precondition":"料理人","effect":"指定特技の判定に成功すると、あなたの【生命力】にプラス1する。"},
+    {"name":"食堂","cp":"5","type":"支援","specialty":"《料理》","maxLv":"1","precondition":"料理人","effect":"指定特技の判定に成功すると、あなたの【生命力】【体力】にプラス1する。"},
     {"name":"牧場","cp":"3","type":"支援","specialty":"《捕らえる》","maxLv":"3","precondition":"","effect":"指定特技の判定に成功すると、あなたはジャーキーか「毛皮」を[レベル]個まで得ることができる。最大レベルに達している場合、食堂の効果にプラス1する。"},
     {"name":"薬草園","cp":"2","type":"支援","specialty":"《鑑定》","maxLv":"3","precondition":"","effect":"指定特技の判定に成功すると、あなたは「コカの葉」を[レベル]個得る。"},
     {"name":"病院","cp":"5","type":"支援","specialty":"《手当》","maxLv":"1","precondition":"医者","effect":"指定特技の判定に成功すると、あなたは「鎮痛剤」を1つ得る。"},
